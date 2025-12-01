@@ -1,0 +1,674 @@
+{
+  "namespace": "System.Security.Permissions",
+  "contributingAssemblies": [
+    "System.Private.CoreLib"
+  ],
+  "types": [
+    {
+      "stableId": "System.Private.CoreLib:System.Security.Permissions.PermissionState",
+      "clrName": "System.Security.Permissions.PermissionState",
+      "tsEmitName": "PermissionState",
+      "kind": "Enum",
+      "accessibility": "Public",
+      "isAbstract": false,
+      "isSealed": true,
+      "isStatic": false,
+      "arity": 0,
+      "methods": [],
+      "properties": [],
+      "fields": [
+        {
+          "stableId": "System.Private.CoreLib:System.Security.Permissions.PermissionState::value__System.Int32",
+          "clrName": "value__",
+          "tsEmitName": "value__",
+          "normalizedSignature": "value__|System.Int32|static=false|const=false",
+          "isStatic": false,
+          "isReadOnly": false,
+          "isLiteral": false
+        },
+        {
+          "stableId": "System.Private.CoreLib:System.Security.Permissions.PermissionState::NoneSystem.Security.Permissions.PermissionState",
+          "clrName": "None",
+          "tsEmitName": "None",
+          "normalizedSignature": "None|System.Security.Permissions.PermissionState|static=true|const=true",
+          "isStatic": true,
+          "isReadOnly": false,
+          "isLiteral": true
+        },
+        {
+          "stableId": "System.Private.CoreLib:System.Security.Permissions.PermissionState::UnrestrictedSystem.Security.Permissions.PermissionState",
+          "clrName": "Unrestricted",
+          "tsEmitName": "Unrestricted",
+          "normalizedSignature": "Unrestricted|System.Security.Permissions.PermissionState|static=true|const=true",
+          "isStatic": true,
+          "isReadOnly": false,
+          "isLiteral": true
+        }
+      ],
+      "events": [],
+      "constructors": []
+    },
+    {
+      "stableId": "System.Private.CoreLib:System.Security.Permissions.SecurityAction",
+      "clrName": "System.Security.Permissions.SecurityAction",
+      "tsEmitName": "SecurityAction",
+      "kind": "Enum",
+      "accessibility": "Public",
+      "isAbstract": false,
+      "isSealed": true,
+      "isStatic": false,
+      "arity": 0,
+      "methods": [],
+      "properties": [],
+      "fields": [
+        {
+          "stableId": "System.Private.CoreLib:System.Security.Permissions.SecurityAction::value__System.Int32",
+          "clrName": "value__",
+          "tsEmitName": "value__",
+          "normalizedSignature": "value__|System.Int32|static=false|const=false",
+          "isStatic": false,
+          "isReadOnly": false,
+          "isLiteral": false
+        },
+        {
+          "stableId": "System.Private.CoreLib:System.Security.Permissions.SecurityAction::AssertSystem.Security.Permissions.SecurityAction",
+          "clrName": "Assert",
+          "tsEmitName": "Assert",
+          "normalizedSignature": "Assert|System.Security.Permissions.SecurityAction|static=true|const=true",
+          "isStatic": true,
+          "isReadOnly": false,
+          "isLiteral": true
+        },
+        {
+          "stableId": "System.Private.CoreLib:System.Security.Permissions.SecurityAction::DemandSystem.Security.Permissions.SecurityAction",
+          "clrName": "Demand",
+          "tsEmitName": "Demand",
+          "normalizedSignature": "Demand|System.Security.Permissions.SecurityAction|static=true|const=true",
+          "isStatic": true,
+          "isReadOnly": false,
+          "isLiteral": true
+        },
+        {
+          "stableId": "System.Private.CoreLib:System.Security.Permissions.SecurityAction::DenySystem.Security.Permissions.SecurityAction",
+          "clrName": "Deny",
+          "tsEmitName": "Deny",
+          "normalizedSignature": "Deny|System.Security.Permissions.SecurityAction|static=true|const=true",
+          "isStatic": true,
+          "isReadOnly": false,
+          "isLiteral": true
+        },
+        {
+          "stableId": "System.Private.CoreLib:System.Security.Permissions.SecurityAction::InheritanceDemandSystem.Security.Permissions.SecurityAction",
+          "clrName": "InheritanceDemand",
+          "tsEmitName": "InheritanceDemand",
+          "normalizedSignature": "InheritanceDemand|System.Security.Permissions.SecurityAction|static=true|const=true",
+          "isStatic": true,
+          "isReadOnly": false,
+          "isLiteral": true
+        },
+        {
+          "stableId": "System.Private.CoreLib:System.Security.Permissions.SecurityAction::LinkDemandSystem.Security.Permissions.SecurityAction",
+          "clrName": "LinkDemand",
+          "tsEmitName": "LinkDemand",
+          "normalizedSignature": "LinkDemand|System.Security.Permissions.SecurityAction|static=true|const=true",
+          "isStatic": true,
+          "isReadOnly": false,
+          "isLiteral": true
+        },
+        {
+          "stableId": "System.Private.CoreLib:System.Security.Permissions.SecurityAction::PermitOnlySystem.Security.Permissions.SecurityAction",
+          "clrName": "PermitOnly",
+          "tsEmitName": "PermitOnly",
+          "normalizedSignature": "PermitOnly|System.Security.Permissions.SecurityAction|static=true|const=true",
+          "isStatic": true,
+          "isReadOnly": false,
+          "isLiteral": true
+        },
+        {
+          "stableId": "System.Private.CoreLib:System.Security.Permissions.SecurityAction::RequestMinimumSystem.Security.Permissions.SecurityAction",
+          "clrName": "RequestMinimum",
+          "tsEmitName": "RequestMinimum",
+          "normalizedSignature": "RequestMinimum|System.Security.Permissions.SecurityAction|static=true|const=true",
+          "isStatic": true,
+          "isReadOnly": false,
+          "isLiteral": true
+        },
+        {
+          "stableId": "System.Private.CoreLib:System.Security.Permissions.SecurityAction::RequestOptionalSystem.Security.Permissions.SecurityAction",
+          "clrName": "RequestOptional",
+          "tsEmitName": "RequestOptional",
+          "normalizedSignature": "RequestOptional|System.Security.Permissions.SecurityAction|static=true|const=true",
+          "isStatic": true,
+          "isReadOnly": false,
+          "isLiteral": true
+        },
+        {
+          "stableId": "System.Private.CoreLib:System.Security.Permissions.SecurityAction::RequestRefuseSystem.Security.Permissions.SecurityAction",
+          "clrName": "RequestRefuse",
+          "tsEmitName": "RequestRefuse",
+          "normalizedSignature": "RequestRefuse|System.Security.Permissions.SecurityAction|static=true|const=true",
+          "isStatic": true,
+          "isReadOnly": false,
+          "isLiteral": true
+        }
+      ],
+      "events": [],
+      "constructors": []
+    },
+    {
+      "stableId": "System.Private.CoreLib:System.Security.Permissions.SecurityPermissionFlag",
+      "clrName": "System.Security.Permissions.SecurityPermissionFlag",
+      "tsEmitName": "SecurityPermissionFlag",
+      "kind": "Enum",
+      "accessibility": "Public",
+      "isAbstract": false,
+      "isSealed": true,
+      "isStatic": false,
+      "arity": 0,
+      "methods": [],
+      "properties": [],
+      "fields": [
+        {
+          "stableId": "System.Private.CoreLib:System.Security.Permissions.SecurityPermissionFlag::value__System.Int32",
+          "clrName": "value__",
+          "tsEmitName": "value__",
+          "normalizedSignature": "value__|System.Int32|static=false|const=false",
+          "isStatic": false,
+          "isReadOnly": false,
+          "isLiteral": false
+        },
+        {
+          "stableId": "System.Private.CoreLib:System.Security.Permissions.SecurityPermissionFlag::AllFlagsSystem.Security.Permissions.SecurityPermissionFlag",
+          "clrName": "AllFlags",
+          "tsEmitName": "AllFlags",
+          "normalizedSignature": "AllFlags|System.Security.Permissions.SecurityPermissionFlag|static=true|const=true",
+          "isStatic": true,
+          "isReadOnly": false,
+          "isLiteral": true
+        },
+        {
+          "stableId": "System.Private.CoreLib:System.Security.Permissions.SecurityPermissionFlag::AssertionSystem.Security.Permissions.SecurityPermissionFlag",
+          "clrName": "Assertion",
+          "tsEmitName": "Assertion",
+          "normalizedSignature": "Assertion|System.Security.Permissions.SecurityPermissionFlag|static=true|const=true",
+          "isStatic": true,
+          "isReadOnly": false,
+          "isLiteral": true
+        },
+        {
+          "stableId": "System.Private.CoreLib:System.Security.Permissions.SecurityPermissionFlag::BindingRedirectsSystem.Security.Permissions.SecurityPermissionFlag",
+          "clrName": "BindingRedirects",
+          "tsEmitName": "BindingRedirects",
+          "normalizedSignature": "BindingRedirects|System.Security.Permissions.SecurityPermissionFlag|static=true|const=true",
+          "isStatic": true,
+          "isReadOnly": false,
+          "isLiteral": true
+        },
+        {
+          "stableId": "System.Private.CoreLib:System.Security.Permissions.SecurityPermissionFlag::ControlAppDomainSystem.Security.Permissions.SecurityPermissionFlag",
+          "clrName": "ControlAppDomain",
+          "tsEmitName": "ControlAppDomain",
+          "normalizedSignature": "ControlAppDomain|System.Security.Permissions.SecurityPermissionFlag|static=true|const=true",
+          "isStatic": true,
+          "isReadOnly": false,
+          "isLiteral": true
+        },
+        {
+          "stableId": "System.Private.CoreLib:System.Security.Permissions.SecurityPermissionFlag::ControlDomainPolicySystem.Security.Permissions.SecurityPermissionFlag",
+          "clrName": "ControlDomainPolicy",
+          "tsEmitName": "ControlDomainPolicy",
+          "normalizedSignature": "ControlDomainPolicy|System.Security.Permissions.SecurityPermissionFlag|static=true|const=true",
+          "isStatic": true,
+          "isReadOnly": false,
+          "isLiteral": true
+        },
+        {
+          "stableId": "System.Private.CoreLib:System.Security.Permissions.SecurityPermissionFlag::ControlEvidenceSystem.Security.Permissions.SecurityPermissionFlag",
+          "clrName": "ControlEvidence",
+          "tsEmitName": "ControlEvidence",
+          "normalizedSignature": "ControlEvidence|System.Security.Permissions.SecurityPermissionFlag|static=true|const=true",
+          "isStatic": true,
+          "isReadOnly": false,
+          "isLiteral": true
+        },
+        {
+          "stableId": "System.Private.CoreLib:System.Security.Permissions.SecurityPermissionFlag::ControlPolicySystem.Security.Permissions.SecurityPermissionFlag",
+          "clrName": "ControlPolicy",
+          "tsEmitName": "ControlPolicy",
+          "normalizedSignature": "ControlPolicy|System.Security.Permissions.SecurityPermissionFlag|static=true|const=true",
+          "isStatic": true,
+          "isReadOnly": false,
+          "isLiteral": true
+        },
+        {
+          "stableId": "System.Private.CoreLib:System.Security.Permissions.SecurityPermissionFlag::ControlPrincipalSystem.Security.Permissions.SecurityPermissionFlag",
+          "clrName": "ControlPrincipal",
+          "tsEmitName": "ControlPrincipal",
+          "normalizedSignature": "ControlPrincipal|System.Security.Permissions.SecurityPermissionFlag|static=true|const=true",
+          "isStatic": true,
+          "isReadOnly": false,
+          "isLiteral": true
+        },
+        {
+          "stableId": "System.Private.CoreLib:System.Security.Permissions.SecurityPermissionFlag::ControlThreadSystem.Security.Permissions.SecurityPermissionFlag",
+          "clrName": "ControlThread",
+          "tsEmitName": "ControlThread",
+          "normalizedSignature": "ControlThread|System.Security.Permissions.SecurityPermissionFlag|static=true|const=true",
+          "isStatic": true,
+          "isReadOnly": false,
+          "isLiteral": true
+        },
+        {
+          "stableId": "System.Private.CoreLib:System.Security.Permissions.SecurityPermissionFlag::ExecutionSystem.Security.Permissions.SecurityPermissionFlag",
+          "clrName": "Execution",
+          "tsEmitName": "Execution",
+          "normalizedSignature": "Execution|System.Security.Permissions.SecurityPermissionFlag|static=true|const=true",
+          "isStatic": true,
+          "isReadOnly": false,
+          "isLiteral": true
+        },
+        {
+          "stableId": "System.Private.CoreLib:System.Security.Permissions.SecurityPermissionFlag::InfrastructureSystem.Security.Permissions.SecurityPermissionFlag",
+          "clrName": "Infrastructure",
+          "tsEmitName": "Infrastructure",
+          "normalizedSignature": "Infrastructure|System.Security.Permissions.SecurityPermissionFlag|static=true|const=true",
+          "isStatic": true,
+          "isReadOnly": false,
+          "isLiteral": true
+        },
+        {
+          "stableId": "System.Private.CoreLib:System.Security.Permissions.SecurityPermissionFlag::NoFlagsSystem.Security.Permissions.SecurityPermissionFlag",
+          "clrName": "NoFlags",
+          "tsEmitName": "NoFlags",
+          "normalizedSignature": "NoFlags|System.Security.Permissions.SecurityPermissionFlag|static=true|const=true",
+          "isStatic": true,
+          "isReadOnly": false,
+          "isLiteral": true
+        },
+        {
+          "stableId": "System.Private.CoreLib:System.Security.Permissions.SecurityPermissionFlag::RemotingConfigurationSystem.Security.Permissions.SecurityPermissionFlag",
+          "clrName": "RemotingConfiguration",
+          "tsEmitName": "RemotingConfiguration",
+          "normalizedSignature": "RemotingConfiguration|System.Security.Permissions.SecurityPermissionFlag|static=true|const=true",
+          "isStatic": true,
+          "isReadOnly": false,
+          "isLiteral": true
+        },
+        {
+          "stableId": "System.Private.CoreLib:System.Security.Permissions.SecurityPermissionFlag::SerializationFormatterSystem.Security.Permissions.SecurityPermissionFlag",
+          "clrName": "SerializationFormatter",
+          "tsEmitName": "SerializationFormatter",
+          "normalizedSignature": "SerializationFormatter|System.Security.Permissions.SecurityPermissionFlag|static=true|const=true",
+          "isStatic": true,
+          "isReadOnly": false,
+          "isLiteral": true
+        },
+        {
+          "stableId": "System.Private.CoreLib:System.Security.Permissions.SecurityPermissionFlag::SkipVerificationSystem.Security.Permissions.SecurityPermissionFlag",
+          "clrName": "SkipVerification",
+          "tsEmitName": "SkipVerification",
+          "normalizedSignature": "SkipVerification|System.Security.Permissions.SecurityPermissionFlag|static=true|const=true",
+          "isStatic": true,
+          "isReadOnly": false,
+          "isLiteral": true
+        },
+        {
+          "stableId": "System.Private.CoreLib:System.Security.Permissions.SecurityPermissionFlag::UnmanagedCodeSystem.Security.Permissions.SecurityPermissionFlag",
+          "clrName": "UnmanagedCode",
+          "tsEmitName": "UnmanagedCode",
+          "normalizedSignature": "UnmanagedCode|System.Security.Permissions.SecurityPermissionFlag|static=true|const=true",
+          "isStatic": true,
+          "isReadOnly": false,
+          "isLiteral": true
+        }
+      ],
+      "events": [],
+      "constructors": []
+    },
+    {
+      "stableId": "System.Private.CoreLib:System.Security.Permissions.CodeAccessSecurityAttribute",
+      "clrName": "System.Security.Permissions.CodeAccessSecurityAttribute",
+      "tsEmitName": "CodeAccessSecurityAttribute",
+      "kind": "Class",
+      "accessibility": "Public",
+      "isAbstract": true,
+      "isSealed": false,
+      "isStatic": false,
+      "arity": 0,
+      "methods": [],
+      "properties": [],
+      "fields": [],
+      "events": [],
+      "constructors": []
+    },
+    {
+      "stableId": "System.Private.CoreLib:System.Security.Permissions.SecurityAttribute",
+      "clrName": "System.Security.Permissions.SecurityAttribute",
+      "tsEmitName": "SecurityAttribute",
+      "kind": "Class",
+      "accessibility": "Public",
+      "isAbstract": true,
+      "isSealed": false,
+      "isStatic": false,
+      "arity": 0,
+      "methods": [
+        {
+          "stableId": "System.Private.CoreLib:System.Security.Permissions.SecurityAttribute::CreatePermission():System.Security.IPermission",
+          "clrName": "CreatePermission",
+          "tsEmitName": "CreatePermission",
+          "normalizedSignature": "CreatePermission|():System.Security.IPermission|static=false",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": true,
+          "isVirtual": true,
+          "isOverride": false,
+          "isSealed": false,
+          "arity": 0,
+          "parameterCount": 0,
+          "isExtensionMethod": false
+        }
+      ],
+      "properties": [
+        {
+          "stableId": "System.Private.CoreLib:System.Security.Permissions.SecurityAttribute::Action:System.Security.Permissions.SecurityAction",
+          "clrName": "Action",
+          "tsEmitName": "Action",
+          "normalizedSignature": "Action|:System.Security.Permissions.SecurityAction|static=false|accessor=getset",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": true
+        },
+        {
+          "stableId": "System.Private.CoreLib:System.Security.Permissions.SecurityAttribute::Unrestricted:System.Boolean",
+          "clrName": "Unrestricted",
+          "tsEmitName": "Unrestricted",
+          "normalizedSignature": "Unrestricted|:System.Boolean|static=false|accessor=getset",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": true
+        }
+      ],
+      "fields": [],
+      "events": [],
+      "constructors": []
+    },
+    {
+      "stableId": "System.Private.CoreLib:System.Security.Permissions.SecurityPermissionAttribute",
+      "clrName": "System.Security.Permissions.SecurityPermissionAttribute",
+      "tsEmitName": "SecurityPermissionAttribute",
+      "kind": "Class",
+      "accessibility": "Public",
+      "isAbstract": false,
+      "isSealed": true,
+      "isStatic": false,
+      "arity": 0,
+      "methods": [
+        {
+          "stableId": "System.Private.CoreLib:System.Security.Permissions.SecurityPermissionAttribute::CreatePermission():System.Security.IPermission",
+          "clrName": "CreatePermission",
+          "tsEmitName": "CreatePermission",
+          "normalizedSignature": "CreatePermission|():System.Security.IPermission|static=false",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": true,
+          "isOverride": true,
+          "isSealed": false,
+          "arity": 0,
+          "parameterCount": 0,
+          "isExtensionMethod": false
+        }
+      ],
+      "properties": [
+        {
+          "stableId": "System.Private.CoreLib:System.Security.Permissions.SecurityPermissionAttribute::Assertion:System.Boolean",
+          "clrName": "Assertion",
+          "tsEmitName": "Assertion",
+          "normalizedSignature": "Assertion|:System.Boolean|static=false|accessor=getset",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": true
+        },
+        {
+          "stableId": "System.Private.CoreLib:System.Security.Permissions.SecurityPermissionAttribute::BindingRedirects:System.Boolean",
+          "clrName": "BindingRedirects",
+          "tsEmitName": "BindingRedirects",
+          "normalizedSignature": "BindingRedirects|:System.Boolean|static=false|accessor=getset",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": true
+        },
+        {
+          "stableId": "System.Private.CoreLib:System.Security.Permissions.SecurityPermissionAttribute::ControlAppDomain:System.Boolean",
+          "clrName": "ControlAppDomain",
+          "tsEmitName": "ControlAppDomain",
+          "normalizedSignature": "ControlAppDomain|:System.Boolean|static=false|accessor=getset",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": true
+        },
+        {
+          "stableId": "System.Private.CoreLib:System.Security.Permissions.SecurityPermissionAttribute::ControlDomainPolicy:System.Boolean",
+          "clrName": "ControlDomainPolicy",
+          "tsEmitName": "ControlDomainPolicy",
+          "normalizedSignature": "ControlDomainPolicy|:System.Boolean|static=false|accessor=getset",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": true
+        },
+        {
+          "stableId": "System.Private.CoreLib:System.Security.Permissions.SecurityPermissionAttribute::ControlEvidence:System.Boolean",
+          "clrName": "ControlEvidence",
+          "tsEmitName": "ControlEvidence",
+          "normalizedSignature": "ControlEvidence|:System.Boolean|static=false|accessor=getset",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": true
+        },
+        {
+          "stableId": "System.Private.CoreLib:System.Security.Permissions.SecurityPermissionAttribute::ControlPolicy:System.Boolean",
+          "clrName": "ControlPolicy",
+          "tsEmitName": "ControlPolicy",
+          "normalizedSignature": "ControlPolicy|:System.Boolean|static=false|accessor=getset",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": true
+        },
+        {
+          "stableId": "System.Private.CoreLib:System.Security.Permissions.SecurityPermissionAttribute::ControlPrincipal:System.Boolean",
+          "clrName": "ControlPrincipal",
+          "tsEmitName": "ControlPrincipal",
+          "normalizedSignature": "ControlPrincipal|:System.Boolean|static=false|accessor=getset",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": true
+        },
+        {
+          "stableId": "System.Private.CoreLib:System.Security.Permissions.SecurityPermissionAttribute::ControlThread:System.Boolean",
+          "clrName": "ControlThread",
+          "tsEmitName": "ControlThread",
+          "normalizedSignature": "ControlThread|:System.Boolean|static=false|accessor=getset",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": true
+        },
+        {
+          "stableId": "System.Private.CoreLib:System.Security.Permissions.SecurityPermissionAttribute::Execution:System.Boolean",
+          "clrName": "Execution",
+          "tsEmitName": "Execution",
+          "normalizedSignature": "Execution|:System.Boolean|static=false|accessor=getset",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": true
+        },
+        {
+          "stableId": "System.Private.CoreLib:System.Security.Permissions.SecurityPermissionAttribute::Flags:System.Security.Permissions.SecurityPermissionFlag",
+          "clrName": "Flags",
+          "tsEmitName": "Flags",
+          "normalizedSignature": "Flags|:System.Security.Permissions.SecurityPermissionFlag|static=false|accessor=getset",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": true
+        },
+        {
+          "stableId": "System.Private.CoreLib:System.Security.Permissions.SecurityPermissionAttribute::Infrastructure:System.Boolean",
+          "clrName": "Infrastructure",
+          "tsEmitName": "Infrastructure",
+          "normalizedSignature": "Infrastructure|:System.Boolean|static=false|accessor=getset",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": true
+        },
+        {
+          "stableId": "System.Private.CoreLib:System.Security.Permissions.SecurityPermissionAttribute::RemotingConfiguration:System.Boolean",
+          "clrName": "RemotingConfiguration",
+          "tsEmitName": "RemotingConfiguration",
+          "normalizedSignature": "RemotingConfiguration|:System.Boolean|static=false|accessor=getset",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": true
+        },
+        {
+          "stableId": "System.Private.CoreLib:System.Security.Permissions.SecurityPermissionAttribute::SerializationFormatter:System.Boolean",
+          "clrName": "SerializationFormatter",
+          "tsEmitName": "SerializationFormatter",
+          "normalizedSignature": "SerializationFormatter|:System.Boolean|static=false|accessor=getset",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": true
+        },
+        {
+          "stableId": "System.Private.CoreLib:System.Security.Permissions.SecurityPermissionAttribute::SkipVerification:System.Boolean",
+          "clrName": "SkipVerification",
+          "tsEmitName": "SkipVerification",
+          "normalizedSignature": "SkipVerification|:System.Boolean|static=false|accessor=getset",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": true
+        },
+        {
+          "stableId": "System.Private.CoreLib:System.Security.Permissions.SecurityPermissionAttribute::UnmanagedCode:System.Boolean",
+          "clrName": "UnmanagedCode",
+          "tsEmitName": "UnmanagedCode",
+          "normalizedSignature": "UnmanagedCode|:System.Boolean|static=false|accessor=getset",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": true
+        }
+      ],
+      "fields": [],
+      "events": [],
+      "constructors": [
+        {
+          "normalizedSignature": "constructor|(System.Security.Permissions.SecurityAction):void|static=false",
+          "isStatic": false,
+          "parameterCount": 1
+        }
+      ]
+    }
+  ]
+}

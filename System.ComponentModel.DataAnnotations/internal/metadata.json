@@ -1,0 +1,3362 @@
+{
+  "namespace": "System.ComponentModel.DataAnnotations",
+  "contributingAssemblies": [
+    "System.ComponentModel.Annotations"
+  ],
+  "types": [
+    {
+      "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.DataType",
+      "clrName": "System.ComponentModel.DataAnnotations.DataType",
+      "tsEmitName": "DataType",
+      "kind": "Enum",
+      "accessibility": "Public",
+      "isAbstract": false,
+      "isSealed": true,
+      "isStatic": false,
+      "arity": 0,
+      "methods": [],
+      "properties": [],
+      "fields": [
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.DataType::value__System.Int32",
+          "clrName": "value__",
+          "tsEmitName": "value__",
+          "normalizedSignature": "value__|System.Int32|static=false|const=false",
+          "isStatic": false,
+          "isReadOnly": false,
+          "isLiteral": false
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.DataType::CustomSystem.ComponentModel.DataAnnotations.DataType",
+          "clrName": "Custom",
+          "tsEmitName": "Custom",
+          "normalizedSignature": "Custom|System.ComponentModel.DataAnnotations.DataType|static=true|const=true",
+          "isStatic": true,
+          "isReadOnly": false,
+          "isLiteral": true
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.DataType::DateTimeSystem.ComponentModel.DataAnnotations.DataType",
+          "clrName": "DateTime",
+          "tsEmitName": "DateTime",
+          "normalizedSignature": "DateTime|System.ComponentModel.DataAnnotations.DataType|static=true|const=true",
+          "isStatic": true,
+          "isReadOnly": false,
+          "isLiteral": true
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.DataType::DateSystem.ComponentModel.DataAnnotations.DataType",
+          "clrName": "Date",
+          "tsEmitName": "Date",
+          "normalizedSignature": "Date|System.ComponentModel.DataAnnotations.DataType|static=true|const=true",
+          "isStatic": true,
+          "isReadOnly": false,
+          "isLiteral": true
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.DataType::TimeSystem.ComponentModel.DataAnnotations.DataType",
+          "clrName": "Time",
+          "tsEmitName": "Time",
+          "normalizedSignature": "Time|System.ComponentModel.DataAnnotations.DataType|static=true|const=true",
+          "isStatic": true,
+          "isReadOnly": false,
+          "isLiteral": true
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.DataType::DurationSystem.ComponentModel.DataAnnotations.DataType",
+          "clrName": "Duration",
+          "tsEmitName": "Duration",
+          "normalizedSignature": "Duration|System.ComponentModel.DataAnnotations.DataType|static=true|const=true",
+          "isStatic": true,
+          "isReadOnly": false,
+          "isLiteral": true
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.DataType::PhoneNumberSystem.ComponentModel.DataAnnotations.DataType",
+          "clrName": "PhoneNumber",
+          "tsEmitName": "PhoneNumber",
+          "normalizedSignature": "PhoneNumber|System.ComponentModel.DataAnnotations.DataType|static=true|const=true",
+          "isStatic": true,
+          "isReadOnly": false,
+          "isLiteral": true
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.DataType::CurrencySystem.ComponentModel.DataAnnotations.DataType",
+          "clrName": "Currency",
+          "tsEmitName": "Currency",
+          "normalizedSignature": "Currency|System.ComponentModel.DataAnnotations.DataType|static=true|const=true",
+          "isStatic": true,
+          "isReadOnly": false,
+          "isLiteral": true
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.DataType::TextSystem.ComponentModel.DataAnnotations.DataType",
+          "clrName": "Text",
+          "tsEmitName": "Text",
+          "normalizedSignature": "Text|System.ComponentModel.DataAnnotations.DataType|static=true|const=true",
+          "isStatic": true,
+          "isReadOnly": false,
+          "isLiteral": true
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.DataType::HtmlSystem.ComponentModel.DataAnnotations.DataType",
+          "clrName": "Html",
+          "tsEmitName": "Html",
+          "normalizedSignature": "Html|System.ComponentModel.DataAnnotations.DataType|static=true|const=true",
+          "isStatic": true,
+          "isReadOnly": false,
+          "isLiteral": true
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.DataType::MultilineTextSystem.ComponentModel.DataAnnotations.DataType",
+          "clrName": "MultilineText",
+          "tsEmitName": "MultilineText",
+          "normalizedSignature": "MultilineText|System.ComponentModel.DataAnnotations.DataType|static=true|const=true",
+          "isStatic": true,
+          "isReadOnly": false,
+          "isLiteral": true
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.DataType::EmailAddressSystem.ComponentModel.DataAnnotations.DataType",
+          "clrName": "EmailAddress",
+          "tsEmitName": "EmailAddress",
+          "normalizedSignature": "EmailAddress|System.ComponentModel.DataAnnotations.DataType|static=true|const=true",
+          "isStatic": true,
+          "isReadOnly": false,
+          "isLiteral": true
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.DataType::PasswordSystem.ComponentModel.DataAnnotations.DataType",
+          "clrName": "Password",
+          "tsEmitName": "Password",
+          "normalizedSignature": "Password|System.ComponentModel.DataAnnotations.DataType|static=true|const=true",
+          "isStatic": true,
+          "isReadOnly": false,
+          "isLiteral": true
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.DataType::UrlSystem.ComponentModel.DataAnnotations.DataType",
+          "clrName": "Url",
+          "tsEmitName": "Url",
+          "normalizedSignature": "Url|System.ComponentModel.DataAnnotations.DataType|static=true|const=true",
+          "isStatic": true,
+          "isReadOnly": false,
+          "isLiteral": true
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.DataType::ImageUrlSystem.ComponentModel.DataAnnotations.DataType",
+          "clrName": "ImageUrl",
+          "tsEmitName": "ImageUrl",
+          "normalizedSignature": "ImageUrl|System.ComponentModel.DataAnnotations.DataType|static=true|const=true",
+          "isStatic": true,
+          "isReadOnly": false,
+          "isLiteral": true
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.DataType::CreditCardSystem.ComponentModel.DataAnnotations.DataType",
+          "clrName": "CreditCard",
+          "tsEmitName": "CreditCard",
+          "normalizedSignature": "CreditCard|System.ComponentModel.DataAnnotations.DataType|static=true|const=true",
+          "isStatic": true,
+          "isReadOnly": false,
+          "isLiteral": true
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.DataType::PostalCodeSystem.ComponentModel.DataAnnotations.DataType",
+          "clrName": "PostalCode",
+          "tsEmitName": "PostalCode",
+          "normalizedSignature": "PostalCode|System.ComponentModel.DataAnnotations.DataType|static=true|const=true",
+          "isStatic": true,
+          "isReadOnly": false,
+          "isLiteral": true
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.DataType::UploadSystem.ComponentModel.DataAnnotations.DataType",
+          "clrName": "Upload",
+          "tsEmitName": "Upload",
+          "normalizedSignature": "Upload|System.ComponentModel.DataAnnotations.DataType|static=true|const=true",
+          "isStatic": true,
+          "isReadOnly": false,
+          "isLiteral": true
+        }
+      ],
+      "events": [],
+      "constructors": []
+    },
+    {
+      "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.IValidatableObject",
+      "clrName": "System.ComponentModel.DataAnnotations.IValidatableObject",
+      "tsEmitName": "IValidatableObject",
+      "kind": "Interface",
+      "accessibility": "Public",
+      "isAbstract": true,
+      "isSealed": false,
+      "isStatic": false,
+      "arity": 0,
+      "methods": [
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.IValidatableObject::Validate(System.ComponentModel.DataAnnotations.ValidationContext):System.Collections.Generic.IEnumerable_1[[System.ComponentModel.DataAnnotations.ValidationResult,System.ComponentModel.Annotations,Version=10.0.0.0,Culture=neutral,PublicKeyToken=b03f5f7f11d50a3a]]",
+          "clrName": "Validate",
+          "tsEmitName": "Validate",
+          "normalizedSignature": "Validate|(System.ComponentModel.DataAnnotations.ValidationContext):System.Collections.Generic.IEnumerable_1[[System.ComponentModel.DataAnnotations.ValidationResult,System.ComponentModel.Annotations,Version=10.0.0.0,Culture=neutral,PublicKeyToken=b03f5f7f11d50a3a]]|static=false",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": true,
+          "isVirtual": true,
+          "isOverride": false,
+          "isSealed": false,
+          "arity": 0,
+          "parameterCount": 1,
+          "isExtensionMethod": false
+        }
+      ],
+      "properties": [],
+      "fields": [],
+      "events": [],
+      "constructors": []
+    },
+    {
+      "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.AllowedValuesAttribute",
+      "clrName": "System.ComponentModel.DataAnnotations.AllowedValuesAttribute",
+      "tsEmitName": "AllowedValuesAttribute",
+      "kind": "Class",
+      "accessibility": "Public",
+      "isAbstract": false,
+      "isSealed": false,
+      "isStatic": false,
+      "arity": 0,
+      "methods": [
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.AllowedValuesAttribute::IsValid(System.Object):System.Boolean",
+          "clrName": "IsValid",
+          "tsEmitName": "IsValid",
+          "normalizedSignature": "IsValid|(System.Object):System.Boolean|static=false",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": true,
+          "isOverride": true,
+          "isSealed": false,
+          "arity": 0,
+          "parameterCount": 1,
+          "isExtensionMethod": false
+        }
+      ],
+      "properties": [
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.AllowedValuesAttribute::Values:System.Object[]",
+          "clrName": "Values",
+          "tsEmitName": "Values",
+          "normalizedSignature": "Values|:System.Object[]|static=false|accessor=get",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false
+        }
+      ],
+      "fields": [],
+      "events": [],
+      "constructors": [
+        {
+          "normalizedSignature": "constructor|(System.Object[]):void|static=false",
+          "isStatic": false,
+          "parameterCount": 1
+        }
+      ]
+    },
+    {
+      "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.AssociatedMetadataTypeTypeDescriptionProvider",
+      "clrName": "System.ComponentModel.DataAnnotations.AssociatedMetadataTypeTypeDescriptionProvider",
+      "tsEmitName": "AssociatedMetadataTypeTypeDescriptionProvider",
+      "kind": "Class",
+      "accessibility": "Public",
+      "isAbstract": false,
+      "isSealed": false,
+      "isStatic": false,
+      "arity": 0,
+      "methods": [
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.AssociatedMetadataTypeTypeDescriptionProvider::GetTypeDescriptor(System.Type,System.Object):System.ComponentModel.ICustomTypeDescriptor",
+          "clrName": "GetTypeDescriptor",
+          "tsEmitName": "GetTypeDescriptor3",
+          "normalizedSignature": "GetTypeDescriptor|(System.Type,System.Object):System.ComponentModel.ICustomTypeDescriptor|static=false",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": true,
+          "isOverride": true,
+          "isSealed": false,
+          "arity": 0,
+          "parameterCount": 2,
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.AssociatedMetadataTypeTypeDescriptionProvider::GetTypeDescriptor(System.Type):System.ComponentModel.ICustomTypeDescriptor",
+          "clrName": "GetTypeDescriptor",
+          "tsEmitName": "GetTypeDescriptor",
+          "normalizedSignature": "GetTypeDescriptor|(System.Type):System.ComponentModel.ICustomTypeDescriptor|static=false",
+          "provenance": "BaseOverload",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isSealed": false,
+          "arity": 0,
+          "parameterCount": 1,
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.AssociatedMetadataTypeTypeDescriptionProvider::GetTypeDescriptor(System.Object):System.ComponentModel.ICustomTypeDescriptor",
+          "clrName": "GetTypeDescriptor",
+          "tsEmitName": "GetTypeDescriptor2",
+          "normalizedSignature": "GetTypeDescriptor|(System.Object):System.ComponentModel.ICustomTypeDescriptor|static=false",
+          "provenance": "BaseOverload",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isSealed": false,
+          "arity": 0,
+          "parameterCount": 1,
+          "isExtensionMethod": false
+        }
+      ],
+      "properties": [],
+      "fields": [],
+      "events": [],
+      "constructors": [
+        {
+          "normalizedSignature": "constructor|(System.Type):void|static=false",
+          "isStatic": false,
+          "parameterCount": 1
+        },
+        {
+          "normalizedSignature": "constructor|(System.Type,System.Type):void|static=false",
+          "isStatic": false,
+          "parameterCount": 2
+        }
+      ]
+    },
+    {
+      "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.AssociationAttribute",
+      "clrName": "System.ComponentModel.DataAnnotations.AssociationAttribute",
+      "tsEmitName": "AssociationAttribute",
+      "kind": "Class",
+      "accessibility": "Public",
+      "isAbstract": false,
+      "isSealed": true,
+      "isStatic": false,
+      "arity": 0,
+      "methods": [],
+      "properties": [
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.AssociationAttribute::Name:System.String",
+          "clrName": "Name",
+          "tsEmitName": "Name",
+          "normalizedSignature": "Name|:System.String|static=false|accessor=get",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.AssociationAttribute::ThisKey:System.String",
+          "clrName": "ThisKey",
+          "tsEmitName": "ThisKey",
+          "normalizedSignature": "ThisKey|:System.String|static=false|accessor=get",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.AssociationAttribute::OtherKey:System.String",
+          "clrName": "OtherKey",
+          "tsEmitName": "OtherKey",
+          "normalizedSignature": "OtherKey|:System.String|static=false|accessor=get",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.AssociationAttribute::IsForeignKey:System.Boolean",
+          "clrName": "IsForeignKey",
+          "tsEmitName": "IsForeignKey",
+          "normalizedSignature": "IsForeignKey|:System.Boolean|static=false|accessor=getset",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": true
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.AssociationAttribute::ThisKeyMembers:System.Collections.Generic.IEnumerable_1[[System.String,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]",
+          "clrName": "ThisKeyMembers",
+          "tsEmitName": "ThisKeyMembers",
+          "normalizedSignature": "ThisKeyMembers|:System.Collections.Generic.IEnumerable_1[[System.String,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]|static=false|accessor=get",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.AssociationAttribute::OtherKeyMembers:System.Collections.Generic.IEnumerable_1[[System.String,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]",
+          "clrName": "OtherKeyMembers",
+          "tsEmitName": "OtherKeyMembers",
+          "normalizedSignature": "OtherKeyMembers|:System.Collections.Generic.IEnumerable_1[[System.String,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]|static=false|accessor=get",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false
+        }
+      ],
+      "fields": [],
+      "events": [],
+      "constructors": [
+        {
+          "normalizedSignature": "constructor|(System.String,System.String,System.String):void|static=false",
+          "isStatic": false,
+          "parameterCount": 3
+        }
+      ]
+    },
+    {
+      "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.Base64StringAttribute",
+      "clrName": "System.ComponentModel.DataAnnotations.Base64StringAttribute",
+      "tsEmitName": "Base64StringAttribute",
+      "kind": "Class",
+      "accessibility": "Public",
+      "isAbstract": false,
+      "isSealed": false,
+      "isStatic": false,
+      "arity": 0,
+      "methods": [
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.Base64StringAttribute::IsValid(System.Object):System.Boolean",
+          "clrName": "IsValid",
+          "tsEmitName": "IsValid",
+          "normalizedSignature": "IsValid|(System.Object):System.Boolean|static=false",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": true,
+          "isOverride": true,
+          "isSealed": false,
+          "arity": 0,
+          "parameterCount": 1,
+          "isExtensionMethod": false
+        }
+      ],
+      "properties": [],
+      "fields": [],
+      "events": [],
+      "constructors": [
+        {
+          "normalizedSignature": "constructor|():void|static=false",
+          "isStatic": false,
+          "parameterCount": 0
+        }
+      ]
+    },
+    {
+      "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.CompareAttribute",
+      "clrName": "System.ComponentModel.DataAnnotations.CompareAttribute",
+      "tsEmitName": "CompareAttribute",
+      "kind": "Class",
+      "accessibility": "Public",
+      "isAbstract": false,
+      "isSealed": false,
+      "isStatic": false,
+      "arity": 0,
+      "methods": [
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.CompareAttribute::FormatErrorMessage(System.String):System.String",
+          "clrName": "FormatErrorMessage",
+          "tsEmitName": "FormatErrorMessage",
+          "normalizedSignature": "FormatErrorMessage|(System.String):System.String|static=false",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": true,
+          "isOverride": true,
+          "isSealed": false,
+          "arity": 0,
+          "parameterCount": 1,
+          "isExtensionMethod": false
+        }
+      ],
+      "properties": [
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.CompareAttribute::OtherProperty:System.String",
+          "clrName": "OtherProperty",
+          "tsEmitName": "OtherProperty",
+          "normalizedSignature": "OtherProperty|:System.String|static=false|accessor=get",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.CompareAttribute::OtherPropertyDisplayName:System.String",
+          "clrName": "OtherPropertyDisplayName",
+          "tsEmitName": "OtherPropertyDisplayName",
+          "normalizedSignature": "OtherPropertyDisplayName|:System.String|static=false|accessor=get",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.CompareAttribute::RequiresValidationContext:System.Boolean",
+          "clrName": "RequiresValidationContext",
+          "tsEmitName": "RequiresValidationContext",
+          "normalizedSignature": "RequiresValidationContext|:System.Boolean|static=false|accessor=get",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": true,
+          "isOverride": true,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false
+        }
+      ],
+      "fields": [],
+      "events": [],
+      "constructors": [
+        {
+          "normalizedSignature": "constructor|(System.String):void|static=false",
+          "isStatic": false,
+          "parameterCount": 1
+        }
+      ]
+    },
+    {
+      "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.ConcurrencyCheckAttribute",
+      "clrName": "System.ComponentModel.DataAnnotations.ConcurrencyCheckAttribute",
+      "tsEmitName": "ConcurrencyCheckAttribute",
+      "kind": "Class",
+      "accessibility": "Public",
+      "isAbstract": false,
+      "isSealed": true,
+      "isStatic": false,
+      "arity": 0,
+      "methods": [],
+      "properties": [],
+      "fields": [],
+      "events": [],
+      "constructors": [
+        {
+          "normalizedSignature": "constructor|():void|static=false",
+          "isStatic": false,
+          "parameterCount": 0
+        }
+      ]
+    },
+    {
+      "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.CreditCardAttribute",
+      "clrName": "System.ComponentModel.DataAnnotations.CreditCardAttribute",
+      "tsEmitName": "CreditCardAttribute",
+      "kind": "Class",
+      "accessibility": "Public",
+      "isAbstract": false,
+      "isSealed": true,
+      "isStatic": false,
+      "arity": 0,
+      "methods": [
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.CreditCardAttribute::IsValid(System.Object):System.Boolean",
+          "clrName": "IsValid",
+          "tsEmitName": "IsValid",
+          "normalizedSignature": "IsValid|(System.Object):System.Boolean|static=false",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": true,
+          "isOverride": true,
+          "isSealed": false,
+          "arity": 0,
+          "parameterCount": 1,
+          "isExtensionMethod": false
+        }
+      ],
+      "properties": [],
+      "fields": [],
+      "events": [],
+      "constructors": [
+        {
+          "normalizedSignature": "constructor|():void|static=false",
+          "isStatic": false,
+          "parameterCount": 0
+        }
+      ]
+    },
+    {
+      "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.CustomValidationAttribute",
+      "clrName": "System.ComponentModel.DataAnnotations.CustomValidationAttribute",
+      "tsEmitName": "CustomValidationAttribute",
+      "kind": "Class",
+      "accessibility": "Public",
+      "isAbstract": false,
+      "isSealed": true,
+      "isStatic": false,
+      "arity": 0,
+      "methods": [
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.CustomValidationAttribute::FormatErrorMessage(System.String):System.String",
+          "clrName": "FormatErrorMessage",
+          "tsEmitName": "FormatErrorMessage",
+          "normalizedSignature": "FormatErrorMessage|(System.String):System.String|static=false",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": true,
+          "isOverride": true,
+          "isSealed": false,
+          "arity": 0,
+          "parameterCount": 1,
+          "isExtensionMethod": false
+        }
+      ],
+      "properties": [
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.CustomValidationAttribute::ValidatorType:System.Type",
+          "clrName": "ValidatorType",
+          "tsEmitName": "ValidatorType",
+          "normalizedSignature": "ValidatorType|:System.Type|static=false|accessor=get",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.CustomValidationAttribute::TypeId:System.Object",
+          "clrName": "TypeId",
+          "tsEmitName": "TypeId",
+          "normalizedSignature": "TypeId|:System.Object|static=false|accessor=get",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": true,
+          "isOverride": true,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.CustomValidationAttribute::Method:System.String",
+          "clrName": "Method",
+          "tsEmitName": "Method",
+          "normalizedSignature": "Method|:System.String|static=false|accessor=get",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.CustomValidationAttribute::RequiresValidationContext:System.Boolean",
+          "clrName": "RequiresValidationContext",
+          "tsEmitName": "RequiresValidationContext",
+          "normalizedSignature": "RequiresValidationContext|:System.Boolean|static=false|accessor=get",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": true,
+          "isOverride": true,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false
+        }
+      ],
+      "fields": [],
+      "events": [],
+      "constructors": [
+        {
+          "normalizedSignature": "constructor|(System.Type,System.String):void|static=false",
+          "isStatic": false,
+          "parameterCount": 2
+        }
+      ]
+    },
+    {
+      "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.DataTypeAttribute",
+      "clrName": "System.ComponentModel.DataAnnotations.DataTypeAttribute",
+      "tsEmitName": "DataTypeAttribute",
+      "kind": "Class",
+      "accessibility": "Public",
+      "isAbstract": false,
+      "isSealed": false,
+      "isStatic": false,
+      "arity": 0,
+      "methods": [
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.DataTypeAttribute::GetDataTypeName():System.String",
+          "clrName": "GetDataTypeName",
+          "tsEmitName": "GetDataTypeName",
+          "normalizedSignature": "GetDataTypeName|():System.String|static=false",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": true,
+          "isOverride": false,
+          "isSealed": false,
+          "arity": 0,
+          "parameterCount": 0,
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.DataTypeAttribute::IsValid(System.Object):System.Boolean",
+          "clrName": "IsValid",
+          "tsEmitName": "IsValid",
+          "normalizedSignature": "IsValid|(System.Object):System.Boolean|static=false",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": true,
+          "isOverride": true,
+          "isSealed": false,
+          "arity": 0,
+          "parameterCount": 1,
+          "isExtensionMethod": false
+        }
+      ],
+      "properties": [
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.DataTypeAttribute::DataType:System.ComponentModel.DataAnnotations.DataType",
+          "clrName": "DataType",
+          "tsEmitName": "DataType",
+          "normalizedSignature": "DataType|:System.ComponentModel.DataAnnotations.DataType|static=false|accessor=get",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.DataTypeAttribute::CustomDataType:System.String",
+          "clrName": "CustomDataType",
+          "tsEmitName": "CustomDataType",
+          "normalizedSignature": "CustomDataType|:System.String|static=false|accessor=get",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.DataTypeAttribute::DisplayFormat:System.ComponentModel.DataAnnotations.DisplayFormatAttribute",
+          "clrName": "DisplayFormat",
+          "tsEmitName": "DisplayFormat",
+          "normalizedSignature": "DisplayFormat|:System.ComponentModel.DataAnnotations.DisplayFormatAttribute|static=false|accessor=get",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false
+        }
+      ],
+      "fields": [],
+      "events": [],
+      "constructors": [
+        {
+          "normalizedSignature": "constructor|(System.ComponentModel.DataAnnotations.DataType):void|static=false",
+          "isStatic": false,
+          "parameterCount": 1
+        },
+        {
+          "normalizedSignature": "constructor|(System.String):void|static=false",
+          "isStatic": false,
+          "parameterCount": 1
+        }
+      ]
+    },
+    {
+      "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.DeniedValuesAttribute",
+      "clrName": "System.ComponentModel.DataAnnotations.DeniedValuesAttribute",
+      "tsEmitName": "DeniedValuesAttribute",
+      "kind": "Class",
+      "accessibility": "Public",
+      "isAbstract": false,
+      "isSealed": false,
+      "isStatic": false,
+      "arity": 0,
+      "methods": [
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.DeniedValuesAttribute::IsValid(System.Object):System.Boolean",
+          "clrName": "IsValid",
+          "tsEmitName": "IsValid",
+          "normalizedSignature": "IsValid|(System.Object):System.Boolean|static=false",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": true,
+          "isOverride": true,
+          "isSealed": false,
+          "arity": 0,
+          "parameterCount": 1,
+          "isExtensionMethod": false
+        }
+      ],
+      "properties": [
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.DeniedValuesAttribute::Values:System.Object[]",
+          "clrName": "Values",
+          "tsEmitName": "Values",
+          "normalizedSignature": "Values|:System.Object[]|static=false|accessor=get",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false
+        }
+      ],
+      "fields": [],
+      "events": [],
+      "constructors": [
+        {
+          "normalizedSignature": "constructor|(System.Object[]):void|static=false",
+          "isStatic": false,
+          "parameterCount": 1
+        }
+      ]
+    },
+    {
+      "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.DisplayAttribute",
+      "clrName": "System.ComponentModel.DataAnnotations.DisplayAttribute",
+      "tsEmitName": "DisplayAttribute",
+      "kind": "Class",
+      "accessibility": "Public",
+      "isAbstract": false,
+      "isSealed": true,
+      "isStatic": false,
+      "arity": 0,
+      "methods": [
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.DisplayAttribute::GetShortName():System.String",
+          "clrName": "GetShortName",
+          "tsEmitName": "GetShortName",
+          "normalizedSignature": "GetShortName|():System.String|static=false",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isSealed": false,
+          "arity": 0,
+          "parameterCount": 0,
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.DisplayAttribute::GetName():System.String",
+          "clrName": "GetName",
+          "tsEmitName": "GetName",
+          "normalizedSignature": "GetName|():System.String|static=false",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isSealed": false,
+          "arity": 0,
+          "parameterCount": 0,
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.DisplayAttribute::GetDescription():System.String",
+          "clrName": "GetDescription",
+          "tsEmitName": "GetDescription",
+          "normalizedSignature": "GetDescription|():System.String|static=false",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isSealed": false,
+          "arity": 0,
+          "parameterCount": 0,
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.DisplayAttribute::GetPrompt():System.String",
+          "clrName": "GetPrompt",
+          "tsEmitName": "GetPrompt",
+          "normalizedSignature": "GetPrompt|():System.String|static=false",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isSealed": false,
+          "arity": 0,
+          "parameterCount": 0,
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.DisplayAttribute::GetGroupName():System.String",
+          "clrName": "GetGroupName",
+          "tsEmitName": "GetGroupName",
+          "normalizedSignature": "GetGroupName|():System.String|static=false",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isSealed": false,
+          "arity": 0,
+          "parameterCount": 0,
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.DisplayAttribute::GetAutoGenerateField():System.Nullable_1[[System.Boolean,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]",
+          "clrName": "GetAutoGenerateField",
+          "tsEmitName": "GetAutoGenerateField",
+          "normalizedSignature": "GetAutoGenerateField|():System.Nullable_1[[System.Boolean,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]|static=false",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isSealed": false,
+          "arity": 0,
+          "parameterCount": 0,
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.DisplayAttribute::GetAutoGenerateFilter():System.Nullable_1[[System.Boolean,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]",
+          "clrName": "GetAutoGenerateFilter",
+          "tsEmitName": "GetAutoGenerateFilter",
+          "normalizedSignature": "GetAutoGenerateFilter|():System.Nullable_1[[System.Boolean,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]|static=false",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isSealed": false,
+          "arity": 0,
+          "parameterCount": 0,
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.DisplayAttribute::GetOrder():System.Nullable_1[[System.Int32,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]",
+          "clrName": "GetOrder",
+          "tsEmitName": "GetOrder",
+          "normalizedSignature": "GetOrder|():System.Nullable_1[[System.Int32,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]|static=false",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isSealed": false,
+          "arity": 0,
+          "parameterCount": 0,
+          "isExtensionMethod": false
+        }
+      ],
+      "properties": [
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.DisplayAttribute::ShortName:System.String",
+          "clrName": "ShortName",
+          "tsEmitName": "ShortName",
+          "normalizedSignature": "ShortName|:System.String|static=false|accessor=getset",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": true
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.DisplayAttribute::Name:System.String",
+          "clrName": "Name",
+          "tsEmitName": "Name",
+          "normalizedSignature": "Name|:System.String|static=false|accessor=getset",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": true
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.DisplayAttribute::Description:System.String",
+          "clrName": "Description",
+          "tsEmitName": "Description",
+          "normalizedSignature": "Description|:System.String|static=false|accessor=getset",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": true
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.DisplayAttribute::Prompt:System.String",
+          "clrName": "Prompt",
+          "tsEmitName": "Prompt",
+          "normalizedSignature": "Prompt|:System.String|static=false|accessor=getset",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": true
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.DisplayAttribute::GroupName:System.String",
+          "clrName": "GroupName",
+          "tsEmitName": "GroupName",
+          "normalizedSignature": "GroupName|:System.String|static=false|accessor=getset",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": true
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.DisplayAttribute::ResourceType:System.Type",
+          "clrName": "ResourceType",
+          "tsEmitName": "ResourceType",
+          "normalizedSignature": "ResourceType|:System.Type|static=false|accessor=getset",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": true
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.DisplayAttribute::AutoGenerateField:System.Boolean",
+          "clrName": "AutoGenerateField",
+          "tsEmitName": "AutoGenerateField",
+          "normalizedSignature": "AutoGenerateField|:System.Boolean|static=false|accessor=getset",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": true
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.DisplayAttribute::AutoGenerateFilter:System.Boolean",
+          "clrName": "AutoGenerateFilter",
+          "tsEmitName": "AutoGenerateFilter",
+          "normalizedSignature": "AutoGenerateFilter|:System.Boolean|static=false|accessor=getset",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": true
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.DisplayAttribute::Order:System.Int32",
+          "clrName": "Order",
+          "tsEmitName": "Order",
+          "normalizedSignature": "Order|:System.Int32|static=false|accessor=getset",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": true
+        }
+      ],
+      "fields": [],
+      "events": [],
+      "constructors": [
+        {
+          "normalizedSignature": "constructor|():void|static=false",
+          "isStatic": false,
+          "parameterCount": 0
+        }
+      ]
+    },
+    {
+      "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.DisplayColumnAttribute",
+      "clrName": "System.ComponentModel.DataAnnotations.DisplayColumnAttribute",
+      "tsEmitName": "DisplayColumnAttribute",
+      "kind": "Class",
+      "accessibility": "Public",
+      "isAbstract": false,
+      "isSealed": false,
+      "isStatic": false,
+      "arity": 0,
+      "methods": [],
+      "properties": [
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.DisplayColumnAttribute::DisplayColumn:System.String",
+          "clrName": "DisplayColumn",
+          "tsEmitName": "DisplayColumn",
+          "normalizedSignature": "DisplayColumn|:System.String|static=false|accessor=get",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.DisplayColumnAttribute::SortColumn:System.String",
+          "clrName": "SortColumn",
+          "tsEmitName": "SortColumn",
+          "normalizedSignature": "SortColumn|:System.String|static=false|accessor=get",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.DisplayColumnAttribute::SortDescending:System.Boolean",
+          "clrName": "SortDescending",
+          "tsEmitName": "SortDescending",
+          "normalizedSignature": "SortDescending|:System.Boolean|static=false|accessor=get",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false
+        }
+      ],
+      "fields": [],
+      "events": [],
+      "constructors": [
+        {
+          "normalizedSignature": "constructor|(System.String):void|static=false",
+          "isStatic": false,
+          "parameterCount": 1
+        },
+        {
+          "normalizedSignature": "constructor|(System.String,System.String):void|static=false",
+          "isStatic": false,
+          "parameterCount": 2
+        },
+        {
+          "normalizedSignature": "constructor|(System.String,System.String,System.Boolean):void|static=false",
+          "isStatic": false,
+          "parameterCount": 3
+        }
+      ]
+    },
+    {
+      "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.DisplayFormatAttribute",
+      "clrName": "System.ComponentModel.DataAnnotations.DisplayFormatAttribute",
+      "tsEmitName": "DisplayFormatAttribute",
+      "kind": "Class",
+      "accessibility": "Public",
+      "isAbstract": false,
+      "isSealed": false,
+      "isStatic": false,
+      "arity": 0,
+      "methods": [
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.DisplayFormatAttribute::GetNullDisplayText():System.String",
+          "clrName": "GetNullDisplayText",
+          "tsEmitName": "GetNullDisplayText",
+          "normalizedSignature": "GetNullDisplayText|():System.String|static=false",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isSealed": false,
+          "arity": 0,
+          "parameterCount": 0,
+          "isExtensionMethod": false
+        }
+      ],
+      "properties": [
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.DisplayFormatAttribute::DataFormatString:System.String",
+          "clrName": "DataFormatString",
+          "tsEmitName": "DataFormatString",
+          "normalizedSignature": "DataFormatString|:System.String|static=false|accessor=getset",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": true
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.DisplayFormatAttribute::NullDisplayText:System.String",
+          "clrName": "NullDisplayText",
+          "tsEmitName": "NullDisplayText",
+          "normalizedSignature": "NullDisplayText|:System.String|static=false|accessor=getset",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": true
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.DisplayFormatAttribute::ConvertEmptyStringToNull:System.Boolean",
+          "clrName": "ConvertEmptyStringToNull",
+          "tsEmitName": "ConvertEmptyStringToNull",
+          "normalizedSignature": "ConvertEmptyStringToNull|:System.Boolean|static=false|accessor=getset",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": true
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.DisplayFormatAttribute::ApplyFormatInEditMode:System.Boolean",
+          "clrName": "ApplyFormatInEditMode",
+          "tsEmitName": "ApplyFormatInEditMode",
+          "normalizedSignature": "ApplyFormatInEditMode|:System.Boolean|static=false|accessor=getset",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": true
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.DisplayFormatAttribute::HtmlEncode:System.Boolean",
+          "clrName": "HtmlEncode",
+          "tsEmitName": "HtmlEncode",
+          "normalizedSignature": "HtmlEncode|:System.Boolean|static=false|accessor=getset",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": true
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.DisplayFormatAttribute::NullDisplayTextResourceType:System.Type",
+          "clrName": "NullDisplayTextResourceType",
+          "tsEmitName": "NullDisplayTextResourceType",
+          "normalizedSignature": "NullDisplayTextResourceType|:System.Type|static=false|accessor=getset",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": true
+        }
+      ],
+      "fields": [],
+      "events": [],
+      "constructors": [
+        {
+          "normalizedSignature": "constructor|():void|static=false",
+          "isStatic": false,
+          "parameterCount": 0
+        }
+      ]
+    },
+    {
+      "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.EditableAttribute",
+      "clrName": "System.ComponentModel.DataAnnotations.EditableAttribute",
+      "tsEmitName": "EditableAttribute",
+      "kind": "Class",
+      "accessibility": "Public",
+      "isAbstract": false,
+      "isSealed": true,
+      "isStatic": false,
+      "arity": 0,
+      "methods": [],
+      "properties": [
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.EditableAttribute::AllowEdit:System.Boolean",
+          "clrName": "AllowEdit",
+          "tsEmitName": "AllowEdit",
+          "normalizedSignature": "AllowEdit|:System.Boolean|static=false|accessor=get",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.EditableAttribute::AllowInitialValue:System.Boolean",
+          "clrName": "AllowInitialValue",
+          "tsEmitName": "AllowInitialValue",
+          "normalizedSignature": "AllowInitialValue|:System.Boolean|static=false|accessor=getset",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": true
+        }
+      ],
+      "fields": [],
+      "events": [],
+      "constructors": [
+        {
+          "normalizedSignature": "constructor|(System.Boolean):void|static=false",
+          "isStatic": false,
+          "parameterCount": 1
+        }
+      ]
+    },
+    {
+      "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.EmailAddressAttribute",
+      "clrName": "System.ComponentModel.DataAnnotations.EmailAddressAttribute",
+      "tsEmitName": "EmailAddressAttribute",
+      "kind": "Class",
+      "accessibility": "Public",
+      "isAbstract": false,
+      "isSealed": true,
+      "isStatic": false,
+      "arity": 0,
+      "methods": [
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.EmailAddressAttribute::IsValid(System.Object):System.Boolean",
+          "clrName": "IsValid",
+          "tsEmitName": "IsValid",
+          "normalizedSignature": "IsValid|(System.Object):System.Boolean|static=false",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": true,
+          "isOverride": true,
+          "isSealed": false,
+          "arity": 0,
+          "parameterCount": 1,
+          "isExtensionMethod": false
+        }
+      ],
+      "properties": [],
+      "fields": [],
+      "events": [],
+      "constructors": [
+        {
+          "normalizedSignature": "constructor|():void|static=false",
+          "isStatic": false,
+          "parameterCount": 0
+        }
+      ]
+    },
+    {
+      "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.EnumDataTypeAttribute",
+      "clrName": "System.ComponentModel.DataAnnotations.EnumDataTypeAttribute",
+      "tsEmitName": "EnumDataTypeAttribute",
+      "kind": "Class",
+      "accessibility": "Public",
+      "isAbstract": false,
+      "isSealed": true,
+      "isStatic": false,
+      "arity": 0,
+      "methods": [
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.EnumDataTypeAttribute::IsValid(System.Object):System.Boolean",
+          "clrName": "IsValid",
+          "tsEmitName": "IsValid",
+          "normalizedSignature": "IsValid|(System.Object):System.Boolean|static=false",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": true,
+          "isOverride": true,
+          "isSealed": false,
+          "arity": 0,
+          "parameterCount": 1,
+          "isExtensionMethod": false
+        }
+      ],
+      "properties": [
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.EnumDataTypeAttribute::EnumType:System.Type",
+          "clrName": "EnumType",
+          "tsEmitName": "EnumType",
+          "normalizedSignature": "EnumType|:System.Type|static=false|accessor=get",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false
+        }
+      ],
+      "fields": [],
+      "events": [],
+      "constructors": [
+        {
+          "normalizedSignature": "constructor|(System.Type):void|static=false",
+          "isStatic": false,
+          "parameterCount": 1
+        }
+      ]
+    },
+    {
+      "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.FileExtensionsAttribute",
+      "clrName": "System.ComponentModel.DataAnnotations.FileExtensionsAttribute",
+      "tsEmitName": "FileExtensionsAttribute",
+      "kind": "Class",
+      "accessibility": "Public",
+      "isAbstract": false,
+      "isSealed": true,
+      "isStatic": false,
+      "arity": 0,
+      "methods": [
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.FileExtensionsAttribute::FormatErrorMessage(System.String):System.String",
+          "clrName": "FormatErrorMessage",
+          "tsEmitName": "FormatErrorMessage",
+          "normalizedSignature": "FormatErrorMessage|(System.String):System.String|static=false",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": true,
+          "isOverride": true,
+          "isSealed": false,
+          "arity": 0,
+          "parameterCount": 1,
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.FileExtensionsAttribute::IsValid(System.Object):System.Boolean",
+          "clrName": "IsValid",
+          "tsEmitName": "IsValid",
+          "normalizedSignature": "IsValid|(System.Object):System.Boolean|static=false",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": true,
+          "isOverride": true,
+          "isSealed": false,
+          "arity": 0,
+          "parameterCount": 1,
+          "isExtensionMethod": false
+        }
+      ],
+      "properties": [
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.FileExtensionsAttribute::Extensions:System.String",
+          "clrName": "Extensions",
+          "tsEmitName": "Extensions",
+          "normalizedSignature": "Extensions|:System.String|static=false|accessor=getset",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": true
+        }
+      ],
+      "fields": [],
+      "events": [],
+      "constructors": [
+        {
+          "normalizedSignature": "constructor|():void|static=false",
+          "isStatic": false,
+          "parameterCount": 0
+        }
+      ]
+    },
+    {
+      "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.FilterUIHintAttribute",
+      "clrName": "System.ComponentModel.DataAnnotations.FilterUIHintAttribute",
+      "tsEmitName": "FilterUIHintAttribute",
+      "kind": "Class",
+      "accessibility": "Public",
+      "isAbstract": false,
+      "isSealed": true,
+      "isStatic": false,
+      "arity": 0,
+      "methods": [
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.FilterUIHintAttribute::GetHashCode():System.Int32",
+          "clrName": "GetHashCode",
+          "tsEmitName": "GetHashCode",
+          "normalizedSignature": "GetHashCode|():System.Int32|static=false",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": true,
+          "isOverride": true,
+          "isSealed": false,
+          "arity": 0,
+          "parameterCount": 0,
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.FilterUIHintAttribute::Equals(System.Object):System.Boolean",
+          "clrName": "Equals",
+          "tsEmitName": "Equals",
+          "normalizedSignature": "Equals|(System.Object):System.Boolean|static=false",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": true,
+          "isOverride": true,
+          "isSealed": false,
+          "arity": 0,
+          "parameterCount": 1,
+          "isExtensionMethod": false
+        }
+      ],
+      "properties": [
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.FilterUIHintAttribute::FilterUIHint:System.String",
+          "clrName": "FilterUIHint",
+          "tsEmitName": "FilterUIHint",
+          "normalizedSignature": "FilterUIHint|:System.String|static=false|accessor=get",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.FilterUIHintAttribute::PresentationLayer:System.String",
+          "clrName": "PresentationLayer",
+          "tsEmitName": "PresentationLayer",
+          "normalizedSignature": "PresentationLayer|:System.String|static=false|accessor=get",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.FilterUIHintAttribute::ControlParameters:System.Collections.Generic.IDictionary_2[[System.String,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e],[System.Object,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]",
+          "clrName": "ControlParameters",
+          "tsEmitName": "ControlParameters",
+          "normalizedSignature": "ControlParameters|:System.Collections.Generic.IDictionary_2[[System.String,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e],[System.Object,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]|static=false|accessor=get",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false
+        }
+      ],
+      "fields": [],
+      "events": [],
+      "constructors": [
+        {
+          "normalizedSignature": "constructor|(System.String):void|static=false",
+          "isStatic": false,
+          "parameterCount": 1
+        },
+        {
+          "normalizedSignature": "constructor|(System.String,System.String):void|static=false",
+          "isStatic": false,
+          "parameterCount": 2
+        },
+        {
+          "normalizedSignature": "constructor|(System.String,System.String,System.Object[]):void|static=false",
+          "isStatic": false,
+          "parameterCount": 3
+        }
+      ]
+    },
+    {
+      "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.KeyAttribute",
+      "clrName": "System.ComponentModel.DataAnnotations.KeyAttribute",
+      "tsEmitName": "KeyAttribute",
+      "kind": "Class",
+      "accessibility": "Public",
+      "isAbstract": false,
+      "isSealed": true,
+      "isStatic": false,
+      "arity": 0,
+      "methods": [],
+      "properties": [],
+      "fields": [],
+      "events": [],
+      "constructors": [
+        {
+          "normalizedSignature": "constructor|():void|static=false",
+          "isStatic": false,
+          "parameterCount": 0
+        }
+      ]
+    },
+    {
+      "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.LengthAttribute",
+      "clrName": "System.ComponentModel.DataAnnotations.LengthAttribute",
+      "tsEmitName": "LengthAttribute",
+      "kind": "Class",
+      "accessibility": "Public",
+      "isAbstract": false,
+      "isSealed": false,
+      "isStatic": false,
+      "arity": 0,
+      "methods": [
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.LengthAttribute::IsValid(System.Object):System.Boolean",
+          "clrName": "IsValid",
+          "tsEmitName": "IsValid",
+          "normalizedSignature": "IsValid|(System.Object):System.Boolean|static=false",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": true,
+          "isOverride": true,
+          "isSealed": false,
+          "arity": 0,
+          "parameterCount": 1,
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.LengthAttribute::FormatErrorMessage(System.String):System.String",
+          "clrName": "FormatErrorMessage",
+          "tsEmitName": "FormatErrorMessage",
+          "normalizedSignature": "FormatErrorMessage|(System.String):System.String|static=false",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": true,
+          "isOverride": true,
+          "isSealed": false,
+          "arity": 0,
+          "parameterCount": 1,
+          "isExtensionMethod": false
+        }
+      ],
+      "properties": [
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.LengthAttribute::MinimumLength:System.Int32",
+          "clrName": "MinimumLength",
+          "tsEmitName": "MinimumLength",
+          "normalizedSignature": "MinimumLength|:System.Int32|static=false|accessor=get",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.LengthAttribute::MaximumLength:System.Int32",
+          "clrName": "MaximumLength",
+          "tsEmitName": "MaximumLength",
+          "normalizedSignature": "MaximumLength|:System.Int32|static=false|accessor=get",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false
+        }
+      ],
+      "fields": [],
+      "events": [],
+      "constructors": [
+        {
+          "normalizedSignature": "constructor|(System.Int32,System.Int32):void|static=false",
+          "isStatic": false,
+          "parameterCount": 2
+        }
+      ]
+    },
+    {
+      "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.MaxLengthAttribute",
+      "clrName": "System.ComponentModel.DataAnnotations.MaxLengthAttribute",
+      "tsEmitName": "MaxLengthAttribute",
+      "kind": "Class",
+      "accessibility": "Public",
+      "isAbstract": false,
+      "isSealed": false,
+      "isStatic": false,
+      "arity": 0,
+      "methods": [
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.MaxLengthAttribute::IsValid(System.Object):System.Boolean",
+          "clrName": "IsValid",
+          "tsEmitName": "IsValid",
+          "normalizedSignature": "IsValid|(System.Object):System.Boolean|static=false",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": true,
+          "isOverride": true,
+          "isSealed": false,
+          "arity": 0,
+          "parameterCount": 1,
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.MaxLengthAttribute::FormatErrorMessage(System.String):System.String",
+          "clrName": "FormatErrorMessage",
+          "tsEmitName": "FormatErrorMessage",
+          "normalizedSignature": "FormatErrorMessage|(System.String):System.String|static=false",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": true,
+          "isOverride": true,
+          "isSealed": false,
+          "arity": 0,
+          "parameterCount": 1,
+          "isExtensionMethod": false
+        }
+      ],
+      "properties": [
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.MaxLengthAttribute::Length:System.Int32",
+          "clrName": "Length",
+          "tsEmitName": "Length",
+          "normalizedSignature": "Length|:System.Int32|static=false|accessor=get",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false
+        }
+      ],
+      "fields": [],
+      "events": [],
+      "constructors": [
+        {
+          "normalizedSignature": "constructor|(System.Int32):void|static=false",
+          "isStatic": false,
+          "parameterCount": 1
+        },
+        {
+          "normalizedSignature": "constructor|():void|static=false",
+          "isStatic": false,
+          "parameterCount": 0
+        }
+      ]
+    },
+    {
+      "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.MetadataTypeAttribute",
+      "clrName": "System.ComponentModel.DataAnnotations.MetadataTypeAttribute",
+      "tsEmitName": "MetadataTypeAttribute",
+      "kind": "Class",
+      "accessibility": "Public",
+      "isAbstract": false,
+      "isSealed": true,
+      "isStatic": false,
+      "arity": 0,
+      "methods": [],
+      "properties": [
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.MetadataTypeAttribute::MetadataClassType:System.Type",
+          "clrName": "MetadataClassType",
+          "tsEmitName": "MetadataClassType",
+          "normalizedSignature": "MetadataClassType|:System.Type|static=false|accessor=get",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false
+        }
+      ],
+      "fields": [],
+      "events": [],
+      "constructors": [
+        {
+          "normalizedSignature": "constructor|(System.Type):void|static=false",
+          "isStatic": false,
+          "parameterCount": 1
+        }
+      ]
+    },
+    {
+      "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.MinLengthAttribute",
+      "clrName": "System.ComponentModel.DataAnnotations.MinLengthAttribute",
+      "tsEmitName": "MinLengthAttribute",
+      "kind": "Class",
+      "accessibility": "Public",
+      "isAbstract": false,
+      "isSealed": false,
+      "isStatic": false,
+      "arity": 0,
+      "methods": [
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.MinLengthAttribute::IsValid(System.Object):System.Boolean",
+          "clrName": "IsValid",
+          "tsEmitName": "IsValid",
+          "normalizedSignature": "IsValid|(System.Object):System.Boolean|static=false",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": true,
+          "isOverride": true,
+          "isSealed": false,
+          "arity": 0,
+          "parameterCount": 1,
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.MinLengthAttribute::FormatErrorMessage(System.String):System.String",
+          "clrName": "FormatErrorMessage",
+          "tsEmitName": "FormatErrorMessage",
+          "normalizedSignature": "FormatErrorMessage|(System.String):System.String|static=false",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": true,
+          "isOverride": true,
+          "isSealed": false,
+          "arity": 0,
+          "parameterCount": 1,
+          "isExtensionMethod": false
+        }
+      ],
+      "properties": [
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.MinLengthAttribute::Length:System.Int32",
+          "clrName": "Length",
+          "tsEmitName": "Length",
+          "normalizedSignature": "Length|:System.Int32|static=false|accessor=get",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false
+        }
+      ],
+      "fields": [],
+      "events": [],
+      "constructors": [
+        {
+          "normalizedSignature": "constructor|(System.Int32):void|static=false",
+          "isStatic": false,
+          "parameterCount": 1
+        }
+      ]
+    },
+    {
+      "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.PhoneAttribute",
+      "clrName": "System.ComponentModel.DataAnnotations.PhoneAttribute",
+      "tsEmitName": "PhoneAttribute",
+      "kind": "Class",
+      "accessibility": "Public",
+      "isAbstract": false,
+      "isSealed": true,
+      "isStatic": false,
+      "arity": 0,
+      "methods": [
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.PhoneAttribute::IsValid(System.Object):System.Boolean",
+          "clrName": "IsValid",
+          "tsEmitName": "IsValid",
+          "normalizedSignature": "IsValid|(System.Object):System.Boolean|static=false",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": true,
+          "isOverride": true,
+          "isSealed": false,
+          "arity": 0,
+          "parameterCount": 1,
+          "isExtensionMethod": false
+        }
+      ],
+      "properties": [],
+      "fields": [],
+      "events": [],
+      "constructors": [
+        {
+          "normalizedSignature": "constructor|():void|static=false",
+          "isStatic": false,
+          "parameterCount": 0
+        }
+      ]
+    },
+    {
+      "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.RangeAttribute",
+      "clrName": "System.ComponentModel.DataAnnotations.RangeAttribute",
+      "tsEmitName": "RangeAttribute",
+      "kind": "Class",
+      "accessibility": "Public",
+      "isAbstract": false,
+      "isSealed": false,
+      "isStatic": false,
+      "arity": 0,
+      "methods": [
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.RangeAttribute::IsValid(System.Object):System.Boolean",
+          "clrName": "IsValid",
+          "tsEmitName": "IsValid",
+          "normalizedSignature": "IsValid|(System.Object):System.Boolean|static=false",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": true,
+          "isOverride": true,
+          "isSealed": false,
+          "arity": 0,
+          "parameterCount": 1,
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.RangeAttribute::FormatErrorMessage(System.String):System.String",
+          "clrName": "FormatErrorMessage",
+          "tsEmitName": "FormatErrorMessage",
+          "normalizedSignature": "FormatErrorMessage|(System.String):System.String|static=false",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": true,
+          "isOverride": true,
+          "isSealed": false,
+          "arity": 0,
+          "parameterCount": 1,
+          "isExtensionMethod": false
+        }
+      ],
+      "properties": [
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.RangeAttribute::Minimum:System.Object",
+          "clrName": "Minimum",
+          "tsEmitName": "Minimum",
+          "normalizedSignature": "Minimum|:System.Object|static=false|accessor=get",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.RangeAttribute::Maximum:System.Object",
+          "clrName": "Maximum",
+          "tsEmitName": "Maximum",
+          "normalizedSignature": "Maximum|:System.Object|static=false|accessor=get",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.RangeAttribute::MinimumIsExclusive:System.Boolean",
+          "clrName": "MinimumIsExclusive",
+          "tsEmitName": "MinimumIsExclusive",
+          "normalizedSignature": "MinimumIsExclusive|:System.Boolean|static=false|accessor=getset",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": true
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.RangeAttribute::MaximumIsExclusive:System.Boolean",
+          "clrName": "MaximumIsExclusive",
+          "tsEmitName": "MaximumIsExclusive",
+          "normalizedSignature": "MaximumIsExclusive|:System.Boolean|static=false|accessor=getset",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": true
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.RangeAttribute::OperandType:System.Type",
+          "clrName": "OperandType",
+          "tsEmitName": "OperandType",
+          "normalizedSignature": "OperandType|:System.Type|static=false|accessor=get",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.RangeAttribute::ParseLimitsInInvariantCulture:System.Boolean",
+          "clrName": "ParseLimitsInInvariantCulture",
+          "tsEmitName": "ParseLimitsInInvariantCulture",
+          "normalizedSignature": "ParseLimitsInInvariantCulture|:System.Boolean|static=false|accessor=getset",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": true
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.RangeAttribute::ConvertValueInInvariantCulture:System.Boolean",
+          "clrName": "ConvertValueInInvariantCulture",
+          "tsEmitName": "ConvertValueInInvariantCulture",
+          "normalizedSignature": "ConvertValueInInvariantCulture|:System.Boolean|static=false|accessor=getset",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": true
+        }
+      ],
+      "fields": [],
+      "events": [],
+      "constructors": [
+        {
+          "normalizedSignature": "constructor|(System.Int32,System.Int32):void|static=false",
+          "isStatic": false,
+          "parameterCount": 2
+        },
+        {
+          "normalizedSignature": "constructor|(System.Double,System.Double):void|static=false",
+          "isStatic": false,
+          "parameterCount": 2
+        },
+        {
+          "normalizedSignature": "constructor|(System.Type,System.String,System.String):void|static=false",
+          "isStatic": false,
+          "parameterCount": 3
+        }
+      ]
+    },
+    {
+      "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.RegularExpressionAttribute",
+      "clrName": "System.ComponentModel.DataAnnotations.RegularExpressionAttribute",
+      "tsEmitName": "RegularExpressionAttribute",
+      "kind": "Class",
+      "accessibility": "Public",
+      "isAbstract": false,
+      "isSealed": false,
+      "isStatic": false,
+      "arity": 0,
+      "methods": [
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.RegularExpressionAttribute::IsValid(System.Object):System.Boolean",
+          "clrName": "IsValid",
+          "tsEmitName": "IsValid",
+          "normalizedSignature": "IsValid|(System.Object):System.Boolean|static=false",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": true,
+          "isOverride": true,
+          "isSealed": false,
+          "arity": 0,
+          "parameterCount": 1,
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.RegularExpressionAttribute::FormatErrorMessage(System.String):System.String",
+          "clrName": "FormatErrorMessage",
+          "tsEmitName": "FormatErrorMessage",
+          "normalizedSignature": "FormatErrorMessage|(System.String):System.String|static=false",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": true,
+          "isOverride": true,
+          "isSealed": false,
+          "arity": 0,
+          "parameterCount": 1,
+          "isExtensionMethod": false
+        }
+      ],
+      "properties": [
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.RegularExpressionAttribute::MatchTimeoutInMilliseconds:System.Int32",
+          "clrName": "MatchTimeoutInMilliseconds",
+          "tsEmitName": "MatchTimeoutInMilliseconds",
+          "normalizedSignature": "MatchTimeoutInMilliseconds|:System.Int32|static=false|accessor=getset",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": true
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.RegularExpressionAttribute::MatchTimeout:System.TimeSpan",
+          "clrName": "MatchTimeout",
+          "tsEmitName": "MatchTimeout",
+          "normalizedSignature": "MatchTimeout|:System.TimeSpan|static=false|accessor=get",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.RegularExpressionAttribute::Pattern:System.String",
+          "clrName": "Pattern",
+          "tsEmitName": "Pattern",
+          "normalizedSignature": "Pattern|:System.String|static=false|accessor=get",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false
+        }
+      ],
+      "fields": [],
+      "events": [],
+      "constructors": [
+        {
+          "normalizedSignature": "constructor|(System.String):void|static=false",
+          "isStatic": false,
+          "parameterCount": 1
+        }
+      ]
+    },
+    {
+      "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.RequiredAttribute",
+      "clrName": "System.ComponentModel.DataAnnotations.RequiredAttribute",
+      "tsEmitName": "RequiredAttribute",
+      "kind": "Class",
+      "accessibility": "Public",
+      "isAbstract": false,
+      "isSealed": false,
+      "isStatic": false,
+      "arity": 0,
+      "methods": [
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.RequiredAttribute::IsValid(System.Object):System.Boolean",
+          "clrName": "IsValid",
+          "tsEmitName": "IsValid",
+          "normalizedSignature": "IsValid|(System.Object):System.Boolean|static=false",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": true,
+          "isOverride": true,
+          "isSealed": false,
+          "arity": 0,
+          "parameterCount": 1,
+          "isExtensionMethod": false
+        }
+      ],
+      "properties": [
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.RequiredAttribute::AllowEmptyStrings:System.Boolean",
+          "clrName": "AllowEmptyStrings",
+          "tsEmitName": "AllowEmptyStrings",
+          "normalizedSignature": "AllowEmptyStrings|:System.Boolean|static=false|accessor=getset",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": true
+        }
+      ],
+      "fields": [],
+      "events": [],
+      "constructors": [
+        {
+          "normalizedSignature": "constructor|():void|static=false",
+          "isStatic": false,
+          "parameterCount": 0
+        }
+      ]
+    },
+    {
+      "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.ScaffoldColumnAttribute",
+      "clrName": "System.ComponentModel.DataAnnotations.ScaffoldColumnAttribute",
+      "tsEmitName": "ScaffoldColumnAttribute",
+      "kind": "Class",
+      "accessibility": "Public",
+      "isAbstract": false,
+      "isSealed": false,
+      "isStatic": false,
+      "arity": 0,
+      "methods": [],
+      "properties": [
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.ScaffoldColumnAttribute::Scaffold:System.Boolean",
+          "clrName": "Scaffold",
+          "tsEmitName": "Scaffold",
+          "normalizedSignature": "Scaffold|:System.Boolean|static=false|accessor=get",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false
+        }
+      ],
+      "fields": [],
+      "events": [],
+      "constructors": [
+        {
+          "normalizedSignature": "constructor|(System.Boolean):void|static=false",
+          "isStatic": false,
+          "parameterCount": 1
+        }
+      ]
+    },
+    {
+      "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.StringLengthAttribute",
+      "clrName": "System.ComponentModel.DataAnnotations.StringLengthAttribute",
+      "tsEmitName": "StringLengthAttribute",
+      "kind": "Class",
+      "accessibility": "Public",
+      "isAbstract": false,
+      "isSealed": false,
+      "isStatic": false,
+      "arity": 0,
+      "methods": [
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.StringLengthAttribute::IsValid(System.Object):System.Boolean",
+          "clrName": "IsValid",
+          "tsEmitName": "IsValid",
+          "normalizedSignature": "IsValid|(System.Object):System.Boolean|static=false",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": true,
+          "isOverride": true,
+          "isSealed": false,
+          "arity": 0,
+          "parameterCount": 1,
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.StringLengthAttribute::FormatErrorMessage(System.String):System.String",
+          "clrName": "FormatErrorMessage",
+          "tsEmitName": "FormatErrorMessage",
+          "normalizedSignature": "FormatErrorMessage|(System.String):System.String|static=false",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": true,
+          "isOverride": true,
+          "isSealed": false,
+          "arity": 0,
+          "parameterCount": 1,
+          "isExtensionMethod": false
+        }
+      ],
+      "properties": [
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.StringLengthAttribute::MaximumLength:System.Int32",
+          "clrName": "MaximumLength",
+          "tsEmitName": "MaximumLength",
+          "normalizedSignature": "MaximumLength|:System.Int32|static=false|accessor=get",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.StringLengthAttribute::MinimumLength:System.Int32",
+          "clrName": "MinimumLength",
+          "tsEmitName": "MinimumLength",
+          "normalizedSignature": "MinimumLength|:System.Int32|static=false|accessor=getset",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": true
+        }
+      ],
+      "fields": [],
+      "events": [],
+      "constructors": [
+        {
+          "normalizedSignature": "constructor|(System.Int32):void|static=false",
+          "isStatic": false,
+          "parameterCount": 1
+        }
+      ]
+    },
+    {
+      "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.TimestampAttribute",
+      "clrName": "System.ComponentModel.DataAnnotations.TimestampAttribute",
+      "tsEmitName": "TimestampAttribute",
+      "kind": "Class",
+      "accessibility": "Public",
+      "isAbstract": false,
+      "isSealed": true,
+      "isStatic": false,
+      "arity": 0,
+      "methods": [],
+      "properties": [],
+      "fields": [],
+      "events": [],
+      "constructors": [
+        {
+          "normalizedSignature": "constructor|():void|static=false",
+          "isStatic": false,
+          "parameterCount": 0
+        }
+      ]
+    },
+    {
+      "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.UIHintAttribute",
+      "clrName": "System.ComponentModel.DataAnnotations.UIHintAttribute",
+      "tsEmitName": "UIHintAttribute",
+      "kind": "Class",
+      "accessibility": "Public",
+      "isAbstract": false,
+      "isSealed": false,
+      "isStatic": false,
+      "arity": 0,
+      "methods": [
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.UIHintAttribute::GetHashCode():System.Int32",
+          "clrName": "GetHashCode",
+          "tsEmitName": "GetHashCode",
+          "normalizedSignature": "GetHashCode|():System.Int32|static=false",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": true,
+          "isOverride": true,
+          "isSealed": false,
+          "arity": 0,
+          "parameterCount": 0,
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.UIHintAttribute::Equals(System.Object):System.Boolean",
+          "clrName": "Equals",
+          "tsEmitName": "Equals",
+          "normalizedSignature": "Equals|(System.Object):System.Boolean|static=false",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": true,
+          "isOverride": true,
+          "isSealed": false,
+          "arity": 0,
+          "parameterCount": 1,
+          "isExtensionMethod": false
+        }
+      ],
+      "properties": [
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.UIHintAttribute::UIHint:System.String",
+          "clrName": "UIHint",
+          "tsEmitName": "UIHint",
+          "normalizedSignature": "UIHint|:System.String|static=false|accessor=get",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.UIHintAttribute::PresentationLayer:System.String",
+          "clrName": "PresentationLayer",
+          "tsEmitName": "PresentationLayer",
+          "normalizedSignature": "PresentationLayer|:System.String|static=false|accessor=get",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.UIHintAttribute::ControlParameters:System.Collections.Generic.IDictionary_2[[System.String,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e],[System.Object,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]",
+          "clrName": "ControlParameters",
+          "tsEmitName": "ControlParameters",
+          "normalizedSignature": "ControlParameters|:System.Collections.Generic.IDictionary_2[[System.String,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e],[System.Object,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]|static=false|accessor=get",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false
+        }
+      ],
+      "fields": [],
+      "events": [],
+      "constructors": [
+        {
+          "normalizedSignature": "constructor|(System.String):void|static=false",
+          "isStatic": false,
+          "parameterCount": 1
+        },
+        {
+          "normalizedSignature": "constructor|(System.String,System.String):void|static=false",
+          "isStatic": false,
+          "parameterCount": 2
+        },
+        {
+          "normalizedSignature": "constructor|(System.String,System.String,System.Object[]):void|static=false",
+          "isStatic": false,
+          "parameterCount": 3
+        }
+      ]
+    },
+    {
+      "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.UrlAttribute",
+      "clrName": "System.ComponentModel.DataAnnotations.UrlAttribute",
+      "tsEmitName": "UrlAttribute",
+      "kind": "Class",
+      "accessibility": "Public",
+      "isAbstract": false,
+      "isSealed": true,
+      "isStatic": false,
+      "arity": 0,
+      "methods": [
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.UrlAttribute::IsValid(System.Object):System.Boolean",
+          "clrName": "IsValid",
+          "tsEmitName": "IsValid",
+          "normalizedSignature": "IsValid|(System.Object):System.Boolean|static=false",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": true,
+          "isOverride": true,
+          "isSealed": false,
+          "arity": 0,
+          "parameterCount": 1,
+          "isExtensionMethod": false
+        }
+      ],
+      "properties": [],
+      "fields": [],
+      "events": [],
+      "constructors": [
+        {
+          "normalizedSignature": "constructor|():void|static=false",
+          "isStatic": false,
+          "parameterCount": 0
+        }
+      ]
+    },
+    {
+      "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.ValidationAttribute",
+      "clrName": "System.ComponentModel.DataAnnotations.ValidationAttribute",
+      "tsEmitName": "ValidationAttribute",
+      "kind": "Class",
+      "accessibility": "Public",
+      "isAbstract": true,
+      "isSealed": false,
+      "isStatic": false,
+      "arity": 0,
+      "methods": [
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.ValidationAttribute::FormatErrorMessage(System.String):System.String",
+          "clrName": "FormatErrorMessage",
+          "tsEmitName": "FormatErrorMessage",
+          "normalizedSignature": "FormatErrorMessage|(System.String):System.String|static=false",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": true,
+          "isOverride": false,
+          "isSealed": false,
+          "arity": 0,
+          "parameterCount": 1,
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.ValidationAttribute::IsValid(System.Object):System.Boolean",
+          "clrName": "IsValid",
+          "tsEmitName": "IsValid",
+          "normalizedSignature": "IsValid|(System.Object):System.Boolean|static=false",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": true,
+          "isOverride": false,
+          "isSealed": false,
+          "arity": 0,
+          "parameterCount": 1,
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.ValidationAttribute::GetValidationResult(System.Object,System.ComponentModel.DataAnnotations.ValidationContext):System.ComponentModel.DataAnnotations.ValidationResult",
+          "clrName": "GetValidationResult",
+          "tsEmitName": "GetValidationResult",
+          "normalizedSignature": "GetValidationResult|(System.Object,System.ComponentModel.DataAnnotations.ValidationContext):System.ComponentModel.DataAnnotations.ValidationResult|static=false",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isSealed": false,
+          "arity": 0,
+          "parameterCount": 2,
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.ValidationAttribute::Validate(System.Object,System.String):System.Void",
+          "clrName": "Validate",
+          "tsEmitName": "Validate",
+          "normalizedSignature": "Validate|(System.Object,System.String):System.Void|static=false",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isSealed": false,
+          "arity": 0,
+          "parameterCount": 2,
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.ValidationAttribute::Validate(System.Object,System.ComponentModel.DataAnnotations.ValidationContext):System.Void",
+          "clrName": "Validate",
+          "tsEmitName": "Validate",
+          "normalizedSignature": "Validate|(System.Object,System.ComponentModel.DataAnnotations.ValidationContext):System.Void|static=false",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isSealed": false,
+          "arity": 0,
+          "parameterCount": 2,
+          "isExtensionMethod": false
+        }
+      ],
+      "properties": [
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.ValidationAttribute::RequiresValidationContext:System.Boolean",
+          "clrName": "RequiresValidationContext",
+          "tsEmitName": "RequiresValidationContext",
+          "normalizedSignature": "RequiresValidationContext|:System.Boolean|static=false|accessor=get",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": true,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.ValidationAttribute::ErrorMessage:System.String",
+          "clrName": "ErrorMessage",
+          "tsEmitName": "ErrorMessage",
+          "normalizedSignature": "ErrorMessage|:System.String|static=false|accessor=getset",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": true
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.ValidationAttribute::ErrorMessageResourceName:System.String",
+          "clrName": "ErrorMessageResourceName",
+          "tsEmitName": "ErrorMessageResourceName",
+          "normalizedSignature": "ErrorMessageResourceName|:System.String|static=false|accessor=getset",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": true
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.ValidationAttribute::ErrorMessageResourceType:System.Type",
+          "clrName": "ErrorMessageResourceType",
+          "tsEmitName": "ErrorMessageResourceType",
+          "normalizedSignature": "ErrorMessageResourceType|:System.Type|static=false|accessor=getset",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": true
+        }
+      ],
+      "fields": [],
+      "events": [],
+      "constructors": []
+    },
+    {
+      "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.ValidationContext",
+      "clrName": "System.ComponentModel.DataAnnotations.ValidationContext",
+      "tsEmitName": "ValidationContext",
+      "kind": "Class",
+      "accessibility": "Public",
+      "isAbstract": false,
+      "isSealed": true,
+      "isStatic": false,
+      "arity": 0,
+      "methods": [
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.ValidationContext::InitializeServiceProvider(System.Func_2[[System.Type,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e],[System.Object,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]):System.Void",
+          "clrName": "InitializeServiceProvider",
+          "tsEmitName": "InitializeServiceProvider",
+          "normalizedSignature": "InitializeServiceProvider|(System.Func_2[[System.Type,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e],[System.Object,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]):System.Void|static=false",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isSealed": false,
+          "arity": 0,
+          "parameterCount": 1,
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.ValidationContext::GetService(System.Type):System.Object",
+          "clrName": "GetService",
+          "tsEmitName": "GetService",
+          "normalizedSignature": "GetService|(System.Type):System.Object|static=false",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": true,
+          "isOverride": false,
+          "isSealed": true,
+          "arity": 0,
+          "parameterCount": 1,
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.ComponentModel:System.IServiceProvider::GetService(System.Type):System.Object",
+          "clrName": "GetService",
+          "tsEmitName": "GetService$view",
+          "normalizedSignature": "GetService|(System.Type):System.Object|static=false",
+          "provenance": "ExplicitView",
+          "emitScope": "ViewOnly",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": true,
+          "isOverride": false,
+          "isSealed": false,
+          "arity": 0,
+          "parameterCount": 1,
+          "sourceInterface": "System.IServiceProvider",
+          "isExtensionMethod": false
+        }
+      ],
+      "properties": [
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.ValidationContext::ObjectInstance:System.Object",
+          "clrName": "ObjectInstance",
+          "tsEmitName": "ObjectInstance",
+          "normalizedSignature": "ObjectInstance|:System.Object|static=false|accessor=get",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.ValidationContext::ObjectType:System.Type",
+          "clrName": "ObjectType",
+          "tsEmitName": "ObjectType",
+          "normalizedSignature": "ObjectType|:System.Type|static=false|accessor=get",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.ValidationContext::DisplayName:System.String",
+          "clrName": "DisplayName",
+          "tsEmitName": "DisplayName",
+          "normalizedSignature": "DisplayName|:System.String|static=false|accessor=getset",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": true
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.ValidationContext::MemberName:System.String",
+          "clrName": "MemberName",
+          "tsEmitName": "MemberName",
+          "normalizedSignature": "MemberName|:System.String|static=false|accessor=getset",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": true
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.ValidationContext::Items:System.Collections.Generic.IDictionary_2[[System.Object,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e],[System.Object,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]",
+          "clrName": "Items",
+          "tsEmitName": "Items",
+          "normalizedSignature": "Items|:System.Collections.Generic.IDictionary_2[[System.Object,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e],[System.Object,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]|static=false|accessor=get",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false
+        }
+      ],
+      "fields": [],
+      "events": [],
+      "constructors": [
+        {
+          "normalizedSignature": "constructor|(System.Object):void|static=false",
+          "isStatic": false,
+          "parameterCount": 1
+        },
+        {
+          "normalizedSignature": "constructor|(System.Object,System.Collections.Generic.IDictionary_2[[System.Object,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e],[System.Object,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]):void|static=false",
+          "isStatic": false,
+          "parameterCount": 2
+        },
+        {
+          "normalizedSignature": "constructor|(System.Object,System.IServiceProvider,System.Collections.Generic.IDictionary_2[[System.Object,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e],[System.Object,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]):void|static=false",
+          "isStatic": false,
+          "parameterCount": 3
+        },
+        {
+          "normalizedSignature": "constructor|(System.Object,System.String,System.IServiceProvider,System.Collections.Generic.IDictionary_2[[System.Object,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e],[System.Object,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]):void|static=false",
+          "isStatic": false,
+          "parameterCount": 4
+        }
+      ]
+    },
+    {
+      "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.ValidationException",
+      "clrName": "System.ComponentModel.DataAnnotations.ValidationException",
+      "tsEmitName": "ValidationException",
+      "kind": "Class",
+      "accessibility": "Public",
+      "isAbstract": false,
+      "isSealed": false,
+      "isStatic": false,
+      "arity": 0,
+      "methods": [
+        {
+          "stableId": "System.Private.CoreLib:System.Runtime.Serialization.ISerializable::GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext):System.Void",
+          "clrName": "GetObjectData",
+          "tsEmitName": "GetObjectData$view",
+          "normalizedSignature": "GetObjectData|(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext):System.Void|static=false",
+          "provenance": "ExplicitView",
+          "emitScope": "ViewOnly",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": true,
+          "isOverride": false,
+          "isSealed": false,
+          "arity": 0,
+          "parameterCount": 2,
+          "sourceInterface": "System.Runtime.Serialization.ISerializable",
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.ValidationException::GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext):System.Void",
+          "clrName": "GetObjectData",
+          "tsEmitName": "GetObjectData",
+          "normalizedSignature": "GetObjectData|(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext):System.Void|static=false",
+          "provenance": "BaseOverload",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": true,
+          "isOverride": false,
+          "isSealed": false,
+          "arity": 0,
+          "parameterCount": 2,
+          "isExtensionMethod": false
+        }
+      ],
+      "properties": [
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.ValidationException::ValidationAttribute:System.ComponentModel.DataAnnotations.ValidationAttribute",
+          "clrName": "ValidationAttribute",
+          "tsEmitName": "ValidationAttribute",
+          "normalizedSignature": "ValidationAttribute|:System.ComponentModel.DataAnnotations.ValidationAttribute|static=false|accessor=get",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.ValidationException::ValidationResult:System.ComponentModel.DataAnnotations.ValidationResult",
+          "clrName": "ValidationResult",
+          "tsEmitName": "ValidationResult",
+          "normalizedSignature": "ValidationResult|:System.ComponentModel.DataAnnotations.ValidationResult|static=false|accessor=get",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.ValidationException::Value:System.Object",
+          "clrName": "Value",
+          "tsEmitName": "Value",
+          "normalizedSignature": "Value|:System.Object|static=false|accessor=get",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false
+        }
+      ],
+      "fields": [],
+      "events": [],
+      "constructors": [
+        {
+          "normalizedSignature": "constructor|(System.ComponentModel.DataAnnotations.ValidationResult,System.ComponentModel.DataAnnotations.ValidationAttribute,System.Object):void|static=false",
+          "isStatic": false,
+          "parameterCount": 3
+        },
+        {
+          "normalizedSignature": "constructor|(System.String,System.ComponentModel.DataAnnotations.ValidationAttribute,System.Object):void|static=false",
+          "isStatic": false,
+          "parameterCount": 3
+        },
+        {
+          "normalizedSignature": "constructor|():void|static=false",
+          "isStatic": false,
+          "parameterCount": 0
+        },
+        {
+          "normalizedSignature": "constructor|(System.String):void|static=false",
+          "isStatic": false,
+          "parameterCount": 1
+        },
+        {
+          "normalizedSignature": "constructor|(System.String,System.Exception):void|static=false",
+          "isStatic": false,
+          "parameterCount": 2
+        }
+      ]
+    },
+    {
+      "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.ValidationResult",
+      "clrName": "System.ComponentModel.DataAnnotations.ValidationResult",
+      "tsEmitName": "ValidationResult",
+      "kind": "Class",
+      "accessibility": "Public",
+      "isAbstract": false,
+      "isSealed": false,
+      "isStatic": false,
+      "arity": 0,
+      "methods": [
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.ValidationResult::ToString():System.String",
+          "clrName": "ToString",
+          "tsEmitName": "ToString",
+          "normalizedSignature": "ToString|():System.String|static=false",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": true,
+          "isOverride": true,
+          "isSealed": false,
+          "arity": 0,
+          "parameterCount": 0,
+          "isExtensionMethod": false
+        }
+      ],
+      "properties": [
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.ValidationResult::MemberNames:System.Collections.Generic.IEnumerable_1[[System.String,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]",
+          "clrName": "MemberNames",
+          "tsEmitName": "MemberNames",
+          "normalizedSignature": "MemberNames|:System.Collections.Generic.IEnumerable_1[[System.String,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]|static=false|accessor=get",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.ValidationResult::ErrorMessage:System.String",
+          "clrName": "ErrorMessage",
+          "tsEmitName": "ErrorMessage",
+          "normalizedSignature": "ErrorMessage|:System.String|static=false|accessor=getset",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": true
+        }
+      ],
+      "fields": [
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.ValidationResult::SuccessSystem.ComponentModel.DataAnnotations.ValidationResult",
+          "clrName": "Success",
+          "tsEmitName": "Success",
+          "normalizedSignature": "Success|System.ComponentModel.DataAnnotations.ValidationResult|static=true|const=false",
+          "isStatic": true,
+          "isReadOnly": true,
+          "isLiteral": false
+        }
+      ],
+      "events": [],
+      "constructors": [
+        {
+          "normalizedSignature": "constructor|(System.String):void|static=false",
+          "isStatic": false,
+          "parameterCount": 1
+        },
+        {
+          "normalizedSignature": "constructor|(System.String,System.Collections.Generic.IEnumerable_1[[System.String,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]):void|static=false",
+          "isStatic": false,
+          "parameterCount": 2
+        }
+      ]
+    },
+    {
+      "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.Validator",
+      "clrName": "System.ComponentModel.DataAnnotations.Validator",
+      "tsEmitName": "Validator",
+      "kind": "StaticNamespace",
+      "accessibility": "Public",
+      "isAbstract": true,
+      "isSealed": true,
+      "isStatic": true,
+      "arity": 0,
+      "methods": [
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.Validator::TryValidateProperty(System.Object,System.ComponentModel.DataAnnotations.ValidationContext,System.Collections.Generic.ICollection_1[[System.ComponentModel.DataAnnotations.ValidationResult,System.ComponentModel.Annotations,Version=10.0.0.0,Culture=neutral,PublicKeyToken=b03f5f7f11d50a3a]]):System.Boolean",
+          "clrName": "TryValidateProperty",
+          "tsEmitName": "TryValidateProperty",
+          "normalizedSignature": "TryValidateProperty|(System.Object,System.ComponentModel.DataAnnotations.ValidationContext,System.Collections.Generic.ICollection_1[[System.ComponentModel.DataAnnotations.ValidationResult,System.ComponentModel.Annotations,Version=10.0.0.0,Culture=neutral,PublicKeyToken=b03f5f7f11d50a3a]]):System.Boolean|static=true",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": true,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isSealed": false,
+          "arity": 0,
+          "parameterCount": 3,
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.Validator::TryValidateObject(System.Object,System.ComponentModel.DataAnnotations.ValidationContext,System.Collections.Generic.ICollection_1[[System.ComponentModel.DataAnnotations.ValidationResult,System.ComponentModel.Annotations,Version=10.0.0.0,Culture=neutral,PublicKeyToken=b03f5f7f11d50a3a]]):System.Boolean",
+          "clrName": "TryValidateObject",
+          "tsEmitName": "TryValidateObject",
+          "normalizedSignature": "TryValidateObject|(System.Object,System.ComponentModel.DataAnnotations.ValidationContext,System.Collections.Generic.ICollection_1[[System.ComponentModel.DataAnnotations.ValidationResult,System.ComponentModel.Annotations,Version=10.0.0.0,Culture=neutral,PublicKeyToken=b03f5f7f11d50a3a]]):System.Boolean|static=true",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": true,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isSealed": false,
+          "arity": 0,
+          "parameterCount": 3,
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.Validator::TryValidateObject(System.Object,System.ComponentModel.DataAnnotations.ValidationContext,System.Collections.Generic.ICollection_1[[System.ComponentModel.DataAnnotations.ValidationResult,System.ComponentModel.Annotations,Version=10.0.0.0,Culture=neutral,PublicKeyToken=b03f5f7f11d50a3a]],System.Boolean):System.Boolean",
+          "clrName": "TryValidateObject",
+          "tsEmitName": "TryValidateObject",
+          "normalizedSignature": "TryValidateObject|(System.Object,System.ComponentModel.DataAnnotations.ValidationContext,System.Collections.Generic.ICollection_1[[System.ComponentModel.DataAnnotations.ValidationResult,System.ComponentModel.Annotations,Version=10.0.0.0,Culture=neutral,PublicKeyToken=b03f5f7f11d50a3a]],System.Boolean):System.Boolean|static=true",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": true,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isSealed": false,
+          "arity": 0,
+          "parameterCount": 4,
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.Validator::TryValidateValue(System.Object,System.ComponentModel.DataAnnotations.ValidationContext,System.Collections.Generic.ICollection_1[[System.ComponentModel.DataAnnotations.ValidationResult,System.ComponentModel.Annotations,Version=10.0.0.0,Culture=neutral,PublicKeyToken=b03f5f7f11d50a3a]],System.Collections.Generic.IEnumerable_1[[System.ComponentModel.DataAnnotations.ValidationAttribute,System.ComponentModel.Annotations,Version=10.0.0.0,Culture=neutral,PublicKeyToken=b03f5f7f11d50a3a]]):System.Boolean",
+          "clrName": "TryValidateValue",
+          "tsEmitName": "TryValidateValue",
+          "normalizedSignature": "TryValidateValue|(System.Object,System.ComponentModel.DataAnnotations.ValidationContext,System.Collections.Generic.ICollection_1[[System.ComponentModel.DataAnnotations.ValidationResult,System.ComponentModel.Annotations,Version=10.0.0.0,Culture=neutral,PublicKeyToken=b03f5f7f11d50a3a]],System.Collections.Generic.IEnumerable_1[[System.ComponentModel.DataAnnotations.ValidationAttribute,System.ComponentModel.Annotations,Version=10.0.0.0,Culture=neutral,PublicKeyToken=b03f5f7f11d50a3a]]):System.Boolean|static=true",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": true,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isSealed": false,
+          "arity": 0,
+          "parameterCount": 4,
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.Validator::ValidateProperty(System.Object,System.ComponentModel.DataAnnotations.ValidationContext):System.Void",
+          "clrName": "ValidateProperty",
+          "tsEmitName": "ValidateProperty",
+          "normalizedSignature": "ValidateProperty|(System.Object,System.ComponentModel.DataAnnotations.ValidationContext):System.Void|static=true",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": true,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isSealed": false,
+          "arity": 0,
+          "parameterCount": 2,
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.Validator::ValidateObject(System.Object,System.ComponentModel.DataAnnotations.ValidationContext):System.Void",
+          "clrName": "ValidateObject",
+          "tsEmitName": "ValidateObject",
+          "normalizedSignature": "ValidateObject|(System.Object,System.ComponentModel.DataAnnotations.ValidationContext):System.Void|static=true",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": true,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isSealed": false,
+          "arity": 0,
+          "parameterCount": 2,
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.Validator::ValidateObject(System.Object,System.ComponentModel.DataAnnotations.ValidationContext,System.Boolean):System.Void",
+          "clrName": "ValidateObject",
+          "tsEmitName": "ValidateObject",
+          "normalizedSignature": "ValidateObject|(System.Object,System.ComponentModel.DataAnnotations.ValidationContext,System.Boolean):System.Void|static=true",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": true,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isSealed": false,
+          "arity": 0,
+          "parameterCount": 3,
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.ComponentModel.Annotations:System.ComponentModel.DataAnnotations.Validator::ValidateValue(System.Object,System.ComponentModel.DataAnnotations.ValidationContext,System.Collections.Generic.IEnumerable_1[[System.ComponentModel.DataAnnotations.ValidationAttribute,System.ComponentModel.Annotations,Version=10.0.0.0,Culture=neutral,PublicKeyToken=b03f5f7f11d50a3a]]):System.Void",
+          "clrName": "ValidateValue",
+          "tsEmitName": "ValidateValue",
+          "normalizedSignature": "ValidateValue|(System.Object,System.ComponentModel.DataAnnotations.ValidationContext,System.Collections.Generic.IEnumerable_1[[System.ComponentModel.DataAnnotations.ValidationAttribute,System.ComponentModel.Annotations,Version=10.0.0.0,Culture=neutral,PublicKeyToken=b03f5f7f11d50a3a]]):System.Void|static=true",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": true,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isSealed": false,
+          "arity": 0,
+          "parameterCount": 3,
+          "isExtensionMethod": false
+        }
+      ],
+      "properties": [],
+      "fields": [],
+      "events": [],
+      "constructors": []
+    }
+  ]
+}

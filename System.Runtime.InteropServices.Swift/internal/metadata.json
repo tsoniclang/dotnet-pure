@@ -1,0 +1,160 @@
+{
+  "namespace": "System.Runtime.InteropServices.Swift",
+  "contributingAssemblies": [
+    "System.Private.CoreLib"
+  ],
+  "types": [
+    {
+      "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.Swift.SwiftError",
+      "clrName": "System.Runtime.InteropServices.Swift.SwiftError",
+      "tsEmitName": "SwiftError",
+      "kind": "Struct",
+      "accessibility": "Public",
+      "isAbstract": false,
+      "isSealed": true,
+      "isStatic": false,
+      "arity": 0,
+      "methods": [],
+      "properties": [
+        {
+          "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.Swift.SwiftError::Value:System.Void*",
+          "clrName": "Value",
+          "tsEmitName": "Value",
+          "normalizedSignature": "Value|:System.Void*|static=false|accessor=get",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false
+        }
+      ],
+      "fields": [],
+      "events": [],
+      "constructors": [
+        {
+          "normalizedSignature": "constructor|(System.Void*):void|static=false",
+          "isStatic": false,
+          "parameterCount": 1
+        }
+      ]
+    },
+    {
+      "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.Swift.SwiftIndirectResult",
+      "clrName": "System.Runtime.InteropServices.Swift.SwiftIndirectResult",
+      "tsEmitName": "SwiftIndirectResult",
+      "kind": "Struct",
+      "accessibility": "Public",
+      "isAbstract": false,
+      "isSealed": true,
+      "isStatic": false,
+      "arity": 0,
+      "methods": [],
+      "properties": [
+        {
+          "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.Swift.SwiftIndirectResult::Value:System.Void*",
+          "clrName": "Value",
+          "tsEmitName": "Value",
+          "normalizedSignature": "Value|:System.Void*|static=false|accessor=get",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false
+        }
+      ],
+      "fields": [],
+      "events": [],
+      "constructors": [
+        {
+          "normalizedSignature": "constructor|(System.Void*):void|static=false",
+          "isStatic": false,
+          "parameterCount": 1
+        }
+      ]
+    },
+    {
+      "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.Swift.SwiftSelf",
+      "clrName": "System.Runtime.InteropServices.Swift.SwiftSelf",
+      "tsEmitName": "SwiftSelf",
+      "kind": "Struct",
+      "accessibility": "Public",
+      "isAbstract": false,
+      "isSealed": true,
+      "isStatic": false,
+      "arity": 0,
+      "methods": [],
+      "properties": [
+        {
+          "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.Swift.SwiftSelf::Value:System.Void*",
+          "clrName": "Value",
+          "tsEmitName": "Value",
+          "normalizedSignature": "Value|:System.Void*|static=false|accessor=get",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false
+        }
+      ],
+      "fields": [],
+      "events": [],
+      "constructors": [
+        {
+          "normalizedSignature": "constructor|(System.Void*):void|static=false",
+          "isStatic": false,
+          "parameterCount": 1
+        }
+      ]
+    },
+    {
+      "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.Swift.SwiftSelf\u00601",
+      "clrName": "System.Runtime.InteropServices.Swift.SwiftSelf\u00601",
+      "tsEmitName": "SwiftSelf_1",
+      "kind": "Struct",
+      "accessibility": "Public",
+      "isAbstract": false,
+      "isSealed": true,
+      "isStatic": false,
+      "arity": 1,
+      "methods": [],
+      "properties": [
+        {
+          "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.Swift.SwiftSelf\u00601::Value:T",
+          "clrName": "Value",
+          "tsEmitName": "Value",
+          "normalizedSignature": "Value|:T|static=false|accessor=get",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false
+        }
+      ],
+      "fields": [],
+      "events": [],
+      "constructors": [
+        {
+          "normalizedSignature": "constructor|(T):void|static=false",
+          "isStatic": false,
+          "parameterCount": 1
+        }
+      ]
+    }
+  ]
+}

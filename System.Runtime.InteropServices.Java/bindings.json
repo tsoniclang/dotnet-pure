@@ -1,0 +1,575 @@
+{
+  "namespace": "System.Runtime.InteropServices.Java",
+  "types": [
+    {
+      "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.Java.ComponentCrossReference",
+      "clrName": "System.Runtime.InteropServices.Java.ComponentCrossReference",
+      "tsEmitName": "ComponentCrossReference",
+      "assemblyName": "System.Private.CoreLib",
+      "metadataToken": 0,
+      "methods": [],
+      "properties": [],
+      "fields": [
+        {
+          "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.Java.ComponentCrossReference::SourceGroupIndexSystem.UIntPtr",
+          "clrName": "SourceGroupIndex",
+          "tsEmitName": "SourceGroupIndex",
+          "metadataToken": 67113969,
+          "normalizedSignature": "SourceGroupIndex|System.UIntPtr|static=false|const=false",
+          "isStatic": false,
+          "isReadOnly": false,
+          "declaringClrType": "System.Runtime.InteropServices.Java.ComponentCrossReference",
+          "declaringAssemblyName": "System.Private.CoreLib"
+        },
+        {
+          "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.Java.ComponentCrossReference::DestinationGroupIndexSystem.UIntPtr",
+          "clrName": "DestinationGroupIndex",
+          "tsEmitName": "DestinationGroupIndex",
+          "metadataToken": 67113970,
+          "normalizedSignature": "DestinationGroupIndex|System.UIntPtr|static=false|const=false",
+          "isStatic": false,
+          "isReadOnly": false,
+          "declaringClrType": "System.Runtime.InteropServices.Java.ComponentCrossReference",
+          "declaringAssemblyName": "System.Private.CoreLib"
+        }
+      ],
+      "events": [],
+      "constructors": [],
+      "exposedMethods": [
+        {
+          "tsName": "Equals",
+          "isStatic": false,
+          "tsSignatureId": "Equals|(System.Object):System.Boolean|static=false",
+          "target": {
+            "declaringClrType": "System.ValueType",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100665958
+          }
+        },
+        {
+          "tsName": "GetHashCode",
+          "isStatic": false,
+          "tsSignatureId": "GetHashCode|():System.Int32|static=false",
+          "target": {
+            "declaringClrType": "System.ValueType",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100665961
+          }
+        },
+        {
+          "tsName": "ToString",
+          "isStatic": false,
+          "tsSignatureId": "ToString|():System.String|static=false",
+          "target": {
+            "declaringClrType": "System.ValueType",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100665963
+          }
+        },
+        {
+          "tsName": "GetType",
+          "isStatic": false,
+          "tsSignatureId": "GetType|():System.Type|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664825
+          }
+        },
+        {
+          "tsName": "Equals",
+          "isStatic": true,
+          "tsSignatureId": "Equals|(System.Object,System.Object):System.Boolean|static=true",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664831
+          }
+        },
+        {
+          "tsName": "ReferenceEquals",
+          "isStatic": true,
+          "tsSignatureId": "ReferenceEquals|(System.Object,System.Object):System.Boolean|static=true",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664832
+          }
+        }
+      ],
+      "exposedFields": [
+        {
+          "tsName": "SourceGroupIndex",
+          "isStatic": false,
+          "tsSignatureId": "SourceGroupIndex|System.UIntPtr|static=false|const=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.Java.ComponentCrossReference",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 67113969
+          }
+        },
+        {
+          "tsName": "DestinationGroupIndex",
+          "isStatic": false,
+          "tsSignatureId": "DestinationGroupIndex|System.UIntPtr|static=false|const=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.Java.ComponentCrossReference",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 67113970
+          }
+        }
+      ]
+    },
+    {
+      "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.Java.MarkCrossReferencesArgs",
+      "clrName": "System.Runtime.InteropServices.Java.MarkCrossReferencesArgs",
+      "tsEmitName": "MarkCrossReferencesArgs",
+      "assemblyName": "System.Private.CoreLib",
+      "metadataToken": 0,
+      "methods": [],
+      "properties": [],
+      "fields": [
+        {
+          "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.Java.MarkCrossReferencesArgs::ComponentCountSystem.UIntPtr",
+          "clrName": "ComponentCount",
+          "tsEmitName": "ComponentCount",
+          "metadataToken": 67113971,
+          "normalizedSignature": "ComponentCount|System.UIntPtr|static=false|const=false",
+          "isStatic": false,
+          "isReadOnly": false,
+          "declaringClrType": "System.Runtime.InteropServices.Java.MarkCrossReferencesArgs",
+          "declaringAssemblyName": "System.Private.CoreLib"
+        },
+        {
+          "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.Java.MarkCrossReferencesArgs::ComponentsSystem.Runtime.InteropServices.Java.StronglyConnectedComponent*",
+          "clrName": "Components",
+          "tsEmitName": "Components",
+          "metadataToken": 67113972,
+          "normalizedSignature": "Components|System.Runtime.InteropServices.Java.StronglyConnectedComponent*|static=false|const=false",
+          "isStatic": false,
+          "isReadOnly": false,
+          "declaringClrType": "System.Runtime.InteropServices.Java.MarkCrossReferencesArgs",
+          "declaringAssemblyName": "System.Private.CoreLib"
+        },
+        {
+          "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.Java.MarkCrossReferencesArgs::CrossReferenceCountSystem.UIntPtr",
+          "clrName": "CrossReferenceCount",
+          "tsEmitName": "CrossReferenceCount",
+          "metadataToken": 67113973,
+          "normalizedSignature": "CrossReferenceCount|System.UIntPtr|static=false|const=false",
+          "isStatic": false,
+          "isReadOnly": false,
+          "declaringClrType": "System.Runtime.InteropServices.Java.MarkCrossReferencesArgs",
+          "declaringAssemblyName": "System.Private.CoreLib"
+        },
+        {
+          "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.Java.MarkCrossReferencesArgs::CrossReferencesSystem.Runtime.InteropServices.Java.ComponentCrossReference*",
+          "clrName": "CrossReferences",
+          "tsEmitName": "CrossReferences",
+          "metadataToken": 67113974,
+          "normalizedSignature": "CrossReferences|System.Runtime.InteropServices.Java.ComponentCrossReference*|static=false|const=false",
+          "isStatic": false,
+          "isReadOnly": false,
+          "declaringClrType": "System.Runtime.InteropServices.Java.MarkCrossReferencesArgs",
+          "declaringAssemblyName": "System.Private.CoreLib"
+        }
+      ],
+      "events": [],
+      "constructors": [],
+      "exposedMethods": [
+        {
+          "tsName": "Equals",
+          "isStatic": false,
+          "tsSignatureId": "Equals|(System.Object):System.Boolean|static=false",
+          "target": {
+            "declaringClrType": "System.ValueType",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100665958
+          }
+        },
+        {
+          "tsName": "GetHashCode",
+          "isStatic": false,
+          "tsSignatureId": "GetHashCode|():System.Int32|static=false",
+          "target": {
+            "declaringClrType": "System.ValueType",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100665961
+          }
+        },
+        {
+          "tsName": "ToString",
+          "isStatic": false,
+          "tsSignatureId": "ToString|():System.String|static=false",
+          "target": {
+            "declaringClrType": "System.ValueType",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100665963
+          }
+        },
+        {
+          "tsName": "GetType",
+          "isStatic": false,
+          "tsSignatureId": "GetType|():System.Type|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664825
+          }
+        },
+        {
+          "tsName": "Equals",
+          "isStatic": true,
+          "tsSignatureId": "Equals|(System.Object,System.Object):System.Boolean|static=true",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664831
+          }
+        },
+        {
+          "tsName": "ReferenceEquals",
+          "isStatic": true,
+          "tsSignatureId": "ReferenceEquals|(System.Object,System.Object):System.Boolean|static=true",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664832
+          }
+        }
+      ],
+      "exposedFields": [
+        {
+          "tsName": "ComponentCount",
+          "isStatic": false,
+          "tsSignatureId": "ComponentCount|System.UIntPtr|static=false|const=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.Java.MarkCrossReferencesArgs",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 67113971
+          }
+        },
+        {
+          "tsName": "Components",
+          "isStatic": false,
+          "tsSignatureId": "Components|System.Runtime.InteropServices.Java.StronglyConnectedComponent*|static=false|const=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.Java.MarkCrossReferencesArgs",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 67113972
+          }
+        },
+        {
+          "tsName": "CrossReferenceCount",
+          "isStatic": false,
+          "tsSignatureId": "CrossReferenceCount|System.UIntPtr|static=false|const=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.Java.MarkCrossReferencesArgs",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 67113973
+          }
+        },
+        {
+          "tsName": "CrossReferences",
+          "isStatic": false,
+          "tsSignatureId": "CrossReferences|System.Runtime.InteropServices.Java.ComponentCrossReference*|static=false|const=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.Java.MarkCrossReferencesArgs",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 67113974
+          }
+        }
+      ]
+    },
+    {
+      "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.Java.StronglyConnectedComponent",
+      "clrName": "System.Runtime.InteropServices.Java.StronglyConnectedComponent",
+      "tsEmitName": "StronglyConnectedComponent",
+      "assemblyName": "System.Private.CoreLib",
+      "metadataToken": 0,
+      "methods": [],
+      "properties": [],
+      "fields": [
+        {
+          "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.Java.StronglyConnectedComponent::CountSystem.UIntPtr",
+          "clrName": "Count",
+          "tsEmitName": "Count",
+          "metadataToken": 67113975,
+          "normalizedSignature": "Count|System.UIntPtr|static=false|const=false",
+          "isStatic": false,
+          "isReadOnly": false,
+          "declaringClrType": "System.Runtime.InteropServices.Java.StronglyConnectedComponent",
+          "declaringAssemblyName": "System.Private.CoreLib"
+        },
+        {
+          "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.Java.StronglyConnectedComponent::ContextsSystem.Void**",
+          "clrName": "Contexts",
+          "tsEmitName": "Contexts",
+          "metadataToken": 67113976,
+          "normalizedSignature": "Contexts|System.Void**|static=false|const=false",
+          "isStatic": false,
+          "isReadOnly": false,
+          "declaringClrType": "System.Runtime.InteropServices.Java.StronglyConnectedComponent",
+          "declaringAssemblyName": "System.Private.CoreLib"
+        }
+      ],
+      "events": [],
+      "constructors": [],
+      "exposedMethods": [
+        {
+          "tsName": "Equals",
+          "isStatic": false,
+          "tsSignatureId": "Equals|(System.Object):System.Boolean|static=false",
+          "target": {
+            "declaringClrType": "System.ValueType",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100665958
+          }
+        },
+        {
+          "tsName": "GetHashCode",
+          "isStatic": false,
+          "tsSignatureId": "GetHashCode|():System.Int32|static=false",
+          "target": {
+            "declaringClrType": "System.ValueType",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100665961
+          }
+        },
+        {
+          "tsName": "ToString",
+          "isStatic": false,
+          "tsSignatureId": "ToString|():System.String|static=false",
+          "target": {
+            "declaringClrType": "System.ValueType",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100665963
+          }
+        },
+        {
+          "tsName": "GetType",
+          "isStatic": false,
+          "tsSignatureId": "GetType|():System.Type|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664825
+          }
+        },
+        {
+          "tsName": "Equals",
+          "isStatic": true,
+          "tsSignatureId": "Equals|(System.Object,System.Object):System.Boolean|static=true",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664831
+          }
+        },
+        {
+          "tsName": "ReferenceEquals",
+          "isStatic": true,
+          "tsSignatureId": "ReferenceEquals|(System.Object,System.Object):System.Boolean|static=true",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664832
+          }
+        }
+      ],
+      "exposedFields": [
+        {
+          "tsName": "Count",
+          "isStatic": false,
+          "tsSignatureId": "Count|System.UIntPtr|static=false|const=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.Java.StronglyConnectedComponent",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 67113975
+          }
+        },
+        {
+          "tsName": "Contexts",
+          "isStatic": false,
+          "tsSignatureId": "Contexts|System.Void**|static=false|const=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.Java.StronglyConnectedComponent",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 67113976
+          }
+        }
+      ]
+    },
+    {
+      "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.Java.JavaMarshal",
+      "clrName": "System.Runtime.InteropServices.Java.JavaMarshal",
+      "tsEmitName": "JavaMarshal",
+      "assemblyName": "System.Private.CoreLib",
+      "metadataToken": 0,
+      "methods": [
+        {
+          "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.Java.JavaMarshal::Initialize():System.Void",
+          "clrName": "Initialize",
+          "tsEmitName": "Initialize",
+          "metadataToken": 100695334,
+          "canonicalSignature": "():System.Void",
+          "normalizedSignature": "Initialize|():System.Void|static=true",
+          "emitScope": "ClassSurface",
+          "arity": 0,
+          "parameterCount": 1,
+          "declaringClrType": "System.Runtime.InteropServices.Java.JavaMarshal",
+          "declaringAssemblyName": "System.Private.CoreLib",
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.Java.JavaMarshal::CreateReferenceTrackingHandle(System.Object,System.Void*):System.Runtime.InteropServices.GCHandle",
+          "clrName": "CreateReferenceTrackingHandle",
+          "tsEmitName": "CreateReferenceTrackingHandle",
+          "metadataToken": 100695335,
+          "canonicalSignature": "(System.Object,System.Void*):System.Runtime.InteropServices.GCHandle",
+          "normalizedSignature": "CreateReferenceTrackingHandle|(System.Object,System.Void*):System.Runtime.InteropServices.GCHandle|static=true",
+          "emitScope": "ClassSurface",
+          "arity": 0,
+          "parameterCount": 2,
+          "declaringClrType": "System.Runtime.InteropServices.Java.JavaMarshal",
+          "declaringAssemblyName": "System.Private.CoreLib",
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.Java.JavaMarshal::GetContext(System.Runtime.InteropServices.GCHandle):System.Void*",
+          "clrName": "GetContext",
+          "tsEmitName": "GetContext",
+          "metadataToken": 100695336,
+          "canonicalSignature": "(System.Runtime.InteropServices.GCHandle):System.Void*",
+          "normalizedSignature": "GetContext|(System.Runtime.InteropServices.GCHandle):System.Void*|static=true",
+          "emitScope": "ClassSurface",
+          "arity": 0,
+          "parameterCount": 1,
+          "declaringClrType": "System.Runtime.InteropServices.Java.JavaMarshal",
+          "declaringAssemblyName": "System.Private.CoreLib",
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.Java.JavaMarshal::FinishCrossReferenceProcessing(System.Runtime.InteropServices.Java.MarkCrossReferencesArgs*,System.ReadOnlySpan_1[[System.Runtime.InteropServices.GCHandle,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]):System.Void",
+          "clrName": "FinishCrossReferenceProcessing",
+          "tsEmitName": "FinishCrossReferenceProcessing",
+          "metadataToken": 100695337,
+          "canonicalSignature": "(System.Runtime.InteropServices.Java.MarkCrossReferencesArgs*,System.ReadOnlySpan_1[[System.Runtime.InteropServices.GCHandle,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]):System.Void",
+          "normalizedSignature": "FinishCrossReferenceProcessing|(System.Runtime.InteropServices.Java.MarkCrossReferencesArgs*,System.ReadOnlySpan_1[[System.Runtime.InteropServices.GCHandle,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]):System.Void|static=true",
+          "emitScope": "ClassSurface",
+          "arity": 0,
+          "parameterCount": 2,
+          "declaringClrType": "System.Runtime.InteropServices.Java.JavaMarshal",
+          "declaringAssemblyName": "System.Private.CoreLib",
+          "isExtensionMethod": false
+        }
+      ],
+      "properties": [],
+      "fields": [],
+      "events": [],
+      "constructors": [],
+      "exposedMethods": [
+        {
+          "tsName": "Initialize",
+          "isStatic": true,
+          "tsSignatureId": "Initialize|():System.Void|static=true",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.Java.JavaMarshal",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695334
+          }
+        },
+        {
+          "tsName": "CreateReferenceTrackingHandle",
+          "isStatic": true,
+          "tsSignatureId": "CreateReferenceTrackingHandle|(System.Object,System.Void*):System.Runtime.InteropServices.GCHandle|static=true",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.Java.JavaMarshal",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695335
+          }
+        },
+        {
+          "tsName": "GetContext",
+          "isStatic": true,
+          "tsSignatureId": "GetContext|(System.Runtime.InteropServices.GCHandle):System.Void*|static=true",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.Java.JavaMarshal",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695336
+          }
+        },
+        {
+          "tsName": "FinishCrossReferenceProcessing",
+          "isStatic": true,
+          "tsSignatureId": "FinishCrossReferenceProcessing|(System.Runtime.InteropServices.Java.MarkCrossReferencesArgs*,System.ReadOnlySpan_1[[System.Runtime.InteropServices.GCHandle,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]):System.Void|static=true",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.Java.JavaMarshal",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695337
+          }
+        },
+        {
+          "tsName": "GetType",
+          "isStatic": false,
+          "tsSignatureId": "GetType|():System.Type|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664825
+          }
+        },
+        {
+          "tsName": "ToString",
+          "isStatic": false,
+          "tsSignatureId": "ToString|():System.String|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664829
+          }
+        },
+        {
+          "tsName": "Equals",
+          "isStatic": false,
+          "tsSignatureId": "Equals|(System.Object):System.Boolean|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664830
+          }
+        },
+        {
+          "tsName": "Equals",
+          "isStatic": true,
+          "tsSignatureId": "Equals|(System.Object,System.Object):System.Boolean|static=true",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664831
+          }
+        },
+        {
+          "tsName": "ReferenceEquals",
+          "isStatic": true,
+          "tsSignatureId": "ReferenceEquals|(System.Object,System.Object):System.Boolean|static=true",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664832
+          }
+        },
+        {
+          "tsName": "GetHashCode",
+          "isStatic": false,
+          "tsSignatureId": "GetHashCode|():System.Int32|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664833
+          }
+        }
+      ]
+    }
+  ]
+}

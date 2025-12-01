@@ -1,0 +1,3374 @@
+{
+  "namespace": "System.Diagnostics.SymbolStore",
+  "types": [
+    {
+      "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.SymAddressKind",
+      "clrName": "System.Diagnostics.SymbolStore.SymAddressKind",
+      "tsEmitName": "SymAddressKind",
+      "assemblyName": "System.Diagnostics.StackTrace",
+      "metadataToken": 0,
+      "methods": [],
+      "properties": [],
+      "fields": [
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.SymAddressKind::value__System.Int32",
+          "clrName": "value__",
+          "tsEmitName": "value__",
+          "metadataToken": 67108868,
+          "normalizedSignature": "value__|System.Int32|static=false|const=false",
+          "isStatic": false,
+          "isReadOnly": false,
+          "declaringClrType": "System.Diagnostics.SymbolStore.SymAddressKind",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace"
+        },
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.SymAddressKind::ILOffsetSystem.Diagnostics.SymbolStore.SymAddressKind",
+          "clrName": "ILOffset",
+          "tsEmitName": "ILOffset",
+          "metadataToken": 67108869,
+          "normalizedSignature": "ILOffset|System.Diagnostics.SymbolStore.SymAddressKind|static=true|const=true",
+          "isStatic": true,
+          "isReadOnly": false,
+          "declaringClrType": "System.Diagnostics.SymbolStore.SymAddressKind",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace"
+        },
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.SymAddressKind::NativeRVASystem.Diagnostics.SymbolStore.SymAddressKind",
+          "clrName": "NativeRVA",
+          "tsEmitName": "NativeRVA",
+          "metadataToken": 67108870,
+          "normalizedSignature": "NativeRVA|System.Diagnostics.SymbolStore.SymAddressKind|static=true|const=true",
+          "isStatic": true,
+          "isReadOnly": false,
+          "declaringClrType": "System.Diagnostics.SymbolStore.SymAddressKind",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace"
+        },
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.SymAddressKind::NativeRegisterSystem.Diagnostics.SymbolStore.SymAddressKind",
+          "clrName": "NativeRegister",
+          "tsEmitName": "NativeRegister",
+          "metadataToken": 67108871,
+          "normalizedSignature": "NativeRegister|System.Diagnostics.SymbolStore.SymAddressKind|static=true|const=true",
+          "isStatic": true,
+          "isReadOnly": false,
+          "declaringClrType": "System.Diagnostics.SymbolStore.SymAddressKind",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace"
+        },
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.SymAddressKind::NativeRegisterRelativeSystem.Diagnostics.SymbolStore.SymAddressKind",
+          "clrName": "NativeRegisterRelative",
+          "tsEmitName": "NativeRegisterRelative",
+          "metadataToken": 67108872,
+          "normalizedSignature": "NativeRegisterRelative|System.Diagnostics.SymbolStore.SymAddressKind|static=true|const=true",
+          "isStatic": true,
+          "isReadOnly": false,
+          "declaringClrType": "System.Diagnostics.SymbolStore.SymAddressKind",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace"
+        },
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.SymAddressKind::NativeOffsetSystem.Diagnostics.SymbolStore.SymAddressKind",
+          "clrName": "NativeOffset",
+          "tsEmitName": "NativeOffset",
+          "metadataToken": 67108873,
+          "normalizedSignature": "NativeOffset|System.Diagnostics.SymbolStore.SymAddressKind|static=true|const=true",
+          "isStatic": true,
+          "isReadOnly": false,
+          "declaringClrType": "System.Diagnostics.SymbolStore.SymAddressKind",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace"
+        },
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.SymAddressKind::NativeRegisterRegisterSystem.Diagnostics.SymbolStore.SymAddressKind",
+          "clrName": "NativeRegisterRegister",
+          "tsEmitName": "NativeRegisterRegister",
+          "metadataToken": 67108874,
+          "normalizedSignature": "NativeRegisterRegister|System.Diagnostics.SymbolStore.SymAddressKind|static=true|const=true",
+          "isStatic": true,
+          "isReadOnly": false,
+          "declaringClrType": "System.Diagnostics.SymbolStore.SymAddressKind",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace"
+        },
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.SymAddressKind::NativeRegisterStackSystem.Diagnostics.SymbolStore.SymAddressKind",
+          "clrName": "NativeRegisterStack",
+          "tsEmitName": "NativeRegisterStack",
+          "metadataToken": 67108875,
+          "normalizedSignature": "NativeRegisterStack|System.Diagnostics.SymbolStore.SymAddressKind|static=true|const=true",
+          "isStatic": true,
+          "isReadOnly": false,
+          "declaringClrType": "System.Diagnostics.SymbolStore.SymAddressKind",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace"
+        },
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.SymAddressKind::NativeStackRegisterSystem.Diagnostics.SymbolStore.SymAddressKind",
+          "clrName": "NativeStackRegister",
+          "tsEmitName": "NativeStackRegister",
+          "metadataToken": 67108876,
+          "normalizedSignature": "NativeStackRegister|System.Diagnostics.SymbolStore.SymAddressKind|static=true|const=true",
+          "isStatic": true,
+          "isReadOnly": false,
+          "declaringClrType": "System.Diagnostics.SymbolStore.SymAddressKind",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace"
+        },
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.SymAddressKind::BitFieldSystem.Diagnostics.SymbolStore.SymAddressKind",
+          "clrName": "BitField",
+          "tsEmitName": "BitField",
+          "metadataToken": 67108877,
+          "normalizedSignature": "BitField|System.Diagnostics.SymbolStore.SymAddressKind|static=true|const=true",
+          "isStatic": true,
+          "isReadOnly": false,
+          "declaringClrType": "System.Diagnostics.SymbolStore.SymAddressKind",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace"
+        },
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.SymAddressKind::NativeSectionOffsetSystem.Diagnostics.SymbolStore.SymAddressKind",
+          "clrName": "NativeSectionOffset",
+          "tsEmitName": "NativeSectionOffset",
+          "metadataToken": 67108878,
+          "normalizedSignature": "NativeSectionOffset|System.Diagnostics.SymbolStore.SymAddressKind|static=true|const=true",
+          "isStatic": true,
+          "isReadOnly": false,
+          "declaringClrType": "System.Diagnostics.SymbolStore.SymAddressKind",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace"
+        }
+      ],
+      "events": [],
+      "constructors": [],
+      "exposedMethods": [
+        {
+          "tsName": "GetName",
+          "isStatic": true,
+          "tsSignatureId": "GetName|(TEnum):System.String|static=true",
+          "target": {
+            "declaringClrType": "System.Enum",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664288
+          }
+        },
+        {
+          "tsName": "GetName",
+          "isStatic": true,
+          "tsSignatureId": "GetName|(System.Type,System.Object):System.String|static=true",
+          "target": {
+            "declaringClrType": "System.Enum",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664289
+          }
+        },
+        {
+          "tsName": "GetNames",
+          "isStatic": true,
+          "tsSignatureId": "GetNames|():System.String[]|static=true",
+          "target": {
+            "declaringClrType": "System.Enum",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664293
+          }
+        },
+        {
+          "tsName": "GetNames",
+          "isStatic": true,
+          "tsSignatureId": "GetNames|(System.Type):System.String[]|static=true",
+          "target": {
+            "declaringClrType": "System.Enum",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664294
+          }
+        },
+        {
+          "tsName": "GetUnderlyingType",
+          "isStatic": true,
+          "tsSignatureId": "GetUnderlyingType|(System.Type):System.Type|static=true",
+          "target": {
+            "declaringClrType": "System.Enum",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664296
+          }
+        },
+        {
+          "tsName": "GetValues",
+          "isStatic": true,
+          "tsSignatureId": "GetValues|():TEnum[]|static=true",
+          "target": {
+            "declaringClrType": "System.Enum",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664297
+          }
+        },
+        {
+          "tsName": "GetValues",
+          "isStatic": true,
+          "tsSignatureId": "GetValues|(System.Type):System.Array|static=true",
+          "target": {
+            "declaringClrType": "System.Enum",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664298
+          }
+        },
+        {
+          "tsName": "GetValuesAsUnderlyingType",
+          "isStatic": true,
+          "tsSignatureId": "GetValuesAsUnderlyingType|():System.Array|static=true",
+          "target": {
+            "declaringClrType": "System.Enum",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664299
+          }
+        },
+        {
+          "tsName": "GetValuesAsUnderlyingType",
+          "isStatic": true,
+          "tsSignatureId": "GetValuesAsUnderlyingType|(System.Type):System.Array|static=true",
+          "target": {
+            "declaringClrType": "System.Enum",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664300
+          }
+        },
+        {
+          "tsName": "HasFlag",
+          "isStatic": false,
+          "tsSignatureId": "HasFlag|(System.Enum):System.Boolean|static=false",
+          "target": {
+            "declaringClrType": "System.Enum",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664303
+          }
+        },
+        {
+          "tsName": "IsDefined",
+          "isStatic": true,
+          "tsSignatureId": "IsDefined|(TEnum):System.Boolean|static=true",
+          "target": {
+            "declaringClrType": "System.Enum",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664304
+          }
+        },
+        {
+          "tsName": "IsDefined",
+          "isStatic": true,
+          "tsSignatureId": "IsDefined|(System.Type,System.Object):System.Boolean|static=true",
+          "target": {
+            "declaringClrType": "System.Enum",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664306
+          }
+        },
+        {
+          "tsName": "Parse",
+          "isStatic": true,
+          "tsSignatureId": "Parse|(System.Type,System.ReadOnlySpan_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]):System.Object|static=true",
+          "target": {
+            "declaringClrType": "System.Enum",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664309
+          }
+        },
+        {
+          "tsName": "Parse",
+          "isStatic": true,
+          "tsSignatureId": "Parse|(System.Type,System.ReadOnlySpan_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Boolean):System.Object|static=true",
+          "target": {
+            "declaringClrType": "System.Enum",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664311
+          }
+        },
+        {
+          "tsName": "Parse",
+          "isStatic": true,
+          "tsSignatureId": "Parse|(System.ReadOnlySpan_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]):TEnum|static=true",
+          "target": {
+            "declaringClrType": "System.Enum",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664313
+          }
+        },
+        {
+          "tsName": "Parse",
+          "isStatic": true,
+          "tsSignatureId": "Parse|(System.ReadOnlySpan_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Boolean):TEnum|static=true",
+          "target": {
+            "declaringClrType": "System.Enum",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664315
+          }
+        },
+        {
+          "tsName": "TryParse",
+          "isStatic": true,
+          "tsSignatureId": "TryParse|(System.Type,System.ReadOnlySpan_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Object\u0026):System.Boolean|static=true",
+          "target": {
+            "declaringClrType": "System.Enum",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664317
+          }
+        },
+        {
+          "tsName": "TryParse",
+          "isStatic": true,
+          "tsSignatureId": "TryParse|(System.Type,System.ReadOnlySpan_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Boolean,System.Object\u0026):System.Boolean|static=true",
+          "target": {
+            "declaringClrType": "System.Enum",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664319
+          }
+        },
+        {
+          "tsName": "TryParse",
+          "isStatic": true,
+          "tsSignatureId": "TryParse|(System.ReadOnlySpan_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],TEnum\u0026):System.Boolean|static=true",
+          "target": {
+            "declaringClrType": "System.Enum",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664322
+          }
+        },
+        {
+          "tsName": "TryParse",
+          "isStatic": true,
+          "tsSignatureId": "TryParse|(System.ReadOnlySpan_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Boolean,TEnum\u0026):System.Boolean|static=true",
+          "target": {
+            "declaringClrType": "System.Enum",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664324
+          }
+        },
+        {
+          "tsName": "Equals",
+          "isStatic": false,
+          "tsSignatureId": "Equals|(System.Object):System.Boolean|static=false",
+          "target": {
+            "declaringClrType": "System.Enum",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664331
+          }
+        },
+        {
+          "tsName": "GetHashCode",
+          "isStatic": false,
+          "tsSignatureId": "GetHashCode|():System.Int32|static=false",
+          "target": {
+            "declaringClrType": "System.Enum",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664332
+          }
+        },
+        {
+          "tsName": "CompareTo",
+          "isStatic": false,
+          "tsSignatureId": "CompareTo|(System.Object):System.Int32|static=false",
+          "target": {
+            "declaringClrType": "System.Enum",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664333
+          }
+        },
+        {
+          "tsName": "ToString",
+          "isStatic": false,
+          "tsSignatureId": "ToString|():System.String|static=false",
+          "target": {
+            "declaringClrType": "System.Enum",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664334
+          }
+        },
+        {
+          "tsName": "ToString",
+          "isStatic": false,
+          "tsSignatureId": "ToString|(System.IFormatProvider):System.String|static=false",
+          "target": {
+            "declaringClrType": "System.Enum",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664336
+          }
+        },
+        {
+          "tsName": "ToString",
+          "isStatic": false,
+          "tsSignatureId": "ToString|(System.String,System.IFormatProvider):System.String|static=false",
+          "target": {
+            "declaringClrType": "System.Enum",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664337
+          }
+        },
+        {
+          "tsName": "Format",
+          "isStatic": true,
+          "tsSignatureId": "Format|(System.Type,System.Object,System.String):System.String|static=true",
+          "target": {
+            "declaringClrType": "System.Enum",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664344
+          }
+        },
+        {
+          "tsName": "TryFormat",
+          "isStatic": true,
+          "tsSignatureId": "TryFormat|(TEnum,System.Span_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Int32\u0026,System.ReadOnlySpan_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]):System.Boolean|static=true",
+          "target": {
+            "declaringClrType": "System.Enum",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664346
+          }
+        },
+        {
+          "tsName": "GetTypeCode",
+          "isStatic": false,
+          "tsSignatureId": "GetTypeCode|():System.TypeCode|static=false",
+          "target": {
+            "declaringClrType": "System.Enum",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664361
+          }
+        },
+        {
+          "tsName": "ToObject",
+          "isStatic": true,
+          "tsSignatureId": "ToObject|(System.Type,System.Byte):System.Object|static=true",
+          "target": {
+            "declaringClrType": "System.Enum",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664381
+          }
+        },
+        {
+          "tsName": "TryFormat$view",
+          "isStatic": false,
+          "tsSignatureId": "TryFormat|(System.Span_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Int32\u0026,System.ReadOnlySpan_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.IFormatProvider):System.Boolean|static=false",
+          "target": {
+            "declaringClrType": "System.ISpanFormattable",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100669347
+          }
+        },
+        {
+          "tsName": "ToBoolean",
+          "isStatic": false,
+          "tsSignatureId": "ToBoolean|(System.IFormatProvider):System.Boolean|static=false",
+          "target": {
+            "declaringClrType": "System.IConvertible",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100668513
+          }
+        },
+        {
+          "tsName": "ToChar",
+          "isStatic": false,
+          "tsSignatureId": "ToChar|(System.IFormatProvider):System.Char|static=false",
+          "target": {
+            "declaringClrType": "System.IConvertible",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100668514
+          }
+        },
+        {
+          "tsName": "ToSByte",
+          "isStatic": false,
+          "tsSignatureId": "ToSByte|(System.IFormatProvider):System.SByte|static=false",
+          "target": {
+            "declaringClrType": "System.IConvertible",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100668515
+          }
+        },
+        {
+          "tsName": "ToByte",
+          "isStatic": false,
+          "tsSignatureId": "ToByte|(System.IFormatProvider):System.Byte|static=false",
+          "target": {
+            "declaringClrType": "System.IConvertible",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100668516
+          }
+        },
+        {
+          "tsName": "ToInt16",
+          "isStatic": false,
+          "tsSignatureId": "ToInt16|(System.IFormatProvider):System.Int16|static=false",
+          "target": {
+            "declaringClrType": "System.IConvertible",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100668517
+          }
+        },
+        {
+          "tsName": "ToUInt16",
+          "isStatic": false,
+          "tsSignatureId": "ToUInt16|(System.IFormatProvider):System.UInt16|static=false",
+          "target": {
+            "declaringClrType": "System.IConvertible",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100668518
+          }
+        },
+        {
+          "tsName": "ToInt32",
+          "isStatic": false,
+          "tsSignatureId": "ToInt32|(System.IFormatProvider):System.Int32|static=false",
+          "target": {
+            "declaringClrType": "System.IConvertible",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100668519
+          }
+        },
+        {
+          "tsName": "ToUInt32",
+          "isStatic": false,
+          "tsSignatureId": "ToUInt32|(System.IFormatProvider):System.UInt32|static=false",
+          "target": {
+            "declaringClrType": "System.IConvertible",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100668520
+          }
+        },
+        {
+          "tsName": "ToInt64",
+          "isStatic": false,
+          "tsSignatureId": "ToInt64|(System.IFormatProvider):System.Int64|static=false",
+          "target": {
+            "declaringClrType": "System.IConvertible",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100668521
+          }
+        },
+        {
+          "tsName": "ToUInt64",
+          "isStatic": false,
+          "tsSignatureId": "ToUInt64|(System.IFormatProvider):System.UInt64|static=false",
+          "target": {
+            "declaringClrType": "System.IConvertible",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100668522
+          }
+        },
+        {
+          "tsName": "ToSingle",
+          "isStatic": false,
+          "tsSignatureId": "ToSingle|(System.IFormatProvider):System.Single|static=false",
+          "target": {
+            "declaringClrType": "System.IConvertible",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100668523
+          }
+        },
+        {
+          "tsName": "ToDouble",
+          "isStatic": false,
+          "tsSignatureId": "ToDouble|(System.IFormatProvider):System.Double|static=false",
+          "target": {
+            "declaringClrType": "System.IConvertible",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100668524
+          }
+        },
+        {
+          "tsName": "ToDecimal",
+          "isStatic": false,
+          "tsSignatureId": "ToDecimal|(System.IFormatProvider):System.Decimal|static=false",
+          "target": {
+            "declaringClrType": "System.IConvertible",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100668525
+          }
+        },
+        {
+          "tsName": "ToDateTime",
+          "isStatic": false,
+          "tsSignatureId": "ToDateTime|(System.IFormatProvider):System.DateTime|static=false",
+          "target": {
+            "declaringClrType": "System.IConvertible",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100668526
+          }
+        },
+        {
+          "tsName": "ToType",
+          "isStatic": false,
+          "tsSignatureId": "ToType|(System.Type,System.IFormatProvider):System.Object|static=false",
+          "target": {
+            "declaringClrType": "System.IConvertible",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100668528
+          }
+        },
+        {
+          "tsName": "CompareTo$view",
+          "isStatic": false,
+          "tsSignatureId": "CompareTo|(System.Object):System.Int32|static=false",
+          "target": {
+            "declaringClrType": "System.IComparable",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100668510
+          }
+        },
+        {
+          "tsName": "ToString$view",
+          "isStatic": false,
+          "tsSignatureId": "ToString|(System.String,System.IFormatProvider):System.String|static=false",
+          "target": {
+            "declaringClrType": "System.IFormattable",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100668533
+          }
+        },
+        {
+          "tsName": "GetTypeCode$view",
+          "isStatic": false,
+          "tsSignatureId": "GetTypeCode|():System.TypeCode|static=false",
+          "target": {
+            "declaringClrType": "System.IConvertible",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100668512
+          }
+        },
+        {
+          "tsName": "ToString$view",
+          "isStatic": false,
+          "tsSignatureId": "ToString|(System.IFormatProvider):System.String|static=false",
+          "target": {
+            "declaringClrType": "System.IConvertible",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100668527
+          }
+        },
+        {
+          "tsName": "GetType",
+          "isStatic": false,
+          "tsSignatureId": "GetType|():System.Type|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664825
+          }
+        },
+        {
+          "tsName": "Equals",
+          "isStatic": true,
+          "tsSignatureId": "Equals|(System.Object,System.Object):System.Boolean|static=true",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664831
+          }
+        },
+        {
+          "tsName": "ReferenceEquals",
+          "isStatic": true,
+          "tsSignatureId": "ReferenceEquals|(System.Object,System.Object):System.Boolean|static=true",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664832
+          }
+        }
+      ],
+      "exposedFields": [
+        {
+          "tsName": "value__",
+          "isStatic": false,
+          "tsSignatureId": "value__|System.Int32|static=false|const=false",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.SymAddressKind",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 67108868
+          }
+        },
+        {
+          "tsName": "ILOffset",
+          "isStatic": true,
+          "tsSignatureId": "ILOffset|System.Diagnostics.SymbolStore.SymAddressKind|static=true|const=true",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.SymAddressKind",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 67108869
+          }
+        },
+        {
+          "tsName": "NativeRVA",
+          "isStatic": true,
+          "tsSignatureId": "NativeRVA|System.Diagnostics.SymbolStore.SymAddressKind|static=true|const=true",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.SymAddressKind",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 67108870
+          }
+        },
+        {
+          "tsName": "NativeRegister",
+          "isStatic": true,
+          "tsSignatureId": "NativeRegister|System.Diagnostics.SymbolStore.SymAddressKind|static=true|const=true",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.SymAddressKind",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 67108871
+          }
+        },
+        {
+          "tsName": "NativeRegisterRelative",
+          "isStatic": true,
+          "tsSignatureId": "NativeRegisterRelative|System.Diagnostics.SymbolStore.SymAddressKind|static=true|const=true",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.SymAddressKind",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 67108872
+          }
+        },
+        {
+          "tsName": "NativeOffset",
+          "isStatic": true,
+          "tsSignatureId": "NativeOffset|System.Diagnostics.SymbolStore.SymAddressKind|static=true|const=true",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.SymAddressKind",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 67108873
+          }
+        },
+        {
+          "tsName": "NativeRegisterRegister",
+          "isStatic": true,
+          "tsSignatureId": "NativeRegisterRegister|System.Diagnostics.SymbolStore.SymAddressKind|static=true|const=true",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.SymAddressKind",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 67108874
+          }
+        },
+        {
+          "tsName": "NativeRegisterStack",
+          "isStatic": true,
+          "tsSignatureId": "NativeRegisterStack|System.Diagnostics.SymbolStore.SymAddressKind|static=true|const=true",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.SymAddressKind",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 67108875
+          }
+        },
+        {
+          "tsName": "NativeStackRegister",
+          "isStatic": true,
+          "tsSignatureId": "NativeStackRegister|System.Diagnostics.SymbolStore.SymAddressKind|static=true|const=true",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.SymAddressKind",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 67108876
+          }
+        },
+        {
+          "tsName": "BitField",
+          "isStatic": true,
+          "tsSignatureId": "BitField|System.Diagnostics.SymbolStore.SymAddressKind|static=true|const=true",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.SymAddressKind",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 67108877
+          }
+        },
+        {
+          "tsName": "NativeSectionOffset",
+          "isStatic": true,
+          "tsSignatureId": "NativeSectionOffset|System.Diagnostics.SymbolStore.SymAddressKind|static=true|const=true",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.SymAddressKind",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 67108878
+          }
+        }
+      ]
+    },
+    {
+      "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.ISymbolBinder",
+      "clrName": "System.Diagnostics.SymbolStore.ISymbolBinder",
+      "tsEmitName": "ISymbolBinder",
+      "assemblyName": "System.Diagnostics.StackTrace",
+      "metadataToken": 0,
+      "methods": [
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.ISymbolBinder::GetReader(System.Int32,System.String,System.String):System.Diagnostics.SymbolStore.ISymbolReader",
+          "clrName": "GetReader",
+          "tsEmitName": "GetReader",
+          "metadataToken": 100663305,
+          "canonicalSignature": "(System.Int32,System.String,System.String):System.Diagnostics.SymbolStore.ISymbolReader",
+          "normalizedSignature": "GetReader|(System.Int32,System.String,System.String):System.Diagnostics.SymbolStore.ISymbolReader|static=false",
+          "emitScope": "ClassSurface",
+          "arity": 0,
+          "parameterCount": 3,
+          "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolBinder",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace",
+          "isExtensionMethod": false
+        }
+      ],
+      "properties": [],
+      "fields": [],
+      "events": [],
+      "constructors": [],
+      "exposedMethods": [
+        {
+          "tsName": "GetReader",
+          "isStatic": false,
+          "tsSignatureId": "GetReader|(System.Int32,System.String,System.String):System.Diagnostics.SymbolStore.ISymbolReader|static=false",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolBinder",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 100663305
+          }
+        }
+      ]
+    },
+    {
+      "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.ISymbolBinder1",
+      "clrName": "System.Diagnostics.SymbolStore.ISymbolBinder1",
+      "tsEmitName": "ISymbolBinder1",
+      "assemblyName": "System.Diagnostics.StackTrace",
+      "metadataToken": 0,
+      "methods": [
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.ISymbolBinder1::GetReader(System.IntPtr,System.String,System.String):System.Diagnostics.SymbolStore.ISymbolReader",
+          "clrName": "GetReader",
+          "tsEmitName": "GetReader",
+          "metadataToken": 100663306,
+          "canonicalSignature": "(System.IntPtr,System.String,System.String):System.Diagnostics.SymbolStore.ISymbolReader",
+          "normalizedSignature": "GetReader|(System.IntPtr,System.String,System.String):System.Diagnostics.SymbolStore.ISymbolReader|static=false",
+          "emitScope": "ClassSurface",
+          "arity": 0,
+          "parameterCount": 3,
+          "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolBinder1",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace",
+          "isExtensionMethod": false
+        }
+      ],
+      "properties": [],
+      "fields": [],
+      "events": [],
+      "constructors": [],
+      "exposedMethods": [
+        {
+          "tsName": "GetReader",
+          "isStatic": false,
+          "tsSignatureId": "GetReader|(System.IntPtr,System.String,System.String):System.Diagnostics.SymbolStore.ISymbolReader|static=false",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolBinder1",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 100663306
+          }
+        }
+      ]
+    },
+    {
+      "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.ISymbolDocument",
+      "clrName": "System.Diagnostics.SymbolStore.ISymbolDocument",
+      "tsEmitName": "ISymbolDocument",
+      "assemblyName": "System.Diagnostics.StackTrace",
+      "metadataToken": 0,
+      "methods": [
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.ISymbolDocument::GetCheckSum():System.Byte[]",
+          "clrName": "GetCheckSum",
+          "tsEmitName": "GetCheckSum",
+          "metadataToken": 100663312,
+          "canonicalSignature": "():System.Byte[]",
+          "normalizedSignature": "GetCheckSum|():System.Byte[]|static=false",
+          "emitScope": "ClassSurface",
+          "arity": 0,
+          "parameterCount": 0,
+          "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolDocument",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace",
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.ISymbolDocument::FindClosestLine(System.Int32):System.Int32",
+          "clrName": "FindClosestLine",
+          "tsEmitName": "FindClosestLine",
+          "metadataToken": 100663313,
+          "canonicalSignature": "(System.Int32):System.Int32",
+          "normalizedSignature": "FindClosestLine|(System.Int32):System.Int32|static=false",
+          "emitScope": "ClassSurface",
+          "arity": 0,
+          "parameterCount": 1,
+          "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolDocument",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace",
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.ISymbolDocument::GetSourceRange(System.Int32,System.Int32,System.Int32,System.Int32):System.Byte[]",
+          "clrName": "GetSourceRange",
+          "tsEmitName": "GetSourceRange",
+          "metadataToken": 100663316,
+          "canonicalSignature": "(System.Int32,System.Int32,System.Int32,System.Int32):System.Byte[]",
+          "normalizedSignature": "GetSourceRange|(System.Int32,System.Int32,System.Int32,System.Int32):System.Byte[]|static=false",
+          "emitScope": "ClassSurface",
+          "arity": 0,
+          "parameterCount": 4,
+          "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolDocument",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace",
+          "isExtensionMethod": false
+        }
+      ],
+      "properties": [
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.ISymbolDocument::URL:System.String",
+          "clrName": "URL",
+          "tsEmitName": "URL",
+          "metadataToken": 385875969,
+          "canonicalSignature": ":System.String",
+          "normalizedSignature": "URL|:System.String|static=false|accessor=get",
+          "emitScope": "ClassSurface",
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false,
+          "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolDocument",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace"
+        },
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.ISymbolDocument::DocumentType:System.Guid",
+          "clrName": "DocumentType",
+          "tsEmitName": "DocumentType",
+          "metadataToken": 385875970,
+          "canonicalSignature": ":System.Guid",
+          "normalizedSignature": "DocumentType|:System.Guid|static=false|accessor=get",
+          "emitScope": "ClassSurface",
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false,
+          "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolDocument",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace"
+        },
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.ISymbolDocument::Language:System.Guid",
+          "clrName": "Language",
+          "tsEmitName": "Language",
+          "metadataToken": 385875971,
+          "canonicalSignature": ":System.Guid",
+          "normalizedSignature": "Language|:System.Guid|static=false|accessor=get",
+          "emitScope": "ClassSurface",
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false,
+          "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolDocument",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace"
+        },
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.ISymbolDocument::LanguageVendor:System.Guid",
+          "clrName": "LanguageVendor",
+          "tsEmitName": "LanguageVendor",
+          "metadataToken": 385875972,
+          "canonicalSignature": ":System.Guid",
+          "normalizedSignature": "LanguageVendor|:System.Guid|static=false|accessor=get",
+          "emitScope": "ClassSurface",
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false,
+          "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolDocument",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace"
+        },
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.ISymbolDocument::CheckSumAlgorithmId:System.Guid",
+          "clrName": "CheckSumAlgorithmId",
+          "tsEmitName": "CheckSumAlgorithmId",
+          "metadataToken": 385875973,
+          "canonicalSignature": ":System.Guid",
+          "normalizedSignature": "CheckSumAlgorithmId|:System.Guid|static=false|accessor=get",
+          "emitScope": "ClassSurface",
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false,
+          "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolDocument",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace"
+        },
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.ISymbolDocument::HasEmbeddedSource:System.Boolean",
+          "clrName": "HasEmbeddedSource",
+          "tsEmitName": "HasEmbeddedSource",
+          "metadataToken": 385875974,
+          "canonicalSignature": ":System.Boolean",
+          "normalizedSignature": "HasEmbeddedSource|:System.Boolean|static=false|accessor=get",
+          "emitScope": "ClassSurface",
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false,
+          "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolDocument",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace"
+        },
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.ISymbolDocument::SourceLength:System.Int32",
+          "clrName": "SourceLength",
+          "tsEmitName": "SourceLength",
+          "metadataToken": 385875975,
+          "canonicalSignature": ":System.Int32",
+          "normalizedSignature": "SourceLength|:System.Int32|static=false|accessor=get",
+          "emitScope": "ClassSurface",
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false,
+          "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolDocument",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace"
+        }
+      ],
+      "fields": [],
+      "events": [],
+      "constructors": [],
+      "exposedMethods": [
+        {
+          "tsName": "GetCheckSum",
+          "isStatic": false,
+          "tsSignatureId": "GetCheckSum|():System.Byte[]|static=false",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolDocument",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 100663312
+          }
+        },
+        {
+          "tsName": "FindClosestLine",
+          "isStatic": false,
+          "tsSignatureId": "FindClosestLine|(System.Int32):System.Int32|static=false",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolDocument",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 100663313
+          }
+        },
+        {
+          "tsName": "GetSourceRange",
+          "isStatic": false,
+          "tsSignatureId": "GetSourceRange|(System.Int32,System.Int32,System.Int32,System.Int32):System.Byte[]|static=false",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolDocument",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 100663316
+          }
+        }
+      ],
+      "exposedProperties": [
+        {
+          "tsName": "URL",
+          "isStatic": false,
+          "tsSignatureId": "URL|:System.String|static=false|accessor=get",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolDocument",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 385875969
+          }
+        },
+        {
+          "tsName": "DocumentType",
+          "isStatic": false,
+          "tsSignatureId": "DocumentType|:System.Guid|static=false|accessor=get",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolDocument",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 385875970
+          }
+        },
+        {
+          "tsName": "Language",
+          "isStatic": false,
+          "tsSignatureId": "Language|:System.Guid|static=false|accessor=get",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolDocument",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 385875971
+          }
+        },
+        {
+          "tsName": "LanguageVendor",
+          "isStatic": false,
+          "tsSignatureId": "LanguageVendor|:System.Guid|static=false|accessor=get",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolDocument",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 385875972
+          }
+        },
+        {
+          "tsName": "CheckSumAlgorithmId",
+          "isStatic": false,
+          "tsSignatureId": "CheckSumAlgorithmId|:System.Guid|static=false|accessor=get",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolDocument",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 385875973
+          }
+        },
+        {
+          "tsName": "HasEmbeddedSource",
+          "isStatic": false,
+          "tsSignatureId": "HasEmbeddedSource|:System.Boolean|static=false|accessor=get",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolDocument",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 385875974
+          }
+        },
+        {
+          "tsName": "SourceLength",
+          "isStatic": false,
+          "tsSignatureId": "SourceLength|:System.Int32|static=false|accessor=get",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolDocument",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 385875975
+          }
+        }
+      ]
+    },
+    {
+      "stableId": "System.Private.CoreLib:System.Diagnostics.SymbolStore.ISymbolDocumentWriter",
+      "clrName": "System.Diagnostics.SymbolStore.ISymbolDocumentWriter",
+      "tsEmitName": "ISymbolDocumentWriter",
+      "assemblyName": "System.Private.CoreLib",
+      "metadataToken": 0,
+      "methods": [
+        {
+          "stableId": "System.Private.CoreLib:System.Diagnostics.SymbolStore.ISymbolDocumentWriter::SetCheckSum(System.Guid,System.Byte[]):System.Void",
+          "clrName": "SetCheckSum",
+          "tsEmitName": "SetCheckSum",
+          "metadataToken": 100703135,
+          "canonicalSignature": "(System.Guid,System.Byte[]):System.Void",
+          "normalizedSignature": "SetCheckSum|(System.Guid,System.Byte[]):System.Void|static=false",
+          "emitScope": "ClassSurface",
+          "arity": 0,
+          "parameterCount": 2,
+          "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolDocumentWriter",
+          "declaringAssemblyName": "System.Private.CoreLib",
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.Private.CoreLib:System.Diagnostics.SymbolStore.ISymbolDocumentWriter::SetSource(System.Byte[]):System.Void",
+          "clrName": "SetSource",
+          "tsEmitName": "SetSource",
+          "metadataToken": 100703136,
+          "canonicalSignature": "(System.Byte[]):System.Void",
+          "normalizedSignature": "SetSource|(System.Byte[]):System.Void|static=false",
+          "emitScope": "ClassSurface",
+          "arity": 0,
+          "parameterCount": 1,
+          "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolDocumentWriter",
+          "declaringAssemblyName": "System.Private.CoreLib",
+          "isExtensionMethod": false
+        }
+      ],
+      "properties": [],
+      "fields": [],
+      "events": [],
+      "constructors": [],
+      "exposedMethods": [
+        {
+          "tsName": "SetCheckSum",
+          "isStatic": false,
+          "tsSignatureId": "SetCheckSum|(System.Guid,System.Byte[]):System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolDocumentWriter",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100703135
+          }
+        },
+        {
+          "tsName": "SetSource",
+          "isStatic": false,
+          "tsSignatureId": "SetSource|(System.Byte[]):System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolDocumentWriter",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100703136
+          }
+        }
+      ]
+    },
+    {
+      "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.ISymbolMethod",
+      "clrName": "System.Diagnostics.SymbolStore.ISymbolMethod",
+      "tsEmitName": "ISymbolMethod",
+      "assemblyName": "System.Diagnostics.StackTrace",
+      "metadataToken": 0,
+      "methods": [
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.ISymbolMethod::GetSequencePoints(System.Int32[],System.Diagnostics.SymbolStore.ISymbolDocument[],System.Int32[],System.Int32[],System.Int32[],System.Int32[]):System.Void",
+          "clrName": "GetSequencePoints",
+          "tsEmitName": "GetSequencePoints",
+          "metadataToken": 100663319,
+          "canonicalSignature": "(System.Int32[],System.Diagnostics.SymbolStore.ISymbolDocument[],System.Int32[],System.Int32[],System.Int32[],System.Int32[]):System.Void",
+          "normalizedSignature": "GetSequencePoints|(System.Int32[],System.Diagnostics.SymbolStore.ISymbolDocument[],System.Int32[],System.Int32[],System.Int32[],System.Int32[]):System.Void|static=false",
+          "emitScope": "ClassSurface",
+          "arity": 0,
+          "parameterCount": 6,
+          "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolMethod",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace",
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.ISymbolMethod::GetScope(System.Int32):System.Diagnostics.SymbolStore.ISymbolScope",
+          "clrName": "GetScope",
+          "tsEmitName": "GetScope",
+          "metadataToken": 100663321,
+          "canonicalSignature": "(System.Int32):System.Diagnostics.SymbolStore.ISymbolScope",
+          "normalizedSignature": "GetScope|(System.Int32):System.Diagnostics.SymbolStore.ISymbolScope|static=false",
+          "emitScope": "ClassSurface",
+          "arity": 0,
+          "parameterCount": 1,
+          "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolMethod",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace",
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.ISymbolMethod::GetOffset(System.Diagnostics.SymbolStore.ISymbolDocument,System.Int32,System.Int32):System.Int32",
+          "clrName": "GetOffset",
+          "tsEmitName": "GetOffset",
+          "metadataToken": 100663322,
+          "canonicalSignature": "(System.Diagnostics.SymbolStore.ISymbolDocument,System.Int32,System.Int32):System.Int32",
+          "normalizedSignature": "GetOffset|(System.Diagnostics.SymbolStore.ISymbolDocument,System.Int32,System.Int32):System.Int32|static=false",
+          "emitScope": "ClassSurface",
+          "arity": 0,
+          "parameterCount": 3,
+          "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolMethod",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace",
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.ISymbolMethod::GetRanges(System.Diagnostics.SymbolStore.ISymbolDocument,System.Int32,System.Int32):System.Int32[]",
+          "clrName": "GetRanges",
+          "tsEmitName": "GetRanges",
+          "metadataToken": 100663323,
+          "canonicalSignature": "(System.Diagnostics.SymbolStore.ISymbolDocument,System.Int32,System.Int32):System.Int32[]",
+          "normalizedSignature": "GetRanges|(System.Diagnostics.SymbolStore.ISymbolDocument,System.Int32,System.Int32):System.Int32[]|static=false",
+          "emitScope": "ClassSurface",
+          "arity": 0,
+          "parameterCount": 3,
+          "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolMethod",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace",
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.ISymbolMethod::GetParameters():System.Diagnostics.SymbolStore.ISymbolVariable[]",
+          "clrName": "GetParameters",
+          "tsEmitName": "GetParameters",
+          "metadataToken": 100663324,
+          "canonicalSignature": "():System.Diagnostics.SymbolStore.ISymbolVariable[]",
+          "normalizedSignature": "GetParameters|():System.Diagnostics.SymbolStore.ISymbolVariable[]|static=false",
+          "emitScope": "ClassSurface",
+          "arity": 0,
+          "parameterCount": 0,
+          "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolMethod",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace",
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.ISymbolMethod::GetNamespace():System.Diagnostics.SymbolStore.ISymbolNamespace",
+          "clrName": "GetNamespace",
+          "tsEmitName": "GetNamespace",
+          "metadataToken": 100663325,
+          "canonicalSignature": "():System.Diagnostics.SymbolStore.ISymbolNamespace",
+          "normalizedSignature": "GetNamespace|():System.Diagnostics.SymbolStore.ISymbolNamespace|static=false",
+          "emitScope": "ClassSurface",
+          "arity": 0,
+          "parameterCount": 0,
+          "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolMethod",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace",
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.ISymbolMethod::GetSourceStartEnd(System.Diagnostics.SymbolStore.ISymbolDocument[],System.Int32[],System.Int32[]):System.Boolean",
+          "clrName": "GetSourceStartEnd",
+          "tsEmitName": "GetSourceStartEnd",
+          "metadataToken": 100663326,
+          "canonicalSignature": "(System.Diagnostics.SymbolStore.ISymbolDocument[],System.Int32[],System.Int32[]):System.Boolean",
+          "normalizedSignature": "GetSourceStartEnd|(System.Diagnostics.SymbolStore.ISymbolDocument[],System.Int32[],System.Int32[]):System.Boolean|static=false",
+          "emitScope": "ClassSurface",
+          "arity": 0,
+          "parameterCount": 3,
+          "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolMethod",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace",
+          "isExtensionMethod": false
+        }
+      ],
+      "properties": [
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.ISymbolMethod::Token:System.Diagnostics.SymbolStore.SymbolToken",
+          "clrName": "Token",
+          "tsEmitName": "Token",
+          "metadataToken": 385875976,
+          "canonicalSignature": ":System.Diagnostics.SymbolStore.SymbolToken",
+          "normalizedSignature": "Token|:System.Diagnostics.SymbolStore.SymbolToken|static=false|accessor=get",
+          "emitScope": "ClassSurface",
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false,
+          "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolMethod",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace"
+        },
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.ISymbolMethod::SequencePointCount:System.Int32",
+          "clrName": "SequencePointCount",
+          "tsEmitName": "SequencePointCount",
+          "metadataToken": 385875977,
+          "canonicalSignature": ":System.Int32",
+          "normalizedSignature": "SequencePointCount|:System.Int32|static=false|accessor=get",
+          "emitScope": "ClassSurface",
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false,
+          "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolMethod",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace"
+        },
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.ISymbolMethod::RootScope:System.Diagnostics.SymbolStore.ISymbolScope",
+          "clrName": "RootScope",
+          "tsEmitName": "RootScope",
+          "metadataToken": 385875978,
+          "canonicalSignature": ":System.Diagnostics.SymbolStore.ISymbolScope",
+          "normalizedSignature": "RootScope|:System.Diagnostics.SymbolStore.ISymbolScope|static=false|accessor=get",
+          "emitScope": "ClassSurface",
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false,
+          "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolMethod",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace"
+        }
+      ],
+      "fields": [],
+      "events": [],
+      "constructors": [],
+      "exposedMethods": [
+        {
+          "tsName": "GetSequencePoints",
+          "isStatic": false,
+          "tsSignatureId": "GetSequencePoints|(System.Int32[],System.Diagnostics.SymbolStore.ISymbolDocument[],System.Int32[],System.Int32[],System.Int32[],System.Int32[]):System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolMethod",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 100663319
+          }
+        },
+        {
+          "tsName": "GetScope",
+          "isStatic": false,
+          "tsSignatureId": "GetScope|(System.Int32):System.Diagnostics.SymbolStore.ISymbolScope|static=false",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolMethod",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 100663321
+          }
+        },
+        {
+          "tsName": "GetOffset",
+          "isStatic": false,
+          "tsSignatureId": "GetOffset|(System.Diagnostics.SymbolStore.ISymbolDocument,System.Int32,System.Int32):System.Int32|static=false",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolMethod",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 100663322
+          }
+        },
+        {
+          "tsName": "GetRanges",
+          "isStatic": false,
+          "tsSignatureId": "GetRanges|(System.Diagnostics.SymbolStore.ISymbolDocument,System.Int32,System.Int32):System.Int32[]|static=false",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolMethod",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 100663323
+          }
+        },
+        {
+          "tsName": "GetParameters",
+          "isStatic": false,
+          "tsSignatureId": "GetParameters|():System.Diagnostics.SymbolStore.ISymbolVariable[]|static=false",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolMethod",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 100663324
+          }
+        },
+        {
+          "tsName": "GetNamespace",
+          "isStatic": false,
+          "tsSignatureId": "GetNamespace|():System.Diagnostics.SymbolStore.ISymbolNamespace|static=false",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolMethod",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 100663325
+          }
+        },
+        {
+          "tsName": "GetSourceStartEnd",
+          "isStatic": false,
+          "tsSignatureId": "GetSourceStartEnd|(System.Diagnostics.SymbolStore.ISymbolDocument[],System.Int32[],System.Int32[]):System.Boolean|static=false",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolMethod",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 100663326
+          }
+        }
+      ],
+      "exposedProperties": [
+        {
+          "tsName": "Token",
+          "isStatic": false,
+          "tsSignatureId": "Token|:System.Diagnostics.SymbolStore.SymbolToken|static=false|accessor=get",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolMethod",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 385875976
+          }
+        },
+        {
+          "tsName": "SequencePointCount",
+          "isStatic": false,
+          "tsSignatureId": "SequencePointCount|:System.Int32|static=false|accessor=get",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolMethod",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 385875977
+          }
+        },
+        {
+          "tsName": "RootScope",
+          "isStatic": false,
+          "tsSignatureId": "RootScope|:System.Diagnostics.SymbolStore.ISymbolScope|static=false|accessor=get",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolMethod",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 385875978
+          }
+        }
+      ]
+    },
+    {
+      "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.ISymbolNamespace",
+      "clrName": "System.Diagnostics.SymbolStore.ISymbolNamespace",
+      "tsEmitName": "ISymbolNamespace",
+      "assemblyName": "System.Diagnostics.StackTrace",
+      "metadataToken": 0,
+      "methods": [
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.ISymbolNamespace::GetNamespaces():System.Diagnostics.SymbolStore.ISymbolNamespace[]",
+          "clrName": "GetNamespaces",
+          "tsEmitName": "GetNamespaces",
+          "metadataToken": 100663328,
+          "canonicalSignature": "():System.Diagnostics.SymbolStore.ISymbolNamespace[]",
+          "normalizedSignature": "GetNamespaces|():System.Diagnostics.SymbolStore.ISymbolNamespace[]|static=false",
+          "emitScope": "ClassSurface",
+          "arity": 0,
+          "parameterCount": 0,
+          "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolNamespace",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace",
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.ISymbolNamespace::GetVariables():System.Diagnostics.SymbolStore.ISymbolVariable[]",
+          "clrName": "GetVariables",
+          "tsEmitName": "GetVariables",
+          "metadataToken": 100663329,
+          "canonicalSignature": "():System.Diagnostics.SymbolStore.ISymbolVariable[]",
+          "normalizedSignature": "GetVariables|():System.Diagnostics.SymbolStore.ISymbolVariable[]|static=false",
+          "emitScope": "ClassSurface",
+          "arity": 0,
+          "parameterCount": 0,
+          "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolNamespace",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace",
+          "isExtensionMethod": false
+        }
+      ],
+      "properties": [
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.ISymbolNamespace::Name:System.String",
+          "clrName": "Name",
+          "tsEmitName": "Name",
+          "metadataToken": 385875979,
+          "canonicalSignature": ":System.String",
+          "normalizedSignature": "Name|:System.String|static=false|accessor=get",
+          "emitScope": "ClassSurface",
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false,
+          "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolNamespace",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace"
+        }
+      ],
+      "fields": [],
+      "events": [],
+      "constructors": [],
+      "exposedMethods": [
+        {
+          "tsName": "GetNamespaces",
+          "isStatic": false,
+          "tsSignatureId": "GetNamespaces|():System.Diagnostics.SymbolStore.ISymbolNamespace[]|static=false",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolNamespace",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 100663328
+          }
+        },
+        {
+          "tsName": "GetVariables",
+          "isStatic": false,
+          "tsSignatureId": "GetVariables|():System.Diagnostics.SymbolStore.ISymbolVariable[]|static=false",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolNamespace",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 100663329
+          }
+        }
+      ],
+      "exposedProperties": [
+        {
+          "tsName": "Name",
+          "isStatic": false,
+          "tsSignatureId": "Name|:System.String|static=false|accessor=get",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolNamespace",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 385875979
+          }
+        }
+      ]
+    },
+    {
+      "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.ISymbolReader",
+      "clrName": "System.Diagnostics.SymbolStore.ISymbolReader",
+      "tsEmitName": "ISymbolReader",
+      "assemblyName": "System.Diagnostics.StackTrace",
+      "metadataToken": 0,
+      "methods": [
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.ISymbolReader::GetDocument(System.String,System.Guid,System.Guid,System.Guid):System.Diagnostics.SymbolStore.ISymbolDocument",
+          "clrName": "GetDocument",
+          "tsEmitName": "GetDocument",
+          "metadataToken": 100663330,
+          "canonicalSignature": "(System.String,System.Guid,System.Guid,System.Guid):System.Diagnostics.SymbolStore.ISymbolDocument",
+          "normalizedSignature": "GetDocument|(System.String,System.Guid,System.Guid,System.Guid):System.Diagnostics.SymbolStore.ISymbolDocument|static=false",
+          "emitScope": "ClassSurface",
+          "arity": 0,
+          "parameterCount": 4,
+          "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolReader",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace",
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.ISymbolReader::GetDocuments():System.Diagnostics.SymbolStore.ISymbolDocument[]",
+          "clrName": "GetDocuments",
+          "tsEmitName": "GetDocuments",
+          "metadataToken": 100663331,
+          "canonicalSignature": "():System.Diagnostics.SymbolStore.ISymbolDocument[]",
+          "normalizedSignature": "GetDocuments|():System.Diagnostics.SymbolStore.ISymbolDocument[]|static=false",
+          "emitScope": "ClassSurface",
+          "arity": 0,
+          "parameterCount": 0,
+          "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolReader",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace",
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.ISymbolReader::GetMethod(System.Diagnostics.SymbolStore.SymbolToken):System.Diagnostics.SymbolStore.ISymbolMethod",
+          "clrName": "GetMethod",
+          "tsEmitName": "GetMethod",
+          "metadataToken": 100663333,
+          "canonicalSignature": "(System.Diagnostics.SymbolStore.SymbolToken):System.Diagnostics.SymbolStore.ISymbolMethod",
+          "normalizedSignature": "GetMethod|(System.Diagnostics.SymbolStore.SymbolToken):System.Diagnostics.SymbolStore.ISymbolMethod|static=false",
+          "emitScope": "ClassSurface",
+          "arity": 0,
+          "parameterCount": 1,
+          "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolReader",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace",
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.ISymbolReader::GetMethod(System.Diagnostics.SymbolStore.SymbolToken,System.Int32):System.Diagnostics.SymbolStore.ISymbolMethod",
+          "clrName": "GetMethod",
+          "tsEmitName": "GetMethod",
+          "metadataToken": 100663334,
+          "canonicalSignature": "(System.Diagnostics.SymbolStore.SymbolToken,System.Int32):System.Diagnostics.SymbolStore.ISymbolMethod",
+          "normalizedSignature": "GetMethod|(System.Diagnostics.SymbolStore.SymbolToken,System.Int32):System.Diagnostics.SymbolStore.ISymbolMethod|static=false",
+          "emitScope": "ClassSurface",
+          "arity": 0,
+          "parameterCount": 2,
+          "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolReader",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace",
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.ISymbolReader::GetVariables(System.Diagnostics.SymbolStore.SymbolToken):System.Diagnostics.SymbolStore.ISymbolVariable[]",
+          "clrName": "GetVariables",
+          "tsEmitName": "GetVariables",
+          "metadataToken": 100663335,
+          "canonicalSignature": "(System.Diagnostics.SymbolStore.SymbolToken):System.Diagnostics.SymbolStore.ISymbolVariable[]",
+          "normalizedSignature": "GetVariables|(System.Diagnostics.SymbolStore.SymbolToken):System.Diagnostics.SymbolStore.ISymbolVariable[]|static=false",
+          "emitScope": "ClassSurface",
+          "arity": 0,
+          "parameterCount": 1,
+          "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolReader",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace",
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.ISymbolReader::GetGlobalVariables():System.Diagnostics.SymbolStore.ISymbolVariable[]",
+          "clrName": "GetGlobalVariables",
+          "tsEmitName": "GetGlobalVariables",
+          "metadataToken": 100663336,
+          "canonicalSignature": "():System.Diagnostics.SymbolStore.ISymbolVariable[]",
+          "normalizedSignature": "GetGlobalVariables|():System.Diagnostics.SymbolStore.ISymbolVariable[]|static=false",
+          "emitScope": "ClassSurface",
+          "arity": 0,
+          "parameterCount": 0,
+          "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolReader",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace",
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.ISymbolReader::GetMethodFromDocumentPosition(System.Diagnostics.SymbolStore.ISymbolDocument,System.Int32,System.Int32):System.Diagnostics.SymbolStore.ISymbolMethod",
+          "clrName": "GetMethodFromDocumentPosition",
+          "tsEmitName": "GetMethodFromDocumentPosition",
+          "metadataToken": 100663337,
+          "canonicalSignature": "(System.Diagnostics.SymbolStore.ISymbolDocument,System.Int32,System.Int32):System.Diagnostics.SymbolStore.ISymbolMethod",
+          "normalizedSignature": "GetMethodFromDocumentPosition|(System.Diagnostics.SymbolStore.ISymbolDocument,System.Int32,System.Int32):System.Diagnostics.SymbolStore.ISymbolMethod|static=false",
+          "emitScope": "ClassSurface",
+          "arity": 0,
+          "parameterCount": 3,
+          "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolReader",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace",
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.ISymbolReader::GetSymAttribute(System.Diagnostics.SymbolStore.SymbolToken,System.String):System.Byte[]",
+          "clrName": "GetSymAttribute",
+          "tsEmitName": "GetSymAttribute",
+          "metadataToken": 100663338,
+          "canonicalSignature": "(System.Diagnostics.SymbolStore.SymbolToken,System.String):System.Byte[]",
+          "normalizedSignature": "GetSymAttribute|(System.Diagnostics.SymbolStore.SymbolToken,System.String):System.Byte[]|static=false",
+          "emitScope": "ClassSurface",
+          "arity": 0,
+          "parameterCount": 2,
+          "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolReader",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace",
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.ISymbolReader::GetNamespaces():System.Diagnostics.SymbolStore.ISymbolNamespace[]",
+          "clrName": "GetNamespaces",
+          "tsEmitName": "GetNamespaces",
+          "metadataToken": 100663339,
+          "canonicalSignature": "():System.Diagnostics.SymbolStore.ISymbolNamespace[]",
+          "normalizedSignature": "GetNamespaces|():System.Diagnostics.SymbolStore.ISymbolNamespace[]|static=false",
+          "emitScope": "ClassSurface",
+          "arity": 0,
+          "parameterCount": 0,
+          "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolReader",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace",
+          "isExtensionMethod": false
+        }
+      ],
+      "properties": [
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.ISymbolReader::UserEntryPoint:System.Diagnostics.SymbolStore.SymbolToken",
+          "clrName": "UserEntryPoint",
+          "tsEmitName": "UserEntryPoint",
+          "metadataToken": 385875980,
+          "canonicalSignature": ":System.Diagnostics.SymbolStore.SymbolToken",
+          "normalizedSignature": "UserEntryPoint|:System.Diagnostics.SymbolStore.SymbolToken|static=false|accessor=get",
+          "emitScope": "ClassSurface",
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false,
+          "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolReader",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace"
+        }
+      ],
+      "fields": [],
+      "events": [],
+      "constructors": [],
+      "exposedMethods": [
+        {
+          "tsName": "GetDocument",
+          "isStatic": false,
+          "tsSignatureId": "GetDocument|(System.String,System.Guid,System.Guid,System.Guid):System.Diagnostics.SymbolStore.ISymbolDocument|static=false",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolReader",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 100663330
+          }
+        },
+        {
+          "tsName": "GetDocuments",
+          "isStatic": false,
+          "tsSignatureId": "GetDocuments|():System.Diagnostics.SymbolStore.ISymbolDocument[]|static=false",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolReader",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 100663331
+          }
+        },
+        {
+          "tsName": "GetMethod",
+          "isStatic": false,
+          "tsSignatureId": "GetMethod|(System.Diagnostics.SymbolStore.SymbolToken):System.Diagnostics.SymbolStore.ISymbolMethod|static=false",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolReader",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 100663333
+          }
+        },
+        {
+          "tsName": "GetMethod",
+          "isStatic": false,
+          "tsSignatureId": "GetMethod|(System.Diagnostics.SymbolStore.SymbolToken,System.Int32):System.Diagnostics.SymbolStore.ISymbolMethod|static=false",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolReader",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 100663334
+          }
+        },
+        {
+          "tsName": "GetVariables",
+          "isStatic": false,
+          "tsSignatureId": "GetVariables|(System.Diagnostics.SymbolStore.SymbolToken):System.Diagnostics.SymbolStore.ISymbolVariable[]|static=false",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolReader",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 100663335
+          }
+        },
+        {
+          "tsName": "GetGlobalVariables",
+          "isStatic": false,
+          "tsSignatureId": "GetGlobalVariables|():System.Diagnostics.SymbolStore.ISymbolVariable[]|static=false",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolReader",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 100663336
+          }
+        },
+        {
+          "tsName": "GetMethodFromDocumentPosition",
+          "isStatic": false,
+          "tsSignatureId": "GetMethodFromDocumentPosition|(System.Diagnostics.SymbolStore.ISymbolDocument,System.Int32,System.Int32):System.Diagnostics.SymbolStore.ISymbolMethod|static=false",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolReader",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 100663337
+          }
+        },
+        {
+          "tsName": "GetSymAttribute",
+          "isStatic": false,
+          "tsSignatureId": "GetSymAttribute|(System.Diagnostics.SymbolStore.SymbolToken,System.String):System.Byte[]|static=false",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolReader",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 100663338
+          }
+        },
+        {
+          "tsName": "GetNamespaces",
+          "isStatic": false,
+          "tsSignatureId": "GetNamespaces|():System.Diagnostics.SymbolStore.ISymbolNamespace[]|static=false",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolReader",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 100663339
+          }
+        }
+      ],
+      "exposedProperties": [
+        {
+          "tsName": "UserEntryPoint",
+          "isStatic": false,
+          "tsSignatureId": "UserEntryPoint|:System.Diagnostics.SymbolStore.SymbolToken|static=false|accessor=get",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolReader",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 385875980
+          }
+        }
+      ]
+    },
+    {
+      "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.ISymbolScope",
+      "clrName": "System.Diagnostics.SymbolStore.ISymbolScope",
+      "tsEmitName": "ISymbolScope",
+      "assemblyName": "System.Diagnostics.StackTrace",
+      "metadataToken": 0,
+      "methods": [
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.ISymbolScope::GetChildren():System.Diagnostics.SymbolStore.ISymbolScope[]",
+          "clrName": "GetChildren",
+          "tsEmitName": "GetChildren",
+          "metadataToken": 100663342,
+          "canonicalSignature": "():System.Diagnostics.SymbolStore.ISymbolScope[]",
+          "normalizedSignature": "GetChildren|():System.Diagnostics.SymbolStore.ISymbolScope[]|static=false",
+          "emitScope": "ClassSurface",
+          "arity": 0,
+          "parameterCount": 0,
+          "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolScope",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace",
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.ISymbolScope::GetLocals():System.Diagnostics.SymbolStore.ISymbolVariable[]",
+          "clrName": "GetLocals",
+          "tsEmitName": "GetLocals",
+          "metadataToken": 100663345,
+          "canonicalSignature": "():System.Diagnostics.SymbolStore.ISymbolVariable[]",
+          "normalizedSignature": "GetLocals|():System.Diagnostics.SymbolStore.ISymbolVariable[]|static=false",
+          "emitScope": "ClassSurface",
+          "arity": 0,
+          "parameterCount": 0,
+          "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolScope",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace",
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.ISymbolScope::GetNamespaces():System.Diagnostics.SymbolStore.ISymbolNamespace[]",
+          "clrName": "GetNamespaces",
+          "tsEmitName": "GetNamespaces",
+          "metadataToken": 100663346,
+          "canonicalSignature": "():System.Diagnostics.SymbolStore.ISymbolNamespace[]",
+          "normalizedSignature": "GetNamespaces|():System.Diagnostics.SymbolStore.ISymbolNamespace[]|static=false",
+          "emitScope": "ClassSurface",
+          "arity": 0,
+          "parameterCount": 0,
+          "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolScope",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace",
+          "isExtensionMethod": false
+        }
+      ],
+      "properties": [
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.ISymbolScope::Method:System.Diagnostics.SymbolStore.ISymbolMethod",
+          "clrName": "Method",
+          "tsEmitName": "Method",
+          "metadataToken": 385875981,
+          "canonicalSignature": ":System.Diagnostics.SymbolStore.ISymbolMethod",
+          "normalizedSignature": "Method|:System.Diagnostics.SymbolStore.ISymbolMethod|static=false|accessor=get",
+          "emitScope": "ClassSurface",
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false,
+          "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolScope",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace"
+        },
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.ISymbolScope::Parent:System.Diagnostics.SymbolStore.ISymbolScope",
+          "clrName": "Parent",
+          "tsEmitName": "Parent",
+          "metadataToken": 385875982,
+          "canonicalSignature": ":System.Diagnostics.SymbolStore.ISymbolScope",
+          "normalizedSignature": "Parent|:System.Diagnostics.SymbolStore.ISymbolScope|static=false|accessor=get",
+          "emitScope": "ClassSurface",
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false,
+          "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolScope",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace"
+        },
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.ISymbolScope::StartOffset:System.Int32",
+          "clrName": "StartOffset",
+          "tsEmitName": "StartOffset",
+          "metadataToken": 385875983,
+          "canonicalSignature": ":System.Int32",
+          "normalizedSignature": "StartOffset|:System.Int32|static=false|accessor=get",
+          "emitScope": "ClassSurface",
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false,
+          "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolScope",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace"
+        },
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.ISymbolScope::EndOffset:System.Int32",
+          "clrName": "EndOffset",
+          "tsEmitName": "EndOffset",
+          "metadataToken": 385875984,
+          "canonicalSignature": ":System.Int32",
+          "normalizedSignature": "EndOffset|:System.Int32|static=false|accessor=get",
+          "emitScope": "ClassSurface",
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false,
+          "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolScope",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace"
+        }
+      ],
+      "fields": [],
+      "events": [],
+      "constructors": [],
+      "exposedMethods": [
+        {
+          "tsName": "GetChildren",
+          "isStatic": false,
+          "tsSignatureId": "GetChildren|():System.Diagnostics.SymbolStore.ISymbolScope[]|static=false",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolScope",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 100663342
+          }
+        },
+        {
+          "tsName": "GetLocals",
+          "isStatic": false,
+          "tsSignatureId": "GetLocals|():System.Diagnostics.SymbolStore.ISymbolVariable[]|static=false",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolScope",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 100663345
+          }
+        },
+        {
+          "tsName": "GetNamespaces",
+          "isStatic": false,
+          "tsSignatureId": "GetNamespaces|():System.Diagnostics.SymbolStore.ISymbolNamespace[]|static=false",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolScope",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 100663346
+          }
+        }
+      ],
+      "exposedProperties": [
+        {
+          "tsName": "Method",
+          "isStatic": false,
+          "tsSignatureId": "Method|:System.Diagnostics.SymbolStore.ISymbolMethod|static=false|accessor=get",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolScope",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 385875981
+          }
+        },
+        {
+          "tsName": "Parent",
+          "isStatic": false,
+          "tsSignatureId": "Parent|:System.Diagnostics.SymbolStore.ISymbolScope|static=false|accessor=get",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolScope",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 385875982
+          }
+        },
+        {
+          "tsName": "StartOffset",
+          "isStatic": false,
+          "tsSignatureId": "StartOffset|:System.Int32|static=false|accessor=get",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolScope",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 385875983
+          }
+        },
+        {
+          "tsName": "EndOffset",
+          "isStatic": false,
+          "tsSignatureId": "EndOffset|:System.Int32|static=false|accessor=get",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolScope",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 385875984
+          }
+        }
+      ]
+    },
+    {
+      "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.ISymbolVariable",
+      "clrName": "System.Diagnostics.SymbolStore.ISymbolVariable",
+      "tsEmitName": "ISymbolVariable",
+      "assemblyName": "System.Diagnostics.StackTrace",
+      "metadataToken": 0,
+      "methods": [
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.ISymbolVariable::GetSignature():System.Byte[]",
+          "clrName": "GetSignature",
+          "tsEmitName": "GetSignature",
+          "metadataToken": 100663349,
+          "canonicalSignature": "():System.Byte[]",
+          "normalizedSignature": "GetSignature|():System.Byte[]|static=false",
+          "emitScope": "ClassSurface",
+          "arity": 0,
+          "parameterCount": 0,
+          "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolVariable",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace",
+          "isExtensionMethod": false
+        }
+      ],
+      "properties": [
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.ISymbolVariable::Name:System.String",
+          "clrName": "Name",
+          "tsEmitName": "Name",
+          "metadataToken": 385875985,
+          "canonicalSignature": ":System.String",
+          "normalizedSignature": "Name|:System.String|static=false|accessor=get",
+          "emitScope": "ClassSurface",
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false,
+          "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolVariable",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace"
+        },
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.ISymbolVariable::Attributes:System.Object",
+          "clrName": "Attributes",
+          "tsEmitName": "Attributes",
+          "metadataToken": 385875986,
+          "canonicalSignature": ":System.Object",
+          "normalizedSignature": "Attributes|:System.Object|static=false|accessor=get",
+          "emitScope": "ClassSurface",
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false,
+          "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolVariable",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace"
+        },
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.ISymbolVariable::AddressKind:System.Diagnostics.SymbolStore.SymAddressKind",
+          "clrName": "AddressKind",
+          "tsEmitName": "AddressKind",
+          "metadataToken": 385875987,
+          "canonicalSignature": ":System.Diagnostics.SymbolStore.SymAddressKind",
+          "normalizedSignature": "AddressKind|:System.Diagnostics.SymbolStore.SymAddressKind|static=false|accessor=get",
+          "emitScope": "ClassSurface",
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false,
+          "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolVariable",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace"
+        },
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.ISymbolVariable::AddressField1:System.Int32",
+          "clrName": "AddressField1",
+          "tsEmitName": "AddressField1",
+          "metadataToken": 385875988,
+          "canonicalSignature": ":System.Int32",
+          "normalizedSignature": "AddressField1|:System.Int32|static=false|accessor=get",
+          "emitScope": "ClassSurface",
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false,
+          "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolVariable",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace"
+        },
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.ISymbolVariable::AddressField2:System.Int32",
+          "clrName": "AddressField2",
+          "tsEmitName": "AddressField2",
+          "metadataToken": 385875989,
+          "canonicalSignature": ":System.Int32",
+          "normalizedSignature": "AddressField2|:System.Int32|static=false|accessor=get",
+          "emitScope": "ClassSurface",
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false,
+          "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolVariable",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace"
+        },
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.ISymbolVariable::AddressField3:System.Int32",
+          "clrName": "AddressField3",
+          "tsEmitName": "AddressField3",
+          "metadataToken": 385875990,
+          "canonicalSignature": ":System.Int32",
+          "normalizedSignature": "AddressField3|:System.Int32|static=false|accessor=get",
+          "emitScope": "ClassSurface",
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false,
+          "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolVariable",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace"
+        },
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.ISymbolVariable::StartOffset:System.Int32",
+          "clrName": "StartOffset",
+          "tsEmitName": "StartOffset",
+          "metadataToken": 385875991,
+          "canonicalSignature": ":System.Int32",
+          "normalizedSignature": "StartOffset|:System.Int32|static=false|accessor=get",
+          "emitScope": "ClassSurface",
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false,
+          "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolVariable",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace"
+        },
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.ISymbolVariable::EndOffset:System.Int32",
+          "clrName": "EndOffset",
+          "tsEmitName": "EndOffset",
+          "metadataToken": 385875992,
+          "canonicalSignature": ":System.Int32",
+          "normalizedSignature": "EndOffset|:System.Int32|static=false|accessor=get",
+          "emitScope": "ClassSurface",
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false,
+          "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolVariable",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace"
+        }
+      ],
+      "fields": [],
+      "events": [],
+      "constructors": [],
+      "exposedMethods": [
+        {
+          "tsName": "GetSignature",
+          "isStatic": false,
+          "tsSignatureId": "GetSignature|():System.Byte[]|static=false",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolVariable",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 100663349
+          }
+        }
+      ],
+      "exposedProperties": [
+        {
+          "tsName": "Name",
+          "isStatic": false,
+          "tsSignatureId": "Name|:System.String|static=false|accessor=get",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolVariable",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 385875985
+          }
+        },
+        {
+          "tsName": "Attributes",
+          "isStatic": false,
+          "tsSignatureId": "Attributes|:System.Object|static=false|accessor=get",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolVariable",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 385875986
+          }
+        },
+        {
+          "tsName": "AddressKind",
+          "isStatic": false,
+          "tsSignatureId": "AddressKind|:System.Diagnostics.SymbolStore.SymAddressKind|static=false|accessor=get",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolVariable",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 385875987
+          }
+        },
+        {
+          "tsName": "AddressField1",
+          "isStatic": false,
+          "tsSignatureId": "AddressField1|:System.Int32|static=false|accessor=get",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolVariable",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 385875988
+          }
+        },
+        {
+          "tsName": "AddressField2",
+          "isStatic": false,
+          "tsSignatureId": "AddressField2|:System.Int32|static=false|accessor=get",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolVariable",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 385875989
+          }
+        },
+        {
+          "tsName": "AddressField3",
+          "isStatic": false,
+          "tsSignatureId": "AddressField3|:System.Int32|static=false|accessor=get",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolVariable",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 385875990
+          }
+        },
+        {
+          "tsName": "StartOffset",
+          "isStatic": false,
+          "tsSignatureId": "StartOffset|:System.Int32|static=false|accessor=get",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolVariable",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 385875991
+          }
+        },
+        {
+          "tsName": "EndOffset",
+          "isStatic": false,
+          "tsSignatureId": "EndOffset|:System.Int32|static=false|accessor=get",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolVariable",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 385875992
+          }
+        }
+      ]
+    },
+    {
+      "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.ISymbolWriter",
+      "clrName": "System.Diagnostics.SymbolStore.ISymbolWriter",
+      "tsEmitName": "ISymbolWriter",
+      "assemblyName": "System.Diagnostics.StackTrace",
+      "metadataToken": 0,
+      "methods": [
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.ISymbolWriter::Initialize(System.IntPtr,System.String,System.Boolean):System.Void",
+          "clrName": "Initialize",
+          "tsEmitName": "Initialize",
+          "metadataToken": 100663356,
+          "canonicalSignature": "(System.IntPtr,System.String,System.Boolean):System.Void",
+          "normalizedSignature": "Initialize|(System.IntPtr,System.String,System.Boolean):System.Void|static=false",
+          "emitScope": "ClassSurface",
+          "arity": 0,
+          "parameterCount": 3,
+          "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolWriter",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace",
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.ISymbolWriter::DefineDocument(System.String,System.Guid,System.Guid,System.Guid):System.Diagnostics.SymbolStore.ISymbolDocumentWriter",
+          "clrName": "DefineDocument",
+          "tsEmitName": "DefineDocument",
+          "metadataToken": 100663357,
+          "canonicalSignature": "(System.String,System.Guid,System.Guid,System.Guid):System.Diagnostics.SymbolStore.ISymbolDocumentWriter",
+          "normalizedSignature": "DefineDocument|(System.String,System.Guid,System.Guid,System.Guid):System.Diagnostics.SymbolStore.ISymbolDocumentWriter|static=false",
+          "emitScope": "ClassSurface",
+          "arity": 0,
+          "parameterCount": 4,
+          "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolWriter",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace",
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.ISymbolWriter::SetUserEntryPoint(System.Diagnostics.SymbolStore.SymbolToken):System.Void",
+          "clrName": "SetUserEntryPoint",
+          "tsEmitName": "SetUserEntryPoint",
+          "metadataToken": 100663358,
+          "canonicalSignature": "(System.Diagnostics.SymbolStore.SymbolToken):System.Void",
+          "normalizedSignature": "SetUserEntryPoint|(System.Diagnostics.SymbolStore.SymbolToken):System.Void|static=false",
+          "emitScope": "ClassSurface",
+          "arity": 0,
+          "parameterCount": 1,
+          "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolWriter",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace",
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.ISymbolWriter::CloseMethod():System.Void",
+          "clrName": "CloseMethod",
+          "tsEmitName": "CloseMethod",
+          "metadataToken": 100663360,
+          "canonicalSignature": "():System.Void",
+          "normalizedSignature": "CloseMethod|():System.Void|static=false",
+          "emitScope": "ClassSurface",
+          "arity": 0,
+          "parameterCount": 0,
+          "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolWriter",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace",
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.ISymbolWriter::DefineSequencePoints(System.Diagnostics.SymbolStore.ISymbolDocumentWriter,System.Int32[],System.Int32[],System.Int32[],System.Int32[],System.Int32[]):System.Void",
+          "clrName": "DefineSequencePoints",
+          "tsEmitName": "DefineSequencePoints",
+          "metadataToken": 100663361,
+          "canonicalSignature": "(System.Diagnostics.SymbolStore.ISymbolDocumentWriter,System.Int32[],System.Int32[],System.Int32[],System.Int32[],System.Int32[]):System.Void",
+          "normalizedSignature": "DefineSequencePoints|(System.Diagnostics.SymbolStore.ISymbolDocumentWriter,System.Int32[],System.Int32[],System.Int32[],System.Int32[],System.Int32[]):System.Void|static=false",
+          "emitScope": "ClassSurface",
+          "arity": 0,
+          "parameterCount": 6,
+          "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolWriter",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace",
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.ISymbolWriter::OpenScope(System.Int32):System.Int32",
+          "clrName": "OpenScope",
+          "tsEmitName": "OpenScope",
+          "metadataToken": 100663362,
+          "canonicalSignature": "(System.Int32):System.Int32",
+          "normalizedSignature": "OpenScope|(System.Int32):System.Int32|static=false",
+          "emitScope": "ClassSurface",
+          "arity": 0,
+          "parameterCount": 1,
+          "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolWriter",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace",
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.ISymbolWriter::CloseScope(System.Int32):System.Void",
+          "clrName": "CloseScope",
+          "tsEmitName": "CloseScope",
+          "metadataToken": 100663363,
+          "canonicalSignature": "(System.Int32):System.Void",
+          "normalizedSignature": "CloseScope|(System.Int32):System.Void|static=false",
+          "emitScope": "ClassSurface",
+          "arity": 0,
+          "parameterCount": 1,
+          "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolWriter",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace",
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.ISymbolWriter::SetScopeRange(System.Int32,System.Int32,System.Int32):System.Void",
+          "clrName": "SetScopeRange",
+          "tsEmitName": "SetScopeRange",
+          "metadataToken": 100663364,
+          "canonicalSignature": "(System.Int32,System.Int32,System.Int32):System.Void",
+          "normalizedSignature": "SetScopeRange|(System.Int32,System.Int32,System.Int32):System.Void|static=false",
+          "emitScope": "ClassSurface",
+          "arity": 0,
+          "parameterCount": 3,
+          "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolWriter",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace",
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.ISymbolWriter::DefineLocalVariable(System.String,System.Reflection.FieldAttributes,System.Byte[],System.Diagnostics.SymbolStore.SymAddressKind,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32):System.Void",
+          "clrName": "DefineLocalVariable",
+          "tsEmitName": "DefineLocalVariable",
+          "metadataToken": 100663365,
+          "canonicalSignature": "(System.String,System.Reflection.FieldAttributes,System.Byte[],System.Diagnostics.SymbolStore.SymAddressKind,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32):System.Void",
+          "normalizedSignature": "DefineLocalVariable|(System.String,System.Reflection.FieldAttributes,System.Byte[],System.Diagnostics.SymbolStore.SymAddressKind,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32):System.Void|static=false",
+          "emitScope": "ClassSurface",
+          "arity": 0,
+          "parameterCount": 9,
+          "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolWriter",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace",
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.ISymbolWriter::DefineParameter(System.String,System.Reflection.ParameterAttributes,System.Int32,System.Diagnostics.SymbolStore.SymAddressKind,System.Int32,System.Int32,System.Int32):System.Void",
+          "clrName": "DefineParameter",
+          "tsEmitName": "DefineParameter",
+          "metadataToken": 100663366,
+          "canonicalSignature": "(System.String,System.Reflection.ParameterAttributes,System.Int32,System.Diagnostics.SymbolStore.SymAddressKind,System.Int32,System.Int32,System.Int32):System.Void",
+          "normalizedSignature": "DefineParameter|(System.String,System.Reflection.ParameterAttributes,System.Int32,System.Diagnostics.SymbolStore.SymAddressKind,System.Int32,System.Int32,System.Int32):System.Void|static=false",
+          "emitScope": "ClassSurface",
+          "arity": 0,
+          "parameterCount": 7,
+          "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolWriter",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace",
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.ISymbolWriter::DefineField(System.Diagnostics.SymbolStore.SymbolToken,System.String,System.Reflection.FieldAttributes,System.Byte[],System.Diagnostics.SymbolStore.SymAddressKind,System.Int32,System.Int32,System.Int32):System.Void",
+          "clrName": "DefineField",
+          "tsEmitName": "DefineField",
+          "metadataToken": 100663367,
+          "canonicalSignature": "(System.Diagnostics.SymbolStore.SymbolToken,System.String,System.Reflection.FieldAttributes,System.Byte[],System.Diagnostics.SymbolStore.SymAddressKind,System.Int32,System.Int32,System.Int32):System.Void",
+          "normalizedSignature": "DefineField|(System.Diagnostics.SymbolStore.SymbolToken,System.String,System.Reflection.FieldAttributes,System.Byte[],System.Diagnostics.SymbolStore.SymAddressKind,System.Int32,System.Int32,System.Int32):System.Void|static=false",
+          "emitScope": "ClassSurface",
+          "arity": 0,
+          "parameterCount": 8,
+          "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolWriter",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace",
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.ISymbolWriter::DefineGlobalVariable(System.String,System.Reflection.FieldAttributes,System.Byte[],System.Diagnostics.SymbolStore.SymAddressKind,System.Int32,System.Int32,System.Int32):System.Void",
+          "clrName": "DefineGlobalVariable",
+          "tsEmitName": "DefineGlobalVariable",
+          "metadataToken": 100663368,
+          "canonicalSignature": "(System.String,System.Reflection.FieldAttributes,System.Byte[],System.Diagnostics.SymbolStore.SymAddressKind,System.Int32,System.Int32,System.Int32):System.Void",
+          "normalizedSignature": "DefineGlobalVariable|(System.String,System.Reflection.FieldAttributes,System.Byte[],System.Diagnostics.SymbolStore.SymAddressKind,System.Int32,System.Int32,System.Int32):System.Void|static=false",
+          "emitScope": "ClassSurface",
+          "arity": 0,
+          "parameterCount": 7,
+          "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolWriter",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace",
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.ISymbolWriter::SetSymAttribute(System.Diagnostics.SymbolStore.SymbolToken,System.String,System.Byte[]):System.Void",
+          "clrName": "SetSymAttribute",
+          "tsEmitName": "SetSymAttribute",
+          "metadataToken": 100663370,
+          "canonicalSignature": "(System.Diagnostics.SymbolStore.SymbolToken,System.String,System.Byte[]):System.Void",
+          "normalizedSignature": "SetSymAttribute|(System.Diagnostics.SymbolStore.SymbolToken,System.String,System.Byte[]):System.Void|static=false",
+          "emitScope": "ClassSurface",
+          "arity": 0,
+          "parameterCount": 3,
+          "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolWriter",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace",
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.ISymbolWriter::OpenNamespace(System.String):System.Void",
+          "clrName": "OpenNamespace",
+          "tsEmitName": "OpenNamespace",
+          "metadataToken": 100663371,
+          "canonicalSignature": "(System.String):System.Void",
+          "normalizedSignature": "OpenNamespace|(System.String):System.Void|static=false",
+          "emitScope": "ClassSurface",
+          "arity": 0,
+          "parameterCount": 1,
+          "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolWriter",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace",
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.ISymbolWriter::SetMethodSourceRange(System.Diagnostics.SymbolStore.ISymbolDocumentWriter,System.Int32,System.Int32,System.Diagnostics.SymbolStore.ISymbolDocumentWriter,System.Int32,System.Int32):System.Void",
+          "clrName": "SetMethodSourceRange",
+          "tsEmitName": "SetMethodSourceRange",
+          "metadataToken": 100663374,
+          "canonicalSignature": "(System.Diagnostics.SymbolStore.ISymbolDocumentWriter,System.Int32,System.Int32,System.Diagnostics.SymbolStore.ISymbolDocumentWriter,System.Int32,System.Int32):System.Void",
+          "normalizedSignature": "SetMethodSourceRange|(System.Diagnostics.SymbolStore.ISymbolDocumentWriter,System.Int32,System.Int32,System.Diagnostics.SymbolStore.ISymbolDocumentWriter,System.Int32,System.Int32):System.Void|static=false",
+          "emitScope": "ClassSurface",
+          "arity": 0,
+          "parameterCount": 6,
+          "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolWriter",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace",
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.ISymbolWriter::SetUnderlyingWriter(System.IntPtr):System.Void",
+          "clrName": "SetUnderlyingWriter",
+          "tsEmitName": "SetUnderlyingWriter",
+          "metadataToken": 100663375,
+          "canonicalSignature": "(System.IntPtr):System.Void",
+          "normalizedSignature": "SetUnderlyingWriter|(System.IntPtr):System.Void|static=false",
+          "emitScope": "ClassSurface",
+          "arity": 0,
+          "parameterCount": 1,
+          "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolWriter",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace",
+          "isExtensionMethod": false
+        }
+      ],
+      "properties": [],
+      "fields": [],
+      "events": [],
+      "constructors": [],
+      "exposedMethods": [
+        {
+          "tsName": "Initialize",
+          "isStatic": false,
+          "tsSignatureId": "Initialize|(System.IntPtr,System.String,System.Boolean):System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolWriter",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 100663356
+          }
+        },
+        {
+          "tsName": "DefineDocument",
+          "isStatic": false,
+          "tsSignatureId": "DefineDocument|(System.String,System.Guid,System.Guid,System.Guid):System.Diagnostics.SymbolStore.ISymbolDocumentWriter|static=false",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolWriter",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 100663357
+          }
+        },
+        {
+          "tsName": "SetUserEntryPoint",
+          "isStatic": false,
+          "tsSignatureId": "SetUserEntryPoint|(System.Diagnostics.SymbolStore.SymbolToken):System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolWriter",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 100663358
+          }
+        },
+        {
+          "tsName": "CloseMethod",
+          "isStatic": false,
+          "tsSignatureId": "CloseMethod|():System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolWriter",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 100663360
+          }
+        },
+        {
+          "tsName": "DefineSequencePoints",
+          "isStatic": false,
+          "tsSignatureId": "DefineSequencePoints|(System.Diagnostics.SymbolStore.ISymbolDocumentWriter,System.Int32[],System.Int32[],System.Int32[],System.Int32[],System.Int32[]):System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolWriter",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 100663361
+          }
+        },
+        {
+          "tsName": "OpenScope",
+          "isStatic": false,
+          "tsSignatureId": "OpenScope|(System.Int32):System.Int32|static=false",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolWriter",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 100663362
+          }
+        },
+        {
+          "tsName": "CloseScope",
+          "isStatic": false,
+          "tsSignatureId": "CloseScope|(System.Int32):System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolWriter",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 100663363
+          }
+        },
+        {
+          "tsName": "SetScopeRange",
+          "isStatic": false,
+          "tsSignatureId": "SetScopeRange|(System.Int32,System.Int32,System.Int32):System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolWriter",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 100663364
+          }
+        },
+        {
+          "tsName": "DefineLocalVariable",
+          "isStatic": false,
+          "tsSignatureId": "DefineLocalVariable|(System.String,System.Reflection.FieldAttributes,System.Byte[],System.Diagnostics.SymbolStore.SymAddressKind,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32):System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolWriter",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 100663365
+          }
+        },
+        {
+          "tsName": "DefineParameter",
+          "isStatic": false,
+          "tsSignatureId": "DefineParameter|(System.String,System.Reflection.ParameterAttributes,System.Int32,System.Diagnostics.SymbolStore.SymAddressKind,System.Int32,System.Int32,System.Int32):System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolWriter",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 100663366
+          }
+        },
+        {
+          "tsName": "DefineField",
+          "isStatic": false,
+          "tsSignatureId": "DefineField|(System.Diagnostics.SymbolStore.SymbolToken,System.String,System.Reflection.FieldAttributes,System.Byte[],System.Diagnostics.SymbolStore.SymAddressKind,System.Int32,System.Int32,System.Int32):System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolWriter",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 100663367
+          }
+        },
+        {
+          "tsName": "DefineGlobalVariable",
+          "isStatic": false,
+          "tsSignatureId": "DefineGlobalVariable|(System.String,System.Reflection.FieldAttributes,System.Byte[],System.Diagnostics.SymbolStore.SymAddressKind,System.Int32,System.Int32,System.Int32):System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolWriter",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 100663368
+          }
+        },
+        {
+          "tsName": "SetSymAttribute",
+          "isStatic": false,
+          "tsSignatureId": "SetSymAttribute|(System.Diagnostics.SymbolStore.SymbolToken,System.String,System.Byte[]):System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolWriter",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 100663370
+          }
+        },
+        {
+          "tsName": "OpenNamespace",
+          "isStatic": false,
+          "tsSignatureId": "OpenNamespace|(System.String):System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolWriter",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 100663371
+          }
+        },
+        {
+          "tsName": "SetMethodSourceRange",
+          "isStatic": false,
+          "tsSignatureId": "SetMethodSourceRange|(System.Diagnostics.SymbolStore.ISymbolDocumentWriter,System.Int32,System.Int32,System.Diagnostics.SymbolStore.ISymbolDocumentWriter,System.Int32,System.Int32):System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolWriter",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 100663374
+          }
+        },
+        {
+          "tsName": "SetUnderlyingWriter",
+          "isStatic": false,
+          "tsSignatureId": "SetUnderlyingWriter|(System.IntPtr):System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.ISymbolWriter",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 100663375
+          }
+        }
+      ]
+    },
+    {
+      "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.SymbolToken",
+      "clrName": "System.Diagnostics.SymbolStore.SymbolToken",
+      "tsEmitName": "SymbolToken",
+      "assemblyName": "System.Diagnostics.StackTrace",
+      "metadataToken": 0,
+      "methods": [
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.SymbolToken::GetToken():System.Int32",
+          "clrName": "GetToken",
+          "tsEmitName": "GetToken",
+          "metadataToken": 100663377,
+          "canonicalSignature": "():System.Int32",
+          "normalizedSignature": "GetToken|():System.Int32|static=false",
+          "emitScope": "ClassSurface",
+          "arity": 0,
+          "parameterCount": 0,
+          "declaringClrType": "System.Diagnostics.SymbolStore.SymbolToken",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace",
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.SymbolToken::GetHashCode():System.Int32",
+          "clrName": "GetHashCode",
+          "tsEmitName": "GetHashCode",
+          "metadataToken": 100663378,
+          "canonicalSignature": "():System.Int32",
+          "normalizedSignature": "GetHashCode|():System.Int32|static=false",
+          "emitScope": "ClassSurface",
+          "arity": 0,
+          "parameterCount": 0,
+          "declaringClrType": "System.Diagnostics.SymbolStore.SymbolToken",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace",
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.SymbolToken::Equals(System.Object):System.Boolean",
+          "clrName": "Equals",
+          "tsEmitName": "Equals",
+          "metadataToken": 100663379,
+          "canonicalSignature": "(System.Object):System.Boolean",
+          "normalizedSignature": "Equals|(System.Object):System.Boolean|static=false",
+          "emitScope": "ClassSurface",
+          "arity": 0,
+          "parameterCount": 1,
+          "declaringClrType": "System.Diagnostics.SymbolStore.SymbolToken",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace",
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.SymbolToken::Equals(System.Diagnostics.SymbolStore.SymbolToken):System.Boolean",
+          "clrName": "Equals",
+          "tsEmitName": "Equals",
+          "metadataToken": 100663380,
+          "canonicalSignature": "(System.Diagnostics.SymbolStore.SymbolToken):System.Boolean",
+          "normalizedSignature": "Equals|(System.Diagnostics.SymbolStore.SymbolToken):System.Boolean|static=false",
+          "emitScope": "ClassSurface",
+          "arity": 0,
+          "parameterCount": 1,
+          "declaringClrType": "System.Diagnostics.SymbolStore.SymbolToken",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace",
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.Private.CoreLib:System.IEquatable\u00601::Equals(T):System.Boolean",
+          "clrName": "Equals",
+          "tsEmitName": "Equals$view",
+          "metadataToken": 100668531,
+          "canonicalSignature": "(T):System.Boolean",
+          "normalizedSignature": "Equals|(T):System.Boolean|static=false",
+          "emitScope": "ViewOnly",
+          "arity": 0,
+          "parameterCount": 1,
+          "declaringClrType": "System.IEquatable\u00601",
+          "declaringAssemblyName": "System.Private.CoreLib",
+          "isExtensionMethod": false
+        }
+      ],
+      "properties": [],
+      "fields": [],
+      "events": [],
+      "constructors": [
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.SymbolToken::.ctor(System.Int32):void",
+          "metadataToken": 100663376,
+          "canonicalSignature": "(System.Int32):void",
+          "normalizedSignature": "constructor|(System.Int32):void|static=false",
+          "isStatic": false,
+          "parameterCount": 1,
+          "declaringClrType": "System.Diagnostics.SymbolStore.SymbolToken",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace"
+        }
+      ],
+      "exposedMethods": [
+        {
+          "tsName": "GetToken",
+          "isStatic": false,
+          "tsSignatureId": "GetToken|():System.Int32|static=false",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.SymbolToken",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 100663377
+          }
+        },
+        {
+          "tsName": "GetHashCode",
+          "isStatic": false,
+          "tsSignatureId": "GetHashCode|():System.Int32|static=false",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.SymbolToken",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 100663378
+          }
+        },
+        {
+          "tsName": "Equals",
+          "isStatic": false,
+          "tsSignatureId": "Equals|(System.Object):System.Boolean|static=false",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.SymbolToken",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 100663379
+          }
+        },
+        {
+          "tsName": "Equals",
+          "isStatic": false,
+          "tsSignatureId": "Equals|(System.Diagnostics.SymbolStore.SymbolToken):System.Boolean|static=false",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.SymbolToken",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 100663380
+          }
+        },
+        {
+          "tsName": "Equals$view",
+          "isStatic": false,
+          "tsSignatureId": "Equals|(T):System.Boolean|static=false",
+          "target": {
+            "declaringClrType": "System.IEquatable\u00601",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100668531
+          }
+        },
+        {
+          "tsName": "ToString",
+          "isStatic": false,
+          "tsSignatureId": "ToString|():System.String|static=false",
+          "target": {
+            "declaringClrType": "System.ValueType",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100665963
+          }
+        },
+        {
+          "tsName": "GetType",
+          "isStatic": false,
+          "tsSignatureId": "GetType|():System.Type|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664825
+          }
+        },
+        {
+          "tsName": "Equals",
+          "isStatic": true,
+          "tsSignatureId": "Equals|(System.Object,System.Object):System.Boolean|static=true",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664831
+          }
+        },
+        {
+          "tsName": "ReferenceEquals",
+          "isStatic": true,
+          "tsSignatureId": "ReferenceEquals|(System.Object,System.Object):System.Boolean|static=true",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664832
+          }
+        }
+      ],
+      "exposedConstructors": [
+        {
+          "isStatic": false,
+          "tsSignatureId": "constructor|(System.Int32):void|static=false",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.SymbolToken",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 100663376
+          }
+        }
+      ]
+    },
+    {
+      "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.SymDocumentType",
+      "clrName": "System.Diagnostics.SymbolStore.SymDocumentType",
+      "tsEmitName": "SymDocumentType",
+      "assemblyName": "System.Diagnostics.StackTrace",
+      "metadataToken": 0,
+      "methods": [],
+      "properties": [],
+      "fields": [
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.SymDocumentType::TextSystem.Guid",
+          "clrName": "Text",
+          "tsEmitName": "Text",
+          "metadataToken": 67108879,
+          "normalizedSignature": "Text|System.Guid|static=true|const=false",
+          "isStatic": true,
+          "isReadOnly": true,
+          "declaringClrType": "System.Diagnostics.SymbolStore.SymDocumentType",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace"
+        }
+      ],
+      "events": [],
+      "constructors": [
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.SymDocumentType::.ctor():void",
+          "metadataToken": 100663383,
+          "canonicalSignature": "():void",
+          "normalizedSignature": "constructor|():void|static=false",
+          "isStatic": false,
+          "parameterCount": 0,
+          "declaringClrType": "System.Diagnostics.SymbolStore.SymDocumentType",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace"
+        }
+      ],
+      "exposedMethods": [
+        {
+          "tsName": "GetType",
+          "isStatic": false,
+          "tsSignatureId": "GetType|():System.Type|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664825
+          }
+        },
+        {
+          "tsName": "ToString",
+          "isStatic": false,
+          "tsSignatureId": "ToString|():System.String|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664829
+          }
+        },
+        {
+          "tsName": "Equals",
+          "isStatic": false,
+          "tsSignatureId": "Equals|(System.Object):System.Boolean|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664830
+          }
+        },
+        {
+          "tsName": "Equals",
+          "isStatic": true,
+          "tsSignatureId": "Equals|(System.Object,System.Object):System.Boolean|static=true",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664831
+          }
+        },
+        {
+          "tsName": "ReferenceEquals",
+          "isStatic": true,
+          "tsSignatureId": "ReferenceEquals|(System.Object,System.Object):System.Boolean|static=true",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664832
+          }
+        },
+        {
+          "tsName": "GetHashCode",
+          "isStatic": false,
+          "tsSignatureId": "GetHashCode|():System.Int32|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664833
+          }
+        }
+      ],
+      "exposedFields": [
+        {
+          "tsName": "Text",
+          "isStatic": true,
+          "tsSignatureId": "Text|System.Guid|static=true|const=false",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.SymDocumentType",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 67108879
+          }
+        }
+      ],
+      "exposedConstructors": [
+        {
+          "isStatic": false,
+          "tsSignatureId": "constructor|():void|static=false",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.SymDocumentType",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 100663383
+          }
+        }
+      ]
+    },
+    {
+      "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.SymLanguageType",
+      "clrName": "System.Diagnostics.SymbolStore.SymLanguageType",
+      "tsEmitName": "SymLanguageType",
+      "assemblyName": "System.Diagnostics.StackTrace",
+      "metadataToken": 0,
+      "methods": [],
+      "properties": [],
+      "fields": [
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.SymLanguageType::CSystem.Guid",
+          "clrName": "C",
+          "tsEmitName": "C",
+          "metadataToken": 67108880,
+          "normalizedSignature": "C|System.Guid|static=true|const=false",
+          "isStatic": true,
+          "isReadOnly": true,
+          "declaringClrType": "System.Diagnostics.SymbolStore.SymLanguageType",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace"
+        },
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.SymLanguageType::CPlusPlusSystem.Guid",
+          "clrName": "CPlusPlus",
+          "tsEmitName": "CPlusPlus",
+          "metadataToken": 67108881,
+          "normalizedSignature": "CPlusPlus|System.Guid|static=true|const=false",
+          "isStatic": true,
+          "isReadOnly": true,
+          "declaringClrType": "System.Diagnostics.SymbolStore.SymLanguageType",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace"
+        },
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.SymLanguageType::CSharpSystem.Guid",
+          "clrName": "CSharp",
+          "tsEmitName": "CSharp",
+          "metadataToken": 67108882,
+          "normalizedSignature": "CSharp|System.Guid|static=true|const=false",
+          "isStatic": true,
+          "isReadOnly": true,
+          "declaringClrType": "System.Diagnostics.SymbolStore.SymLanguageType",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace"
+        },
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.SymLanguageType::BasicSystem.Guid",
+          "clrName": "Basic",
+          "tsEmitName": "Basic",
+          "metadataToken": 67108883,
+          "normalizedSignature": "Basic|System.Guid|static=true|const=false",
+          "isStatic": true,
+          "isReadOnly": true,
+          "declaringClrType": "System.Diagnostics.SymbolStore.SymLanguageType",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace"
+        },
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.SymLanguageType::JavaSystem.Guid",
+          "clrName": "Java",
+          "tsEmitName": "Java",
+          "metadataToken": 67108884,
+          "normalizedSignature": "Java|System.Guid|static=true|const=false",
+          "isStatic": true,
+          "isReadOnly": true,
+          "declaringClrType": "System.Diagnostics.SymbolStore.SymLanguageType",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace"
+        },
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.SymLanguageType::CobolSystem.Guid",
+          "clrName": "Cobol",
+          "tsEmitName": "Cobol",
+          "metadataToken": 67108885,
+          "normalizedSignature": "Cobol|System.Guid|static=true|const=false",
+          "isStatic": true,
+          "isReadOnly": true,
+          "declaringClrType": "System.Diagnostics.SymbolStore.SymLanguageType",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace"
+        },
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.SymLanguageType::PascalSystem.Guid",
+          "clrName": "Pascal",
+          "tsEmitName": "Pascal",
+          "metadataToken": 67108886,
+          "normalizedSignature": "Pascal|System.Guid|static=true|const=false",
+          "isStatic": true,
+          "isReadOnly": true,
+          "declaringClrType": "System.Diagnostics.SymbolStore.SymLanguageType",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace"
+        },
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.SymLanguageType::ILAssemblySystem.Guid",
+          "clrName": "ILAssembly",
+          "tsEmitName": "ILAssembly",
+          "metadataToken": 67108887,
+          "normalizedSignature": "ILAssembly|System.Guid|static=true|const=false",
+          "isStatic": true,
+          "isReadOnly": true,
+          "declaringClrType": "System.Diagnostics.SymbolStore.SymLanguageType",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace"
+        },
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.SymLanguageType::JScriptSystem.Guid",
+          "clrName": "JScript",
+          "tsEmitName": "JScript",
+          "metadataToken": 67108888,
+          "normalizedSignature": "JScript|System.Guid|static=true|const=false",
+          "isStatic": true,
+          "isReadOnly": true,
+          "declaringClrType": "System.Diagnostics.SymbolStore.SymLanguageType",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace"
+        },
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.SymLanguageType::SMCSystem.Guid",
+          "clrName": "SMC",
+          "tsEmitName": "SMC",
+          "metadataToken": 67108889,
+          "normalizedSignature": "SMC|System.Guid|static=true|const=false",
+          "isStatic": true,
+          "isReadOnly": true,
+          "declaringClrType": "System.Diagnostics.SymbolStore.SymLanguageType",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace"
+        },
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.SymLanguageType::MCPlusPlusSystem.Guid",
+          "clrName": "MCPlusPlus",
+          "tsEmitName": "MCPlusPlus",
+          "metadataToken": 67108890,
+          "normalizedSignature": "MCPlusPlus|System.Guid|static=true|const=false",
+          "isStatic": true,
+          "isReadOnly": true,
+          "declaringClrType": "System.Diagnostics.SymbolStore.SymLanguageType",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace"
+        }
+      ],
+      "events": [],
+      "constructors": [
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.SymLanguageType::.ctor():void",
+          "metadataToken": 100663385,
+          "canonicalSignature": "():void",
+          "normalizedSignature": "constructor|():void|static=false",
+          "isStatic": false,
+          "parameterCount": 0,
+          "declaringClrType": "System.Diagnostics.SymbolStore.SymLanguageType",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace"
+        }
+      ],
+      "exposedMethods": [
+        {
+          "tsName": "GetType",
+          "isStatic": false,
+          "tsSignatureId": "GetType|():System.Type|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664825
+          }
+        },
+        {
+          "tsName": "ToString",
+          "isStatic": false,
+          "tsSignatureId": "ToString|():System.String|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664829
+          }
+        },
+        {
+          "tsName": "Equals",
+          "isStatic": false,
+          "tsSignatureId": "Equals|(System.Object):System.Boolean|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664830
+          }
+        },
+        {
+          "tsName": "Equals",
+          "isStatic": true,
+          "tsSignatureId": "Equals|(System.Object,System.Object):System.Boolean|static=true",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664831
+          }
+        },
+        {
+          "tsName": "ReferenceEquals",
+          "isStatic": true,
+          "tsSignatureId": "ReferenceEquals|(System.Object,System.Object):System.Boolean|static=true",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664832
+          }
+        },
+        {
+          "tsName": "GetHashCode",
+          "isStatic": false,
+          "tsSignatureId": "GetHashCode|():System.Int32|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664833
+          }
+        }
+      ],
+      "exposedFields": [
+        {
+          "tsName": "C",
+          "isStatic": true,
+          "tsSignatureId": "C|System.Guid|static=true|const=false",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.SymLanguageType",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 67108880
+          }
+        },
+        {
+          "tsName": "CPlusPlus",
+          "isStatic": true,
+          "tsSignatureId": "CPlusPlus|System.Guid|static=true|const=false",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.SymLanguageType",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 67108881
+          }
+        },
+        {
+          "tsName": "CSharp",
+          "isStatic": true,
+          "tsSignatureId": "CSharp|System.Guid|static=true|const=false",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.SymLanguageType",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 67108882
+          }
+        },
+        {
+          "tsName": "Basic",
+          "isStatic": true,
+          "tsSignatureId": "Basic|System.Guid|static=true|const=false",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.SymLanguageType",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 67108883
+          }
+        },
+        {
+          "tsName": "Java",
+          "isStatic": true,
+          "tsSignatureId": "Java|System.Guid|static=true|const=false",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.SymLanguageType",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 67108884
+          }
+        },
+        {
+          "tsName": "Cobol",
+          "isStatic": true,
+          "tsSignatureId": "Cobol|System.Guid|static=true|const=false",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.SymLanguageType",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 67108885
+          }
+        },
+        {
+          "tsName": "Pascal",
+          "isStatic": true,
+          "tsSignatureId": "Pascal|System.Guid|static=true|const=false",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.SymLanguageType",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 67108886
+          }
+        },
+        {
+          "tsName": "ILAssembly",
+          "isStatic": true,
+          "tsSignatureId": "ILAssembly|System.Guid|static=true|const=false",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.SymLanguageType",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 67108887
+          }
+        },
+        {
+          "tsName": "JScript",
+          "isStatic": true,
+          "tsSignatureId": "JScript|System.Guid|static=true|const=false",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.SymLanguageType",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 67108888
+          }
+        },
+        {
+          "tsName": "SMC",
+          "isStatic": true,
+          "tsSignatureId": "SMC|System.Guid|static=true|const=false",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.SymLanguageType",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 67108889
+          }
+        },
+        {
+          "tsName": "MCPlusPlus",
+          "isStatic": true,
+          "tsSignatureId": "MCPlusPlus|System.Guid|static=true|const=false",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.SymLanguageType",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 67108890
+          }
+        }
+      ],
+      "exposedConstructors": [
+        {
+          "isStatic": false,
+          "tsSignatureId": "constructor|():void|static=false",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.SymLanguageType",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 100663385
+          }
+        }
+      ]
+    },
+    {
+      "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.SymLanguageVendor",
+      "clrName": "System.Diagnostics.SymbolStore.SymLanguageVendor",
+      "tsEmitName": "SymLanguageVendor",
+      "assemblyName": "System.Diagnostics.StackTrace",
+      "metadataToken": 0,
+      "methods": [],
+      "properties": [],
+      "fields": [
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.SymLanguageVendor::MicrosoftSystem.Guid",
+          "clrName": "Microsoft",
+          "tsEmitName": "Microsoft",
+          "metadataToken": 67108891,
+          "normalizedSignature": "Microsoft|System.Guid|static=true|const=false",
+          "isStatic": true,
+          "isReadOnly": true,
+          "declaringClrType": "System.Diagnostics.SymbolStore.SymLanguageVendor",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace"
+        }
+      ],
+      "events": [],
+      "constructors": [
+        {
+          "stableId": "System.Diagnostics.StackTrace:System.Diagnostics.SymbolStore.SymLanguageVendor::.ctor():void",
+          "metadataToken": 100663387,
+          "canonicalSignature": "():void",
+          "normalizedSignature": "constructor|():void|static=false",
+          "isStatic": false,
+          "parameterCount": 0,
+          "declaringClrType": "System.Diagnostics.SymbolStore.SymLanguageVendor",
+          "declaringAssemblyName": "System.Diagnostics.StackTrace"
+        }
+      ],
+      "exposedMethods": [
+        {
+          "tsName": "GetType",
+          "isStatic": false,
+          "tsSignatureId": "GetType|():System.Type|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664825
+          }
+        },
+        {
+          "tsName": "ToString",
+          "isStatic": false,
+          "tsSignatureId": "ToString|():System.String|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664829
+          }
+        },
+        {
+          "tsName": "Equals",
+          "isStatic": false,
+          "tsSignatureId": "Equals|(System.Object):System.Boolean|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664830
+          }
+        },
+        {
+          "tsName": "Equals",
+          "isStatic": true,
+          "tsSignatureId": "Equals|(System.Object,System.Object):System.Boolean|static=true",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664831
+          }
+        },
+        {
+          "tsName": "ReferenceEquals",
+          "isStatic": true,
+          "tsSignatureId": "ReferenceEquals|(System.Object,System.Object):System.Boolean|static=true",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664832
+          }
+        },
+        {
+          "tsName": "GetHashCode",
+          "isStatic": false,
+          "tsSignatureId": "GetHashCode|():System.Int32|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664833
+          }
+        }
+      ],
+      "exposedFields": [
+        {
+          "tsName": "Microsoft",
+          "isStatic": true,
+          "tsSignatureId": "Microsoft|System.Guid|static=true|const=false",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.SymLanguageVendor",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 67108891
+          }
+        }
+      ],
+      "exposedConstructors": [
+        {
+          "isStatic": false,
+          "tsSignatureId": "constructor|():void|static=false",
+          "target": {
+            "declaringClrType": "System.Diagnostics.SymbolStore.SymLanguageVendor",
+            "declaringAssemblyName": "System.Diagnostics.StackTrace",
+            "metadataToken": 100663387
+          }
+        }
+      ]
+    }
+  ]
+}

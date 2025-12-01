@@ -1,0 +1,122 @@
+{
+  "namespace": "Internal",
+  "contributingAssemblies": [
+    "System.Private.CoreLib"
+  ],
+  "types": [
+    {
+      "stableId": "System.Private.CoreLib:Internal.Console",
+      "clrName": "Internal.Console",
+      "tsEmitName": "Console",
+      "kind": "StaticNamespace",
+      "accessibility": "Public",
+      "isAbstract": true,
+      "isSealed": true,
+      "isStatic": true,
+      "arity": 0,
+      "methods": [
+        {
+          "stableId": "System.Private.CoreLib:Internal.Console::WriteLine(System.String):System.Void",
+          "clrName": "WriteLine",
+          "tsEmitName": "WriteLine",
+          "normalizedSignature": "WriteLine|(System.String):System.Void|static=true",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": true,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isSealed": false,
+          "arity": 0,
+          "parameterCount": 1,
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.Private.CoreLib:Internal.Console::WriteLine():System.Void",
+          "clrName": "WriteLine",
+          "tsEmitName": "WriteLine",
+          "normalizedSignature": "WriteLine|():System.Void|static=true",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": true,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isSealed": false,
+          "arity": 0,
+          "parameterCount": 0,
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.Private.CoreLib:Internal.Console::Write(System.String):System.Void",
+          "clrName": "Write",
+          "tsEmitName": "Write",
+          "normalizedSignature": "Write|(System.String):System.Void|static=true",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": true,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isSealed": false,
+          "arity": 0,
+          "parameterCount": 1,
+          "isExtensionMethod": false
+        }
+      ],
+      "properties": [],
+      "fields": [],
+      "events": [],
+      "constructors": []
+    },
+    {
+      "stableId": "System.Private.CoreLib:Internal.Console\u002BError",
+      "clrName": "Internal.Console\u002BError",
+      "tsEmitName": "Console_Error",
+      "kind": "StaticNamespace",
+      "accessibility": "Public",
+      "isAbstract": true,
+      "isSealed": true,
+      "isStatic": true,
+      "arity": 0,
+      "methods": [
+        {
+          "stableId": "System.Private.CoreLib:Internal.Console\u002BError::WriteLine():System.Void",
+          "clrName": "WriteLine",
+          "tsEmitName": "WriteLine",
+          "normalizedSignature": "WriteLine|():System.Void|static=true",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": true,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isSealed": false,
+          "arity": 0,
+          "parameterCount": 0,
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.Private.CoreLib:Internal.Console\u002BError::Write(System.String):System.Void",
+          "clrName": "Write",
+          "tsEmitName": "Write",
+          "normalizedSignature": "Write|(System.String):System.Void|static=true",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": true,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isSealed": false,
+          "arity": 0,
+          "parameterCount": 1,
+          "isExtensionMethod": false
+        }
+      ],
+      "properties": [],
+      "fields": [],
+      "events": [],
+      "constructors": []
+    }
+  ]
+}

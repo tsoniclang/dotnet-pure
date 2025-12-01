@@ -1,0 +1,103 @@
+{
+  "namespace": "System.Net.Http.Metrics",
+  "contributingAssemblies": [
+    "System.Net.Http"
+  ],
+  "types": [
+    {
+      "stableId": "System.Net.Http:System.Net.Http.Metrics.HttpMetricsEnrichmentContext",
+      "clrName": "System.Net.Http.Metrics.HttpMetricsEnrichmentContext",
+      "tsEmitName": "HttpMetricsEnrichmentContext",
+      "kind": "Class",
+      "accessibility": "Public",
+      "isAbstract": false,
+      "isSealed": true,
+      "isStatic": false,
+      "arity": 0,
+      "methods": [
+        {
+          "stableId": "System.Net.Http:System.Net.Http.Metrics.HttpMetricsEnrichmentContext::AddCustomTag(System.String,System.Object):System.Void",
+          "clrName": "AddCustomTag",
+          "tsEmitName": "AddCustomTag",
+          "normalizedSignature": "AddCustomTag|(System.String,System.Object):System.Void|static=false",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isSealed": false,
+          "arity": 0,
+          "parameterCount": 2,
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.Net.Http:System.Net.Http.Metrics.HttpMetricsEnrichmentContext::AddCallback(System.Net.Http.HttpRequestMessage,System.Action_1[[System.Net.Http.Metrics.HttpMetricsEnrichmentContext,System.Net.Http,Version=10.0.0.0,Culture=neutral,PublicKeyToken=b03f5f7f11d50a3a]]):System.Void",
+          "clrName": "AddCallback",
+          "tsEmitName": "AddCallback",
+          "normalizedSignature": "AddCallback|(System.Net.Http.HttpRequestMessage,System.Action_1[[System.Net.Http.Metrics.HttpMetricsEnrichmentContext,System.Net.Http,Version=10.0.0.0,Culture=neutral,PublicKeyToken=b03f5f7f11d50a3a]]):System.Void|static=true",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": true,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isSealed": false,
+          "arity": 0,
+          "parameterCount": 2,
+          "isExtensionMethod": false
+        }
+      ],
+      "properties": [
+        {
+          "stableId": "System.Net.Http:System.Net.Http.Metrics.HttpMetricsEnrichmentContext::Request:System.Net.Http.HttpRequestMessage",
+          "clrName": "Request",
+          "tsEmitName": "Request",
+          "normalizedSignature": "Request|:System.Net.Http.HttpRequestMessage|static=false|accessor=get",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false
+        },
+        {
+          "stableId": "System.Net.Http:System.Net.Http.Metrics.HttpMetricsEnrichmentContext::Response:System.Net.Http.HttpResponseMessage",
+          "clrName": "Response",
+          "tsEmitName": "Response",
+          "normalizedSignature": "Response|:System.Net.Http.HttpResponseMessage|static=false|accessor=get",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false
+        },
+        {
+          "stableId": "System.Net.Http:System.Net.Http.Metrics.HttpMetricsEnrichmentContext::Exception:System.Exception",
+          "clrName": "Exception",
+          "tsEmitName": "Exception",
+          "normalizedSignature": "Exception|:System.Exception|static=false|accessor=get",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false
+        }
+      ],
+      "fields": [],
+      "events": [],
+      "constructors": []
+    }
+  ]
+}

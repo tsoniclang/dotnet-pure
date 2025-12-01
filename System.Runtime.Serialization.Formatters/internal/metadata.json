@@ -1,0 +1,196 @@
+{
+  "namespace": "System.Runtime.Serialization.Formatters",
+  "contributingAssemblies": [
+    "System.Runtime.Serialization.Formatters"
+  ],
+  "types": [
+    {
+      "stableId": "System.Runtime.Serialization.Formatters:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle",
+      "clrName": "System.Runtime.Serialization.Formatters.FormatterAssemblyStyle",
+      "tsEmitName": "FormatterAssemblyStyle",
+      "kind": "Enum",
+      "accessibility": "Public",
+      "isAbstract": false,
+      "isSealed": true,
+      "isStatic": false,
+      "arity": 0,
+      "methods": [],
+      "properties": [],
+      "fields": [
+        {
+          "stableId": "System.Runtime.Serialization.Formatters:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle::value__System.Int32",
+          "clrName": "value__",
+          "tsEmitName": "value__",
+          "normalizedSignature": "value__|System.Int32|static=false|const=false",
+          "isStatic": false,
+          "isReadOnly": false,
+          "isLiteral": false
+        },
+        {
+          "stableId": "System.Runtime.Serialization.Formatters:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle::SimpleSystem.Runtime.Serialization.Formatters.FormatterAssemblyStyle",
+          "clrName": "Simple",
+          "tsEmitName": "Simple",
+          "normalizedSignature": "Simple|System.Runtime.Serialization.Formatters.FormatterAssemblyStyle|static=true|const=true",
+          "isStatic": true,
+          "isReadOnly": false,
+          "isLiteral": true
+        },
+        {
+          "stableId": "System.Runtime.Serialization.Formatters:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle::FullSystem.Runtime.Serialization.Formatters.FormatterAssemblyStyle",
+          "clrName": "Full",
+          "tsEmitName": "Full",
+          "normalizedSignature": "Full|System.Runtime.Serialization.Formatters.FormatterAssemblyStyle|static=true|const=true",
+          "isStatic": true,
+          "isReadOnly": false,
+          "isLiteral": true
+        }
+      ],
+      "events": [],
+      "constructors": []
+    },
+    {
+      "stableId": "System.Runtime.Serialization.Formatters:System.Runtime.Serialization.Formatters.FormatterTypeStyle",
+      "clrName": "System.Runtime.Serialization.Formatters.FormatterTypeStyle",
+      "tsEmitName": "FormatterTypeStyle",
+      "kind": "Enum",
+      "accessibility": "Public",
+      "isAbstract": false,
+      "isSealed": true,
+      "isStatic": false,
+      "arity": 0,
+      "methods": [],
+      "properties": [],
+      "fields": [
+        {
+          "stableId": "System.Runtime.Serialization.Formatters:System.Runtime.Serialization.Formatters.FormatterTypeStyle::value__System.Int32",
+          "clrName": "value__",
+          "tsEmitName": "value__",
+          "normalizedSignature": "value__|System.Int32|static=false|const=false",
+          "isStatic": false,
+          "isReadOnly": false,
+          "isLiteral": false
+        },
+        {
+          "stableId": "System.Runtime.Serialization.Formatters:System.Runtime.Serialization.Formatters.FormatterTypeStyle::TypesWhenNeededSystem.Runtime.Serialization.Formatters.FormatterTypeStyle",
+          "clrName": "TypesWhenNeeded",
+          "tsEmitName": "TypesWhenNeeded",
+          "normalizedSignature": "TypesWhenNeeded|System.Runtime.Serialization.Formatters.FormatterTypeStyle|static=true|const=true",
+          "isStatic": true,
+          "isReadOnly": false,
+          "isLiteral": true
+        },
+        {
+          "stableId": "System.Runtime.Serialization.Formatters:System.Runtime.Serialization.Formatters.FormatterTypeStyle::TypesAlwaysSystem.Runtime.Serialization.Formatters.FormatterTypeStyle",
+          "clrName": "TypesAlways",
+          "tsEmitName": "TypesAlways",
+          "normalizedSignature": "TypesAlways|System.Runtime.Serialization.Formatters.FormatterTypeStyle|static=true|const=true",
+          "isStatic": true,
+          "isReadOnly": false,
+          "isLiteral": true
+        },
+        {
+          "stableId": "System.Runtime.Serialization.Formatters:System.Runtime.Serialization.Formatters.FormatterTypeStyle::XsdStringSystem.Runtime.Serialization.Formatters.FormatterTypeStyle",
+          "clrName": "XsdString",
+          "tsEmitName": "XsdString",
+          "normalizedSignature": "XsdString|System.Runtime.Serialization.Formatters.FormatterTypeStyle|static=true|const=true",
+          "isStatic": true,
+          "isReadOnly": false,
+          "isLiteral": true
+        }
+      ],
+      "events": [],
+      "constructors": []
+    },
+    {
+      "stableId": "System.Runtime.Serialization.Formatters:System.Runtime.Serialization.Formatters.TypeFilterLevel",
+      "clrName": "System.Runtime.Serialization.Formatters.TypeFilterLevel",
+      "tsEmitName": "TypeFilterLevel",
+      "kind": "Enum",
+      "accessibility": "Public",
+      "isAbstract": false,
+      "isSealed": true,
+      "isStatic": false,
+      "arity": 0,
+      "methods": [],
+      "properties": [],
+      "fields": [
+        {
+          "stableId": "System.Runtime.Serialization.Formatters:System.Runtime.Serialization.Formatters.TypeFilterLevel::value__System.Int32",
+          "clrName": "value__",
+          "tsEmitName": "value__",
+          "normalizedSignature": "value__|System.Int32|static=false|const=false",
+          "isStatic": false,
+          "isReadOnly": false,
+          "isLiteral": false
+        },
+        {
+          "stableId": "System.Runtime.Serialization.Formatters:System.Runtime.Serialization.Formatters.TypeFilterLevel::LowSystem.Runtime.Serialization.Formatters.TypeFilterLevel",
+          "clrName": "Low",
+          "tsEmitName": "Low",
+          "normalizedSignature": "Low|System.Runtime.Serialization.Formatters.TypeFilterLevel|static=true|const=true",
+          "isStatic": true,
+          "isReadOnly": false,
+          "isLiteral": true
+        },
+        {
+          "stableId": "System.Runtime.Serialization.Formatters:System.Runtime.Serialization.Formatters.TypeFilterLevel::FullSystem.Runtime.Serialization.Formatters.TypeFilterLevel",
+          "clrName": "Full",
+          "tsEmitName": "Full",
+          "normalizedSignature": "Full|System.Runtime.Serialization.Formatters.TypeFilterLevel|static=true|const=true",
+          "isStatic": true,
+          "isReadOnly": false,
+          "isLiteral": true
+        }
+      ],
+      "events": [],
+      "constructors": []
+    },
+    {
+      "stableId": "System.Runtime.Serialization.Formatters:System.Runtime.Serialization.Formatters.IFieldInfo",
+      "clrName": "System.Runtime.Serialization.Formatters.IFieldInfo",
+      "tsEmitName": "IFieldInfo",
+      "kind": "Interface",
+      "accessibility": "Public",
+      "isAbstract": true,
+      "isSealed": false,
+      "isStatic": false,
+      "arity": 0,
+      "methods": [],
+      "properties": [
+        {
+          "stableId": "System.Runtime.Serialization.Formatters:System.Runtime.Serialization.Formatters.IFieldInfo::FieldNames:System.String[]",
+          "clrName": "FieldNames",
+          "tsEmitName": "FieldNames",
+          "normalizedSignature": "FieldNames|:System.String[]|static=false|accessor=getset",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": true,
+          "isVirtual": true,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": true
+        },
+        {
+          "stableId": "System.Runtime.Serialization.Formatters:System.Runtime.Serialization.Formatters.IFieldInfo::FieldTypes:System.Type[]",
+          "clrName": "FieldTypes",
+          "tsEmitName": "FieldTypes",
+          "normalizedSignature": "FieldTypes|:System.Type[]|static=false|accessor=getset",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": true,
+          "isVirtual": true,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": true
+        }
+      ],
+      "fields": [],
+      "events": [],
+      "constructors": []
+    }
+  ]
+}

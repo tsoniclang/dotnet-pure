@@ -1,0 +1,436 @@
+{
+  "namespace": "System.Runtime.Serialization.Formatters.Binary",
+  "types": [
+    {
+      "stableId": "System.Runtime.Serialization.Formatters:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter",
+      "clrName": "System.Runtime.Serialization.Formatters.Binary.BinaryFormatter",
+      "tsEmitName": "BinaryFormatter",
+      "assemblyName": "System.Runtime.Serialization.Formatters",
+      "metadataToken": 0,
+      "methods": [
+        {
+          "stableId": "System.Runtime.Serialization.Formatters:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter::Deserialize(System.IO.Stream):System.Object",
+          "clrName": "Deserialize",
+          "tsEmitName": "Deserialize",
+          "metadataToken": 100663606,
+          "canonicalSignature": "(System.IO.Stream):System.Object",
+          "normalizedSignature": "Deserialize|(System.IO.Stream):System.Object|static=false",
+          "emitScope": "ClassSurface",
+          "arity": 0,
+          "parameterCount": 1,
+          "declaringClrType": "System.Runtime.Serialization.Formatters.Binary.BinaryFormatter",
+          "declaringAssemblyName": "System.Runtime.Serialization.Formatters",
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.Runtime.Serialization.Formatters:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter::Serialize(System.IO.Stream,System.Object):System.Void",
+          "clrName": "Serialize",
+          "tsEmitName": "Serialize",
+          "metadataToken": 100663607,
+          "canonicalSignature": "(System.IO.Stream,System.Object):System.Void",
+          "normalizedSignature": "Serialize|(System.IO.Stream,System.Object):System.Void|static=false",
+          "emitScope": "ClassSurface",
+          "arity": 0,
+          "parameterCount": 2,
+          "declaringClrType": "System.Runtime.Serialization.Formatters.Binary.BinaryFormatter",
+          "declaringAssemblyName": "System.Runtime.Serialization.Formatters",
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.Runtime.Serialization.Formatters:System.Runtime.Serialization.IFormatter::Deserialize(System.IO.Stream):System.Object",
+          "clrName": "Deserialize",
+          "tsEmitName": "Deserialize$view",
+          "metadataToken": 100663416,
+          "canonicalSignature": "(System.IO.Stream):System.Object",
+          "normalizedSignature": "Deserialize|(System.IO.Stream):System.Object|static=false",
+          "emitScope": "ViewOnly",
+          "arity": 0,
+          "parameterCount": 1,
+          "declaringClrType": "System.Runtime.Serialization.IFormatter",
+          "declaringAssemblyName": "System.Runtime.Serialization.Formatters",
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.Runtime.Serialization.Formatters:System.Runtime.Serialization.IFormatter::Serialize(System.IO.Stream,System.Object):System.Void",
+          "clrName": "Serialize",
+          "tsEmitName": "Serialize$view",
+          "metadataToken": 100663417,
+          "canonicalSignature": "(System.IO.Stream,System.Object):System.Void",
+          "normalizedSignature": "Serialize|(System.IO.Stream,System.Object):System.Void|static=false",
+          "emitScope": "ViewOnly",
+          "arity": 0,
+          "parameterCount": 2,
+          "declaringClrType": "System.Runtime.Serialization.IFormatter",
+          "declaringAssemblyName": "System.Runtime.Serialization.Formatters",
+          "isExtensionMethod": false
+        }
+      ],
+      "properties": [
+        {
+          "stableId": "System.Runtime.Serialization.Formatters:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter::TypeFormat:System.Runtime.Serialization.Formatters.FormatterTypeStyle",
+          "clrName": "TypeFormat",
+          "tsEmitName": "TypeFormat",
+          "metadataToken": 385876055,
+          "canonicalSignature": ":System.Runtime.Serialization.Formatters.FormatterTypeStyle",
+          "normalizedSignature": "TypeFormat|:System.Runtime.Serialization.Formatters.FormatterTypeStyle|static=false|accessor=getset",
+          "emitScope": "ClassSurface",
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": true,
+          "declaringClrType": "System.Runtime.Serialization.Formatters.Binary.BinaryFormatter",
+          "declaringAssemblyName": "System.Runtime.Serialization.Formatters"
+        },
+        {
+          "stableId": "System.Runtime.Serialization.Formatters:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter::AssemblyFormat:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle",
+          "clrName": "AssemblyFormat",
+          "tsEmitName": "AssemblyFormat",
+          "metadataToken": 385876056,
+          "canonicalSignature": ":System.Runtime.Serialization.Formatters.FormatterAssemblyStyle",
+          "normalizedSignature": "AssemblyFormat|:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle|static=false|accessor=getset",
+          "emitScope": "ClassSurface",
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": true,
+          "declaringClrType": "System.Runtime.Serialization.Formatters.Binary.BinaryFormatter",
+          "declaringAssemblyName": "System.Runtime.Serialization.Formatters"
+        },
+        {
+          "stableId": "System.Runtime.Serialization.Formatters:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter::FilterLevel:System.Runtime.Serialization.Formatters.TypeFilterLevel",
+          "clrName": "FilterLevel",
+          "tsEmitName": "FilterLevel",
+          "metadataToken": 385876057,
+          "canonicalSignature": ":System.Runtime.Serialization.Formatters.TypeFilterLevel",
+          "normalizedSignature": "FilterLevel|:System.Runtime.Serialization.Formatters.TypeFilterLevel|static=false|accessor=getset",
+          "emitScope": "ClassSurface",
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": true,
+          "declaringClrType": "System.Runtime.Serialization.Formatters.Binary.BinaryFormatter",
+          "declaringAssemblyName": "System.Runtime.Serialization.Formatters"
+        },
+        {
+          "stableId": "System.Runtime.Serialization.Formatters:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter::SurrogateSelector:System.Runtime.Serialization.ISurrogateSelector",
+          "clrName": "SurrogateSelector",
+          "tsEmitName": "SurrogateSelector",
+          "metadataToken": 385876058,
+          "canonicalSignature": ":System.Runtime.Serialization.ISurrogateSelector",
+          "normalizedSignature": "SurrogateSelector|:System.Runtime.Serialization.ISurrogateSelector|static=false|accessor=getset",
+          "emitScope": "ClassSurface",
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": true,
+          "declaringClrType": "System.Runtime.Serialization.Formatters.Binary.BinaryFormatter",
+          "declaringAssemblyName": "System.Runtime.Serialization.Formatters"
+        },
+        {
+          "stableId": "System.Runtime.Serialization.Formatters:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter::Binder:System.Runtime.Serialization.SerializationBinder",
+          "clrName": "Binder",
+          "tsEmitName": "Binder",
+          "metadataToken": 385876059,
+          "canonicalSignature": ":System.Runtime.Serialization.SerializationBinder",
+          "normalizedSignature": "Binder|:System.Runtime.Serialization.SerializationBinder|static=false|accessor=getset",
+          "emitScope": "ClassSurface",
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": true,
+          "declaringClrType": "System.Runtime.Serialization.Formatters.Binary.BinaryFormatter",
+          "declaringAssemblyName": "System.Runtime.Serialization.Formatters"
+        },
+        {
+          "stableId": "System.Runtime.Serialization.Formatters:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter::Context:System.Runtime.Serialization.StreamingContext",
+          "clrName": "Context",
+          "tsEmitName": "Context",
+          "metadataToken": 385876060,
+          "canonicalSignature": ":System.Runtime.Serialization.StreamingContext",
+          "normalizedSignature": "Context|:System.Runtime.Serialization.StreamingContext|static=false|accessor=getset",
+          "emitScope": "ClassSurface",
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": true,
+          "declaringClrType": "System.Runtime.Serialization.Formatters.Binary.BinaryFormatter",
+          "declaringAssemblyName": "System.Runtime.Serialization.Formatters"
+        },
+        {
+          "stableId": "System.Runtime.Serialization.Formatters:System.Runtime.Serialization.IFormatter::SurrogateSelector:System.Runtime.Serialization.ISurrogateSelector",
+          "clrName": "SurrogateSelector",
+          "tsEmitName": "SurrogateSelector$view",
+          "metadataToken": 385876008,
+          "canonicalSignature": ":System.Runtime.Serialization.ISurrogateSelector",
+          "normalizedSignature": "SurrogateSelector|:System.Runtime.Serialization.ISurrogateSelector|static=false|accessor=getset",
+          "emitScope": "ViewOnly",
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": true,
+          "declaringClrType": "System.Runtime.Serialization.IFormatter",
+          "declaringAssemblyName": "System.Runtime.Serialization.Formatters"
+        },
+        {
+          "stableId": "System.Runtime.Serialization.Formatters:System.Runtime.Serialization.IFormatter::Binder:System.Runtime.Serialization.SerializationBinder",
+          "clrName": "Binder",
+          "tsEmitName": "Binder$view",
+          "metadataToken": 385876009,
+          "canonicalSignature": ":System.Runtime.Serialization.SerializationBinder",
+          "normalizedSignature": "Binder|:System.Runtime.Serialization.SerializationBinder|static=false|accessor=getset",
+          "emitScope": "ViewOnly",
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": true,
+          "declaringClrType": "System.Runtime.Serialization.IFormatter",
+          "declaringAssemblyName": "System.Runtime.Serialization.Formatters"
+        },
+        {
+          "stableId": "System.Runtime.Serialization.Formatters:System.Runtime.Serialization.IFormatter::Context:System.Runtime.Serialization.StreamingContext",
+          "clrName": "Context",
+          "tsEmitName": "Context$view",
+          "metadataToken": 385876010,
+          "canonicalSignature": ":System.Runtime.Serialization.StreamingContext",
+          "normalizedSignature": "Context|:System.Runtime.Serialization.StreamingContext|static=false|accessor=getset",
+          "emitScope": "ViewOnly",
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": true,
+          "declaringClrType": "System.Runtime.Serialization.IFormatter",
+          "declaringAssemblyName": "System.Runtime.Serialization.Formatters"
+        }
+      ],
+      "fields": [],
+      "events": [],
+      "constructors": [
+        {
+          "stableId": "System.Runtime.Serialization.Formatters:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter::.ctor():void",
+          "metadataToken": 100663604,
+          "canonicalSignature": "():void",
+          "normalizedSignature": "constructor|():void|static=false",
+          "isStatic": false,
+          "parameterCount": 0,
+          "declaringClrType": "System.Runtime.Serialization.Formatters.Binary.BinaryFormatter",
+          "declaringAssemblyName": "System.Runtime.Serialization.Formatters"
+        },
+        {
+          "stableId": "System.Runtime.Serialization.Formatters:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter::.ctor(System.Runtime.Serialization.ISurrogateSelector,System.Runtime.Serialization.StreamingContext):void",
+          "metadataToken": 100663605,
+          "canonicalSignature": "(System.Runtime.Serialization.ISurrogateSelector,System.Runtime.Serialization.StreamingContext):void",
+          "normalizedSignature": "constructor|(System.Runtime.Serialization.ISurrogateSelector,System.Runtime.Serialization.StreamingContext):void|static=false",
+          "isStatic": false,
+          "parameterCount": 2,
+          "declaringClrType": "System.Runtime.Serialization.Formatters.Binary.BinaryFormatter",
+          "declaringAssemblyName": "System.Runtime.Serialization.Formatters"
+        }
+      ],
+      "exposedMethods": [
+        {
+          "tsName": "Deserialize",
+          "isStatic": false,
+          "tsSignatureId": "Deserialize|(System.IO.Stream):System.Object|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.Serialization.Formatters.Binary.BinaryFormatter",
+            "declaringAssemblyName": "System.Runtime.Serialization.Formatters",
+            "metadataToken": 100663606
+          }
+        },
+        {
+          "tsName": "Serialize",
+          "isStatic": false,
+          "tsSignatureId": "Serialize|(System.IO.Stream,System.Object):System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.Serialization.Formatters.Binary.BinaryFormatter",
+            "declaringAssemblyName": "System.Runtime.Serialization.Formatters",
+            "metadataToken": 100663607
+          }
+        },
+        {
+          "tsName": "Deserialize$view",
+          "isStatic": false,
+          "tsSignatureId": "Deserialize|(System.IO.Stream):System.Object|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.Serialization.IFormatter",
+            "declaringAssemblyName": "System.Runtime.Serialization.Formatters",
+            "metadataToken": 100663416
+          }
+        },
+        {
+          "tsName": "Serialize$view",
+          "isStatic": false,
+          "tsSignatureId": "Serialize|(System.IO.Stream,System.Object):System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.Serialization.IFormatter",
+            "declaringAssemblyName": "System.Runtime.Serialization.Formatters",
+            "metadataToken": 100663417
+          }
+        },
+        {
+          "tsName": "GetType",
+          "isStatic": false,
+          "tsSignatureId": "GetType|():System.Type|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664825
+          }
+        },
+        {
+          "tsName": "ToString",
+          "isStatic": false,
+          "tsSignatureId": "ToString|():System.String|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664829
+          }
+        },
+        {
+          "tsName": "Equals",
+          "isStatic": false,
+          "tsSignatureId": "Equals|(System.Object):System.Boolean|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664830
+          }
+        },
+        {
+          "tsName": "Equals",
+          "isStatic": true,
+          "tsSignatureId": "Equals|(System.Object,System.Object):System.Boolean|static=true",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664831
+          }
+        },
+        {
+          "tsName": "ReferenceEquals",
+          "isStatic": true,
+          "tsSignatureId": "ReferenceEquals|(System.Object,System.Object):System.Boolean|static=true",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664832
+          }
+        },
+        {
+          "tsName": "GetHashCode",
+          "isStatic": false,
+          "tsSignatureId": "GetHashCode|():System.Int32|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664833
+          }
+        }
+      ],
+      "exposedProperties": [
+        {
+          "tsName": "TypeFormat",
+          "isStatic": false,
+          "tsSignatureId": "TypeFormat|:System.Runtime.Serialization.Formatters.FormatterTypeStyle|static=false|accessor=getset",
+          "target": {
+            "declaringClrType": "System.Runtime.Serialization.Formatters.Binary.BinaryFormatter",
+            "declaringAssemblyName": "System.Runtime.Serialization.Formatters",
+            "metadataToken": 385876055
+          }
+        },
+        {
+          "tsName": "AssemblyFormat",
+          "isStatic": false,
+          "tsSignatureId": "AssemblyFormat|:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle|static=false|accessor=getset",
+          "target": {
+            "declaringClrType": "System.Runtime.Serialization.Formatters.Binary.BinaryFormatter",
+            "declaringAssemblyName": "System.Runtime.Serialization.Formatters",
+            "metadataToken": 385876056
+          }
+        },
+        {
+          "tsName": "FilterLevel",
+          "isStatic": false,
+          "tsSignatureId": "FilterLevel|:System.Runtime.Serialization.Formatters.TypeFilterLevel|static=false|accessor=getset",
+          "target": {
+            "declaringClrType": "System.Runtime.Serialization.Formatters.Binary.BinaryFormatter",
+            "declaringAssemblyName": "System.Runtime.Serialization.Formatters",
+            "metadataToken": 385876057
+          }
+        },
+        {
+          "tsName": "SurrogateSelector",
+          "isStatic": false,
+          "tsSignatureId": "SurrogateSelector|:System.Runtime.Serialization.ISurrogateSelector|static=false|accessor=getset",
+          "target": {
+            "declaringClrType": "System.Runtime.Serialization.Formatters.Binary.BinaryFormatter",
+            "declaringAssemblyName": "System.Runtime.Serialization.Formatters",
+            "metadataToken": 385876058
+          }
+        },
+        {
+          "tsName": "Binder",
+          "isStatic": false,
+          "tsSignatureId": "Binder|:System.Runtime.Serialization.SerializationBinder|static=false|accessor=getset",
+          "target": {
+            "declaringClrType": "System.Runtime.Serialization.Formatters.Binary.BinaryFormatter",
+            "declaringAssemblyName": "System.Runtime.Serialization.Formatters",
+            "metadataToken": 385876059
+          }
+        },
+        {
+          "tsName": "Context",
+          "isStatic": false,
+          "tsSignatureId": "Context|:System.Runtime.Serialization.StreamingContext|static=false|accessor=getset",
+          "target": {
+            "declaringClrType": "System.Runtime.Serialization.Formatters.Binary.BinaryFormatter",
+            "declaringAssemblyName": "System.Runtime.Serialization.Formatters",
+            "metadataToken": 385876060
+          }
+        },
+        {
+          "tsName": "SurrogateSelector$view",
+          "isStatic": false,
+          "tsSignatureId": "SurrogateSelector|:System.Runtime.Serialization.ISurrogateSelector|static=false|accessor=getset",
+          "target": {
+            "declaringClrType": "System.Runtime.Serialization.IFormatter",
+            "declaringAssemblyName": "System.Runtime.Serialization.Formatters",
+            "metadataToken": 385876008
+          }
+        },
+        {
+          "tsName": "Binder$view",
+          "isStatic": false,
+          "tsSignatureId": "Binder|:System.Runtime.Serialization.SerializationBinder|static=false|accessor=getset",
+          "target": {
+            "declaringClrType": "System.Runtime.Serialization.IFormatter",
+            "declaringAssemblyName": "System.Runtime.Serialization.Formatters",
+            "metadataToken": 385876009
+          }
+        },
+        {
+          "tsName": "Context$view",
+          "isStatic": false,
+          "tsSignatureId": "Context|:System.Runtime.Serialization.StreamingContext|static=false|accessor=getset",
+          "target": {
+            "declaringClrType": "System.Runtime.Serialization.IFormatter",
+            "declaringAssemblyName": "System.Runtime.Serialization.Formatters",
+            "metadataToken": 385876010
+          }
+        }
+      ],
+      "exposedConstructors": [
+        {
+          "isStatic": false,
+          "tsSignatureId": "constructor|():void|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.Serialization.Formatters.Binary.BinaryFormatter",
+            "declaringAssemblyName": "System.Runtime.Serialization.Formatters",
+            "metadataToken": 100663604
+          }
+        },
+        {
+          "isStatic": false,
+          "tsSignatureId": "constructor|(System.Runtime.Serialization.ISurrogateSelector,System.Runtime.Serialization.StreamingContext):void|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.Serialization.Formatters.Binary.BinaryFormatter",
+            "declaringAssemblyName": "System.Runtime.Serialization.Formatters",
+            "metadataToken": 100663605
+          }
+        }
+      ]
+    }
+  ]
+}

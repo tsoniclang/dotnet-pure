@@ -1,0 +1,275 @@
+{
+  "namespace": "Internal",
+  "types": [
+    {
+      "stableId": "System.Private.CoreLib:Internal.Console",
+      "clrName": "Internal.Console",
+      "tsEmitName": "Console",
+      "assemblyName": "System.Private.CoreLib",
+      "metadataToken": 0,
+      "methods": [
+        {
+          "stableId": "System.Private.CoreLib:Internal.Console::WriteLine(System.String):System.Void",
+          "clrName": "WriteLine",
+          "tsEmitName": "WriteLine",
+          "metadataToken": 100704799,
+          "canonicalSignature": "(System.String):System.Void",
+          "normalizedSignature": "WriteLine|(System.String):System.Void|static=true",
+          "emitScope": "ClassSurface",
+          "arity": 0,
+          "parameterCount": 1,
+          "declaringClrType": "Internal.Console",
+          "declaringAssemblyName": "System.Private.CoreLib",
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.Private.CoreLib:Internal.Console::WriteLine():System.Void",
+          "clrName": "WriteLine",
+          "tsEmitName": "WriteLine",
+          "metadataToken": 100704800,
+          "canonicalSignature": "():System.Void",
+          "normalizedSignature": "WriteLine|():System.Void|static=true",
+          "emitScope": "ClassSurface",
+          "arity": 0,
+          "parameterCount": 0,
+          "declaringClrType": "Internal.Console",
+          "declaringAssemblyName": "System.Private.CoreLib",
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.Private.CoreLib:Internal.Console::Write(System.String):System.Void",
+          "clrName": "Write",
+          "tsEmitName": "Write",
+          "metadataToken": 100704801,
+          "canonicalSignature": "(System.String):System.Void",
+          "normalizedSignature": "Write|(System.String):System.Void|static=true",
+          "emitScope": "ClassSurface",
+          "arity": 0,
+          "parameterCount": 1,
+          "declaringClrType": "Internal.Console",
+          "declaringAssemblyName": "System.Private.CoreLib",
+          "isExtensionMethod": false
+        }
+      ],
+      "properties": [],
+      "fields": [],
+      "events": [],
+      "constructors": [],
+      "exposedMethods": [
+        {
+          "tsName": "WriteLine",
+          "isStatic": true,
+          "tsSignatureId": "WriteLine|(System.String):System.Void|static=true",
+          "target": {
+            "declaringClrType": "Internal.Console",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100704799
+          }
+        },
+        {
+          "tsName": "WriteLine",
+          "isStatic": true,
+          "tsSignatureId": "WriteLine|():System.Void|static=true",
+          "target": {
+            "declaringClrType": "Internal.Console",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100704800
+          }
+        },
+        {
+          "tsName": "Write",
+          "isStatic": true,
+          "tsSignatureId": "Write|(System.String):System.Void|static=true",
+          "target": {
+            "declaringClrType": "Internal.Console",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100704801
+          }
+        },
+        {
+          "tsName": "GetType",
+          "isStatic": false,
+          "tsSignatureId": "GetType|():System.Type|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664825
+          }
+        },
+        {
+          "tsName": "ToString",
+          "isStatic": false,
+          "tsSignatureId": "ToString|():System.String|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664829
+          }
+        },
+        {
+          "tsName": "Equals",
+          "isStatic": false,
+          "tsSignatureId": "Equals|(System.Object):System.Boolean|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664830
+          }
+        },
+        {
+          "tsName": "Equals",
+          "isStatic": true,
+          "tsSignatureId": "Equals|(System.Object,System.Object):System.Boolean|static=true",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664831
+          }
+        },
+        {
+          "tsName": "ReferenceEquals",
+          "isStatic": true,
+          "tsSignatureId": "ReferenceEquals|(System.Object,System.Object):System.Boolean|static=true",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664832
+          }
+        },
+        {
+          "tsName": "GetHashCode",
+          "isStatic": false,
+          "tsSignatureId": "GetHashCode|():System.Int32|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664833
+          }
+        }
+      ]
+    },
+    {
+      "stableId": "System.Private.CoreLib:Internal.Console\u002BError",
+      "clrName": "Internal.Console\u002BError",
+      "tsEmitName": "Console_Error",
+      "assemblyName": "System.Private.CoreLib",
+      "metadataToken": 0,
+      "methods": [
+        {
+          "stableId": "System.Private.CoreLib:Internal.Console\u002BError::WriteLine():System.Void",
+          "clrName": "WriteLine",
+          "tsEmitName": "WriteLine",
+          "metadataToken": 100704802,
+          "canonicalSignature": "():System.Void",
+          "normalizedSignature": "WriteLine|():System.Void|static=true",
+          "emitScope": "ClassSurface",
+          "arity": 0,
+          "parameterCount": 0,
+          "declaringClrType": "Internal.Console\u002BError",
+          "declaringAssemblyName": "System.Private.CoreLib",
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.Private.CoreLib:Internal.Console\u002BError::Write(System.String):System.Void",
+          "clrName": "Write",
+          "tsEmitName": "Write",
+          "metadataToken": 100704803,
+          "canonicalSignature": "(System.String):System.Void",
+          "normalizedSignature": "Write|(System.String):System.Void|static=true",
+          "emitScope": "ClassSurface",
+          "arity": 0,
+          "parameterCount": 1,
+          "declaringClrType": "Internal.Console\u002BError",
+          "declaringAssemblyName": "System.Private.CoreLib",
+          "isExtensionMethod": false
+        }
+      ],
+      "properties": [],
+      "fields": [],
+      "events": [],
+      "constructors": [],
+      "exposedMethods": [
+        {
+          "tsName": "WriteLine",
+          "isStatic": true,
+          "tsSignatureId": "WriteLine|():System.Void|static=true",
+          "target": {
+            "declaringClrType": "Internal.Console\u002BError",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100704802
+          }
+        },
+        {
+          "tsName": "Write",
+          "isStatic": true,
+          "tsSignatureId": "Write|(System.String):System.Void|static=true",
+          "target": {
+            "declaringClrType": "Internal.Console\u002BError",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100704803
+          }
+        },
+        {
+          "tsName": "GetType",
+          "isStatic": false,
+          "tsSignatureId": "GetType|():System.Type|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664825
+          }
+        },
+        {
+          "tsName": "ToString",
+          "isStatic": false,
+          "tsSignatureId": "ToString|():System.String|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664829
+          }
+        },
+        {
+          "tsName": "Equals",
+          "isStatic": false,
+          "tsSignatureId": "Equals|(System.Object):System.Boolean|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664830
+          }
+        },
+        {
+          "tsName": "Equals",
+          "isStatic": true,
+          "tsSignatureId": "Equals|(System.Object,System.Object):System.Boolean|static=true",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664831
+          }
+        },
+        {
+          "tsName": "ReferenceEquals",
+          "isStatic": true,
+          "tsSignatureId": "ReferenceEquals|(System.Object,System.Object):System.Boolean|static=true",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664832
+          }
+        },
+        {
+          "tsName": "GetHashCode",
+          "isStatic": false,
+          "tsSignatureId": "GetHashCode|():System.Int32|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664833
+          }
+        }
+      ]
+    }
+  ]
+}

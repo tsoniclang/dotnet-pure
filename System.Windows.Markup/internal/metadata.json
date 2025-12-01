@@ -1,0 +1,66 @@
+{
+  "namespace": "System.Windows.Markup",
+  "contributingAssemblies": [
+    "System.ObjectModel"
+  ],
+  "types": [
+    {
+      "stableId": "System.ObjectModel:System.Windows.Markup.ValueSerializerAttribute",
+      "clrName": "System.Windows.Markup.ValueSerializerAttribute",
+      "tsEmitName": "ValueSerializerAttribute",
+      "kind": "Class",
+      "accessibility": "Public",
+      "isAbstract": false,
+      "isSealed": true,
+      "isStatic": false,
+      "arity": 0,
+      "methods": [],
+      "properties": [
+        {
+          "stableId": "System.ObjectModel:System.Windows.Markup.ValueSerializerAttribute::ValueSerializerType:System.Type",
+          "clrName": "ValueSerializerType",
+          "tsEmitName": "ValueSerializerType",
+          "normalizedSignature": "ValueSerializerType|:System.Type|static=false|accessor=get",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false
+        },
+        {
+          "stableId": "System.ObjectModel:System.Windows.Markup.ValueSerializerAttribute::ValueSerializerTypeName:System.String",
+          "clrName": "ValueSerializerTypeName",
+          "tsEmitName": "ValueSerializerTypeName",
+          "normalizedSignature": "ValueSerializerTypeName|:System.String|static=false|accessor=get",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": false,
+          "isOverride": false,
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false
+        }
+      ],
+      "fields": [],
+      "events": [],
+      "constructors": [
+        {
+          "normalizedSignature": "constructor|(System.Type):void|static=false",
+          "isStatic": false,
+          "parameterCount": 1
+        },
+        {
+          "normalizedSignature": "constructor|(System.String):void|static=false",
+          "isStatic": false,
+          "parameterCount": 1
+        }
+      ]
+    }
+  ]
+}

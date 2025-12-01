@@ -1,0 +1,3945 @@
+{
+  "namespace": "Microsoft.Win32.SafeHandles",
+  "types": [
+    {
+      "stableId": "System.Private.CoreLib:Microsoft.Win32.SafeHandles.CriticalHandleMinusOneIsInvalid",
+      "clrName": "Microsoft.Win32.SafeHandles.CriticalHandleMinusOneIsInvalid",
+      "tsEmitName": "CriticalHandleMinusOneIsInvalid",
+      "assemblyName": "System.Private.CoreLib",
+      "metadataToken": 0,
+      "methods": [
+        {
+          "stableId": "System.Private.CoreLib:System.IDisposable::Dispose():System.Void",
+          "clrName": "Dispose",
+          "tsEmitName": "Dispose$view",
+          "metadataToken": 100668530,
+          "canonicalSignature": "():System.Void",
+          "normalizedSignature": "Dispose|():System.Void|static=false",
+          "emitScope": "ViewOnly",
+          "arity": 0,
+          "parameterCount": 0,
+          "declaringClrType": "System.IDisposable",
+          "declaringAssemblyName": "System.Private.CoreLib",
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.Private.CoreLib:Microsoft.Win32.SafeHandles.CriticalHandleMinusOneIsInvalid::Dispose():System.Void",
+          "clrName": "Dispose",
+          "tsEmitName": "Dispose",
+          "metadataToken": 0,
+          "canonicalSignature": "():System.Void",
+          "normalizedSignature": "Dispose|():System.Void|static=false",
+          "emitScope": "ClassSurface",
+          "arity": 0,
+          "parameterCount": 0,
+          "declaringClrType": "Microsoft.Win32.SafeHandles.CriticalHandleMinusOneIsInvalid",
+          "declaringAssemblyName": "System.Private.CoreLib",
+          "isExtensionMethod": false
+        }
+      ],
+      "properties": [
+        {
+          "stableId": "System.Private.CoreLib:Microsoft.Win32.SafeHandles.CriticalHandleMinusOneIsInvalid::IsInvalid:System.Boolean",
+          "clrName": "IsInvalid",
+          "tsEmitName": "IsInvalid",
+          "metadataToken": 385875977,
+          "canonicalSignature": ":System.Boolean",
+          "normalizedSignature": "IsInvalid|:System.Boolean|static=false|accessor=get",
+          "emitScope": "ClassSurface",
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false,
+          "declaringClrType": "Microsoft.Win32.SafeHandles.CriticalHandleMinusOneIsInvalid",
+          "declaringAssemblyName": "System.Private.CoreLib"
+        }
+      ],
+      "fields": [],
+      "events": [],
+      "constructors": [],
+      "exposedMethods": [
+        {
+          "tsName": "Dispose$view",
+          "isStatic": false,
+          "tsSignatureId": "Dispose|():System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.IDisposable",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100668530
+          }
+        },
+        {
+          "tsName": "Dispose",
+          "isStatic": false,
+          "tsSignatureId": "Dispose|():System.Void|static=false",
+          "target": {
+            "declaringClrType": "Microsoft.Win32.SafeHandles.CriticalHandleMinusOneIsInvalid",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 0
+          }
+        },
+        {
+          "tsName": "Close",
+          "isStatic": false,
+          "tsSignatureId": "Close|():System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.CriticalHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100694617
+          }
+        },
+        {
+          "tsName": "SetHandleAsInvalid",
+          "isStatic": false,
+          "tsSignatureId": "SetHandleAsInvalid|():System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.CriticalHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100694620
+          }
+        },
+        {
+          "tsName": "GetType",
+          "isStatic": false,
+          "tsSignatureId": "GetType|():System.Type|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664825
+          }
+        },
+        {
+          "tsName": "ToString",
+          "isStatic": false,
+          "tsSignatureId": "ToString|():System.String|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664829
+          }
+        },
+        {
+          "tsName": "Equals",
+          "isStatic": false,
+          "tsSignatureId": "Equals|(System.Object):System.Boolean|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664830
+          }
+        },
+        {
+          "tsName": "Equals",
+          "isStatic": true,
+          "tsSignatureId": "Equals|(System.Object,System.Object):System.Boolean|static=true",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664831
+          }
+        },
+        {
+          "tsName": "ReferenceEquals",
+          "isStatic": true,
+          "tsSignatureId": "ReferenceEquals|(System.Object,System.Object):System.Boolean|static=true",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664832
+          }
+        },
+        {
+          "tsName": "GetHashCode",
+          "isStatic": false,
+          "tsSignatureId": "GetHashCode|():System.Int32|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664833
+          }
+        }
+      ],
+      "exposedProperties": [
+        {
+          "tsName": "IsInvalid",
+          "isStatic": false,
+          "tsSignatureId": "IsInvalid|:System.Boolean|static=false|accessor=get",
+          "target": {
+            "declaringClrType": "Microsoft.Win32.SafeHandles.CriticalHandleMinusOneIsInvalid",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 385875977
+          }
+        },
+        {
+          "tsName": "IsClosed",
+          "isStatic": false,
+          "tsSignatureId": "IsClosed|:System.Boolean|static=false|accessor=get",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.CriticalHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 385879590
+          }
+        }
+      ]
+    },
+    {
+      "stableId": "System.Private.CoreLib:Microsoft.Win32.SafeHandles.CriticalHandleZeroOrMinusOneIsInvalid",
+      "clrName": "Microsoft.Win32.SafeHandles.CriticalHandleZeroOrMinusOneIsInvalid",
+      "tsEmitName": "CriticalHandleZeroOrMinusOneIsInvalid",
+      "assemblyName": "System.Private.CoreLib",
+      "metadataToken": 0,
+      "methods": [
+        {
+          "stableId": "System.Private.CoreLib:System.IDisposable::Dispose():System.Void",
+          "clrName": "Dispose",
+          "tsEmitName": "Dispose$view",
+          "metadataToken": 100668530,
+          "canonicalSignature": "():System.Void",
+          "normalizedSignature": "Dispose|():System.Void|static=false",
+          "emitScope": "ViewOnly",
+          "arity": 0,
+          "parameterCount": 0,
+          "declaringClrType": "System.IDisposable",
+          "declaringAssemblyName": "System.Private.CoreLib",
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.Private.CoreLib:Microsoft.Win32.SafeHandles.CriticalHandleZeroOrMinusOneIsInvalid::Dispose():System.Void",
+          "clrName": "Dispose",
+          "tsEmitName": "Dispose",
+          "metadataToken": 0,
+          "canonicalSignature": "():System.Void",
+          "normalizedSignature": "Dispose|():System.Void|static=false",
+          "emitScope": "ClassSurface",
+          "arity": 0,
+          "parameterCount": 0,
+          "declaringClrType": "Microsoft.Win32.SafeHandles.CriticalHandleZeroOrMinusOneIsInvalid",
+          "declaringAssemblyName": "System.Private.CoreLib",
+          "isExtensionMethod": false
+        }
+      ],
+      "properties": [
+        {
+          "stableId": "System.Private.CoreLib:Microsoft.Win32.SafeHandles.CriticalHandleZeroOrMinusOneIsInvalid::IsInvalid:System.Boolean",
+          "clrName": "IsInvalid",
+          "tsEmitName": "IsInvalid",
+          "metadataToken": 385875978,
+          "canonicalSignature": ":System.Boolean",
+          "normalizedSignature": "IsInvalid|:System.Boolean|static=false|accessor=get",
+          "emitScope": "ClassSurface",
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false,
+          "declaringClrType": "Microsoft.Win32.SafeHandles.CriticalHandleZeroOrMinusOneIsInvalid",
+          "declaringAssemblyName": "System.Private.CoreLib"
+        }
+      ],
+      "fields": [],
+      "events": [],
+      "constructors": [],
+      "exposedMethods": [
+        {
+          "tsName": "Dispose$view",
+          "isStatic": false,
+          "tsSignatureId": "Dispose|():System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.IDisposable",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100668530
+          }
+        },
+        {
+          "tsName": "Dispose",
+          "isStatic": false,
+          "tsSignatureId": "Dispose|():System.Void|static=false",
+          "target": {
+            "declaringClrType": "Microsoft.Win32.SafeHandles.CriticalHandleZeroOrMinusOneIsInvalid",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 0
+          }
+        },
+        {
+          "tsName": "Close",
+          "isStatic": false,
+          "tsSignatureId": "Close|():System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.CriticalHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100694617
+          }
+        },
+        {
+          "tsName": "SetHandleAsInvalid",
+          "isStatic": false,
+          "tsSignatureId": "SetHandleAsInvalid|():System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.CriticalHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100694620
+          }
+        },
+        {
+          "tsName": "GetType",
+          "isStatic": false,
+          "tsSignatureId": "GetType|():System.Type|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664825
+          }
+        },
+        {
+          "tsName": "ToString",
+          "isStatic": false,
+          "tsSignatureId": "ToString|():System.String|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664829
+          }
+        },
+        {
+          "tsName": "Equals",
+          "isStatic": false,
+          "tsSignatureId": "Equals|(System.Object):System.Boolean|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664830
+          }
+        },
+        {
+          "tsName": "Equals",
+          "isStatic": true,
+          "tsSignatureId": "Equals|(System.Object,System.Object):System.Boolean|static=true",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664831
+          }
+        },
+        {
+          "tsName": "ReferenceEquals",
+          "isStatic": true,
+          "tsSignatureId": "ReferenceEquals|(System.Object,System.Object):System.Boolean|static=true",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664832
+          }
+        },
+        {
+          "tsName": "GetHashCode",
+          "isStatic": false,
+          "tsSignatureId": "GetHashCode|():System.Int32|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664833
+          }
+        }
+      ],
+      "exposedProperties": [
+        {
+          "tsName": "IsInvalid",
+          "isStatic": false,
+          "tsSignatureId": "IsInvalid|:System.Boolean|static=false|accessor=get",
+          "target": {
+            "declaringClrType": "Microsoft.Win32.SafeHandles.CriticalHandleZeroOrMinusOneIsInvalid",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 385875978
+          }
+        },
+        {
+          "tsName": "IsClosed",
+          "isStatic": false,
+          "tsSignatureId": "IsClosed|:System.Boolean|static=false|accessor=get",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.CriticalHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 385879590
+          }
+        }
+      ]
+    },
+    {
+      "stableId": "System.Security.Principal.Windows:Microsoft.Win32.SafeHandles.SafeAccessTokenHandle",
+      "clrName": "Microsoft.Win32.SafeHandles.SafeAccessTokenHandle",
+      "tsEmitName": "SafeAccessTokenHandle",
+      "assemblyName": "System.Security.Principal.Windows",
+      "metadataToken": 0,
+      "methods": [
+        {
+          "stableId": "System.Private.CoreLib:System.IDisposable::Dispose():System.Void",
+          "clrName": "Dispose",
+          "tsEmitName": "Dispose$view",
+          "metadataToken": 100668530,
+          "canonicalSignature": "():System.Void",
+          "normalizedSignature": "Dispose|():System.Void|static=false",
+          "emitScope": "ViewOnly",
+          "arity": 0,
+          "parameterCount": 0,
+          "declaringClrType": "System.IDisposable",
+          "declaringAssemblyName": "System.Private.CoreLib",
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.Security.Principal.Windows:Microsoft.Win32.SafeHandles.SafeAccessTokenHandle::Dispose():System.Void",
+          "clrName": "Dispose",
+          "tsEmitName": "Dispose",
+          "metadataToken": 0,
+          "canonicalSignature": "():System.Void",
+          "normalizedSignature": "Dispose|():System.Void|static=false",
+          "emitScope": "ClassSurface",
+          "arity": 0,
+          "parameterCount": 0,
+          "declaringClrType": "Microsoft.Win32.SafeHandles.SafeAccessTokenHandle",
+          "declaringAssemblyName": "System.Security.Principal.Windows",
+          "isExtensionMethod": false
+        }
+      ],
+      "properties": [
+        {
+          "stableId": "System.Security.Principal.Windows:Microsoft.Win32.SafeHandles.SafeAccessTokenHandle::InvalidHandle:Microsoft.Win32.SafeHandles.SafeAccessTokenHandle",
+          "clrName": "InvalidHandle",
+          "tsEmitName": "InvalidHandle",
+          "metadataToken": 385875969,
+          "canonicalSignature": ":Microsoft.Win32.SafeHandles.SafeAccessTokenHandle",
+          "normalizedSignature": "InvalidHandle|:Microsoft.Win32.SafeHandles.SafeAccessTokenHandle|static=true|accessor=get",
+          "emitScope": "ClassSurface",
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false,
+          "declaringClrType": "Microsoft.Win32.SafeHandles.SafeAccessTokenHandle",
+          "declaringAssemblyName": "System.Security.Principal.Windows"
+        },
+        {
+          "stableId": "System.Security.Principal.Windows:Microsoft.Win32.SafeHandles.SafeAccessTokenHandle::IsInvalid:System.Boolean",
+          "clrName": "IsInvalid",
+          "tsEmitName": "IsInvalid",
+          "metadataToken": 385875970,
+          "canonicalSignature": ":System.Boolean",
+          "normalizedSignature": "IsInvalid|:System.Boolean|static=false|accessor=get",
+          "emitScope": "ClassSurface",
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false,
+          "declaringClrType": "Microsoft.Win32.SafeHandles.SafeAccessTokenHandle",
+          "declaringAssemblyName": "System.Security.Principal.Windows"
+        }
+      ],
+      "fields": [],
+      "events": [],
+      "constructors": [
+        {
+          "stableId": "System.Security.Principal.Windows:Microsoft.Win32.SafeHandles.SafeAccessTokenHandle::.ctor():void",
+          "metadataToken": 100663297,
+          "canonicalSignature": "():void",
+          "normalizedSignature": "constructor|():void|static=false",
+          "isStatic": false,
+          "parameterCount": 0,
+          "declaringClrType": "Microsoft.Win32.SafeHandles.SafeAccessTokenHandle",
+          "declaringAssemblyName": "System.Security.Principal.Windows"
+        },
+        {
+          "stableId": "System.Security.Principal.Windows:Microsoft.Win32.SafeHandles.SafeAccessTokenHandle::.ctor(System.IntPtr):void",
+          "metadataToken": 100663298,
+          "canonicalSignature": "(System.IntPtr):void",
+          "normalizedSignature": "constructor|(System.IntPtr):void|static=false",
+          "isStatic": false,
+          "parameterCount": 1,
+          "declaringClrType": "Microsoft.Win32.SafeHandles.SafeAccessTokenHandle",
+          "declaringAssemblyName": "System.Security.Principal.Windows"
+        }
+      ],
+      "exposedMethods": [
+        {
+          "tsName": "Dispose$view",
+          "isStatic": false,
+          "tsSignatureId": "Dispose|():System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.IDisposable",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100668530
+          }
+        },
+        {
+          "tsName": "Dispose",
+          "isStatic": false,
+          "tsSignatureId": "Dispose|():System.Void|static=false",
+          "target": {
+            "declaringClrType": "Microsoft.Win32.SafeHandles.SafeAccessTokenHandle",
+            "declaringAssemblyName": "System.Security.Principal.Windows",
+            "metadataToken": 0
+          }
+        },
+        {
+          "tsName": "DangerousGetHandle",
+          "isStatic": false,
+          "tsSignatureId": "DangerousGetHandle|():System.IntPtr|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695051
+          }
+        },
+        {
+          "tsName": "Close",
+          "isStatic": false,
+          "tsSignatureId": "Close|():System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695054
+          }
+        },
+        {
+          "tsName": "SetHandleAsInvalid",
+          "isStatic": false,
+          "tsSignatureId": "SetHandleAsInvalid|():System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695057
+          }
+        },
+        {
+          "tsName": "DangerousAddRef",
+          "isStatic": false,
+          "tsSignatureId": "DangerousAddRef|(System.Boolean\u0026):System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695059
+          }
+        },
+        {
+          "tsName": "DangerousRelease",
+          "isStatic": false,
+          "tsSignatureId": "DangerousRelease|():System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695060
+          }
+        },
+        {
+          "tsName": "GetType",
+          "isStatic": false,
+          "tsSignatureId": "GetType|():System.Type|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664825
+          }
+        },
+        {
+          "tsName": "ToString",
+          "isStatic": false,
+          "tsSignatureId": "ToString|():System.String|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664829
+          }
+        },
+        {
+          "tsName": "Equals",
+          "isStatic": false,
+          "tsSignatureId": "Equals|(System.Object):System.Boolean|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664830
+          }
+        },
+        {
+          "tsName": "Equals",
+          "isStatic": true,
+          "tsSignatureId": "Equals|(System.Object,System.Object):System.Boolean|static=true",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664831
+          }
+        },
+        {
+          "tsName": "ReferenceEquals",
+          "isStatic": true,
+          "tsSignatureId": "ReferenceEquals|(System.Object,System.Object):System.Boolean|static=true",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664832
+          }
+        },
+        {
+          "tsName": "GetHashCode",
+          "isStatic": false,
+          "tsSignatureId": "GetHashCode|():System.Int32|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664833
+          }
+        }
+      ],
+      "exposedProperties": [
+        {
+          "tsName": "InvalidHandle",
+          "isStatic": true,
+          "tsSignatureId": "InvalidHandle|:Microsoft.Win32.SafeHandles.SafeAccessTokenHandle|static=true|accessor=get",
+          "target": {
+            "declaringClrType": "Microsoft.Win32.SafeHandles.SafeAccessTokenHandle",
+            "declaringAssemblyName": "System.Security.Principal.Windows",
+            "metadataToken": 385875969
+          }
+        },
+        {
+          "tsName": "IsInvalid",
+          "isStatic": false,
+          "tsSignatureId": "IsInvalid|:System.Boolean|static=false|accessor=get",
+          "target": {
+            "declaringClrType": "Microsoft.Win32.SafeHandles.SafeAccessTokenHandle",
+            "declaringAssemblyName": "System.Security.Principal.Windows",
+            "metadataToken": 385875970
+          }
+        },
+        {
+          "tsName": "IsClosed",
+          "isStatic": false,
+          "tsSignatureId": "IsClosed|:System.Boolean|static=false|accessor=get",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 385879655
+          }
+        }
+      ],
+      "exposedConstructors": [
+        {
+          "isStatic": false,
+          "tsSignatureId": "constructor|():void|static=false",
+          "target": {
+            "declaringClrType": "Microsoft.Win32.SafeHandles.SafeAccessTokenHandle",
+            "declaringAssemblyName": "System.Security.Principal.Windows",
+            "metadataToken": 100663297
+          }
+        },
+        {
+          "isStatic": false,
+          "tsSignatureId": "constructor|(System.IntPtr):void|static=false",
+          "target": {
+            "declaringClrType": "Microsoft.Win32.SafeHandles.SafeAccessTokenHandle",
+            "declaringAssemblyName": "System.Security.Principal.Windows",
+            "metadataToken": 100663298
+          }
+        }
+      ]
+    },
+    {
+      "stableId": "System.Private.CoreLib:Microsoft.Win32.SafeHandles.SafeFileHandle",
+      "clrName": "Microsoft.Win32.SafeHandles.SafeFileHandle",
+      "tsEmitName": "SafeFileHandle",
+      "assemblyName": "System.Private.CoreLib",
+      "metadataToken": 0,
+      "methods": [
+        {
+          "stableId": "System.Private.CoreLib:System.IDisposable::Dispose():System.Void",
+          "clrName": "Dispose",
+          "tsEmitName": "Dispose$view",
+          "metadataToken": 100668530,
+          "canonicalSignature": "():System.Void",
+          "normalizedSignature": "Dispose|():System.Void|static=false",
+          "emitScope": "ViewOnly",
+          "arity": 0,
+          "parameterCount": 0,
+          "declaringClrType": "System.IDisposable",
+          "declaringAssemblyName": "System.Private.CoreLib",
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.Private.CoreLib:Microsoft.Win32.SafeHandles.SafeFileHandle::Dispose():System.Void",
+          "clrName": "Dispose",
+          "tsEmitName": "Dispose",
+          "metadataToken": 0,
+          "canonicalSignature": "():System.Void",
+          "normalizedSignature": "Dispose|():System.Void|static=false",
+          "emitScope": "ClassSurface",
+          "arity": 0,
+          "parameterCount": 0,
+          "declaringClrType": "Microsoft.Win32.SafeHandles.SafeFileHandle",
+          "declaringAssemblyName": "System.Private.CoreLib",
+          "isExtensionMethod": false
+        }
+      ],
+      "properties": [
+        {
+          "stableId": "System.Private.CoreLib:Microsoft.Win32.SafeHandles.SafeFileHandle::IsAsync:System.Boolean",
+          "clrName": "IsAsync",
+          "tsEmitName": "IsAsync",
+          "metadataToken": 385875983,
+          "canonicalSignature": ":System.Boolean",
+          "normalizedSignature": "IsAsync|:System.Boolean|static=false|accessor=get",
+          "emitScope": "ClassSurface",
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false,
+          "declaringClrType": "Microsoft.Win32.SafeHandles.SafeFileHandle",
+          "declaringAssemblyName": "System.Private.CoreLib"
+        },
+        {
+          "stableId": "System.Private.CoreLib:Microsoft.Win32.SafeHandles.SafeFileHandle::IsInvalid:System.Boolean",
+          "clrName": "IsInvalid",
+          "tsEmitName": "IsInvalid",
+          "metadataToken": 385875987,
+          "canonicalSignature": ":System.Boolean",
+          "normalizedSignature": "IsInvalid|:System.Boolean|static=false|accessor=get",
+          "emitScope": "ClassSurface",
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false,
+          "declaringClrType": "Microsoft.Win32.SafeHandles.SafeFileHandle",
+          "declaringAssemblyName": "System.Private.CoreLib"
+        }
+      ],
+      "fields": [],
+      "events": [],
+      "constructors": [
+        {
+          "stableId": "System.Private.CoreLib:Microsoft.Win32.SafeHandles.SafeFileHandle::.ctor(System.IntPtr,System.Boolean):void",
+          "metadataToken": 100663607,
+          "canonicalSignature": "(System.IntPtr,System.Boolean):void",
+          "normalizedSignature": "constructor|(System.IntPtr,System.Boolean):void|static=false",
+          "isStatic": false,
+          "parameterCount": 2,
+          "declaringClrType": "Microsoft.Win32.SafeHandles.SafeFileHandle",
+          "declaringAssemblyName": "System.Private.CoreLib"
+        },
+        {
+          "stableId": "System.Private.CoreLib:Microsoft.Win32.SafeHandles.SafeFileHandle::.ctor():void",
+          "metadataToken": 100663611,
+          "canonicalSignature": "():void",
+          "normalizedSignature": "constructor|():void|static=false",
+          "isStatic": false,
+          "parameterCount": 0,
+          "declaringClrType": "Microsoft.Win32.SafeHandles.SafeFileHandle",
+          "declaringAssemblyName": "System.Private.CoreLib"
+        }
+      ],
+      "exposedMethods": [
+        {
+          "tsName": "Dispose$view",
+          "isStatic": false,
+          "tsSignatureId": "Dispose|():System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.IDisposable",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100668530
+          }
+        },
+        {
+          "tsName": "Dispose",
+          "isStatic": false,
+          "tsSignatureId": "Dispose|():System.Void|static=false",
+          "target": {
+            "declaringClrType": "Microsoft.Win32.SafeHandles.SafeFileHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 0
+          }
+        },
+        {
+          "tsName": "DangerousGetHandle",
+          "isStatic": false,
+          "tsSignatureId": "DangerousGetHandle|():System.IntPtr|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695051
+          }
+        },
+        {
+          "tsName": "Close",
+          "isStatic": false,
+          "tsSignatureId": "Close|():System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695054
+          }
+        },
+        {
+          "tsName": "SetHandleAsInvalid",
+          "isStatic": false,
+          "tsSignatureId": "SetHandleAsInvalid|():System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695057
+          }
+        },
+        {
+          "tsName": "DangerousAddRef",
+          "isStatic": false,
+          "tsSignatureId": "DangerousAddRef|(System.Boolean\u0026):System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695059
+          }
+        },
+        {
+          "tsName": "DangerousRelease",
+          "isStatic": false,
+          "tsSignatureId": "DangerousRelease|():System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695060
+          }
+        },
+        {
+          "tsName": "GetType",
+          "isStatic": false,
+          "tsSignatureId": "GetType|():System.Type|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664825
+          }
+        },
+        {
+          "tsName": "ToString",
+          "isStatic": false,
+          "tsSignatureId": "ToString|():System.String|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664829
+          }
+        },
+        {
+          "tsName": "Equals",
+          "isStatic": false,
+          "tsSignatureId": "Equals|(System.Object):System.Boolean|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664830
+          }
+        },
+        {
+          "tsName": "Equals",
+          "isStatic": true,
+          "tsSignatureId": "Equals|(System.Object,System.Object):System.Boolean|static=true",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664831
+          }
+        },
+        {
+          "tsName": "ReferenceEquals",
+          "isStatic": true,
+          "tsSignatureId": "ReferenceEquals|(System.Object,System.Object):System.Boolean|static=true",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664832
+          }
+        },
+        {
+          "tsName": "GetHashCode",
+          "isStatic": false,
+          "tsSignatureId": "GetHashCode|():System.Int32|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664833
+          }
+        }
+      ],
+      "exposedProperties": [
+        {
+          "tsName": "IsAsync",
+          "isStatic": false,
+          "tsSignatureId": "IsAsync|:System.Boolean|static=false|accessor=get",
+          "target": {
+            "declaringClrType": "Microsoft.Win32.SafeHandles.SafeFileHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 385875983
+          }
+        },
+        {
+          "tsName": "IsInvalid",
+          "isStatic": false,
+          "tsSignatureId": "IsInvalid|:System.Boolean|static=false|accessor=get",
+          "target": {
+            "declaringClrType": "Microsoft.Win32.SafeHandles.SafeFileHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 385875987
+          }
+        },
+        {
+          "tsName": "IsClosed",
+          "isStatic": false,
+          "tsSignatureId": "IsClosed|:System.Boolean|static=false|accessor=get",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 385879655
+          }
+        }
+      ],
+      "exposedConstructors": [
+        {
+          "isStatic": false,
+          "tsSignatureId": "constructor|(System.IntPtr,System.Boolean):void|static=false",
+          "target": {
+            "declaringClrType": "Microsoft.Win32.SafeHandles.SafeFileHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100663607
+          }
+        },
+        {
+          "isStatic": false,
+          "tsSignatureId": "constructor|():void|static=false",
+          "target": {
+            "declaringClrType": "Microsoft.Win32.SafeHandles.SafeFileHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100663611
+          }
+        }
+      ]
+    },
+    {
+      "stableId": "System.Private.CoreLib:Microsoft.Win32.SafeHandles.SafeHandleMinusOneIsInvalid",
+      "clrName": "Microsoft.Win32.SafeHandles.SafeHandleMinusOneIsInvalid",
+      "tsEmitName": "SafeHandleMinusOneIsInvalid",
+      "assemblyName": "System.Private.CoreLib",
+      "metadataToken": 0,
+      "methods": [
+        {
+          "stableId": "System.Private.CoreLib:System.IDisposable::Dispose():System.Void",
+          "clrName": "Dispose",
+          "tsEmitName": "Dispose$view",
+          "metadataToken": 100668530,
+          "canonicalSignature": "():System.Void",
+          "normalizedSignature": "Dispose|():System.Void|static=false",
+          "emitScope": "ViewOnly",
+          "arity": 0,
+          "parameterCount": 0,
+          "declaringClrType": "System.IDisposable",
+          "declaringAssemblyName": "System.Private.CoreLib",
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.Private.CoreLib:Microsoft.Win32.SafeHandles.SafeHandleMinusOneIsInvalid::Dispose():System.Void",
+          "clrName": "Dispose",
+          "tsEmitName": "Dispose",
+          "metadataToken": 0,
+          "canonicalSignature": "():System.Void",
+          "normalizedSignature": "Dispose|():System.Void|static=false",
+          "emitScope": "ClassSurface",
+          "arity": 0,
+          "parameterCount": 0,
+          "declaringClrType": "Microsoft.Win32.SafeHandles.SafeHandleMinusOneIsInvalid",
+          "declaringAssemblyName": "System.Private.CoreLib",
+          "isExtensionMethod": false
+        }
+      ],
+      "properties": [
+        {
+          "stableId": "System.Private.CoreLib:Microsoft.Win32.SafeHandles.SafeHandleMinusOneIsInvalid::IsInvalid:System.Boolean",
+          "clrName": "IsInvalid",
+          "tsEmitName": "IsInvalid",
+          "metadataToken": 385875979,
+          "canonicalSignature": ":System.Boolean",
+          "normalizedSignature": "IsInvalid|:System.Boolean|static=false|accessor=get",
+          "emitScope": "ClassSurface",
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false,
+          "declaringClrType": "Microsoft.Win32.SafeHandles.SafeHandleMinusOneIsInvalid",
+          "declaringAssemblyName": "System.Private.CoreLib"
+        }
+      ],
+      "fields": [],
+      "events": [],
+      "constructors": [],
+      "exposedMethods": [
+        {
+          "tsName": "Dispose$view",
+          "isStatic": false,
+          "tsSignatureId": "Dispose|():System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.IDisposable",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100668530
+          }
+        },
+        {
+          "tsName": "Dispose",
+          "isStatic": false,
+          "tsSignatureId": "Dispose|():System.Void|static=false",
+          "target": {
+            "declaringClrType": "Microsoft.Win32.SafeHandles.SafeHandleMinusOneIsInvalid",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 0
+          }
+        },
+        {
+          "tsName": "DangerousGetHandle",
+          "isStatic": false,
+          "tsSignatureId": "DangerousGetHandle|():System.IntPtr|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695051
+          }
+        },
+        {
+          "tsName": "Close",
+          "isStatic": false,
+          "tsSignatureId": "Close|():System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695054
+          }
+        },
+        {
+          "tsName": "SetHandleAsInvalid",
+          "isStatic": false,
+          "tsSignatureId": "SetHandleAsInvalid|():System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695057
+          }
+        },
+        {
+          "tsName": "DangerousAddRef",
+          "isStatic": false,
+          "tsSignatureId": "DangerousAddRef|(System.Boolean\u0026):System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695059
+          }
+        },
+        {
+          "tsName": "DangerousRelease",
+          "isStatic": false,
+          "tsSignatureId": "DangerousRelease|():System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695060
+          }
+        },
+        {
+          "tsName": "GetType",
+          "isStatic": false,
+          "tsSignatureId": "GetType|():System.Type|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664825
+          }
+        },
+        {
+          "tsName": "ToString",
+          "isStatic": false,
+          "tsSignatureId": "ToString|():System.String|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664829
+          }
+        },
+        {
+          "tsName": "Equals",
+          "isStatic": false,
+          "tsSignatureId": "Equals|(System.Object):System.Boolean|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664830
+          }
+        },
+        {
+          "tsName": "Equals",
+          "isStatic": true,
+          "tsSignatureId": "Equals|(System.Object,System.Object):System.Boolean|static=true",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664831
+          }
+        },
+        {
+          "tsName": "ReferenceEquals",
+          "isStatic": true,
+          "tsSignatureId": "ReferenceEquals|(System.Object,System.Object):System.Boolean|static=true",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664832
+          }
+        },
+        {
+          "tsName": "GetHashCode",
+          "isStatic": false,
+          "tsSignatureId": "GetHashCode|():System.Int32|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664833
+          }
+        }
+      ],
+      "exposedProperties": [
+        {
+          "tsName": "IsInvalid",
+          "isStatic": false,
+          "tsSignatureId": "IsInvalid|:System.Boolean|static=false|accessor=get",
+          "target": {
+            "declaringClrType": "Microsoft.Win32.SafeHandles.SafeHandleMinusOneIsInvalid",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 385875979
+          }
+        },
+        {
+          "tsName": "IsClosed",
+          "isStatic": false,
+          "tsSignatureId": "IsClosed|:System.Boolean|static=false|accessor=get",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 385879655
+          }
+        }
+      ]
+    },
+    {
+      "stableId": "System.Private.CoreLib:Microsoft.Win32.SafeHandles.SafeHandleZeroOrMinusOneIsInvalid",
+      "clrName": "Microsoft.Win32.SafeHandles.SafeHandleZeroOrMinusOneIsInvalid",
+      "tsEmitName": "SafeHandleZeroOrMinusOneIsInvalid",
+      "assemblyName": "System.Private.CoreLib",
+      "metadataToken": 0,
+      "methods": [
+        {
+          "stableId": "System.Private.CoreLib:System.IDisposable::Dispose():System.Void",
+          "clrName": "Dispose",
+          "tsEmitName": "Dispose$view",
+          "metadataToken": 100668530,
+          "canonicalSignature": "():System.Void",
+          "normalizedSignature": "Dispose|():System.Void|static=false",
+          "emitScope": "ViewOnly",
+          "arity": 0,
+          "parameterCount": 0,
+          "declaringClrType": "System.IDisposable",
+          "declaringAssemblyName": "System.Private.CoreLib",
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.Private.CoreLib:Microsoft.Win32.SafeHandles.SafeHandleZeroOrMinusOneIsInvalid::Dispose():System.Void",
+          "clrName": "Dispose",
+          "tsEmitName": "Dispose",
+          "metadataToken": 0,
+          "canonicalSignature": "():System.Void",
+          "normalizedSignature": "Dispose|():System.Void|static=false",
+          "emitScope": "ClassSurface",
+          "arity": 0,
+          "parameterCount": 0,
+          "declaringClrType": "Microsoft.Win32.SafeHandles.SafeHandleZeroOrMinusOneIsInvalid",
+          "declaringAssemblyName": "System.Private.CoreLib",
+          "isExtensionMethod": false
+        }
+      ],
+      "properties": [
+        {
+          "stableId": "System.Private.CoreLib:Microsoft.Win32.SafeHandles.SafeHandleZeroOrMinusOneIsInvalid::IsInvalid:System.Boolean",
+          "clrName": "IsInvalid",
+          "tsEmitName": "IsInvalid",
+          "metadataToken": 385875980,
+          "canonicalSignature": ":System.Boolean",
+          "normalizedSignature": "IsInvalid|:System.Boolean|static=false|accessor=get",
+          "emitScope": "ClassSurface",
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false,
+          "declaringClrType": "Microsoft.Win32.SafeHandles.SafeHandleZeroOrMinusOneIsInvalid",
+          "declaringAssemblyName": "System.Private.CoreLib"
+        }
+      ],
+      "fields": [],
+      "events": [],
+      "constructors": [],
+      "exposedMethods": [
+        {
+          "tsName": "Dispose$view",
+          "isStatic": false,
+          "tsSignatureId": "Dispose|():System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.IDisposable",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100668530
+          }
+        },
+        {
+          "tsName": "Dispose",
+          "isStatic": false,
+          "tsSignatureId": "Dispose|():System.Void|static=false",
+          "target": {
+            "declaringClrType": "Microsoft.Win32.SafeHandles.SafeHandleZeroOrMinusOneIsInvalid",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 0
+          }
+        },
+        {
+          "tsName": "DangerousGetHandle",
+          "isStatic": false,
+          "tsSignatureId": "DangerousGetHandle|():System.IntPtr|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695051
+          }
+        },
+        {
+          "tsName": "Close",
+          "isStatic": false,
+          "tsSignatureId": "Close|():System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695054
+          }
+        },
+        {
+          "tsName": "SetHandleAsInvalid",
+          "isStatic": false,
+          "tsSignatureId": "SetHandleAsInvalid|():System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695057
+          }
+        },
+        {
+          "tsName": "DangerousAddRef",
+          "isStatic": false,
+          "tsSignatureId": "DangerousAddRef|(System.Boolean\u0026):System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695059
+          }
+        },
+        {
+          "tsName": "DangerousRelease",
+          "isStatic": false,
+          "tsSignatureId": "DangerousRelease|():System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695060
+          }
+        },
+        {
+          "tsName": "GetType",
+          "isStatic": false,
+          "tsSignatureId": "GetType|():System.Type|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664825
+          }
+        },
+        {
+          "tsName": "ToString",
+          "isStatic": false,
+          "tsSignatureId": "ToString|():System.String|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664829
+          }
+        },
+        {
+          "tsName": "Equals",
+          "isStatic": false,
+          "tsSignatureId": "Equals|(System.Object):System.Boolean|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664830
+          }
+        },
+        {
+          "tsName": "Equals",
+          "isStatic": true,
+          "tsSignatureId": "Equals|(System.Object,System.Object):System.Boolean|static=true",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664831
+          }
+        },
+        {
+          "tsName": "ReferenceEquals",
+          "isStatic": true,
+          "tsSignatureId": "ReferenceEquals|(System.Object,System.Object):System.Boolean|static=true",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664832
+          }
+        },
+        {
+          "tsName": "GetHashCode",
+          "isStatic": false,
+          "tsSignatureId": "GetHashCode|():System.Int32|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664833
+          }
+        }
+      ],
+      "exposedProperties": [
+        {
+          "tsName": "IsInvalid",
+          "isStatic": false,
+          "tsSignatureId": "IsInvalid|:System.Boolean|static=false|accessor=get",
+          "target": {
+            "declaringClrType": "Microsoft.Win32.SafeHandles.SafeHandleZeroOrMinusOneIsInvalid",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 385875980
+          }
+        },
+        {
+          "tsName": "IsClosed",
+          "isStatic": false,
+          "tsSignatureId": "IsClosed|:System.Boolean|static=false|accessor=get",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 385879655
+          }
+        }
+      ]
+    },
+    {
+      "stableId": "System.IO.MemoryMappedFiles:Microsoft.Win32.SafeHandles.SafeMemoryMappedFileHandle",
+      "clrName": "Microsoft.Win32.SafeHandles.SafeMemoryMappedFileHandle",
+      "tsEmitName": "SafeMemoryMappedFileHandle",
+      "assemblyName": "System.IO.MemoryMappedFiles",
+      "metadataToken": 0,
+      "methods": [
+        {
+          "stableId": "System.Private.CoreLib:System.IDisposable::Dispose():System.Void",
+          "clrName": "Dispose",
+          "tsEmitName": "Dispose$view",
+          "metadataToken": 100668530,
+          "canonicalSignature": "():System.Void",
+          "normalizedSignature": "Dispose|():System.Void|static=false",
+          "emitScope": "ViewOnly",
+          "arity": 0,
+          "parameterCount": 0,
+          "declaringClrType": "System.IDisposable",
+          "declaringAssemblyName": "System.Private.CoreLib",
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.IO.MemoryMappedFiles:Microsoft.Win32.SafeHandles.SafeMemoryMappedFileHandle::Dispose():System.Void",
+          "clrName": "Dispose",
+          "tsEmitName": "Dispose",
+          "metadataToken": 0,
+          "canonicalSignature": "():System.Void",
+          "normalizedSignature": "Dispose|():System.Void|static=false",
+          "emitScope": "ClassSurface",
+          "arity": 0,
+          "parameterCount": 0,
+          "declaringClrType": "Microsoft.Win32.SafeHandles.SafeMemoryMappedFileHandle",
+          "declaringAssemblyName": "System.IO.MemoryMappedFiles",
+          "isExtensionMethod": false
+        }
+      ],
+      "properties": [
+        {
+          "stableId": "System.IO.MemoryMappedFiles:Microsoft.Win32.SafeHandles.SafeMemoryMappedFileHandle::IsInvalid:System.Boolean",
+          "clrName": "IsInvalid",
+          "tsEmitName": "IsInvalid",
+          "metadataToken": 385876009,
+          "canonicalSignature": ":System.Boolean",
+          "normalizedSignature": "IsInvalid|:System.Boolean|static=false|accessor=get",
+          "emitScope": "ClassSurface",
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false,
+          "declaringClrType": "Microsoft.Win32.SafeHandles.SafeMemoryMappedFileHandle",
+          "declaringAssemblyName": "System.IO.MemoryMappedFiles"
+        }
+      ],
+      "fields": [],
+      "events": [],
+      "constructors": [
+        {
+          "stableId": "System.IO.MemoryMappedFiles:Microsoft.Win32.SafeHandles.SafeMemoryMappedFileHandle::.ctor():void",
+          "metadataToken": 100663441,
+          "canonicalSignature": "():void",
+          "normalizedSignature": "constructor|():void|static=false",
+          "isStatic": false,
+          "parameterCount": 0,
+          "declaringClrType": "Microsoft.Win32.SafeHandles.SafeMemoryMappedFileHandle",
+          "declaringAssemblyName": "System.IO.MemoryMappedFiles"
+        }
+      ],
+      "exposedMethods": [
+        {
+          "tsName": "Dispose$view",
+          "isStatic": false,
+          "tsSignatureId": "Dispose|():System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.IDisposable",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100668530
+          }
+        },
+        {
+          "tsName": "Dispose",
+          "isStatic": false,
+          "tsSignatureId": "Dispose|():System.Void|static=false",
+          "target": {
+            "declaringClrType": "Microsoft.Win32.SafeHandles.SafeMemoryMappedFileHandle",
+            "declaringAssemblyName": "System.IO.MemoryMappedFiles",
+            "metadataToken": 0
+          }
+        },
+        {
+          "tsName": "DangerousGetHandle",
+          "isStatic": false,
+          "tsSignatureId": "DangerousGetHandle|():System.IntPtr|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695051
+          }
+        },
+        {
+          "tsName": "Close",
+          "isStatic": false,
+          "tsSignatureId": "Close|():System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695054
+          }
+        },
+        {
+          "tsName": "SetHandleAsInvalid",
+          "isStatic": false,
+          "tsSignatureId": "SetHandleAsInvalid|():System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695057
+          }
+        },
+        {
+          "tsName": "DangerousAddRef",
+          "isStatic": false,
+          "tsSignatureId": "DangerousAddRef|(System.Boolean\u0026):System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695059
+          }
+        },
+        {
+          "tsName": "DangerousRelease",
+          "isStatic": false,
+          "tsSignatureId": "DangerousRelease|():System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695060
+          }
+        },
+        {
+          "tsName": "GetType",
+          "isStatic": false,
+          "tsSignatureId": "GetType|():System.Type|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664825
+          }
+        },
+        {
+          "tsName": "ToString",
+          "isStatic": false,
+          "tsSignatureId": "ToString|():System.String|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664829
+          }
+        },
+        {
+          "tsName": "Equals",
+          "isStatic": false,
+          "tsSignatureId": "Equals|(System.Object):System.Boolean|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664830
+          }
+        },
+        {
+          "tsName": "Equals",
+          "isStatic": true,
+          "tsSignatureId": "Equals|(System.Object,System.Object):System.Boolean|static=true",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664831
+          }
+        },
+        {
+          "tsName": "ReferenceEquals",
+          "isStatic": true,
+          "tsSignatureId": "ReferenceEquals|(System.Object,System.Object):System.Boolean|static=true",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664832
+          }
+        },
+        {
+          "tsName": "GetHashCode",
+          "isStatic": false,
+          "tsSignatureId": "GetHashCode|():System.Int32|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664833
+          }
+        }
+      ],
+      "exposedProperties": [
+        {
+          "tsName": "IsInvalid",
+          "isStatic": false,
+          "tsSignatureId": "IsInvalid|:System.Boolean|static=false|accessor=get",
+          "target": {
+            "declaringClrType": "Microsoft.Win32.SafeHandles.SafeMemoryMappedFileHandle",
+            "declaringAssemblyName": "System.IO.MemoryMappedFiles",
+            "metadataToken": 385876009
+          }
+        },
+        {
+          "tsName": "IsClosed",
+          "isStatic": false,
+          "tsSignatureId": "IsClosed|:System.Boolean|static=false|accessor=get",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 385879655
+          }
+        }
+      ],
+      "exposedConstructors": [
+        {
+          "isStatic": false,
+          "tsSignatureId": "constructor|():void|static=false",
+          "target": {
+            "declaringClrType": "Microsoft.Win32.SafeHandles.SafeMemoryMappedFileHandle",
+            "declaringAssemblyName": "System.IO.MemoryMappedFiles",
+            "metadataToken": 100663441
+          }
+        }
+      ]
+    },
+    {
+      "stableId": "System.IO.MemoryMappedFiles:Microsoft.Win32.SafeHandles.SafeMemoryMappedViewHandle",
+      "clrName": "Microsoft.Win32.SafeHandles.SafeMemoryMappedViewHandle",
+      "tsEmitName": "SafeMemoryMappedViewHandle",
+      "assemblyName": "System.IO.MemoryMappedFiles",
+      "metadataToken": 0,
+      "methods": [
+        {
+          "stableId": "System.Private.CoreLib:System.IDisposable::Dispose():System.Void",
+          "clrName": "Dispose",
+          "tsEmitName": "Dispose$view",
+          "metadataToken": 100668530,
+          "canonicalSignature": "():System.Void",
+          "normalizedSignature": "Dispose|():System.Void|static=false",
+          "emitScope": "ViewOnly",
+          "arity": 0,
+          "parameterCount": 0,
+          "declaringClrType": "System.IDisposable",
+          "declaringAssemblyName": "System.Private.CoreLib",
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.IO.MemoryMappedFiles:Microsoft.Win32.SafeHandles.SafeMemoryMappedViewHandle::Dispose():System.Void",
+          "clrName": "Dispose",
+          "tsEmitName": "Dispose",
+          "metadataToken": 0,
+          "canonicalSignature": "():System.Void",
+          "normalizedSignature": "Dispose|():System.Void|static=false",
+          "emitScope": "ClassSurface",
+          "arity": 0,
+          "parameterCount": 0,
+          "declaringClrType": "Microsoft.Win32.SafeHandles.SafeMemoryMappedViewHandle",
+          "declaringAssemblyName": "System.IO.MemoryMappedFiles",
+          "isExtensionMethod": false
+        }
+      ],
+      "properties": [],
+      "fields": [],
+      "events": [],
+      "constructors": [
+        {
+          "stableId": "System.IO.MemoryMappedFiles:Microsoft.Win32.SafeHandles.SafeMemoryMappedViewHandle::.ctor():void",
+          "metadataToken": 100663445,
+          "canonicalSignature": "():void",
+          "normalizedSignature": "constructor|():void|static=false",
+          "isStatic": false,
+          "parameterCount": 0,
+          "declaringClrType": "Microsoft.Win32.SafeHandles.SafeMemoryMappedViewHandle",
+          "declaringAssemblyName": "System.IO.MemoryMappedFiles"
+        }
+      ],
+      "exposedMethods": [
+        {
+          "tsName": "Dispose$view",
+          "isStatic": false,
+          "tsSignatureId": "Dispose|():System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.IDisposable",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100668530
+          }
+        },
+        {
+          "tsName": "Dispose",
+          "isStatic": false,
+          "tsSignatureId": "Dispose|():System.Void|static=false",
+          "target": {
+            "declaringClrType": "Microsoft.Win32.SafeHandles.SafeMemoryMappedViewHandle",
+            "declaringAssemblyName": "System.IO.MemoryMappedFiles",
+            "metadataToken": 0
+          }
+        },
+        {
+          "tsName": "Initialize",
+          "isStatic": false,
+          "tsSignatureId": "Initialize|(System.UInt64):System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeBuffer",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695031
+          }
+        },
+        {
+          "tsName": "Initialize",
+          "isStatic": false,
+          "tsSignatureId": "Initialize|(System.UInt32,System.UInt32):System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeBuffer",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695032
+          }
+        },
+        {
+          "tsName": "Initialize",
+          "isStatic": false,
+          "tsSignatureId": "Initialize|(System.UInt32):System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeBuffer",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695033
+          }
+        },
+        {
+          "tsName": "AcquirePointer",
+          "isStatic": false,
+          "tsSignatureId": "AcquirePointer|(System.Byte*\u0026):System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeBuffer",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695034
+          }
+        },
+        {
+          "tsName": "ReleasePointer",
+          "isStatic": false,
+          "tsSignatureId": "ReleasePointer|():System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeBuffer",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695035
+          }
+        },
+        {
+          "tsName": "Read",
+          "isStatic": false,
+          "tsSignatureId": "Read|(System.UInt64):T|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeBuffer",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695036
+          }
+        },
+        {
+          "tsName": "ReadArray",
+          "isStatic": false,
+          "tsSignatureId": "ReadArray|(System.UInt64,T[],System.Int32,System.Int32):System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeBuffer",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695037
+          }
+        },
+        {
+          "tsName": "ReadSpan",
+          "isStatic": false,
+          "tsSignatureId": "ReadSpan|(System.UInt64,Span_1):System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeBuffer",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695038
+          }
+        },
+        {
+          "tsName": "Write",
+          "isStatic": false,
+          "tsSignatureId": "Write|(System.UInt64,T):System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeBuffer",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695039
+          }
+        },
+        {
+          "tsName": "WriteArray",
+          "isStatic": false,
+          "tsSignatureId": "WriteArray|(System.UInt64,T[],System.Int32,System.Int32):System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeBuffer",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695040
+          }
+        },
+        {
+          "tsName": "WriteSpan",
+          "isStatic": false,
+          "tsSignatureId": "WriteSpan|(System.UInt64,ReadOnlySpan_1):System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeBuffer",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695041
+          }
+        },
+        {
+          "tsName": "DangerousGetHandle",
+          "isStatic": false,
+          "tsSignatureId": "DangerousGetHandle|():System.IntPtr|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695051
+          }
+        },
+        {
+          "tsName": "Close",
+          "isStatic": false,
+          "tsSignatureId": "Close|():System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695054
+          }
+        },
+        {
+          "tsName": "SetHandleAsInvalid",
+          "isStatic": false,
+          "tsSignatureId": "SetHandleAsInvalid|():System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695057
+          }
+        },
+        {
+          "tsName": "DangerousAddRef",
+          "isStatic": false,
+          "tsSignatureId": "DangerousAddRef|(System.Boolean\u0026):System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695059
+          }
+        },
+        {
+          "tsName": "DangerousRelease",
+          "isStatic": false,
+          "tsSignatureId": "DangerousRelease|():System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695060
+          }
+        },
+        {
+          "tsName": "GetType",
+          "isStatic": false,
+          "tsSignatureId": "GetType|():System.Type|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664825
+          }
+        },
+        {
+          "tsName": "ToString",
+          "isStatic": false,
+          "tsSignatureId": "ToString|():System.String|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664829
+          }
+        },
+        {
+          "tsName": "Equals",
+          "isStatic": false,
+          "tsSignatureId": "Equals|(System.Object):System.Boolean|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664830
+          }
+        },
+        {
+          "tsName": "Equals",
+          "isStatic": true,
+          "tsSignatureId": "Equals|(System.Object,System.Object):System.Boolean|static=true",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664831
+          }
+        },
+        {
+          "tsName": "ReferenceEquals",
+          "isStatic": true,
+          "tsSignatureId": "ReferenceEquals|(System.Object,System.Object):System.Boolean|static=true",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664832
+          }
+        },
+        {
+          "tsName": "GetHashCode",
+          "isStatic": false,
+          "tsSignatureId": "GetHashCode|():System.Int32|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664833
+          }
+        }
+      ],
+      "exposedProperties": [
+        {
+          "tsName": "ByteLength",
+          "isStatic": false,
+          "tsSignatureId": "ByteLength|:System.UInt64|static=false|accessor=get",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeBuffer",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 385879654
+          }
+        },
+        {
+          "tsName": "IsInvalid",
+          "isStatic": false,
+          "tsSignatureId": "IsInvalid|:System.Boolean|static=false|accessor=get",
+          "target": {
+            "declaringClrType": "Microsoft.Win32.SafeHandles.SafeHandleZeroOrMinusOneIsInvalid",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 385875980
+          }
+        },
+        {
+          "tsName": "IsClosed",
+          "isStatic": false,
+          "tsSignatureId": "IsClosed|:System.Boolean|static=false|accessor=get",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 385879655
+          }
+        }
+      ],
+      "exposedConstructors": [
+        {
+          "isStatic": false,
+          "tsSignatureId": "constructor|():void|static=false",
+          "target": {
+            "declaringClrType": "Microsoft.Win32.SafeHandles.SafeMemoryMappedViewHandle",
+            "declaringAssemblyName": "System.IO.MemoryMappedFiles",
+            "metadataToken": 100663445
+          }
+        }
+      ]
+    },
+    {
+      "stableId": "System.Security.Cryptography:Microsoft.Win32.SafeHandles.SafeNCryptHandle",
+      "clrName": "Microsoft.Win32.SafeHandles.SafeNCryptHandle",
+      "tsEmitName": "SafeNCryptHandle",
+      "assemblyName": "System.Security.Cryptography",
+      "metadataToken": 0,
+      "methods": [
+        {
+          "stableId": "System.Private.CoreLib:System.IDisposable::Dispose():System.Void",
+          "clrName": "Dispose",
+          "tsEmitName": "Dispose$view",
+          "metadataToken": 100668530,
+          "canonicalSignature": "():System.Void",
+          "normalizedSignature": "Dispose|():System.Void|static=false",
+          "emitScope": "ViewOnly",
+          "arity": 0,
+          "parameterCount": 0,
+          "declaringClrType": "System.IDisposable",
+          "declaringAssemblyName": "System.Private.CoreLib",
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.Security.Cryptography:Microsoft.Win32.SafeHandles.SafeNCryptHandle::Dispose():System.Void",
+          "clrName": "Dispose",
+          "tsEmitName": "Dispose",
+          "metadataToken": 0,
+          "canonicalSignature": "():System.Void",
+          "normalizedSignature": "Dispose|():System.Void|static=false",
+          "emitScope": "ClassSurface",
+          "arity": 0,
+          "parameterCount": 0,
+          "declaringClrType": "Microsoft.Win32.SafeHandles.SafeNCryptHandle",
+          "declaringAssemblyName": "System.Security.Cryptography",
+          "isExtensionMethod": false
+        }
+      ],
+      "properties": [],
+      "fields": [],
+      "events": [],
+      "constructors": [],
+      "exposedMethods": [
+        {
+          "tsName": "Dispose$view",
+          "isStatic": false,
+          "tsSignatureId": "Dispose|():System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.IDisposable",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100668530
+          }
+        },
+        {
+          "tsName": "Dispose",
+          "isStatic": false,
+          "tsSignatureId": "Dispose|():System.Void|static=false",
+          "target": {
+            "declaringClrType": "Microsoft.Win32.SafeHandles.SafeNCryptHandle",
+            "declaringAssemblyName": "System.Security.Cryptography",
+            "metadataToken": 0
+          }
+        },
+        {
+          "tsName": "DangerousGetHandle",
+          "isStatic": false,
+          "tsSignatureId": "DangerousGetHandle|():System.IntPtr|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695051
+          }
+        },
+        {
+          "tsName": "Close",
+          "isStatic": false,
+          "tsSignatureId": "Close|():System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695054
+          }
+        },
+        {
+          "tsName": "SetHandleAsInvalid",
+          "isStatic": false,
+          "tsSignatureId": "SetHandleAsInvalid|():System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695057
+          }
+        },
+        {
+          "tsName": "DangerousAddRef",
+          "isStatic": false,
+          "tsSignatureId": "DangerousAddRef|(System.Boolean\u0026):System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695059
+          }
+        },
+        {
+          "tsName": "DangerousRelease",
+          "isStatic": false,
+          "tsSignatureId": "DangerousRelease|():System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695060
+          }
+        },
+        {
+          "tsName": "GetType",
+          "isStatic": false,
+          "tsSignatureId": "GetType|():System.Type|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664825
+          }
+        },
+        {
+          "tsName": "ToString",
+          "isStatic": false,
+          "tsSignatureId": "ToString|():System.String|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664829
+          }
+        },
+        {
+          "tsName": "Equals",
+          "isStatic": false,
+          "tsSignatureId": "Equals|(System.Object):System.Boolean|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664830
+          }
+        },
+        {
+          "tsName": "Equals",
+          "isStatic": true,
+          "tsSignatureId": "Equals|(System.Object,System.Object):System.Boolean|static=true",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664831
+          }
+        },
+        {
+          "tsName": "ReferenceEquals",
+          "isStatic": true,
+          "tsSignatureId": "ReferenceEquals|(System.Object,System.Object):System.Boolean|static=true",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664832
+          }
+        },
+        {
+          "tsName": "GetHashCode",
+          "isStatic": false,
+          "tsSignatureId": "GetHashCode|():System.Int32|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664833
+          }
+        }
+      ],
+      "exposedProperties": [
+        {
+          "tsName": "IsInvalid",
+          "isStatic": false,
+          "tsSignatureId": "IsInvalid|:System.Boolean|static=false|accessor=get",
+          "target": {
+            "declaringClrType": "Microsoft.Win32.SafeHandles.SafeHandleZeroOrMinusOneIsInvalid",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 385875980
+          }
+        },
+        {
+          "tsName": "IsClosed",
+          "isStatic": false,
+          "tsSignatureId": "IsClosed|:System.Boolean|static=false|accessor=get",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 385879655
+          }
+        }
+      ]
+    },
+    {
+      "stableId": "System.Security.Cryptography:Microsoft.Win32.SafeHandles.SafeNCryptKeyHandle",
+      "clrName": "Microsoft.Win32.SafeHandles.SafeNCryptKeyHandle",
+      "tsEmitName": "SafeNCryptKeyHandle",
+      "assemblyName": "System.Security.Cryptography",
+      "metadataToken": 0,
+      "methods": [
+        {
+          "stableId": "System.Private.CoreLib:System.IDisposable::Dispose():System.Void",
+          "clrName": "Dispose",
+          "tsEmitName": "Dispose$view",
+          "metadataToken": 100668530,
+          "canonicalSignature": "():System.Void",
+          "normalizedSignature": "Dispose|():System.Void|static=false",
+          "emitScope": "ViewOnly",
+          "arity": 0,
+          "parameterCount": 0,
+          "declaringClrType": "System.IDisposable",
+          "declaringAssemblyName": "System.Private.CoreLib",
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.Security.Cryptography:Microsoft.Win32.SafeHandles.SafeNCryptKeyHandle::Dispose():System.Void",
+          "clrName": "Dispose",
+          "tsEmitName": "Dispose",
+          "metadataToken": 0,
+          "canonicalSignature": "():System.Void",
+          "normalizedSignature": "Dispose|():System.Void|static=false",
+          "emitScope": "ClassSurface",
+          "arity": 0,
+          "parameterCount": 0,
+          "declaringClrType": "Microsoft.Win32.SafeHandles.SafeNCryptKeyHandle",
+          "declaringAssemblyName": "System.Security.Cryptography",
+          "isExtensionMethod": false
+        }
+      ],
+      "properties": [],
+      "fields": [],
+      "events": [],
+      "constructors": [
+        {
+          "stableId": "System.Security.Cryptography:Microsoft.Win32.SafeHandles.SafeNCryptKeyHandle::.ctor():void",
+          "metadataToken": 100664165,
+          "canonicalSignature": "():void",
+          "normalizedSignature": "constructor|():void|static=false",
+          "isStatic": false,
+          "parameterCount": 0,
+          "declaringClrType": "Microsoft.Win32.SafeHandles.SafeNCryptKeyHandle",
+          "declaringAssemblyName": "System.Security.Cryptography"
+        },
+        {
+          "stableId": "System.Security.Cryptography:Microsoft.Win32.SafeHandles.SafeNCryptKeyHandle::.ctor(System.IntPtr,System.Runtime.InteropServices.SafeHandle):void",
+          "metadataToken": 100664166,
+          "canonicalSignature": "(System.IntPtr,System.Runtime.InteropServices.SafeHandle):void",
+          "normalizedSignature": "constructor|(System.IntPtr,System.Runtime.InteropServices.SafeHandle):void|static=false",
+          "isStatic": false,
+          "parameterCount": 2,
+          "declaringClrType": "Microsoft.Win32.SafeHandles.SafeNCryptKeyHandle",
+          "declaringAssemblyName": "System.Security.Cryptography"
+        }
+      ],
+      "exposedMethods": [
+        {
+          "tsName": "Dispose$view",
+          "isStatic": false,
+          "tsSignatureId": "Dispose|():System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.IDisposable",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100668530
+          }
+        },
+        {
+          "tsName": "Dispose",
+          "isStatic": false,
+          "tsSignatureId": "Dispose|():System.Void|static=false",
+          "target": {
+            "declaringClrType": "Microsoft.Win32.SafeHandles.SafeNCryptKeyHandle",
+            "declaringAssemblyName": "System.Security.Cryptography",
+            "metadataToken": 0
+          }
+        },
+        {
+          "tsName": "DangerousGetHandle",
+          "isStatic": false,
+          "tsSignatureId": "DangerousGetHandle|():System.IntPtr|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695051
+          }
+        },
+        {
+          "tsName": "Close",
+          "isStatic": false,
+          "tsSignatureId": "Close|():System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695054
+          }
+        },
+        {
+          "tsName": "SetHandleAsInvalid",
+          "isStatic": false,
+          "tsSignatureId": "SetHandleAsInvalid|():System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695057
+          }
+        },
+        {
+          "tsName": "DangerousAddRef",
+          "isStatic": false,
+          "tsSignatureId": "DangerousAddRef|(System.Boolean\u0026):System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695059
+          }
+        },
+        {
+          "tsName": "DangerousRelease",
+          "isStatic": false,
+          "tsSignatureId": "DangerousRelease|():System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695060
+          }
+        },
+        {
+          "tsName": "GetType",
+          "isStatic": false,
+          "tsSignatureId": "GetType|():System.Type|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664825
+          }
+        },
+        {
+          "tsName": "ToString",
+          "isStatic": false,
+          "tsSignatureId": "ToString|():System.String|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664829
+          }
+        },
+        {
+          "tsName": "Equals",
+          "isStatic": false,
+          "tsSignatureId": "Equals|(System.Object):System.Boolean|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664830
+          }
+        },
+        {
+          "tsName": "Equals",
+          "isStatic": true,
+          "tsSignatureId": "Equals|(System.Object,System.Object):System.Boolean|static=true",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664831
+          }
+        },
+        {
+          "tsName": "ReferenceEquals",
+          "isStatic": true,
+          "tsSignatureId": "ReferenceEquals|(System.Object,System.Object):System.Boolean|static=true",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664832
+          }
+        },
+        {
+          "tsName": "GetHashCode",
+          "isStatic": false,
+          "tsSignatureId": "GetHashCode|():System.Int32|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664833
+          }
+        }
+      ],
+      "exposedProperties": [
+        {
+          "tsName": "IsInvalid",
+          "isStatic": false,
+          "tsSignatureId": "IsInvalid|:System.Boolean|static=false|accessor=get",
+          "target": {
+            "declaringClrType": "Microsoft.Win32.SafeHandles.SafeHandleZeroOrMinusOneIsInvalid",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 385875980
+          }
+        },
+        {
+          "tsName": "IsClosed",
+          "isStatic": false,
+          "tsSignatureId": "IsClosed|:System.Boolean|static=false|accessor=get",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 385879655
+          }
+        }
+      ],
+      "exposedConstructors": [
+        {
+          "isStatic": false,
+          "tsSignatureId": "constructor|():void|static=false",
+          "target": {
+            "declaringClrType": "Microsoft.Win32.SafeHandles.SafeNCryptKeyHandle",
+            "declaringAssemblyName": "System.Security.Cryptography",
+            "metadataToken": 100664165
+          }
+        },
+        {
+          "isStatic": false,
+          "tsSignatureId": "constructor|(System.IntPtr,System.Runtime.InteropServices.SafeHandle):void|static=false",
+          "target": {
+            "declaringClrType": "Microsoft.Win32.SafeHandles.SafeNCryptKeyHandle",
+            "declaringAssemblyName": "System.Security.Cryptography",
+            "metadataToken": 100664166
+          }
+        }
+      ]
+    },
+    {
+      "stableId": "System.Security.Cryptography:Microsoft.Win32.SafeHandles.SafeNCryptProviderHandle",
+      "clrName": "Microsoft.Win32.SafeHandles.SafeNCryptProviderHandle",
+      "tsEmitName": "SafeNCryptProviderHandle",
+      "assemblyName": "System.Security.Cryptography",
+      "metadataToken": 0,
+      "methods": [
+        {
+          "stableId": "System.Private.CoreLib:System.IDisposable::Dispose():System.Void",
+          "clrName": "Dispose",
+          "tsEmitName": "Dispose$view",
+          "metadataToken": 100668530,
+          "canonicalSignature": "():System.Void",
+          "normalizedSignature": "Dispose|():System.Void|static=false",
+          "emitScope": "ViewOnly",
+          "arity": 0,
+          "parameterCount": 0,
+          "declaringClrType": "System.IDisposable",
+          "declaringAssemblyName": "System.Private.CoreLib",
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.Security.Cryptography:Microsoft.Win32.SafeHandles.SafeNCryptProviderHandle::Dispose():System.Void",
+          "clrName": "Dispose",
+          "tsEmitName": "Dispose",
+          "metadataToken": 0,
+          "canonicalSignature": "():System.Void",
+          "normalizedSignature": "Dispose|():System.Void|static=false",
+          "emitScope": "ClassSurface",
+          "arity": 0,
+          "parameterCount": 0,
+          "declaringClrType": "Microsoft.Win32.SafeHandles.SafeNCryptProviderHandle",
+          "declaringAssemblyName": "System.Security.Cryptography",
+          "isExtensionMethod": false
+        }
+      ],
+      "properties": [],
+      "fields": [],
+      "events": [],
+      "constructors": [
+        {
+          "stableId": "System.Security.Cryptography:Microsoft.Win32.SafeHandles.SafeNCryptProviderHandle::.ctor():void",
+          "metadataToken": 100664168,
+          "canonicalSignature": "():void",
+          "normalizedSignature": "constructor|():void|static=false",
+          "isStatic": false,
+          "parameterCount": 0,
+          "declaringClrType": "Microsoft.Win32.SafeHandles.SafeNCryptProviderHandle",
+          "declaringAssemblyName": "System.Security.Cryptography"
+        }
+      ],
+      "exposedMethods": [
+        {
+          "tsName": "Dispose$view",
+          "isStatic": false,
+          "tsSignatureId": "Dispose|():System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.IDisposable",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100668530
+          }
+        },
+        {
+          "tsName": "Dispose",
+          "isStatic": false,
+          "tsSignatureId": "Dispose|():System.Void|static=false",
+          "target": {
+            "declaringClrType": "Microsoft.Win32.SafeHandles.SafeNCryptProviderHandle",
+            "declaringAssemblyName": "System.Security.Cryptography",
+            "metadataToken": 0
+          }
+        },
+        {
+          "tsName": "DangerousGetHandle",
+          "isStatic": false,
+          "tsSignatureId": "DangerousGetHandle|():System.IntPtr|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695051
+          }
+        },
+        {
+          "tsName": "Close",
+          "isStatic": false,
+          "tsSignatureId": "Close|():System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695054
+          }
+        },
+        {
+          "tsName": "SetHandleAsInvalid",
+          "isStatic": false,
+          "tsSignatureId": "SetHandleAsInvalid|():System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695057
+          }
+        },
+        {
+          "tsName": "DangerousAddRef",
+          "isStatic": false,
+          "tsSignatureId": "DangerousAddRef|(System.Boolean\u0026):System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695059
+          }
+        },
+        {
+          "tsName": "DangerousRelease",
+          "isStatic": false,
+          "tsSignatureId": "DangerousRelease|():System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695060
+          }
+        },
+        {
+          "tsName": "GetType",
+          "isStatic": false,
+          "tsSignatureId": "GetType|():System.Type|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664825
+          }
+        },
+        {
+          "tsName": "ToString",
+          "isStatic": false,
+          "tsSignatureId": "ToString|():System.String|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664829
+          }
+        },
+        {
+          "tsName": "Equals",
+          "isStatic": false,
+          "tsSignatureId": "Equals|(System.Object):System.Boolean|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664830
+          }
+        },
+        {
+          "tsName": "Equals",
+          "isStatic": true,
+          "tsSignatureId": "Equals|(System.Object,System.Object):System.Boolean|static=true",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664831
+          }
+        },
+        {
+          "tsName": "ReferenceEquals",
+          "isStatic": true,
+          "tsSignatureId": "ReferenceEquals|(System.Object,System.Object):System.Boolean|static=true",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664832
+          }
+        },
+        {
+          "tsName": "GetHashCode",
+          "isStatic": false,
+          "tsSignatureId": "GetHashCode|():System.Int32|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664833
+          }
+        }
+      ],
+      "exposedProperties": [
+        {
+          "tsName": "IsInvalid",
+          "isStatic": false,
+          "tsSignatureId": "IsInvalid|:System.Boolean|static=false|accessor=get",
+          "target": {
+            "declaringClrType": "Microsoft.Win32.SafeHandles.SafeHandleZeroOrMinusOneIsInvalid",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 385875980
+          }
+        },
+        {
+          "tsName": "IsClosed",
+          "isStatic": false,
+          "tsSignatureId": "IsClosed|:System.Boolean|static=false|accessor=get",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 385879655
+          }
+        }
+      ],
+      "exposedConstructors": [
+        {
+          "isStatic": false,
+          "tsSignatureId": "constructor|():void|static=false",
+          "target": {
+            "declaringClrType": "Microsoft.Win32.SafeHandles.SafeNCryptProviderHandle",
+            "declaringAssemblyName": "System.Security.Cryptography",
+            "metadataToken": 100664168
+          }
+        }
+      ]
+    },
+    {
+      "stableId": "System.Security.Cryptography:Microsoft.Win32.SafeHandles.SafeNCryptSecretHandle",
+      "clrName": "Microsoft.Win32.SafeHandles.SafeNCryptSecretHandle",
+      "tsEmitName": "SafeNCryptSecretHandle",
+      "assemblyName": "System.Security.Cryptography",
+      "metadataToken": 0,
+      "methods": [
+        {
+          "stableId": "System.Private.CoreLib:System.IDisposable::Dispose():System.Void",
+          "clrName": "Dispose",
+          "tsEmitName": "Dispose$view",
+          "metadataToken": 100668530,
+          "canonicalSignature": "():System.Void",
+          "normalizedSignature": "Dispose|():System.Void|static=false",
+          "emitScope": "ViewOnly",
+          "arity": 0,
+          "parameterCount": 0,
+          "declaringClrType": "System.IDisposable",
+          "declaringAssemblyName": "System.Private.CoreLib",
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.Security.Cryptography:Microsoft.Win32.SafeHandles.SafeNCryptSecretHandle::Dispose():System.Void",
+          "clrName": "Dispose",
+          "tsEmitName": "Dispose",
+          "metadataToken": 0,
+          "canonicalSignature": "():System.Void",
+          "normalizedSignature": "Dispose|():System.Void|static=false",
+          "emitScope": "ClassSurface",
+          "arity": 0,
+          "parameterCount": 0,
+          "declaringClrType": "Microsoft.Win32.SafeHandles.SafeNCryptSecretHandle",
+          "declaringAssemblyName": "System.Security.Cryptography",
+          "isExtensionMethod": false
+        }
+      ],
+      "properties": [],
+      "fields": [],
+      "events": [],
+      "constructors": [
+        {
+          "stableId": "System.Security.Cryptography:Microsoft.Win32.SafeHandles.SafeNCryptSecretHandle::.ctor():void",
+          "metadataToken": 100664170,
+          "canonicalSignature": "():void",
+          "normalizedSignature": "constructor|():void|static=false",
+          "isStatic": false,
+          "parameterCount": 0,
+          "declaringClrType": "Microsoft.Win32.SafeHandles.SafeNCryptSecretHandle",
+          "declaringAssemblyName": "System.Security.Cryptography"
+        }
+      ],
+      "exposedMethods": [
+        {
+          "tsName": "Dispose$view",
+          "isStatic": false,
+          "tsSignatureId": "Dispose|():System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.IDisposable",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100668530
+          }
+        },
+        {
+          "tsName": "Dispose",
+          "isStatic": false,
+          "tsSignatureId": "Dispose|():System.Void|static=false",
+          "target": {
+            "declaringClrType": "Microsoft.Win32.SafeHandles.SafeNCryptSecretHandle",
+            "declaringAssemblyName": "System.Security.Cryptography",
+            "metadataToken": 0
+          }
+        },
+        {
+          "tsName": "DangerousGetHandle",
+          "isStatic": false,
+          "tsSignatureId": "DangerousGetHandle|():System.IntPtr|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695051
+          }
+        },
+        {
+          "tsName": "Close",
+          "isStatic": false,
+          "tsSignatureId": "Close|():System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695054
+          }
+        },
+        {
+          "tsName": "SetHandleAsInvalid",
+          "isStatic": false,
+          "tsSignatureId": "SetHandleAsInvalid|():System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695057
+          }
+        },
+        {
+          "tsName": "DangerousAddRef",
+          "isStatic": false,
+          "tsSignatureId": "DangerousAddRef|(System.Boolean\u0026):System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695059
+          }
+        },
+        {
+          "tsName": "DangerousRelease",
+          "isStatic": false,
+          "tsSignatureId": "DangerousRelease|():System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695060
+          }
+        },
+        {
+          "tsName": "GetType",
+          "isStatic": false,
+          "tsSignatureId": "GetType|():System.Type|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664825
+          }
+        },
+        {
+          "tsName": "ToString",
+          "isStatic": false,
+          "tsSignatureId": "ToString|():System.String|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664829
+          }
+        },
+        {
+          "tsName": "Equals",
+          "isStatic": false,
+          "tsSignatureId": "Equals|(System.Object):System.Boolean|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664830
+          }
+        },
+        {
+          "tsName": "Equals",
+          "isStatic": true,
+          "tsSignatureId": "Equals|(System.Object,System.Object):System.Boolean|static=true",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664831
+          }
+        },
+        {
+          "tsName": "ReferenceEquals",
+          "isStatic": true,
+          "tsSignatureId": "ReferenceEquals|(System.Object,System.Object):System.Boolean|static=true",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664832
+          }
+        },
+        {
+          "tsName": "GetHashCode",
+          "isStatic": false,
+          "tsSignatureId": "GetHashCode|():System.Int32|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664833
+          }
+        }
+      ],
+      "exposedProperties": [
+        {
+          "tsName": "IsInvalid",
+          "isStatic": false,
+          "tsSignatureId": "IsInvalid|:System.Boolean|static=false|accessor=get",
+          "target": {
+            "declaringClrType": "Microsoft.Win32.SafeHandles.SafeHandleZeroOrMinusOneIsInvalid",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 385875980
+          }
+        },
+        {
+          "tsName": "IsClosed",
+          "isStatic": false,
+          "tsSignatureId": "IsClosed|:System.Boolean|static=false|accessor=get",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 385879655
+          }
+        }
+      ],
+      "exposedConstructors": [
+        {
+          "isStatic": false,
+          "tsSignatureId": "constructor|():void|static=false",
+          "target": {
+            "declaringClrType": "Microsoft.Win32.SafeHandles.SafeNCryptSecretHandle",
+            "declaringAssemblyName": "System.Security.Cryptography",
+            "metadataToken": 100664170
+          }
+        }
+      ]
+    },
+    {
+      "stableId": "System.IO.Pipes:Microsoft.Win32.SafeHandles.SafePipeHandle",
+      "clrName": "Microsoft.Win32.SafeHandles.SafePipeHandle",
+      "tsEmitName": "SafePipeHandle",
+      "assemblyName": "System.IO.Pipes",
+      "metadataToken": 0,
+      "methods": [
+        {
+          "stableId": "System.Private.CoreLib:System.IDisposable::Dispose():System.Void",
+          "clrName": "Dispose",
+          "tsEmitName": "Dispose$view",
+          "metadataToken": 100668530,
+          "canonicalSignature": "():System.Void",
+          "normalizedSignature": "Dispose|():System.Void|static=false",
+          "emitScope": "ViewOnly",
+          "arity": 0,
+          "parameterCount": 0,
+          "declaringClrType": "System.IDisposable",
+          "declaringAssemblyName": "System.Private.CoreLib",
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.IO.Pipes:Microsoft.Win32.SafeHandles.SafePipeHandle::Dispose():System.Void",
+          "clrName": "Dispose",
+          "tsEmitName": "Dispose",
+          "metadataToken": 0,
+          "canonicalSignature": "():System.Void",
+          "normalizedSignature": "Dispose|():System.Void|static=false",
+          "emitScope": "ClassSurface",
+          "arity": 0,
+          "parameterCount": 0,
+          "declaringClrType": "Microsoft.Win32.SafeHandles.SafePipeHandle",
+          "declaringAssemblyName": "System.IO.Pipes",
+          "isExtensionMethod": false
+        }
+      ],
+      "properties": [
+        {
+          "stableId": "System.IO.Pipes:Microsoft.Win32.SafeHandles.SafePipeHandle::IsInvalid:System.Boolean",
+          "clrName": "IsInvalid",
+          "tsEmitName": "IsInvalid",
+          "metadataToken": 385876046,
+          "canonicalSignature": ":System.Boolean",
+          "normalizedSignature": "IsInvalid|:System.Boolean|static=false|accessor=get",
+          "emitScope": "ClassSurface",
+          "isIndexer": false,
+          "hasGetter": true,
+          "hasSetter": false,
+          "declaringClrType": "Microsoft.Win32.SafeHandles.SafePipeHandle",
+          "declaringAssemblyName": "System.IO.Pipes"
+        }
+      ],
+      "fields": [],
+      "events": [],
+      "constructors": [
+        {
+          "stableId": "System.IO.Pipes:Microsoft.Win32.SafeHandles.SafePipeHandle::.ctor():void",
+          "metadataToken": 100663551,
+          "canonicalSignature": "():void",
+          "normalizedSignature": "constructor|():void|static=false",
+          "isStatic": false,
+          "parameterCount": 0,
+          "declaringClrType": "Microsoft.Win32.SafeHandles.SafePipeHandle",
+          "declaringAssemblyName": "System.IO.Pipes"
+        },
+        {
+          "stableId": "System.IO.Pipes:Microsoft.Win32.SafeHandles.SafePipeHandle::.ctor(System.IntPtr,System.Boolean):void",
+          "metadataToken": 100663552,
+          "canonicalSignature": "(System.IntPtr,System.Boolean):void",
+          "normalizedSignature": "constructor|(System.IntPtr,System.Boolean):void|static=false",
+          "isStatic": false,
+          "parameterCount": 2,
+          "declaringClrType": "Microsoft.Win32.SafeHandles.SafePipeHandle",
+          "declaringAssemblyName": "System.IO.Pipes"
+        }
+      ],
+      "exposedMethods": [
+        {
+          "tsName": "Dispose$view",
+          "isStatic": false,
+          "tsSignatureId": "Dispose|():System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.IDisposable",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100668530
+          }
+        },
+        {
+          "tsName": "Dispose",
+          "isStatic": false,
+          "tsSignatureId": "Dispose|():System.Void|static=false",
+          "target": {
+            "declaringClrType": "Microsoft.Win32.SafeHandles.SafePipeHandle",
+            "declaringAssemblyName": "System.IO.Pipes",
+            "metadataToken": 0
+          }
+        },
+        {
+          "tsName": "DangerousGetHandle",
+          "isStatic": false,
+          "tsSignatureId": "DangerousGetHandle|():System.IntPtr|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695051
+          }
+        },
+        {
+          "tsName": "Close",
+          "isStatic": false,
+          "tsSignatureId": "Close|():System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695054
+          }
+        },
+        {
+          "tsName": "SetHandleAsInvalid",
+          "isStatic": false,
+          "tsSignatureId": "SetHandleAsInvalid|():System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695057
+          }
+        },
+        {
+          "tsName": "DangerousAddRef",
+          "isStatic": false,
+          "tsSignatureId": "DangerousAddRef|(System.Boolean\u0026):System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695059
+          }
+        },
+        {
+          "tsName": "DangerousRelease",
+          "isStatic": false,
+          "tsSignatureId": "DangerousRelease|():System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695060
+          }
+        },
+        {
+          "tsName": "GetType",
+          "isStatic": false,
+          "tsSignatureId": "GetType|():System.Type|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664825
+          }
+        },
+        {
+          "tsName": "ToString",
+          "isStatic": false,
+          "tsSignatureId": "ToString|():System.String|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664829
+          }
+        },
+        {
+          "tsName": "Equals",
+          "isStatic": false,
+          "tsSignatureId": "Equals|(System.Object):System.Boolean|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664830
+          }
+        },
+        {
+          "tsName": "Equals",
+          "isStatic": true,
+          "tsSignatureId": "Equals|(System.Object,System.Object):System.Boolean|static=true",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664831
+          }
+        },
+        {
+          "tsName": "ReferenceEquals",
+          "isStatic": true,
+          "tsSignatureId": "ReferenceEquals|(System.Object,System.Object):System.Boolean|static=true",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664832
+          }
+        },
+        {
+          "tsName": "GetHashCode",
+          "isStatic": false,
+          "tsSignatureId": "GetHashCode|():System.Int32|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664833
+          }
+        }
+      ],
+      "exposedProperties": [
+        {
+          "tsName": "IsInvalid",
+          "isStatic": false,
+          "tsSignatureId": "IsInvalid|:System.Boolean|static=false|accessor=get",
+          "target": {
+            "declaringClrType": "Microsoft.Win32.SafeHandles.SafePipeHandle",
+            "declaringAssemblyName": "System.IO.Pipes",
+            "metadataToken": 385876046
+          }
+        },
+        {
+          "tsName": "IsClosed",
+          "isStatic": false,
+          "tsSignatureId": "IsClosed|:System.Boolean|static=false|accessor=get",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 385879655
+          }
+        }
+      ],
+      "exposedConstructors": [
+        {
+          "isStatic": false,
+          "tsSignatureId": "constructor|():void|static=false",
+          "target": {
+            "declaringClrType": "Microsoft.Win32.SafeHandles.SafePipeHandle",
+            "declaringAssemblyName": "System.IO.Pipes",
+            "metadataToken": 100663551
+          }
+        },
+        {
+          "isStatic": false,
+          "tsSignatureId": "constructor|(System.IntPtr,System.Boolean):void|static=false",
+          "target": {
+            "declaringClrType": "Microsoft.Win32.SafeHandles.SafePipeHandle",
+            "declaringAssemblyName": "System.IO.Pipes",
+            "metadataToken": 100663552
+          }
+        }
+      ]
+    },
+    {
+      "stableId": "System.Diagnostics.Process:Microsoft.Win32.SafeHandles.SafeProcessHandle",
+      "clrName": "Microsoft.Win32.SafeHandles.SafeProcessHandle",
+      "tsEmitName": "SafeProcessHandle",
+      "assemblyName": "System.Diagnostics.Process",
+      "metadataToken": 0,
+      "methods": [
+        {
+          "stableId": "System.Private.CoreLib:System.IDisposable::Dispose():System.Void",
+          "clrName": "Dispose",
+          "tsEmitName": "Dispose$view",
+          "metadataToken": 100668530,
+          "canonicalSignature": "():System.Void",
+          "normalizedSignature": "Dispose|():System.Void|static=false",
+          "emitScope": "ViewOnly",
+          "arity": 0,
+          "parameterCount": 0,
+          "declaringClrType": "System.IDisposable",
+          "declaringAssemblyName": "System.Private.CoreLib",
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.Diagnostics.Process:Microsoft.Win32.SafeHandles.SafeProcessHandle::Dispose():System.Void",
+          "clrName": "Dispose",
+          "tsEmitName": "Dispose",
+          "metadataToken": 0,
+          "canonicalSignature": "():System.Void",
+          "normalizedSignature": "Dispose|():System.Void|static=false",
+          "emitScope": "ClassSurface",
+          "arity": 0,
+          "parameterCount": 0,
+          "declaringClrType": "Microsoft.Win32.SafeHandles.SafeProcessHandle",
+          "declaringAssemblyName": "System.Diagnostics.Process",
+          "isExtensionMethod": false
+        }
+      ],
+      "properties": [],
+      "fields": [],
+      "events": [],
+      "constructors": [
+        {
+          "stableId": "System.Diagnostics.Process:Microsoft.Win32.SafeHandles.SafeProcessHandle::.ctor():void",
+          "metadataToken": 100663930,
+          "canonicalSignature": "():void",
+          "normalizedSignature": "constructor|():void|static=false",
+          "isStatic": false,
+          "parameterCount": 0,
+          "declaringClrType": "Microsoft.Win32.SafeHandles.SafeProcessHandle",
+          "declaringAssemblyName": "System.Diagnostics.Process"
+        },
+        {
+          "stableId": "System.Diagnostics.Process:Microsoft.Win32.SafeHandles.SafeProcessHandle::.ctor(System.IntPtr,System.Boolean):void",
+          "metadataToken": 100663932,
+          "canonicalSignature": "(System.IntPtr,System.Boolean):void",
+          "normalizedSignature": "constructor|(System.IntPtr,System.Boolean):void|static=false",
+          "isStatic": false,
+          "parameterCount": 2,
+          "declaringClrType": "Microsoft.Win32.SafeHandles.SafeProcessHandle",
+          "declaringAssemblyName": "System.Diagnostics.Process"
+        }
+      ],
+      "exposedMethods": [
+        {
+          "tsName": "Dispose$view",
+          "isStatic": false,
+          "tsSignatureId": "Dispose|():System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.IDisposable",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100668530
+          }
+        },
+        {
+          "tsName": "Dispose",
+          "isStatic": false,
+          "tsSignatureId": "Dispose|():System.Void|static=false",
+          "target": {
+            "declaringClrType": "Microsoft.Win32.SafeHandles.SafeProcessHandle",
+            "declaringAssemblyName": "System.Diagnostics.Process",
+            "metadataToken": 0
+          }
+        },
+        {
+          "tsName": "DangerousGetHandle",
+          "isStatic": false,
+          "tsSignatureId": "DangerousGetHandle|():System.IntPtr|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695051
+          }
+        },
+        {
+          "tsName": "Close",
+          "isStatic": false,
+          "tsSignatureId": "Close|():System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695054
+          }
+        },
+        {
+          "tsName": "SetHandleAsInvalid",
+          "isStatic": false,
+          "tsSignatureId": "SetHandleAsInvalid|():System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695057
+          }
+        },
+        {
+          "tsName": "DangerousAddRef",
+          "isStatic": false,
+          "tsSignatureId": "DangerousAddRef|(System.Boolean\u0026):System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695059
+          }
+        },
+        {
+          "tsName": "DangerousRelease",
+          "isStatic": false,
+          "tsSignatureId": "DangerousRelease|():System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695060
+          }
+        },
+        {
+          "tsName": "GetType",
+          "isStatic": false,
+          "tsSignatureId": "GetType|():System.Type|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664825
+          }
+        },
+        {
+          "tsName": "ToString",
+          "isStatic": false,
+          "tsSignatureId": "ToString|():System.String|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664829
+          }
+        },
+        {
+          "tsName": "Equals",
+          "isStatic": false,
+          "tsSignatureId": "Equals|(System.Object):System.Boolean|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664830
+          }
+        },
+        {
+          "tsName": "Equals",
+          "isStatic": true,
+          "tsSignatureId": "Equals|(System.Object,System.Object):System.Boolean|static=true",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664831
+          }
+        },
+        {
+          "tsName": "ReferenceEquals",
+          "isStatic": true,
+          "tsSignatureId": "ReferenceEquals|(System.Object,System.Object):System.Boolean|static=true",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664832
+          }
+        },
+        {
+          "tsName": "GetHashCode",
+          "isStatic": false,
+          "tsSignatureId": "GetHashCode|():System.Int32|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664833
+          }
+        }
+      ],
+      "exposedProperties": [
+        {
+          "tsName": "IsInvalid",
+          "isStatic": false,
+          "tsSignatureId": "IsInvalid|:System.Boolean|static=false|accessor=get",
+          "target": {
+            "declaringClrType": "Microsoft.Win32.SafeHandles.SafeHandleZeroOrMinusOneIsInvalid",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 385875980
+          }
+        },
+        {
+          "tsName": "IsClosed",
+          "isStatic": false,
+          "tsSignatureId": "IsClosed|:System.Boolean|static=false|accessor=get",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 385879655
+          }
+        }
+      ],
+      "exposedConstructors": [
+        {
+          "isStatic": false,
+          "tsSignatureId": "constructor|():void|static=false",
+          "target": {
+            "declaringClrType": "Microsoft.Win32.SafeHandles.SafeProcessHandle",
+            "declaringAssemblyName": "System.Diagnostics.Process",
+            "metadataToken": 100663930
+          }
+        },
+        {
+          "isStatic": false,
+          "tsSignatureId": "constructor|(System.IntPtr,System.Boolean):void|static=false",
+          "target": {
+            "declaringClrType": "Microsoft.Win32.SafeHandles.SafeProcessHandle",
+            "declaringAssemblyName": "System.Diagnostics.Process",
+            "metadataToken": 100663932
+          }
+        }
+      ]
+    },
+    {
+      "stableId": "Microsoft.Win32.Registry:Microsoft.Win32.SafeHandles.SafeRegistryHandle",
+      "clrName": "Microsoft.Win32.SafeHandles.SafeRegistryHandle",
+      "tsEmitName": "SafeRegistryHandle",
+      "assemblyName": "Microsoft.Win32.Registry",
+      "metadataToken": 0,
+      "methods": [
+        {
+          "stableId": "System.Private.CoreLib:System.IDisposable::Dispose():System.Void",
+          "clrName": "Dispose",
+          "tsEmitName": "Dispose$view",
+          "metadataToken": 100668530,
+          "canonicalSignature": "():System.Void",
+          "normalizedSignature": "Dispose|():System.Void|static=false",
+          "emitScope": "ViewOnly",
+          "arity": 0,
+          "parameterCount": 0,
+          "declaringClrType": "System.IDisposable",
+          "declaringAssemblyName": "System.Private.CoreLib",
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "Microsoft.Win32.Registry:Microsoft.Win32.SafeHandles.SafeRegistryHandle::Dispose():System.Void",
+          "clrName": "Dispose",
+          "tsEmitName": "Dispose",
+          "metadataToken": 0,
+          "canonicalSignature": "():System.Void",
+          "normalizedSignature": "Dispose|():System.Void|static=false",
+          "emitScope": "ClassSurface",
+          "arity": 0,
+          "parameterCount": 0,
+          "declaringClrType": "Microsoft.Win32.SafeHandles.SafeRegistryHandle",
+          "declaringAssemblyName": "Microsoft.Win32.Registry",
+          "isExtensionMethod": false
+        }
+      ],
+      "properties": [],
+      "fields": [],
+      "events": [],
+      "constructors": [
+        {
+          "stableId": "Microsoft.Win32.Registry:Microsoft.Win32.SafeHandles.SafeRegistryHandle::.ctor():void",
+          "metadataToken": 100663344,
+          "canonicalSignature": "():void",
+          "normalizedSignature": "constructor|():void|static=false",
+          "isStatic": false,
+          "parameterCount": 0,
+          "declaringClrType": "Microsoft.Win32.SafeHandles.SafeRegistryHandle",
+          "declaringAssemblyName": "Microsoft.Win32.Registry"
+        },
+        {
+          "stableId": "Microsoft.Win32.Registry:Microsoft.Win32.SafeHandles.SafeRegistryHandle::.ctor(System.IntPtr,System.Boolean):void",
+          "metadataToken": 100663345,
+          "canonicalSignature": "(System.IntPtr,System.Boolean):void",
+          "normalizedSignature": "constructor|(System.IntPtr,System.Boolean):void|static=false",
+          "isStatic": false,
+          "parameterCount": 2,
+          "declaringClrType": "Microsoft.Win32.SafeHandles.SafeRegistryHandle",
+          "declaringAssemblyName": "Microsoft.Win32.Registry"
+        }
+      ],
+      "exposedMethods": [
+        {
+          "tsName": "Dispose$view",
+          "isStatic": false,
+          "tsSignatureId": "Dispose|():System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.IDisposable",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100668530
+          }
+        },
+        {
+          "tsName": "Dispose",
+          "isStatic": false,
+          "tsSignatureId": "Dispose|():System.Void|static=false",
+          "target": {
+            "declaringClrType": "Microsoft.Win32.SafeHandles.SafeRegistryHandle",
+            "declaringAssemblyName": "Microsoft.Win32.Registry",
+            "metadataToken": 0
+          }
+        },
+        {
+          "tsName": "DangerousGetHandle",
+          "isStatic": false,
+          "tsSignatureId": "DangerousGetHandle|():System.IntPtr|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695051
+          }
+        },
+        {
+          "tsName": "Close",
+          "isStatic": false,
+          "tsSignatureId": "Close|():System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695054
+          }
+        },
+        {
+          "tsName": "SetHandleAsInvalid",
+          "isStatic": false,
+          "tsSignatureId": "SetHandleAsInvalid|():System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695057
+          }
+        },
+        {
+          "tsName": "DangerousAddRef",
+          "isStatic": false,
+          "tsSignatureId": "DangerousAddRef|(System.Boolean\u0026):System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695059
+          }
+        },
+        {
+          "tsName": "DangerousRelease",
+          "isStatic": false,
+          "tsSignatureId": "DangerousRelease|():System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695060
+          }
+        },
+        {
+          "tsName": "GetType",
+          "isStatic": false,
+          "tsSignatureId": "GetType|():System.Type|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664825
+          }
+        },
+        {
+          "tsName": "ToString",
+          "isStatic": false,
+          "tsSignatureId": "ToString|():System.String|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664829
+          }
+        },
+        {
+          "tsName": "Equals",
+          "isStatic": false,
+          "tsSignatureId": "Equals|(System.Object):System.Boolean|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664830
+          }
+        },
+        {
+          "tsName": "Equals",
+          "isStatic": true,
+          "tsSignatureId": "Equals|(System.Object,System.Object):System.Boolean|static=true",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664831
+          }
+        },
+        {
+          "tsName": "ReferenceEquals",
+          "isStatic": true,
+          "tsSignatureId": "ReferenceEquals|(System.Object,System.Object):System.Boolean|static=true",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664832
+          }
+        },
+        {
+          "tsName": "GetHashCode",
+          "isStatic": false,
+          "tsSignatureId": "GetHashCode|():System.Int32|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664833
+          }
+        }
+      ],
+      "exposedProperties": [
+        {
+          "tsName": "IsInvalid",
+          "isStatic": false,
+          "tsSignatureId": "IsInvalid|:System.Boolean|static=false|accessor=get",
+          "target": {
+            "declaringClrType": "Microsoft.Win32.SafeHandles.SafeHandleZeroOrMinusOneIsInvalid",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 385875980
+          }
+        },
+        {
+          "tsName": "IsClosed",
+          "isStatic": false,
+          "tsSignatureId": "IsClosed|:System.Boolean|static=false|accessor=get",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 385879655
+          }
+        }
+      ],
+      "exposedConstructors": [
+        {
+          "isStatic": false,
+          "tsSignatureId": "constructor|():void|static=false",
+          "target": {
+            "declaringClrType": "Microsoft.Win32.SafeHandles.SafeRegistryHandle",
+            "declaringAssemblyName": "Microsoft.Win32.Registry",
+            "metadataToken": 100663344
+          }
+        },
+        {
+          "isStatic": false,
+          "tsSignatureId": "constructor|(System.IntPtr,System.Boolean):void|static=false",
+          "target": {
+            "declaringClrType": "Microsoft.Win32.SafeHandles.SafeRegistryHandle",
+            "declaringAssemblyName": "Microsoft.Win32.Registry",
+            "metadataToken": 100663345
+          }
+        }
+      ]
+    },
+    {
+      "stableId": "System.Private.CoreLib:Microsoft.Win32.SafeHandles.SafeWaitHandle",
+      "clrName": "Microsoft.Win32.SafeHandles.SafeWaitHandle",
+      "tsEmitName": "SafeWaitHandle",
+      "assemblyName": "System.Private.CoreLib",
+      "metadataToken": 0,
+      "methods": [
+        {
+          "stableId": "System.Private.CoreLib:System.IDisposable::Dispose():System.Void",
+          "clrName": "Dispose",
+          "tsEmitName": "Dispose$view",
+          "metadataToken": 100668530,
+          "canonicalSignature": "():System.Void",
+          "normalizedSignature": "Dispose|():System.Void|static=false",
+          "emitScope": "ViewOnly",
+          "arity": 0,
+          "parameterCount": 0,
+          "declaringClrType": "System.IDisposable",
+          "declaringAssemblyName": "System.Private.CoreLib",
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.Private.CoreLib:Microsoft.Win32.SafeHandles.SafeWaitHandle::Dispose():System.Void",
+          "clrName": "Dispose",
+          "tsEmitName": "Dispose",
+          "metadataToken": 0,
+          "canonicalSignature": "():System.Void",
+          "normalizedSignature": "Dispose|():System.Void|static=false",
+          "emitScope": "ClassSurface",
+          "arity": 0,
+          "parameterCount": 0,
+          "declaringClrType": "Microsoft.Win32.SafeHandles.SafeWaitHandle",
+          "declaringAssemblyName": "System.Private.CoreLib",
+          "isExtensionMethod": false
+        }
+      ],
+      "properties": [],
+      "fields": [],
+      "events": [],
+      "constructors": [
+        {
+          "stableId": "System.Private.CoreLib:Microsoft.Win32.SafeHandles.SafeWaitHandle::.ctor():void",
+          "metadataToken": 100663650,
+          "canonicalSignature": "():void",
+          "normalizedSignature": "constructor|():void|static=false",
+          "isStatic": false,
+          "parameterCount": 0,
+          "declaringClrType": "Microsoft.Win32.SafeHandles.SafeWaitHandle",
+          "declaringAssemblyName": "System.Private.CoreLib"
+        },
+        {
+          "stableId": "System.Private.CoreLib:Microsoft.Win32.SafeHandles.SafeWaitHandle::.ctor(System.IntPtr,System.Boolean):void",
+          "metadataToken": 100663651,
+          "canonicalSignature": "(System.IntPtr,System.Boolean):void",
+          "normalizedSignature": "constructor|(System.IntPtr,System.Boolean):void|static=false",
+          "isStatic": false,
+          "parameterCount": 2,
+          "declaringClrType": "Microsoft.Win32.SafeHandles.SafeWaitHandle",
+          "declaringAssemblyName": "System.Private.CoreLib"
+        }
+      ],
+      "exposedMethods": [
+        {
+          "tsName": "Dispose$view",
+          "isStatic": false,
+          "tsSignatureId": "Dispose|():System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.IDisposable",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100668530
+          }
+        },
+        {
+          "tsName": "Dispose",
+          "isStatic": false,
+          "tsSignatureId": "Dispose|():System.Void|static=false",
+          "target": {
+            "declaringClrType": "Microsoft.Win32.SafeHandles.SafeWaitHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 0
+          }
+        },
+        {
+          "tsName": "DangerousGetHandle",
+          "isStatic": false,
+          "tsSignatureId": "DangerousGetHandle|():System.IntPtr|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695051
+          }
+        },
+        {
+          "tsName": "Close",
+          "isStatic": false,
+          "tsSignatureId": "Close|():System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695054
+          }
+        },
+        {
+          "tsName": "SetHandleAsInvalid",
+          "isStatic": false,
+          "tsSignatureId": "SetHandleAsInvalid|():System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695057
+          }
+        },
+        {
+          "tsName": "DangerousAddRef",
+          "isStatic": false,
+          "tsSignatureId": "DangerousAddRef|(System.Boolean\u0026):System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695059
+          }
+        },
+        {
+          "tsName": "DangerousRelease",
+          "isStatic": false,
+          "tsSignatureId": "DangerousRelease|():System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695060
+          }
+        },
+        {
+          "tsName": "GetType",
+          "isStatic": false,
+          "tsSignatureId": "GetType|():System.Type|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664825
+          }
+        },
+        {
+          "tsName": "ToString",
+          "isStatic": false,
+          "tsSignatureId": "ToString|():System.String|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664829
+          }
+        },
+        {
+          "tsName": "Equals",
+          "isStatic": false,
+          "tsSignatureId": "Equals|(System.Object):System.Boolean|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664830
+          }
+        },
+        {
+          "tsName": "Equals",
+          "isStatic": true,
+          "tsSignatureId": "Equals|(System.Object,System.Object):System.Boolean|static=true",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664831
+          }
+        },
+        {
+          "tsName": "ReferenceEquals",
+          "isStatic": true,
+          "tsSignatureId": "ReferenceEquals|(System.Object,System.Object):System.Boolean|static=true",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664832
+          }
+        },
+        {
+          "tsName": "GetHashCode",
+          "isStatic": false,
+          "tsSignatureId": "GetHashCode|():System.Int32|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664833
+          }
+        }
+      ],
+      "exposedProperties": [
+        {
+          "tsName": "IsInvalid",
+          "isStatic": false,
+          "tsSignatureId": "IsInvalid|:System.Boolean|static=false|accessor=get",
+          "target": {
+            "declaringClrType": "Microsoft.Win32.SafeHandles.SafeHandleZeroOrMinusOneIsInvalid",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 385875980
+          }
+        },
+        {
+          "tsName": "IsClosed",
+          "isStatic": false,
+          "tsSignatureId": "IsClosed|:System.Boolean|static=false|accessor=get",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 385879655
+          }
+        }
+      ],
+      "exposedConstructors": [
+        {
+          "isStatic": false,
+          "tsSignatureId": "constructor|():void|static=false",
+          "target": {
+            "declaringClrType": "Microsoft.Win32.SafeHandles.SafeWaitHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100663650
+          }
+        },
+        {
+          "isStatic": false,
+          "tsSignatureId": "constructor|(System.IntPtr,System.Boolean):void|static=false",
+          "target": {
+            "declaringClrType": "Microsoft.Win32.SafeHandles.SafeWaitHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100663651
+          }
+        }
+      ]
+    },
+    {
+      "stableId": "System.Security.Cryptography:Microsoft.Win32.SafeHandles.SafeX509ChainHandle",
+      "clrName": "Microsoft.Win32.SafeHandles.SafeX509ChainHandle",
+      "tsEmitName": "SafeX509ChainHandle",
+      "assemblyName": "System.Security.Cryptography",
+      "metadataToken": 0,
+      "methods": [
+        {
+          "stableId": "System.Private.CoreLib:System.IDisposable::Dispose():System.Void",
+          "clrName": "Dispose",
+          "tsEmitName": "Dispose$view",
+          "metadataToken": 100668530,
+          "canonicalSignature": "():System.Void",
+          "normalizedSignature": "Dispose|():System.Void|static=false",
+          "emitScope": "ViewOnly",
+          "arity": 0,
+          "parameterCount": 0,
+          "declaringClrType": "System.IDisposable",
+          "declaringAssemblyName": "System.Private.CoreLib",
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.Security.Cryptography:Microsoft.Win32.SafeHandles.SafeX509ChainHandle::Dispose():System.Void",
+          "clrName": "Dispose",
+          "tsEmitName": "Dispose",
+          "metadataToken": 0,
+          "canonicalSignature": "():System.Void",
+          "normalizedSignature": "Dispose|():System.Void|static=false",
+          "emitScope": "ClassSurface",
+          "arity": 0,
+          "parameterCount": 0,
+          "declaringClrType": "Microsoft.Win32.SafeHandles.SafeX509ChainHandle",
+          "declaringAssemblyName": "System.Security.Cryptography",
+          "isExtensionMethod": false
+        }
+      ],
+      "properties": [],
+      "fields": [],
+      "events": [],
+      "constructors": [
+        {
+          "stableId": "System.Security.Cryptography:Microsoft.Win32.SafeHandles.SafeX509ChainHandle::.ctor():void",
+          "metadataToken": 100664065,
+          "canonicalSignature": "():void",
+          "normalizedSignature": "constructor|():void|static=false",
+          "isStatic": false,
+          "parameterCount": 0,
+          "declaringClrType": "Microsoft.Win32.SafeHandles.SafeX509ChainHandle",
+          "declaringAssemblyName": "System.Security.Cryptography"
+        }
+      ],
+      "exposedMethods": [
+        {
+          "tsName": "Dispose$view",
+          "isStatic": false,
+          "tsSignatureId": "Dispose|():System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.IDisposable",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100668530
+          }
+        },
+        {
+          "tsName": "Dispose",
+          "isStatic": false,
+          "tsSignatureId": "Dispose|():System.Void|static=false",
+          "target": {
+            "declaringClrType": "Microsoft.Win32.SafeHandles.SafeX509ChainHandle",
+            "declaringAssemblyName": "System.Security.Cryptography",
+            "metadataToken": 0
+          }
+        },
+        {
+          "tsName": "DangerousGetHandle",
+          "isStatic": false,
+          "tsSignatureId": "DangerousGetHandle|():System.IntPtr|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695051
+          }
+        },
+        {
+          "tsName": "Close",
+          "isStatic": false,
+          "tsSignatureId": "Close|():System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695054
+          }
+        },
+        {
+          "tsName": "SetHandleAsInvalid",
+          "isStatic": false,
+          "tsSignatureId": "SetHandleAsInvalid|():System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695057
+          }
+        },
+        {
+          "tsName": "DangerousAddRef",
+          "isStatic": false,
+          "tsSignatureId": "DangerousAddRef|(System.Boolean\u0026):System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695059
+          }
+        },
+        {
+          "tsName": "DangerousRelease",
+          "isStatic": false,
+          "tsSignatureId": "DangerousRelease|():System.Void|static=false",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100695060
+          }
+        },
+        {
+          "tsName": "GetType",
+          "isStatic": false,
+          "tsSignatureId": "GetType|():System.Type|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664825
+          }
+        },
+        {
+          "tsName": "ToString",
+          "isStatic": false,
+          "tsSignatureId": "ToString|():System.String|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664829
+          }
+        },
+        {
+          "tsName": "Equals",
+          "isStatic": false,
+          "tsSignatureId": "Equals|(System.Object):System.Boolean|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664830
+          }
+        },
+        {
+          "tsName": "Equals",
+          "isStatic": true,
+          "tsSignatureId": "Equals|(System.Object,System.Object):System.Boolean|static=true",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664831
+          }
+        },
+        {
+          "tsName": "ReferenceEquals",
+          "isStatic": true,
+          "tsSignatureId": "ReferenceEquals|(System.Object,System.Object):System.Boolean|static=true",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664832
+          }
+        },
+        {
+          "tsName": "GetHashCode",
+          "isStatic": false,
+          "tsSignatureId": "GetHashCode|():System.Int32|static=false",
+          "target": {
+            "declaringClrType": "System.Object",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100664833
+          }
+        }
+      ],
+      "exposedProperties": [
+        {
+          "tsName": "IsInvalid",
+          "isStatic": false,
+          "tsSignatureId": "IsInvalid|:System.Boolean|static=false|accessor=get",
+          "target": {
+            "declaringClrType": "Microsoft.Win32.SafeHandles.SafeHandleZeroOrMinusOneIsInvalid",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 385875980
+          }
+        },
+        {
+          "tsName": "IsClosed",
+          "isStatic": false,
+          "tsSignatureId": "IsClosed|:System.Boolean|static=false|accessor=get",
+          "target": {
+            "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 385879655
+          }
+        }
+      ],
+      "exposedConstructors": [
+        {
+          "isStatic": false,
+          "tsSignatureId": "constructor|():void|static=false",
+          "target": {
+            "declaringClrType": "Microsoft.Win32.SafeHandles.SafeX509ChainHandle",
+            "declaringAssemblyName": "System.Security.Cryptography",
+            "metadataToken": 100664065
+          }
+        }
+      ]
+    }
+  ]
+}

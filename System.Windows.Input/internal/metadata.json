@@ -1,0 +1,65 @@
+{
+  "namespace": "System.Windows.Input",
+  "contributingAssemblies": [
+    "System.ObjectModel"
+  ],
+  "types": [
+    {
+      "stableId": "System.ObjectModel:System.Windows.Input.ICommand",
+      "clrName": "System.Windows.Input.ICommand",
+      "tsEmitName": "ICommand",
+      "kind": "Interface",
+      "accessibility": "Public",
+      "isAbstract": true,
+      "isSealed": false,
+      "isStatic": false,
+      "arity": 0,
+      "methods": [
+        {
+          "stableId": "System.ObjectModel:System.Windows.Input.ICommand::CanExecute(System.Object):System.Boolean",
+          "clrName": "CanExecute",
+          "tsEmitName": "CanExecute",
+          "normalizedSignature": "CanExecute|(System.Object):System.Boolean|static=false",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": true,
+          "isVirtual": true,
+          "isOverride": false,
+          "isSealed": false,
+          "arity": 0,
+          "parameterCount": 1,
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.ObjectModel:System.Windows.Input.ICommand::Execute(System.Object):System.Void",
+          "clrName": "Execute",
+          "tsEmitName": "Execute",
+          "normalizedSignature": "Execute|(System.Object):System.Void|static=false",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": true,
+          "isVirtual": true,
+          "isOverride": false,
+          "isSealed": false,
+          "arity": 0,
+          "parameterCount": 1,
+          "isExtensionMethod": false
+        }
+      ],
+      "properties": [],
+      "fields": [],
+      "events": [
+        {
+          "stableId": "System.ObjectModel:System.Windows.Input.ICommand::CanExecuteChangedSystem.EventHandler",
+          "clrName": "CanExecuteChanged",
+          "tsEmitName": "CanExecuteChanged",
+          "normalizedSignature": "CanExecuteChanged|System.EventHandler|static=false",
+          "isStatic": false
+        }
+      ],
+      "constructors": []
+    }
+  ]
+}
