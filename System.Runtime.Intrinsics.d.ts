@@ -10,11 +10,32 @@ import type { IAdditionOperators_3, IBitwiseOperators_3, IDivisionOperators_3, I
 import type { Boolean as ClrBoolean, Byte, Double, IEquatable_1, Int16, Int32, Int64, IntPtr, MidpointRounding, Object as ClrObject, ReadOnlySpan_1, SByte, Single, Span_1, String as ClrString, Type, UInt16, UInt32, UInt64, UIntPtr, ValueTuple_2, ValueType, Void } from './System/internal/index.js';
 
 // Public API exports (curated - no internal $instance/$views leakage)
-export { Vector128$instance as Vector128_0 } from './System.Runtime.Intrinsics/internal/index.js';
-export { Vector128_1 as Vector128 } from './System.Runtime.Intrinsics/internal/index.js';
-export { Vector256$instance as Vector256_0 } from './System.Runtime.Intrinsics/internal/index.js';
-export { Vector256_1 as Vector256 } from './System.Runtime.Intrinsics/internal/index.js';
-export { Vector512$instance as Vector512_0 } from './System.Runtime.Intrinsics/internal/index.js';
-export { Vector512_1 as Vector512 } from './System.Runtime.Intrinsics/internal/index.js';
-export { Vector64$instance as Vector64_0 } from './System.Runtime.Intrinsics/internal/index.js';
-export { Vector64_1 as Vector64 } from './System.Runtime.Intrinsics/internal/index.js';
+
+// Multi-arity family sentinel (detects unspecified type parameters)
+declare const __unspecified: unique symbol;
+export type __ = typeof __unspecified;
+
+export type Vector128<
+  T1 = __,
+> =
+  [T1] extends [__] ? Internal.Vector128 :
+  Internal.Vector128_1<T1>;
+
+export type Vector256<
+  T1 = __,
+> =
+  [T1] extends [__] ? Internal.Vector256 :
+  Internal.Vector256_1<T1>;
+
+export type Vector512<
+  T1 = __,
+> =
+  [T1] extends [__] ? Internal.Vector512 :
+  Internal.Vector512_1<T1>;
+
+export type Vector64<
+  T1 = __,
+> =
+  [T1] extends [__] ? Internal.Vector64 :
+  Internal.Vector64_1<T1>;
+

@@ -163,7 +163,7 @@ export interface __AsyncFlowControl$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<AsyncFlowControl>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: AsyncFlowControl): boolean;
+    equals(other: AsyncFlowControl): boolean;
 }
 
 export interface AsyncFlowControl$instance extends System_Internal.IDisposable$instance {}
@@ -213,7 +213,7 @@ export interface __CancellationToken$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<CancellationToken>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: CancellationToken): boolean;
+    equals(other: CancellationToken): boolean;
 }
 
 export type CancellationToken = CancellationToken$instance & __CancellationToken$views;
@@ -241,7 +241,7 @@ export interface __CancellationTokenRegistration$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<CancellationTokenRegistration>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: CancellationTokenRegistration): boolean;
+    equals(other: CancellationTokenRegistration): boolean;
 }
 
 export interface CancellationTokenRegistration$instance extends System_Internal.IAsyncDisposable$instance, System_Internal.IDisposable$instance {}
@@ -277,7 +277,7 @@ export interface __LockCookie$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<LockCookie>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: LockCookie): boolean;
+    equals(other: LockCookie): boolean;
 }
 
 export type LockCookie = LockCookie$instance & __LockCookie$views;
@@ -479,7 +479,7 @@ export const CancellationTokenSource: {
     CreateLinkedTokenSource(tokens: ReadOnlySpan_1<CancellationToken>): CancellationTokenSource;
     CreateLinkedTokenSource(token1: CancellationToken, token2: CancellationToken): CancellationTokenSource;
     CreateLinkedTokenSource(token: CancellationToken): CancellationTokenSource;
-    CreateLinkedTokenSource(tokens: CancellationToken[]): CancellationTokenSource;
+    CreateLinkedTokenSource(...tokens: CancellationToken[]): CancellationTokenSource;
 };
 
 

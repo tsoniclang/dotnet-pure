@@ -346,7 +346,7 @@ export type JsonMetadataServices = JsonMetadataServices$instance;
 
 export abstract class JsonTypeInfoResolver$instance {
     static Combine(resolvers: ReadOnlySpan_1<IJsonTypeInfoResolver>): IJsonTypeInfoResolver;
-    static Combine(resolvers: IJsonTypeInfoResolver[]): IJsonTypeInfoResolver;
+    static Combine(...resolvers: IJsonTypeInfoResolver[]): IJsonTypeInfoResolver;
     static WithAddedModifier(resolver: IJsonTypeInfoResolver, modifier: Action_1<JsonTypeInfo>): IJsonTypeInfoResolver;
 }
 

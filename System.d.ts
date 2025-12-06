@@ -119,8 +119,6 @@ export { DuplicateWaitObjectException as DuplicateWaitObjectException } from './
 export { EntryPointNotFoundException as EntryPointNotFoundException } from './System/internal/index.js';
 export { EnvironmentVariableTarget as EnvironmentVariableTarget } from './System/internal/index.js';
 export { EventArgs as EventArgs } from './System/internal/index.js';
-export type EventHandler_0 = Internal.EventHandler;
-export type EventHandler<TEventArgs> = Internal.EventHandler_1<TEventArgs>;
 export { ExecutionEngineException as ExecutionEngineException } from './System/internal/index.js';
 export { FieldAccessException as FieldAccessException } from './System/internal/index.js';
 export { FlagsAttribute as FlagsAttribute } from './System/internal/index.js';
@@ -135,8 +133,6 @@ export { HashCode as HashCode } from './System/internal/index.js';
 export type IAsyncDisposable = Internal.IAsyncDisposable;
 export type IAsyncResult = Internal.IAsyncResult;
 export type ICloneable = Internal.ICloneable;
-export type IComparable_0 = Internal.IComparable;
-export type IComparable<T> = Internal.IComparable_1<T>;
 export type IConvertible = Internal.IConvertible;
 export type ICustomFormatter = Internal.ICustomFormatter;
 export type IDisposable = Internal.IDisposable;
@@ -162,7 +158,6 @@ export type IProgress<T> = Internal.IProgress_1<T>;
 export type ISpanFormattable = Internal.ISpanFormattable;
 export type IUtf8SpanFormattable = Internal.IUtf8SpanFormattable;
 export type IUtf8SpanParsable<TSelf extends Internal.IUtf8SpanParsable_1<TSelf>> = Internal.IUtf8SpanParsable_1<TSelf>;
-export { Lazy_1 as Lazy } from './System/internal/index.js';
 export { LoaderOptimization as LoaderOptimization } from './System/internal/index.js';
 export { LoaderOptimizationAttribute as LoaderOptimizationAttribute } from './System/internal/index.js';
 export { LocalDataStoreSlot as LocalDataStoreSlot } from './System/internal/index.js';
@@ -182,8 +177,6 @@ export { NonSerializedAttribute as NonSerializedAttribute } from './System/inter
 export { NotFiniteNumberException as NotFiniteNumberException } from './System/internal/index.js';
 export { NotImplementedException as NotImplementedException } from './System/internal/index.js';
 export { NotSupportedException as NotSupportedException } from './System/internal/index.js';
-export { Nullable_1 as Nullable } from './System/internal/index.js';
-export { Nullable$instance as Nullable_0 } from './System/internal/index.js';
 export { NullReferenceException as NullReferenceException } from './System/internal/index.js';
 export { ObjectDisposedException as ObjectDisposedException } from './System/internal/index.js';
 export { ObsoleteAttribute as ObsoleteAttribute } from './System/internal/index.js';
@@ -225,8 +218,6 @@ export { TimeZoneInfo as TimeZoneInfo } from './System/internal/index.js';
 export { TimeZoneInfo_AdjustmentRule as TimeZoneInfo_AdjustmentRule } from './System/internal/index.js';
 export { TimeZoneInfo_TransitionTime as TimeZoneInfo_TransitionTime } from './System/internal/index.js';
 export { TimeZoneNotFoundException as TimeZoneNotFoundException } from './System/internal/index.js';
-export { Tuple$instance as Tuple_0 } from './System/internal/index.js';
-export { Tuple_1 as Tuple } from './System/internal/index.js';
 export { TupleExtensions$instance as TupleExtensions } from './System/internal/index.js';
 export { TypeAccessException as TypeAccessException } from './System/internal/index.js';
 export { TypeCode as TypeCode } from './System/internal/index.js';
@@ -241,12 +232,8 @@ export { UnauthorizedAccessException as UnauthorizedAccessException } from './Sy
 export { UnhandledExceptionEventArgs as UnhandledExceptionEventArgs } from './System/internal/index.js';
 export type UnhandledExceptionEventHandler = Internal.UnhandledExceptionEventHandler;
 export { UnitySerializationHolder as UnitySerializationHolder } from './System/internal/index.js';
-export { ValueTuple as ValueTuple_0 } from './System/internal/index.js';
-export { ValueTuple_1 as ValueTuple } from './System/internal/index.js';
 export { Version as Version } from './System/internal/index.js';
 export { Void as Void } from './System/internal/index.js';
-export { WeakReference as WeakReference_0 } from './System/internal/index.js';
-export { WeakReference_1 as WeakReference } from './System/internal/index.js';
 export { TimeProvider as TimeProvider } from './System/internal/index.js';
 export type IParsable<TSelf extends Internal.IParsable_1<TSelf>> = Internal.IParsable_1<TSelf>;
 export type ISpanParsable<TSelf extends Internal.ISpanParsable_1<TSelf>> = Internal.ISpanParsable_1<TSelf>;
@@ -271,7 +258,7 @@ export { NetTcpStyleUriParser as NetTcpStyleUriParser } from './System/internal/
 export { UriPartial as UriPartial } from './System/internal/index.js';
 export { UriParser as UriParser } from './System/internal/index.js';
 
-// Delegate shortcut aliases (support TS lambdas)
+// Multi-arity family sentinel (detects unspecified type parameters)
 declare const __unspecified: unique symbol;
 export type __ = typeof __unspecified;
 
@@ -311,6 +298,14 @@ export type Action<
   [T16] extends [__] ? (((arg1: T1, arg2: T2, arg3: T3, arg4: T4, arg5: T5, arg6: T6, arg7: T7, arg8: T8, arg9: T9, arg10: T10, arg11: T11, arg12: T12, arg13: T13, arg14: T14, arg15: T15) => void) | Internal.Action_15<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>) :
   (((arg1: T1, arg2: T2, arg3: T3, arg4: T4, arg5: T5, arg6: T6, arg7: T7, arg8: T8, arg9: T9, arg10: T10, arg11: T11, arg12: T12, arg13: T13, arg14: T14, arg15: T15, arg16: T16) => void) | Internal.Action_16<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16>);
 
+export type EventHandler<
+  T1 = __,
+  T2 = __,
+> =
+  [T1] extends [__] ? ((() => void) | Internal.EventHandler) :
+  [T2] extends [__] ? (((arg1: T1) => void) | Internal.EventHandler_1<T1>) :
+  (((arg1: T1, arg2: T2) => void) | Internal.EventHandler_2<T1, T2>);
+
 export type Func<
   T1 = __,
   T2 = __,
@@ -347,3 +342,69 @@ export type Func<
   [T16] extends [__] ? (((arg1: T1, arg2: T2, arg3: T3, arg4: T4, arg5: T5, arg6: T6, arg7: T7, arg8: T8, arg9: T9, arg10: T10, arg11: T11, arg12: T12, arg13: T13, arg14: T14) => T15) | Internal.Func_15<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>) :
   [T17] extends [__] ? (((arg1: T1, arg2: T2, arg3: T3, arg4: T4, arg5: T5, arg6: T6, arg7: T7, arg8: T8, arg9: T9, arg10: T10, arg11: T11, arg12: T12, arg13: T13, arg14: T14, arg15: T15) => T16) | Internal.Func_16<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16>) :
   (((arg1: T1, arg2: T2, arg3: T3, arg4: T4, arg5: T5, arg6: T6, arg7: T7, arg8: T8, arg9: T9, arg10: T10, arg11: T11, arg12: T12, arg13: T13, arg14: T14, arg15: T15, arg16: T16) => T17) | Internal.Func_17<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17>);
+
+export type IComparable<
+  T1 = __,
+> =
+  [T1] extends [__] ? Internal.IComparable :
+  Internal.IComparable_1<T1>;
+
+export type Lazy<
+  T1 = __,
+  T2 = __,
+> =
+  [T2] extends [__] ? Internal.Lazy_1<T1> :
+  Internal.Lazy_2<T1, T2>;
+
+export type Nullable<
+  T1 = __,
+> =
+  [T1] extends [__] ? Internal.Nullable :
+  [T1] extends [unknown] ? Internal.Nullable_1<T1> : never;
+
+export type Tuple<
+  T1 = __,
+  T2 = __,
+  T3 = __,
+  T4 = __,
+  T5 = __,
+  T6 = __,
+  T7 = __,
+  T8 = __,
+> =
+  [T1] extends [__] ? Internal.Tuple :
+  [T2] extends [__] ? Internal.Tuple_1<T1> :
+  [T3] extends [__] ? Internal.Tuple_2<T1, T2> :
+  [T4] extends [__] ? Internal.Tuple_3<T1, T2, T3> :
+  [T5] extends [__] ? Internal.Tuple_4<T1, T2, T3, T4> :
+  [T6] extends [__] ? Internal.Tuple_5<T1, T2, T3, T4, T5> :
+  [T7] extends [__] ? Internal.Tuple_6<T1, T2, T3, T4, T5, T6> :
+  [T8] extends [__] ? Internal.Tuple_7<T1, T2, T3, T4, T5, T6, T7> :
+  Internal.Tuple_8<T1, T2, T3, T4, T5, T6, T7, T8>;
+
+export type ValueTuple<
+  T1 = __,
+  T2 = __,
+  T3 = __,
+  T4 = __,
+  T5 = __,
+  T6 = __,
+  T7 = __,
+  T8 = __,
+> =
+  [T1] extends [__] ? Internal.ValueTuple :
+  [T2] extends [__] ? Internal.ValueTuple_1<T1> :
+  [T3] extends [__] ? Internal.ValueTuple_2<T1, T2> :
+  [T4] extends [__] ? Internal.ValueTuple_3<T1, T2, T3> :
+  [T5] extends [__] ? Internal.ValueTuple_4<T1, T2, T3, T4> :
+  [T6] extends [__] ? Internal.ValueTuple_5<T1, T2, T3, T4, T5> :
+  [T7] extends [__] ? Internal.ValueTuple_6<T1, T2, T3, T4, T5, T6> :
+  [T8] extends [__] ? Internal.ValueTuple_7<T1, T2, T3, T4, T5, T6, T7> :
+  [T8] extends [unknown] ? Internal.ValueTuple_8<T1, T2, T3, T4, T5, T6, T7, T8> : never;
+
+export type WeakReference<
+  T1 = __,
+> =
+  [T1] extends [__] ? Internal.WeakReference :
+  Internal.WeakReference_1<T1>;
+

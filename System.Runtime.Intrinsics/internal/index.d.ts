@@ -63,7 +63,7 @@ export interface __Vector128_1$views<T> {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<Vector128_1<T>>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: Vector128_1<T>): boolean;
+    equals(other: Vector128_1<T>): boolean;
 }
 
 export interface Vector128_1$instance<T> extends System_Numerics_Internal.IAdditionOperators_3$instance<Vector128_1<T>, Vector128_1<T>, Vector128_1<T>>, System_Numerics_Internal.IBitwiseOperators_3$instance<Vector128_1<T>, Vector128_1<T>, Vector128_1<T>>, System_Numerics_Internal.IDivisionOperators_3$instance<Vector128_1<T>, Vector128_1<T>, Vector128_1<T>>, System_Numerics_Internal.IEqualityOperators_3$instance<Vector128_1<T>, Vector128_1<T>, CLROf<boolean>>, System_Numerics_Internal.IMultiplyOperators_3$instance<Vector128_1<T>, Vector128_1<T>, Vector128_1<T>>, System_Numerics_Internal.IShiftOperators_3$instance<Vector128_1<T>, CLROf<int>, Vector128_1<T>>, System_Numerics_Internal.ISubtractionOperators_3$instance<Vector128_1<T>, Vector128_1<T>, Vector128_1<T>>, System_Numerics_Internal.IUnaryNegationOperators_2$instance<Vector128_1<T>, Vector128_1<T>>, System_Numerics_Internal.IUnaryPlusOperators_2$instance<Vector128_1<T>, Vector128_1<T>> {}
@@ -95,7 +95,7 @@ export interface __Vector256_1$views<T> {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<Vector256_1<T>>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: Vector256_1<T>): boolean;
+    equals(other: Vector256_1<T>): boolean;
 }
 
 export interface Vector256_1$instance<T> extends System_Numerics_Internal.IAdditionOperators_3$instance<Vector256_1<T>, Vector256_1<T>, Vector256_1<T>>, System_Numerics_Internal.IBitwiseOperators_3$instance<Vector256_1<T>, Vector256_1<T>, Vector256_1<T>>, System_Numerics_Internal.IDivisionOperators_3$instance<Vector256_1<T>, Vector256_1<T>, Vector256_1<T>>, System_Numerics_Internal.IEqualityOperators_3$instance<Vector256_1<T>, Vector256_1<T>, CLROf<boolean>>, System_Numerics_Internal.IMultiplyOperators_3$instance<Vector256_1<T>, Vector256_1<T>, Vector256_1<T>>, System_Numerics_Internal.IShiftOperators_3$instance<Vector256_1<T>, CLROf<int>, Vector256_1<T>>, System_Numerics_Internal.ISubtractionOperators_3$instance<Vector256_1<T>, Vector256_1<T>, Vector256_1<T>>, System_Numerics_Internal.IUnaryNegationOperators_2$instance<Vector256_1<T>, Vector256_1<T>>, System_Numerics_Internal.IUnaryPlusOperators_2$instance<Vector256_1<T>, Vector256_1<T>> {}
@@ -127,7 +127,7 @@ export interface __Vector512_1$views<T> {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<Vector512_1<T>>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: Vector512_1<T>): boolean;
+    equals(other: Vector512_1<T>): boolean;
 }
 
 export interface Vector512_1$instance<T> extends System_Numerics_Internal.IAdditionOperators_3$instance<Vector512_1<T>, Vector512_1<T>, Vector512_1<T>>, System_Numerics_Internal.IBitwiseOperators_3$instance<Vector512_1<T>, Vector512_1<T>, Vector512_1<T>>, System_Numerics_Internal.IDivisionOperators_3$instance<Vector512_1<T>, Vector512_1<T>, Vector512_1<T>>, System_Numerics_Internal.IEqualityOperators_3$instance<Vector512_1<T>, Vector512_1<T>, CLROf<boolean>>, System_Numerics_Internal.IMultiplyOperators_3$instance<Vector512_1<T>, Vector512_1<T>, Vector512_1<T>>, System_Numerics_Internal.IShiftOperators_3$instance<Vector512_1<T>, CLROf<int>, Vector512_1<T>>, System_Numerics_Internal.ISubtractionOperators_3$instance<Vector512_1<T>, Vector512_1<T>, Vector512_1<T>>, System_Numerics_Internal.IUnaryNegationOperators_2$instance<Vector512_1<T>, Vector512_1<T>>, System_Numerics_Internal.IUnaryPlusOperators_2$instance<Vector512_1<T>, Vector512_1<T>> {}
@@ -159,7 +159,7 @@ export interface __Vector64_1$views<T> {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<Vector64_1<T>>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: Vector64_1<T>): boolean;
+    equals(other: Vector64_1<T>): boolean;
 }
 
 export interface Vector64_1$instance<T> extends System_Numerics_Internal.IAdditionOperators_3$instance<Vector64_1<T>, Vector64_1<T>, Vector64_1<T>>, System_Numerics_Internal.IBitwiseOperators_3$instance<Vector64_1<T>, Vector64_1<T>, Vector64_1<T>>, System_Numerics_Internal.IDivisionOperators_3$instance<Vector64_1<T>, Vector64_1<T>, Vector64_1<T>>, System_Numerics_Internal.IEqualityOperators_3$instance<Vector64_1<T>, Vector64_1<T>, CLROf<boolean>>, System_Numerics_Internal.IMultiplyOperators_3$instance<Vector64_1<T>, Vector64_1<T>, Vector64_1<T>>, System_Numerics_Internal.IShiftOperators_3$instance<Vector64_1<T>, CLROf<int>, Vector64_1<T>>, System_Numerics_Internal.ISubtractionOperators_3$instance<Vector64_1<T>, Vector64_1<T>, Vector64_1<T>>, System_Numerics_Internal.IUnaryNegationOperators_2$instance<Vector64_1<T>, Vector64_1<T>>, System_Numerics_Internal.IUnaryPlusOperators_2$instance<Vector64_1<T>, Vector64_1<T>> {}

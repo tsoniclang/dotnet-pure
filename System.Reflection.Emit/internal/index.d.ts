@@ -171,7 +171,7 @@ export interface __Label$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<Label>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: Label): boolean;
+    equals(other: Label): boolean;
 }
 
 export type Label = Label$instance & __Label$views;
@@ -203,7 +203,7 @@ export interface __OpCode$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<OpCode>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: OpCode): boolean;
+    equals(other: OpCode): boolean;
 }
 
 export type OpCode = OpCode$instance & __OpCode$views;
@@ -516,7 +516,7 @@ export interface GenericTypeParameterBuilder$instance extends TypeInfo {
     SetCustomAttribute(con: ConstructorInfo, binaryAttribute: byte[]): void;
     SetCustomAttribute(customBuilder: CustomAttributeBuilder): void;
     SetGenericParameterAttributes(genericParameterAttributes: GenericParameterAttributes): void;
-    SetInterfaceConstraints(interfaceConstraints: Type[]): void;
+    SetInterfaceConstraints(...interfaceConstraints: Type[]): void;
 }
 
 
@@ -597,7 +597,7 @@ export type LocalBuilder = LocalBuilder$instance;
 
 export interface MethodBuilder$instance extends MethodInfo {
     InitLocals: boolean;
-    DefineGenericParameters(names: string[]): GenericTypeParameterBuilder[];
+    DefineGenericParameters(...names: string[]): GenericTypeParameterBuilder[];
     DefineParameter(position: int, attributes: ParameterAttributes, strParamName: string): ParameterBuilder;
     GetCustomAttributes(inherit: boolean): unknown[];
     GetCustomAttributes(attributeType: Type, inherit: boolean): unknown[];
@@ -607,7 +607,7 @@ export interface MethodBuilder$instance extends MethodInfo {
     SetCustomAttribute(con: ConstructorInfo, binaryAttribute: byte[]): void;
     SetCustomAttribute(customBuilder: CustomAttributeBuilder): void;
     SetImplementationFlags(attributes: MethodImplAttributes): void;
-    SetParameters(parameterTypes: Type[]): void;
+    SetParameters(...parameterTypes: Type[]): void;
     SetReturnType(returnType: Type): void;
     SetSignature(returnType: Type, returnTypeRequiredCustomModifiers: Type[], returnTypeOptionalCustomModifiers: Type[], parameterTypes: Type[], parameterTypeRequiredCustomModifiers: Type[][], parameterTypeOptionalCustomModifiers: Type[][]): void;
 }
@@ -1022,7 +1022,7 @@ export interface TypeBuilder$instance extends TypeInfo {
     DefineEvent(name: string, attributes: EventAttributes, eventtype: Type): EventBuilder;
     DefineField(fieldName: string, type_: Type, attributes: FieldAttributes): FieldBuilder;
     DefineField(fieldName: string, type_: Type, requiredCustomModifiers: Type[], optionalCustomModifiers: Type[], attributes: FieldAttributes): FieldBuilder;
-    DefineGenericParameters(names: string[]): GenericTypeParameterBuilder[];
+    DefineGenericParameters(...names: string[]): GenericTypeParameterBuilder[];
     DefineInitializedData(name: string, data: byte[], attributes: FieldAttributes): FieldBuilder;
     DefineMethod(name: string, attributes: MethodAttributes): MethodBuilder;
     DefineMethod(name: string, attributes: MethodAttributes, callingConvention: CallingConventions): MethodBuilder;
@@ -1089,7 +1089,7 @@ export interface TypeBuilder$instance extends TypeInfo {
     MakeArrayType(): Type;
     MakeArrayType(rank: int): Type;
     MakeByRefType(): Type;
-    MakeGenericType(typeArguments: Type[]): Type;
+    MakeGenericType(...typeArguments: Type[]): Type;
     MakePointerType(): Type;
     SetCustomAttribute(con: ConstructorInfo, binaryAttribute: byte[]): void;
     SetCustomAttribute(customBuilder: CustomAttributeBuilder): void;

@@ -56,6 +56,7 @@ export interface IImmutableDictionary_2$instance<TKey, TValue> extends IReadOnly
     Remove(key: TKey): IImmutableDictionary_2<TKey, TValue>;
     TryGetKey(equalKey: TKey, actualKey: { value: ref<TKey> }): boolean;
     TryGetValue(key: TKey, value: { value: ref<TValue> }): boolean;
+    GetEnumerator2(): IEnumerator;
 }
 
 
@@ -78,6 +79,7 @@ export interface IImmutableList_1$instance<T> extends IReadOnlyList_1<T>, IEnume
     RemoveRange(items: IEnumerable_1<T>, equalityComparer: IEqualityComparer_1<T>): IImmutableList_1<T>;
     RemoveRange(index: int, count: int): IImmutableList_1<T>;
     Replace(oldValue: T, newValue: T, equalityComparer: IEqualityComparer_1<T>): IImmutableList_1<T>;
+    GetEnumerator2(): IEnumerator;
 }
 
 
@@ -90,6 +92,7 @@ export interface IImmutableQueue_1$instance<T> extends IEnumerable_1<T>, IEnumer
     GetEnumerator(): IEnumerator_1<T>;
     GetEnumerator(): IEnumerator;
     Peek(): T;
+    GetEnumerator2(): IEnumerator;
 }
 
 
@@ -105,6 +108,7 @@ export interface IImmutableSet_1$instance<T> extends IReadOnlyCollection_1<T>, I
     Intersect(other: IEnumerable_1<T>): IImmutableSet_1<T>;
     SetEquals(other: IEnumerable_1<T>): boolean;
     TryGetValue(equalValue: T, actualValue: { value: ref<T> }): boolean;
+    GetEnumerator2(): IEnumerator;
 }
 
 
@@ -117,6 +121,7 @@ export interface IImmutableStack_1$instance<T> extends IEnumerable_1<T>, IEnumer
     GetEnumerator(): IEnumerator;
     Peek(): T;
     Push(value: T): IImmutableStack_1<T>;
+    GetEnumerator2(): IEnumerator;
 }
 
 
@@ -135,7 +140,7 @@ export interface ImmutableArray_1$instance<T> {
     AddRange(items: ImmutableArray_1<T>, length: int): ImmutableArray_1<T>;
     AddRange<TDerived extends T>(items: ImmutableArray_1<TDerived>): ImmutableArray_1<T>;
     AddRange(items: ReadOnlySpan_1<T>): ImmutableArray_1<T>;
-    AddRange(items: T[]): ImmutableArray_1<T>;
+    AddRange(...items: T[]): ImmutableArray_1<T>;
     As<TOther>(): ImmutableArray_1<TOther>;
     AsMemory(): ReadOnlyMemory_1<T>;
     AsSpan(): ReadOnlySpan_1<T>;
@@ -213,7 +218,7 @@ export interface __ImmutableArray_1$views<T> {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<ImmutableArray_1<T>>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: ImmutableArray_1<T>): boolean;
+    equals(other: ImmutableArray_1<T>): boolean;
 }
 
 export interface ImmutableArray_1$instance<T> extends System_Collections_Internal.IStructuralComparable$instance {}
@@ -371,7 +376,7 @@ export interface ImmutableArray_1_Builder$instance<T> {
     Item: T;
     Add(item: T): void;
     AddRange(items: IEnumerable_1<T>): void;
-    AddRange(items: T[]): void;
+    AddRange(...items: T[]): void;
     AddRange<TDerived extends T>(items: TDerived[]): void;
     AddRange(items: T[], length: int): void;
     AddRange(items: ImmutableArray_1<T>): void;
@@ -1025,7 +1030,7 @@ export abstract class ImmutableArray$instance {
     static Create<T>(item1: T, item2: T): ImmutableArray_1<T>;
     static Create<T>(item: T): ImmutableArray_1<T>;
     static Create<T>(items: T[], start: int, length: int): ImmutableArray_1<T>;
-    static Create<T>(items: T[]): ImmutableArray_1<T>;
+    static Create<T>(...items: T[]): ImmutableArray_1<T>;
     static CreateBuilder<T>(): ImmutableArray_1_Builder<T>;
     static CreateBuilder<T>(initialCapacity: int): ImmutableArray_1_Builder<T>;
     static CreateRange<T>(items: IEnumerable_1<T>): ImmutableArray_1<T>;
@@ -1075,11 +1080,11 @@ export abstract class ImmutableHashSet$instance {
     static Create<T>(): ImmutableHashSet_1<T>;
     static Create<T>(equalityComparer: IEqualityComparer_1<T>, items: ReadOnlySpan_1<T>): ImmutableHashSet_1<T>;
     static Create<T>(equalityComparer: IEqualityComparer_1<T>, item: T): ImmutableHashSet_1<T>;
-    static Create<T>(equalityComparer: IEqualityComparer_1<T>, items: T[]): ImmutableHashSet_1<T>;
+    static Create<T>(equalityComparer: IEqualityComparer_1<T>, ...items: T[]): ImmutableHashSet_1<T>;
     static Create<T>(equalityComparer: IEqualityComparer_1<T>): ImmutableHashSet_1<T>;
     static Create<T>(items: ReadOnlySpan_1<T>): ImmutableHashSet_1<T>;
     static Create<T>(item: T): ImmutableHashSet_1<T>;
-    static Create<T>(items: T[]): ImmutableHashSet_1<T>;
+    static Create<T>(...items: T[]): ImmutableHashSet_1<T>;
     static CreateBuilder<T>(): ImmutableHashSet_1_Builder<T>;
     static CreateBuilder<T>(equalityComparer: IEqualityComparer_1<T>): ImmutableHashSet_1_Builder<T>;
     static CreateRange<T>(items: IEnumerable_1<T>): ImmutableHashSet_1<T>;
@@ -1121,7 +1126,7 @@ export abstract class ImmutableList$instance {
     static Create<T>(): ImmutableList_1<T>;
     static Create<T>(items: ReadOnlySpan_1<T>): ImmutableList_1<T>;
     static Create<T>(item: T): ImmutableList_1<T>;
-    static Create<T>(items: T[]): ImmutableList_1<T>;
+    static Create<T>(...items: T[]): ImmutableList_1<T>;
     static CreateBuilder<T>(): ImmutableList_1_Builder<T>;
     static CreateRange<T>(items: IEnumerable_1<T>): ImmutableList_1<T>;
     static IndexOf<T>(list: IImmutableList_1<T>, item: T, equalityComparer: IEqualityComparer_1<T>): int;
@@ -1146,7 +1151,7 @@ export abstract class ImmutableQueue$instance {
     static Create<T>(): ImmutableQueue_1<T>;
     static Create<T>(items: ReadOnlySpan_1<T>): ImmutableQueue_1<T>;
     static Create<T>(item: T): ImmutableQueue_1<T>;
-    static Create<T>(items: T[]): ImmutableQueue_1<T>;
+    static Create<T>(...items: T[]): ImmutableQueue_1<T>;
     static CreateRange<T>(items: IEnumerable_1<T>): ImmutableQueue_1<T>;
     static Dequeue<T>(queue: IImmutableQueue_1<T>, value: { value: ref<T> }): IImmutableQueue_1<T>;
 }
@@ -1180,11 +1185,11 @@ export abstract class ImmutableSortedSet$instance {
     static Create<T>(): ImmutableSortedSet_1<T>;
     static Create<T>(comparer: IComparer_1<T>, items: ReadOnlySpan_1<T>): ImmutableSortedSet_1<T>;
     static Create<T>(comparer: IComparer_1<T>, item: T): ImmutableSortedSet_1<T>;
-    static Create<T>(comparer: IComparer_1<T>, items: T[]): ImmutableSortedSet_1<T>;
+    static Create<T>(comparer: IComparer_1<T>, ...items: T[]): ImmutableSortedSet_1<T>;
     static Create<T>(comparer: IComparer_1<T>): ImmutableSortedSet_1<T>;
     static Create<T>(items: ReadOnlySpan_1<T>): ImmutableSortedSet_1<T>;
     static Create<T>(item: T): ImmutableSortedSet_1<T>;
-    static Create<T>(items: T[]): ImmutableSortedSet_1<T>;
+    static Create<T>(...items: T[]): ImmutableSortedSet_1<T>;
     static CreateBuilder<T>(): ImmutableSortedSet_1_Builder<T>;
     static CreateBuilder<T>(comparer: IComparer_1<T>): ImmutableSortedSet_1_Builder<T>;
     static CreateRange<T>(comparer: IComparer_1<T>, items: IEnumerable_1<T>): ImmutableSortedSet_1<T>;
@@ -1201,7 +1206,7 @@ export abstract class ImmutableStack$instance {
     static Create<T>(): ImmutableStack_1<T>;
     static Create<T>(items: ReadOnlySpan_1<T>): ImmutableStack_1<T>;
     static Create<T>(item: T): ImmutableStack_1<T>;
-    static Create<T>(items: T[]): ImmutableStack_1<T>;
+    static Create<T>(...items: T[]): ImmutableStack_1<T>;
     static CreateRange<T>(items: IEnumerable_1<T>): ImmutableStack_1<T>;
     static Pop<T>(stack: IImmutableStack_1<T>, value: { value: ref<T> }): IImmutableStack_1<T>;
 }

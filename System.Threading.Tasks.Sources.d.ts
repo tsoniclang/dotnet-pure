@@ -11,6 +11,15 @@ import type { Action_1, Boolean as ClrBoolean, Enum, Exception, IComparable, ICo
 // Public API exports (curated - no internal $instance/$views leakage)
 export { ValueTaskSourceOnCompletedFlags as ValueTaskSourceOnCompletedFlags } from './System.Threading.Tasks.Sources/internal/index.js';
 export { ValueTaskSourceStatus as ValueTaskSourceStatus } from './System.Threading.Tasks.Sources/internal/index.js';
-export type IValueTaskSource_0 = Internal.IValueTaskSource;
-export type IValueTaskSource<TResult> = Internal.IValueTaskSource_1<TResult>;
 export { ManualResetValueTaskSourceCore_1 as ManualResetValueTaskSourceCore } from './System.Threading.Tasks.Sources/internal/index.js';
+
+// Multi-arity family sentinel (detects unspecified type parameters)
+declare const __unspecified: unique symbol;
+export type __ = typeof __unspecified;
+
+export type IValueTaskSource<
+  T1 = __,
+> =
+  [T1] extends [__] ? Internal.IValueTaskSource :
+  Internal.IValueTaskSource_1<T1>;
+

@@ -18,8 +18,6 @@ export { Gauge_1 as Gauge } from './System.Diagnostics.Metrics/internal/index.js
 export { Histogram_1 as Histogram } from './System.Diagnostics.Metrics/internal/index.js';
 export { InstrumentAdvice_1 as InstrumentAdvice } from './System.Diagnostics.Metrics/internal/index.js';
 export type IMeterFactory = Internal.IMeterFactory;
-export { Instrument as Instrument_0 } from './System.Diagnostics.Metrics/internal/index.js';
-export { Instrument_1 as Instrument } from './System.Diagnostics.Metrics/internal/index.js';
 export { Measurement_1 as Measurement } from './System.Diagnostics.Metrics/internal/index.js';
 export { Meter as Meter } from './System.Diagnostics.Metrics/internal/index.js';
 export { MeterFactoryExtensions$instance as MeterFactoryExtensions } from './System.Diagnostics.Metrics/internal/index.js';
@@ -31,3 +29,14 @@ export { ObservableGauge_1 as ObservableGauge } from './System.Diagnostics.Metri
 export { ObservableInstrument_1 as ObservableInstrument } from './System.Diagnostics.Metrics/internal/index.js';
 export { ObservableUpDownCounter_1 as ObservableUpDownCounter } from './System.Diagnostics.Metrics/internal/index.js';
 export { UpDownCounter_1 as UpDownCounter } from './System.Diagnostics.Metrics/internal/index.js';
+
+// Multi-arity family sentinel (detects unspecified type parameters)
+declare const __unspecified: unique symbol;
+export type __ = typeof __unspecified;
+
+export type Instrument<
+  T1 = __,
+> =
+  [T1] extends [__] ? Internal.Instrument :
+  [T1] extends [unknown] ? Internal.Instrument_1<T1> : never;
+

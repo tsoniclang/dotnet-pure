@@ -24,7 +24,6 @@ import type { Action_1, Array as ClrArray, ArraySegment_1, AsyncCallback, Attrib
 // Public API exports (curated - no internal $instance/$views leakage)
 export { ImmutableCollectionsMarshal$instance as ImmutableCollectionsMarshal } from './System.Runtime.InteropServices/internal/index.js';
 export { SequenceMarshal$instance as SequenceMarshal } from './System.Runtime.InteropServices/internal/index.js';
-export { GCHandle as GCHandle_0 } from './System.Runtime.InteropServices/internal/index.js';
 export { Marshal$instance as Marshal } from './System.Runtime.InteropServices/internal/index.js';
 export { MemoryMarshal$instance as MemoryMarshal } from './System.Runtime.InteropServices/internal/index.js';
 export { NativeLibrary$instance as NativeLibrary } from './System.Runtime.InteropServices/internal/index.js';
@@ -69,7 +68,6 @@ export { DllImportSearchPath as DllImportSearchPath } from './System.Runtime.Int
 export { ErrorWrapper as ErrorWrapper } from './System.Runtime.InteropServices/internal/index.js';
 export { ExternalException as ExternalException } from './System.Runtime.InteropServices/internal/index.js';
 export { FieldOffsetAttribute as FieldOffsetAttribute } from './System.Runtime.InteropServices/internal/index.js';
-export { GCHandle_1 as GCHandle } from './System.Runtime.InteropServices/internal/index.js';
 export { GCHandleExtensions$instance as GCHandleExtensions } from './System.Runtime.InteropServices/internal/index.js';
 export { GCHandleType as GCHandleType } from './System.Runtime.InteropServices/internal/index.js';
 export { GuidAttribute as GuidAttribute } from './System.Runtime.InteropServices/internal/index.js';
@@ -151,3 +149,14 @@ export { TypeLibVarAttribute as TypeLibVarAttribute } from './System.Runtime.Int
 export { TypeLibVarFlags as TypeLibVarFlags } from './System.Runtime.InteropServices/internal/index.js';
 export { TypeLibVersionAttribute as TypeLibVersionAttribute } from './System.Runtime.InteropServices/internal/index.js';
 export { JsonMarshal$instance as JsonMarshal } from './System.Runtime.InteropServices/internal/index.js';
+
+// Multi-arity family sentinel (detects unspecified type parameters)
+declare const __unspecified: unique symbol;
+export type __ = typeof __unspecified;
+
+export type GCHandle<
+  T1 = __,
+> =
+  [T1] extends [__] ? Internal.GCHandle :
+  Internal.GCHandle_1<T1>;
+

@@ -23,8 +23,6 @@ export type IRuntimeVariables = Internal.IRuntimeVariables;
 export { RuntimeOps$instance as RuntimeOps } from './System.Runtime.CompilerServices/internal/index.js';
 export { ReadOnlyCollectionBuilder_1 as ReadOnlyCollectionBuilder } from './System.Runtime.CompilerServices/internal/index.js';
 export { RuleCache_1 as RuleCache } from './System.Runtime.CompilerServices/internal/index.js';
-export { CallSite as CallSite_0 } from './System.Runtime.CompilerServices/internal/index.js';
-export { CallSite_1 as CallSite } from './System.Runtime.CompilerServices/internal/index.js';
 export { CallSiteBinder as CallSiteBinder } from './System.Runtime.CompilerServices/internal/index.js';
 export { CallSiteOps$instance as CallSiteOps } from './System.Runtime.CompilerServices/internal/index.js';
 export { CallSiteHelpers$instance as CallSiteHelpers } from './System.Runtime.CompilerServices/internal/index.js';
@@ -40,10 +38,6 @@ export { AsyncIteratorMethodBuilder as AsyncIteratorMethodBuilder } from './Syst
 export { AsyncIteratorStateMachineAttribute as AsyncIteratorStateMachineAttribute } from './System.Runtime.CompilerServices/internal/index.js';
 export { AsyncMethodBuilderAttribute as AsyncMethodBuilderAttribute } from './System.Runtime.CompilerServices/internal/index.js';
 export { AsyncStateMachineAttribute as AsyncStateMachineAttribute } from './System.Runtime.CompilerServices/internal/index.js';
-export { AsyncTaskMethodBuilder as AsyncTaskMethodBuilder_0 } from './System.Runtime.CompilerServices/internal/index.js';
-export { AsyncTaskMethodBuilder_1 as AsyncTaskMethodBuilder } from './System.Runtime.CompilerServices/internal/index.js';
-export { AsyncValueTaskMethodBuilder as AsyncValueTaskMethodBuilder_0 } from './System.Runtime.CompilerServices/internal/index.js';
-export { AsyncValueTaskMethodBuilder_1 as AsyncValueTaskMethodBuilder } from './System.Runtime.CompilerServices/internal/index.js';
 export { AsyncVoidMethodBuilder as AsyncVoidMethodBuilder } from './System.Runtime.CompilerServices/internal/index.js';
 export { CallerArgumentExpressionAttribute as CallerArgumentExpressionAttribute } from './System.Runtime.CompilerServices/internal/index.js';
 export { CallerFilePathAttribute as CallerFilePathAttribute } from './System.Runtime.CompilerServices/internal/index.js';
@@ -129,8 +123,6 @@ export { NullableContextAttribute as NullableContextAttribute } from './System.R
 export { NullablePublicOnlyAttribute as NullablePublicOnlyAttribute } from './System.Runtime.CompilerServices/internal/index.js';
 export { ReferenceAssemblyAttribute as ReferenceAssemblyAttribute } from './System.Runtime.CompilerServices/internal/index.js';
 export { ParamCollectionAttribute as ParamCollectionAttribute } from './System.Runtime.CompilerServices/internal/index.js';
-export { PoolingAsyncValueTaskMethodBuilder as PoolingAsyncValueTaskMethodBuilder_0 } from './System.Runtime.CompilerServices/internal/index.js';
-export { PoolingAsyncValueTaskMethodBuilder_1 as PoolingAsyncValueTaskMethodBuilder } from './System.Runtime.CompilerServices/internal/index.js';
 export { PreserveBaseOverridesAttribute as PreserveBaseOverridesAttribute } from './System.Runtime.CompilerServices/internal/index.js';
 export { OverloadResolutionPriorityAttribute as OverloadResolutionPriorityAttribute } from './System.Runtime.CompilerServices/internal/index.js';
 export { RefSafetyRulesAttribute as RefSafetyRulesAttribute } from './System.Runtime.CompilerServices/internal/index.js';
@@ -148,8 +140,6 @@ export { StrongBox_1 as StrongBox } from './System.Runtime.CompilerServices/inte
 export type IStrongBox = Internal.IStrongBox;
 export { SuppressIldasmAttribute as SuppressIldasmAttribute } from './System.Runtime.CompilerServices/internal/index.js';
 export { SwitchExpressionException as SwitchExpressionException } from './System.Runtime.CompilerServices/internal/index.js';
-export { TaskAwaiter as TaskAwaiter_0 } from './System.Runtime.CompilerServices/internal/index.js';
-export { TaskAwaiter_1 as TaskAwaiter } from './System.Runtime.CompilerServices/internal/index.js';
 export { ConfiguredTaskAwaitable as ConfiguredTaskAwaitable_0 } from './System.Runtime.CompilerServices/internal/index.js';
 export { ConfiguredTaskAwaitable_ConfiguredTaskAwaiter as ConfiguredTaskAwaitable_ConfiguredTaskAwaiter } from './System.Runtime.CompilerServices/internal/index.js';
 export { ConfiguredTaskAwaitable_1 as ConfiguredTaskAwaitable } from './System.Runtime.CompilerServices/internal/index.js';
@@ -161,8 +151,6 @@ export { UnsafeAccessorKind as UnsafeAccessorKind } from './System.Runtime.Compi
 export { UnsafeAccessorAttribute as UnsafeAccessorAttribute } from './System.Runtime.CompilerServices/internal/index.js';
 export { UnsafeAccessorTypeAttribute as UnsafeAccessorTypeAttribute } from './System.Runtime.CompilerServices/internal/index.js';
 export { UnsafeValueTypeAttribute as UnsafeValueTypeAttribute } from './System.Runtime.CompilerServices/internal/index.js';
-export { ValueTaskAwaiter as ValueTaskAwaiter_0 } from './System.Runtime.CompilerServices/internal/index.js';
-export { ValueTaskAwaiter_1 as ValueTaskAwaiter } from './System.Runtime.CompilerServices/internal/index.js';
 export { YieldAwaitable as YieldAwaitable } from './System.Runtime.CompilerServices/internal/index.js';
 export { YieldAwaitable_YieldAwaiter as YieldAwaitable_YieldAwaiter } from './System.Runtime.CompilerServices/internal/index.js';
 export { IsPinned$instance as IsPinned } from './System.Runtime.CompilerServices/internal/index.js';
@@ -183,3 +171,44 @@ export { RequiredAttributeAttribute as RequiredAttributeAttribute } from './Syst
 export { CompilerMarshalOverride$instance as CompilerMarshalOverride } from './System.Runtime.CompilerServices/internal/index.js';
 export { IDispatchConstantAttribute as IDispatchConstantAttribute } from './System.Runtime.CompilerServices/internal/index.js';
 export { IUnknownConstantAttribute as IUnknownConstantAttribute } from './System.Runtime.CompilerServices/internal/index.js';
+
+// Multi-arity family sentinel (detects unspecified type parameters)
+declare const __unspecified: unique symbol;
+export type __ = typeof __unspecified;
+
+export type AsyncTaskMethodBuilder<
+  T1 = __,
+> =
+  [T1] extends [__] ? Internal.AsyncTaskMethodBuilder :
+  Internal.AsyncTaskMethodBuilder_1<T1>;
+
+export type AsyncValueTaskMethodBuilder<
+  T1 = __,
+> =
+  [T1] extends [__] ? Internal.AsyncValueTaskMethodBuilder :
+  Internal.AsyncValueTaskMethodBuilder_1<T1>;
+
+export type CallSite<
+  T1 = __,
+> =
+  [T1] extends [__] ? Internal.CallSite :
+  Internal.CallSite_1<T1>;
+
+export type PoolingAsyncValueTaskMethodBuilder<
+  T1 = __,
+> =
+  [T1] extends [__] ? Internal.PoolingAsyncValueTaskMethodBuilder :
+  Internal.PoolingAsyncValueTaskMethodBuilder_1<T1>;
+
+export type TaskAwaiter<
+  T1 = __,
+> =
+  [T1] extends [__] ? Internal.TaskAwaiter :
+  Internal.TaskAwaiter_1<T1>;
+
+export type ValueTaskAwaiter<
+  T1 = __,
+> =
+  [T1] extends [__] ? Internal.ValueTaskAwaiter :
+  Internal.ValueTaskAwaiter_1<T1>;
+

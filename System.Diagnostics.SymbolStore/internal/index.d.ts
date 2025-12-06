@@ -195,7 +195,7 @@ export interface __SymbolToken$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<SymbolToken>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: SymbolToken): boolean;
+    equals(other: SymbolToken): boolean;
 }
 
 export type SymbolToken = SymbolToken$instance & __SymbolToken$views;

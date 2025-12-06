@@ -251,7 +251,7 @@ export interface __EditAndContinueLogEntry$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<EditAndContinueLogEntry>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: EditAndContinueLogEntry): boolean;
+    equals(other: EditAndContinueLogEntry): boolean;
 }
 
 export type EditAndContinueLogEntry = EditAndContinueLogEntry$instance & __EditAndContinueLogEntry$views;
@@ -373,7 +373,7 @@ export interface __LabelHandle$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<LabelHandle>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: LabelHandle): boolean;
+    equals(other: LabelHandle): boolean;
 }
 
 export type LabelHandle = LabelHandle$instance & __LabelHandle$views;

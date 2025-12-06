@@ -234,6 +234,7 @@ export interface IBindingList$instance extends IList, ICollection, IEnumerable {
     Remove(value: unknown): void;
     RemoveAt(index: int): void;
     RemoveSort(): void;
+    Clear(): void;
 }
 
 
@@ -272,6 +273,8 @@ export interface IBindingListView$instance extends IBindingList, IList, ICollect
     Remove(value: unknown): void;
     RemoveAt(index: int): void;
     RemoveFilter(): void;
+    Clear(): void;
+    RemoveSort(): void;
 }
 
 
@@ -440,6 +443,7 @@ export type IRaiseItemChangedEvents = IRaiseItemChangedEvents$instance;
 export interface IRevertibleChangeTracking$instance extends IChangeTracking {
     readonly IsChanged: boolean;
     RejectChanges(): void;
+    AcceptChanges(): void;
 }
 
 
@@ -610,7 +614,7 @@ export interface AttributeCollection$instance {
 export const AttributeCollection: {
     new(attributes: Attribute[]): AttributeCollection$instance;
     readonly Empty: AttributeCollection;
-    FromExisting(existing: AttributeCollection, newAttributes: Attribute[]): AttributeCollection;
+    FromExisting(existing: AttributeCollection, ...newAttributes: Attribute[]): AttributeCollection;
 };
 
 
@@ -2894,8 +2898,8 @@ export const TypeDescriptor: {
     readonly InterfaceType: Type;
     readonly ComObjectType: Type;
     ComNativeDescriptorHandler: IComNativeDescriptorHandler;
-    AddAttributes(instance: unknown, attributes: Attribute[]): TypeDescriptionProvider;
-    AddAttributes(type_: Type, attributes: Attribute[]): TypeDescriptionProvider;
+    AddAttributes(instance: unknown, ...attributes: Attribute[]): TypeDescriptionProvider;
+    AddAttributes(type_: Type, ...attributes: Attribute[]): TypeDescriptionProvider;
     AddEditorTable(editorBaseType: Type, table: Hashtable): void;
     AddProvider(provider: TypeDescriptionProvider, instance: unknown): void;
     AddProvider(provider: TypeDescriptionProvider, type_: Type): void;
@@ -2903,11 +2907,11 @@ export const TypeDescriptor: {
     AddProviderTransparent(provider: TypeDescriptionProvider, type_: Type): void;
     CreateAssociation(primary: unknown, secondary: unknown): void;
     CreateDesigner(component: IComponent, designerBaseType: Type): IDesigner;
-    CreateEvent(componentType: Type, oldEventDescriptor: EventDescriptor, attributes: Attribute[]): EventDescriptor;
-    CreateEvent(componentType: Type, name: string, type_: Type, attributes: Attribute[]): EventDescriptor;
+    CreateEvent(componentType: Type, oldEventDescriptor: EventDescriptor, ...attributes: Attribute[]): EventDescriptor;
+    CreateEvent(componentType: Type, name: string, type_: Type, ...attributes: Attribute[]): EventDescriptor;
     CreateInstance(provider: IServiceProvider, objectType: Type, argTypes: Type[], args: unknown[]): unknown;
-    CreateProperty(componentType: Type, oldPropertyDescriptor: PropertyDescriptor, attributes: Attribute[]): PropertyDescriptor;
-    CreateProperty(componentType: Type, name: string, type_: Type, attributes: Attribute[]): PropertyDescriptor;
+    CreateProperty(componentType: Type, oldPropertyDescriptor: PropertyDescriptor, ...attributes: Attribute[]): PropertyDescriptor;
+    CreateProperty(componentType: Type, name: string, type_: Type, ...attributes: Attribute[]): PropertyDescriptor;
     GetAssociation(type_: Type, primary: unknown): unknown;
     GetAttributes(component: unknown, noCustomTypeDesc: boolean): AttributeCollection;
     GetAttributes(component: unknown): AttributeCollection;

@@ -20,7 +20,6 @@ export { DefaultJsonTypeInfoResolver as DefaultJsonTypeInfoResolver } from './Sy
 export type IJsonTypeInfoResolver = Internal.IJsonTypeInfoResolver;
 export { JsonDerivedType as JsonDerivedType } from './System.Text.Json.Serialization.Metadata/internal/index.js';
 export { JsonPolymorphismOptions as JsonPolymorphismOptions } from './System.Text.Json.Serialization.Metadata/internal/index.js';
-export { JsonTypeInfo_1 as JsonTypeInfo } from './System.Text.Json.Serialization.Metadata/internal/index.js';
 export { JsonTypeInfoResolver$instance as JsonTypeInfoResolver } from './System.Text.Json.Serialization.Metadata/internal/index.js';
 export { JsonTypeInfoKind as JsonTypeInfoKind } from './System.Text.Json.Serialization.Metadata/internal/index.js';
 export { JsonCollectionInfoValues_1 as JsonCollectionInfoValues } from './System.Text.Json.Serialization.Metadata/internal/index.js';
@@ -30,4 +29,14 @@ export { JsonParameterInfoValues as JsonParameterInfoValues } from './System.Tex
 export { JsonParameterInfo as JsonParameterInfo } from './System.Text.Json.Serialization.Metadata/internal/index.js';
 export { JsonPropertyInfo as JsonPropertyInfo } from './System.Text.Json.Serialization.Metadata/internal/index.js';
 export { JsonPropertyInfoValues_1 as JsonPropertyInfoValues } from './System.Text.Json.Serialization.Metadata/internal/index.js';
-export { JsonTypeInfo as JsonTypeInfo_0 } from './System.Text.Json.Serialization.Metadata/internal/index.js';
+
+// Multi-arity family sentinel (detects unspecified type parameters)
+declare const __unspecified: unique symbol;
+export type __ = typeof __unspecified;
+
+export type JsonTypeInfo<
+  T1 = __,
+> =
+  [T1] extends [__] ? Internal.JsonTypeInfo :
+  Internal.JsonTypeInfo_1<T1>;
+

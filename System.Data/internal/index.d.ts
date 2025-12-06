@@ -476,6 +476,8 @@ export interface IDataReader$instance extends IDisposable, IDataRecord {
     GetValue(i: int): unknown;
     GetValues(values: unknown[]): int;
     NextResult(): boolean;
+    Dispose(): void;
+    get_Item2(name: string): unknown;
 }
 
 
@@ -525,6 +527,7 @@ export interface IDbCommand$instance extends IDisposable {
     ExecuteReader(behavior: CommandBehavior): IDataReader;
     ExecuteScalar(): unknown;
     Prepare(): void;
+    Dispose(): void;
 }
 
 
@@ -542,6 +545,7 @@ export interface IDbConnection$instance extends IDisposable {
     ChangeDatabase(databaseName: string): void;
     Close(): void;
     CreateCommand(): IDbCommand;
+    Dispose(): void;
 }
 
 
@@ -589,6 +593,7 @@ export interface IDbTransaction$instance extends IDisposable {
     readonly Connection: IDbConnection;
     readonly IsolationLevel: IsolationLevel;
     Commit(): void;
+    Dispose(): void;
 }
 
 
@@ -967,7 +972,7 @@ export interface DataRowCollection$instance extends InternalDataCollectionBase$i
     readonly Count: int;
     readonly Item: DataRow;
     Add(row: DataRow): void;
-    Add(values: unknown[]): DataRow;
+    Add(...values: unknown[]): DataRow;
     Clear(): void;
     Contains(key: unknown): boolean;
     Contains(keys: unknown[]): boolean;
@@ -1076,7 +1081,7 @@ export interface DataSet$instance extends MarshalByValueComponent {
     Clone(): DataSet;
     Copy(): DataSet;
     CreateDataReader(): DataTableReader;
-    CreateDataReader(dataTables: DataTable[]): DataTableReader;
+    CreateDataReader(...dataTables: DataTable[]): DataTableReader;
     Dispose(): void;
     EndInit(): void;
     GetChanges(): DataSet;
@@ -1091,9 +1096,9 @@ export interface DataSet$instance extends MarshalByValueComponent {
     InferXmlSchema(stream: Stream, nsArray: string[]): void;
     InferXmlSchema(reader: TextReader, nsArray: string[]): void;
     InferXmlSchema(fileName: string, nsArray: string[]): void;
-    Load(reader: IDataReader, loadOption: LoadOption, errorHandler: FillErrorEventHandler, tables: DataTable[]): void;
-    Load(reader: IDataReader, loadOption: LoadOption, tables: DataTable[]): void;
-    Load(reader: IDataReader, loadOption: LoadOption, tables: string[]): void;
+    Load(reader: IDataReader, loadOption: LoadOption, errorHandler: FillErrorEventHandler, ...tables: DataTable[]): void;
+    Load(reader: IDataReader, loadOption: LoadOption, ...tables: DataTable[]): void;
+    Load(reader: IDataReader, loadOption: LoadOption, ...tables: string[]): void;
     Merge(dataSet: DataSet): void;
     Merge(dataSet: DataSet, preserveChanges: boolean): void;
     Merge(dataSet: DataSet, preserveChanges: boolean, missingSchemaAction: MissingSchemaAction): void;
@@ -1436,8 +1441,8 @@ export interface DataView$instance extends MarshalByValueComponent {
     GetService(service: Type): unknown;
     ToTable(): DataTable;
     ToTable(tableName: string): DataTable;
-    ToTable(distinct: boolean, columnNames: string[]): DataTable;
-    ToTable(tableName: string, distinct: boolean, columnNames: string[]): DataTable;
+    ToTable(distinct: boolean, ...columnNames: string[]): DataTable;
+    ToTable(tableName: string, distinct: boolean, ...columnNames: string[]): DataTable;
 }
 
 

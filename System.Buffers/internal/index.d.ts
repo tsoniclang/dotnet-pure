@@ -224,7 +224,7 @@ export interface __StandardFormat$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<StandardFormat>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: StandardFormat): boolean;
+    equals(other: StandardFormat): boolean;
 }
 
 export type StandardFormat = StandardFormat$instance & __StandardFormat$views;

@@ -17,7 +17,16 @@ import type { Action_2, AsyncCallback, Boolean as ClrBoolean, Byte, Delegate, IA
 
 // Public API exports (curated - no internal $instance/$views leakage)
 export { SseFormatter$instance as SseFormatter } from './System.Net.ServerSentEvents/internal/index.js';
-export { SseParser_1 as SseParser } from './System.Net.ServerSentEvents/internal/index.js';
 export { SseItem_1 as SseItem } from './System.Net.ServerSentEvents/internal/index.js';
 export type SseItemParser<T> = Internal.SseItemParser_1<T>;
-export { SseParser$instance as SseParser_0 } from './System.Net.ServerSentEvents/internal/index.js';
+
+// Multi-arity family sentinel (detects unspecified type parameters)
+declare const __unspecified: unique symbol;
+export type __ = typeof __unspecified;
+
+export type SseParser<
+  T1 = __,
+> =
+  [T1] extends [__] ? Internal.SseParser :
+  Internal.SseParser_1<T1>;
+

@@ -58,8 +58,6 @@ export { DataRowAction as DataRowAction } from './System.Data/internal/index.js'
 export { DataRowChangeEventArgs as DataRowChangeEventArgs } from './System.Data/internal/index.js';
 export type DataRowChangeEventHandler = Internal.DataRowChangeEventHandler;
 export { DataRowCollection as DataRowCollection } from './System.Data/internal/index.js';
-export { DataRowComparer$instance as DataRowComparer_0 } from './System.Data/internal/index.js';
-export { DataRowComparer_1 as DataRowComparer } from './System.Data/internal/index.js';
 export { DataRowExtensions$instance as DataRowExtensions } from './System.Data/internal/index.js';
 export { DataRowState as DataRowState } from './System.Data/internal/index.js';
 export { DataRowVersion as DataRowVersion } from './System.Data/internal/index.js';
@@ -83,8 +81,6 @@ export { DataViewSetting as DataViewSetting } from './System.Data/internal/index
 export { DataViewSettingCollection as DataViewSettingCollection } from './System.Data/internal/index.js';
 export { DBConcurrencyException as DBConcurrencyException } from './System.Data/internal/index.js';
 export { DbType as DbType } from './System.Data/internal/index.js';
-export { EnumerableRowCollection as EnumerableRowCollection_0 } from './System.Data/internal/index.js';
-export { EnumerableRowCollection_1 as EnumerableRowCollection } from './System.Data/internal/index.js';
 export { EnumerableRowCollectionExtensions$instance as EnumerableRowCollectionExtensions } from './System.Data/internal/index.js';
 export { FillErrorEventArgs as FillErrorEventArgs } from './System.Data/internal/index.js';
 export type FillErrorEventHandler = Internal.FillErrorEventHandler;
@@ -131,3 +127,20 @@ export { UpdateRowSource as UpdateRowSource } from './System.Data/internal/index
 export { InvalidExpressionException as InvalidExpressionException } from './System.Data/internal/index.js';
 export { EvaluateException as EvaluateException } from './System.Data/internal/index.js';
 export { SyntaxErrorException as SyntaxErrorException } from './System.Data/internal/index.js';
+
+// Multi-arity family sentinel (detects unspecified type parameters)
+declare const __unspecified: unique symbol;
+export type __ = typeof __unspecified;
+
+export type DataRowComparer<
+  T1 = __,
+> =
+  [T1] extends [__] ? Internal.DataRowComparer :
+  [T1] extends [Internal.DataRow] ? Internal.DataRowComparer_1<T1> : never;
+
+export type EnumerableRowCollection<
+  T1 = __,
+> =
+  [T1] extends [__] ? Internal.EnumerableRowCollection :
+  Internal.EnumerableRowCollection_1<T1>;
+

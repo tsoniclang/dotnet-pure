@@ -452,7 +452,8 @@ export interface __IPNetwork$views {
     As_IUtf8SpanParsable_1(): System_Internal.IUtf8SpanParsable_1$instance<IPNetwork>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: IPNetwork): boolean;
+    equals(other: IPNetwork): boolean;
+    tryFormat(utf8Destination: import("../../System/internal/index").Span_1<import("../../System/internal/index").CLROf<byte>>, bytesWritten: { value: ref<int> }, format: import("../../System/internal/index").ReadOnlySpan_1<import("../../System/internal/index").CLROf<char>>, provider: import("../../System/internal/index").IFormatProvider): boolean;
 }
 
 export interface IPNetwork$instance extends System_Internal.ISpanParsable_1$instance<IPNetwork> {}
@@ -1270,6 +1271,9 @@ export interface __IPAddress$views {
     As_ISpanParsable_1(): System_Internal.ISpanParsable_1$instance<IPAddress>;
     As_IUtf8SpanFormattable(): System_Internal.IUtf8SpanFormattable$instance;
     As_IUtf8SpanParsable_1(): System_Internal.IUtf8SpanParsable_1$instance<IPAddress>;
+
+    // Structural method bridges for numeric interface constraints
+    tryFormat(utf8Destination: import("../../System/internal/index").Span_1<import("../../System/internal/index").CLROf<byte>>, bytesWritten: { value: ref<int> }, format: import("../../System/internal/index").ReadOnlySpan_1<import("../../System/internal/index").CLROf<char>>, provider: import("../../System/internal/index").IFormatProvider): boolean;
 }
 
 export interface IPAddress$instance extends System_Internal.ISpanParsable_1$instance<IPAddress> {}
@@ -1477,7 +1481,7 @@ export interface __SocketAddress$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<SocketAddress>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: SocketAddress): boolean;
+    equals(other: SocketAddress): boolean;
 }
 
 export type SocketAddress = SocketAddress$instance & __SocketAddress$views;

@@ -29,5 +29,14 @@ export { MemoryHandle as MemoryHandle } from './System.Buffers/internal/index.js
 export { MemoryManager_1 as MemoryManager } from './System.Buffers/internal/index.js';
 export { OperationStatus as OperationStatus } from './System.Buffers/internal/index.js';
 export { StandardFormat as StandardFormat } from './System.Buffers/internal/index.js';
-export { SearchValues$instance as SearchValues_0 } from './System.Buffers/internal/index.js';
-export { SearchValues_1 as SearchValues } from './System.Buffers/internal/index.js';
+
+// Multi-arity family sentinel (detects unspecified type parameters)
+declare const __unspecified: unique symbol;
+export type __ = typeof __unspecified;
+
+export type SearchValues<
+  T1 = __,
+> =
+  [T1] extends [__] ? Internal.SearchValues :
+  [T1] extends [IEquatable_1<T1>] ? Internal.SearchValues_1<T1> : never;
+

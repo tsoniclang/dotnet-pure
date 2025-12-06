@@ -54,13 +54,16 @@ export type IAdditiveIdentity_2<TSelf extends IAdditiveIdentity_2<TSelf, TResult
 
 export interface IBinaryFloatingPointIeee754_1$instance<TSelf extends IBinaryFloatingPointIeee754_1<TSelf>> extends IBinaryNumber_1<TSelf>, IBitwiseOperators_3<TSelf, TSelf, TSelf>, INumber_1<TSelf>, IComparable, IComparable_1<TSelf>, IComparisonOperators_3<TSelf, TSelf, CLROf<boolean>>, IEqualityOperators_3<TSelf, TSelf, CLROf<boolean>>, IModulusOperators_3<TSelf, TSelf, TSelf>, INumberBase_1<TSelf>, IAdditionOperators_3<TSelf, TSelf, TSelf>, IAdditiveIdentity_2<TSelf, TSelf>, IDecrementOperators_1<TSelf>, IDivisionOperators_3<TSelf, TSelf, TSelf>, IEquatable_1<TSelf>, IIncrementOperators_1<TSelf>, IMultiplicativeIdentity_2<TSelf, TSelf>, IMultiplyOperators_3<TSelf, TSelf, TSelf>, ISpanFormattable, IFormattable, ISpanParsable_1<TSelf>, IParsable_1<TSelf>, ISubtractionOperators_3<TSelf, TSelf, TSelf>, IUnaryPlusOperators_2<TSelf, TSelf>, IUnaryNegationOperators_2<TSelf, TSelf>, IUtf8SpanFormattable, IUtf8SpanParsable_1<TSelf>, IFloatingPointIeee754_1<TSelf>, IExponentialFunctions_1<TSelf>, IFloatingPointConstants_1<TSelf>, IFloatingPoint_1<TSelf>, ISignedNumber_1<TSelf>, IHyperbolicFunctions_1<TSelf>, ILogarithmicFunctions_1<TSelf>, IPowerFunctions_1<TSelf>, IRootFunctions_1<TSelf>, ITrigonometricFunctions_1<TSelf> {
     CompareTo(obj: unknown): int;
+    CompareTo(other: TSelf): int;
     GetExponentByteCount(): int;
     ToString(format: string, formatProvider: IFormatProvider): string;
     TryFormat(destination: Span_1<CLROf<char>>, charsWritten: { value: ref<int> }, format: ReadOnlySpan_1<CLROf<char>>, provider: IFormatProvider): boolean;
+    TryFormat(utf8Destination: Span_1<CLROf<byte>>, bytesWritten: { value: ref<int> }, format: ReadOnlySpan_1<CLROf<char>>, provider: IFormatProvider): boolean;
     TryWriteExponentBigEndian(destination: Span_1<CLROf<byte>>, bytesWritten: { value: ref<int> }): boolean;
     WriteExponentBigEndian(destination: byte[], startIndex: int): int;
     WriteExponentBigEndian(destination: byte[]): int;
     WriteExponentBigEndian(destination: Span_1<CLROf<byte>>): int;
+    Equals(other: TSelf): boolean;
 }
 
 
@@ -68,13 +71,16 @@ export type IBinaryFloatingPointIeee754_1<TSelf extends IBinaryFloatingPointIeee
 
 export interface IBinaryInteger_1$instance<TSelf extends IBinaryInteger_1<TSelf>> extends IBinaryNumber_1<TSelf>, IBitwiseOperators_3<TSelf, TSelf, TSelf>, INumber_1<TSelf>, IComparable, IComparable_1<TSelf>, IComparisonOperators_3<TSelf, TSelf, CLROf<boolean>>, IEqualityOperators_3<TSelf, TSelf, CLROf<boolean>>, IModulusOperators_3<TSelf, TSelf, TSelf>, INumberBase_1<TSelf>, IAdditionOperators_3<TSelf, TSelf, TSelf>, IAdditiveIdentity_2<TSelf, TSelf>, IDecrementOperators_1<TSelf>, IDivisionOperators_3<TSelf, TSelf, TSelf>, IEquatable_1<TSelf>, IIncrementOperators_1<TSelf>, IMultiplicativeIdentity_2<TSelf, TSelf>, IMultiplyOperators_3<TSelf, TSelf, TSelf>, ISpanFormattable, IFormattable, ISpanParsable_1<TSelf>, IParsable_1<TSelf>, ISubtractionOperators_3<TSelf, TSelf, TSelf>, IUnaryPlusOperators_2<TSelf, TSelf>, IUnaryNegationOperators_2<TSelf, TSelf>, IUtf8SpanFormattable, IUtf8SpanParsable_1<TSelf>, IShiftOperators_3<TSelf, CLROf<int>, TSelf> {
     CompareTo(obj: unknown): int;
+    CompareTo(other: TSelf): int;
     GetByteCount(): int;
     ToString(format: string, formatProvider: IFormatProvider): string;
     TryFormat(destination: Span_1<CLROf<char>>, charsWritten: { value: ref<int> }, format: ReadOnlySpan_1<CLROf<char>>, provider: IFormatProvider): boolean;
+    TryFormat(utf8Destination: Span_1<CLROf<byte>>, bytesWritten: { value: ref<int> }, format: ReadOnlySpan_1<CLROf<char>>, provider: IFormatProvider): boolean;
     TryWriteBigEndian(destination: Span_1<CLROf<byte>>, bytesWritten: { value: ref<int> }): boolean;
     WriteBigEndian(destination: byte[], startIndex: int): int;
     WriteBigEndian(destination: byte[]): int;
     WriteBigEndian(destination: Span_1<CLROf<byte>>): int;
+    Equals(other: TSelf): boolean;
 }
 
 
@@ -84,8 +90,11 @@ export type IBinaryInteger_1<TSelf extends IBinaryInteger_1<TSelf>> = IBinaryInt
 
 export interface IBinaryNumber_1$instance<TSelf extends IBinaryNumber_1<TSelf>> extends IBitwiseOperators_3<TSelf, TSelf, TSelf>, INumber_1<TSelf>, IComparable, IComparable_1<TSelf>, IComparisonOperators_3<TSelf, TSelf, CLROf<boolean>>, IEqualityOperators_3<TSelf, TSelf, CLROf<boolean>>, IModulusOperators_3<TSelf, TSelf, TSelf>, INumberBase_1<TSelf>, IAdditionOperators_3<TSelf, TSelf, TSelf>, IAdditiveIdentity_2<TSelf, TSelf>, IDecrementOperators_1<TSelf>, IDivisionOperators_3<TSelf, TSelf, TSelf>, IEquatable_1<TSelf>, IIncrementOperators_1<TSelf>, IMultiplicativeIdentity_2<TSelf, TSelf>, IMultiplyOperators_3<TSelf, TSelf, TSelf>, ISpanFormattable, IFormattable, ISpanParsable_1<TSelf>, IParsable_1<TSelf>, ISubtractionOperators_3<TSelf, TSelf, TSelf>, IUnaryPlusOperators_2<TSelf, TSelf>, IUnaryNegationOperators_2<TSelf, TSelf>, IUtf8SpanFormattable, IUtf8SpanParsable_1<TSelf> {
     CompareTo(obj: unknown): int;
+    CompareTo(other: TSelf): int;
     ToString(format: string, formatProvider: IFormatProvider): string;
     TryFormat(destination: Span_1<CLROf<char>>, charsWritten: { value: ref<int> }, format: ReadOnlySpan_1<CLROf<char>>, provider: IFormatProvider): boolean;
+    TryFormat(utf8Destination: Span_1<CLROf<byte>>, bytesWritten: { value: ref<int> }, format: ReadOnlySpan_1<CLROf<char>>, provider: IFormatProvider): boolean;
+    Equals(other: TSelf): boolean;
 }
 
 
@@ -128,6 +137,8 @@ export type IEqualityOperators_3<TSelf extends IEqualityOperators_3<TSelf, TOthe
 export interface IExponentialFunctions_1$instance<TSelf extends IExponentialFunctions_1<TSelf>> extends IFloatingPointConstants_1<TSelf>, INumberBase_1<TSelf>, IAdditionOperators_3<TSelf, TSelf, TSelf>, IAdditiveIdentity_2<TSelf, TSelf>, IDecrementOperators_1<TSelf>, IDivisionOperators_3<TSelf, TSelf, TSelf>, IEquatable_1<TSelf>, IEqualityOperators_3<TSelf, TSelf, CLROf<boolean>>, IIncrementOperators_1<TSelf>, IMultiplicativeIdentity_2<TSelf, TSelf>, IMultiplyOperators_3<TSelf, TSelf, TSelf>, ISpanFormattable, IFormattable, ISpanParsable_1<TSelf>, IParsable_1<TSelf>, ISubtractionOperators_3<TSelf, TSelf, TSelf>, IUnaryPlusOperators_2<TSelf, TSelf>, IUnaryNegationOperators_2<TSelf, TSelf>, IUtf8SpanFormattable, IUtf8SpanParsable_1<TSelf> {
     ToString(format: string, formatProvider: IFormatProvider): string;
     TryFormat(destination: Span_1<CLROf<char>>, charsWritten: { value: ref<int> }, format: ReadOnlySpan_1<CLROf<char>>, provider: IFormatProvider): boolean;
+    TryFormat(utf8Destination: Span_1<CLROf<byte>>, bytesWritten: { value: ref<int> }, format: ReadOnlySpan_1<CLROf<char>>, provider: IFormatProvider): boolean;
+    Equals(other: TSelf): boolean;
 }
 
 
@@ -135,13 +146,16 @@ export type IExponentialFunctions_1<TSelf extends IExponentialFunctions_1<TSelf>
 
 export interface IFloatingPoint_1$instance<TSelf extends IFloatingPoint_1<TSelf>> extends IFloatingPointConstants_1<TSelf>, INumberBase_1<TSelf>, IAdditionOperators_3<TSelf, TSelf, TSelf>, IAdditiveIdentity_2<TSelf, TSelf>, IDecrementOperators_1<TSelf>, IDivisionOperators_3<TSelf, TSelf, TSelf>, IEquatable_1<TSelf>, IEqualityOperators_3<TSelf, TSelf, CLROf<boolean>>, IIncrementOperators_1<TSelf>, IMultiplicativeIdentity_2<TSelf, TSelf>, IMultiplyOperators_3<TSelf, TSelf, TSelf>, ISpanFormattable, IFormattable, ISpanParsable_1<TSelf>, IParsable_1<TSelf>, ISubtractionOperators_3<TSelf, TSelf, TSelf>, IUnaryPlusOperators_2<TSelf, TSelf>, IUnaryNegationOperators_2<TSelf, TSelf>, IUtf8SpanFormattable, IUtf8SpanParsable_1<TSelf>, INumber_1<TSelf>, IComparable, IComparable_1<TSelf>, IComparisonOperators_3<TSelf, TSelf, CLROf<boolean>>, IModulusOperators_3<TSelf, TSelf, TSelf>, ISignedNumber_1<TSelf> {
     CompareTo(obj: unknown): int;
+    CompareTo(other: TSelf): int;
     GetExponentByteCount(): int;
     ToString(format: string, formatProvider: IFormatProvider): string;
     TryFormat(destination: Span_1<CLROf<char>>, charsWritten: { value: ref<int> }, format: ReadOnlySpan_1<CLROf<char>>, provider: IFormatProvider): boolean;
+    TryFormat(utf8Destination: Span_1<CLROf<byte>>, bytesWritten: { value: ref<int> }, format: ReadOnlySpan_1<CLROf<char>>, provider: IFormatProvider): boolean;
     TryWriteExponentBigEndian(destination: Span_1<CLROf<byte>>, bytesWritten: { value: ref<int> }): boolean;
     WriteExponentBigEndian(destination: byte[], startIndex: int): int;
     WriteExponentBigEndian(destination: byte[]): int;
     WriteExponentBigEndian(destination: Span_1<CLROf<byte>>): int;
+    Equals(other: TSelf): boolean;
 }
 
 
@@ -150,6 +164,8 @@ export type IFloatingPoint_1<TSelf extends IFloatingPoint_1<TSelf>> = IFloatingP
 export interface IFloatingPointConstants_1$instance<TSelf extends IFloatingPointConstants_1<TSelf>> extends INumberBase_1<TSelf>, IAdditionOperators_3<TSelf, TSelf, TSelf>, IAdditiveIdentity_2<TSelf, TSelf>, IDecrementOperators_1<TSelf>, IDivisionOperators_3<TSelf, TSelf, TSelf>, IEquatable_1<TSelf>, IEqualityOperators_3<TSelf, TSelf, CLROf<boolean>>, IIncrementOperators_1<TSelf>, IMultiplicativeIdentity_2<TSelf, TSelf>, IMultiplyOperators_3<TSelf, TSelf, TSelf>, ISpanFormattable, IFormattable, ISpanParsable_1<TSelf>, IParsable_1<TSelf>, ISubtractionOperators_3<TSelf, TSelf, TSelf>, IUnaryPlusOperators_2<TSelf, TSelf>, IUnaryNegationOperators_2<TSelf, TSelf>, IUtf8SpanFormattable, IUtf8SpanParsable_1<TSelf> {
     ToString(format: string, formatProvider: IFormatProvider): string;
     TryFormat(destination: Span_1<CLROf<char>>, charsWritten: { value: ref<int> }, format: ReadOnlySpan_1<CLROf<char>>, provider: IFormatProvider): boolean;
+    TryFormat(utf8Destination: Span_1<CLROf<byte>>, bytesWritten: { value: ref<int> }, format: ReadOnlySpan_1<CLROf<char>>, provider: IFormatProvider): boolean;
+    Equals(other: TSelf): boolean;
 }
 
 
@@ -157,13 +173,16 @@ export type IFloatingPointConstants_1<TSelf extends IFloatingPointConstants_1<TS
 
 export interface IFloatingPointIeee754_1$instance<TSelf extends IFloatingPointIeee754_1<TSelf>> extends IExponentialFunctions_1<TSelf>, IFloatingPointConstants_1<TSelf>, INumberBase_1<TSelf>, IAdditionOperators_3<TSelf, TSelf, TSelf>, IAdditiveIdentity_2<TSelf, TSelf>, IDecrementOperators_1<TSelf>, IDivisionOperators_3<TSelf, TSelf, TSelf>, IEquatable_1<TSelf>, IEqualityOperators_3<TSelf, TSelf, CLROf<boolean>>, IIncrementOperators_1<TSelf>, IMultiplicativeIdentity_2<TSelf, TSelf>, IMultiplyOperators_3<TSelf, TSelf, TSelf>, ISpanFormattable, IFormattable, ISpanParsable_1<TSelf>, IParsable_1<TSelf>, ISubtractionOperators_3<TSelf, TSelf, TSelf>, IUnaryPlusOperators_2<TSelf, TSelf>, IUnaryNegationOperators_2<TSelf, TSelf>, IUtf8SpanFormattable, IUtf8SpanParsable_1<TSelf>, IFloatingPoint_1<TSelf>, INumber_1<TSelf>, IComparable, IComparable_1<TSelf>, IComparisonOperators_3<TSelf, TSelf, CLROf<boolean>>, IModulusOperators_3<TSelf, TSelf, TSelf>, ISignedNumber_1<TSelf>, IHyperbolicFunctions_1<TSelf>, ILogarithmicFunctions_1<TSelf>, IPowerFunctions_1<TSelf>, IRootFunctions_1<TSelf>, ITrigonometricFunctions_1<TSelf> {
     CompareTo(obj: unknown): int;
+    CompareTo(other: TSelf): int;
     GetExponentByteCount(): int;
     ToString(format: string, formatProvider: IFormatProvider): string;
     TryFormat(destination: Span_1<CLROf<char>>, charsWritten: { value: ref<int> }, format: ReadOnlySpan_1<CLROf<char>>, provider: IFormatProvider): boolean;
+    TryFormat(utf8Destination: Span_1<CLROf<byte>>, bytesWritten: { value: ref<int> }, format: ReadOnlySpan_1<CLROf<char>>, provider: IFormatProvider): boolean;
     TryWriteExponentBigEndian(destination: Span_1<CLROf<byte>>, bytesWritten: { value: ref<int> }): boolean;
     WriteExponentBigEndian(destination: byte[], startIndex: int): int;
     WriteExponentBigEndian(destination: byte[]): int;
     WriteExponentBigEndian(destination: Span_1<CLROf<byte>>): int;
+    Equals(other: TSelf): boolean;
 }
 
 
@@ -172,6 +191,8 @@ export type IFloatingPointIeee754_1<TSelf extends IFloatingPointIeee754_1<TSelf>
 export interface IHyperbolicFunctions_1$instance<TSelf extends IHyperbolicFunctions_1<TSelf>> extends IFloatingPointConstants_1<TSelf>, INumberBase_1<TSelf>, IAdditionOperators_3<TSelf, TSelf, TSelf>, IAdditiveIdentity_2<TSelf, TSelf>, IDecrementOperators_1<TSelf>, IDivisionOperators_3<TSelf, TSelf, TSelf>, IEquatable_1<TSelf>, IEqualityOperators_3<TSelf, TSelf, CLROf<boolean>>, IIncrementOperators_1<TSelf>, IMultiplicativeIdentity_2<TSelf, TSelf>, IMultiplyOperators_3<TSelf, TSelf, TSelf>, ISpanFormattable, IFormattable, ISpanParsable_1<TSelf>, IParsable_1<TSelf>, ISubtractionOperators_3<TSelf, TSelf, TSelf>, IUnaryPlusOperators_2<TSelf, TSelf>, IUnaryNegationOperators_2<TSelf, TSelf>, IUtf8SpanFormattable, IUtf8SpanParsable_1<TSelf> {
     ToString(format: string, formatProvider: IFormatProvider): string;
     TryFormat(destination: Span_1<CLROf<char>>, charsWritten: { value: ref<int> }, format: ReadOnlySpan_1<CLROf<char>>, provider: IFormatProvider): boolean;
+    TryFormat(utf8Destination: Span_1<CLROf<byte>>, bytesWritten: { value: ref<int> }, format: ReadOnlySpan_1<CLROf<char>>, provider: IFormatProvider): boolean;
+    Equals(other: TSelf): boolean;
 }
 
 
@@ -186,6 +207,8 @@ export type IIncrementOperators_1<TSelf extends IIncrementOperators_1<TSelf>> = 
 export interface ILogarithmicFunctions_1$instance<TSelf extends ILogarithmicFunctions_1<TSelf>> extends IFloatingPointConstants_1<TSelf>, INumberBase_1<TSelf>, IAdditionOperators_3<TSelf, TSelf, TSelf>, IAdditiveIdentity_2<TSelf, TSelf>, IDecrementOperators_1<TSelf>, IDivisionOperators_3<TSelf, TSelf, TSelf>, IEquatable_1<TSelf>, IEqualityOperators_3<TSelf, TSelf, CLROf<boolean>>, IIncrementOperators_1<TSelf>, IMultiplicativeIdentity_2<TSelf, TSelf>, IMultiplyOperators_3<TSelf, TSelf, TSelf>, ISpanFormattable, IFormattable, ISpanParsable_1<TSelf>, IParsable_1<TSelf>, ISubtractionOperators_3<TSelf, TSelf, TSelf>, IUnaryPlusOperators_2<TSelf, TSelf>, IUnaryNegationOperators_2<TSelf, TSelf>, IUtf8SpanFormattable, IUtf8SpanParsable_1<TSelf> {
     ToString(format: string, formatProvider: IFormatProvider): string;
     TryFormat(destination: Span_1<CLROf<char>>, charsWritten: { value: ref<int> }, format: ReadOnlySpan_1<CLROf<char>>, provider: IFormatProvider): boolean;
+    TryFormat(utf8Destination: Span_1<CLROf<byte>>, bytesWritten: { value: ref<int> }, format: ReadOnlySpan_1<CLROf<char>>, provider: IFormatProvider): boolean;
+    Equals(other: TSelf): boolean;
 }
 
 
@@ -217,8 +240,11 @@ export type IMultiplyOperators_3<TSelf extends IMultiplyOperators_3<TSelf, TOthe
 
 export interface INumber_1$instance<TSelf extends INumber_1<TSelf>> extends IComparable, IComparable_1<TSelf>, IComparisonOperators_3<TSelf, TSelf, CLROf<boolean>>, IEqualityOperators_3<TSelf, TSelf, CLROf<boolean>>, IModulusOperators_3<TSelf, TSelf, TSelf>, INumberBase_1<TSelf>, IAdditionOperators_3<TSelf, TSelf, TSelf>, IAdditiveIdentity_2<TSelf, TSelf>, IDecrementOperators_1<TSelf>, IDivisionOperators_3<TSelf, TSelf, TSelf>, IEquatable_1<TSelf>, IIncrementOperators_1<TSelf>, IMultiplicativeIdentity_2<TSelf, TSelf>, IMultiplyOperators_3<TSelf, TSelf, TSelf>, ISpanFormattable, IFormattable, ISpanParsable_1<TSelf>, IParsable_1<TSelf>, ISubtractionOperators_3<TSelf, TSelf, TSelf>, IUnaryPlusOperators_2<TSelf, TSelf>, IUnaryNegationOperators_2<TSelf, TSelf>, IUtf8SpanFormattable, IUtf8SpanParsable_1<TSelf> {
     CompareTo(obj: unknown): int;
+    CompareTo(other: TSelf): int;
     ToString(format: string, formatProvider: IFormatProvider): string;
     TryFormat(destination: Span_1<CLROf<char>>, charsWritten: { value: ref<int> }, format: ReadOnlySpan_1<CLROf<char>>, provider: IFormatProvider): boolean;
+    TryFormat(utf8Destination: Span_1<CLROf<byte>>, bytesWritten: { value: ref<int> }, format: ReadOnlySpan_1<CLROf<char>>, provider: IFormatProvider): boolean;
+    Equals(other: TSelf): boolean;
 }
 
 
@@ -229,6 +255,8 @@ export type INumber_1<TSelf extends INumber_1<TSelf>> = INumber_1$instance<TSelf
 export interface INumberBase_1$instance<TSelf extends INumberBase_1<TSelf>> extends IAdditionOperators_3<TSelf, TSelf, TSelf>, IAdditiveIdentity_2<TSelf, TSelf>, IDecrementOperators_1<TSelf>, IDivisionOperators_3<TSelf, TSelf, TSelf>, IEquatable_1<TSelf>, IEqualityOperators_3<TSelf, TSelf, CLROf<boolean>>, IIncrementOperators_1<TSelf>, IMultiplicativeIdentity_2<TSelf, TSelf>, IMultiplyOperators_3<TSelf, TSelf, TSelf>, ISpanFormattable, IFormattable, ISpanParsable_1<TSelf>, IParsable_1<TSelf>, ISubtractionOperators_3<TSelf, TSelf, TSelf>, IUnaryPlusOperators_2<TSelf, TSelf>, IUnaryNegationOperators_2<TSelf, TSelf>, IUtf8SpanFormattable, IUtf8SpanParsable_1<TSelf> {
     ToString(format: string, formatProvider: IFormatProvider): string;
     TryFormat(destination: Span_1<CLROf<char>>, charsWritten: { value: ref<int> }, format: ReadOnlySpan_1<CLROf<char>>, provider: IFormatProvider): boolean;
+    TryFormat(utf8Destination: Span_1<CLROf<byte>>, bytesWritten: { value: ref<int> }, format: ReadOnlySpan_1<CLROf<char>>, provider: IFormatProvider): boolean;
+    Equals(other: TSelf): boolean;
 }
 
 
@@ -239,6 +267,8 @@ export type INumberBase_1<TSelf extends INumberBase_1<TSelf>> = INumberBase_1$in
 export interface IPowerFunctions_1$instance<TSelf extends IPowerFunctions_1<TSelf>> extends INumberBase_1<TSelf>, IAdditionOperators_3<TSelf, TSelf, TSelf>, IAdditiveIdentity_2<TSelf, TSelf>, IDecrementOperators_1<TSelf>, IDivisionOperators_3<TSelf, TSelf, TSelf>, IEquatable_1<TSelf>, IEqualityOperators_3<TSelf, TSelf, CLROf<boolean>>, IIncrementOperators_1<TSelf>, IMultiplicativeIdentity_2<TSelf, TSelf>, IMultiplyOperators_3<TSelf, TSelf, TSelf>, ISpanFormattable, IFormattable, ISpanParsable_1<TSelf>, IParsable_1<TSelf>, ISubtractionOperators_3<TSelf, TSelf, TSelf>, IUnaryPlusOperators_2<TSelf, TSelf>, IUnaryNegationOperators_2<TSelf, TSelf>, IUtf8SpanFormattable, IUtf8SpanParsable_1<TSelf> {
     ToString(format: string, formatProvider: IFormatProvider): string;
     TryFormat(destination: Span_1<CLROf<char>>, charsWritten: { value: ref<int> }, format: ReadOnlySpan_1<CLROf<char>>, provider: IFormatProvider): boolean;
+    TryFormat(utf8Destination: Span_1<CLROf<byte>>, bytesWritten: { value: ref<int> }, format: ReadOnlySpan_1<CLROf<char>>, provider: IFormatProvider): boolean;
+    Equals(other: TSelf): boolean;
 }
 
 
@@ -247,6 +277,8 @@ export type IPowerFunctions_1<TSelf extends IPowerFunctions_1<TSelf>> = IPowerFu
 export interface IRootFunctions_1$instance<TSelf extends IRootFunctions_1<TSelf>> extends IFloatingPointConstants_1<TSelf>, INumberBase_1<TSelf>, IAdditionOperators_3<TSelf, TSelf, TSelf>, IAdditiveIdentity_2<TSelf, TSelf>, IDecrementOperators_1<TSelf>, IDivisionOperators_3<TSelf, TSelf, TSelf>, IEquatable_1<TSelf>, IEqualityOperators_3<TSelf, TSelf, CLROf<boolean>>, IIncrementOperators_1<TSelf>, IMultiplicativeIdentity_2<TSelf, TSelf>, IMultiplyOperators_3<TSelf, TSelf, TSelf>, ISpanFormattable, IFormattable, ISpanParsable_1<TSelf>, IParsable_1<TSelf>, ISubtractionOperators_3<TSelf, TSelf, TSelf>, IUnaryPlusOperators_2<TSelf, TSelf>, IUnaryNegationOperators_2<TSelf, TSelf>, IUtf8SpanFormattable, IUtf8SpanParsable_1<TSelf> {
     ToString(format: string, formatProvider: IFormatProvider): string;
     TryFormat(destination: Span_1<CLROf<char>>, charsWritten: { value: ref<int> }, format: ReadOnlySpan_1<CLROf<char>>, provider: IFormatProvider): boolean;
+    TryFormat(utf8Destination: Span_1<CLROf<byte>>, bytesWritten: { value: ref<int> }, format: ReadOnlySpan_1<CLROf<char>>, provider: IFormatProvider): boolean;
+    Equals(other: TSelf): boolean;
 }
 
 
@@ -261,6 +293,8 @@ export type IShiftOperators_3<TSelf extends IShiftOperators_3<TSelf, TOther, TRe
 export interface ISignedNumber_1$instance<TSelf extends ISignedNumber_1<TSelf>> extends INumberBase_1<TSelf>, IAdditionOperators_3<TSelf, TSelf, TSelf>, IAdditiveIdentity_2<TSelf, TSelf>, IDecrementOperators_1<TSelf>, IDivisionOperators_3<TSelf, TSelf, TSelf>, IEquatable_1<TSelf>, IEqualityOperators_3<TSelf, TSelf, CLROf<boolean>>, IIncrementOperators_1<TSelf>, IMultiplicativeIdentity_2<TSelf, TSelf>, IMultiplyOperators_3<TSelf, TSelf, TSelf>, ISpanFormattable, IFormattable, ISpanParsable_1<TSelf>, IParsable_1<TSelf>, ISubtractionOperators_3<TSelf, TSelf, TSelf>, IUnaryPlusOperators_2<TSelf, TSelf>, IUnaryNegationOperators_2<TSelf, TSelf>, IUtf8SpanFormattable, IUtf8SpanParsable_1<TSelf> {
     ToString(format: string, formatProvider: IFormatProvider): string;
     TryFormat(destination: Span_1<CLROf<char>>, charsWritten: { value: ref<int> }, format: ReadOnlySpan_1<CLROf<char>>, provider: IFormatProvider): boolean;
+    TryFormat(utf8Destination: Span_1<CLROf<byte>>, bytesWritten: { value: ref<int> }, format: ReadOnlySpan_1<CLROf<char>>, provider: IFormatProvider): boolean;
+    Equals(other: TSelf): boolean;
 }
 
 
@@ -275,6 +309,8 @@ export type ISubtractionOperators_3<TSelf extends ISubtractionOperators_3<TSelf,
 export interface ITrigonometricFunctions_1$instance<TSelf extends ITrigonometricFunctions_1<TSelf>> extends IFloatingPointConstants_1<TSelf>, INumberBase_1<TSelf>, IAdditionOperators_3<TSelf, TSelf, TSelf>, IAdditiveIdentity_2<TSelf, TSelf>, IDecrementOperators_1<TSelf>, IDivisionOperators_3<TSelf, TSelf, TSelf>, IEquatable_1<TSelf>, IEqualityOperators_3<TSelf, TSelf, CLROf<boolean>>, IIncrementOperators_1<TSelf>, IMultiplicativeIdentity_2<TSelf, TSelf>, IMultiplyOperators_3<TSelf, TSelf, TSelf>, ISpanFormattable, IFormattable, ISpanParsable_1<TSelf>, IParsable_1<TSelf>, ISubtractionOperators_3<TSelf, TSelf, TSelf>, IUnaryPlusOperators_2<TSelf, TSelf>, IUnaryNegationOperators_2<TSelf, TSelf>, IUtf8SpanFormattable, IUtf8SpanParsable_1<TSelf> {
     ToString(format: string, formatProvider: IFormatProvider): string;
     TryFormat(destination: Span_1<CLROf<char>>, charsWritten: { value: ref<int> }, format: ReadOnlySpan_1<CLROf<char>>, provider: IFormatProvider): boolean;
+    TryFormat(utf8Destination: Span_1<CLROf<byte>>, bytesWritten: { value: ref<int> }, format: ReadOnlySpan_1<CLROf<char>>, provider: IFormatProvider): boolean;
+    Equals(other: TSelf): boolean;
 }
 
 
@@ -295,6 +331,8 @@ export type IUnaryPlusOperators_2<TSelf extends IUnaryPlusOperators_2<TSelf, TRe
 export interface IUnsignedNumber_1$instance<TSelf extends IUnsignedNumber_1<TSelf>> extends INumberBase_1<TSelf>, IAdditionOperators_3<TSelf, TSelf, TSelf>, IAdditiveIdentity_2<TSelf, TSelf>, IDecrementOperators_1<TSelf>, IDivisionOperators_3<TSelf, TSelf, TSelf>, IEquatable_1<TSelf>, IEqualityOperators_3<TSelf, TSelf, CLROf<boolean>>, IIncrementOperators_1<TSelf>, IMultiplicativeIdentity_2<TSelf, TSelf>, IMultiplyOperators_3<TSelf, TSelf, TSelf>, ISpanFormattable, IFormattable, ISpanParsable_1<TSelf>, IParsable_1<TSelf>, ISubtractionOperators_3<TSelf, TSelf, TSelf>, IUnaryPlusOperators_2<TSelf, TSelf>, IUnaryNegationOperators_2<TSelf, TSelf>, IUtf8SpanFormattable, IUtf8SpanParsable_1<TSelf> {
     ToString(format: string, formatProvider: IFormatProvider): string;
     TryFormat(destination: Span_1<CLROf<char>>, charsWritten: { value: ref<int> }, format: ReadOnlySpan_1<CLROf<char>>, provider: IFormatProvider): boolean;
+    TryFormat(utf8Destination: Span_1<CLROf<byte>>, bytesWritten: { value: ref<int> }, format: ReadOnlySpan_1<CLROf<char>>, provider: IFormatProvider): boolean;
+    Equals(other: TSelf): boolean;
 }
 
 
@@ -408,15 +446,16 @@ export interface __BigInteger$views {
     As_INumberBase_1(): INumberBase_1$instance<BigInteger>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: BigInteger): boolean;
-    CompareTo(obj: unknown): int;
-    ToString(format: string, formatProvider: import("../../System/internal/index").IFormatProvider): string;
-    TryFormat(destination: import("../../System/internal/index").Span_1<import("../../System/internal/index").CLROf<char>>, charsWritten: { value: ref<int> }, format: import("../../System/internal/index").ReadOnlySpan_1<import("../../System/internal/index").CLROf<char>>, provider: import("../../System/internal/index").IFormatProvider): boolean;
-    GetByteCount(): int;
-    TryWriteBigEndian(destination: import("../../System/internal/index").Span_1<import("../../System/internal/index").CLROf<byte>>, bytesWritten: { value: ref<int> }): boolean;
-    WriteBigEndian(destination: byte[], startIndex: int): int;
-    WriteBigEndian(destination: byte[]): int;
-    WriteBigEndian(destination: import("../../System/internal/index").Span_1<import("../../System/internal/index").CLROf<byte>>): int;
+    equals(other: BigInteger): boolean;
+    compareTo(obj: unknown): int;
+    toString(format: string, formatProvider: import("../../System/internal/index").IFormatProvider): string;
+    tryFormat(destination: import("../../System/internal/index").Span_1<import("../../System/internal/index").CLROf<char>>, charsWritten: { value: ref<int> }, format: import("../../System/internal/index").ReadOnlySpan_1<import("../../System/internal/index").CLROf<char>>, provider: import("../../System/internal/index").IFormatProvider): boolean;
+    tryFormat(utf8Destination: import("../../System/internal/index").Span_1<import("../../System/internal/index").CLROf<byte>>, bytesWritten: { value: ref<int> }, format: import("../../System/internal/index").ReadOnlySpan_1<import("../../System/internal/index").CLROf<char>>, provider: import("../../System/internal/index").IFormatProvider): boolean;
+    getByteCount(): int;
+    tryWriteBigEndian(destination: import("../../System/internal/index").Span_1<import("../../System/internal/index").CLROf<byte>>, bytesWritten: { value: ref<int> }): boolean;
+    writeBigEndian(destination: byte[], startIndex: int): int;
+    writeBigEndian(destination: byte[]): int;
+    writeBigEndian(destination: import("../../System/internal/index").Span_1<import("../../System/internal/index").CLROf<byte>>): int;
 }
 
 export type BigInteger = BigInteger$instance & __BigInteger$views;
@@ -521,9 +560,10 @@ export interface __Complex$views {
     As_INumberBase_1(): INumberBase_1$instance<Complex>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: Complex): boolean;
-    ToString(format: string, formatProvider: import("../../System/internal/index").IFormatProvider): string;
-    TryFormat(destination: import("../../System/internal/index").Span_1<import("../../System/internal/index").CLROf<char>>, charsWritten: { value: ref<int> }, format: import("../../System/internal/index").ReadOnlySpan_1<import("../../System/internal/index").CLROf<char>>, provider: import("../../System/internal/index").IFormatProvider): boolean;
+    equals(other: Complex): boolean;
+    toString(format: string, formatProvider: import("../../System/internal/index").IFormatProvider): string;
+    tryFormat(destination: import("../../System/internal/index").Span_1<import("../../System/internal/index").CLROf<char>>, charsWritten: { value: ref<int> }, format: import("../../System/internal/index").ReadOnlySpan_1<import("../../System/internal/index").CLROf<char>>, provider: import("../../System/internal/index").IFormatProvider): boolean;
+    tryFormat(utf8Destination: import("../../System/internal/index").Span_1<import("../../System/internal/index").CLROf<byte>>, bytesWritten: { value: ref<int> }, format: import("../../System/internal/index").ReadOnlySpan_1<import("../../System/internal/index").CLROf<char>>, provider: import("../../System/internal/index").IFormatProvider): boolean;
 }
 
 export type Complex = Complex$instance & __Complex$views;
@@ -590,7 +630,7 @@ export interface __Matrix3x2$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<Matrix3x2>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: Matrix3x2): boolean;
+    equals(other: Matrix3x2): boolean;
 }
 
 export type Matrix3x2 = Matrix3x2$instance & __Matrix3x2$views;
@@ -701,7 +741,7 @@ export interface __Matrix4x4$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<Matrix4x4>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: Matrix4x4): boolean;
+    equals(other: Matrix4x4): boolean;
 }
 
 export type Matrix4x4 = Matrix4x4$instance & __Matrix4x4$views;
@@ -738,7 +778,7 @@ export interface __Plane$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<Plane>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: Plane): boolean;
+    equals(other: Plane): boolean;
 }
 
 export type Plane = Plane$instance & __Plane$views;
@@ -790,7 +830,7 @@ export interface __Quaternion$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<Quaternion>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: Quaternion): boolean;
+    equals(other: Quaternion): boolean;
 }
 
 export type Quaternion = Quaternion$instance & __Quaternion$views;
@@ -817,7 +857,7 @@ export interface __TotalOrderIeee754Comparer_1$views<T extends IFloatingPointIee
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<TotalOrderIeee754Comparer_1<T>>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: TotalOrderIeee754Comparer_1<T>): boolean;
+    equals(other: TotalOrderIeee754Comparer_1<T>): boolean;
 }
 
 export interface TotalOrderIeee754Comparer_1$instance<T extends IFloatingPointIeee754_1<T>> extends System_Collections_Generic_Internal.IComparer_1$instance<T> {}
@@ -863,7 +903,7 @@ export interface __Vector_1$views<T> {
     As_IFormattable(): System_Internal.IFormattable$instance;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: Vector_1<T>): boolean;
+    equals(other: Vector_1<T>): boolean;
 }
 
 export interface Vector_1$instance<T> extends IAdditionOperators_3$instance<Vector_1<T>, Vector_1<T>, Vector_1<T>>, IBitwiseOperators_3$instance<Vector_1<T>, Vector_1<T>, Vector_1<T>>, IDivisionOperators_3$instance<Vector_1<T>, Vector_1<T>, Vector_1<T>>, IEqualityOperators_3$instance<Vector_1<T>, Vector_1<T>, CLROf<boolean>>, IMultiplyOperators_3$instance<Vector_1<T>, Vector_1<T>, Vector_1<T>>, IShiftOperators_3$instance<Vector_1<T>, CLROf<int>, Vector_1<T>>, ISubtractionOperators_3$instance<Vector_1<T>, Vector_1<T>, Vector_1<T>>, IUnaryNegationOperators_2$instance<Vector_1<T>, Vector_1<T>>, IUnaryPlusOperators_2$instance<Vector_1<T>, Vector_1<T>> {}
@@ -1023,7 +1063,7 @@ export interface __Vector2$views {
     As_IFormattable(): System_Internal.IFormattable$instance;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: Vector2): boolean;
+    equals(other: Vector2): boolean;
 }
 
 export type Vector2 = Vector2$instance & __Vector2$views;
@@ -1183,7 +1223,7 @@ export interface __Vector3$views {
     As_IFormattable(): System_Internal.IFormattable$instance;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: Vector3): boolean;
+    equals(other: Vector3): boolean;
 }
 
 export type Vector3 = Vector3$instance & __Vector3$views;
@@ -1349,7 +1389,7 @@ export interface __Vector4$views {
     As_IFormattable(): System_Internal.IFormattable$instance;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: Vector4): boolean;
+    equals(other: Vector4): boolean;
 }
 
 export type Vector4 = Vector4$instance & __Vector4$views;

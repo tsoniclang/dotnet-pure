@@ -112,6 +112,7 @@ export type IAsyncStateMachine = IAsyncStateMachine$instance;
 
 export interface ICriticalNotifyCompletion$instance extends INotifyCompletion {
     UnsafeOnCompleted(continuation: Action): void;
+    OnCompleted(continuation: Action): void;
 }
 
 
@@ -1968,7 +1969,7 @@ export abstract class ContractHelper$instance {
 export type ContractHelper = ContractHelper$instance;
 
 export abstract class FormattableStringFactory$instance {
-    static Create(format: string, arguments: unknown[]): FormattableString;
+    static Create(format: string, ...arguments: unknown[]): FormattableString;
 }
 
 

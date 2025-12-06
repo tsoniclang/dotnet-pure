@@ -1079,7 +1079,7 @@ export interface __SortVersion$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<SortVersion>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: SortVersion): boolean;
+    equals(other: SortVersion): boolean;
 }
 
 export type SortVersion = SortVersion$instance & __SortVersion$views;

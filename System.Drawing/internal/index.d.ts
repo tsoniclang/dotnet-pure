@@ -398,7 +398,7 @@ export interface __Color$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<Color>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: Color): boolean;
+    equals(other: Color): boolean;
 }
 
 export type Color = Color$instance & __Color$views;
@@ -434,7 +434,7 @@ export interface __Point$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<Point>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: Point): boolean;
+    equals(other: Point): boolean;
 }
 
 export type Point = Point$instance & __Point$views;
@@ -467,7 +467,7 @@ export interface __PointF$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<PointF>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: PointF): boolean;
+    equals(other: PointF): boolean;
 }
 
 export type PointF = PointF$instance & __PointF$views;
@@ -519,7 +519,7 @@ export interface __Rectangle$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<Rectangle>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: Rectangle): boolean;
+    equals(other: Rectangle): boolean;
 }
 
 export type Rectangle = Rectangle$instance & __Rectangle$views;
@@ -570,7 +570,7 @@ export interface __RectangleF$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<RectangleF>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: RectangleF): boolean;
+    equals(other: RectangleF): boolean;
 }
 
 export type RectangleF = RectangleF$instance & __RectangleF$views;
@@ -603,7 +603,7 @@ export interface __Size$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<Size>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: Size): boolean;
+    equals(other: Size): boolean;
 }
 
 export type Size = Size$instance & __Size$views;
@@ -638,7 +638,7 @@ export interface __SizeF$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<SizeF>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: SizeF): boolean;
+    equals(other: SizeF): boolean;
 }
 
 export type SizeF = SizeF$instance & __SizeF$views;

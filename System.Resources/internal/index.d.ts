@@ -54,6 +54,7 @@ export interface IResourceReader$instance extends IEnumerable, IDisposable {
     Close(): void;
     GetEnumerator(): IEnumerator;
     GetEnumerator(): IDictionaryEnumerator;
+    Dispose(): void;
 }
 
 
@@ -66,6 +67,7 @@ export interface IResourceWriter$instance extends IDisposable {
     AddResource(name: string, value: unknown): void;
     AddResource(name: string, value: string): void;
     Close(): void;
+    Dispose(): void;
 }
 
 

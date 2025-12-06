@@ -917,7 +917,7 @@ export interface __ConsoleKeyInfo$views {
     As_IEquatable_1(): IEquatable_1$instance<ConsoleKeyInfo>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: ConsoleKeyInfo): boolean;
+    equals(other: ConsoleKeyInfo): boolean;
 }
 
 export type ConsoleKeyInfo = ConsoleKeyInfo$instance & __ConsoleKeyInfo$views;
@@ -999,8 +999,9 @@ export interface __DateOnly$views {
     As_IUtf8SpanFormattable(): IUtf8SpanFormattable$instance;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: DateOnly): boolean;
-    CompareTo(obj: unknown): int;
+    equals(other: DateOnly): boolean;
+    compareTo(obj: unknown): int;
+    tryFormat(utf8Destination: Span_1<CLROf<byte>>, bytesWritten: { value: ref<int> }, format: ReadOnlySpan_1<CLROf<char>>, provider: IFormatProvider): boolean;
 }
 
 export interface DateOnly$instance extends IComparable_1$instance<DateOnly>, ISpanParsable_1$instance<DateOnly> {}
@@ -1137,8 +1138,9 @@ export interface __DateTime$views {
     As_ISerializable(): System_Runtime_Serialization_Internal.ISerializable$instance;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: DateTime): boolean;
-    CompareTo(obj: unknown): int;
+    equals(other: DateTime): boolean;
+    compareTo(obj: unknown): int;
+    tryFormat(utf8Destination: Span_1<CLROf<byte>>, bytesWritten: { value: ref<int> }, format: ReadOnlySpan_1<CLROf<char>>, provider: IFormatProvider): boolean;
 }
 
 export interface DateTime$instance extends IComparable_1$instance<DateTime>, ISpanParsable_1$instance<DateTime>, System_Runtime_Serialization_Internal.ISerializable$instance {}
@@ -1256,8 +1258,9 @@ export interface __DateTimeOffset$views {
     As_ISerializable(): System_Runtime_Serialization_Internal.ISerializable$instance;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: DateTimeOffset): boolean;
-    CompareTo(obj: unknown): int;
+    equals(other: DateTimeOffset): boolean;
+    compareTo(obj: unknown): int;
+    tryFormat(utf8Destination: Span_1<CLROf<byte>>, bytesWritten: { value: ref<int> }, format: ReadOnlySpan_1<CLROf<char>>, provider: IFormatProvider): boolean;
 }
 
 export interface DateTimeOffset$instance extends IComparable_1$instance<DateTimeOffset>, ISpanParsable_1$instance<DateTimeOffset>, System_Runtime_Serialization_Internal.IDeserializationCallback$instance, System_Runtime_Serialization_Internal.ISerializable$instance {}
@@ -1403,8 +1406,9 @@ export interface __Guid$views {
     As_IUtf8SpanParsable_1(): IUtf8SpanParsable_1$instance<Guid>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: Guid): boolean;
-    CompareTo(obj: unknown): int;
+    equals(other: Guid): boolean;
+    compareTo(obj: unknown): int;
+    tryFormat(utf8Destination: Span_1<CLROf<byte>>, bytesWritten: { value: ref<int> }, format: ReadOnlySpan_1<CLROf<char>>, provider: IFormatProvider): boolean;
 }
 
 export interface Guid$instance extends IComparable_1$instance<Guid>, ISpanParsable_1$instance<Guid> {}
@@ -1463,7 +1467,7 @@ export interface __Index$views {
     As_IEquatable_1(): IEquatable_1$instance<Index>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: Index): boolean;
+    equals(other: Index): boolean;
 }
 
 export type Index = Index$instance & __Index$views;
@@ -1507,7 +1511,7 @@ export interface __Memory_1$views<T> {
     As_IEquatable_1(): IEquatable_1$instance<Memory_1<T>>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: Memory_1<T>): boolean;
+    equals(other: Memory_1<T>): boolean;
 }
 
 export type Memory_1<T> = Memory_1$instance<T> & __Memory_1$views<T>;
@@ -1585,7 +1589,7 @@ export interface __ModuleHandle$views {
     As_IEquatable_1(): IEquatable_1$instance<ModuleHandle>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: ModuleHandle): boolean;
+    equals(other: ModuleHandle): boolean;
 }
 
 export type ModuleHandle = ModuleHandle$instance & __ModuleHandle$views;
@@ -1632,7 +1636,7 @@ export interface __Range$views {
     As_IEquatable_1(): IEquatable_1$instance<Range>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: Range): boolean;
+    equals(other: Range): boolean;
 }
 
 export type Range = Range$instance & __Range$views;
@@ -1666,7 +1670,7 @@ export interface __ReadOnlyMemory_1$views<T> {
     As_IEquatable_1(): IEquatable_1$instance<ReadOnlyMemory_1<T>>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: ReadOnlyMemory_1<T>): boolean;
+    equals(other: ReadOnlyMemory_1<T>): boolean;
 }
 
 export type ReadOnlyMemory_1<T> = ReadOnlyMemory_1$instance<T> & __ReadOnlyMemory_1$views<T>;
@@ -1754,7 +1758,7 @@ export interface __RuntimeFieldHandle$views {
     As_ISerializable(): System_Runtime_Serialization_Internal.ISerializable$instance;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: RuntimeFieldHandle): boolean;
+    equals(other: RuntimeFieldHandle): boolean;
 }
 
 export interface RuntimeFieldHandle$instance extends System_Runtime_Serialization_Internal.ISerializable$instance {}
@@ -1784,7 +1788,7 @@ export interface __RuntimeMethodHandle$views {
     As_ISerializable(): System_Runtime_Serialization_Internal.ISerializable$instance;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: RuntimeMethodHandle): boolean;
+    equals(other: RuntimeMethodHandle): boolean;
 }
 
 export interface RuntimeMethodHandle$instance extends System_Runtime_Serialization_Internal.ISerializable$instance {}
@@ -1814,7 +1818,7 @@ export interface __RuntimeTypeHandle$views {
     As_ISerializable(): System_Runtime_Serialization_Internal.ISerializable$instance;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: RuntimeTypeHandle): boolean;
+    equals(other: RuntimeTypeHandle): boolean;
 }
 
 export interface RuntimeTypeHandle$instance extends System_Runtime_Serialization_Internal.ISerializable$instance {}
@@ -1842,7 +1846,7 @@ export interface __SequencePosition$views {
     As_IEquatable_1(): IEquatable_1$instance<SequencePosition>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: SequencePosition): boolean;
+    equals(other: SequencePosition): boolean;
 }
 
 export type SequencePosition = SequencePosition$instance & __SequencePosition$views;
@@ -1987,8 +1991,9 @@ export interface __TimeOnly$views {
     As_IUtf8SpanFormattable(): IUtf8SpanFormattable$instance;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: TimeOnly): boolean;
-    CompareTo(obj: unknown): int;
+    equals(other: TimeOnly): boolean;
+    compareTo(obj: unknown): int;
+    tryFormat(utf8Destination: Span_1<CLROf<byte>>, bytesWritten: { value: ref<int> }, format: ReadOnlySpan_1<CLROf<char>>, provider: IFormatProvider): boolean;
 }
 
 export interface TimeOnly$instance extends IComparable$instance, ISpanParsable_1$instance<TimeOnly> {}
@@ -2118,8 +2123,9 @@ export interface __TimeSpan$views {
     As_IUtf8SpanFormattable(): IUtf8SpanFormattable$instance;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: TimeSpan): boolean;
-    CompareTo(obj: unknown): int;
+    equals(other: TimeSpan): boolean;
+    compareTo(obj: unknown): int;
+    tryFormat(utf8Destination: Span_1<CLROf<byte>>, bytesWritten: { value: ref<int> }, format: ReadOnlySpan_1<CLROf<char>>, provider: IFormatProvider): boolean;
 }
 
 export interface TimeSpan$instance extends IComparable$instance, ISpanParsable_1$instance<TimeSpan> {}
@@ -2153,7 +2159,7 @@ export interface __TimeZoneInfo_TransitionTime$views {
     As_ISerializable(): System_Runtime_Serialization_Internal.ISerializable$instance;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: TimeZoneInfo_TransitionTime): boolean;
+    equals(other: TimeZoneInfo_TransitionTime): boolean;
 }
 
 export interface TimeZoneInfo_TransitionTime$instance extends System_Runtime_Serialization_Internal.IDeserializationCallback$instance, System_Runtime_Serialization_Internal.ISerializable$instance {}
@@ -2233,8 +2239,8 @@ export interface __ValueTuple$views {
     As_ITuple(): System_Runtime_CompilerServices_Internal.ITuple$instance;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: ValueTuple): boolean;
-    CompareTo(obj: unknown): int;
+    equals(other: ValueTuple): boolean;
+    compareTo(obj: unknown): int;
 }
 
 export interface ValueTuple$instance extends IComparable_1$instance<ValueTuple>, System_Runtime_CompilerServices_Internal.ITuple$instance {}
@@ -2266,8 +2272,8 @@ export interface __ValueTuple_1$views<T1> {
     As_ITuple(): System_Runtime_CompilerServices_Internal.ITuple$instance;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: ValueTuple_1<T1>): boolean;
-    CompareTo(obj: unknown): int;
+    equals(other: ValueTuple_1<T1>): boolean;
+    compareTo(obj: unknown): int;
 }
 
 export interface ValueTuple_1$instance<T1> extends IComparable_1$instance<ValueTuple_1<T1>>, System_Runtime_CompilerServices_Internal.ITuple$instance {}
@@ -2300,8 +2306,8 @@ export interface __ValueTuple_2$views<T1, T2> {
     As_ITuple(): System_Runtime_CompilerServices_Internal.ITuple$instance;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: ValueTuple_2<T1, T2>): boolean;
-    CompareTo(obj: unknown): int;
+    equals(other: ValueTuple_2<T1, T2>): boolean;
+    compareTo(obj: unknown): int;
 }
 
 export interface ValueTuple_2$instance<T1, T2> extends IComparable_1$instance<ValueTuple_2<T1, T2>>, System_Runtime_CompilerServices_Internal.ITuple$instance {}
@@ -2335,8 +2341,8 @@ export interface __ValueTuple_3$views<T1, T2, T3> {
     As_ITuple(): System_Runtime_CompilerServices_Internal.ITuple$instance;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: ValueTuple_3<T1, T2, T3>): boolean;
-    CompareTo(obj: unknown): int;
+    equals(other: ValueTuple_3<T1, T2, T3>): boolean;
+    compareTo(obj: unknown): int;
 }
 
 export interface ValueTuple_3$instance<T1, T2, T3> extends IComparable_1$instance<ValueTuple_3<T1, T2, T3>>, System_Runtime_CompilerServices_Internal.ITuple$instance {}
@@ -2371,8 +2377,8 @@ export interface __ValueTuple_4$views<T1, T2, T3, T4> {
     As_ITuple(): System_Runtime_CompilerServices_Internal.ITuple$instance;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: ValueTuple_4<T1, T2, T3, T4>): boolean;
-    CompareTo(obj: unknown): int;
+    equals(other: ValueTuple_4<T1, T2, T3, T4>): boolean;
+    compareTo(obj: unknown): int;
 }
 
 export interface ValueTuple_4$instance<T1, T2, T3, T4> extends IComparable_1$instance<ValueTuple_4<T1, T2, T3, T4>>, System_Runtime_CompilerServices_Internal.ITuple$instance {}
@@ -2408,8 +2414,8 @@ export interface __ValueTuple_5$views<T1, T2, T3, T4, T5> {
     As_ITuple(): System_Runtime_CompilerServices_Internal.ITuple$instance;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: ValueTuple_5<T1, T2, T3, T4, T5>): boolean;
-    CompareTo(obj: unknown): int;
+    equals(other: ValueTuple_5<T1, T2, T3, T4, T5>): boolean;
+    compareTo(obj: unknown): int;
 }
 
 export interface ValueTuple_5$instance<T1, T2, T3, T4, T5> extends IComparable_1$instance<ValueTuple_5<T1, T2, T3, T4, T5>>, System_Runtime_CompilerServices_Internal.ITuple$instance {}
@@ -2446,8 +2452,8 @@ export interface __ValueTuple_6$views<T1, T2, T3, T4, T5, T6> {
     As_ITuple(): System_Runtime_CompilerServices_Internal.ITuple$instance;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: ValueTuple_6<T1, T2, T3, T4, T5, T6>): boolean;
-    CompareTo(obj: unknown): int;
+    equals(other: ValueTuple_6<T1, T2, T3, T4, T5, T6>): boolean;
+    compareTo(obj: unknown): int;
 }
 
 export interface ValueTuple_6$instance<T1, T2, T3, T4, T5, T6> extends IComparable_1$instance<ValueTuple_6<T1, T2, T3, T4, T5, T6>>, System_Runtime_CompilerServices_Internal.ITuple$instance {}
@@ -2485,8 +2491,8 @@ export interface __ValueTuple_7$views<T1, T2, T3, T4, T5, T6, T7> {
     As_ITuple(): System_Runtime_CompilerServices_Internal.ITuple$instance;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: ValueTuple_7<T1, T2, T3, T4, T5, T6, T7>): boolean;
-    CompareTo(obj: unknown): int;
+    equals(other: ValueTuple_7<T1, T2, T3, T4, T5, T6, T7>): boolean;
+    compareTo(obj: unknown): int;
 }
 
 export interface ValueTuple_7$instance<T1, T2, T3, T4, T5, T6, T7> extends IComparable_1$instance<ValueTuple_7<T1, T2, T3, T4, T5, T6, T7>>, System_Runtime_CompilerServices_Internal.ITuple$instance {}
@@ -2525,8 +2531,8 @@ export interface __ValueTuple_8$views<T1, T2, T3, T4, T5, T6, T7, TRest extends 
     As_ITuple(): System_Runtime_CompilerServices_Internal.ITuple$instance;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: ValueTuple_8<T1, T2, T3, T4, T5, T6, T7, TRest>): boolean;
-    CompareTo(obj: unknown): int;
+    equals(other: ValueTuple_8<T1, T2, T3, T4, T5, T6, T7, TRest>): boolean;
+    compareTo(obj: unknown): int;
 }
 
 export interface ValueTuple_8$instance<T1, T2, T3, T4, T5, T6, T7, TRest extends unknown> extends IComparable_1$instance<ValueTuple_8<T1, T2, T3, T4, T5, T6, T7, TRest>>, System_Runtime_CompilerServices_Internal.ITuple$instance {}
@@ -2626,9 +2632,9 @@ export interface AppDomain$instance extends MarshalByRefObject {
     ExecuteAssembly(assemblyFile: string): int;
     ExecuteAssembly(assemblyFile: string, args: string[]): int;
     ExecuteAssembly(assemblyFile: string, args: string[], hashValue: byte[], hashAlgorithm: AssemblyHashAlgorithm): int;
-    ExecuteAssemblyByName(assemblyName: AssemblyName, args: string[]): int;
+    ExecuteAssemblyByName(assemblyName: AssemblyName, ...args: string[]): int;
     ExecuteAssemblyByName(assemblyName: string): int;
-    ExecuteAssemblyByName(assemblyName: string, args: string[]): int;
+    ExecuteAssemblyByName(assemblyName: string, ...args: string[]): int;
     GetAssemblies(): Assembly[];
     GetData(name: string): unknown;
     IsCompatibilitySwitchSet(value: string): Nullable_1<CLROf<boolean>>;
@@ -2848,23 +2854,23 @@ export interface Array$instance {
     GetLongLength(dimension: int): long;
     GetLowerBound(dimension: int): int;
     GetUpperBound(dimension: int): int;
-    GetValue(indices: int[]): unknown;
+    GetValue(...indices: int[]): unknown;
     GetValue(index: int): unknown;
     GetValue(index1: int, index2: int): unknown;
     GetValue(index1: int, index2: int, index3: int): unknown;
     GetValue(index: long): unknown;
     GetValue(index1: long, index2: long): unknown;
     GetValue(index1: long, index2: long, index3: long): unknown;
-    GetValue(indices: long[]): unknown;
+    GetValue(...indices: long[]): unknown;
     Initialize(): void;
     SetValue(value: unknown, index: int): void;
     SetValue(value: unknown, index1: int, index2: int): void;
     SetValue(value: unknown, index1: int, index2: int, index3: int): void;
-    SetValue(value: unknown, indices: int[]): void;
+    SetValue(value: unknown, ...indices: int[]): void;
     SetValue(value: unknown, index: long): void;
     SetValue(value: unknown, index1: long, index2: long): void;
     SetValue(value: unknown, index1: long, index2: long, index3: long): void;
-    SetValue(value: unknown, indices: long[]): void;
+    SetValue(value: unknown, ...indices: long[]): void;
 }
 
 
@@ -2891,11 +2897,11 @@ export const Array: {
     CreateInstance(elementType: Type, length1: int, length2: int): Array;
     CreateInstance(elementType: Type, length: int): Array;
     CreateInstance(elementType: Type, lengths: int[], lowerBounds: int[]): Array;
-    CreateInstance(elementType: Type, lengths: int[]): Array;
-    CreateInstance(elementType: Type, lengths: long[]): Array;
+    CreateInstance(elementType: Type, ...lengths: int[]): Array;
+    CreateInstance(elementType: Type, ...lengths: long[]): Array;
     CreateInstanceFromArrayType(arrayType: Type, length: int): Array;
     CreateInstanceFromArrayType(arrayType: Type, lengths: int[], lowerBounds: int[]): Array;
-    CreateInstanceFromArrayType(arrayType: Type, lengths: int[]): Array;
+    CreateInstanceFromArrayType(arrayType: Type, ...lengths: int[]): Array;
     Empty<T>(): T[];
     Exists<T>(array: T[], match: Predicate_1<T>): boolean;
     Fill<T>(array: T[], value: T, startIndex: int, count: int): void;
@@ -3269,7 +3275,7 @@ export interface Delegate$instance {
     readonly Method: MethodInfo;
     readonly Target: unknown;
     Clone(): unknown;
-    DynamicInvoke(args: unknown[]): unknown;
+    DynamicInvoke(...args: unknown[]): unknown;
     Equals(obj: unknown): boolean;
     GetHashCode(): int;
     GetInvocationList(): Function[];
@@ -3279,7 +3285,7 @@ export interface Delegate$instance {
 
 export const Delegate: {
     Combine(a: Function, b: Function): Function;
-    Combine(delegates: Function[]): Function;
+    Combine(...delegates: Function[]): Function;
     Combine(delegates: ReadOnlySpan_1<Function>): Function;
     CreateDelegate(type_: Type, firstArgument: unknown, method: MethodInfo, throwOnBindFailure: boolean): Function;
     CreateDelegate(type_: Type, firstArgument: unknown, method: MethodInfo): Function;
@@ -3446,7 +3452,7 @@ export interface __Enum$views {
     As_ISpanFormattable(): ISpanFormattable$instance;
 
     // Structural method bridges for numeric interface constraints
-    CompareTo(obj: unknown): int;
+    compareTo(obj: unknown): int;
 }
 
 export interface Enum$instance extends IComparable$instance {}
@@ -4673,7 +4679,7 @@ export interface __TimeZoneInfo$views {
     As_ISerializable(): System_Runtime_Serialization_Internal.ISerializable$instance;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: TimeZoneInfo): boolean;
+    equals(other: TimeZoneInfo): boolean;
 }
 
 export interface TimeZoneInfo$instance extends System_Runtime_Serialization_Internal.IDeserializationCallback$instance, System_Runtime_Serialization_Internal.ISerializable$instance {}
@@ -4707,7 +4713,7 @@ export interface __TimeZoneInfo_AdjustmentRule$views {
     As_ISerializable(): System_Runtime_Serialization_Internal.ISerializable$instance;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: TimeZoneInfo_AdjustmentRule): boolean;
+    equals(other: TimeZoneInfo_AdjustmentRule): boolean;
 }
 
 export interface TimeZoneInfo_AdjustmentRule$instance extends System_Runtime_Serialization_Internal.IDeserializationCallback$instance, System_Runtime_Serialization_Internal.ISerializable$instance {}
@@ -4754,7 +4760,7 @@ export interface __Tuple_1$views<T1> {
     As_ITuple(): System_Runtime_CompilerServices_Internal.ITuple$instance;
 
     // Structural method bridges for numeric interface constraints
-    CompareTo(obj: unknown): int;
+    compareTo(obj: unknown): int;
 }
 
 export interface Tuple_1$instance<T1> extends System_Collections_Internal.IStructuralComparable$instance, System_Runtime_CompilerServices_Internal.ITuple$instance {}
@@ -4783,7 +4789,7 @@ export interface __Tuple_2$views<T1, T2> {
     As_ITuple(): System_Runtime_CompilerServices_Internal.ITuple$instance;
 
     // Structural method bridges for numeric interface constraints
-    CompareTo(obj: unknown): int;
+    compareTo(obj: unknown): int;
 }
 
 export interface Tuple_2$instance<T1, T2> extends System_Collections_Internal.IStructuralComparable$instance, System_Runtime_CompilerServices_Internal.ITuple$instance {}
@@ -4813,7 +4819,7 @@ export interface __Tuple_3$views<T1, T2, T3> {
     As_ITuple(): System_Runtime_CompilerServices_Internal.ITuple$instance;
 
     // Structural method bridges for numeric interface constraints
-    CompareTo(obj: unknown): int;
+    compareTo(obj: unknown): int;
 }
 
 export interface Tuple_3$instance<T1, T2, T3> extends System_Collections_Internal.IStructuralComparable$instance, System_Runtime_CompilerServices_Internal.ITuple$instance {}
@@ -4844,7 +4850,7 @@ export interface __Tuple_4$views<T1, T2, T3, T4> {
     As_ITuple(): System_Runtime_CompilerServices_Internal.ITuple$instance;
 
     // Structural method bridges for numeric interface constraints
-    CompareTo(obj: unknown): int;
+    compareTo(obj: unknown): int;
 }
 
 export interface Tuple_4$instance<T1, T2, T3, T4> extends System_Collections_Internal.IStructuralComparable$instance, System_Runtime_CompilerServices_Internal.ITuple$instance {}
@@ -4876,7 +4882,7 @@ export interface __Tuple_5$views<T1, T2, T3, T4, T5> {
     As_ITuple(): System_Runtime_CompilerServices_Internal.ITuple$instance;
 
     // Structural method bridges for numeric interface constraints
-    CompareTo(obj: unknown): int;
+    compareTo(obj: unknown): int;
 }
 
 export interface Tuple_5$instance<T1, T2, T3, T4, T5> extends System_Collections_Internal.IStructuralComparable$instance, System_Runtime_CompilerServices_Internal.ITuple$instance {}
@@ -4909,7 +4915,7 @@ export interface __Tuple_6$views<T1, T2, T3, T4, T5, T6> {
     As_ITuple(): System_Runtime_CompilerServices_Internal.ITuple$instance;
 
     // Structural method bridges for numeric interface constraints
-    CompareTo(obj: unknown): int;
+    compareTo(obj: unknown): int;
 }
 
 export interface Tuple_6$instance<T1, T2, T3, T4, T5, T6> extends System_Collections_Internal.IStructuralComparable$instance, System_Runtime_CompilerServices_Internal.ITuple$instance {}
@@ -4943,7 +4949,7 @@ export interface __Tuple_7$views<T1, T2, T3, T4, T5, T6, T7> {
     As_ITuple(): System_Runtime_CompilerServices_Internal.ITuple$instance;
 
     // Structural method bridges for numeric interface constraints
-    CompareTo(obj: unknown): int;
+    compareTo(obj: unknown): int;
 }
 
 export interface Tuple_7$instance<T1, T2, T3, T4, T5, T6, T7> extends System_Collections_Internal.IStructuralComparable$instance, System_Runtime_CompilerServices_Internal.ITuple$instance {}
@@ -4978,7 +4984,7 @@ export interface __Tuple_8$views<T1, T2, T3, T4, T5, T6, T7, TRest> {
     As_ITuple(): System_Runtime_CompilerServices_Internal.ITuple$instance;
 
     // Structural method bridges for numeric interface constraints
-    CompareTo(obj: unknown): int;
+    compareTo(obj: unknown): int;
 }
 
 export interface Tuple_8$instance<T1, T2, T3, T4, T5, T6, T7, TRest> extends System_Collections_Internal.IStructuralComparable$instance, System_Runtime_CompilerServices_Internal.ITuple$instance {}
@@ -5144,7 +5150,7 @@ export interface Type$instance extends MemberInfo {
     MakeArrayType(): Type;
     MakeArrayType(rank: int): Type;
     MakeByRefType(): Type;
-    MakeGenericType(typeArguments: Type[]): Type;
+    MakeGenericType(...typeArguments: Type[]): Type;
     MakePointerType(): Type;
     ToString(): string;
 }
@@ -5177,7 +5183,7 @@ export const Type: {
     GetTypeFromProgID(progID: string): Type;
     GetTypeHandle(o: unknown): RuntimeTypeHandle;
     MakeGenericMethodParameter(position: int): Type;
-    MakeGenericSignatureType(genericTypeDefinition: Type, typeArguments: Type[]): Type;
+    MakeGenericSignatureType(genericTypeDefinition: Type, ...typeArguments: Type[]): Type;
     ReflectionOnlyGetType(typeName: string, throwIfNotFound: boolean, ignoreCase: boolean): Type;
 };
 
@@ -5412,7 +5418,7 @@ export interface __Uri$views {
     As_ISerializable(): System_Runtime_Serialization_Internal.ISerializable$instance;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: Uri): boolean;
+    equals(other: Uri): boolean;
 }
 
 export interface Uri$instance extends System_Runtime_Serialization_Internal.ISerializable$instance {}
@@ -5562,8 +5568,9 @@ export interface __Version$views {
     As_IUtf8SpanParsable_1(): IUtf8SpanParsable_1$instance<Version>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: Version): boolean;
-    CompareTo(obj: unknown): int;
+    equals(other: Version): boolean;
+    compareTo(obj: unknown): int;
+    tryFormat(utf8Destination: Span_1<CLROf<byte>>, bytesWritten: { value: ref<int> }, format: ReadOnlySpan_1<CLROf<char>>, provider: IFormatProvider): boolean;
 }
 
 export interface Version$instance extends ICloneable$instance, IComparable$instance, IUtf8SpanParsable_1$instance<Version> {}
@@ -5623,7 +5630,7 @@ export abstract class Activator$instance {
     static CreateInstance(assemblyName: string, typeName: string): ObjectHandle;
     static CreateInstance(type_: Type, nonPublic: boolean): unknown;
     static CreateInstance(type_: Type, args: unknown[], activationAttributes: unknown[]): unknown;
-    static CreateInstance(type_: Type, args: unknown[]): unknown;
+    static CreateInstance(type_: Type, ...args: unknown[]): unknown;
     static CreateInstance(type_: Type, bindingAttr: BindingFlags, binder: Binder, args: unknown[], culture: CultureInfo, activationAttributes: unknown[]): unknown;
     static CreateInstance(type_: Type, bindingAttr: BindingFlags, binder: Binder, args: unknown[], culture: CultureInfo): unknown;
     static CreateInstance(type_: Type): unknown;
@@ -5799,7 +5806,7 @@ export abstract class Console$instance {
     static Write(format: string, arg0: unknown, arg1: unknown, arg2: unknown): void;
     static Write(format: string, arg0: unknown, arg1: unknown): void;
     static Write(format: string, arg0: unknown): void;
-    static Write(format: string, arg: unknown[]): void;
+    static Write(format: string, ...arg: unknown[]): void;
     static Write(format: string, arg: ReadOnlySpan_1<unknown>): void;
     static Write(value: string): void;
     static Write(value: uint): void;
@@ -5819,7 +5826,7 @@ export abstract class Console$instance {
     static WriteLine(format: string, arg0: unknown, arg1: unknown, arg2: unknown): void;
     static WriteLine(format: string, arg0: unknown, arg1: unknown): void;
     static WriteLine(format: string, arg0: unknown): void;
-    static WriteLine(format: string, arg: unknown[]): void;
+    static WriteLine(format: string, ...arg: unknown[]): void;
     static WriteLine(format: string, arg: ReadOnlySpan_1<unknown>): void;
     static WriteLine(value: string): void;
     static WriteLine(value: uint): void;
@@ -6697,7 +6704,7 @@ export abstract class MemoryExtensions$instance {
     static TrimStart(span: ReadOnlySpan_1<CLROf<char>>): ReadOnlySpan_1<CLROf<char>>;
     static TrimStart(span: Span_1<CLROf<char>>): Span_1<CLROf<char>>;
     static TryWrite(destination: Span_1<CLROf<char>>, provider: IFormatProvider, handler: { value: ref<MemoryExtensions_TryWriteInterpolatedStringHandler> }, charsWritten: { value: ref<int> }): boolean;
-    static TryWrite(destination: Span_1<CLROf<char>>, provider: IFormatProvider, format: CompositeFormat, charsWritten: { value: ref<int> }, args: unknown[]): boolean;
+    static TryWrite(destination: Span_1<CLROf<char>>, provider: IFormatProvider, format: CompositeFormat, charsWritten: { value: ref<int> }, ...args: unknown[]): boolean;
     static TryWrite(destination: Span_1<CLROf<char>>, provider: IFormatProvider, format: CompositeFormat, charsWritten: { value: ref<int> }, args: ReadOnlySpan_1<unknown>): boolean;
     static TryWrite<TArg0, TArg1, TArg2>(destination: Span_1<CLROf<char>>, provider: IFormatProvider, format: CompositeFormat, charsWritten: { value: ref<int> }, arg0: TArg0, arg1: TArg1, arg2: TArg2): boolean;
     static TryWrite<TArg0, TArg1>(destination: Span_1<CLROf<char>>, provider: IFormatProvider, format: CompositeFormat, charsWritten: { value: ref<int> }, arg0: TArg0, arg1: TArg1): boolean;

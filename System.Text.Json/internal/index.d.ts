@@ -248,7 +248,7 @@ export interface __JsonEncodedText$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<JsonEncodedText>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: JsonEncodedText): boolean;
+    equals(other: JsonEncodedText): boolean;
 }
 
 export type JsonEncodedText = JsonEncodedText$instance & __JsonEncodedText$views;

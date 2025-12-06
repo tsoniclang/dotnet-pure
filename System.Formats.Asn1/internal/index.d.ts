@@ -144,7 +144,7 @@ export interface __Asn1Tag$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<Asn1Tag>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: Asn1Tag): boolean;
+    equals(other: Asn1Tag): boolean;
 }
 
 export type Asn1Tag = Asn1Tag$instance & __Asn1Tag$views;

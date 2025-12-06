@@ -25,19 +25,44 @@ export { Lookup_2 as Lookup } from './System.Linq/internal/index.js';
 export type IOrderedEnumerable<TElement> = Internal.IOrderedEnumerable_1<TElement>;
 export { AsyncEnumerable$instance as AsyncEnumerable } from './System.Linq/internal/index.js';
 export type IOrderedAsyncEnumerable<TElement> = Internal.IOrderedAsyncEnumerable_1<TElement>;
-export type IQueryable_0 = Internal.IQueryable;
-export type IQueryable<T> = Internal.IQueryable_1<T>;
 export type IQueryProvider = Internal.IQueryProvider;
-export type IOrderedQueryable_0 = Internal.IOrderedQueryable;
-export type IOrderedQueryable<T> = Internal.IOrderedQueryable_1<T>;
 export { OrderedParallelQuery_1 as OrderedParallelQuery } from './System.Linq/internal/index.js';
-export { ParallelQuery as ParallelQuery_0 } from './System.Linq/internal/index.js';
-export { ParallelQuery_1 as ParallelQuery } from './System.Linq/internal/index.js';
 export { ParallelEnumerable$instance as ParallelEnumerable } from './System.Linq/internal/index.js';
 export { ParallelExecutionMode as ParallelExecutionMode } from './System.Linq/internal/index.js';
 export { ParallelMergeOptions as ParallelMergeOptions } from './System.Linq/internal/index.js';
-export { EnumerableExecutor as EnumerableExecutor_0 } from './System.Linq/internal/index.js';
-export { EnumerableExecutor_1 as EnumerableExecutor } from './System.Linq/internal/index.js';
-export { EnumerableQuery as EnumerableQuery_0 } from './System.Linq/internal/index.js';
-export { EnumerableQuery_1 as EnumerableQuery } from './System.Linq/internal/index.js';
 export { Queryable$instance as Queryable } from './System.Linq/internal/index.js';
+
+// Multi-arity family sentinel (detects unspecified type parameters)
+declare const __unspecified: unique symbol;
+export type __ = typeof __unspecified;
+
+export type EnumerableExecutor<
+  T1 = __,
+> =
+  [T1] extends [__] ? Internal.EnumerableExecutor :
+  Internal.EnumerableExecutor_1<T1>;
+
+export type EnumerableQuery<
+  T1 = __,
+> =
+  [T1] extends [__] ? Internal.EnumerableQuery :
+  Internal.EnumerableQuery_1<T1>;
+
+export type IOrderedQueryable<
+  T1 = __,
+> =
+  [T1] extends [__] ? Internal.IOrderedQueryable :
+  Internal.IOrderedQueryable_1<T1>;
+
+export type IQueryable<
+  T1 = __,
+> =
+  [T1] extends [__] ? Internal.IQueryable :
+  Internal.IQueryable_1<T1>;
+
+export type ParallelQuery<
+  T1 = __,
+> =
+  [T1] extends [__] ? Internal.ParallelQuery :
+  Internal.ParallelQuery_1<T1>;
+

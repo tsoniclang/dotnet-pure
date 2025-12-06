@@ -20,25 +20,46 @@ import type { Action, Action_1, Action_2, Action_3, AggregateException, AsyncCal
 // Public API exports (curated - no internal $instance/$views leakage)
 export { ConcurrentExclusiveSchedulerPair as ConcurrentExclusiveSchedulerPair } from './System.Threading.Tasks/internal/index.js';
 export { ConfigureAwaitOptions as ConfigureAwaitOptions } from './System.Threading.Tasks/internal/index.js';
-export { Task_1 as Task } from './System.Threading.Tasks/internal/index.js';
-export { TaskFactory_1 as TaskFactory } from './System.Threading.Tasks/internal/index.js';
 export { TaskStatus as TaskStatus } from './System.Threading.Tasks/internal/index.js';
-export { Task as Task_0 } from './System.Threading.Tasks/internal/index.js';
 export { TaskCreationOptions as TaskCreationOptions } from './System.Threading.Tasks/internal/index.js';
 export { TaskContinuationOptions as TaskContinuationOptions } from './System.Threading.Tasks/internal/index.js';
 export { TaskAsyncEnumerableExtensions$instance as TaskAsyncEnumerableExtensions } from './System.Threading.Tasks/internal/index.js';
 export { TaskCanceledException as TaskCanceledException } from './System.Threading.Tasks/internal/index.js';
-export { TaskCompletionSource as TaskCompletionSource_0 } from './System.Threading.Tasks/internal/index.js';
-export { TaskCompletionSource_1 as TaskCompletionSource } from './System.Threading.Tasks/internal/index.js';
 export { TaskExtensions$instance as TaskExtensions } from './System.Threading.Tasks/internal/index.js';
-export { TaskFactory as TaskFactory_0 } from './System.Threading.Tasks/internal/index.js';
 export { TaskScheduler as TaskScheduler } from './System.Threading.Tasks/internal/index.js';
 export { UnobservedTaskExceptionEventArgs as UnobservedTaskExceptionEventArgs } from './System.Threading.Tasks/internal/index.js';
 export { TaskSchedulerException as TaskSchedulerException } from './System.Threading.Tasks/internal/index.js';
-export { ValueTask as ValueTask_0 } from './System.Threading.Tasks/internal/index.js';
-export { ValueTask_1 as ValueTask } from './System.Threading.Tasks/internal/index.js';
 export { TaskToAsyncResult$instance as TaskToAsyncResult } from './System.Threading.Tasks/internal/index.js';
 export { ParallelOptions as ParallelOptions } from './System.Threading.Tasks/internal/index.js';
 export { Parallel$instance as Parallel } from './System.Threading.Tasks/internal/index.js';
 export { ParallelLoopState as ParallelLoopState } from './System.Threading.Tasks/internal/index.js';
 export { ParallelLoopResult as ParallelLoopResult } from './System.Threading.Tasks/internal/index.js';
+
+// Multi-arity family sentinel (detects unspecified type parameters)
+declare const __unspecified: unique symbol;
+export type __ = typeof __unspecified;
+
+export type Task<
+  T1 = __,
+> =
+  [T1] extends [__] ? Internal.Task :
+  Internal.Task_1<T1>;
+
+export type TaskCompletionSource<
+  T1 = __,
+> =
+  [T1] extends [__] ? Internal.TaskCompletionSource :
+  Internal.TaskCompletionSource_1<T1>;
+
+export type TaskFactory<
+  T1 = __,
+> =
+  [T1] extends [__] ? Internal.TaskFactory :
+  Internal.TaskFactory_1<T1>;
+
+export type ValueTask<
+  T1 = __,
+> =
+  [T1] extends [__] ? Internal.ValueTask :
+  Internal.ValueTask_1<T1>;
+

@@ -59,6 +59,7 @@ export interface IProducerConsumerCollection_1$instance<T> extends IEnumerable_1
     ToArray(): T[];
     TryAdd(item: T): boolean;
     TryTake(item: { value: ref<T> }): boolean;
+    GetEnumerator2(): IEnumerator;
 }
 
 

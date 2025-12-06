@@ -17,8 +17,17 @@ export { ConcurrentBag_1 as ConcurrentBag } from './System.Collections.Concurren
 export { ConcurrentDictionary_2 as ConcurrentDictionary } from './System.Collections.Concurrent/internal/index.js';
 export { ConcurrentStack_1 as ConcurrentStack } from './System.Collections.Concurrent/internal/index.js';
 export { OrderablePartitioner_1 as OrderablePartitioner } from './System.Collections.Concurrent/internal/index.js';
-export { Partitioner_1 as Partitioner } from './System.Collections.Concurrent/internal/index.js';
 export { EnumerablePartitionerOptions as EnumerablePartitionerOptions } from './System.Collections.Concurrent/internal/index.js';
-export { Partitioner$instance as Partitioner_0 } from './System.Collections.Concurrent/internal/index.js';
 export { ConcurrentQueue_1 as ConcurrentQueue } from './System.Collections.Concurrent/internal/index.js';
 export type IProducerConsumerCollection<T> = Internal.IProducerConsumerCollection_1<T>;
+
+// Multi-arity family sentinel (detects unspecified type parameters)
+declare const __unspecified: unique symbol;
+export type __ = typeof __unspecified;
+
+export type Partitioner<
+  T1 = __,
+> =
+  [T1] extends [__] ? Internal.Partitioner :
+  Internal.Partitioner_1<T1>;
+

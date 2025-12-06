@@ -9,7 +9,16 @@ import * as Internal from './System.Runtime.InteropServices.Swift/internal/index
 import type { Boolean as ClrBoolean, Int32, Object as ClrObject, String as ClrString, Type, ValueType, Void } from './System/internal/index.js';
 
 // Public API exports (curated - no internal $instance/$views leakage)
-export { SwiftSelf as SwiftSelf_0 } from './System.Runtime.InteropServices.Swift/internal/index.js';
-export { SwiftSelf_1 as SwiftSelf } from './System.Runtime.InteropServices.Swift/internal/index.js';
 export { SwiftError as SwiftError } from './System.Runtime.InteropServices.Swift/internal/index.js';
 export { SwiftIndirectResult as SwiftIndirectResult } from './System.Runtime.InteropServices.Swift/internal/index.js';
+
+// Multi-arity family sentinel (detects unspecified type parameters)
+declare const __unspecified: unique symbol;
+export type __ = typeof __unspecified;
+
+export type SwiftSelf<
+  T1 = __,
+> =
+  [T1] extends [__] ? Internal.SwiftSelf :
+  [T1] extends [unknown] ? Internal.SwiftSelf_1<T1> : never;
+
