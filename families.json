@@ -1,0 +1,359 @@
+{
+  "System.Action": {
+    "stem": "Action",
+    "namespace": "System",
+    "minArity": 0,
+    "maxArity": 16,
+    "isDelegate": true
+  },
+  "System.EventHandler": {
+    "stem": "EventHandler",
+    "namespace": "System",
+    "minArity": 0,
+    "maxArity": 2,
+    "isDelegate": true
+  },
+  "System.Func": {
+    "stem": "Func",
+    "namespace": "System",
+    "minArity": 1,
+    "maxArity": 17,
+    "isDelegate": true
+  },
+  "System.IComparable": {
+    "stem": "IComparable",
+    "namespace": "System",
+    "minArity": 0,
+    "maxArity": 1,
+    "isDelegate": false
+  },
+  "System.Lazy": {
+    "stem": "Lazy",
+    "namespace": "System",
+    "minArity": 1,
+    "maxArity": 2,
+    "isDelegate": false
+  },
+  "System.Nullable": {
+    "stem": "Nullable",
+    "namespace": "System",
+    "minArity": 0,
+    "maxArity": 1,
+    "isDelegate": false
+  },
+  "System.Tuple": {
+    "stem": "Tuple",
+    "namespace": "System",
+    "minArity": 0,
+    "maxArity": 8,
+    "isDelegate": false
+  },
+  "System.ValueTuple": {
+    "stem": "ValueTuple",
+    "namespace": "System",
+    "minArity": 0,
+    "maxArity": 8,
+    "isDelegate": false
+  },
+  "System.WeakReference": {
+    "stem": "WeakReference",
+    "namespace": "System",
+    "minArity": 0,
+    "maxArity": 1,
+    "isDelegate": false
+  },
+  "System.Buffers.SearchValues": {
+    "stem": "SearchValues",
+    "namespace": "System.Buffers",
+    "minArity": 0,
+    "maxArity": 1,
+    "isDelegate": false
+  },
+  "System.Collections.Concurrent.Partitioner": {
+    "stem": "Partitioner",
+    "namespace": "System.Collections.Concurrent",
+    "minArity": 0,
+    "maxArity": 1,
+    "isDelegate": false
+  },
+  "System.Collections.ObjectModel.ReadOnlyCollection": {
+    "stem": "ReadOnlyCollection",
+    "namespace": "System.Collections.ObjectModel",
+    "minArity": 0,
+    "maxArity": 1,
+    "isDelegate": false
+  },
+  "System.Data.DataRowComparer": {
+    "stem": "DataRowComparer",
+    "namespace": "System.Data",
+    "minArity": 0,
+    "maxArity": 1,
+    "isDelegate": false
+  },
+  "System.Data.EnumerableRowCollection": {
+    "stem": "EnumerableRowCollection",
+    "namespace": "System.Data",
+    "minArity": 0,
+    "maxArity": 1,
+    "isDelegate": false
+  },
+  "System.Diagnostics.Metrics.Instrument": {
+    "stem": "Instrument",
+    "namespace": "System.Diagnostics.Metrics",
+    "minArity": 0,
+    "maxArity": 1,
+    "isDelegate": false
+  },
+  "System.Linq.IQueryable": {
+    "stem": "IQueryable",
+    "namespace": "System.Linq",
+    "minArity": 0,
+    "maxArity": 1,
+    "isDelegate": false
+  },
+  "System.Linq.IOrderedQueryable": {
+    "stem": "IOrderedQueryable",
+    "namespace": "System.Linq",
+    "minArity": 0,
+    "maxArity": 1,
+    "isDelegate": false
+  },
+  "System.Linq.ParallelQuery": {
+    "stem": "ParallelQuery",
+    "namespace": "System.Linq",
+    "minArity": 0,
+    "maxArity": 1,
+    "isDelegate": false
+  },
+  "System.Linq.EnumerableExecutor": {
+    "stem": "EnumerableExecutor",
+    "namespace": "System.Linq",
+    "minArity": 0,
+    "maxArity": 1,
+    "isDelegate": false
+  },
+  "System.Linq.EnumerableQuery": {
+    "stem": "EnumerableQuery",
+    "namespace": "System.Linq",
+    "minArity": 0,
+    "maxArity": 1,
+    "isDelegate": false
+  },
+  "System.Linq.Expressions.Expression": {
+    "stem": "Expression",
+    "namespace": "System.Linq.Expressions",
+    "minArity": 0,
+    "maxArity": 1,
+    "isDelegate": false
+  },
+  "System.Net.ServerSentEvents.SseParser": {
+    "stem": "SseParser",
+    "namespace": "System.Net.ServerSentEvents",
+    "minArity": 0,
+    "maxArity": 1,
+    "isDelegate": false
+  },
+  "System.Numerics.Vector": {
+    "stem": "Vector",
+    "namespace": "System.Numerics",
+    "minArity": 0,
+    "maxArity": 1,
+    "isDelegate": false
+  },
+  "System.Runtime.CompilerServices.CallSite": {
+    "stem": "CallSite",
+    "namespace": "System.Runtime.CompilerServices",
+    "minArity": 0,
+    "maxArity": 1,
+    "isDelegate": false
+  },
+  "System.Runtime.CompilerServices.AsyncTaskMethodBuilder": {
+    "stem": "AsyncTaskMethodBuilder",
+    "namespace": "System.Runtime.CompilerServices",
+    "minArity": 0,
+    "maxArity": 1,
+    "isDelegate": false
+  },
+  "System.Runtime.CompilerServices.AsyncValueTaskMethodBuilder": {
+    "stem": "AsyncValueTaskMethodBuilder",
+    "namespace": "System.Runtime.CompilerServices",
+    "minArity": 0,
+    "maxArity": 1,
+    "isDelegate": false
+  },
+  "System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder": {
+    "stem": "PoolingAsyncValueTaskMethodBuilder",
+    "namespace": "System.Runtime.CompilerServices",
+    "minArity": 0,
+    "maxArity": 1,
+    "isDelegate": false
+  },
+  "System.Runtime.CompilerServices.TaskAwaiter": {
+    "stem": "TaskAwaiter",
+    "namespace": "System.Runtime.CompilerServices",
+    "minArity": 0,
+    "maxArity": 1,
+    "isDelegate": false
+  },
+  "System.Runtime.CompilerServices.ValueTaskAwaiter": {
+    "stem": "ValueTaskAwaiter",
+    "namespace": "System.Runtime.CompilerServices",
+    "minArity": 0,
+    "maxArity": 1,
+    "isDelegate": false
+  },
+  "System.Runtime.InteropServices.GCHandle": {
+    "stem": "GCHandle",
+    "namespace": "System.Runtime.InteropServices",
+    "minArity": 0,
+    "maxArity": 1,
+    "isDelegate": false
+  },
+  "System.Runtime.InteropServices.JavaScript.JSType\u002BFunction": {
+    "stem": "JSType_Function",
+    "namespace": "System.Runtime.InteropServices.JavaScript",
+    "minArity": 0,
+    "maxArity": 4,
+    "isDelegate": false
+  },
+  "System.Runtime.InteropServices.Swift.SwiftSelf": {
+    "stem": "SwiftSelf",
+    "namespace": "System.Runtime.InteropServices.Swift",
+    "minArity": 0,
+    "maxArity": 1,
+    "isDelegate": false
+  },
+  "System.Runtime.Intrinsics.Vector128": {
+    "stem": "Vector128",
+    "namespace": "System.Runtime.Intrinsics",
+    "minArity": 0,
+    "maxArity": 1,
+    "isDelegate": false
+  },
+  "System.Runtime.Intrinsics.Vector256": {
+    "stem": "Vector256",
+    "namespace": "System.Runtime.Intrinsics",
+    "minArity": 0,
+    "maxArity": 1,
+    "isDelegate": false
+  },
+  "System.Runtime.Intrinsics.Vector512": {
+    "stem": "Vector512",
+    "namespace": "System.Runtime.Intrinsics",
+    "minArity": 0,
+    "maxArity": 1,
+    "isDelegate": false
+  },
+  "System.Runtime.Intrinsics.Vector64": {
+    "stem": "Vector64",
+    "namespace": "System.Runtime.Intrinsics",
+    "minArity": 0,
+    "maxArity": 1,
+    "isDelegate": false
+  },
+  "System.Security.AccessControl.AccessRule": {
+    "stem": "AccessRule",
+    "namespace": "System.Security.AccessControl",
+    "minArity": 0,
+    "maxArity": 1,
+    "isDelegate": false
+  },
+  "System.Security.AccessControl.AuditRule": {
+    "stem": "AuditRule",
+    "namespace": "System.Security.AccessControl",
+    "minArity": 0,
+    "maxArity": 1,
+    "isDelegate": false
+  },
+  "System.Security.AccessControl.ObjectSecurity": {
+    "stem": "ObjectSecurity",
+    "namespace": "System.Security.AccessControl",
+    "minArity": 0,
+    "maxArity": 1,
+    "isDelegate": false
+  },
+  "System.Text.Json.Serialization.JsonConverter": {
+    "stem": "JsonConverter",
+    "namespace": "System.Text.Json.Serialization",
+    "minArity": 0,
+    "maxArity": 1,
+    "isDelegate": false
+  },
+  "System.Text.Json.Serialization.JsonStringEnumConverter": {
+    "stem": "JsonStringEnumConverter",
+    "namespace": "System.Text.Json.Serialization",
+    "minArity": 0,
+    "maxArity": 1,
+    "isDelegate": false
+  },
+  "System.Text.Json.Serialization.ReferenceHandler": {
+    "stem": "ReferenceHandler",
+    "namespace": "System.Text.Json.Serialization",
+    "minArity": 0,
+    "maxArity": 1,
+    "isDelegate": false
+  },
+  "System.Text.Json.Serialization.Metadata.JsonTypeInfo": {
+    "stem": "JsonTypeInfo",
+    "namespace": "System.Text.Json.Serialization.Metadata",
+    "minArity": 0,
+    "maxArity": 1,
+    "isDelegate": false
+  },
+  "System.Threading.Channels.Channel": {
+    "stem": "Channel",
+    "namespace": "System.Threading.Channels",
+    "minArity": 0,
+    "maxArity": 2,
+    "isDelegate": false
+  },
+  "System.Threading.Tasks.Task": {
+    "stem": "Task",
+    "namespace": "System.Threading.Tasks",
+    "minArity": 0,
+    "maxArity": 1,
+    "isDelegate": false
+  },
+  "System.Threading.Tasks.TaskFactory": {
+    "stem": "TaskFactory",
+    "namespace": "System.Threading.Tasks",
+    "minArity": 0,
+    "maxArity": 1,
+    "isDelegate": false
+  },
+  "System.Threading.Tasks.TaskCompletionSource": {
+    "stem": "TaskCompletionSource",
+    "namespace": "System.Threading.Tasks",
+    "minArity": 0,
+    "maxArity": 1,
+    "isDelegate": false
+  },
+  "System.Threading.Tasks.ValueTask": {
+    "stem": "ValueTask",
+    "namespace": "System.Threading.Tasks",
+    "minArity": 0,
+    "maxArity": 1,
+    "isDelegate": false
+  },
+  "System.Threading.Tasks.Dataflow.BatchedJoinBlock": {
+    "stem": "BatchedJoinBlock",
+    "namespace": "System.Threading.Tasks.Dataflow",
+    "minArity": 2,
+    "maxArity": 3,
+    "isDelegate": false
+  },
+  "System.Threading.Tasks.Dataflow.JoinBlock": {
+    "stem": "JoinBlock",
+    "namespace": "System.Threading.Tasks.Dataflow",
+    "minArity": 2,
+    "maxArity": 3,
+    "isDelegate": false
+  },
+  "System.Threading.Tasks.Sources.IValueTaskSource": {
+    "stem": "IValueTaskSource",
+    "namespace": "System.Threading.Tasks.Sources",
+    "minArity": 0,
+    "maxArity": 1,
+    "isDelegate": false
+  }
+}

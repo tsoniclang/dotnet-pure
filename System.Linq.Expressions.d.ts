@@ -14,7 +14,6 @@ import type { Boolean as ClrBoolean, Delegate, Enum, Func_2, Guid, IComparable, 
 
 // Public API exports (curated - no internal $instance/$views leakage)
 export { BinaryExpression as BinaryExpression } from './System.Linq.Expressions/internal/index.js';
-export { Expression as Expression_0 } from './System.Linq.Expressions/internal/index.js';
 export { BlockExpression as BlockExpression } from './System.Linq.Expressions/internal/index.js';
 export { CatchBlock as CatchBlock } from './System.Linq.Expressions/internal/index.js';
 export { ConditionalExpression as ConditionalExpression } from './System.Linq.Expressions/internal/index.js';
@@ -33,7 +32,6 @@ export { InvocationExpression as InvocationExpression } from './System.Linq.Expr
 export { LabelExpression as LabelExpression } from './System.Linq.Expressions/internal/index.js';
 export { LabelTarget as LabelTarget } from './System.Linq.Expressions/internal/index.js';
 export { LambdaExpression as LambdaExpression } from './System.Linq.Expressions/internal/index.js';
-export { Expression_1 as Expression } from './System.Linq.Expressions/internal/index.js';
 export { ListInitExpression as ListInitExpression } from './System.Linq.Expressions/internal/index.js';
 export { LoopExpression as LoopExpression } from './System.Linq.Expressions/internal/index.js';
 export { MemberAssignment as MemberAssignment } from './System.Linq.Expressions/internal/index.js';
@@ -56,3 +54,14 @@ export { TypeBinaryExpression as TypeBinaryExpression } from './System.Linq.Expr
 export { UnaryExpression as UnaryExpression } from './System.Linq.Expressions/internal/index.js';
 export { DynamicExpressionVisitor as DynamicExpressionVisitor } from './System.Linq.Expressions/internal/index.js';
 export { DynamicExpression as DynamicExpression } from './System.Linq.Expressions/internal/index.js';
+
+// Multi-arity family sentinel (detects unspecified type parameters)
+declare const __unspecified: unique symbol;
+export type __ = typeof __unspecified;
+
+export type Expression<
+  T1 = __,
+> =
+  [T1] extends [__] ? Internal.Expression :
+  Internal.Expression_1<T1>;
+

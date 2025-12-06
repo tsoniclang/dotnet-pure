@@ -28,15 +28,11 @@ export { AccessControlActions as AccessControlActions } from './System.Security.
 export { AccessControlModification as AccessControlModification } from './System.Security.AccessControl/internal/index.js';
 export { AccessControlSections as AccessControlSections } from './System.Security.AccessControl/internal/index.js';
 export { AccessControlType as AccessControlType } from './System.Security.AccessControl/internal/index.js';
-export { AccessRule as AccessRule_0 } from './System.Security.AccessControl/internal/index.js';
-export { AccessRule_1 as AccessRule } from './System.Security.AccessControl/internal/index.js';
 export { AceEnumerator as AceEnumerator } from './System.Security.AccessControl/internal/index.js';
 export { AceFlags as AceFlags } from './System.Security.AccessControl/internal/index.js';
 export { AceQualifier as AceQualifier } from './System.Security.AccessControl/internal/index.js';
 export { AceType as AceType } from './System.Security.AccessControl/internal/index.js';
 export { AuditFlags as AuditFlags } from './System.Security.AccessControl/internal/index.js';
-export { AuditRule as AuditRule_0 } from './System.Security.AccessControl/internal/index.js';
-export { AuditRule_1 as AuditRule } from './System.Security.AccessControl/internal/index.js';
 export { AuthorizationRule as AuthorizationRule } from './System.Security.AccessControl/internal/index.js';
 export { AuthorizationRuleCollection as AuthorizationRuleCollection } from './System.Security.AccessControl/internal/index.js';
 export { CommonAce as CommonAce } from './System.Security.AccessControl/internal/index.js';
@@ -58,8 +54,6 @@ export { ObjectAccessRule as ObjectAccessRule } from './System.Security.AccessCo
 export { ObjectAce as ObjectAce } from './System.Security.AccessControl/internal/index.js';
 export { ObjectAceFlags as ObjectAceFlags } from './System.Security.AccessControl/internal/index.js';
 export { ObjectAuditRule as ObjectAuditRule } from './System.Security.AccessControl/internal/index.js';
-export { ObjectSecurity as ObjectSecurity_0 } from './System.Security.AccessControl/internal/index.js';
-export { ObjectSecurity_1 as ObjectSecurity } from './System.Security.AccessControl/internal/index.js';
 export { PrivilegeNotHeldException as PrivilegeNotHeldException } from './System.Security.AccessControl/internal/index.js';
 export { PropagationFlags as PropagationFlags } from './System.Security.AccessControl/internal/index.js';
 export { QualifiedAce as QualifiedAce } from './System.Security.AccessControl/internal/index.js';
@@ -80,3 +74,26 @@ export { SemaphoreAccessRule as SemaphoreAccessRule } from './System.Security.Ac
 export { SemaphoreAuditRule as SemaphoreAuditRule } from './System.Security.AccessControl/internal/index.js';
 export { SemaphoreRights as SemaphoreRights } from './System.Security.AccessControl/internal/index.js';
 export { SemaphoreSecurity as SemaphoreSecurity } from './System.Security.AccessControl/internal/index.js';
+
+// Multi-arity family sentinel (detects unspecified type parameters)
+declare const __unspecified: unique symbol;
+export type __ = typeof __unspecified;
+
+export type AccessRule<
+  T1 = __,
+> =
+  [T1] extends [__] ? Internal.AccessRule :
+  [T1] extends [unknown] ? Internal.AccessRule_1<T1> : never;
+
+export type AuditRule<
+  T1 = __,
+> =
+  [T1] extends [__] ? Internal.AuditRule :
+  [T1] extends [unknown] ? Internal.AuditRule_1<T1> : never;
+
+export type ObjectSecurity<
+  T1 = __,
+> =
+  [T1] extends [__] ? Internal.ObjectSecurity :
+  [T1] extends [unknown] ? Internal.ObjectSecurity_1<T1> : never;
+

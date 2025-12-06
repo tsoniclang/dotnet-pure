@@ -88,7 +88,7 @@ export interface __FrameworkName$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<FrameworkName>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: FrameworkName): boolean;
+    equals(other: FrameworkName): boolean;
 }
 
 export type FrameworkName = FrameworkName$instance & __FrameworkName$views;

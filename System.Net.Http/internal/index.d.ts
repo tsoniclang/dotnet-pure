@@ -396,7 +396,7 @@ export interface __HttpMethod$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<HttpMethod>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: HttpMethod): boolean;
+    equals(other: HttpMethod): boolean;
 }
 
 export type HttpMethod = HttpMethod$instance & __HttpMethod$views;

@@ -17,7 +17,16 @@ export { KeyedCollection_2 as KeyedCollection } from './System.Collections.Objec
 export { ObservableCollection_1 as ObservableCollection } from './System.Collections.ObjectModel/internal/index.js';
 export { ReadOnlyObservableCollection_1 as ReadOnlyObservableCollection } from './System.Collections.ObjectModel/internal/index.js';
 export { Collection_1 as Collection } from './System.Collections.ObjectModel/internal/index.js';
-export { ReadOnlyCollection_1 as ReadOnlyCollection } from './System.Collections.ObjectModel/internal/index.js';
-export { ReadOnlyCollection$instance as ReadOnlyCollection_0 } from './System.Collections.ObjectModel/internal/index.js';
 export { ReadOnlyDictionary_2 as ReadOnlyDictionary } from './System.Collections.ObjectModel/internal/index.js';
 export { ReadOnlySet_1 as ReadOnlySet } from './System.Collections.ObjectModel/internal/index.js';
+
+// Multi-arity family sentinel (detects unspecified type parameters)
+declare const __unspecified: unique symbol;
+export type __ = typeof __unspecified;
+
+export type ReadOnlyCollection<
+  T1 = __,
+> =
+  [T1] extends [__] ? Internal.ReadOnlyCollection :
+  Internal.ReadOnlyCollection_1<T1>;
+

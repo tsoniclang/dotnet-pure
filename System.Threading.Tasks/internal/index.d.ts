@@ -138,7 +138,7 @@ export interface __ValueTask$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<ValueTask>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: ValueTask): boolean;
+    equals(other: ValueTask): boolean;
 }
 
 export type ValueTask = ValueTask$instance & __ValueTask$views;
@@ -172,7 +172,7 @@ export interface __ValueTask_1$views<TResult> {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<ValueTask_1<TResult>>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: ValueTask_1<TResult>): boolean;
+    equals(other: ValueTask_1<TResult>): boolean;
 }
 
 export type ValueTask_1<TResult> = ValueTask_1$instance<TResult> & __ValueTask_1$views<TResult>;
@@ -314,32 +314,32 @@ export const Task: {
     WaitAll(tasks: Task[], millisecondsTimeout: int): boolean;
     WaitAll(tasks: Task[], cancellationToken: CancellationToken): void;
     WaitAll(tasks: Task[], timeout: TimeSpan): boolean;
-    WaitAll(tasks: Task[]): void;
+    WaitAll(...tasks: Task[]): void;
     WaitAny(tasks: Task[], millisecondsTimeout: int, cancellationToken: CancellationToken): int;
     WaitAny(tasks: Task[], millisecondsTimeout: int): int;
     WaitAny(tasks: Task[], cancellationToken: CancellationToken): int;
     WaitAny(tasks: Task[], timeout: TimeSpan): int;
-    WaitAny(tasks: Task[]): int;
+    WaitAny(...tasks: Task[]): int;
     WhenAll<TResult>(tasks: IEnumerable_1<Task_1<TResult>>): Task_1<TResult[]>;
     WhenAll<TResult>(tasks: ReadOnlySpan_1<Task_1<TResult>>): Task_1<TResult[]>;
     WhenAll(tasks: IEnumerable_1<Task>): Task;
     WhenAll(tasks: ReadOnlySpan_1<Task>): Task;
-    WhenAll(tasks: Task[]): Task;
-    WhenAll<TResult>(tasks: Task_1<TResult>[]): Task_1<TResult[]>;
+    WhenAll(...tasks: Task[]): Task;
+    WhenAll<TResult>(...tasks: Task_1<TResult>[]): Task_1<TResult[]>;
     WhenAny<TResult>(tasks: IEnumerable_1<Task_1<TResult>>): Task_1<Task_1<TResult>>;
     WhenAny<TResult>(tasks: ReadOnlySpan_1<Task_1<TResult>>): Task_1<Task_1<TResult>>;
     WhenAny(tasks: IEnumerable_1<Task>): Task_1<Task>;
     WhenAny(tasks: ReadOnlySpan_1<Task>): Task_1<Task>;
     WhenAny(task1: Task, task2: Task): Task_1<Task>;
-    WhenAny(tasks: Task[]): Task_1<Task>;
+    WhenAny(...tasks: Task[]): Task_1<Task>;
     WhenAny<TResult>(task1: Task_1<TResult>, task2: Task_1<TResult>): Task_1<Task_1<TResult>>;
-    WhenAny<TResult>(tasks: Task_1<TResult>[]): Task_1<Task_1<TResult>>;
+    WhenAny<TResult>(...tasks: Task_1<TResult>[]): Task_1<Task_1<TResult>>;
     WhenEach<TResult>(tasks: IEnumerable_1<Task_1<TResult>>): IAsyncEnumerable_1<Task_1<TResult>>;
     WhenEach<TResult>(tasks: ReadOnlySpan_1<Task_1<TResult>>): IAsyncEnumerable_1<Task_1<TResult>>;
     WhenEach(tasks: IEnumerable_1<Task>): IAsyncEnumerable_1<Task>;
     WhenEach(tasks: ReadOnlySpan_1<Task>): IAsyncEnumerable_1<Task>;
-    WhenEach(tasks: Task[]): IAsyncEnumerable_1<Task>;
-    WhenEach<TResult>(tasks: Task_1<TResult>[]): IAsyncEnumerable_1<Task_1<TResult>>;
+    WhenEach(...tasks: Task[]): IAsyncEnumerable_1<Task>;
+    WhenEach<TResult>(...tasks: Task_1<TResult>[]): IAsyncEnumerable_1<Task_1<TResult>>;
     Yield(): YieldAwaitable;
 };
 
@@ -743,8 +743,8 @@ export abstract class Parallel$instance {
     static ForEachAsync<TSource>(source: IEnumerable_1<TSource>, body: Func_3<TSource, CancellationToken, ValueTask>): Task;
     static ForEachAsync<TSource>(source: IEnumerable_1<TSource>, cancellationToken: CancellationToken, body: Func_3<TSource, CancellationToken, ValueTask>): Task;
     static ForEachAsync<TSource>(source: IEnumerable_1<TSource>, parallelOptions: ParallelOptions, body: Func_3<TSource, CancellationToken, ValueTask>): Task;
-    static Invoke(actions: Action[]): void;
-    static Invoke(parallelOptions: ParallelOptions, actions: Action[]): void;
+    static Invoke(...actions: Action[]): void;
+    static Invoke(parallelOptions: ParallelOptions, ...actions: Action[]): void;
 }
 
 

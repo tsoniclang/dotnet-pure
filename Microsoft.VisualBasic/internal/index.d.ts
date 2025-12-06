@@ -556,7 +556,7 @@ export const FileSystem: {
     Dir(PathName: string, Attributes?: FileAttribute): string;
     EOF(FileNumber: int): boolean;
     FileAttr(FileNumber: int): OpenMode;
-    FileClose(FileNumbers: int[]): void;
+    FileClose(...FileNumbers: int[]): void;
     FileCopy(Source: string, Destination: string): void;
     FileDateTime(PathName: string): DateTime;
     FileGet(FileNumber: int, Value: { value: ref<ClrArray> }, RecordNumber?: long, ArrayIsDynamic?: boolean, StringIsFixedLength?: boolean): void;
@@ -614,8 +614,8 @@ export const FileSystem: {
     Lock(FileNumber: int): void;
     LOF(FileNumber: int): long;
     MkDir(Path: string): void;
-    Print(FileNumber: int, Output: unknown[]): void;
-    PrintLine(FileNumber: int, Output: unknown[]): void;
+    Print(FileNumber: int, ...Output: unknown[]): void;
+    PrintLine(FileNumber: int, ...Output: unknown[]): void;
     Rename(OldPath: string, NewPath: string): void;
     Reset(): void;
     RmDir(Path: string): void;
@@ -628,8 +628,8 @@ export const FileSystem: {
     Unlock(FileNumber: int, FromRecord: long, ToRecord: long): void;
     Unlock(FileNumber: int, Record: long): void;
     Unlock(FileNumber: int): void;
-    Write(FileNumber: int, Output: unknown[]): void;
-    WriteLine(FileNumber: int, Output: unknown[]): void;
+    Write(FileNumber: int, ...Output: unknown[]): void;
+    WriteLine(FileNumber: int, ...Output: unknown[]): void;
 };
 
 
@@ -707,8 +707,8 @@ export const Interaction: {
     AppActivate(ProcessId: int): void;
     AppActivate(Title: string): void;
     Beep(): void;
-    CallByName(ObjectRef: unknown, ProcName: string, UseCallType: CallType, Args: unknown[]): unknown;
-    Choose(Index: double, Choice: unknown[]): unknown;
+    CallByName(ObjectRef: unknown, ProcName: string, UseCallType: CallType, ...Args: unknown[]): unknown;
+    Choose(Index: double, ...Choice: unknown[]): unknown;
     Command(): string;
     CreateObject(ProgId: string, ServerName?: string): unknown;
     DeleteSetting(AppName: string, Section?: string, Key?: string): void;
@@ -723,7 +723,7 @@ export const Interaction: {
     Partition(Number: long, Start: long, Stop: long, Interval: long): string;
     SaveSetting(AppName: string, Section: string, Key: string, Setting: string): void;
     Shell(PathName: string, Style?: AppWinStyle, Wait?: boolean, Timeout?: int): int;
-    Switch(VarExpr: unknown[]): unknown;
+    Switch(...VarExpr: unknown[]): unknown;
 };
 
 

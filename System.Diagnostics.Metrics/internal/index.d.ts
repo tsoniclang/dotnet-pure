@@ -78,7 +78,7 @@ export interface Counter_1$instance<T extends unknown> extends Instrument_1<T> {
     Add(delta: T, tag1: KeyValuePair_2<CLROf<string>, unknown>, tag2: KeyValuePair_2<CLROf<string>, unknown>): void;
     Add(delta: T, tag1: KeyValuePair_2<CLROf<string>, unknown>, tag2: KeyValuePair_2<CLROf<string>, unknown>, tag3: KeyValuePair_2<CLROf<string>, unknown>): void;
     Add(delta: T, tags: ReadOnlySpan_1<KeyValuePair_2<CLROf<string>, unknown>>): void;
-    Add(delta: T, tags: KeyValuePair_2<CLROf<string>, unknown>[]): void;
+    Add(delta: T, ...tags: KeyValuePair_2<CLROf<string>, unknown>[]): void;
     Add(delta: T, tagList: { value: ref<TagList> }): void;
 }
 
@@ -96,7 +96,7 @@ export interface Gauge_1$instance<T extends unknown> extends Instrument_1<T> {
     Record(value: T, tag1: KeyValuePair_2<CLROf<string>, unknown>, tag2: KeyValuePair_2<CLROf<string>, unknown>): void;
     Record(value: T, tag1: KeyValuePair_2<CLROf<string>, unknown>, tag2: KeyValuePair_2<CLROf<string>, unknown>, tag3: KeyValuePair_2<CLROf<string>, unknown>): void;
     Record(value: T, tags: ReadOnlySpan_1<KeyValuePair_2<CLROf<string>, unknown>>): void;
-    Record(value: T, tags: KeyValuePair_2<CLROf<string>, unknown>[]): void;
+    Record(value: T, ...tags: KeyValuePair_2<CLROf<string>, unknown>[]): void;
     Record(value: T, tagList: { value: ref<TagList> }): void;
 }
 
@@ -114,7 +114,7 @@ export interface Histogram_1$instance<T extends unknown> extends Instrument_1<T>
     Record(value: T, tag1: KeyValuePair_2<CLROf<string>, unknown>, tag2: KeyValuePair_2<CLROf<string>, unknown>): void;
     Record(value: T, tag1: KeyValuePair_2<CLROf<string>, unknown>, tag2: KeyValuePair_2<CLROf<string>, unknown>, tag3: KeyValuePair_2<CLROf<string>, unknown>): void;
     Record(value: T, tags: ReadOnlySpan_1<KeyValuePair_2<CLROf<string>, unknown>>): void;
-    Record(value: T, tags: KeyValuePair_2<CLROf<string>, unknown>[]): void;
+    Record(value: T, ...tags: KeyValuePair_2<CLROf<string>, unknown>[]): void;
     Record(value: T, tagList: { value: ref<TagList> }): void;
 }
 
@@ -301,7 +301,7 @@ export interface UpDownCounter_1$instance<T extends unknown> extends Instrument_
     Add(delta: T, tag1: KeyValuePair_2<CLROf<string>, unknown>, tag2: KeyValuePair_2<CLROf<string>, unknown>): void;
     Add(delta: T, tag1: KeyValuePair_2<CLROf<string>, unknown>, tag2: KeyValuePair_2<CLROf<string>, unknown>, tag3: KeyValuePair_2<CLROf<string>, unknown>): void;
     Add(delta: T, tags: ReadOnlySpan_1<KeyValuePair_2<CLROf<string>, unknown>>): void;
-    Add(delta: T, tags: KeyValuePair_2<CLROf<string>, unknown>[]): void;
+    Add(delta: T, ...tags: KeyValuePair_2<CLROf<string>, unknown>[]): void;
     Add(delta: T, tagList: { value: ref<TagList> }): void;
 }
 

@@ -42,12 +42,29 @@ export type IJsonOnSerializing = Internal.IJsonOnSerializing;
 export { JsonNumberEnumConverter_1 as JsonNumberEnumConverter } from './System.Text.Json.Serialization/internal/index.js';
 export { JsonSerializerContext as JsonSerializerContext } from './System.Text.Json.Serialization/internal/index.js';
 export { JsonUnknownDerivedTypeHandling as JsonUnknownDerivedTypeHandling } from './System.Text.Json.Serialization/internal/index.js';
-export { JsonConverter as JsonConverter_0 } from './System.Text.Json.Serialization/internal/index.js';
 export { JsonConverterFactory as JsonConverterFactory } from './System.Text.Json.Serialization/internal/index.js';
-export { JsonConverter_1 as JsonConverter } from './System.Text.Json.Serialization/internal/index.js';
-export { JsonStringEnumConverter_1 as JsonStringEnumConverter } from './System.Text.Json.Serialization/internal/index.js';
-export { JsonStringEnumConverter as JsonStringEnumConverter_0 } from './System.Text.Json.Serialization/internal/index.js';
 export { JsonStringEnumMemberNameAttribute as JsonStringEnumMemberNameAttribute } from './System.Text.Json.Serialization/internal/index.js';
-export { ReferenceHandler as ReferenceHandler_0 } from './System.Text.Json.Serialization/internal/index.js';
-export { ReferenceHandler_1 as ReferenceHandler } from './System.Text.Json.Serialization/internal/index.js';
 export { ReferenceResolver as ReferenceResolver } from './System.Text.Json.Serialization/internal/index.js';
+
+// Multi-arity family sentinel (detects unspecified type parameters)
+declare const __unspecified: unique symbol;
+export type __ = typeof __unspecified;
+
+export type JsonConverter<
+  T1 = __,
+> =
+  [T1] extends [__] ? Internal.JsonConverter :
+  Internal.JsonConverter_1<T1>;
+
+export type JsonStringEnumConverter<
+  T1 = __,
+> =
+  [T1] extends [__] ? Internal.JsonStringEnumConverter :
+  [T1] extends [number & unknown] ? Internal.JsonStringEnumConverter_1<T1> : never;
+
+export type ReferenceHandler<
+  T1 = __,
+> =
+  [T1] extends [__] ? Internal.ReferenceHandler :
+  [T1] extends [Internal.ReferenceResolver] ? Internal.ReferenceHandler_1<T1> : never;
+

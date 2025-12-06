@@ -547,7 +547,7 @@ export interface Utils$instance {
 export const Utils: {
     new(): Utils$instance;
     CopyArray(arySrc: ClrArray, aryDest: ClrArray): ClrArray;
-    GetResourceString(ResourceKey: string, Args: string[]): string;
+    GetResourceString(ResourceKey: string, ...Args: string[]): string;
 };
 
 
@@ -559,7 +559,7 @@ export interface Versioned$instance {
 
 export const Versioned: {
     new(): Versioned$instance;
-    CallByName(Instance: unknown, MethodName: string, UseCallType: CallType, Arguments: unknown[]): unknown;
+    CallByName(Instance: unknown, MethodName: string, UseCallType: CallType, ...Arguments: unknown[]): unknown;
     IsNumeric(Expression: unknown): boolean;
     SystemTypeName(VbName: string): string;
     TypeName(Expression: unknown): string;

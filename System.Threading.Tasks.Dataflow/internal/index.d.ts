@@ -133,7 +133,7 @@ export interface __DataflowMessageHeader$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<DataflowMessageHeader>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: DataflowMessageHeader): boolean;
+    equals(other: DataflowMessageHeader): boolean;
 }
 
 export type DataflowMessageHeader = DataflowMessageHeader$instance & __DataflowMessageHeader$views;

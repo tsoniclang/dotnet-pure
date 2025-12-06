@@ -15,10 +15,8 @@ export { BitOperations$instance as BitOperations } from './System.Numerics/inter
 export { Matrix3x2 as Matrix3x2 } from './System.Numerics/internal/index.js';
 export { Matrix4x4 as Matrix4x4 } from './System.Numerics/internal/index.js';
 export { Plane as Plane } from './System.Numerics/internal/index.js';
-export { Vector$instance as Vector_0 } from './System.Numerics/internal/index.js';
 export { Quaternion as Quaternion } from './System.Numerics/internal/index.js';
 export { TotalOrderIeee754Comparer_1 as TotalOrderIeee754Comparer } from './System.Numerics/internal/index.js';
-export { Vector_1 as Vector } from './System.Numerics/internal/index.js';
 export { Vector2 as Vector2 } from './System.Numerics/internal/index.js';
 export { Vector3 as Vector3 } from './System.Numerics/internal/index.js';
 export { Vector4 as Vector4 } from './System.Numerics/internal/index.js';
@@ -56,3 +54,14 @@ export type IUnaryPlusOperators<TSelf extends Internal.IUnaryPlusOperators_2<TSe
 export type IUnsignedNumber<TSelf extends Internal.IUnsignedNumber_1<TSelf>> = Internal.IUnsignedNumber_1<TSelf>;
 export { BigInteger as BigInteger } from './System.Numerics/internal/index.js';
 export { Complex as Complex } from './System.Numerics/internal/index.js';
+
+// Multi-arity family sentinel (detects unspecified type parameters)
+declare const __unspecified: unique symbol;
+export type __ = typeof __unspecified;
+
+export type Vector<
+  T1 = __,
+> =
+  [T1] extends [__] ? Internal.Vector :
+  Internal.Vector_1<T1>;
+

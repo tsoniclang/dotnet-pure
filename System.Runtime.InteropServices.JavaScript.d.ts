@@ -36,8 +36,23 @@ export { JSType_Error as JSType_Error } from './System.Runtime.InteropServices.J
 export { JSType_MemoryView as JSType_MemoryView } from './System.Runtime.InteropServices.JavaScript/internal/index.js';
 export { JSType_Array_1 as JSType_Array } from './System.Runtime.InteropServices.JavaScript/internal/index.js';
 export { JSType_Promise_1 as JSType_Promise } from './System.Runtime.InteropServices.JavaScript/internal/index.js';
-export { JSType_Function as JSType_Function_0 } from './System.Runtime.InteropServices.JavaScript/internal/index.js';
-export { JSType_Function_1 as JSType_Function } from './System.Runtime.InteropServices.JavaScript/internal/index.js';
 export { JSType_Any as JSType_Any } from './System.Runtime.InteropServices.JavaScript/internal/index.js';
 export type JSMarshalerArgument_ArgumentToManagedCallback<T> = Internal.JSMarshalerArgument_ArgumentToManagedCallback_1<T>;
 export type JSMarshalerArgument_ArgumentToJSCallback<T> = Internal.JSMarshalerArgument_ArgumentToJSCallback_1<T>;
+
+// Multi-arity family sentinel (detects unspecified type parameters)
+declare const __unspecified: unique symbol;
+export type __ = typeof __unspecified;
+
+export type JSType_Function<
+  T1 = __,
+  T2 = __,
+  T3 = __,
+  T4 = __,
+> =
+  [T1] extends [__] ? Internal.JSType_Function :
+  [T2] extends [__] ? [T1] extends [Internal.JSType] ? Internal.JSType_Function_1<T1> : never :
+  [T3] extends [__] ? [T1] extends [Internal.JSType] ? [T2] extends [Internal.JSType] ? Internal.JSType_Function_2<T1, T2> : never : never :
+  [T4] extends [__] ? [T1] extends [Internal.JSType] ? [T2] extends [Internal.JSType] ? [T3] extends [Internal.JSType] ? Internal.JSType_Function_3<T1, T2, T3> : never : never : never :
+  [T1] extends [Internal.JSType] ? [T2] extends [Internal.JSType] ? [T3] extends [Internal.JSType] ? [T4] extends [Internal.JSType] ? Internal.JSType_Function_4<T1, T2, T3, T4> : never : never : never : never;
+

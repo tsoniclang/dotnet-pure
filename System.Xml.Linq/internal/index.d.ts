@@ -154,9 +154,9 @@ export interface XContainer$instance extends XNode$instance {
     readonly FirstNode: XNode;
     readonly LastNode: XNode;
     Add(content: unknown): void;
-    Add(content: unknown[]): void;
+    Add(...content: unknown[]): void;
     AddFirst(content: unknown): void;
-    AddFirst(content: unknown[]): void;
+    AddFirst(...content: unknown[]): void;
     CreateWriter(): XmlWriter;
     DescendantNodes(): IEnumerable_1<XNode>;
     Descendants(): IEnumerable_1<XElement>;
@@ -168,7 +168,7 @@ export interface XContainer$instance extends XNode$instance {
     Nodes(): IEnumerable_1<XNode>;
     RemoveNodes(): void;
     ReplaceNodes(content: unknown): void;
-    ReplaceNodes(content: unknown[]): void;
+    ReplaceNodes(...content: unknown[]): void;
 }
 
 
@@ -297,9 +297,9 @@ export interface XElement$instance extends XContainer$instance {
     RemoveAll(): void;
     RemoveAttributes(): void;
     ReplaceAll(content: unknown): void;
-    ReplaceAll(content: unknown[]): void;
+    ReplaceAll(...content: unknown[]): void;
     ReplaceAttributes(content: unknown): void;
-    ReplaceAttributes(content: unknown[]): void;
+    ReplaceAttributes(...content: unknown[]): void;
     Save(fileName: string): void;
     Save(fileName: string, options: SaveOptions): void;
     Save(stream: Stream): void;
@@ -373,7 +373,7 @@ export interface __XName$views {
     As_ISerializable(): System_Runtime_Serialization_Internal.ISerializable$instance;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: XName): boolean;
+    equals(other: XName): boolean;
 }
 
 export interface XName$instance extends System_Runtime_Serialization_Internal.ISerializable$instance {}
@@ -405,9 +405,9 @@ export interface XNode$instance extends XObject$instance {
     readonly NextNode: XNode;
     readonly PreviousNode: XNode;
     AddAfterSelf(content: unknown): void;
-    AddAfterSelf(content: unknown[]): void;
+    AddAfterSelf(...content: unknown[]): void;
     AddBeforeSelf(content: unknown): void;
-    AddBeforeSelf(content: unknown[]): void;
+    AddBeforeSelf(...content: unknown[]): void;
     Ancestors(): IEnumerable_1<XElement>;
     Ancestors(name: XName): IEnumerable_1<XElement>;
     CreateReader(): XmlReader;
@@ -423,7 +423,7 @@ export interface XNode$instance extends XObject$instance {
     NodesBeforeSelf(): IEnumerable_1<XNode>;
     Remove(): void;
     ReplaceWith(content: unknown): void;
-    ReplaceWith(content: unknown[]): void;
+    ReplaceWith(...content: unknown[]): void;
     ToString(): string;
     ToString(options: SaveOptions): string;
     WriteTo(writer: XmlWriter): void;
@@ -559,7 +559,7 @@ export type XProcessingInstruction = XProcessingInstruction$instance & __XProces
 export interface XStreamingElement$instance {
     Name: XName;
     Add(content: unknown): void;
-    Add(content: unknown[]): void;
+    Add(...content: unknown[]): void;
     Save(stream: Stream): void;
     Save(stream: Stream, options: SaveOptions): void;
     Save(textWriter: TextWriter): void;

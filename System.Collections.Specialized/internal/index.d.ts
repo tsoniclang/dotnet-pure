@@ -78,6 +78,7 @@ export interface IOrderedDictionary$instance extends IDictionary, ICollection, I
     RemoveAt(index: int): void;
     set_Item(index: int, value: unknown): void;
     set_Item(key: unknown, value: unknown): void;
+    GetEnumerator2(): IEnumerator;
 }
 
 
@@ -111,7 +112,7 @@ export interface __BitVector32$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<BitVector32>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: BitVector32): boolean;
+    equals(other: BitVector32): boolean;
 }
 
 export type BitVector32 = BitVector32$instance & __BitVector32$views;
@@ -137,7 +138,7 @@ export interface __BitVector32_Section$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<BitVector32_Section>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: BitVector32_Section): boolean;
+    equals(other: BitVector32_Section): boolean;
 }
 
 export type BitVector32_Section = BitVector32_Section$instance & __BitVector32_Section$views;

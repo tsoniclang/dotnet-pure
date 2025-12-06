@@ -16,12 +16,23 @@ import type { Action_1, Boolean as ClrBoolean, Enum, Exception, IComparable, ICo
 
 // Public API exports (curated - no internal $instance/$views leakage)
 export { BoundedChannelFullMode as BoundedChannelFullMode } from './System.Threading.Channels/internal/index.js';
-export { Channel$instance as Channel_0 } from './System.Threading.Channels/internal/index.js';
 export { ChannelClosedException as ChannelClosedException } from './System.Threading.Channels/internal/index.js';
 export { ChannelOptions as ChannelOptions } from './System.Threading.Channels/internal/index.js';
 export { BoundedChannelOptions as BoundedChannelOptions } from './System.Threading.Channels/internal/index.js';
 export { UnboundedChannelOptions as UnboundedChannelOptions } from './System.Threading.Channels/internal/index.js';
 export { ChannelReader_1 as ChannelReader } from './System.Threading.Channels/internal/index.js';
 export { ChannelWriter_1 as ChannelWriter } from './System.Threading.Channels/internal/index.js';
-export { Channel_1 as Channel } from './System.Threading.Channels/internal/index.js';
 export { UnboundedPrioritizedChannelOptions_1 as UnboundedPrioritizedChannelOptions } from './System.Threading.Channels/internal/index.js';
+
+// Multi-arity family sentinel (detects unspecified type parameters)
+declare const __unspecified: unique symbol;
+export type __ = typeof __unspecified;
+
+export type Channel<
+  T1 = __,
+  T2 = __,
+> =
+  [T1] extends [__] ? Internal.Channel :
+  [T2] extends [__] ? Internal.Channel_1<T1> :
+  Internal.Channel_2<T1, T2>;
+

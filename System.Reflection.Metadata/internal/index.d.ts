@@ -532,6 +532,7 @@ export interface IConstructedTypeProvider_1$instance<TType> extends ISZArrayType
     GetArrayType(elementType: TType, shape: ArrayShape): TType;
     GetByReferenceType(elementType: TType): TType;
     GetGenericInstantiation(genericType: TType, typeArguments: ImmutableArray_1<TType>): TType;
+    GetSZArrayType(elementType: TType): TType;
 }
 
 
@@ -566,6 +567,8 @@ export interface ISignatureTypeProvider_2$instance<TType, TGenericContext> exten
     GetTypeFromDefinition(reader: MetadataReader, handle: TypeDefinitionHandle, rawTypeKind: byte): TType;
     GetTypeFromReference(reader: MetadataReader, handle: TypeReferenceHandle, rawTypeKind: byte): TType;
     GetTypeFromSpecification(reader: MetadataReader, genericContext: TGenericContext, handle: TypeSpecificationHandle, rawTypeKind: byte): TType;
+    GetByReferenceType(elementType: TType): TType;
+    GetSZArrayType(elementType: TType): TType;
 }
 
 
@@ -641,7 +644,7 @@ export interface __AssemblyDefinitionHandle$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<AssemblyDefinitionHandle>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: AssemblyDefinitionHandle): boolean;
+    equals(other: AssemblyDefinitionHandle): boolean;
 }
 
 export type AssemblyDefinitionHandle = AssemblyDefinitionHandle$instance & __AssemblyDefinitionHandle$views;
@@ -679,7 +682,7 @@ export interface __AssemblyFileHandle$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<AssemblyFileHandle>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: AssemblyFileHandle): boolean;
+    equals(other: AssemblyFileHandle): boolean;
 }
 
 export type AssemblyFileHandle = AssemblyFileHandle$instance & __AssemblyFileHandle$views;
@@ -762,7 +765,7 @@ export interface __AssemblyReferenceHandle$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<AssemblyReferenceHandle>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: AssemblyReferenceHandle): boolean;
+    equals(other: AssemblyReferenceHandle): boolean;
 }
 
 export type AssemblyReferenceHandle = AssemblyReferenceHandle$instance & __AssemblyReferenceHandle$views;
@@ -870,7 +873,7 @@ export interface __BlobContentId$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<BlobContentId>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: BlobContentId): boolean;
+    equals(other: BlobContentId): boolean;
 }
 
 export type BlobContentId = BlobContentId$instance & __BlobContentId$views;
@@ -893,7 +896,7 @@ export interface __BlobHandle$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<BlobHandle>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: BlobHandle): boolean;
+    equals(other: BlobHandle): boolean;
 }
 
 export type BlobHandle = BlobHandle$instance & __BlobHandle$views;
@@ -1040,7 +1043,7 @@ export interface __ConstantHandle$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<ConstantHandle>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: ConstantHandle): boolean;
+    equals(other: ConstantHandle): boolean;
 }
 
 export type ConstantHandle = ConstantHandle$instance & __ConstantHandle$views;
@@ -1078,7 +1081,7 @@ export interface __CustomAttributeHandle$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<CustomAttributeHandle>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: CustomAttributeHandle): boolean;
+    equals(other: CustomAttributeHandle): boolean;
 }
 
 export type CustomAttributeHandle = CustomAttributeHandle$instance & __CustomAttributeHandle$views;
@@ -1196,7 +1199,7 @@ export interface __CustomDebugInformationHandle$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<CustomDebugInformationHandle>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: CustomDebugInformationHandle): boolean;
+    equals(other: CustomDebugInformationHandle): boolean;
 }
 
 export type CustomDebugInformationHandle = CustomDebugInformationHandle$instance & __CustomDebugInformationHandle$views;
@@ -1273,7 +1276,7 @@ export interface __DeclarativeSecurityAttributeHandle$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<DeclarativeSecurityAttributeHandle>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: DeclarativeSecurityAttributeHandle): boolean;
+    equals(other: DeclarativeSecurityAttributeHandle): boolean;
 }
 
 export type DeclarativeSecurityAttributeHandle = DeclarativeSecurityAttributeHandle$instance & __DeclarativeSecurityAttributeHandle$views;
@@ -1351,7 +1354,7 @@ export interface __DocumentHandle$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<DocumentHandle>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: DocumentHandle): boolean;
+    equals(other: DocumentHandle): boolean;
 }
 
 export type DocumentHandle = DocumentHandle$instance & __DocumentHandle$views;
@@ -1414,7 +1417,7 @@ export interface __DocumentNameBlobHandle$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<DocumentNameBlobHandle>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: DocumentNameBlobHandle): boolean;
+    equals(other: DocumentNameBlobHandle): boolean;
 }
 
 export type DocumentNameBlobHandle = DocumentNameBlobHandle$instance & __DocumentNameBlobHandle$views;
@@ -1440,7 +1443,7 @@ export interface __EntityHandle$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<EntityHandle>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: EntityHandle): boolean;
+    equals(other: EntityHandle): boolean;
 }
 
 export type EntityHandle = EntityHandle$instance & __EntityHandle$views;
@@ -1495,7 +1498,7 @@ export interface __EventDefinitionHandle$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<EventDefinitionHandle>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: EventDefinitionHandle): boolean;
+    equals(other: EventDefinitionHandle): boolean;
 }
 
 export type EventDefinitionHandle = EventDefinitionHandle$instance & __EventDefinitionHandle$views;
@@ -1594,7 +1597,7 @@ export interface __ExportedTypeHandle$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<ExportedTypeHandle>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: ExportedTypeHandle): boolean;
+    equals(other: ExportedTypeHandle): boolean;
 }
 
 export type ExportedTypeHandle = ExportedTypeHandle$instance & __ExportedTypeHandle$views;
@@ -1678,7 +1681,7 @@ export interface __FieldDefinitionHandle$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<FieldDefinitionHandle>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: FieldDefinitionHandle): boolean;
+    equals(other: FieldDefinitionHandle): boolean;
 }
 
 export type FieldDefinitionHandle = FieldDefinitionHandle$instance & __FieldDefinitionHandle$views;
@@ -1772,7 +1775,7 @@ export interface __GenericParameterConstraintHandle$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<GenericParameterConstraintHandle>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: GenericParameterConstraintHandle): boolean;
+    equals(other: GenericParameterConstraintHandle): boolean;
 }
 
 export type GenericParameterConstraintHandle = GenericParameterConstraintHandle$instance & __GenericParameterConstraintHandle$views;
@@ -1836,7 +1839,7 @@ export interface __GenericParameterHandle$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<GenericParameterHandle>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: GenericParameterHandle): boolean;
+    equals(other: GenericParameterHandle): boolean;
 }
 
 export type GenericParameterHandle = GenericParameterHandle$instance & __GenericParameterHandle$views;
@@ -1900,7 +1903,7 @@ export interface __GuidHandle$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<GuidHandle>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: GuidHandle): boolean;
+    equals(other: GuidHandle): boolean;
 }
 
 export type GuidHandle = GuidHandle$instance & __GuidHandle$views;
@@ -1926,7 +1929,7 @@ export interface __Handle$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<Handle>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: Handle): boolean;
+    equals(other: Handle): boolean;
 }
 
 export type Handle = Handle$instance & __Handle$views;
@@ -2058,7 +2061,7 @@ export interface __ImportScopeHandle$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<ImportScopeHandle>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: ImportScopeHandle): boolean;
+    equals(other: ImportScopeHandle): boolean;
 }
 
 export type ImportScopeHandle = ImportScopeHandle$instance & __ImportScopeHandle$views;
@@ -2094,7 +2097,7 @@ export interface __InterfaceImplementationHandle$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<InterfaceImplementationHandle>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: InterfaceImplementationHandle): boolean;
+    equals(other: InterfaceImplementationHandle): boolean;
 }
 
 export type InterfaceImplementationHandle = InterfaceImplementationHandle$instance & __InterfaceImplementationHandle$views;
@@ -2170,7 +2173,7 @@ export interface __LocalConstantHandle$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<LocalConstantHandle>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: LocalConstantHandle): boolean;
+    equals(other: LocalConstantHandle): boolean;
 }
 
 export type LocalConstantHandle = LocalConstantHandle$instance & __LocalConstantHandle$views;
@@ -2252,7 +2255,7 @@ export interface __LocalScopeHandle$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<LocalScopeHandle>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: LocalScopeHandle): boolean;
+    equals(other: LocalScopeHandle): boolean;
 }
 
 export type LocalScopeHandle = LocalScopeHandle$instance & __LocalScopeHandle$views;
@@ -2349,7 +2352,7 @@ export interface __LocalVariableHandle$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<LocalVariableHandle>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: LocalVariableHandle): boolean;
+    equals(other: LocalVariableHandle): boolean;
 }
 
 export type LocalVariableHandle = LocalVariableHandle$instance & __LocalVariableHandle$views;
@@ -2428,7 +2431,7 @@ export interface __ManifestResourceHandle$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<ManifestResourceHandle>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: ManifestResourceHandle): boolean;
+    equals(other: ManifestResourceHandle): boolean;
 }
 
 export type ManifestResourceHandle = ManifestResourceHandle$instance & __ManifestResourceHandle$views;
@@ -2509,7 +2512,7 @@ export interface __MemberReferenceHandle$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<MemberReferenceHandle>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: MemberReferenceHandle): boolean;
+    equals(other: MemberReferenceHandle): boolean;
 }
 
 export type MemberReferenceHandle = MemberReferenceHandle$instance & __MemberReferenceHandle$views;
@@ -2608,7 +2611,7 @@ export interface __MethodDebugInformationHandle$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<MethodDebugInformationHandle>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: MethodDebugInformationHandle): boolean;
+    equals(other: MethodDebugInformationHandle): boolean;
 }
 
 export type MethodDebugInformationHandle = MethodDebugInformationHandle$instance & __MethodDebugInformationHandle$views;
@@ -2695,7 +2698,7 @@ export interface __MethodDefinitionHandle$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<MethodDefinitionHandle>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: MethodDefinitionHandle): boolean;
+    equals(other: MethodDefinitionHandle): boolean;
 }
 
 export type MethodDefinitionHandle = MethodDefinitionHandle$instance & __MethodDefinitionHandle$views;
@@ -2773,7 +2776,7 @@ export interface __MethodImplementationHandle$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<MethodImplementationHandle>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: MethodImplementationHandle): boolean;
+    equals(other: MethodImplementationHandle): boolean;
 }
 
 export type MethodImplementationHandle = MethodImplementationHandle$instance & __MethodImplementationHandle$views;
@@ -2881,7 +2884,7 @@ export interface __MethodSpecificationHandle$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<MethodSpecificationHandle>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: MethodSpecificationHandle): boolean;
+    equals(other: MethodSpecificationHandle): boolean;
 }
 
 export type MethodSpecificationHandle = MethodSpecificationHandle$instance & __MethodSpecificationHandle$views;
@@ -2921,7 +2924,7 @@ export interface __ModuleDefinitionHandle$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<ModuleDefinitionHandle>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: ModuleDefinitionHandle): boolean;
+    equals(other: ModuleDefinitionHandle): boolean;
 }
 
 export type ModuleDefinitionHandle = ModuleDefinitionHandle$instance & __ModuleDefinitionHandle$views;
@@ -2957,7 +2960,7 @@ export interface __ModuleReferenceHandle$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<ModuleReferenceHandle>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: ModuleReferenceHandle): boolean;
+    equals(other: ModuleReferenceHandle): boolean;
 }
 
 export type ModuleReferenceHandle = ModuleReferenceHandle$instance & __ModuleReferenceHandle$views;
@@ -2996,7 +2999,7 @@ export interface __NamespaceDefinitionHandle$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<NamespaceDefinitionHandle>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: NamespaceDefinitionHandle): boolean;
+    equals(other: NamespaceDefinitionHandle): boolean;
 }
 
 export type NamespaceDefinitionHandle = NamespaceDefinitionHandle$instance & __NamespaceDefinitionHandle$views;
@@ -3036,7 +3039,7 @@ export interface __ParameterHandle$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<ParameterHandle>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: ParameterHandle): boolean;
+    equals(other: ParameterHandle): boolean;
 }
 
 export type ParameterHandle = ParameterHandle$instance & __ParameterHandle$views;
@@ -3132,7 +3135,7 @@ export interface __PropertyDefinitionHandle$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<PropertyDefinitionHandle>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: PropertyDefinitionHandle): boolean;
+    equals(other: PropertyDefinitionHandle): boolean;
 }
 
 export type PropertyDefinitionHandle = PropertyDefinitionHandle$instance & __PropertyDefinitionHandle$views;
@@ -3216,7 +3219,7 @@ export interface __SequencePoint$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<SequencePoint>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: SequencePoint): boolean;
+    equals(other: SequencePoint): boolean;
 }
 
 export type SequencePoint = SequencePoint$instance & __SequencePoint$views;
@@ -3287,7 +3290,7 @@ export interface __SignatureHeader$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<SignatureHeader>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: SignatureHeader): boolean;
+    equals(other: SignatureHeader): boolean;
 }
 
 export type SignatureHeader = SignatureHeader$instance & __SignatureHeader$views;
@@ -3326,7 +3329,7 @@ export interface __StandaloneSignatureHandle$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<StandaloneSignatureHandle>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: StandaloneSignatureHandle): boolean;
+    equals(other: StandaloneSignatureHandle): boolean;
 }
 
 export type StandaloneSignatureHandle = StandaloneSignatureHandle$instance & __StandaloneSignatureHandle$views;
@@ -3349,7 +3352,7 @@ export interface __StringHandle$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<StringHandle>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: StringHandle): boolean;
+    equals(other: StringHandle): boolean;
 }
 
 export type StringHandle = StringHandle$instance & __StringHandle$views;
@@ -3401,7 +3404,7 @@ export interface __TypeDefinitionHandle$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<TypeDefinitionHandle>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: TypeDefinitionHandle): boolean;
+    equals(other: TypeDefinitionHandle): boolean;
 }
 
 export type TypeDefinitionHandle = TypeDefinitionHandle$instance & __TypeDefinitionHandle$views;
@@ -3492,7 +3495,7 @@ export interface __TypeReferenceHandle$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<TypeReferenceHandle>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: TypeReferenceHandle): boolean;
+    equals(other: TypeReferenceHandle): boolean;
 }
 
 export type TypeReferenceHandle = TypeReferenceHandle$instance & __TypeReferenceHandle$views;
@@ -3569,7 +3572,7 @@ export interface __TypeSpecificationHandle$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<TypeSpecificationHandle>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: TypeSpecificationHandle): boolean;
+    equals(other: TypeSpecificationHandle): boolean;
 }
 
 export type TypeSpecificationHandle = TypeSpecificationHandle$instance & __TypeSpecificationHandle$views;
@@ -3592,7 +3595,7 @@ export interface __UserStringHandle$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<UserStringHandle>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: UserStringHandle): boolean;
+    equals(other: UserStringHandle): boolean;
 }
 
 export type UserStringHandle = UserStringHandle$instance & __UserStringHandle$views;

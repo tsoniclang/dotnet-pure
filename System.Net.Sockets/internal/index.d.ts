@@ -402,7 +402,7 @@ export interface __IPPacketInformation$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<IPPacketInformation>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: IPPacketInformation): boolean;
+    equals(other: IPPacketInformation): boolean;
 }
 
 export type IPPacketInformation = IPPacketInformation$instance & __IPPacketInformation$views;
@@ -467,7 +467,7 @@ export interface __UdpReceiveResult$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<UdpReceiveResult>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: UdpReceiveResult): boolean;
+    equals(other: UdpReceiveResult): boolean;
 }
 
 export type UdpReceiveResult = UdpReceiveResult$instance & __UdpReceiveResult$views;

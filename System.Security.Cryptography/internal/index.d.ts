@@ -266,7 +266,7 @@ export interface __CngProperty$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<CngProperty>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: CngProperty): boolean;
+    equals(other: CngProperty): boolean;
 }
 
 export type CngProperty = CngProperty$instance & __CngProperty$views;
@@ -377,7 +377,7 @@ export interface __HashAlgorithmName$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<HashAlgorithmName>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: HashAlgorithmName): boolean;
+    equals(other: HashAlgorithmName): boolean;
 }
 
 export type HashAlgorithmName = HashAlgorithmName$instance & __HashAlgorithmName$views;
@@ -839,7 +839,7 @@ export interface __CngAlgorithm$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<CngAlgorithm>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: CngAlgorithm): boolean;
+    equals(other: CngAlgorithm): boolean;
 }
 
 export type CngAlgorithm = CngAlgorithm$instance & __CngAlgorithm$views;
@@ -871,7 +871,7 @@ export interface __CngAlgorithmGroup$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<CngAlgorithmGroup>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: CngAlgorithmGroup): boolean;
+    equals(other: CngAlgorithmGroup): boolean;
 }
 
 export type CngAlgorithmGroup = CngAlgorithmGroup$instance & __CngAlgorithmGroup$views;
@@ -959,7 +959,7 @@ export interface __CngKeyBlobFormat$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<CngKeyBlobFormat>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: CngKeyBlobFormat): boolean;
+    equals(other: CngKeyBlobFormat): boolean;
 }
 
 export type CngKeyBlobFormat = CngKeyBlobFormat$instance & __CngKeyBlobFormat$views;
@@ -1041,7 +1041,7 @@ export interface __CngProvider$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<CngProvider>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: CngProvider): boolean;
+    equals(other: CngProvider): boolean;
 }
 
 export type CngProvider = CngProvider$instance & __CngProvider$views;
@@ -1168,7 +1168,7 @@ export interface __CompositeMLDsaAlgorithm$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<CompositeMLDsaAlgorithm>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: CompositeMLDsaAlgorithm): boolean;
+    equals(other: CompositeMLDsaAlgorithm): boolean;
 }
 
 export type CompositeMLDsaAlgorithm = CompositeMLDsaAlgorithm$instance & __CompositeMLDsaAlgorithm$views;
@@ -1199,9 +1199,9 @@ export interface CryptoConfig$instance {
 export const CryptoConfig: {
     new(): CryptoConfig$instance;
     readonly AllowOnlyFipsAlgorithms: boolean;
-    AddAlgorithm(algorithm: Type, names: string[]): void;
-    AddOID(oid: string, names: string[]): void;
-    CreateFromName(name: string, args: unknown[]): unknown;
+    AddAlgorithm(algorithm: Type, ...names: string[]): void;
+    AddOID(oid: string, ...names: string[]): void;
+    CreateFromName(name: string, ...args: unknown[]): unknown;
     CreateFromName(name: string): unknown;
     EncodeOID(str: string): byte[];
     MapNameToOID(name: string): string;
@@ -2759,7 +2759,7 @@ export interface __MLDsaAlgorithm$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<MLDsaAlgorithm>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: MLDsaAlgorithm): boolean;
+    equals(other: MLDsaAlgorithm): boolean;
 }
 
 export type MLDsaAlgorithm = MLDsaAlgorithm$instance & __MLDsaAlgorithm$views;
@@ -2892,7 +2892,7 @@ export interface __MLKemAlgorithm$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<MLKemAlgorithm>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: MLKemAlgorithm): boolean;
+    equals(other: MLKemAlgorithm): boolean;
 }
 
 export type MLKemAlgorithm = MLKemAlgorithm$instance & __MLKemAlgorithm$views;
@@ -3451,7 +3451,7 @@ export interface __RSAEncryptionPadding$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<RSAEncryptionPadding>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: RSAEncryptionPadding): boolean;
+    equals(other: RSAEncryptionPadding): boolean;
 }
 
 export type RSAEncryptionPadding = RSAEncryptionPadding$instance & __RSAEncryptionPadding$views;
@@ -3642,7 +3642,7 @@ export interface __RSASignaturePadding$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<RSASignaturePadding>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: RSASignaturePadding): boolean;
+    equals(other: RSASignaturePadding): boolean;
 }
 
 export type RSASignaturePadding = RSASignaturePadding$instance & __RSASignaturePadding$views;
@@ -4237,7 +4237,7 @@ export interface __SlhDsaAlgorithm$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<SlhDsaAlgorithm>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: SlhDsaAlgorithm): boolean;
+    equals(other: SlhDsaAlgorithm): boolean;
 }
 
 export type SlhDsaAlgorithm = SlhDsaAlgorithm$instance & __SlhDsaAlgorithm$views;

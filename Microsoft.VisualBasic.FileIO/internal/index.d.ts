@@ -103,14 +103,14 @@ export const FileSystem: {
     DeleteFile(file: string): void;
     DirectoryExists(directory: string): boolean;
     FileExists(file: string): boolean;
-    FindInFiles(directory: string, containsText: string, ignoreCase: boolean, searchType: SearchOption, fileWildcards: string[]): ReadOnlyCollection_1<CLROf<string>>;
+    FindInFiles(directory: string, containsText: string, ignoreCase: boolean, searchType: SearchOption, ...fileWildcards: string[]): ReadOnlyCollection_1<CLROf<string>>;
     FindInFiles(directory: string, containsText: string, ignoreCase: boolean, searchType: SearchOption): ReadOnlyCollection_1<CLROf<string>>;
-    GetDirectories(directory: string, searchType: SearchOption, wildcards: string[]): ReadOnlyCollection_1<CLROf<string>>;
+    GetDirectories(directory: string, searchType: SearchOption, ...wildcards: string[]): ReadOnlyCollection_1<CLROf<string>>;
     GetDirectories(directory: string): ReadOnlyCollection_1<CLROf<string>>;
     GetDirectoryInfo(directory: string): DirectoryInfo;
     GetDriveInfo(drive: string): DriveInfo;
     GetFileInfo(file: string): FileInfo;
-    GetFiles(directory: string, searchType: SearchOption, wildcards: string[]): ReadOnlyCollection_1<CLROf<string>>;
+    GetFiles(directory: string, searchType: SearchOption, ...wildcards: string[]): ReadOnlyCollection_1<CLROf<string>>;
     GetFiles(directory: string): ReadOnlyCollection_1<CLROf<string>>;
     GetName(path: string): string;
     GetParentPath(path: string): string;
@@ -123,8 +123,8 @@ export const FileSystem: {
     MoveFile(sourceFileName: string, destinationFileName: string, showUI: UIOption): void;
     MoveFile(sourceFileName: string, destinationFileName: string, overwrite: boolean): void;
     MoveFile(sourceFileName: string, destinationFileName: string): void;
-    OpenTextFieldParser(file: string, fieldWidths: int[]): TextFieldParser;
-    OpenTextFieldParser(file: string, delimiters: string[]): TextFieldParser;
+    OpenTextFieldParser(file: string, ...fieldWidths: int[]): TextFieldParser;
+    OpenTextFieldParser(file: string, ...delimiters: string[]): TextFieldParser;
     OpenTextFieldParser(file: string): TextFieldParser;
     OpenTextFileReader(file: string, encoding: Encoding): StreamReader;
     OpenTextFileReader(file: string): StreamReader;
@@ -203,8 +203,8 @@ export interface TextFieldParser$instance {
     ReadFields(): string[];
     ReadLine(): string;
     ReadToEnd(): string;
-    SetDelimiters(delimiters: string[]): void;
-    SetFieldWidths(fieldWidths: int[]): void;
+    SetDelimiters(...delimiters: string[]): void;
+    SetFieldWidths(...fieldWidths: int[]): void;
 }
 
 

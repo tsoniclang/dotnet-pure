@@ -467,7 +467,7 @@ export interface __CustomAttributeNamedArgument$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<CustomAttributeNamedArgument>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: CustomAttributeNamedArgument): boolean;
+    equals(other: CustomAttributeNamedArgument): boolean;
 }
 
 export type CustomAttributeNamedArgument = CustomAttributeNamedArgument$instance & __CustomAttributeNamedArgument$views;
@@ -493,7 +493,7 @@ export interface __CustomAttributeTypedArgument$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<CustomAttributeTypedArgument>;
 
     // Structural method bridges for numeric interface constraints
-    Equals(other: CustomAttributeTypedArgument): boolean;
+    equals(other: CustomAttributeTypedArgument): boolean;
 }
 
 export type CustomAttributeTypedArgument = CustomAttributeTypedArgument$instance & __CustomAttributeTypedArgument$views;
@@ -1321,7 +1321,7 @@ export interface MethodInfo$instance extends MethodBase$instance {
     GetGenericMethodDefinition(): MethodInfo;
     GetHashCode(): int;
     IsDefined(attributeType: Type, inherit: boolean): boolean;
-    MakeGenericMethod(typeArguments: Type[]): MethodInfo;
+    MakeGenericMethod(...typeArguments: Type[]): MethodInfo;
 }
 
 

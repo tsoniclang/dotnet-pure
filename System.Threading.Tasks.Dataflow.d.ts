@@ -26,10 +26,29 @@ export type ISourceBlock<TOutput> = Internal.ISourceBlock_1<TOutput>;
 export type ITargetBlock<TInput> = Internal.ITargetBlock_1<TInput>;
 export { ActionBlock_1 as ActionBlock } from './System.Threading.Tasks.Dataflow/internal/index.js';
 export { BatchBlock_1 as BatchBlock } from './System.Threading.Tasks.Dataflow/internal/index.js';
-export { BatchedJoinBlock_2 as BatchedJoinBlock } from './System.Threading.Tasks.Dataflow/internal/index.js';
 export { BroadcastBlock_1 as BroadcastBlock } from './System.Threading.Tasks.Dataflow/internal/index.js';
 export { BufferBlock_1 as BufferBlock } from './System.Threading.Tasks.Dataflow/internal/index.js';
-export { JoinBlock_2 as JoinBlock } from './System.Threading.Tasks.Dataflow/internal/index.js';
 export { TransformBlock_2 as TransformBlock } from './System.Threading.Tasks.Dataflow/internal/index.js';
 export { TransformManyBlock_2 as TransformManyBlock } from './System.Threading.Tasks.Dataflow/internal/index.js';
 export { WriteOnceBlock_1 as WriteOnceBlock } from './System.Threading.Tasks.Dataflow/internal/index.js';
+
+// Multi-arity family sentinel (detects unspecified type parameters)
+declare const __unspecified: unique symbol;
+export type __ = typeof __unspecified;
+
+export type BatchedJoinBlock<
+  T1 = __,
+  T2 = __,
+  T3 = __,
+> =
+  [T3] extends [__] ? Internal.BatchedJoinBlock_2<T1, T2> :
+  Internal.BatchedJoinBlock_3<T1, T2, T3>;
+
+export type JoinBlock<
+  T1 = __,
+  T2 = __,
+  T3 = __,
+> =
+  [T3] extends [__] ? Internal.JoinBlock_2<T1, T2> :
+  Internal.JoinBlock_3<T1, T2, T3>;
+
