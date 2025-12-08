@@ -12869,7 +12869,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Reflection.PortableExecutable.PEHeaders",
           "declaringAssemblyName": "System.Reflection.Metadata",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Reflection.Metadata:System.Reflection.PortableExecutable.PEHeaders::GetContainingSectionIndex(System.Int32):System.Int32",
@@ -13479,7 +13485,17 @@
           "parameterCount": 4,
           "declaringClrType": "System.Reflection.PortableExecutable.PEReader",
           "declaringAssemblyName": "System.Reflection.Metadata",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            },
+            {
+              "index": 3,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Reflection.Metadata:System.Reflection.PortableExecutable.PEReader::ReadEmbeddedPortablePdbDebugDirectoryData(System.Reflection.PortableExecutable.DebugDirectoryEntry):System.Reflection.Metadata.MetadataReaderProvider",

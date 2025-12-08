@@ -3549,7 +3549,13 @@
           "isSealed": false,
           "arity": 1,
           "parameterCount": 1,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "in"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.Intrinsics.Vector128::LoadUnsafe(T\u0026,System.UIntPtr):Vector128_1",
@@ -3565,7 +3571,13 @@
           "isSealed": false,
           "arity": 1,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "in"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.Intrinsics.Vector128::Log(System.Runtime.Intrinsics.Vector128_1[[System.Double,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]):System.Runtime.Intrinsics.Vector128_1[[System.Double,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]",
@@ -5117,7 +5129,13 @@
           "isSealed": false,
           "arity": 1,
           "parameterCount": 2,
-          "isExtensionMethod": true
+          "isExtensionMethod": true,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.Intrinsics.Vector128::StoreUnsafe(Vector128_1,T\u0026,System.UIntPtr):System.Void",
@@ -5133,7 +5151,13 @@
           "isSealed": false,
           "arity": 1,
           "parameterCount": 3,
-          "isExtensionMethod": true
+          "isExtensionMethod": true,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.Intrinsics.Vector128::Subtract(Vector128_1,Vector128_1):Vector128_1",
@@ -8702,7 +8726,13 @@
           "isSealed": false,
           "arity": 1,
           "parameterCount": 1,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "in"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.Intrinsics.Vector256::LoadUnsafe(T\u0026,System.UIntPtr):Vector256_1",
@@ -8718,7 +8748,13 @@
           "isSealed": false,
           "arity": 1,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "in"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.Intrinsics.Vector256::Log(System.Runtime.Intrinsics.Vector256_1[[System.Double,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]):System.Runtime.Intrinsics.Vector256_1[[System.Double,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]",
@@ -10270,7 +10306,13 @@
           "isSealed": false,
           "arity": 1,
           "parameterCount": 2,
-          "isExtensionMethod": true
+          "isExtensionMethod": true,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.Intrinsics.Vector256::StoreUnsafe(Vector256_1,T\u0026,System.UIntPtr):System.Void",
@@ -10286,7 +10328,13 @@
           "isSealed": false,
           "arity": 1,
           "parameterCount": 3,
-          "isExtensionMethod": true
+          "isExtensionMethod": true,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.Intrinsics.Vector256::Subtract(Vector256_1,Vector256_1):Vector256_1",
@@ -13647,7 +13695,13 @@
           "isSealed": false,
           "arity": 1,
           "parameterCount": 1,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "in"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.Intrinsics.Vector512::LoadUnsafe(T\u0026,System.UIntPtr):Vector512_1",
@@ -13663,7 +13717,13 @@
           "isSealed": false,
           "arity": 1,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "in"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.Intrinsics.Vector512::Log(System.Runtime.Intrinsics.Vector512_1[[System.Double,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]):System.Runtime.Intrinsics.Vector512_1[[System.Double,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]",
@@ -15215,7 +15275,13 @@
           "isSealed": false,
           "arity": 1,
           "parameterCount": 2,
-          "isExtensionMethod": true
+          "isExtensionMethod": true,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.Intrinsics.Vector512::StoreUnsafe(Vector512_1,T\u0026,System.UIntPtr):System.Void",
@@ -15231,7 +15297,13 @@
           "isSealed": false,
           "arity": 1,
           "parameterCount": 3,
-          "isExtensionMethod": true
+          "isExtensionMethod": true,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.Intrinsics.Vector512::Subtract(Vector512_1,Vector512_1):Vector512_1",
@@ -18192,7 +18264,13 @@
           "isSealed": false,
           "arity": 1,
           "parameterCount": 1,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "in"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.Intrinsics.Vector64::LoadUnsafe(T\u0026,System.UIntPtr):Vector64_1",
@@ -18208,7 +18286,13 @@
           "isSealed": false,
           "arity": 1,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "in"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.Intrinsics.Vector64::Log(System.Runtime.Intrinsics.Vector64_1[[System.Double,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]):System.Runtime.Intrinsics.Vector64_1[[System.Double,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]",
@@ -19664,7 +19748,13 @@
           "isSealed": false,
           "arity": 1,
           "parameterCount": 2,
-          "isExtensionMethod": true
+          "isExtensionMethod": true,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.Intrinsics.Vector64::StoreUnsafe(Vector64_1,T\u0026,System.UIntPtr):System.Void",
@@ -19680,7 +19770,13 @@
           "isSealed": false,
           "arity": 1,
           "parameterCount": 3,
-          "isExtensionMethod": true
+          "isExtensionMethod": true,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.Intrinsics.Vector64::Subtract(Vector64_1,Vector64_1):Vector64_1",

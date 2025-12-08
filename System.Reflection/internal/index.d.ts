@@ -6,7 +6,7 @@
 import type { sbyte, byte, short, ushort, int, uint, long, ulong, int128, uint128, half, float, double, decimal, nint, nuint, char } from '@tsonic/types';
 
 // Import support types from @tsonic/types
-import type { ptr, ref } from "@tsonic/types";
+import type { ptr } from "@tsonic/types";
 
 // Import types from other namespaces
 import type { IEnumerable_1, IList_1 } from "../../System.Collections.Generic/internal/index.js";
@@ -20,31 +20,6 @@ import type { IDeserializationCallback, IObjectReference, ISerializable, Seriali
 import type { SecurityRuleSet } from "../../System.Security/internal/index.js";
 import * as System_Internal from "../../System/internal/index.js";
 import type { ApplicationException, Array as ClrArray, AsyncCallback, Attribute, Boolean as ClrBoolean, Byte, Delegate, Enum, Exception, FormatException, Guid, IAsyncResult, ICloneable, IComparable, IConvertible, IEquatable_1, IFormatProvider, IFormattable, Int16, Int32, Int64, IntPtr, ISpanFormattable, MarshalByRefObject, ModuleHandle, MulticastDelegate, Object as ClrObject, ResolveEventArgs, RuntimeFieldHandle, RuntimeMethodHandle, RuntimeTypeHandle, Span_1, String as ClrString, SystemException, Type, TypeCode, TypedReference, UInt32, ValueType, Version, Void } from "../../System/internal/index.js";
-
-// CLROf<T> - Maps ergonomic primitives to their CLR types for generic constraints
-// This utility is used ONLY in generic type arguments to satisfy CLR interface constraints
-// Value positions (parameters, return types) use lowercase primitives for ergonomics
-export type CLROf<T> =
-    T extends sbyte ? System_Internal.SByte :
-    T extends short ? System_Internal.Int16 :
-    T extends int ? System_Internal.Int32 :
-    T extends long ? System_Internal.Int64 :
-    T extends int128 ? System_Internal.Int128 :
-    T extends nint ? System_Internal.IntPtr :
-    T extends byte ? System_Internal.Byte :
-    T extends ushort ? System_Internal.UInt16 :
-    T extends uint ? System_Internal.UInt32 :
-    T extends ulong ? System_Internal.UInt64 :
-    T extends uint128 ? System_Internal.UInt128 :
-    T extends nuint ? System_Internal.UIntPtr :
-    T extends half ? System_Internal.Half :
-    T extends float ? System_Internal.Single :
-    T extends double ? System_Internal.Double :
-    T extends decimal ? System_Internal.Decimal :
-    T extends char ? System_Internal.Char :
-    T extends boolean ? System_Internal.Boolean :
-    T extends string ? System_Internal.String :
-    T; // Identity fallback for non-primitive types
 
 export enum AssemblyContentType {
     Default = 0,
@@ -927,9 +902,9 @@ export type AssemblyVersionAttribute = AssemblyVersionAttribute$instance;
 
 export interface Binder$instance {
     BindToField(bindingAttr: BindingFlags, match: FieldInfo[], value: unknown, culture: CultureInfo): FieldInfo;
-    BindToMethod(bindingAttr: BindingFlags, match: MethodBase[], args: { value: ref<unknown[]> }, modifiers: ParameterModifier[], culture: CultureInfo, names: string[], state: { value: ref<unknown> }): MethodBase;
+    BindToMethod(bindingAttr: BindingFlags, match: MethodBase[], args: unknown[], modifiers: ParameterModifier[], culture: CultureInfo, names: string[], state: unknown): MethodBase;
     ChangeType(value: unknown, type_: Type, culture: CultureInfo): unknown;
-    ReorderArgumentArray(args: { value: ref<unknown[]> }, state: unknown): void;
+    ReorderArgumentArray(args: unknown[], state: unknown): void;
     SelectMethod(bindingAttr: BindingFlags, match: MethodBase[], types: Type[], modifiers: ParameterModifier[]): MethodBase;
     SelectProperty(bindingAttr: BindingFlags, match: PropertyInfo[], returnType: Type, indexes: Type[], modifiers: ParameterModifier[]): PropertyInfo;
 }
@@ -1399,7 +1374,7 @@ export interface Module$instance {
     GetMethods(): MethodInfo[];
     GetMethods(bindingFlags: BindingFlags): MethodInfo[];
     GetObjectData(info: SerializationInfo, context: StreamingContext): void;
-    GetPEKind(peKind: { value: ref<PortableExecutableKinds> }, machine: { value: ref<ImageFileMachine> }): void;
+    GetPEKind(peKind: PortableExecutableKinds, machine: ImageFileMachine): void;
     GetType(className: string): Type;
     GetType(className: string, ignoreCase: boolean): Type;
     GetType(className: string, throwOnError: boolean, ignoreCase: boolean): Type;

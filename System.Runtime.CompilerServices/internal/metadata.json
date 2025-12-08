@@ -839,7 +839,13 @@
           "isSealed": false,
           "arity": 1,
           "parameterCount": 1,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.CompilerServices.AsyncIteratorMethodBuilder::AwaitOnCompleted(TAwaiter\u0026,TStateMachine\u0026):System.Void",
@@ -855,7 +861,17 @@
           "isSealed": false,
           "arity": 2,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            },
+            {
+              "index": 1,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.CompilerServices.AsyncIteratorMethodBuilder::AwaitUnsafeOnCompleted(TAwaiter\u0026,TStateMachine\u0026):System.Void",
@@ -871,7 +887,17 @@
           "isSealed": false,
           "arity": 2,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            },
+            {
+              "index": 1,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.CompilerServices.AsyncIteratorMethodBuilder::Complete():System.Void",
@@ -936,7 +962,13 @@
           "isSealed": false,
           "arity": 1,
           "parameterCount": 1,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.CompilerServices.AsyncTaskMethodBuilder::SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine):System.Void",
@@ -968,7 +1000,17 @@
           "isSealed": false,
           "arity": 2,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            },
+            {
+              "index": 1,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.CompilerServices.AsyncTaskMethodBuilder::AwaitUnsafeOnCompleted(TAwaiter\u0026,TStateMachine\u0026):System.Void",
@@ -984,7 +1026,17 @@
           "isSealed": false,
           "arity": 2,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            },
+            {
+              "index": 1,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.CompilerServices.AsyncTaskMethodBuilder::SetResult():System.Void",
@@ -1081,7 +1133,13 @@
           "isSealed": false,
           "arity": 1,
           "parameterCount": 1,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.CompilerServices.AsyncTaskMethodBuilder\u00601::SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine):System.Void",
@@ -1113,7 +1171,17 @@
           "isSealed": false,
           "arity": 2,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            },
+            {
+              "index": 1,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.CompilerServices.AsyncTaskMethodBuilder\u00601::AwaitUnsafeOnCompleted(TAwaiter\u0026,TStateMachine\u0026):System.Void",
@@ -1129,7 +1197,17 @@
           "isSealed": false,
           "arity": 2,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            },
+            {
+              "index": 1,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.CompilerServices.AsyncTaskMethodBuilder\u00601::SetResult(TResult):System.Void",
@@ -1226,7 +1304,13 @@
           "isSealed": false,
           "arity": 1,
           "parameterCount": 1,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.CompilerServices.AsyncValueTaskMethodBuilder::SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine):System.Void",
@@ -1290,7 +1374,17 @@
           "isSealed": false,
           "arity": 2,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            },
+            {
+              "index": 1,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.CompilerServices.AsyncValueTaskMethodBuilder::AwaitUnsafeOnCompleted(TAwaiter\u0026,TStateMachine\u0026):System.Void",
@@ -1306,7 +1400,17 @@
           "isSealed": false,
           "arity": 2,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            },
+            {
+              "index": 1,
+              "modifier": "ref"
+            }
+          ]
         }
       ],
       "properties": [
@@ -1371,7 +1475,13 @@
           "isSealed": false,
           "arity": 1,
           "parameterCount": 1,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.CompilerServices.AsyncValueTaskMethodBuilder\u00601::SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine):System.Void",
@@ -1435,7 +1545,17 @@
           "isSealed": false,
           "arity": 2,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            },
+            {
+              "index": 1,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.CompilerServices.AsyncValueTaskMethodBuilder\u00601::AwaitUnsafeOnCompleted(TAwaiter\u0026,TStateMachine\u0026):System.Void",
@@ -1451,7 +1571,17 @@
           "isSealed": false,
           "arity": 2,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            },
+            {
+              "index": 1,
+              "modifier": "ref"
+            }
+          ]
         }
       ],
       "properties": [
@@ -1516,7 +1646,13 @@
           "isSealed": false,
           "arity": 1,
           "parameterCount": 1,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.CompilerServices.AsyncVoidMethodBuilder::SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine):System.Void",
@@ -1548,7 +1684,17 @@
           "isSealed": false,
           "arity": 2,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            },
+            {
+              "index": 1,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.CompilerServices.AsyncVoidMethodBuilder::AwaitUnsafeOnCompleted(TAwaiter\u0026,TStateMachine\u0026):System.Void",
@@ -1564,7 +1710,17 @@
           "isSealed": false,
           "arity": 2,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            },
+            {
+              "index": 1,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.CompilerServices.AsyncVoidMethodBuilder::SetResult():System.Void",
@@ -2897,7 +3053,13 @@
           "isSealed": false,
           "arity": 1,
           "parameterCount": 1,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder::SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine):System.Void",
@@ -2961,7 +3123,17 @@
           "isSealed": false,
           "arity": 2,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            },
+            {
+              "index": 1,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder::AwaitUnsafeOnCompleted(TAwaiter\u0026,TStateMachine\u0026):System.Void",
@@ -2977,7 +3149,17 @@
           "isSealed": false,
           "arity": 2,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            },
+            {
+              "index": 1,
+              "modifier": "ref"
+            }
+          ]
         }
       ],
       "properties": [
@@ -3042,7 +3224,13 @@
           "isSealed": false,
           "arity": 1,
           "parameterCount": 1,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder\u00601::SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine):System.Void",
@@ -3106,7 +3294,17 @@
           "isSealed": false,
           "arity": 2,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            },
+            {
+              "index": 1,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder\u00601::AwaitUnsafeOnCompleted(TAwaiter\u0026,TStateMachine\u0026):System.Void",
@@ -3122,7 +3320,17 @@
           "isSealed": false,
           "arity": 2,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            },
+            {
+              "index": 1,
+              "modifier": "ref"
+            }
+          ]
         }
       ],
       "properties": [
@@ -4605,7 +4813,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.CompilerServices.ConditionalWeakTable\u00602::Add(TKey,TValue):System.Void",
@@ -4685,7 +4899,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.CompilerServices.ConditionalWeakTable\u00602::Clear():System.Void",
@@ -8698,7 +8918,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.CompilerServices.RuntimeHelpers::SizeOf(System.RuntimeTypeHandle):System.Int32",
@@ -8891,7 +9117,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 6,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 5,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Linq.Expressions:System.Runtime.CompilerServices.RuntimeOps::ExpandoTrySetValue(System.Dynamic.ExpandoObject,System.Object,System.Int32,System.Object,System.String,System.Boolean):System.Object",
@@ -9052,7 +9284,13 @@
           "isSealed": false,
           "arity": 1,
           "parameterCount": 1,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "in"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.CompilerServices.Unsafe::SizeOf():System.Int32",
@@ -9100,7 +9338,13 @@
           "isSealed": false,
           "arity": 2,
           "parameterCount": 1,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.CompilerServices.Unsafe::Add(T\u0026,System.Int32):T\u0026",
@@ -9116,7 +9360,13 @@
           "isSealed": false,
           "arity": 1,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.CompilerServices.Unsafe::Add(T\u0026,System.IntPtr):T\u0026",
@@ -9132,7 +9382,13 @@
           "isSealed": false,
           "arity": 1,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.CompilerServices.Unsafe::Add(System.Void*,System.Int32):System.Void*",
@@ -9164,7 +9420,13 @@
           "isSealed": false,
           "arity": 1,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.CompilerServices.Unsafe::AddByteOffset(T\u0026,System.UIntPtr):T\u0026",
@@ -9180,7 +9442,13 @@
           "isSealed": false,
           "arity": 1,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.CompilerServices.Unsafe::AreSame(T\u0026,T\u0026):System.Boolean",
@@ -9196,7 +9464,17 @@
           "isSealed": false,
           "arity": 1,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "in"
+            },
+            {
+              "index": 1,
+              "modifier": "in"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.CompilerServices.Unsafe::BitCast(TFrom):TTo",
@@ -9228,7 +9506,13 @@
           "isSealed": false,
           "arity": 1,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "in"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.CompilerServices.Unsafe::Copy(T\u0026,System.Void*):System.Void",
@@ -9244,7 +9528,13 @@
           "isSealed": false,
           "arity": 1,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.CompilerServices.Unsafe::CopyBlock(System.Void*,System.Void*,System.UInt32):System.Void",
@@ -9276,7 +9566,17 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 3,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            },
+            {
+              "index": 1,
+              "modifier": "in"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.CompilerServices.Unsafe::CopyBlockUnaligned(System.Void*,System.Void*,System.UInt32):System.Void",
@@ -9308,7 +9608,17 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 3,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            },
+            {
+              "index": 1,
+              "modifier": "in"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.CompilerServices.Unsafe::IsAddressGreaterThan(T\u0026,T\u0026):System.Boolean",
@@ -9324,7 +9634,17 @@
           "isSealed": false,
           "arity": 1,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "in"
+            },
+            {
+              "index": 1,
+              "modifier": "in"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.CompilerServices.Unsafe::IsAddressGreaterThanOrEqualTo(T\u0026,T\u0026):System.Boolean",
@@ -9340,7 +9660,17 @@
           "isSealed": false,
           "arity": 1,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "in"
+            },
+            {
+              "index": 1,
+              "modifier": "in"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.CompilerServices.Unsafe::IsAddressLessThan(T\u0026,T\u0026):System.Boolean",
@@ -9356,7 +9686,17 @@
           "isSealed": false,
           "arity": 1,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "in"
+            },
+            {
+              "index": 1,
+              "modifier": "in"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.CompilerServices.Unsafe::IsAddressLessThanOrEqualTo(T\u0026,T\u0026):System.Boolean",
@@ -9372,7 +9712,17 @@
           "isSealed": false,
           "arity": 1,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "in"
+            },
+            {
+              "index": 1,
+              "modifier": "in"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.CompilerServices.Unsafe::InitBlock(System.Void*,System.Byte,System.UInt32):System.Void",
@@ -9404,7 +9754,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 3,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.CompilerServices.Unsafe::InitBlockUnaligned(System.Void*,System.Byte,System.UInt32):System.Void",
@@ -9436,7 +9792,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 3,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.CompilerServices.Unsafe::ReadUnaligned(System.Void*):T",
@@ -9468,7 +9830,13 @@
           "isSealed": false,
           "arity": 1,
           "parameterCount": 1,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "in"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.CompilerServices.Unsafe::WriteUnaligned(System.Void*,T):System.Void",
@@ -9500,7 +9868,13 @@
           "isSealed": false,
           "arity": 1,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.CompilerServices.Unsafe::AddByteOffset(T\u0026,System.IntPtr):T\u0026",
@@ -9516,7 +9890,13 @@
           "isSealed": false,
           "arity": 1,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.CompilerServices.Unsafe::Read(System.Void*):T",
@@ -9580,7 +9960,13 @@
           "isSealed": false,
           "arity": 1,
           "parameterCount": 1,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "in"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.CompilerServices.Unsafe::ByteOffset(T\u0026,T\u0026):System.IntPtr",
@@ -9596,7 +9982,17 @@
           "isSealed": false,
           "arity": 1,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "in"
+            },
+            {
+              "index": 1,
+              "modifier": "in"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.CompilerServices.Unsafe::NullRef():T\u0026",
@@ -9628,7 +10024,13 @@
           "isSealed": false,
           "arity": 1,
           "parameterCount": 1,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "in"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.CompilerServices.Unsafe::SkipInit(T\u0026):System.Void",
@@ -9644,7 +10046,13 @@
           "isSealed": false,
           "arity": 1,
           "parameterCount": 1,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.CompilerServices.Unsafe::Subtract(T\u0026,System.Int32):T\u0026",
@@ -9660,7 +10068,13 @@
           "isSealed": false,
           "arity": 1,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.CompilerServices.Unsafe::Subtract(System.Void*,System.Int32):System.Void*",
@@ -9692,7 +10106,13 @@
           "isSealed": false,
           "arity": 1,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.CompilerServices.Unsafe::Subtract(T\u0026,System.UIntPtr):T\u0026",
@@ -9708,7 +10128,13 @@
           "isSealed": false,
           "arity": 1,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.CompilerServices.Unsafe::SubtractByteOffset(T\u0026,System.IntPtr):T\u0026",
@@ -9724,7 +10150,13 @@
           "isSealed": false,
           "arity": 1,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.CompilerServices.Unsafe::SubtractByteOffset(T\u0026,System.UIntPtr):T\u0026",
@@ -9740,7 +10172,13 @@
           "isSealed": false,
           "arity": 1,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.CompilerServices.Unsafe::Unbox(System.Object):T\u0026",

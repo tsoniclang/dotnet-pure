@@ -686,7 +686,17 @@
           "parameterCount": 3,
           "declaringClrType": "System.Text.Rune",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            },
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Text.Rune::DecodeFromUtf8(System.ReadOnlySpan_1[[System.Byte,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Text.Rune\u0026,System.Int32\u0026):System.Buffers.OperationStatus",
@@ -700,7 +710,17 @@
           "parameterCount": 3,
           "declaringClrType": "System.Text.Rune",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            },
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Text.Rune::DecodeLastFromUtf16(System.ReadOnlySpan_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Text.Rune\u0026,System.Int32\u0026):System.Buffers.OperationStatus",
@@ -714,7 +734,17 @@
           "parameterCount": 3,
           "declaringClrType": "System.Text.Rune",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            },
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Text.Rune::DecodeLastFromUtf8(System.ReadOnlySpan_1[[System.Byte,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Text.Rune\u0026,System.Int32\u0026):System.Buffers.OperationStatus",
@@ -728,7 +758,17 @@
           "parameterCount": 3,
           "declaringClrType": "System.Text.Rune",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            },
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Text.Rune::EncodeToUtf16(System.Span_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]):System.Int32",
@@ -868,7 +908,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Text.Rune",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Text.Rune::TryCreate(System.Char,System.Char,System.Text.Rune\u0026):System.Boolean",
@@ -882,7 +928,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.Text.Rune",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Text.Rune::TryCreate(System.Int32,System.Text.Rune\u0026):System.Boolean",
@@ -896,7 +948,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Text.Rune",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Text.Rune::TryCreate(System.UInt32,System.Text.Rune\u0026):System.Boolean",
@@ -910,7 +968,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Text.Rune",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Text.Rune::TryEncodeToUtf16(System.Span_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Int32\u0026):System.Boolean",
@@ -924,7 +988,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Text.Rune",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Text.Rune::TryEncodeToUtf8(System.Span_1[[System.Byte,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Int32\u0026):System.Boolean",
@@ -938,7 +1008,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Text.Rune",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Text.Rune::TryGetRuneAt(System.String,System.Int32,System.Text.Rune\u0026):System.Boolean",
@@ -952,7 +1028,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.Text.Rune",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Text.Rune::GetNumericValue(System.Text.Rune):System.Double",
@@ -1232,7 +1314,13 @@
           "parameterCount": 4,
           "declaringClrType": "System.ISpanFormattable",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.IFormattable::ToString(System.String,System.IFormatProvider):System.String",
@@ -1274,7 +1362,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.IUtf8SpanParsable\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.IComparable::CompareTo(System.Object):System.Int32",
@@ -1302,7 +1396,13 @@
           "parameterCount": 4,
           "declaringClrType": "System.IUtf8SpanFormattable",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         }
       ],
       "properties": [
@@ -3547,7 +3647,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.Text.ASCIIEncoding",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Text.ASCIIEncoding::GetCharCount(System.Byte[],System.Int32,System.Int32):System.Int32",
@@ -3645,7 +3751,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.Text.ASCIIEncoding",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Text.ASCIIEncoding::GetString(System.Byte[],System.Int32,System.Int32):System.String",
@@ -3981,7 +4093,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.Text.ASCIIEncoding",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Text.ASCIIEncoding::TryGetChars(System.ReadOnlySpan_1,System.Span_1,System.Int32\u0026):System.Boolean",
@@ -3995,7 +4113,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.Text.ASCIIEncoding",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         }
       ],
       "properties": [
@@ -5385,7 +5509,21 @@
           "parameterCount": 10,
           "declaringClrType": "System.Text.Decoder",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 7,
+              "modifier": "out"
+            },
+            {
+              "index": 8,
+              "modifier": "out"
+            },
+            {
+              "index": 9,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Text.Decoder::Convert(System.Byte*,System.Int32,System.Char*,System.Int32,System.Boolean,System.Int32\u0026,System.Int32\u0026,System.Boolean\u0026):System.Void",
@@ -5399,7 +5537,21 @@
           "parameterCount": 8,
           "declaringClrType": "System.Text.Decoder",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 5,
+              "modifier": "out"
+            },
+            {
+              "index": 6,
+              "modifier": "out"
+            },
+            {
+              "index": 7,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Text.Decoder::Convert(System.ReadOnlySpan_1[[System.Byte,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Span_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Boolean,System.Int32\u0026,System.Int32\u0026,System.Boolean\u0026):System.Void",
@@ -5413,7 +5565,21 @@
           "parameterCount": 6,
           "declaringClrType": "System.Text.Decoder",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 3,
+              "modifier": "out"
+            },
+            {
+              "index": 4,
+              "modifier": "out"
+            },
+            {
+              "index": 5,
+              "modifier": "out"
+            }
+          ]
         }
       ],
       "properties": [
@@ -7377,7 +7543,21 @@
           "parameterCount": 10,
           "declaringClrType": "System.Text.Encoder",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 7,
+              "modifier": "out"
+            },
+            {
+              "index": 8,
+              "modifier": "out"
+            },
+            {
+              "index": 9,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Text.Encoder::Convert(System.Char*,System.Int32,System.Byte*,System.Int32,System.Boolean,System.Int32\u0026,System.Int32\u0026,System.Boolean\u0026):System.Void",
@@ -7391,7 +7571,21 @@
           "parameterCount": 8,
           "declaringClrType": "System.Text.Encoder",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 5,
+              "modifier": "out"
+            },
+            {
+              "index": 6,
+              "modifier": "out"
+            },
+            {
+              "index": 7,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Text.Encoder::Convert(System.ReadOnlySpan_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Span_1[[System.Byte,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Boolean,System.Int32\u0026,System.Int32\u0026,System.Boolean\u0026):System.Void",
@@ -7405,7 +7599,21 @@
           "parameterCount": 6,
           "declaringClrType": "System.Text.Encoder",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 3,
+              "modifier": "out"
+            },
+            {
+              "index": 4,
+              "modifier": "out"
+            },
+            {
+              "index": 5,
+              "modifier": "out"
+            }
+          ]
         }
       ],
       "properties": [
@@ -9712,7 +9920,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.Text.Encoding",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Text.Encoding::GetCharCount(System.Byte[]):System.Int32",
@@ -9852,7 +10066,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.Text.Encoding",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Text.Encoding::GetString(System.Byte*,System.Int32):System.String",
@@ -12079,7 +12299,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Text.StringBuilder",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Text.StringBuilder::Append(System.IFormatProvider,System.Text.StringBuilder\u002BAppendInterpolatedStringHandler\u0026):System.Text.StringBuilder",
@@ -12093,7 +12319,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Text.StringBuilder",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Text.StringBuilder::AppendLine(System.Text.StringBuilder\u002BAppendInterpolatedStringHandler\u0026):System.Text.StringBuilder",
@@ -12107,7 +12339,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Text.StringBuilder",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Text.StringBuilder::AppendLine(System.IFormatProvider,System.Text.StringBuilder\u002BAppendInterpolatedStringHandler\u0026):System.Text.StringBuilder",
@@ -12121,7 +12359,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Text.StringBuilder",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Text.StringBuilder::AppendJoin(System.String,System.Object[]):System.Text.StringBuilder",
@@ -18224,7 +18468,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.Text.UTF8Encoding",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Text.UTF8Encoding::GetCharCount(System.Byte[],System.Int32,System.Int32):System.Int32",
@@ -18322,7 +18572,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.Text.UTF8Encoding",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Text.UTF8Encoding::GetString(System.Byte[],System.Int32,System.Int32):System.String",
@@ -18700,7 +18956,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.Text.UTF8Encoding",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Text.UTF8Encoding::TryGetChars(System.ReadOnlySpan_1,System.Span_1,System.Int32\u0026):System.Boolean",
@@ -18714,7 +18976,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.Text.UTF8Encoding",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         }
       ],
       "properties": [
@@ -19676,7 +19944,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.Text.Ascii",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Text.Ascii::ToUpper(System.ReadOnlySpan_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Span_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Int32\u0026):System.Buffers.OperationStatus",
@@ -19690,7 +19964,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.Text.Ascii",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Text.Ascii::ToUpper(System.ReadOnlySpan_1[[System.Byte,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Span_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Int32\u0026):System.Buffers.OperationStatus",
@@ -19704,7 +19984,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.Text.Ascii",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Text.Ascii::ToUpper(System.ReadOnlySpan_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Span_1[[System.Byte,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Int32\u0026):System.Buffers.OperationStatus",
@@ -19718,7 +20004,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.Text.Ascii",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Text.Ascii::ToLower(System.ReadOnlySpan_1[[System.Byte,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Span_1[[System.Byte,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Int32\u0026):System.Buffers.OperationStatus",
@@ -19732,7 +20024,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.Text.Ascii",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Text.Ascii::ToLower(System.ReadOnlySpan_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Span_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Int32\u0026):System.Buffers.OperationStatus",
@@ -19746,7 +20044,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.Text.Ascii",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Text.Ascii::ToLower(System.ReadOnlySpan_1[[System.Byte,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Span_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Int32\u0026):System.Buffers.OperationStatus",
@@ -19760,7 +20064,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.Text.Ascii",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Text.Ascii::ToLower(System.ReadOnlySpan_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Span_1[[System.Byte,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Int32\u0026):System.Buffers.OperationStatus",
@@ -19774,7 +20084,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.Text.Ascii",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Text.Ascii::ToLowerInPlace(System.Span_1[[System.Byte,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Int32\u0026):System.Buffers.OperationStatus",
@@ -19788,7 +20104,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Text.Ascii",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Text.Ascii::ToLowerInPlace(System.Span_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Int32\u0026):System.Buffers.OperationStatus",
@@ -19802,7 +20124,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Text.Ascii",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Text.Ascii::ToUpperInPlace(System.Span_1[[System.Byte,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Int32\u0026):System.Buffers.OperationStatus",
@@ -19816,7 +20144,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Text.Ascii",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Text.Ascii::ToUpperInPlace(System.Span_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Int32\u0026):System.Buffers.OperationStatus",
@@ -19830,7 +20164,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Text.Ascii",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Text.Ascii::Equals(System.ReadOnlySpan_1[[System.Byte,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.ReadOnlySpan_1[[System.Byte,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]):System.Boolean",
@@ -19956,7 +20296,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.Text.Ascii",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Text.Ascii::FromUtf16(System.ReadOnlySpan_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Span_1[[System.Byte,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Int32\u0026):System.Buffers.OperationStatus",
@@ -19970,7 +20316,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.Text.Ascii",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Text.Ascii::Trim(System.ReadOnlySpan_1[[System.Byte,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]):System.Range",
@@ -20477,7 +20829,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.Text.EncodingExtensions",
           "declaringAssemblyName": "System.Memory",
-          "isExtensionMethod": true
+          "isExtensionMethod": true,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "in"
+            }
+          ]
         },
         {
           "stableId": "System.Memory:System.Text.EncodingExtensions::GetBytes(System.Text.Encoding,System.Buffers.ReadOnlySequence_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]\u0026,System.Span_1[[System.Byte,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]):System.Int32",
@@ -20491,7 +20849,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.Text.EncodingExtensions",
           "declaringAssemblyName": "System.Memory",
-          "isExtensionMethod": true
+          "isExtensionMethod": true,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "in"
+            }
+          ]
         },
         {
           "stableId": "System.Memory:System.Text.EncodingExtensions::GetBytes(System.Text.Encoding,System.Buffers.ReadOnlySequence_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]\u0026):System.Byte[]",
@@ -20505,7 +20869,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Text.EncodingExtensions",
           "declaringAssemblyName": "System.Memory",
-          "isExtensionMethod": true
+          "isExtensionMethod": true,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "in"
+            }
+          ]
         },
         {
           "stableId": "System.Memory:System.Text.EncodingExtensions::GetChars(System.Text.Encoding,System.ReadOnlySpan_1[[System.Byte,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Buffers.IBufferWriter_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]):System.Int64",
@@ -20533,7 +20903,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.Text.EncodingExtensions",
           "declaringAssemblyName": "System.Memory",
-          "isExtensionMethod": true
+          "isExtensionMethod": true,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "in"
+            }
+          ]
         },
         {
           "stableId": "System.Memory:System.Text.EncodingExtensions::GetChars(System.Text.Encoding,System.Buffers.ReadOnlySequence_1[[System.Byte,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]\u0026,System.Span_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]):System.Int32",
@@ -20547,7 +20923,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.Text.EncodingExtensions",
           "declaringAssemblyName": "System.Memory",
-          "isExtensionMethod": true
+          "isExtensionMethod": true,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "in"
+            }
+          ]
         },
         {
           "stableId": "System.Memory:System.Text.EncodingExtensions::GetString(System.Text.Encoding,System.Buffers.ReadOnlySequence_1[[System.Byte,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]\u0026):System.String",
@@ -20561,7 +20943,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Text.EncodingExtensions",
           "declaringAssemblyName": "System.Memory",
-          "isExtensionMethod": true
+          "isExtensionMethod": true,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "in"
+            }
+          ]
         },
         {
           "stableId": "System.Memory:System.Text.EncodingExtensions::Convert(System.Text.Encoder,System.ReadOnlySpan_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Buffers.IBufferWriter_1[[System.Byte,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Boolean,System.Int64\u0026,System.Boolean\u0026):System.Void",
@@ -20575,7 +20963,17 @@
           "parameterCount": 6,
           "declaringClrType": "System.Text.EncodingExtensions",
           "declaringAssemblyName": "System.Memory",
-          "isExtensionMethod": true
+          "isExtensionMethod": true,
+          "parameterModifiers": [
+            {
+              "index": 4,
+              "modifier": "out"
+            },
+            {
+              "index": 5,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Memory:System.Text.EncodingExtensions::Convert(System.Text.Encoder,System.Buffers.ReadOnlySequence_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]\u0026,System.Buffers.IBufferWriter_1[[System.Byte,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Boolean,System.Int64\u0026,System.Boolean\u0026):System.Void",
@@ -20589,7 +20987,21 @@
           "parameterCount": 6,
           "declaringClrType": "System.Text.EncodingExtensions",
           "declaringAssemblyName": "System.Memory",
-          "isExtensionMethod": true
+          "isExtensionMethod": true,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "in"
+            },
+            {
+              "index": 4,
+              "modifier": "out"
+            },
+            {
+              "index": 5,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Memory:System.Text.EncodingExtensions::Convert(System.Text.Decoder,System.ReadOnlySpan_1[[System.Byte,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Buffers.IBufferWriter_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Boolean,System.Int64\u0026,System.Boolean\u0026):System.Void",
@@ -20603,7 +21015,17 @@
           "parameterCount": 6,
           "declaringClrType": "System.Text.EncodingExtensions",
           "declaringAssemblyName": "System.Memory",
-          "isExtensionMethod": true
+          "isExtensionMethod": true,
+          "parameterModifiers": [
+            {
+              "index": 4,
+              "modifier": "out"
+            },
+            {
+              "index": 5,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Memory:System.Text.EncodingExtensions::Convert(System.Text.Decoder,System.Buffers.ReadOnlySequence_1[[System.Byte,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]\u0026,System.Buffers.IBufferWriter_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Boolean,System.Int64\u0026,System.Boolean\u0026):System.Void",
@@ -20617,7 +21039,21 @@
           "parameterCount": 6,
           "declaringClrType": "System.Text.EncodingExtensions",
           "declaringAssemblyName": "System.Memory",
-          "isExtensionMethod": true
+          "isExtensionMethod": true,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "in"
+            },
+            {
+              "index": 4,
+              "modifier": "out"
+            },
+            {
+              "index": 5,
+              "modifier": "out"
+            }
+          ]
         }
       ],
       "properties": [],

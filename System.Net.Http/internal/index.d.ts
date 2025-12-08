@@ -6,7 +6,7 @@
 import type { sbyte, byte, short, ushort, int, uint, long, ulong, int128, uint128, half, float, double, decimal, nint, nuint, char } from '@tsonic/types';
 
 // Import support types from @tsonic/types
-import type { ptr, ref } from "@tsonic/types";
+import type { ptr } from "@tsonic/types";
 
 // Import types from other namespaces
 import * as System_Collections_Generic_Internal from "../../System.Collections.Generic/internal/index.js";
@@ -30,31 +30,6 @@ import type { Task, Task_1, ValueTask_1 } from "../../System.Threading.Tasks/int
 import type { CancellationToken } from "../../System.Threading/internal/index.js";
 import * as System_Internal from "../../System/internal/index.js";
 import type { AsyncCallback, Boolean as ClrBoolean, Byte, Char, Delegate, Enum, Exception, Func_3, Func_5, IAsyncResult, ICloneable, IComparable, IConvertible, IDisposable, IEquatable_1, IFormatProvider, IFormattable, Int32, Int64, IntPtr, ISpanFormattable, MulticastDelegate, Nullable_1, Object as ClrObject, ReadOnlyMemory_1, ReadOnlySpan_1, String as ClrString, TimeSpan, Type, TypeCode, Uri, ValueType, Version, Void } from "../../System/internal/index.js";
-
-// CLROf<T> - Maps ergonomic primitives to their CLR types for generic constraints
-// This utility is used ONLY in generic type arguments to satisfy CLR interface constraints
-// Value positions (parameters, return types) use lowercase primitives for ergonomics
-export type CLROf<T> =
-    T extends sbyte ? System_Internal.SByte :
-    T extends short ? System_Internal.Int16 :
-    T extends int ? System_Internal.Int32 :
-    T extends long ? System_Internal.Int64 :
-    T extends int128 ? System_Internal.Int128 :
-    T extends nint ? System_Internal.IntPtr :
-    T extends byte ? System_Internal.Byte :
-    T extends ushort ? System_Internal.UInt16 :
-    T extends uint ? System_Internal.UInt32 :
-    T extends ulong ? System_Internal.UInt64 :
-    T extends uint128 ? System_Internal.UInt128 :
-    T extends nuint ? System_Internal.UIntPtr :
-    T extends half ? System_Internal.Half :
-    T extends float ? System_Internal.Single :
-    T extends double ? System_Internal.Double :
-    T extends decimal ? System_Internal.Decimal :
-    T extends char ? System_Internal.Char :
-    T extends boolean ? System_Internal.Boolean :
-    T extends string ? System_Internal.String :
-    T; // Identity fallback for non-primitive types
 
 export enum ClientCertificateOption {
     Manual = 0,
@@ -153,7 +128,7 @@ export interface FormUrlEncodedContent$instance extends ByteArrayContent$instanc
 
 
 export const FormUrlEncodedContent: {
-    new(nameValueCollection: IEnumerable_1<KeyValuePair_2<CLROf<string>, CLROf<string>>>): FormUrlEncodedContent$instance;
+    new(nameValueCollection: IEnumerable_1<KeyValuePair_2<System_Internal.String, System_Internal.String>>): FormUrlEncodedContent$instance;
 };
 
 
@@ -193,10 +168,10 @@ export interface HttpClient$instance extends HttpMessageInvoker$instance {
     GetStreamAsync(requestUri: string, cancellationToken: CancellationToken): Task_1<Stream>;
     GetStreamAsync(requestUri: Uri): Task_1<Stream>;
     GetStreamAsync(requestUri: Uri, cancellationToken: CancellationToken): Task_1<Stream>;
-    GetStringAsync(requestUri: string): Task_1<CLROf<string>>;
-    GetStringAsync(requestUri: Uri): Task_1<CLROf<string>>;
-    GetStringAsync(requestUri: string, cancellationToken: CancellationToken): Task_1<CLROf<string>>;
-    GetStringAsync(requestUri: Uri, cancellationToken: CancellationToken): Task_1<CLROf<string>>;
+    GetStringAsync(requestUri: string): Task_1<System_Internal.String>;
+    GetStringAsync(requestUri: Uri): Task_1<System_Internal.String>;
+    GetStringAsync(requestUri: string, cancellationToken: CancellationToken): Task_1<System_Internal.String>;
+    GetStringAsync(requestUri: Uri, cancellationToken: CancellationToken): Task_1<System_Internal.String>;
     PatchAsync(requestUri: string, content: HttpContent): Task_1<HttpResponseMessage>;
     PatchAsync(requestUri: Uri, content: HttpContent): Task_1<HttpResponseMessage>;
     PatchAsync(requestUri: string, content: HttpContent, cancellationToken: CancellationToken): Task_1<HttpResponseMessage>;
@@ -245,9 +220,9 @@ export interface HttpClientHandler$instance extends HttpMessageHandler$instance 
     MaxResponseHeadersLength: int;
     MeterFactory: IMeterFactory;
     PreAuthenticate: boolean;
-    readonly Properties: IDictionary_2<CLROf<string>, unknown>;
+    readonly Properties: IDictionary_2<System_Internal.String, unknown>;
     Proxy: IWebProxy;
-    ServerCertificateCustomValidationCallback: Func_5<HttpRequestMessage, X509Certificate2, X509Chain, SslPolicyErrors, CLROf<boolean>>;
+    ServerCertificateCustomValidationCallback: Func_5<HttpRequestMessage, X509Certificate2, X509Chain, SslPolicyErrors, System_Internal.Boolean>;
     SslProtocols: SslProtocols;
     readonly SupportsAutomaticDecompression: boolean;
     readonly SupportsProxy: boolean;
@@ -261,7 +236,7 @@ export interface HttpClientHandler$instance extends HttpMessageHandler$instance 
 
 export const HttpClientHandler: {
     new(): HttpClientHandler$instance;
-    readonly DangerousAcceptAnyServerCertificateValidator: Func_5<HttpRequestMessage, X509Certificate2, X509Chain, SslPolicyErrors, CLROf<boolean>>;
+    readonly DangerousAcceptAnyServerCertificateValidator: Func_5<HttpRequestMessage, X509Certificate2, X509Chain, SslPolicyErrors, System_Internal.Boolean>;
 };
 
 
@@ -290,8 +265,8 @@ export interface HttpContent$instance {
     ReadAsStream(cancellationToken: CancellationToken): Stream;
     ReadAsStreamAsync(): Task_1<Stream>;
     ReadAsStreamAsync(cancellationToken: CancellationToken): Task_1<Stream>;
-    ReadAsStringAsync(): Task_1<CLROf<string>>;
-    ReadAsStringAsync(cancellationToken: CancellationToken): Task_1<CLROf<string>>;
+    ReadAsStringAsync(): Task_1<System_Internal.String>;
+    ReadAsStringAsync(cancellationToken: CancellationToken): Task_1<System_Internal.String>;
 }
 
 
@@ -388,7 +363,7 @@ export const HttpMethod: {
     readonly Patch: HttpMethod;
     readonly Query: HttpMethod;
     readonly Connect: HttpMethod;
-    Parse(method: ReadOnlySpan_1<CLROf<char>>): HttpMethod;
+    Parse(method: ReadOnlySpan_1<System_Internal.Char>): HttpMethod;
 };
 
 
@@ -448,7 +423,7 @@ export interface HttpRequestMessage$instance {
     readonly Headers: HttpRequestHeaders;
     Method: HttpMethod;
     readonly Options: HttpRequestOptions;
-    readonly Properties: IDictionary_2<CLROf<string>, unknown>;
+    readonly Properties: IDictionary_2<System_Internal.String, unknown>;
     RequestUri: Uri;
     Version: Version;
     VersionPolicy: HttpVersionPolicy;
@@ -475,7 +450,7 @@ export type HttpRequestMessage = HttpRequestMessage$instance & __HttpRequestMess
 
 export interface HttpRequestOptions$instance {
     Set<TValue>(key: HttpRequestOptionsKey_1<TValue>, value: TValue): void;
-    TryGetValue<TValue>(key: HttpRequestOptionsKey_1<TValue>, value: { value: ref<TValue> }): boolean;
+    TryGetValue<TValue>(key: HttpRequestOptionsKey_1<TValue>, value: TValue): boolean;
 }
 
 
@@ -485,11 +460,11 @@ export const HttpRequestOptions: {
 
 
 export interface __HttpRequestOptions$views {
-    As_ICollection_1(): System_Collections_Generic_Internal.ICollection_1$instance<KeyValuePair_2<CLROf<string>, unknown>>;
-    As_IDictionary_2(): System_Collections_Generic_Internal.IDictionary_2$instance<CLROf<string>, unknown>;
-    As_IEnumerable_1(): System_Collections_Generic_Internal.IEnumerable_1$instance<KeyValuePair_2<CLROf<string>, unknown>>;
-    As_IReadOnlyCollection_1(): System_Collections_Generic_Internal.IReadOnlyCollection_1$instance<KeyValuePair_2<CLROf<string>, unknown>>;
-    As_IReadOnlyDictionary_2(): System_Collections_Generic_Internal.IReadOnlyDictionary_2$instance<CLROf<string>, unknown>;
+    As_ICollection_1(): System_Collections_Generic_Internal.ICollection_1$instance<KeyValuePair_2<System_Internal.String, unknown>>;
+    As_IDictionary_2(): System_Collections_Generic_Internal.IDictionary_2$instance<System_Internal.String, unknown>;
+    As_IEnumerable_1(): System_Collections_Generic_Internal.IEnumerable_1$instance<KeyValuePair_2<System_Internal.String, unknown>>;
+    As_IReadOnlyCollection_1(): System_Collections_Generic_Internal.IReadOnlyCollection_1$instance<KeyValuePair_2<System_Internal.String, unknown>>;
+    As_IReadOnlyDictionary_2(): System_Collections_Generic_Internal.IReadOnlyDictionary_2$instance<System_Internal.String, unknown>;
     As_IEnumerable(): System_Collections_Internal.IEnumerable$instance;
 }
 
@@ -595,7 +570,7 @@ export interface ReadOnlyMemoryContent$instance extends HttpContent$instance {
 
 
 export const ReadOnlyMemoryContent: {
-    new(content: ReadOnlyMemory_1<CLROf<byte>>): ReadOnlyMemoryContent$instance;
+    new(content: ReadOnlyMemory_1<System_Internal.Byte>): ReadOnlyMemoryContent$instance;
 };
 
 
@@ -644,7 +619,7 @@ export interface SocketsHttpHandler$instance extends HttpMessageHandler$instance
     PooledConnectionIdleTimeout: TimeSpan;
     PooledConnectionLifetime: TimeSpan;
     PreAuthenticate: boolean;
-    readonly Properties: IDictionary_2<CLROf<string>, unknown>;
+    readonly Properties: IDictionary_2<System_Internal.String, unknown>;
     Proxy: IWebProxy;
     RequestHeaderEncodingSelector: HeaderEncodingSelector_1<HttpRequestMessage>;
     ResponseDrainTimeout: TimeSpan;

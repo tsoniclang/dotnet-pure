@@ -17953,7 +17953,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.Net.Sockets.Socket",
           "declaringAssemblyName": "System.Net.Sockets",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Net.Sockets:System.Net.Sockets.Socket::Send(System.Byte[],System.Int32,System.Int32,System.Net.Sockets.SocketFlags):System.Int32",
@@ -17981,7 +17987,13 @@
           "parameterCount": 5,
           "declaringClrType": "System.Net.Sockets.Socket",
           "declaringAssemblyName": "System.Net.Sockets",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 4,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Net.Sockets:System.Net.Sockets.Socket::Send(System.ReadOnlySpan_1[[System.Byte,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]):System.Int32",
@@ -18023,7 +18035,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.Net.Sockets.Socket",
           "declaringAssemblyName": "System.Net.Sockets",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Net.Sockets:System.Net.Sockets.Socket::SendFile(System.String):System.Void",
@@ -18233,7 +18251,13 @@
           "parameterCount": 5,
           "declaringClrType": "System.Net.Sockets.Socket",
           "declaringAssemblyName": "System.Net.Sockets",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 4,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Net.Sockets:System.Net.Sockets.Socket::Receive(System.Span_1[[System.Byte,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]):System.Int32",
@@ -18275,7 +18299,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.Net.Sockets.Socket",
           "declaringAssemblyName": "System.Net.Sockets",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Net.Sockets:System.Net.Sockets.Socket::Receive(System.Collections.Generic.IList_1[[System.ArraySegment_1[[System.Byte,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]):System.Int32",
@@ -18317,7 +18347,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.Net.Sockets.Socket",
           "declaringAssemblyName": "System.Net.Sockets",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Net.Sockets:System.Net.Sockets.Socket::ReceiveMessageFrom(System.Byte[],System.Int32,System.Int32,System.Net.Sockets.SocketFlags\u0026,System.Net.EndPoint\u0026,System.Net.Sockets.IPPacketInformation\u0026):System.Int32",
@@ -18331,7 +18367,21 @@
           "parameterCount": 6,
           "declaringClrType": "System.Net.Sockets.Socket",
           "declaringAssemblyName": "System.Net.Sockets",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 3,
+              "modifier": "ref"
+            },
+            {
+              "index": 4,
+              "modifier": "ref"
+            },
+            {
+              "index": 5,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Net.Sockets:System.Net.Sockets.Socket::ReceiveMessageFrom(System.Span_1[[System.Byte,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Net.Sockets.SocketFlags\u0026,System.Net.EndPoint\u0026,System.Net.Sockets.IPPacketInformation\u0026):System.Int32",
@@ -18345,7 +18395,21 @@
           "parameterCount": 4,
           "declaringClrType": "System.Net.Sockets.Socket",
           "declaringAssemblyName": "System.Net.Sockets",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "ref"
+            },
+            {
+              "index": 2,
+              "modifier": "ref"
+            },
+            {
+              "index": 3,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Net.Sockets:System.Net.Sockets.Socket::ReceiveFrom(System.Byte[],System.Int32,System.Int32,System.Net.Sockets.SocketFlags,System.Net.EndPoint\u0026):System.Int32",
@@ -18359,7 +18423,13 @@
           "parameterCount": 5,
           "declaringClrType": "System.Net.Sockets.Socket",
           "declaringAssemblyName": "System.Net.Sockets",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 4,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Net.Sockets:System.Net.Sockets.Socket::ReceiveFrom(System.Byte[],System.Int32,System.Net.Sockets.SocketFlags,System.Net.EndPoint\u0026):System.Int32",
@@ -18373,7 +18443,13 @@
           "parameterCount": 4,
           "declaringClrType": "System.Net.Sockets.Socket",
           "declaringAssemblyName": "System.Net.Sockets",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 3,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Net.Sockets:System.Net.Sockets.Socket::ReceiveFrom(System.Byte[],System.Net.Sockets.SocketFlags,System.Net.EndPoint\u0026):System.Int32",
@@ -18387,7 +18463,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.Net.Sockets.Socket",
           "declaringAssemblyName": "System.Net.Sockets",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Net.Sockets:System.Net.Sockets.Socket::ReceiveFrom(System.Byte[],System.Net.EndPoint\u0026):System.Int32",
@@ -18401,7 +18483,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Net.Sockets.Socket",
           "declaringAssemblyName": "System.Net.Sockets",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Net.Sockets:System.Net.Sockets.Socket::ReceiveFrom(System.Span_1[[System.Byte,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Net.EndPoint\u0026):System.Int32",
@@ -18415,7 +18503,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Net.Sockets.Socket",
           "declaringAssemblyName": "System.Net.Sockets",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Net.Sockets:System.Net.Sockets.Socket::ReceiveFrom(System.Span_1[[System.Byte,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Net.Sockets.SocketFlags,System.Net.EndPoint\u0026):System.Int32",
@@ -18429,7 +18523,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.Net.Sockets.Socket",
           "declaringAssemblyName": "System.Net.Sockets",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Net.Sockets:System.Net.Sockets.Socket::ReceiveFrom(System.Span_1[[System.Byte,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Net.Sockets.SocketFlags,System.Net.SocketAddress):System.Int32",
@@ -18807,7 +18907,13 @@
           "parameterCount": 7,
           "declaringClrType": "System.Net.Sockets.Socket",
           "declaringAssemblyName": "System.Net.Sockets",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 4,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Net.Sockets:System.Net.Sockets.Socket::BeginSend(System.Collections.Generic.IList_1[[System.ArraySegment_1[[System.Byte,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Net.Sockets.SocketFlags,System.AsyncCallback,System.Object):System.IAsyncResult",
@@ -18835,7 +18941,13 @@
           "parameterCount": 5,
           "declaringClrType": "System.Net.Sockets.Socket",
           "declaringAssemblyName": "System.Net.Sockets",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Net.Sockets:System.Net.Sockets.Socket::EndSend(System.IAsyncResult):System.Int32",
@@ -18863,7 +18975,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Net.Sockets.Socket",
           "declaringAssemblyName": "System.Net.Sockets",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Net.Sockets:System.Net.Sockets.Socket::BeginSendFile(System.String,System.AsyncCallback,System.Object):System.IAsyncResult",
@@ -18961,7 +19079,13 @@
           "parameterCount": 7,
           "declaringClrType": "System.Net.Sockets.Socket",
           "declaringAssemblyName": "System.Net.Sockets",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 4,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Net.Sockets:System.Net.Sockets.Socket::BeginReceive(System.Collections.Generic.IList_1[[System.ArraySegment_1[[System.Byte,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Net.Sockets.SocketFlags,System.AsyncCallback,System.Object):System.IAsyncResult",
@@ -18989,7 +19113,13 @@
           "parameterCount": 5,
           "declaringClrType": "System.Net.Sockets.Socket",
           "declaringAssemblyName": "System.Net.Sockets",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Net.Sockets:System.Net.Sockets.Socket::EndReceive(System.IAsyncResult):System.Int32",
@@ -19017,7 +19147,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Net.Sockets.Socket",
           "declaringAssemblyName": "System.Net.Sockets",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Net.Sockets:System.Net.Sockets.Socket::BeginReceiveMessageFrom(System.Byte[],System.Int32,System.Int32,System.Net.Sockets.SocketFlags,System.Net.EndPoint\u0026,System.AsyncCallback,System.Object):System.IAsyncResult",
@@ -19031,7 +19167,13 @@
           "parameterCount": 7,
           "declaringClrType": "System.Net.Sockets.Socket",
           "declaringAssemblyName": "System.Net.Sockets",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 4,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Net.Sockets:System.Net.Sockets.Socket::EndReceiveMessageFrom(System.IAsyncResult,System.Net.Sockets.SocketFlags\u0026,System.Net.EndPoint\u0026,System.Net.Sockets.IPPacketInformation\u0026):System.Int32",
@@ -19045,7 +19187,21 @@
           "parameterCount": 4,
           "declaringClrType": "System.Net.Sockets.Socket",
           "declaringAssemblyName": "System.Net.Sockets",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "ref"
+            },
+            {
+              "index": 2,
+              "modifier": "ref"
+            },
+            {
+              "index": 3,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Net.Sockets:System.Net.Sockets.Socket::BeginReceiveFrom(System.Byte[],System.Int32,System.Int32,System.Net.Sockets.SocketFlags,System.Net.EndPoint\u0026,System.AsyncCallback,System.Object):System.IAsyncResult",
@@ -19059,7 +19215,13 @@
           "parameterCount": 7,
           "declaringClrType": "System.Net.Sockets.Socket",
           "declaringAssemblyName": "System.Net.Sockets",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 4,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Net.Sockets:System.Net.Sockets.Socket::EndReceiveFrom(System.IAsyncResult,System.Net.EndPoint\u0026):System.Int32",
@@ -19073,7 +19235,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Net.Sockets.Socket",
           "declaringAssemblyName": "System.Net.Sockets",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Net.Sockets:System.Net.Sockets.Socket::BeginAccept(System.AsyncCallback,System.Object):System.IAsyncResult",
@@ -19143,7 +19311,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Net.Sockets.Socket",
           "declaringAssemblyName": "System.Net.Sockets",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Net.Sockets:System.Net.Sockets.Socket::EndAccept(System.Byte[]\u0026,System.Int32\u0026,System.IAsyncResult):System.Net.Sockets.Socket",
@@ -19157,7 +19331,17 @@
           "parameterCount": 3,
           "declaringClrType": "System.Net.Sockets.Socket",
           "declaringAssemblyName": "System.Net.Sockets",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            },
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Net.Sockets:System.Net.Sockets.Socket::Shutdown(System.Net.Sockets.SocketShutdown):System.Void",
@@ -25071,7 +25255,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Net.Sockets.UdpClient",
           "declaringAssemblyName": "System.Net.Sockets",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Net.Sockets:System.Net.Sockets.UdpClient::JoinMulticastGroup(System.Net.IPAddress):System.Void",
@@ -25337,7 +25527,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Net.Sockets.UdpClient",
           "declaringAssemblyName": "System.Net.Sockets",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Net.Sockets:System.Net.Sockets.UdpClient::Send(System.Byte[],System.Int32,System.Net.IPEndPoint):System.Int32",

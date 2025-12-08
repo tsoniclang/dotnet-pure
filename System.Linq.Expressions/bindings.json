@@ -25889,7 +25889,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Linq.Expressions.Expression",
           "declaringAssemblyName": "System.Linq.Expressions",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Linq.Expressions:System.Linq.Expressions.Expression::GetActionType(System.Type[]):System.Type",
@@ -25917,7 +25923,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Linq.Expressions.Expression",
           "declaringAssemblyName": "System.Linq.Expressions",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Linq.Expressions:System.Linq.Expressions.Expression::GetDelegateType(System.Type[]):System.Type",

@@ -6,7 +6,7 @@
 import type { sbyte, byte, short, ushort, int, uint, long, ulong, int128, uint128, half, float, double, decimal, nint, nuint, char } from '@tsonic/types';
 
 // Import support types from @tsonic/types
-import type { ptr, ref } from "@tsonic/types";
+import type { ptr } from "@tsonic/types";
 
 // Import types from other namespaces
 import type { CallType, CompareMethod } from "../../Microsoft.VisualBasic/internal/index.js";
@@ -17,31 +17,6 @@ import * as System_Runtime_Serialization_Internal from "../../System.Runtime.Ser
 import type { ISerializable, SerializationInfo, StreamingContext } from "../../System.Runtime.Serialization/internal/index.js";
 import * as System_Internal from "../../System/internal/index.js";
 import type { Array as ClrArray, Attribute, Boolean as ClrBoolean, Byte, Char, DateTime, Decimal, Double, Exception, Int16, Int32, Int64, Object as ClrObject, SByte, Single, String as ClrString, Type, UInt16, UInt32, UInt64, Void } from "../../System/internal/index.js";
-
-// CLROf<T> - Maps ergonomic primitives to their CLR types for generic constraints
-// This utility is used ONLY in generic type arguments to satisfy CLR interface constraints
-// Value positions (parameters, return types) use lowercase primitives for ergonomics
-export type CLROf<T> =
-    T extends sbyte ? System_Internal.SByte :
-    T extends short ? System_Internal.Int16 :
-    T extends int ? System_Internal.Int32 :
-    T extends long ? System_Internal.Int64 :
-    T extends int128 ? System_Internal.Int128 :
-    T extends nint ? System_Internal.IntPtr :
-    T extends byte ? System_Internal.Byte :
-    T extends ushort ? System_Internal.UInt16 :
-    T extends uint ? System_Internal.UInt32 :
-    T extends ulong ? System_Internal.UInt64 :
-    T extends uint128 ? System_Internal.UInt128 :
-    T extends nuint ? System_Internal.UIntPtr :
-    T extends half ? System_Internal.Half :
-    T extends float ? System_Internal.Single :
-    T extends double ? System_Internal.Double :
-    T extends decimal ? System_Internal.Decimal :
-    T extends char ? System_Internal.Char :
-    T extends boolean ? System_Internal.Boolean :
-    T extends string ? System_Internal.String :
-    T; // Identity fallback for non-primitive types
 
 export interface BooleanType$instance {
 }
@@ -339,9 +314,9 @@ export interface ObjectFlowControl_ForLoopControl$instance {
 
 export const ObjectFlowControl_ForLoopControl: {
     new(): ObjectFlowControl_ForLoopControl$instance;
-    ForLoopInitObj(Counter: unknown, Start: unknown, Limit: unknown, StepValue: unknown, LoopForResult: { value: ref<unknown> }, CounterResult: { value: ref<unknown> }): boolean;
+    ForLoopInitObj(Counter: unknown, Start: unknown, Limit: unknown, StepValue: unknown, LoopForResult: unknown, CounterResult: unknown): boolean;
     ForNextCheckDec(count: decimal, limit: decimal, StepValue: decimal): boolean;
-    ForNextCheckObj(Counter: unknown, LoopObj: unknown, CounterResult: { value: ref<unknown> }): boolean;
+    ForNextCheckObj(Counter: unknown, LoopObj: unknown, CounterResult: unknown): boolean;
     ForNextCheckR4(count: float, limit: float, StepValue: float): boolean;
     ForNextCheckR8(count: double, limit: double, StepValue: double): boolean;
 };
@@ -530,7 +505,7 @@ export const StringType: {
     FromShort(Value: short): string;
     FromSingle(Value: float, NumberFormat: NumberFormatInfo): string;
     FromSingle(Value: float): string;
-    MidStmtStr(sDest: { value: ref<string> }, StartPosition: int, MaxInsertLength: int, sInsert: string): void;
+    MidStmtStr(sDest: string, StartPosition: int, MaxInsertLength: int, sInsert: string): void;
     StrCmp(sLeft: string, sRight: string, TextCompare: boolean): int;
     StrLike(Source: string, Pattern: string, CompareOption: CompareMethod): boolean;
     StrLikeBinary(Source: string, Pattern: string): boolean;

@@ -3216,7 +3216,13 @@
           "isSealed": false,
           "arity": 1,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Net.Http:System.Net.Http.HttpRequestOptions::Set(HttpRequestOptionsKey_1,TValue):System.Void",
@@ -3283,7 +3289,13 @@
           "arity": 0,
           "parameterCount": 2,
           "sourceInterface": "System.Collections.Generic.IDictionary\u00602",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Collections.Generic.ICollection\u00601::Add(T):System.Void",
@@ -3419,7 +3431,13 @@
           "arity": 0,
           "parameterCount": 2,
           "sourceInterface": "System.Collections.Generic.IReadOnlyDictionary\u00602",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         }
       ],
       "properties": [

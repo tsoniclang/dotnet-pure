@@ -658,7 +658,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Collections.Concurrent.IProducerConsumerCollection\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Collections.Concurrent.IProducerConsumerCollection\u00601::ToArray():T[]",
@@ -916,7 +922,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Collections.Concurrent.ConcurrentDictionary\u00602\u002BAlternateLookup\u00601",
           "declaringAssemblyName": "System.Collections.Concurrent",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Collections.Concurrent:System.Collections.Concurrent.ConcurrentDictionary\u00602\u002BAlternateLookup\u00601::TryGetValue(TAlternateKey,TKey\u0026,TValue\u0026):System.Boolean",
@@ -930,7 +942,17 @@
           "parameterCount": 3,
           "declaringClrType": "System.Collections.Concurrent.ConcurrentDictionary\u00602\u002BAlternateLookup\u00601",
           "declaringAssemblyName": "System.Collections.Concurrent",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            },
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Collections.Concurrent:System.Collections.Concurrent.ConcurrentDictionary\u00602\u002BAlternateLookup\u00601::TryRemove(TAlternateKey,TValue\u0026):System.Boolean",
@@ -944,7 +966,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Collections.Concurrent.ConcurrentDictionary\u00602\u002BAlternateLookup\u00601",
           "declaringAssemblyName": "System.Collections.Concurrent",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Collections.Concurrent:System.Collections.Concurrent.ConcurrentDictionary\u00602\u002BAlternateLookup\u00601::TryRemove(TAlternateKey,TKey\u0026,TValue\u0026):System.Boolean",
@@ -958,7 +986,17 @@
           "parameterCount": 3,
           "declaringClrType": "System.Collections.Concurrent.ConcurrentDictionary\u00602\u002BAlternateLookup\u00601",
           "declaringAssemblyName": "System.Collections.Concurrent",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            },
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         }
       ],
       "properties": [
@@ -1270,7 +1308,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Collections.Concurrent.BlockingCollection\u00601",
           "declaringAssemblyName": "System.Collections.Concurrent",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Collections.Concurrent:System.Collections.Concurrent.BlockingCollection\u00601::TryTake(T\u0026,System.TimeSpan):System.Boolean",
@@ -1284,7 +1328,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Collections.Concurrent.BlockingCollection\u00601",
           "declaringAssemblyName": "System.Collections.Concurrent",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Collections.Concurrent:System.Collections.Concurrent.BlockingCollection\u00601::TryTake(T\u0026,System.Int32):System.Boolean",
@@ -1298,7 +1348,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Collections.Concurrent.BlockingCollection\u00601",
           "declaringAssemblyName": "System.Collections.Concurrent",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Collections.Concurrent:System.Collections.Concurrent.BlockingCollection\u00601::TryTake(T\u0026,System.Int32,System.Threading.CancellationToken):System.Boolean",
@@ -1312,7 +1368,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.Collections.Concurrent.BlockingCollection\u00601",
           "declaringAssemblyName": "System.Collections.Concurrent",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Collections.Concurrent:System.Collections.Concurrent.BlockingCollection\u00601::AddToAny(BlockingCollection_1[],T):System.Int32",
@@ -1410,7 +1472,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Collections.Concurrent.BlockingCollection\u00601",
           "declaringAssemblyName": "System.Collections.Concurrent",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Collections.Concurrent:System.Collections.Concurrent.BlockingCollection\u00601::TakeFromAny(BlockingCollection_1[],T\u0026,System.Threading.CancellationToken):System.Int32",
@@ -1424,7 +1492,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.Collections.Concurrent.BlockingCollection\u00601",
           "declaringAssemblyName": "System.Collections.Concurrent",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Collections.Concurrent:System.Collections.Concurrent.BlockingCollection\u00601::TryTakeFromAny(BlockingCollection_1[],T\u0026):System.Int32",
@@ -1438,7 +1512,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Collections.Concurrent.BlockingCollection\u00601",
           "declaringAssemblyName": "System.Collections.Concurrent",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Collections.Concurrent:System.Collections.Concurrent.BlockingCollection\u00601::TryTakeFromAny(BlockingCollection_1[],T\u0026,System.TimeSpan):System.Int32",
@@ -1452,7 +1532,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.Collections.Concurrent.BlockingCollection\u00601",
           "declaringAssemblyName": "System.Collections.Concurrent",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Collections.Concurrent:System.Collections.Concurrent.BlockingCollection\u00601::TryTakeFromAny(BlockingCollection_1[],T\u0026,System.Int32):System.Int32",
@@ -1466,7 +1552,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.Collections.Concurrent.BlockingCollection\u00601",
           "declaringAssemblyName": "System.Collections.Concurrent",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Collections.Concurrent:System.Collections.Concurrent.BlockingCollection\u00601::TryTakeFromAny(BlockingCollection_1[],T\u0026,System.Int32,System.Threading.CancellationToken):System.Int32",
@@ -1480,7 +1572,13 @@
           "parameterCount": 4,
           "declaringClrType": "System.Collections.Concurrent.BlockingCollection\u00601",
           "declaringAssemblyName": "System.Collections.Concurrent",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Collections.Concurrent:System.Collections.Concurrent.BlockingCollection\u00601::CompleteAdding():System.Void",
@@ -2337,7 +2435,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Collections.Concurrent.ConcurrentBag\u00601",
           "declaringAssemblyName": "System.Collections.Concurrent",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Collections.Concurrent:System.Collections.Concurrent.ConcurrentBag\u00601::TryPeek(T\u0026):System.Boolean",
@@ -2351,7 +2455,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Collections.Concurrent.ConcurrentBag\u00601",
           "declaringAssemblyName": "System.Collections.Concurrent",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Collections.Concurrent:System.Collections.Concurrent.ConcurrentBag\u00601::CopyTo(T[],System.Int32):System.Void",
@@ -2477,7 +2587,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Collections.Concurrent.IProducerConsumerCollection\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Collections.Concurrent.IProducerConsumerCollection\u00601::ToArray():T[]",
@@ -2936,7 +3052,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Collections.Concurrent.ConcurrentDictionary\u00602",
           "declaringAssemblyName": "System.Collections.Concurrent",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Collections.Concurrent:System.Collections.Concurrent.ConcurrentDictionary\u00602::TryAdd(TKey,TValue):System.Boolean",
@@ -2978,7 +3100,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Collections.Concurrent.ConcurrentDictionary\u00602",
           "declaringAssemblyName": "System.Collections.Concurrent",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Collections.Concurrent:System.Collections.Concurrent.ConcurrentDictionary\u00602::TryRemove(KeyValuePair_2):System.Boolean",
@@ -3006,7 +3134,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Collections.Concurrent.ConcurrentDictionary\u00602",
           "declaringAssemblyName": "System.Collections.Concurrent",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Collections.Concurrent:System.Collections.Concurrent.ConcurrentDictionary\u00602::TryUpdate(TKey,TValue,TValue):System.Boolean",
@@ -3342,7 +3476,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Collections.Generic.IDictionary\u00602",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Collections.Generic.ICollection\u00601::Clear():System.Void",
@@ -3398,7 +3538,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Collections.Generic.IReadOnlyDictionary\u00602",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         }
       ],
       "properties": [
@@ -4512,7 +4658,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Collections.Concurrent.ConcurrentQueue\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Collections.Concurrent.ConcurrentQueue\u00601::TryPeek(T\u0026):System.Boolean",
@@ -4526,7 +4678,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Collections.Concurrent.ConcurrentQueue\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Collections.Concurrent.ConcurrentQueue\u00601::Clear():System.Void",
@@ -4568,7 +4726,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Collections.Concurrent.IProducerConsumerCollection\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Collections.IEnumerable::GetEnumerator():System.Collections.IEnumerator",
@@ -5125,7 +5289,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Collections.Concurrent.ConcurrentStack\u00601",
           "declaringAssemblyName": "System.Collections.Concurrent",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Collections.Concurrent:System.Collections.Concurrent.ConcurrentStack\u00601::TryPop(T\u0026):System.Boolean",
@@ -5139,7 +5309,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Collections.Concurrent.ConcurrentStack\u00601",
           "declaringAssemblyName": "System.Collections.Concurrent",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Collections.Concurrent:System.Collections.Concurrent.ConcurrentStack\u00601::TryPopRange(T[]):System.Int32",
@@ -5223,7 +5399,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Collections.Concurrent.IProducerConsumerCollection\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Collections.IEnumerable::GetEnumerator():System.Collections.IEnumerator",

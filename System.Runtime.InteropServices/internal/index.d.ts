@@ -6,7 +6,7 @@
 import type { sbyte, byte, short, ushort, int, uint, long, ulong, int128, uint128, half, float, double, decimal, nint, nuint, char } from '@tsonic/types';
 
 // Import support types from @tsonic/types
-import type { ptr, ref } from "@tsonic/types";
+import type { ptr } from "@tsonic/types";
 
 // Import types from other namespaces
 import * as Microsoft_Win32_SafeHandles_Internal from "../../Microsoft.Win32.SafeHandles/internal/index.js";
@@ -30,31 +30,6 @@ import type { SecureString } from "../../System.Security/internal/index.js";
 import type { JsonElement, JsonProperty } from "../../System.Text.Json/internal/index.js";
 import * as System_Internal from "../../System/internal/index.js";
 import type { Action_1, Array as ClrArray, ArraySegment_1, AsyncCallback, Attribute, Boolean as ClrBoolean, Byte, Char, Decimal, Delegate, Double, Enum, Exception, Guid, IAsyncResult, ICloneable, IComparable, IComparable_1, IConvertible, IDisposable, IEquatable_1, IFormatProvider, IFormattable, Int16, Int32, Int64, IntPtr, IParsable_1, ISpanFormattable, ISpanParsable_1, IUtf8SpanFormattable, IUtf8SpanParsable_1, MarshalByRefObject, Memory_1, MidpointRounding, MulticastDelegate, Nullable_1, Object as ClrObject, ReadOnlyMemory_1, ReadOnlySpan_1, RuntimeTypeHandle, Single, Span_1, String as ClrString, SystemException, Type, TypeCode, UInt32, UInt64, UIntPtr, ValueTuple_2, ValueType, Void } from "../../System/internal/index.js";
-
-// CLROf<T> - Maps ergonomic primitives to their CLR types for generic constraints
-// This utility is used ONLY in generic type arguments to satisfy CLR interface constraints
-// Value positions (parameters, return types) use lowercase primitives for ergonomics
-export type CLROf<T> =
-    T extends sbyte ? System_Internal.SByte :
-    T extends short ? System_Internal.Int16 :
-    T extends int ? System_Internal.Int32 :
-    T extends long ? System_Internal.Int64 :
-    T extends int128 ? System_Internal.Int128 :
-    T extends nint ? System_Internal.IntPtr :
-    T extends byte ? System_Internal.Byte :
-    T extends ushort ? System_Internal.UInt16 :
-    T extends uint ? System_Internal.UInt32 :
-    T extends ulong ? System_Internal.UInt64 :
-    T extends uint128 ? System_Internal.UInt128 :
-    T extends nuint ? System_Internal.UIntPtr :
-    T extends half ? System_Internal.Half :
-    T extends float ? System_Internal.Single :
-    T extends double ? System_Internal.Double :
-    T extends decimal ? System_Internal.Decimal :
-    T extends char ? System_Internal.Char :
-    T extends boolean ? System_Internal.Boolean :
-    T extends string ? System_Internal.String :
-    T; // Identity fallback for non-primitive types
 
 export enum Architecture {
     X86 = 0,
@@ -407,7 +382,7 @@ export interface ICustomMarshaler$instance {
 export type ICustomMarshaler = ICustomMarshaler$instance;
 
 export interface ICustomQueryInterface$instance {
-    GetInterface(iid: { value: ref<Guid> }, ppv: { value: ref<nint> }): CustomQueryInterfaceResult;
+    GetInterface(iid: Guid, ppv: nint): CustomQueryInterfaceResult;
 }
 
 
@@ -595,7 +570,7 @@ export const HandleRef: {
 
 export type HandleRef = HandleRef$instance;
 
-export interface NFloat$instance extends IBitwiseOperators_3<NFloat, NFloat, NFloat>, IComparisonOperators_3<NFloat, NFloat, CLROf<boolean>>, IEqualityOperators_3<NFloat, NFloat, CLROf<boolean>>, IModulusOperators_3<NFloat, NFloat, NFloat>, IAdditionOperators_3<NFloat, NFloat, NFloat>, IDecrementOperators_1<NFloat>, IDivisionOperators_3<NFloat, NFloat, NFloat>, IIncrementOperators_1<NFloat>, IMultiplyOperators_3<NFloat, NFloat, NFloat>, ISubtractionOperators_3<NFloat, NFloat, NFloat>, IUnaryPlusOperators_2<NFloat, NFloat>, IUnaryNegationOperators_2<NFloat, NFloat> {
+export interface NFloat$instance extends IBitwiseOperators_3<NFloat, NFloat, NFloat>, IComparisonOperators_3<NFloat, NFloat, System_Internal.Boolean>, IEqualityOperators_3<NFloat, NFloat, System_Internal.Boolean>, IModulusOperators_3<NFloat, NFloat, NFloat>, IAdditionOperators_3<NFloat, NFloat, NFloat>, IDecrementOperators_1<NFloat>, IDivisionOperators_3<NFloat, NFloat, NFloat>, IIncrementOperators_1<NFloat>, IMultiplyOperators_3<NFloat, NFloat, NFloat>, ISubtractionOperators_3<NFloat, NFloat, NFloat>, IUnaryPlusOperators_2<NFloat, NFloat>, IUnaryNegationOperators_2<NFloat, NFloat> {
     readonly Value: double;
     CompareTo(obj: unknown): int;
     CompareTo(other: NFloat): int;
@@ -606,8 +581,8 @@ export interface NFloat$instance extends IBitwiseOperators_3<NFloat, NFloat, NFl
     ToString(format: string): string;
     ToString(provider: IFormatProvider): string;
     ToString(format: string, provider: IFormatProvider): string;
-    TryFormat(destination: Span_1<CLROf<char>>, charsWritten: { value: ref<int> }, format?: ReadOnlySpan_1<CLROf<char>>, provider?: IFormatProvider): boolean;
-    TryFormat(utf8Destination: Span_1<CLROf<byte>>, bytesWritten: { value: ref<int> }, format?: ReadOnlySpan_1<CLROf<char>>, provider?: IFormatProvider): boolean;
+    TryFormat(destination: Span_1<System_Internal.Char>, charsWritten: int, format?: ReadOnlySpan_1<System_Internal.Char>, provider?: IFormatProvider): boolean;
+    TryFormat(utf8Destination: Span_1<System_Internal.Byte>, bytesWritten: int, format?: ReadOnlySpan_1<System_Internal.Char>, provider?: IFormatProvider): boolean;
 }
 
 
@@ -697,10 +672,10 @@ export const NFloat: {
     MinNative(x: NFloat, y: NFloat): NFloat;
     MinNumber(x: NFloat, y: NFloat): NFloat;
     MultiplyAddEstimate(left: NFloat, right: NFloat, addend: NFloat): NFloat;
-    Parse(utf8Text: ReadOnlySpan_1<CLROf<byte>>, style?: NumberStyles, provider?: IFormatProvider): NFloat;
-    Parse(utf8Text: ReadOnlySpan_1<CLROf<byte>>, provider: IFormatProvider): NFloat;
-    Parse(s: ReadOnlySpan_1<CLROf<char>>, style?: NumberStyles, provider?: IFormatProvider): NFloat;
-    Parse(s: ReadOnlySpan_1<CLROf<char>>, provider: IFormatProvider): NFloat;
+    Parse(utf8Text: ReadOnlySpan_1<System_Internal.Byte>, style?: NumberStyles, provider?: IFormatProvider): NFloat;
+    Parse(utf8Text: ReadOnlySpan_1<System_Internal.Byte>, provider: IFormatProvider): NFloat;
+    Parse(s: ReadOnlySpan_1<System_Internal.Char>, style?: NumberStyles, provider?: IFormatProvider): NFloat;
+    Parse(s: ReadOnlySpan_1<System_Internal.Char>, provider: IFormatProvider): NFloat;
     Parse(s: string, style: NumberStyles, provider: IFormatProvider): NFloat;
     Parse(s: string, style: NumberStyles): NFloat;
     Parse(s: string, provider: IFormatProvider): NFloat;
@@ -726,15 +701,15 @@ export const NFloat: {
     Tanh(x: NFloat): NFloat;
     TanPi(x: NFloat): NFloat;
     Truncate(x: NFloat): NFloat;
-    TryParse(utf8Text: ReadOnlySpan_1<CLROf<byte>>, style: NumberStyles, provider: IFormatProvider, result: { value: ref<NFloat> }): boolean;
-    TryParse(utf8Text: ReadOnlySpan_1<CLROf<byte>>, provider: IFormatProvider, result: { value: ref<NFloat> }): boolean;
-    TryParse(utf8Text: ReadOnlySpan_1<CLROf<byte>>, result: { value: ref<NFloat> }): boolean;
-    TryParse(s: ReadOnlySpan_1<CLROf<char>>, style: NumberStyles, provider: IFormatProvider, result: { value: ref<NFloat> }): boolean;
-    TryParse(s: ReadOnlySpan_1<CLROf<char>>, provider: IFormatProvider, result: { value: ref<NFloat> }): boolean;
-    TryParse(s: ReadOnlySpan_1<CLROf<char>>, result: { value: ref<NFloat> }): boolean;
-    TryParse(s: string, style: NumberStyles, provider: IFormatProvider, result: { value: ref<NFloat> }): boolean;
-    TryParse(s: string, provider: IFormatProvider, result: { value: ref<NFloat> }): boolean;
-    TryParse(s: string, result: { value: ref<NFloat> }): boolean;
+    TryParse(utf8Text: ReadOnlySpan_1<System_Internal.Byte>, style: NumberStyles, provider: IFormatProvider, result: NFloat): boolean;
+    TryParse(utf8Text: ReadOnlySpan_1<System_Internal.Byte>, provider: IFormatProvider, result: NFloat): boolean;
+    TryParse(utf8Text: ReadOnlySpan_1<System_Internal.Byte>, result: NFloat): boolean;
+    TryParse(s: ReadOnlySpan_1<System_Internal.Char>, style: NumberStyles, provider: IFormatProvider, result: NFloat): boolean;
+    TryParse(s: ReadOnlySpan_1<System_Internal.Char>, provider: IFormatProvider, result: NFloat): boolean;
+    TryParse(s: ReadOnlySpan_1<System_Internal.Char>, result: NFloat): boolean;
+    TryParse(s: string, style: NumberStyles, provider: IFormatProvider, result: NFloat): boolean;
+    TryParse(s: string, provider: IFormatProvider, result: NFloat): boolean;
+    TryParse(s: string, result: NFloat): boolean;
 };
 
 
@@ -759,14 +734,14 @@ export interface __NFloat$views {
     equals(other: NFloat): boolean;
     compareTo(obj: unknown): int;
     toString(format: string, formatProvider: import("../../System/internal/index").IFormatProvider): string;
-    tryFormat(destination: import("../../System/internal/index").Span_1<import("../../System/internal/index").CLROf<char>>, charsWritten: { value: ref<int> }, format: import("../../System/internal/index").ReadOnlySpan_1<import("../../System/internal/index").CLROf<char>>, provider: import("../../System/internal/index").IFormatProvider): boolean;
-    tryFormat(utf8Destination: import("../../System/internal/index").Span_1<import("../../System/internal/index").CLROf<byte>>, bytesWritten: { value: ref<int> }, format: import("../../System/internal/index").ReadOnlySpan_1<import("../../System/internal/index").CLROf<char>>, provider: import("../../System/internal/index").IFormatProvider): boolean;
+    tryFormat(destination: import("../../System/internal/index").Span_1<import("../../System/internal/index").Char>, charsWritten: int, format: import("../../System/internal/index").ReadOnlySpan_1<import("../../System/internal/index").Char>, provider: import("../../System/internal/index").IFormatProvider): boolean;
+    tryFormat(utf8Destination: import("../../System/internal/index").Span_1<import("../../System/internal/index").Byte>, bytesWritten: int, format: import("../../System/internal/index").ReadOnlySpan_1<import("../../System/internal/index").Char>, provider: import("../../System/internal/index").IFormatProvider): boolean;
     getExponentByteCount(): int;
     getExponentShortestBitLength(): int;
-    tryWriteExponentBigEndian(destination: import("../../System/internal/index").Span_1<import("../../System/internal/index").CLROf<byte>>, bytesWritten: { value: ref<int> }): boolean;
+    tryWriteExponentBigEndian(destination: import("../../System/internal/index").Span_1<import("../../System/internal/index").Byte>, bytesWritten: int): boolean;
     writeExponentBigEndian(destination: byte[], startIndex: int): int;
     writeExponentBigEndian(destination: byte[]): int;
-    writeExponentBigEndian(destination: import("../../System/internal/index").Span_1<import("../../System/internal/index").CLROf<byte>>): int;
+    writeExponentBigEndian(destination: import("../../System/internal/index").Span_1<import("../../System/internal/index").Byte>): int;
 }
 
 export interface NFloat$instance extends System_Numerics_Internal.IMinMaxValue_1$instance<NFloat> {}
@@ -840,7 +815,7 @@ export interface WeakGCHandle_1$instance<T> {
     Equals(other: WeakGCHandle_1<T>): boolean;
     GetHashCode(): int;
     SetTarget(target: T): void;
-    TryGetTarget(target: { value: ref<T> }): boolean;
+    TryGetTarget(target: T): boolean;
 }
 
 
@@ -1130,11 +1105,11 @@ export interface ComWrappers$instance {
 
 
 export const ComWrappers: {
-    GetIUnknownImpl(fpQueryInterface: { value: ref<nint> }, fpAddRef: { value: ref<nint> }, fpRelease: { value: ref<nint> }): void;
+    GetIUnknownImpl(fpQueryInterface: nint, fpAddRef: nint, fpRelease: nint): void;
     RegisterForMarshalling(instance: ComWrappers): void;
     RegisterForTrackerSupport(instance: ComWrappers): void;
-    TryGetComInstance(obj: unknown, unknown_: { value: ref<nint> }): boolean;
-    TryGetObject(unknown_: nint, obj: { value: ref<unknown> }): boolean;
+    TryGetComInstance(obj: unknown, unknown_: nint): boolean;
+    TryGetObject(unknown_: nint, obj: unknown): boolean;
 };
 
 
@@ -1631,7 +1606,7 @@ export type SafeArrayTypeMismatchException = SafeArrayTypeMismatchException$inst
 
 export interface SafeBuffer$instance extends SafeHandleZeroOrMinusOneIsInvalid {
     readonly ByteLength: ulong;
-    AcquirePointer(pointer: { value: ref<ptr<byte>> }): void;
+    AcquirePointer(pointer: ptr<byte>): void;
     Dispose(): void;
     Initialize(numBytes: ulong): void;
     Initialize(numElements: uint, sizeOfEachElement: uint): void;
@@ -1661,7 +1636,7 @@ export interface SafeHandle$instance extends CriticalFinalizerObject {
     readonly IsClosed: boolean;
     readonly IsInvalid: boolean;
     Close(): void;
-    DangerousAddRef(success: { value: ref<boolean> }): void;
+    DangerousAddRef(success: boolean): void;
     DangerousGetHandle(): nint;
     DangerousRelease(): void;
     Dispose(): void;
@@ -1929,12 +1904,12 @@ export const WasmImportLinkageAttribute: {
 export type WasmImportLinkageAttribute = WasmImportLinkageAttribute$instance;
 
 export abstract class CollectionsMarshal$instance {
-    static AsBytes(array: BitArray): Span_1<CLROf<byte>>;
+    static AsBytes(array: BitArray): Span_1<System_Internal.Byte>;
     static AsSpan<T>(list: List_1<T>): Span_1<T>;
-    static GetValueRefOrAddDefault<TKey, TValue, TAlternateKey>(dictionary: Dictionary_2_AlternateLookup_1<TKey, TValue, TAlternateKey>, key: TAlternateKey, exists: { value: ref<boolean> }): ref<TValue>;
-    static GetValueRefOrAddDefault<TKey, TValue>(dictionary: Dictionary_2<TKey, TValue>, key: TKey, exists: { value: ref<boolean> }): ref<TValue>;
-    static GetValueRefOrNullRef<TKey, TValue, TAlternateKey>(dictionary: Dictionary_2_AlternateLookup_1<TKey, TValue, TAlternateKey>, key: TAlternateKey): ref<TValue>;
-    static GetValueRefOrNullRef<TKey, TValue>(dictionary: Dictionary_2<TKey, TValue>, key: TKey): ref<TValue>;
+    static GetValueRefOrAddDefault<TKey, TValue, TAlternateKey>(dictionary: Dictionary_2_AlternateLookup_1<TKey, TValue, TAlternateKey>, key: TAlternateKey, exists: boolean): TValue;
+    static GetValueRefOrAddDefault<TKey, TValue>(dictionary: Dictionary_2<TKey, TValue>, key: TKey, exists: boolean): TValue;
+    static GetValueRefOrNullRef<TKey, TValue, TAlternateKey>(dictionary: Dictionary_2_AlternateLookup_1<TKey, TValue, TAlternateKey>, key: TAlternateKey): TValue;
+    static GetValueRefOrNullRef<TKey, TValue>(dictionary: Dictionary_2<TKey, TValue>, key: TKey): TValue;
     static SetCount<T>(list: List_1<T>, count: int): void;
 }
 
@@ -1951,7 +1926,7 @@ export type ComEventsHelper = ComEventsHelper$instance;
 
 export abstract class GCHandleExtensions$instance {
     static GetAddressOfArrayData<T>(handle: PinnedGCHandle_1<T[]>): ptr<T>;
-    static GetAddressOfStringData(handle: PinnedGCHandle_1<CLROf<string>>): ptr<char>;
+    static GetAddressOfStringData(handle: PinnedGCHandle_1<System_Internal.String>): ptr<char>;
 }
 
 
@@ -1967,8 +1942,8 @@ export abstract class ImmutableCollectionsMarshal$instance {
 export type ImmutableCollectionsMarshal = ImmutableCollectionsMarshal$instance;
 
 export abstract class JsonMarshal$instance {
-    static GetRawUtf8PropertyName(property: JsonProperty): ReadOnlySpan_1<CLROf<byte>>;
-    static GetRawUtf8Value(element: JsonElement): ReadOnlySpan_1<CLROf<byte>>;
+    static GetRawUtf8PropertyName(property: JsonProperty): ReadOnlySpan_1<System_Internal.Byte>;
+    static GetRawUtf8Value(element: JsonElement): ReadOnlySpan_1<System_Internal.Byte>;
 }
 
 
@@ -2021,7 +1996,7 @@ export abstract class Marshal$instance {
     static GetDelegateForFunctionPointer<TDelegate>(ptr: nint): TDelegate;
     static GetEndComSlot(t: Type): int;
     static GetExceptionCode(): int;
-    static GetExceptionForHR(errorCode: int, iid: { value: ref<Guid> }, pUnk: nint): Exception;
+    static GetExceptionForHR(errorCode: int, iid: Guid, pUnk: nint): Exception;
     static GetExceptionForHR(errorCode: int, errorInfo: nint): Exception;
     static GetExceptionForHR(errorCode: int): Exception;
     static GetExceptionPointers(): nint;
@@ -2069,7 +2044,7 @@ export abstract class Marshal$instance {
     static PtrToStructure(ptr: nint, structureType: Type): unknown;
     static PtrToStructure<T>(ptr: nint, structure: T): void;
     static PtrToStructure<T>(ptr: nint): T;
-    static QueryInterface(pUnk: nint, iid: { value: ref<Guid> }, ppv: { value: ref<nint> }): int;
+    static QueryInterface(pUnk: nint, iid: Guid, ppv: nint): int;
     static ReadByte(ptr: nint, ofs: int): byte;
     static ReadByte(ptr: nint): byte;
     static ReadByte(ptr: unknown, ofs: int): byte;
@@ -2111,7 +2086,7 @@ export abstract class Marshal$instance {
     static StringToHGlobalUni(s: string): nint;
     static StructureToPtr(structure: unknown, ptr: nint, fDeleteOld: boolean): void;
     static StructureToPtr<T>(structure: T, ptr: nint, fDeleteOld: boolean): void;
-    static ThrowExceptionForHR(errorCode: int, iid: { value: ref<Guid> }, pUnk: nint): void;
+    static ThrowExceptionForHR(errorCode: int, iid: Guid, pUnk: nint): void;
     static ThrowExceptionForHR(errorCode: int, errorInfo: nint): void;
     static ThrowExceptionForHR(errorCode: int): void;
     static UnsafeAddrOfPinnedArrayElement(arr: ClrArray, index: int): nint;
@@ -2123,7 +2098,7 @@ export abstract class Marshal$instance {
     static WriteInt16(ptr: nint, val: short): void;
     static WriteInt16(ptr: nint, ofs: int, val: char): void;
     static WriteInt16(ptr: nint, ofs: int, val: short): void;
-    static WriteInt16(ptr: { value: unknown }, ofs: int, val: char): void;
+    static WriteInt16(ptr: unknown, ofs: int, val: char): void;
     static WriteInt16(ptr: unknown, ofs: int, val: short): void;
     static WriteInt32(ptr: nint, ofs: int, val: int): void;
     static WriteInt32(ptr: nint, val: int): void;
@@ -2146,31 +2121,31 @@ export abstract class Marshal$instance {
 export type Marshal = Marshal$instance;
 
 export abstract class MemoryMarshal$instance {
-    static AsBytes<T extends unknown>(span: ReadOnlySpan_1<T>): ReadOnlySpan_1<CLROf<byte>>;
-    static AsBytes<T extends unknown>(span: Span_1<T>): Span_1<CLROf<byte>>;
+    static AsBytes<T extends unknown>(span: ReadOnlySpan_1<T>): ReadOnlySpan_1<System_Internal.Byte>;
+    static AsBytes<T extends unknown>(span: Span_1<T>): Span_1<System_Internal.Byte>;
     static AsMemory<T>(memory: ReadOnlyMemory_1<T>): Memory_1<T>;
-    static AsRef<T extends unknown>(span: ReadOnlySpan_1<CLROf<byte>>): ref<T>;
-    static AsRef<T extends unknown>(span: Span_1<CLROf<byte>>): ref<T>;
+    static AsRef<T extends unknown>(span: ReadOnlySpan_1<System_Internal.Byte>): T;
+    static AsRef<T extends unknown>(span: Span_1<System_Internal.Byte>): T;
     static Cast<TFrom extends unknown, TTo extends unknown>(span: ReadOnlySpan_1<TFrom>): ReadOnlySpan_1<TTo>;
     static Cast<TFrom extends unknown, TTo extends unknown>(span: Span_1<TFrom>): Span_1<TTo>;
     static CreateFromPinnedArray<T>(array: T[], start: int, length: int): Memory_1<T>;
-    static CreateReadOnlySpan<T>(reference: { value: ref<T> }, length: int): ReadOnlySpan_1<T>;
-    static CreateReadOnlySpanFromNullTerminated(value: ptr<byte>): ReadOnlySpan_1<CLROf<byte>>;
-    static CreateReadOnlySpanFromNullTerminated(value: ptr<char>): ReadOnlySpan_1<CLROf<char>>;
-    static CreateSpan<T>(reference: { value: ref<T> }, length: int): Span_1<T>;
-    static GetArrayDataReference(array: ClrArray): ref<byte>;
-    static GetArrayDataReference<T>(array: T[]): ref<T>;
-    static GetReference<T>(span: ReadOnlySpan_1<T>): ref<T>;
-    static GetReference<T>(span: Span_1<T>): ref<T>;
-    static Read<T extends unknown>(source: ReadOnlySpan_1<CLROf<byte>>): T;
+    static CreateReadOnlySpan<T>(reference: T, length: int): ReadOnlySpan_1<T>;
+    static CreateReadOnlySpanFromNullTerminated(value: ptr<byte>): ReadOnlySpan_1<System_Internal.Byte>;
+    static CreateReadOnlySpanFromNullTerminated(value: ptr<char>): ReadOnlySpan_1<System_Internal.Char>;
+    static CreateSpan<T>(reference: T, length: int): Span_1<T>;
+    static GetArrayDataReference(array: ClrArray): byte;
+    static GetArrayDataReference<T>(array: T[]): T;
+    static GetReference<T>(span: ReadOnlySpan_1<T>): T;
+    static GetReference<T>(span: Span_1<T>): T;
+    static Read<T extends unknown>(source: ReadOnlySpan_1<System_Internal.Byte>): T;
     static ToEnumerable<T>(memory: ReadOnlyMemory_1<T>): IEnumerable_1<T>;
-    static TryGetArray<T>(memory: ReadOnlyMemory_1<T>, segment: { value: ref<ArraySegment_1<T>> }): boolean;
-    static TryGetMemoryManager<T, TManager extends MemoryManager_1<T>>(memory: ReadOnlyMemory_1<T>, manager: { value: ref<TManager> }, start: { value: ref<int> }, length: { value: ref<int> }): boolean;
-    static TryGetMemoryManager<T, TManager extends MemoryManager_1<T>>(memory: ReadOnlyMemory_1<T>, manager: { value: ref<TManager> }): boolean;
-    static TryGetString(memory: ReadOnlyMemory_1<CLROf<char>>, text: { value: ref<string> }, start: { value: ref<int> }, length: { value: ref<int> }): boolean;
-    static TryRead<T extends unknown>(source: ReadOnlySpan_1<CLROf<byte>>, value: { value: ref<T> }): boolean;
-    static TryWrite<T extends unknown>(destination: Span_1<CLROf<byte>>, value: { value: ref<T> }): boolean;
-    static Write<T extends unknown>(destination: Span_1<CLROf<byte>>, value: { value: ref<T> }): void;
+    static TryGetArray<T>(memory: ReadOnlyMemory_1<T>, segment: ArraySegment_1<T>): boolean;
+    static TryGetMemoryManager<T, TManager extends MemoryManager_1<T>>(memory: ReadOnlyMemory_1<T>, manager: TManager, start: int, length: int): boolean;
+    static TryGetMemoryManager<T, TManager extends MemoryManager_1<T>>(memory: ReadOnlyMemory_1<T>, manager: TManager): boolean;
+    static TryGetString(memory: ReadOnlyMemory_1<System_Internal.Char>, text: string, start: int, length: int): boolean;
+    static TryRead<T extends unknown>(source: ReadOnlySpan_1<System_Internal.Byte>, value: T): boolean;
+    static TryWrite<T extends unknown>(destination: Span_1<System_Internal.Byte>, value: T): boolean;
+    static Write<T extends unknown>(destination: Span_1<System_Internal.Byte>, value: T): void;
 }
 
 
@@ -2183,9 +2158,9 @@ export abstract class NativeLibrary$instance {
     static Load(libraryName: string, assembly: Assembly, searchPath: Nullable_1<DllImportSearchPath>): nint;
     static Load(libraryPath: string): nint;
     static SetDllImportResolver(assembly: Assembly, resolver: DllImportResolver): void;
-    static TryGetExport(handle: nint, name: string, address: { value: ref<nint> }): boolean;
-    static TryLoad(libraryPath: string, handle: { value: ref<nint> }): boolean;
-    static TryLoad(libraryName: string, assembly: Assembly, searchPath: Nullable_1<DllImportSearchPath>, handle: { value: ref<nint> }): boolean;
+    static TryGetExport(handle: nint, name: string, address: nint): boolean;
+    static TryLoad(libraryPath: string, handle: nint): boolean;
+    static TryLoad(libraryName: string, assembly: Assembly, searchPath: Nullable_1<DllImportSearchPath>, handle: nint): boolean;
 }
 
 
@@ -2234,17 +2209,17 @@ export abstract class RuntimeInformation$instance {
 export type RuntimeInformation = RuntimeInformation$instance;
 
 export abstract class SequenceMarshal$instance {
-    static TryGetArray<T>(sequence: ReadOnlySequence_1<T>, segment: { value: ref<ArraySegment_1<T>> }): boolean;
-    static TryGetReadOnlyMemory<T>(sequence: ReadOnlySequence_1<T>, memory: { value: ref<ReadOnlyMemory_1<T>> }): boolean;
-    static TryGetReadOnlySequenceSegment<T>(sequence: ReadOnlySequence_1<T>, startSegment: { value: ref<ReadOnlySequenceSegment_1<T>> }, startIndex: { value: ref<int> }, endSegment: { value: ref<ReadOnlySequenceSegment_1<T>> }, endIndex: { value: ref<int> }): boolean;
-    static TryRead<T extends unknown>(reader: { value: ref<SequenceReader_1<CLROf<byte>>> }, value: { value: ref<T> }): boolean;
+    static TryGetArray<T>(sequence: ReadOnlySequence_1<T>, segment: ArraySegment_1<T>): boolean;
+    static TryGetReadOnlyMemory<T>(sequence: ReadOnlySequence_1<T>, memory: ReadOnlyMemory_1<T>): boolean;
+    static TryGetReadOnlySequenceSegment<T>(sequence: ReadOnlySequence_1<T>, startSegment: ReadOnlySequenceSegment_1<T>, startIndex: int, endSegment: ReadOnlySequenceSegment_1<T>, endIndex: int): boolean;
+    static TryRead<T extends unknown>(reader: SequenceReader_1<System_Internal.Byte>, value: T): boolean;
 }
 
 
 export type SequenceMarshal = SequenceMarshal$instance;
 
 export abstract class TypeMapping$instance {
-    static GetOrCreateExternalTypeMapping<TTypeMapGroup>(): IReadOnlyDictionary_2<CLROf<string>, Type>;
+    static GetOrCreateExternalTypeMapping<TTypeMapGroup>(): IReadOnlyDictionary_2<System_Internal.String, Type>;
     static GetOrCreateProxyTypeMapping<TTypeMapGroup>(): IReadOnlyDictionary_2<Type, Type>;
 }
 

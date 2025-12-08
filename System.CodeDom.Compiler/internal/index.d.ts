@@ -14,31 +14,6 @@ import type { CancellationToken } from "../../System.Threading/internal/index.js
 import * as System_Internal from "../../System/internal/index.js";
 import type { Attribute, Boolean as ClrBoolean, Char, Decimal, Double, IAsyncDisposable, IDisposable, IFormatProvider, Int32, Int64, Object as ClrObject, ReadOnlyMemory_1, ReadOnlySpan_1, Single, String as ClrString, Type, UInt32, UInt64, Void } from "../../System/internal/index.js";
 
-// CLROf<T> - Maps ergonomic primitives to their CLR types for generic constraints
-// This utility is used ONLY in generic type arguments to satisfy CLR interface constraints
-// Value positions (parameters, return types) use lowercase primitives for ergonomics
-export type CLROf<T> =
-    T extends sbyte ? System_Internal.SByte :
-    T extends short ? System_Internal.Int16 :
-    T extends int ? System_Internal.Int32 :
-    T extends long ? System_Internal.Int64 :
-    T extends int128 ? System_Internal.Int128 :
-    T extends nint ? System_Internal.IntPtr :
-    T extends byte ? System_Internal.Byte :
-    T extends ushort ? System_Internal.UInt16 :
-    T extends uint ? System_Internal.UInt32 :
-    T extends ulong ? System_Internal.UInt64 :
-    T extends uint128 ? System_Internal.UInt128 :
-    T extends nuint ? System_Internal.UIntPtr :
-    T extends half ? System_Internal.Half :
-    T extends float ? System_Internal.Single :
-    T extends double ? System_Internal.Double :
-    T extends decimal ? System_Internal.Decimal :
-    T extends char ? System_Internal.Char :
-    T extends boolean ? System_Internal.Boolean :
-    T extends string ? System_Internal.String :
-    T; // Identity fallback for non-primitive types
-
 export interface GeneratedCodeAttribute$instance extends Attribute {
     readonly Tool: string;
     readonly Version: string;
@@ -77,7 +52,7 @@ export interface IndentedTextWriter$instance extends TextWriter {
     Write(format: string, arg0: unknown, arg1: unknown): void;
     Write(format: string, ...arg: unknown[]): void;
     Write(format: string, arg: ReadOnlySpan_1<unknown>): void;
-    Write(buffer: ReadOnlySpan_1<CLROf<char>>): void;
+    Write(buffer: ReadOnlySpan_1<System_Internal.Char>): void;
     Write(value: uint): void;
     Write(value: ulong): void;
     Write(value: decimal): void;
@@ -87,10 +62,10 @@ export interface IndentedTextWriter$instance extends TextWriter {
     WriteAsync(value: char): Task;
     WriteAsync(buffer: char[], index: int, count: int): Task;
     WriteAsync(value: string): Task;
-    WriteAsync(buffer: ReadOnlyMemory_1<CLROf<char>>, cancellationToken?: CancellationToken): Task;
+    WriteAsync(buffer: ReadOnlyMemory_1<System_Internal.Char>, cancellationToken?: CancellationToken): Task;
     WriteAsync(value: StringBuilder, cancellationToken?: CancellationToken): Task;
     WriteAsync(buffer: char[]): Task;
-    WriteAsync(buffer: ReadOnlyMemory_1<CLROf<char>>, cancellationToken?: CancellationToken): Task;
+    WriteAsync(buffer: ReadOnlyMemory_1<System_Internal.Char>, cancellationToken?: CancellationToken): Task;
     WriteLine(s: string): void;
     WriteLine(): void;
     WriteLine(value: boolean): void;
@@ -107,7 +82,7 @@ export interface IndentedTextWriter$instance extends TextWriter {
     WriteLine(format: string, ...arg: unknown[]): void;
     WriteLine(format: string, arg: ReadOnlySpan_1<unknown>): void;
     WriteLine(value: uint): void;
-    WriteLine(buffer: ReadOnlySpan_1<CLROf<char>>): void;
+    WriteLine(buffer: ReadOnlySpan_1<System_Internal.Char>): void;
     WriteLine(value: ulong): void;
     WriteLine(value: decimal): void;
     WriteLine(value: StringBuilder): void;
@@ -117,10 +92,10 @@ export interface IndentedTextWriter$instance extends TextWriter {
     WriteLineAsync(value: char): Task;
     WriteLineAsync(buffer: char[], index: int, count: int): Task;
     WriteLineAsync(value: string): Task;
-    WriteLineAsync(buffer: ReadOnlyMemory_1<CLROf<char>>, cancellationToken?: CancellationToken): Task;
+    WriteLineAsync(buffer: ReadOnlyMemory_1<System_Internal.Char>, cancellationToken?: CancellationToken): Task;
     WriteLineAsync(value: StringBuilder, cancellationToken?: CancellationToken): Task;
     WriteLineAsync(buffer: char[]): Task;
-    WriteLineAsync(buffer: ReadOnlyMemory_1<CLROf<char>>, cancellationToken?: CancellationToken): Task;
+    WriteLineAsync(buffer: ReadOnlyMemory_1<System_Internal.Char>, cancellationToken?: CancellationToken): Task;
     WriteLineNoTabs(s: string): void;
     WriteLineNoTabsAsync(s: string): Task;
 }

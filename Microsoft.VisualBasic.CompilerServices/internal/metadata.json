@@ -2073,7 +2073,17 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 6,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 4,
+              "modifier": "ref"
+            },
+            {
+              "index": 5,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "Microsoft.VisualBasic.Core:Microsoft.VisualBasic.CompilerServices.ObjectFlowControl\u002BForLoopControl::ForNextCheckObj(System.Object,System.Object,System.Object\u0026):System.Boolean",
@@ -2089,7 +2099,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 3,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "Microsoft.VisualBasic.Core:Microsoft.VisualBasic.CompilerServices.ObjectFlowControl\u002BForLoopControl::ForNextCheckR4(System.Single,System.Single,System.Single):System.Boolean",
@@ -3623,7 +3639,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 4,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            }
+          ]
         }
       ],
       "properties": [],

@@ -4506,7 +4506,17 @@
           "parameterCount": 2,
           "declaringClrType": "System.Reflection.Metadata.Ecma335.BlobEncoder",
           "declaringAssemblyName": "System.Reflection.Metadata",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            },
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Reflection.Metadata:System.Reflection.Metadata.Ecma335.BlobEncoder::CustomAttributeSignature(System.Action_1[[System.Reflection.Metadata.Ecma335.FixedArgumentsEncoder,System.Reflection.Metadata,Version=10.0.0.0,Culture=neutral,PublicKeyToken=b03f5f7f11d50a3a]],System.Action_1[[System.Reflection.Metadata.Ecma335.CustomAttributeNamedArgumentsEncoder,System.Reflection.Metadata,Version=10.0.0.0,Culture=neutral,PublicKeyToken=b03f5f7f11d50a3a]]):System.Void",
@@ -7750,7 +7760,17 @@
           "parameterCount": 2,
           "declaringClrType": "System.Reflection.Metadata.Ecma335.LiteralEncoder",
           "declaringAssemblyName": "System.Reflection.Metadata",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            },
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Reflection.Metadata:System.Reflection.Metadata.Ecma335.LiteralEncoder::TaggedVector(System.Action_1[[System.Reflection.Metadata.Ecma335.CustomAttributeArrayTypeEncoder,System.Reflection.Metadata,Version=10.0.0.0,Culture=neutral,PublicKeyToken=b03f5f7f11d50a3a]],System.Action_1[[System.Reflection.Metadata.Ecma335.VectorEncoder,System.Reflection.Metadata,Version=10.0.0.0,Culture=neutral,PublicKeyToken=b03f5f7f11d50a3a]]):System.Void",
@@ -7792,7 +7812,17 @@
           "parameterCount": 2,
           "declaringClrType": "System.Reflection.Metadata.Ecma335.LiteralEncoder",
           "declaringAssemblyName": "System.Reflection.Metadata",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            },
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Reflection.Metadata:System.Reflection.Metadata.Ecma335.LiteralEncoder::TaggedScalar(System.Action_1[[System.Reflection.Metadata.Ecma335.CustomAttributeElementTypeEncoder,System.Reflection.Metadata,Version=10.0.0.0,Culture=neutral,PublicKeyToken=b03f5f7f11d50a3a]],System.Action_1[[System.Reflection.Metadata.Ecma335.ScalarEncoder,System.Reflection.Metadata,Version=10.0.0.0,Culture=neutral,PublicKeyToken=b03f5f7f11d50a3a]]):System.Void",
@@ -8865,7 +8895,17 @@
           "parameterCount": 3,
           "declaringClrType": "System.Reflection.Metadata.Ecma335.MethodSignatureEncoder",
           "declaringAssemblyName": "System.Reflection.Metadata",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            },
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Reflection.Metadata:System.Reflection.Metadata.Ecma335.MethodSignatureEncoder::Parameters(System.Int32,System.Action_1[[System.Reflection.Metadata.Ecma335.ReturnTypeEncoder,System.Reflection.Metadata,Version=10.0.0.0,Culture=neutral,PublicKeyToken=b03f5f7f11d50a3a]],System.Action_1[[System.Reflection.Metadata.Ecma335.ParametersEncoder,System.Reflection.Metadata,Version=10.0.0.0,Culture=neutral,PublicKeyToken=b03f5f7f11d50a3a]]):System.Void",
@@ -9061,7 +9101,21 @@
           "parameterCount": 4,
           "declaringClrType": "System.Reflection.Metadata.Ecma335.NamedArgumentsEncoder",
           "declaringAssemblyName": "System.Reflection.Metadata",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            },
+            {
+              "index": 2,
+              "modifier": "out"
+            },
+            {
+              "index": 3,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Reflection.Metadata:System.Reflection.Metadata.Ecma335.NamedArgumentsEncoder::AddArgument(System.Boolean,System.Action_1[[System.Reflection.Metadata.Ecma335.NamedArgumentTypeEncoder,System.Reflection.Metadata,Version=10.0.0.0,Culture=neutral,PublicKeyToken=b03f5f7f11d50a3a]],System.Action_1[[System.Reflection.Metadata.Ecma335.NameEncoder,System.Reflection.Metadata,Version=10.0.0.0,Culture=neutral,PublicKeyToken=b03f5f7f11d50a3a]],System.Action_1[[System.Reflection.Metadata.Ecma335.LiteralEncoder,System.Reflection.Metadata,Version=10.0.0.0,Culture=neutral,PublicKeyToken=b03f5f7f11d50a3a]]):System.Void",
@@ -10557,7 +10611,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Reflection.Metadata.Ecma335.SignatureDecoder\u00602",
           "declaringAssemblyName": "System.Reflection.Metadata",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Reflection.Metadata:System.Reflection.Metadata.Ecma335.SignatureDecoder\u00602::DecodeMethodSignature(System.Reflection.Metadata.BlobReader\u0026):MethodSignature_1",
@@ -10571,7 +10631,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Reflection.Metadata.Ecma335.SignatureDecoder\u00602",
           "declaringAssemblyName": "System.Reflection.Metadata",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Reflection.Metadata:System.Reflection.Metadata.Ecma335.SignatureDecoder\u00602::DecodeMethodSpecificationSignature(System.Reflection.Metadata.BlobReader\u0026):ImmutableArray_1",
@@ -10585,7 +10651,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Reflection.Metadata.Ecma335.SignatureDecoder\u00602",
           "declaringAssemblyName": "System.Reflection.Metadata",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Reflection.Metadata:System.Reflection.Metadata.Ecma335.SignatureDecoder\u00602::DecodeLocalSignature(System.Reflection.Metadata.BlobReader\u0026):ImmutableArray_1",
@@ -10599,7 +10671,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Reflection.Metadata.Ecma335.SignatureDecoder\u00602",
           "declaringAssemblyName": "System.Reflection.Metadata",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Reflection.Metadata:System.Reflection.Metadata.Ecma335.SignatureDecoder\u00602::DecodeFieldSignature(System.Reflection.Metadata.BlobReader\u0026):TType",
@@ -10613,7 +10691,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Reflection.Metadata.Ecma335.SignatureDecoder\u00602",
           "declaringAssemblyName": "System.Reflection.Metadata",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            }
+          ]
         }
       ],
       "properties": [],
@@ -11026,7 +11110,17 @@
           "parameterCount": 2,
           "declaringClrType": "System.Reflection.Metadata.Ecma335.SignatureTypeEncoder",
           "declaringAssemblyName": "System.Reflection.Metadata",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            },
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Reflection.Metadata:System.Reflection.Metadata.Ecma335.SignatureTypeEncoder::Array(System.Action_1[[System.Reflection.Metadata.Ecma335.SignatureTypeEncoder,System.Reflection.Metadata,Version=10.0.0.0,Culture=neutral,PublicKeyToken=b03f5f7f11d50a3a]],System.Action_1[[System.Reflection.Metadata.Ecma335.ArrayShapeEncoder,System.Reflection.Metadata,Version=10.0.0.0,Culture=neutral,PublicKeyToken=b03f5f7f11d50a3a]]):System.Void",
@@ -12058,7 +12152,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Reflection.Metadata.Ecma335.MetadataAggregator",
           "declaringAssemblyName": "System.Reflection.Metadata",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         }
       ],
       "properties": [],
@@ -15390,7 +15490,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Reflection.Metadata.Ecma335.MetadataTokens",
           "declaringAssemblyName": "System.Reflection.Metadata",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Reflection.Metadata:System.Reflection.Metadata.Ecma335.MetadataTokens::TryGetHeapIndex(System.Reflection.Metadata.HandleKind,System.Reflection.Metadata.Ecma335.HeapIndex\u0026):System.Boolean",
@@ -15404,7 +15510,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Reflection.Metadata.Ecma335.MetadataTokens",
           "declaringAssemblyName": "System.Reflection.Metadata",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Reflection.Metadata:System.Reflection.Metadata.Ecma335.MetadataTokens::Handle(System.Int32):System.Reflection.Metadata.Handle",

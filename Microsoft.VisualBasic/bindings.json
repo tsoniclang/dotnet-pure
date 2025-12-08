@@ -18235,7 +18235,13 @@
           "parameterCount": 3,
           "declaringClrType": "Microsoft.VisualBasic.FileSystem",
           "declaringAssemblyName": "Microsoft.VisualBasic.Core",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "Microsoft.VisualBasic.Core:Microsoft.VisualBasic.FileSystem::FileGet(System.Int32,System.ValueType\u0026,System.Int64):System.Void",
@@ -18249,7 +18255,13 @@
           "parameterCount": 3,
           "declaringClrType": "Microsoft.VisualBasic.FileSystem",
           "declaringAssemblyName": "Microsoft.VisualBasic.Core",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "Microsoft.VisualBasic.Core:Microsoft.VisualBasic.FileSystem::FileGet(System.Int32,System.Array\u0026,System.Int64,System.Boolean,System.Boolean):System.Void",
@@ -18263,7 +18275,13 @@
           "parameterCount": 5,
           "declaringClrType": "Microsoft.VisualBasic.FileSystem",
           "declaringAssemblyName": "Microsoft.VisualBasic.Core",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "Microsoft.VisualBasic.Core:Microsoft.VisualBasic.FileSystem::FileGet(System.Int32,System.Boolean\u0026,System.Int64):System.Void",
@@ -18277,7 +18295,13 @@
           "parameterCount": 3,
           "declaringClrType": "Microsoft.VisualBasic.FileSystem",
           "declaringAssemblyName": "Microsoft.VisualBasic.Core",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "Microsoft.VisualBasic.Core:Microsoft.VisualBasic.FileSystem::FileGet(System.Int32,System.Byte\u0026,System.Int64):System.Void",
@@ -18291,7 +18315,13 @@
           "parameterCount": 3,
           "declaringClrType": "Microsoft.VisualBasic.FileSystem",
           "declaringAssemblyName": "Microsoft.VisualBasic.Core",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "Microsoft.VisualBasic.Core:Microsoft.VisualBasic.FileSystem::FileGet(System.Int32,System.Int16\u0026,System.Int64):System.Void",
@@ -18305,7 +18335,13 @@
           "parameterCount": 3,
           "declaringClrType": "Microsoft.VisualBasic.FileSystem",
           "declaringAssemblyName": "Microsoft.VisualBasic.Core",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "Microsoft.VisualBasic.Core:Microsoft.VisualBasic.FileSystem::FileGet(System.Int32,System.Int32\u0026,System.Int64):System.Void",
@@ -18319,7 +18355,13 @@
           "parameterCount": 3,
           "declaringClrType": "Microsoft.VisualBasic.FileSystem",
           "declaringAssemblyName": "Microsoft.VisualBasic.Core",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "Microsoft.VisualBasic.Core:Microsoft.VisualBasic.FileSystem::FileGet(System.Int32,System.Int64\u0026,System.Int64):System.Void",
@@ -18333,7 +18375,13 @@
           "parameterCount": 3,
           "declaringClrType": "Microsoft.VisualBasic.FileSystem",
           "declaringAssemblyName": "Microsoft.VisualBasic.Core",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "Microsoft.VisualBasic.Core:Microsoft.VisualBasic.FileSystem::FileGet(System.Int32,System.Char\u0026,System.Int64):System.Void",
@@ -18347,7 +18395,13 @@
           "parameterCount": 3,
           "declaringClrType": "Microsoft.VisualBasic.FileSystem",
           "declaringAssemblyName": "Microsoft.VisualBasic.Core",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "Microsoft.VisualBasic.Core:Microsoft.VisualBasic.FileSystem::FileGet(System.Int32,System.Single\u0026,System.Int64):System.Void",
@@ -18361,7 +18415,13 @@
           "parameterCount": 3,
           "declaringClrType": "Microsoft.VisualBasic.FileSystem",
           "declaringAssemblyName": "Microsoft.VisualBasic.Core",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "Microsoft.VisualBasic.Core:Microsoft.VisualBasic.FileSystem::FileGet(System.Int32,System.Double\u0026,System.Int64):System.Void",
@@ -18375,7 +18435,13 @@
           "parameterCount": 3,
           "declaringClrType": "Microsoft.VisualBasic.FileSystem",
           "declaringAssemblyName": "Microsoft.VisualBasic.Core",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "Microsoft.VisualBasic.Core:Microsoft.VisualBasic.FileSystem::FileGet(System.Int32,System.Decimal\u0026,System.Int64):System.Void",
@@ -18389,7 +18455,13 @@
           "parameterCount": 3,
           "declaringClrType": "Microsoft.VisualBasic.FileSystem",
           "declaringAssemblyName": "Microsoft.VisualBasic.Core",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "Microsoft.VisualBasic.Core:Microsoft.VisualBasic.FileSystem::FileGet(System.Int32,System.String\u0026,System.Int64,System.Boolean):System.Void",
@@ -18403,7 +18475,13 @@
           "parameterCount": 4,
           "declaringClrType": "Microsoft.VisualBasic.FileSystem",
           "declaringAssemblyName": "Microsoft.VisualBasic.Core",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "Microsoft.VisualBasic.Core:Microsoft.VisualBasic.FileSystem::FileGet(System.Int32,System.DateTime\u0026,System.Int64):System.Void",
@@ -18417,7 +18495,13 @@
           "parameterCount": 3,
           "declaringClrType": "Microsoft.VisualBasic.FileSystem",
           "declaringAssemblyName": "Microsoft.VisualBasic.Core",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "Microsoft.VisualBasic.Core:Microsoft.VisualBasic.FileSystem::FilePutObject(System.Int32,System.Object,System.Int64):System.Void",
@@ -18669,7 +18753,13 @@
           "parameterCount": 2,
           "declaringClrType": "Microsoft.VisualBasic.FileSystem",
           "declaringAssemblyName": "Microsoft.VisualBasic.Core",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "Microsoft.VisualBasic.Core:Microsoft.VisualBasic.FileSystem::Input(System.Int32,System.Boolean\u0026):System.Void",
@@ -18683,7 +18773,13 @@
           "parameterCount": 2,
           "declaringClrType": "Microsoft.VisualBasic.FileSystem",
           "declaringAssemblyName": "Microsoft.VisualBasic.Core",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "Microsoft.VisualBasic.Core:Microsoft.VisualBasic.FileSystem::Input(System.Int32,System.Byte\u0026):System.Void",
@@ -18697,7 +18793,13 @@
           "parameterCount": 2,
           "declaringClrType": "Microsoft.VisualBasic.FileSystem",
           "declaringAssemblyName": "Microsoft.VisualBasic.Core",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "Microsoft.VisualBasic.Core:Microsoft.VisualBasic.FileSystem::Input(System.Int32,System.Int16\u0026):System.Void",
@@ -18711,7 +18813,13 @@
           "parameterCount": 2,
           "declaringClrType": "Microsoft.VisualBasic.FileSystem",
           "declaringAssemblyName": "Microsoft.VisualBasic.Core",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "Microsoft.VisualBasic.Core:Microsoft.VisualBasic.FileSystem::Input(System.Int32,System.Int32\u0026):System.Void",
@@ -18725,7 +18833,13 @@
           "parameterCount": 2,
           "declaringClrType": "Microsoft.VisualBasic.FileSystem",
           "declaringAssemblyName": "Microsoft.VisualBasic.Core",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "Microsoft.VisualBasic.Core:Microsoft.VisualBasic.FileSystem::Input(System.Int32,System.Int64\u0026):System.Void",
@@ -18739,7 +18853,13 @@
           "parameterCount": 2,
           "declaringClrType": "Microsoft.VisualBasic.FileSystem",
           "declaringAssemblyName": "Microsoft.VisualBasic.Core",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "Microsoft.VisualBasic.Core:Microsoft.VisualBasic.FileSystem::Input(System.Int32,System.Char\u0026):System.Void",
@@ -18753,7 +18873,13 @@
           "parameterCount": 2,
           "declaringClrType": "Microsoft.VisualBasic.FileSystem",
           "declaringAssemblyName": "Microsoft.VisualBasic.Core",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "Microsoft.VisualBasic.Core:Microsoft.VisualBasic.FileSystem::Input(System.Int32,System.Single\u0026):System.Void",
@@ -18767,7 +18893,13 @@
           "parameterCount": 2,
           "declaringClrType": "Microsoft.VisualBasic.FileSystem",
           "declaringAssemblyName": "Microsoft.VisualBasic.Core",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "Microsoft.VisualBasic.Core:Microsoft.VisualBasic.FileSystem::Input(System.Int32,System.Double\u0026):System.Void",
@@ -18781,7 +18913,13 @@
           "parameterCount": 2,
           "declaringClrType": "Microsoft.VisualBasic.FileSystem",
           "declaringAssemblyName": "Microsoft.VisualBasic.Core",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "Microsoft.VisualBasic.Core:Microsoft.VisualBasic.FileSystem::Input(System.Int32,System.Decimal\u0026):System.Void",
@@ -18795,7 +18933,13 @@
           "parameterCount": 2,
           "declaringClrType": "Microsoft.VisualBasic.FileSystem",
           "declaringAssemblyName": "Microsoft.VisualBasic.Core",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "Microsoft.VisualBasic.Core:Microsoft.VisualBasic.FileSystem::Input(System.Int32,System.String\u0026):System.Void",
@@ -18809,7 +18953,13 @@
           "parameterCount": 2,
           "declaringClrType": "Microsoft.VisualBasic.FileSystem",
           "declaringAssemblyName": "Microsoft.VisualBasic.Core",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "Microsoft.VisualBasic.Core:Microsoft.VisualBasic.FileSystem::Input(System.Int32,System.DateTime\u0026):System.Void",
@@ -18823,7 +18973,13 @@
           "parameterCount": 2,
           "declaringClrType": "Microsoft.VisualBasic.FileSystem",
           "declaringAssemblyName": "Microsoft.VisualBasic.Core",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "Microsoft.VisualBasic.Core:Microsoft.VisualBasic.FileSystem::Write(System.Int32,System.Object[]):System.Void",
@@ -20106,7 +20262,13 @@
           "parameterCount": 2,
           "declaringClrType": "Microsoft.VisualBasic.Financial",
           "declaringAssemblyName": "Microsoft.VisualBasic.Core",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "Microsoft.VisualBasic.Core:Microsoft.VisualBasic.Financial::MIRR(System.Double[]\u0026,System.Double,System.Double):System.Double",
@@ -20120,7 +20282,13 @@
           "parameterCount": 3,
           "declaringClrType": "Microsoft.VisualBasic.Financial",
           "declaringAssemblyName": "Microsoft.VisualBasic.Core",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "Microsoft.VisualBasic.Core:Microsoft.VisualBasic.Financial::NPer(System.Double,System.Double,System.Double,System.Double,Microsoft.VisualBasic.DueDate):System.Double",
@@ -20148,7 +20316,13 @@
           "parameterCount": 2,
           "declaringClrType": "Microsoft.VisualBasic.Financial",
           "declaringAssemblyName": "Microsoft.VisualBasic.Core",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "Microsoft.VisualBasic.Core:Microsoft.VisualBasic.Financial::Pmt(System.Double,System.Double,System.Double,System.Double,Microsoft.VisualBasic.DueDate):System.Double",

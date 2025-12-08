@@ -109,7 +109,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Collections.Generic.IReadOnlyDictionary\u00602::ContainsKey(TKey):System.Boolean",
@@ -141,7 +147,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Collections.Generic.IEnumerable\u00601::GetEnumerator():IEnumerator_1",
@@ -700,7 +712,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Collections.Immutable:System.Collections.Immutable.IImmutableSet\u00601::Intersect(IEnumerable_1):IImmutableSet_1",
@@ -4853,7 +4871,13 @@
           "isSealed": true,
           "arity": 0,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Collections.Immutable:System.Collections.Immutable.ImmutableDictionary\u00602::TryGetKey(TKey,TKey\u0026):System.Boolean",
@@ -4869,7 +4893,13 @@
           "isSealed": true,
           "arity": 0,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Collections.Immutable:System.Collections.Immutable.ImmutableDictionary\u00602::WithComparers(IEqualityComparer_1,IEqualityComparer_1):ImmutableDictionary_2",
@@ -5256,7 +5286,13 @@
           "arity": 0,
           "parameterCount": 2,
           "sourceInterface": "System.Collections.Immutable.IImmutableDictionary\u00602",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Collections.Generic.IReadOnlyDictionary\u00602::ContainsKey(TKey):System.Boolean",
@@ -5290,7 +5326,13 @@
           "arity": 0,
           "parameterCount": 2,
           "sourceInterface": "System.Collections.Generic.IReadOnlyDictionary\u00602",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Collections.Generic.IDictionary\u00602::ContainsKey(TKey):System.Boolean",
@@ -5324,7 +5366,13 @@
           "arity": 0,
           "parameterCount": 2,
           "sourceInterface": "System.Collections.Generic.IDictionary\u00602",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Collections.IDictionary::Clear():System.Void",
@@ -5874,7 +5922,13 @@
           "isSealed": true,
           "arity": 0,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Collections.Immutable:System.Collections.Immutable.ImmutableDictionary\u00602\u002BBuilder::TryGetKey(TKey,TKey\u0026):System.Boolean",
@@ -5890,7 +5944,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Collections.Immutable:System.Collections.Immutable.ImmutableDictionary\u00602\u002BBuilder::Add(KeyValuePair_2):System.Void",
@@ -6175,7 +6235,13 @@
           "arity": 0,
           "parameterCount": 2,
           "sourceInterface": "System.Collections.Generic.IDictionary\u00602",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Collections.Generic.ICollection\u00601::Clear():System.Void",
@@ -6226,7 +6292,13 @@
           "arity": 0,
           "parameterCount": 2,
           "sourceInterface": "System.Collections.Generic.IReadOnlyDictionary\u00602",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Collections.IDictionary::Clear():System.Void",
@@ -6655,7 +6727,13 @@
           "isSealed": true,
           "arity": 0,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Collections.Immutable:System.Collections.Immutable.ImmutableHashSet\u00601::Union(IEnumerable_1):ImmutableHashSet_1",
@@ -7084,7 +7162,13 @@
           "arity": 0,
           "parameterCount": 2,
           "sourceInterface": "System.Collections.Immutable.IImmutableSet\u00601",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Collections.Immutable:System.Collections.Immutable.IImmutableSet\u00601::SetEquals(IEnumerable_1):System.Boolean",
@@ -7403,7 +7487,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Collections.Immutable:System.Collections.Immutable.ImmutableHashSet\u00601\u002BBuilder::Add(T):System.Boolean",
@@ -10714,7 +10804,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 1,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Collections.Immutable:System.Collections.Immutable.ImmutableQueue\u00601::GetEnumerator():Enumerator",
@@ -11119,7 +11215,13 @@
           "isSealed": true,
           "arity": 0,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Collections.Immutable:System.Collections.Immutable.ImmutableSortedDictionary\u00602::TryGetKey(TKey,TKey\u0026):System.Boolean",
@@ -11135,7 +11237,13 @@
           "isSealed": true,
           "arity": 0,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Collections.Immutable:System.Collections.Immutable.ImmutableSortedDictionary\u00602::GetEnumerator():Enumerator",
@@ -11474,7 +11582,13 @@
           "arity": 0,
           "parameterCount": 2,
           "sourceInterface": "System.Collections.Immutable.IImmutableDictionary\u00602",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Collections.Generic.IReadOnlyDictionary\u00602::ContainsKey(TKey):System.Boolean",
@@ -11508,7 +11622,13 @@
           "arity": 0,
           "parameterCount": 2,
           "sourceInterface": "System.Collections.Generic.IReadOnlyDictionary\u00602",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Collections.Generic.IDictionary\u00602::ContainsKey(TKey):System.Boolean",
@@ -11542,7 +11662,13 @@
           "arity": 0,
           "parameterCount": 2,
           "sourceInterface": "System.Collections.Generic.IDictionary\u00602",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Collections.IDictionary::Clear():System.Void",
@@ -11996,7 +12122,13 @@
           "isSealed": true,
           "arity": 0,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Collections.Immutable:System.Collections.Immutable.ImmutableSortedDictionary\u00602\u002BBuilder::TryGetKey(TKey,TKey\u0026):System.Boolean",
@@ -12012,7 +12144,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Collections.Immutable:System.Collections.Immutable.ImmutableSortedDictionary\u00602\u002BBuilder::Add(KeyValuePair_2):System.Void",
@@ -12409,7 +12547,13 @@
           "arity": 0,
           "parameterCount": 2,
           "sourceInterface": "System.Collections.Generic.IDictionary\u00602",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Collections.Generic.ICollection\u00601::Clear():System.Void",
@@ -12460,7 +12604,13 @@
           "arity": 0,
           "parameterCount": 2,
           "sourceInterface": "System.Collections.Generic.IReadOnlyDictionary\u00602",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Collections.IDictionary::Clear():System.Void",
@@ -12905,7 +13055,13 @@
           "isSealed": true,
           "arity": 0,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Collections.Immutable:System.Collections.Immutable.ImmutableSortedSet\u00601::Intersect(IEnumerable_1):ImmutableSortedSet_1",
@@ -13468,7 +13624,13 @@
           "arity": 0,
           "parameterCount": 2,
           "sourceInterface": "System.Collections.Immutable.IImmutableSet\u00601",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Collections.Immutable:System.Collections.Immutable.IImmutableSet\u00601::SetEquals(IEnumerable_1):System.Boolean",
@@ -14187,7 +14349,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Collections.Generic.IEnumerable\u00601::GetEnumerator():IEnumerator_1",
@@ -14642,7 +14810,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 1,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Collections.Immutable:System.Collections.Immutable.ImmutableStack\u00601::GetEnumerator():Enumerator",
@@ -15882,7 +16056,13 @@
           "isSealed": false,
           "arity": 1,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Collections.Immutable:System.Collections.Immutable.ImmutableInterlocked::Update(T\u0026,Func_3,TArg):System.Boolean",
@@ -15898,7 +16078,13 @@
           "isSealed": false,
           "arity": 2,
           "parameterCount": 3,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Collections.Immutable:System.Collections.Immutable.ImmutableInterlocked::Update(ImmutableArray_1\u0026,Func_2):System.Boolean",
@@ -15914,7 +16100,13 @@
           "isSealed": false,
           "arity": 1,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Collections.Immutable:System.Collections.Immutable.ImmutableInterlocked::Update(ImmutableArray_1\u0026,Func_3,TArg):System.Boolean",
@@ -15930,7 +16122,13 @@
           "isSealed": false,
           "arity": 2,
           "parameterCount": 3,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Collections.Immutable:System.Collections.Immutable.ImmutableInterlocked::InterlockedExchange(ImmutableArray_1\u0026,ImmutableArray_1):ImmutableArray_1",
@@ -15946,7 +16144,13 @@
           "isSealed": false,
           "arity": 1,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Collections.Immutable:System.Collections.Immutable.ImmutableInterlocked::InterlockedCompareExchange(ImmutableArray_1\u0026,ImmutableArray_1,ImmutableArray_1):ImmutableArray_1",
@@ -15962,7 +16166,13 @@
           "isSealed": false,
           "arity": 1,
           "parameterCount": 3,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Collections.Immutable:System.Collections.Immutable.ImmutableInterlocked::InterlockedInitialize(ImmutableArray_1\u0026,ImmutableArray_1):System.Boolean",
@@ -15978,7 +16188,13 @@
           "isSealed": false,
           "arity": 1,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Collections.Immutable:System.Collections.Immutable.ImmutableInterlocked::GetOrAdd(ImmutableDictionary_2\u0026,TKey,Func_3,TArg):TValue",
@@ -15994,7 +16210,13 @@
           "isSealed": false,
           "arity": 3,
           "parameterCount": 4,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Collections.Immutable:System.Collections.Immutable.ImmutableInterlocked::GetOrAdd(ImmutableDictionary_2\u0026,TKey,Func_2):TValue",
@@ -16010,7 +16232,13 @@
           "isSealed": false,
           "arity": 2,
           "parameterCount": 3,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Collections.Immutable:System.Collections.Immutable.ImmutableInterlocked::GetOrAdd(ImmutableDictionary_2\u0026,TKey,TValue):TValue",
@@ -16026,7 +16254,13 @@
           "isSealed": false,
           "arity": 2,
           "parameterCount": 3,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Collections.Immutable:System.Collections.Immutable.ImmutableInterlocked::AddOrUpdate(ImmutableDictionary_2\u0026,TKey,Func_2,Func_3):TValue",
@@ -16042,7 +16276,13 @@
           "isSealed": false,
           "arity": 2,
           "parameterCount": 4,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Collections.Immutable:System.Collections.Immutable.ImmutableInterlocked::AddOrUpdate(ImmutableDictionary_2\u0026,TKey,TValue,Func_3):TValue",
@@ -16058,7 +16298,13 @@
           "isSealed": false,
           "arity": 2,
           "parameterCount": 4,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Collections.Immutable:System.Collections.Immutable.ImmutableInterlocked::TryAdd(ImmutableDictionary_2\u0026,TKey,TValue):System.Boolean",
@@ -16074,7 +16320,13 @@
           "isSealed": false,
           "arity": 2,
           "parameterCount": 3,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Collections.Immutable:System.Collections.Immutable.ImmutableInterlocked::TryUpdate(ImmutableDictionary_2\u0026,TKey,TValue,TValue):System.Boolean",
@@ -16090,7 +16342,13 @@
           "isSealed": false,
           "arity": 2,
           "parameterCount": 4,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Collections.Immutable:System.Collections.Immutable.ImmutableInterlocked::TryRemove(ImmutableDictionary_2\u0026,TKey,TValue\u0026):System.Boolean",
@@ -16106,7 +16364,17 @@
           "isSealed": false,
           "arity": 2,
           "parameterCount": 3,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            },
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Collections.Immutable:System.Collections.Immutable.ImmutableInterlocked::TryPop(ImmutableStack_1\u0026,T\u0026):System.Boolean",
@@ -16122,7 +16390,17 @@
           "isSealed": false,
           "arity": 1,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            },
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Collections.Immutable:System.Collections.Immutable.ImmutableInterlocked::Push(ImmutableStack_1\u0026,T):System.Void",
@@ -16138,7 +16416,13 @@
           "isSealed": false,
           "arity": 1,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Collections.Immutable:System.Collections.Immutable.ImmutableInterlocked::TryDequeue(ImmutableQueue_1\u0026,T\u0026):System.Boolean",
@@ -16154,7 +16438,17 @@
           "isSealed": false,
           "arity": 1,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            },
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Collections.Immutable:System.Collections.Immutable.ImmutableInterlocked::Enqueue(ImmutableQueue_1\u0026,T):System.Void",
@@ -16170,7 +16464,13 @@
           "isSealed": false,
           "arity": 1,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            }
+          ]
         }
       ],
       "properties": [],
@@ -16604,7 +16904,13 @@
           "isSealed": false,
           "arity": 1,
           "parameterCount": 2,
-          "isExtensionMethod": true
+          "isExtensionMethod": true,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         }
       ],
       "properties": [],
@@ -17247,7 +17553,13 @@
           "isSealed": false,
           "arity": 1,
           "parameterCount": 2,
-          "isExtensionMethod": true
+          "isExtensionMethod": true,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         }
       ],
       "properties": [],

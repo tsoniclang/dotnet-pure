@@ -6,7 +6,7 @@
 import type { sbyte, byte, short, ushort, int, uint, long, ulong, int128, uint128, half, float, double, decimal, nint, nuint, char } from '@tsonic/types';
 
 // Import support types from @tsonic/types
-import type { ptr, ref } from "@tsonic/types";
+import type { ptr } from "@tsonic/types";
 
 // Import types from other namespaces
 import * as System_Collections_Generic_Internal from "../../System.Collections.Generic/internal/index.js";
@@ -24,31 +24,6 @@ import type { Task, Task_1, ValueTask, ValueTask_1 } from "../../System.Threadin
 import type { CancellationToken } from "../../System.Threading/internal/index.js";
 import * as System_Internal from "../../System/internal/index.js";
 import type { Action, Array as ClrArray, AsyncCallback, Attribute, Boolean as ClrBoolean, Byte, Char, Decimal, Delegate, Enum, Exception, FormattableString, Func_2, Func_3, IAsyncResult, ICloneable, IComparable, IConvertible, IFormatProvider, IFormattable, Int16, Int32, Int64, IntPtr, InvalidOperationException, ISpanFormattable, ModuleHandle, MulticastDelegate, Object as ClrObject, Range, ReadOnlySpan_1, RuntimeFieldHandle, RuntimeMethodHandle, RuntimeTypeHandle, Span_1, String as ClrString, Type, TypeCode, UInt32, UIntPtr, ValueType, Void } from "../../System/internal/index.js";
-
-// CLROf<T> - Maps ergonomic primitives to their CLR types for generic constraints
-// This utility is used ONLY in generic type arguments to satisfy CLR interface constraints
-// Value positions (parameters, return types) use lowercase primitives for ergonomics
-export type CLROf<T> =
-    T extends sbyte ? System_Internal.SByte :
-    T extends short ? System_Internal.Int16 :
-    T extends int ? System_Internal.Int32 :
-    T extends long ? System_Internal.Int64 :
-    T extends int128 ? System_Internal.Int128 :
-    T extends nint ? System_Internal.IntPtr :
-    T extends byte ? System_Internal.Byte :
-    T extends ushort ? System_Internal.UInt16 :
-    T extends uint ? System_Internal.UInt32 :
-    T extends ulong ? System_Internal.UInt64 :
-    T extends uint128 ? System_Internal.UInt128 :
-    T extends nuint ? System_Internal.UIntPtr :
-    T extends half ? System_Internal.Half :
-    T extends float ? System_Internal.Single :
-    T extends double ? System_Internal.Double :
-    T extends decimal ? System_Internal.Decimal :
-    T extends char ? System_Internal.Char :
-    T extends boolean ? System_Internal.Boolean :
-    T extends string ? System_Internal.String :
-    T; // Identity fallback for non-primitive types
 
 export enum CompilationRelaxations {
     NoStringInterning = 8
@@ -151,10 +126,10 @@ export interface ITuple$instance {
 export type ITuple = ITuple$instance;
 
 export interface AsyncIteratorMethodBuilder$instance {
-    AwaitOnCompleted<TAwaiter extends INotifyCompletion, TStateMachine extends IAsyncStateMachine>(awaiter: { value: ref<TAwaiter> }, stateMachine: { value: ref<TStateMachine> }): void;
-    AwaitUnsafeOnCompleted<TAwaiter extends ICriticalNotifyCompletion, TStateMachine extends IAsyncStateMachine>(awaiter: { value: ref<TAwaiter> }, stateMachine: { value: ref<TStateMachine> }): void;
+    AwaitOnCompleted<TAwaiter extends INotifyCompletion, TStateMachine extends IAsyncStateMachine>(awaiter: TAwaiter, stateMachine: TStateMachine): void;
+    AwaitUnsafeOnCompleted<TAwaiter extends ICriticalNotifyCompletion, TStateMachine extends IAsyncStateMachine>(awaiter: TAwaiter, stateMachine: TStateMachine): void;
     Complete(): void;
-    MoveNext<TStateMachine extends IAsyncStateMachine>(stateMachine: { value: ref<TStateMachine> }): void;
+    MoveNext<TStateMachine extends IAsyncStateMachine>(stateMachine: TStateMachine): void;
 }
 
 
@@ -168,12 +143,12 @@ export type AsyncIteratorMethodBuilder = AsyncIteratorMethodBuilder$instance;
 
 export interface AsyncTaskMethodBuilder$instance {
     readonly Task: Task;
-    AwaitOnCompleted<TAwaiter extends INotifyCompletion, TStateMachine extends IAsyncStateMachine>(awaiter: { value: ref<TAwaiter> }, stateMachine: { value: ref<TStateMachine> }): void;
-    AwaitUnsafeOnCompleted<TAwaiter extends ICriticalNotifyCompletion, TStateMachine extends IAsyncStateMachine>(awaiter: { value: ref<TAwaiter> }, stateMachine: { value: ref<TStateMachine> }): void;
+    AwaitOnCompleted<TAwaiter extends INotifyCompletion, TStateMachine extends IAsyncStateMachine>(awaiter: TAwaiter, stateMachine: TStateMachine): void;
+    AwaitUnsafeOnCompleted<TAwaiter extends ICriticalNotifyCompletion, TStateMachine extends IAsyncStateMachine>(awaiter: TAwaiter, stateMachine: TStateMachine): void;
     SetException(exception: Exception): void;
     SetResult(): void;
     SetStateMachine(stateMachine: IAsyncStateMachine): void;
-    Start<TStateMachine extends IAsyncStateMachine>(stateMachine: { value: ref<TStateMachine> }): void;
+    Start<TStateMachine extends IAsyncStateMachine>(stateMachine: TStateMachine): void;
 }
 
 
@@ -187,12 +162,12 @@ export type AsyncTaskMethodBuilder = AsyncTaskMethodBuilder$instance;
 
 export interface AsyncTaskMethodBuilder_1$instance<TResult> {
     readonly Task: Task_1<TResult>;
-    AwaitOnCompleted<TAwaiter extends INotifyCompletion, TStateMachine extends IAsyncStateMachine>(awaiter: { value: ref<TAwaiter> }, stateMachine: { value: ref<TStateMachine> }): void;
-    AwaitUnsafeOnCompleted<TAwaiter extends ICriticalNotifyCompletion, TStateMachine extends IAsyncStateMachine>(awaiter: { value: ref<TAwaiter> }, stateMachine: { value: ref<TStateMachine> }): void;
+    AwaitOnCompleted<TAwaiter extends INotifyCompletion, TStateMachine extends IAsyncStateMachine>(awaiter: TAwaiter, stateMachine: TStateMachine): void;
+    AwaitUnsafeOnCompleted<TAwaiter extends ICriticalNotifyCompletion, TStateMachine extends IAsyncStateMachine>(awaiter: TAwaiter, stateMachine: TStateMachine): void;
     SetException(exception: Exception): void;
     SetResult(result: TResult): void;
     SetStateMachine(stateMachine: IAsyncStateMachine): void;
-    Start<TStateMachine extends IAsyncStateMachine>(stateMachine: { value: ref<TStateMachine> }): void;
+    Start<TStateMachine extends IAsyncStateMachine>(stateMachine: TStateMachine): void;
 }
 
 
@@ -206,12 +181,12 @@ export type AsyncTaskMethodBuilder_1<TResult> = AsyncTaskMethodBuilder_1$instanc
 
 export interface AsyncValueTaskMethodBuilder$instance {
     readonly Task: ValueTask;
-    AwaitOnCompleted<TAwaiter extends INotifyCompletion, TStateMachine extends IAsyncStateMachine>(awaiter: { value: ref<TAwaiter> }, stateMachine: { value: ref<TStateMachine> }): void;
-    AwaitUnsafeOnCompleted<TAwaiter extends ICriticalNotifyCompletion, TStateMachine extends IAsyncStateMachine>(awaiter: { value: ref<TAwaiter> }, stateMachine: { value: ref<TStateMachine> }): void;
+    AwaitOnCompleted<TAwaiter extends INotifyCompletion, TStateMachine extends IAsyncStateMachine>(awaiter: TAwaiter, stateMachine: TStateMachine): void;
+    AwaitUnsafeOnCompleted<TAwaiter extends ICriticalNotifyCompletion, TStateMachine extends IAsyncStateMachine>(awaiter: TAwaiter, stateMachine: TStateMachine): void;
     SetException(exception: Exception): void;
     SetResult(): void;
     SetStateMachine(stateMachine: IAsyncStateMachine): void;
-    Start<TStateMachine extends IAsyncStateMachine>(stateMachine: { value: ref<TStateMachine> }): void;
+    Start<TStateMachine extends IAsyncStateMachine>(stateMachine: TStateMachine): void;
 }
 
 
@@ -225,12 +200,12 @@ export type AsyncValueTaskMethodBuilder = AsyncValueTaskMethodBuilder$instance;
 
 export interface AsyncValueTaskMethodBuilder_1$instance<TResult> {
     readonly Task: ValueTask_1<TResult>;
-    AwaitOnCompleted<TAwaiter extends INotifyCompletion, TStateMachine extends IAsyncStateMachine>(awaiter: { value: ref<TAwaiter> }, stateMachine: { value: ref<TStateMachine> }): void;
-    AwaitUnsafeOnCompleted<TAwaiter extends ICriticalNotifyCompletion, TStateMachine extends IAsyncStateMachine>(awaiter: { value: ref<TAwaiter> }, stateMachine: { value: ref<TStateMachine> }): void;
+    AwaitOnCompleted<TAwaiter extends INotifyCompletion, TStateMachine extends IAsyncStateMachine>(awaiter: TAwaiter, stateMachine: TStateMachine): void;
+    AwaitUnsafeOnCompleted<TAwaiter extends ICriticalNotifyCompletion, TStateMachine extends IAsyncStateMachine>(awaiter: TAwaiter, stateMachine: TStateMachine): void;
     SetException(exception: Exception): void;
     SetResult(result: TResult): void;
     SetStateMachine(stateMachine: IAsyncStateMachine): void;
-    Start<TStateMachine extends IAsyncStateMachine>(stateMachine: { value: ref<TStateMachine> }): void;
+    Start<TStateMachine extends IAsyncStateMachine>(stateMachine: TStateMachine): void;
 }
 
 
@@ -243,12 +218,12 @@ export const AsyncValueTaskMethodBuilder_1: {
 export type AsyncValueTaskMethodBuilder_1<TResult> = AsyncValueTaskMethodBuilder_1$instance<TResult>;
 
 export interface AsyncVoidMethodBuilder$instance {
-    AwaitOnCompleted<TAwaiter extends INotifyCompletion, TStateMachine extends IAsyncStateMachine>(awaiter: { value: ref<TAwaiter> }, stateMachine: { value: ref<TStateMachine> }): void;
-    AwaitUnsafeOnCompleted<TAwaiter extends ICriticalNotifyCompletion, TStateMachine extends IAsyncStateMachine>(awaiter: { value: ref<TAwaiter> }, stateMachine: { value: ref<TStateMachine> }): void;
+    AwaitOnCompleted<TAwaiter extends INotifyCompletion, TStateMachine extends IAsyncStateMachine>(awaiter: TAwaiter, stateMachine: TStateMachine): void;
+    AwaitUnsafeOnCompleted<TAwaiter extends ICriticalNotifyCompletion, TStateMachine extends IAsyncStateMachine>(awaiter: TAwaiter, stateMachine: TStateMachine): void;
     SetException(exception: Exception): void;
     SetResult(): void;
     SetStateMachine(stateMachine: IAsyncStateMachine): void;
-    Start<TStateMachine extends IAsyncStateMachine>(stateMachine: { value: ref<TStateMachine> }): void;
+    Start<TStateMachine extends IAsyncStateMachine>(stateMachine: TStateMachine): void;
 }
 
 
@@ -289,7 +264,7 @@ export type ConfiguredCancelableAsyncEnumerable_1<T> = ConfiguredCancelableAsync
 export interface ConfiguredCancelableAsyncEnumerable_1_Enumerator$instance<T> {
     readonly Current: T;
     DisposeAsync(): ConfiguredValueTaskAwaitable;
-    MoveNextAsync(): ConfiguredValueTaskAwaitable_1<CLROf<boolean>>;
+    MoveNextAsync(): ConfiguredValueTaskAwaitable_1<System_Internal.Boolean>;
 }
 
 
@@ -437,13 +412,13 @@ export type ConfiguredValueTaskAwaitable_ConfiguredValueTaskAwaiter = Configured
 
 
 export interface DefaultInterpolatedStringHandler$instance {
-    readonly Text: ReadOnlySpan_1<CLROf<char>>;
+    readonly Text: ReadOnlySpan_1<System_Internal.Char>;
     AppendFormatted<T>(value: T): void;
     AppendFormatted<T>(value: T, format: string): void;
     AppendFormatted<T>(value: T, alignment: int): void;
     AppendFormatted<T>(value: T, alignment: int, format: string): void;
-    AppendFormatted(value: ReadOnlySpan_1<CLROf<char>>): void;
-    AppendFormatted(value: ReadOnlySpan_1<CLROf<char>>, alignment?: int, format?: string): void;
+    AppendFormatted(value: ReadOnlySpan_1<System_Internal.Char>): void;
+    AppendFormatted(value: ReadOnlySpan_1<System_Internal.Char>, alignment?: int, format?: string): void;
     AppendFormatted(value: string): void;
     AppendFormatted(value: string, alignment?: int, format?: string): void;
     AppendFormatted(value: unknown, alignment?: int, format?: string): void;
@@ -457,7 +432,7 @@ export interface DefaultInterpolatedStringHandler$instance {
 export const DefaultInterpolatedStringHandler: {
     new(literalLength: int, formattedCount: int): DefaultInterpolatedStringHandler$instance;
     new(literalLength: int, formattedCount: int, provider: IFormatProvider): DefaultInterpolatedStringHandler$instance;
-    new(literalLength: int, formattedCount: int, provider: IFormatProvider, initialBuffer: Span_1<CLROf<char>>): DefaultInterpolatedStringHandler$instance;
+    new(literalLength: int, formattedCount: int, provider: IFormatProvider, initialBuffer: Span_1<System_Internal.Char>): DefaultInterpolatedStringHandler$instance;
 };
 
 
@@ -630,12 +605,12 @@ export type InlineArray9_1<T> = InlineArray9_1$instance<T>;
 
 export interface PoolingAsyncValueTaskMethodBuilder$instance {
     readonly Task: ValueTask;
-    AwaitOnCompleted<TAwaiter extends INotifyCompletion, TStateMachine extends IAsyncStateMachine>(awaiter: { value: ref<TAwaiter> }, stateMachine: { value: ref<TStateMachine> }): void;
-    AwaitUnsafeOnCompleted<TAwaiter extends ICriticalNotifyCompletion, TStateMachine extends IAsyncStateMachine>(awaiter: { value: ref<TAwaiter> }, stateMachine: { value: ref<TStateMachine> }): void;
+    AwaitOnCompleted<TAwaiter extends INotifyCompletion, TStateMachine extends IAsyncStateMachine>(awaiter: TAwaiter, stateMachine: TStateMachine): void;
+    AwaitUnsafeOnCompleted<TAwaiter extends ICriticalNotifyCompletion, TStateMachine extends IAsyncStateMachine>(awaiter: TAwaiter, stateMachine: TStateMachine): void;
     SetException(exception: Exception): void;
     SetResult(): void;
     SetStateMachine(stateMachine: IAsyncStateMachine): void;
-    Start<TStateMachine extends IAsyncStateMachine>(stateMachine: { value: ref<TStateMachine> }): void;
+    Start<TStateMachine extends IAsyncStateMachine>(stateMachine: TStateMachine): void;
 }
 
 
@@ -649,12 +624,12 @@ export type PoolingAsyncValueTaskMethodBuilder = PoolingAsyncValueTaskMethodBuil
 
 export interface PoolingAsyncValueTaskMethodBuilder_1$instance<TResult> {
     readonly Task: ValueTask_1<TResult>;
-    AwaitOnCompleted<TAwaiter extends INotifyCompletion, TStateMachine extends IAsyncStateMachine>(awaiter: { value: ref<TAwaiter> }, stateMachine: { value: ref<TStateMachine> }): void;
-    AwaitUnsafeOnCompleted<TAwaiter extends ICriticalNotifyCompletion, TStateMachine extends IAsyncStateMachine>(awaiter: { value: ref<TAwaiter> }, stateMachine: { value: ref<TStateMachine> }): void;
+    AwaitOnCompleted<TAwaiter extends INotifyCompletion, TStateMachine extends IAsyncStateMachine>(awaiter: TAwaiter, stateMachine: TStateMachine): void;
+    AwaitUnsafeOnCompleted<TAwaiter extends ICriticalNotifyCompletion, TStateMachine extends IAsyncStateMachine>(awaiter: TAwaiter, stateMachine: TStateMachine): void;
     SetException(exception: Exception): void;
     SetResult(result: TResult): void;
     SetStateMachine(stateMachine: IAsyncStateMachine): void;
-    Start<TStateMachine extends IAsyncStateMachine>(stateMachine: { value: ref<TStateMachine> }): void;
+    Start<TStateMachine extends IAsyncStateMachine>(stateMachine: TStateMachine): void;
 }
 
 
@@ -1092,9 +1067,9 @@ export interface ConditionalWeakTable_2$instance<TKey, TValue> {
     GetOrCreateValue(key: TKey): TValue;
     GetValue(key: TKey, createValueCallback: ConditionalWeakTable_2_CreateValueCallback<TKey, TValue>): TValue;
     Remove(key: TKey): boolean;
-    Remove(key: TKey, value: { value: ref<TValue> }): boolean;
+    Remove(key: TKey, value: TValue): boolean;
     TryAdd(key: TKey, value: TValue): boolean;
-    TryGetValue(key: TKey, value: { value: ref<TValue> }): boolean;
+    TryGetValue(key: TKey, value: TValue): boolean;
 }
 
 
@@ -1242,7 +1217,7 @@ export const DiscardableAttribute: {
 export type DiscardableAttribute = DiscardableAttribute$instance;
 
 export interface DynamicAttribute$instance extends Attribute {
-    readonly TransformFlags: IList_1<CLROf<boolean>>;
+    readonly TransformFlags: IList_1<System_Internal.Boolean>;
 }
 
 
@@ -1843,7 +1818,7 @@ export type SwitchExpressionException = SwitchExpressionException$instance & __S
 
 
 export interface TupleElementNamesAttribute$instance extends Attribute {
-    readonly TransformNames: IList_1<CLROf<string>>;
+    readonly TransformNames: IList_1<System_Internal.String>;
 }
 
 
@@ -2073,7 +2048,7 @@ export type RuntimeFeature = RuntimeFeature$instance;
 export abstract class RuntimeHelpers$instance {
     static readonly OffsetToStringData: int;
     static AllocateTypeAssociatedMemory(type_: Type, size: int): nint;
-    static Box(target: { value: ref<byte> }, type_: RuntimeTypeHandle): unknown;
+    static Box(target: byte, type_: RuntimeTypeHandle): unknown;
     static CreateSpan<T>(fldHandle: RuntimeFieldHandle): ReadOnlySpan_1<T>;
     static EnsureSufficientExecutionStack(): void;
     static Equals(o1: unknown, o2: unknown): boolean;
@@ -2106,7 +2081,7 @@ export abstract class RuntimeOps$instance {
     static ExpandoCheckVersion(expando: ExpandoObject, version: unknown): boolean;
     static ExpandoPromoteClass(expando: ExpandoObject, oldClass: unknown, newClass: unknown): void;
     static ExpandoTryDeleteValue(expando: ExpandoObject, indexClass: unknown, index: int, name: string, ignoreCase: boolean): boolean;
-    static ExpandoTryGetValue(expando: ExpandoObject, indexClass: unknown, index: int, name: string, ignoreCase: boolean, value: { value: ref<unknown> }): boolean;
+    static ExpandoTryGetValue(expando: ExpandoObject, indexClass: unknown, index: int, name: string, ignoreCase: boolean, value: unknown): boolean;
     static ExpandoTrySetValue(expando: ExpandoObject, indexClass: unknown, index: int, value: unknown, name: string, ignoreCase: boolean): unknown;
     static MergeRuntimeVariables(first: IRuntimeVariables, second: IRuntimeVariables, indexes: int[]): IRuntimeVariables;
     static Quote(expression: Expression, hoistedLocals: unknown, locals: unknown[]): Expression;
@@ -2117,49 +2092,49 @@ export type RuntimeOps = RuntimeOps$instance;
 
 export abstract class Unsafe$instance {
     static Add<T>(source: ptr<void>, elementOffset: int): ptr<void>;
-    static Add<T>(source: { value: ref<T> }, elementOffset: int): ref<T>;
-    static Add<T>(source: { value: ref<T> }, elementOffset: nint): ref<T>;
-    static Add<T>(source: { value: ref<T> }, elementOffset: nuint): ref<T>;
-    static AddByteOffset<T>(source: { value: ref<T> }, byteOffset: nint): ref<T>;
-    static AddByteOffset<T>(source: { value: ref<T> }, byteOffset: nuint): ref<T>;
-    static AreSame<T>(left: { value: ref<T> }, right: { value: ref<T> }): boolean;
+    static Add<T>(source: T, elementOffset: int): T;
+    static Add<T>(source: T, elementOffset: nint): T;
+    static Add<T>(source: T, elementOffset: nuint): T;
+    static AddByteOffset<T>(source: T, byteOffset: nint): T;
+    static AddByteOffset<T>(source: T, byteOffset: nuint): T;
+    static AreSame<T>(left: T, right: T): boolean;
     static As<T>(o: unknown): T;
-    static As<TFrom, TTo>(source: { value: ref<TFrom> }): ref<TTo>;
-    static AsPointer<T>(value: { value: ref<T> }): ptr<void>;
-    static AsRef<T>(source: ptr<void>): ref<T>;
-    static AsRef<T>(source: { value: ref<T> }): ref<T>;
+    static As<TFrom, TTo>(source: TFrom): TTo;
+    static AsPointer<T>(value: T): ptr<void>;
+    static AsRef<T>(source: ptr<void>): T;
+    static AsRef<T>(source: T): T;
     static BitCast<TFrom, TTo>(source: TFrom): TTo;
-    static ByteOffset<T>(origin: { value: ref<T> }, target: { value: ref<T> }): nint;
-    static Copy<T>(destination: ptr<void>, source: { value: ref<T> }): void;
-    static Copy<T>(destination: { value: ref<T> }, source: ptr<void>): void;
-    static CopyBlock(destination: { value: ref<byte> }, source: { value: ref<byte> }, byteCount: uint): void;
+    static ByteOffset<T>(origin: T, target: T): nint;
+    static Copy<T>(destination: ptr<void>, source: T): void;
+    static Copy<T>(destination: T, source: ptr<void>): void;
+    static CopyBlock(destination: byte, source: byte, byteCount: uint): void;
     static CopyBlock(destination: ptr<void>, source: ptr<void>, byteCount: uint): void;
-    static CopyBlockUnaligned(destination: { value: ref<byte> }, source: { value: ref<byte> }, byteCount: uint): void;
+    static CopyBlockUnaligned(destination: byte, source: byte, byteCount: uint): void;
     static CopyBlockUnaligned(destination: ptr<void>, source: ptr<void>, byteCount: uint): void;
-    static InitBlock(startAddress: { value: ref<byte> }, value: byte, byteCount: uint): void;
+    static InitBlock(startAddress: byte, value: byte, byteCount: uint): void;
     static InitBlock(startAddress: ptr<void>, value: byte, byteCount: uint): void;
-    static InitBlockUnaligned(startAddress: { value: ref<byte> }, value: byte, byteCount: uint): void;
+    static InitBlockUnaligned(startAddress: byte, value: byte, byteCount: uint): void;
     static InitBlockUnaligned(startAddress: ptr<void>, value: byte, byteCount: uint): void;
-    static IsAddressGreaterThan<T>(left: { value: ref<T> }, right: { value: ref<T> }): boolean;
-    static IsAddressGreaterThanOrEqualTo<T>(left: { value: ref<T> }, right: { value: ref<T> }): boolean;
-    static IsAddressLessThan<T>(left: { value: ref<T> }, right: { value: ref<T> }): boolean;
-    static IsAddressLessThanOrEqualTo<T>(left: { value: ref<T> }, right: { value: ref<T> }): boolean;
-    static IsNullRef<T>(source: { value: ref<T> }): boolean;
-    static NullRef<T>(): ref<T>;
+    static IsAddressGreaterThan<T>(left: T, right: T): boolean;
+    static IsAddressGreaterThanOrEqualTo<T>(left: T, right: T): boolean;
+    static IsAddressLessThan<T>(left: T, right: T): boolean;
+    static IsAddressLessThanOrEqualTo<T>(left: T, right: T): boolean;
+    static IsNullRef<T>(source: T): boolean;
+    static NullRef<T>(): T;
     static Read<T>(source: ptr<void>): T;
-    static ReadUnaligned<T>(source: { value: ref<byte> }): T;
+    static ReadUnaligned<T>(source: byte): T;
     static ReadUnaligned<T>(source: ptr<void>): T;
     static SizeOf<T>(): int;
-    static SkipInit<T>(value: { value: ref<T> }): void;
+    static SkipInit<T>(value: T): void;
     static Subtract<T>(source: ptr<void>, elementOffset: int): ptr<void>;
-    static Subtract<T>(source: { value: ref<T> }, elementOffset: int): ref<T>;
-    static Subtract<T>(source: { value: ref<T> }, elementOffset: nint): ref<T>;
-    static Subtract<T>(source: { value: ref<T> }, elementOffset: nuint): ref<T>;
-    static SubtractByteOffset<T>(source: { value: ref<T> }, byteOffset: nint): ref<T>;
-    static SubtractByteOffset<T>(source: { value: ref<T> }, byteOffset: nuint): ref<T>;
-    static Unbox<T extends unknown>(box: unknown): ref<T>;
+    static Subtract<T>(source: T, elementOffset: int): T;
+    static Subtract<T>(source: T, elementOffset: nint): T;
+    static Subtract<T>(source: T, elementOffset: nuint): T;
+    static SubtractByteOffset<T>(source: T, byteOffset: nint): T;
+    static SubtractByteOffset<T>(source: T, byteOffset: nuint): T;
+    static Unbox<T extends unknown>(box: unknown): T;
     static Write<T>(destination: ptr<void>, value: T): void;
-    static WriteUnaligned<T>(destination: { value: ref<byte> }, value: T): void;
+    static WriteUnaligned<T>(destination: byte, value: T): void;
     static WriteUnaligned<T>(destination: ptr<void>, value: T): void;
 }
 

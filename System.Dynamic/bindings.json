@@ -2883,7 +2883,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Dynamic.DynamicObject",
           "declaringAssemblyName": "System.Linq.Expressions",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Linq.Expressions:System.Dynamic.DynamicObject::TrySetMember(System.Dynamic.SetMemberBinder,System.Object):System.Boolean",
@@ -2925,7 +2931,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.Dynamic.DynamicObject",
           "declaringAssemblyName": "System.Linq.Expressions",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Linq.Expressions:System.Dynamic.DynamicObject::TryConvert(System.Dynamic.ConvertBinder,System.Object\u0026):System.Boolean",
@@ -2939,7 +2951,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Dynamic.DynamicObject",
           "declaringAssemblyName": "System.Linq.Expressions",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Linq.Expressions:System.Dynamic.DynamicObject::TryCreateInstance(System.Dynamic.CreateInstanceBinder,System.Object[],System.Object\u0026):System.Boolean",
@@ -2953,7 +2971,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.Dynamic.DynamicObject",
           "declaringAssemblyName": "System.Linq.Expressions",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Linq.Expressions:System.Dynamic.DynamicObject::TryInvoke(System.Dynamic.InvokeBinder,System.Object[],System.Object\u0026):System.Boolean",
@@ -2967,7 +2991,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.Dynamic.DynamicObject",
           "declaringAssemblyName": "System.Linq.Expressions",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Linq.Expressions:System.Dynamic.DynamicObject::TryBinaryOperation(System.Dynamic.BinaryOperationBinder,System.Object,System.Object\u0026):System.Boolean",
@@ -2981,7 +3011,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.Dynamic.DynamicObject",
           "declaringAssemblyName": "System.Linq.Expressions",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Linq.Expressions:System.Dynamic.DynamicObject::TryUnaryOperation(System.Dynamic.UnaryOperationBinder,System.Object\u0026):System.Boolean",
@@ -2995,7 +3031,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Dynamic.DynamicObject",
           "declaringAssemblyName": "System.Linq.Expressions",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Linq.Expressions:System.Dynamic.DynamicObject::TryGetIndex(System.Dynamic.GetIndexBinder,System.Object[],System.Object\u0026):System.Boolean",
@@ -3009,7 +3051,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.Dynamic.DynamicObject",
           "declaringAssemblyName": "System.Linq.Expressions",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Linq.Expressions:System.Dynamic.DynamicObject::TrySetIndex(System.Dynamic.SetIndexBinder,System.Object[],System.Object):System.Boolean",
@@ -3360,7 +3408,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Collections.Generic.IDictionary\u00602",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Collections.Generic.ICollection\u00601::Add(T):System.Void",

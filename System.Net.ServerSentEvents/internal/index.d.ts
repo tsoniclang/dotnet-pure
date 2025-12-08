@@ -17,32 +17,7 @@ import type { CancellationToken } from "../../System.Threading/internal/index.js
 import * as System_Internal from "../../System/internal/index.js";
 import type { Action_2, AsyncCallback, Boolean as ClrBoolean, Byte, Delegate, IAsyncResult, ICloneable, Int32, IntPtr, MulticastDelegate, Nullable_1, Object as ClrObject, ReadOnlySpan_1, String as ClrString, TimeSpan, Type, ValueType, Void } from "../../System/internal/index.js";
 
-// CLROf<T> - Maps ergonomic primitives to their CLR types for generic constraints
-// This utility is used ONLY in generic type arguments to satisfy CLR interface constraints
-// Value positions (parameters, return types) use lowercase primitives for ergonomics
-export type CLROf<T> =
-    T extends sbyte ? System_Internal.SByte :
-    T extends short ? System_Internal.Int16 :
-    T extends int ? System_Internal.Int32 :
-    T extends long ? System_Internal.Int64 :
-    T extends int128 ? System_Internal.Int128 :
-    T extends nint ? System_Internal.IntPtr :
-    T extends byte ? System_Internal.Byte :
-    T extends ushort ? System_Internal.UInt16 :
-    T extends uint ? System_Internal.UInt32 :
-    T extends ulong ? System_Internal.UInt64 :
-    T extends uint128 ? System_Internal.UInt128 :
-    T extends nuint ? System_Internal.UIntPtr :
-    T extends half ? System_Internal.Half :
-    T extends float ? System_Internal.Single :
-    T extends double ? System_Internal.Double :
-    T extends decimal ? System_Internal.Decimal :
-    T extends char ? System_Internal.Char :
-    T extends boolean ? System_Internal.Boolean :
-    T extends string ? System_Internal.String :
-    T; // Identity fallback for non-primitive types
-
-export type SseItemParser_1<T> = (eventType: string, data: ReadOnlySpan_1<CLROf<byte>>) => T;
+export type SseItemParser_1<T> = (eventType: string, data: ReadOnlySpan_1<System_Internal.Byte>) => T;
 
 
 export interface SseItem_1$instance<T> {
@@ -76,8 +51,8 @@ export const SseParser_1: {
 export type SseParser_1<T> = SseParser_1$instance<T>;
 
 export abstract class SseFormatter$instance {
-    static WriteAsync<T>(source: IAsyncEnumerable_1<SseItem_1<T>>, destination: Stream, itemFormatter: Action_2<SseItem_1<T>, IBufferWriter_1<CLROf<byte>>>, cancellationToken?: CancellationToken): Task;
-    static WriteAsync(source: IAsyncEnumerable_1<SseItem_1<CLROf<string>>>, destination: Stream, cancellationToken?: CancellationToken): Task;
+    static WriteAsync<T>(source: IAsyncEnumerable_1<SseItem_1<T>>, destination: Stream, itemFormatter: Action_2<SseItem_1<T>, IBufferWriter_1<System_Internal.Byte>>, cancellationToken?: CancellationToken): Task;
+    static WriteAsync(source: IAsyncEnumerable_1<SseItem_1<System_Internal.String>>, destination: Stream, cancellationToken?: CancellationToken): Task;
 }
 
 
@@ -86,7 +61,7 @@ export type SseFormatter = SseFormatter$instance;
 export abstract class SseParser$instance {
     static readonly EventTypeDefault: string;
     static Create<T>(sseStream: Stream, itemParser: SseItemParser_1<T>): SseParser_1<T>;
-    static Create(sseStream: Stream): SseParser_1<CLROf<string>>;
+    static Create(sseStream: Stream): SseParser_1<System_Internal.String>;
 }
 
 

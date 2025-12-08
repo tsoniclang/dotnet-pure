@@ -13859,7 +13859,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Net.Security.NegotiateAuthentication",
           "declaringAssemblyName": "System.Net.Security",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Net.Security:System.Net.Security.NegotiateAuthentication::GetOutgoingBlob(System.String,System.Net.Security.NegotiateAuthenticationStatusCode\u0026):System.String",
@@ -13873,7 +13879,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Net.Security.NegotiateAuthentication",
           "declaringAssemblyName": "System.Net.Security",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Net.Security:System.Net.Security.NegotiateAuthentication::Wrap(System.ReadOnlySpan_1[[System.Byte,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Buffers.IBufferWriter_1[[System.Byte,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Boolean,System.Boolean\u0026):System.Net.Security.NegotiateAuthenticationStatusCode",
@@ -13887,7 +13899,13 @@
           "parameterCount": 4,
           "declaringClrType": "System.Net.Security.NegotiateAuthentication",
           "declaringAssemblyName": "System.Net.Security",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 3,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Net.Security:System.Net.Security.NegotiateAuthentication::Unwrap(System.ReadOnlySpan_1[[System.Byte,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Buffers.IBufferWriter_1[[System.Byte,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Boolean\u0026):System.Net.Security.NegotiateAuthenticationStatusCode",
@@ -13901,7 +13919,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.Net.Security.NegotiateAuthentication",
           "declaringAssemblyName": "System.Net.Security",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Net.Security:System.Net.Security.NegotiateAuthentication::UnwrapInPlace(System.Span_1[[System.Byte,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Int32\u0026,System.Int32\u0026,System.Boolean\u0026):System.Net.Security.NegotiateAuthenticationStatusCode",
@@ -13915,7 +13939,21 @@
           "parameterCount": 4,
           "declaringClrType": "System.Net.Security.NegotiateAuthentication",
           "declaringAssemblyName": "System.Net.Security",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            },
+            {
+              "index": 2,
+              "modifier": "out"
+            },
+            {
+              "index": 3,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Net.Security:System.Net.Security.NegotiateAuthentication::ComputeIntegrityCheck(System.ReadOnlySpan_1[[System.Byte,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Buffers.IBufferWriter_1[[System.Byte,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]):System.Void",

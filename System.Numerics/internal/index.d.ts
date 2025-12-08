@@ -6,7 +6,7 @@
 import type { sbyte, byte, short, ushort, int, uint, long, ulong, int128, uint128, half, float, double, decimal, nint, nuint, char } from '@tsonic/types';
 
 // Import support types from @tsonic/types
-import type { ptr, ref } from "@tsonic/types";
+import type { ptr } from "@tsonic/types";
 
 // Import types from other namespaces
 import * as System_Collections_Generic_Internal from "../../System.Collections.Generic/internal/index.js";
@@ -14,31 +14,6 @@ import type { IComparer_1, IEqualityComparer_1 } from "../../System.Collections.
 import type { NumberStyles } from "../../System.Globalization/internal/index.js";
 import * as System_Internal from "../../System/internal/index.js";
 import type { Boolean as ClrBoolean, Byte, Char, Decimal, Double, IComparable, IComparable_1, IEquatable_1, IFormatProvider, IFormattable, Int16, Int32, Int64, IntPtr, IParsable_1, ISpanFormattable, ISpanParsable_1, IUtf8SpanFormattable, IUtf8SpanParsable_1, MidpointRounding, Object as ClrObject, ReadOnlySpan_1, SByte, Single, Span_1, String as ClrString, Type, UInt16, UInt32, UInt64, UIntPtr, ValueTuple_2, ValueType, Void } from "../../System/internal/index.js";
-
-// CLROf<T> - Maps ergonomic primitives to their CLR types for generic constraints
-// This utility is used ONLY in generic type arguments to satisfy CLR interface constraints
-// Value positions (parameters, return types) use lowercase primitives for ergonomics
-export type CLROf<T> =
-    T extends sbyte ? System_Internal.SByte :
-    T extends short ? System_Internal.Int16 :
-    T extends int ? System_Internal.Int32 :
-    T extends long ? System_Internal.Int64 :
-    T extends int128 ? System_Internal.Int128 :
-    T extends nint ? System_Internal.IntPtr :
-    T extends byte ? System_Internal.Byte :
-    T extends ushort ? System_Internal.UInt16 :
-    T extends uint ? System_Internal.UInt32 :
-    T extends ulong ? System_Internal.UInt64 :
-    T extends uint128 ? System_Internal.UInt128 :
-    T extends nuint ? System_Internal.UIntPtr :
-    T extends half ? System_Internal.Half :
-    T extends float ? System_Internal.Single :
-    T extends double ? System_Internal.Double :
-    T extends decimal ? System_Internal.Decimal :
-    T extends char ? System_Internal.Char :
-    T extends boolean ? System_Internal.Boolean :
-    T extends string ? System_Internal.String :
-    T; // Identity fallback for non-primitive types
 
 export interface IAdditionOperators_3$instance<TSelf extends IAdditionOperators_3<TSelf, TOther, TResult>, TOther, TResult> {
 }
@@ -52,48 +27,48 @@ export interface IAdditiveIdentity_2$instance<TSelf extends IAdditiveIdentity_2<
 
 export type IAdditiveIdentity_2<TSelf extends IAdditiveIdentity_2<TSelf, TResult>, TResult> = IAdditiveIdentity_2$instance<TSelf, TResult>;
 
-export interface IBinaryFloatingPointIeee754_1$instance<TSelf extends IBinaryFloatingPointIeee754_1<TSelf>> extends IBinaryNumber_1<TSelf>, IBitwiseOperators_3<TSelf, TSelf, TSelf>, INumber_1<TSelf>, IComparable, IComparable_1<TSelf>, IComparisonOperators_3<TSelf, TSelf, CLROf<boolean>>, IEqualityOperators_3<TSelf, TSelf, CLROf<boolean>>, IModulusOperators_3<TSelf, TSelf, TSelf>, INumberBase_1<TSelf>, IAdditionOperators_3<TSelf, TSelf, TSelf>, IAdditiveIdentity_2<TSelf, TSelf>, IDecrementOperators_1<TSelf>, IDivisionOperators_3<TSelf, TSelf, TSelf>, IEquatable_1<TSelf>, IIncrementOperators_1<TSelf>, IMultiplicativeIdentity_2<TSelf, TSelf>, IMultiplyOperators_3<TSelf, TSelf, TSelf>, ISpanFormattable, IFormattable, ISpanParsable_1<TSelf>, IParsable_1<TSelf>, ISubtractionOperators_3<TSelf, TSelf, TSelf>, IUnaryPlusOperators_2<TSelf, TSelf>, IUnaryNegationOperators_2<TSelf, TSelf>, IUtf8SpanFormattable, IUtf8SpanParsable_1<TSelf>, IFloatingPointIeee754_1<TSelf>, IExponentialFunctions_1<TSelf>, IFloatingPointConstants_1<TSelf>, IFloatingPoint_1<TSelf>, ISignedNumber_1<TSelf>, IHyperbolicFunctions_1<TSelf>, ILogarithmicFunctions_1<TSelf>, IPowerFunctions_1<TSelf>, IRootFunctions_1<TSelf>, ITrigonometricFunctions_1<TSelf> {
+export interface IBinaryFloatingPointIeee754_1$instance<TSelf extends IBinaryFloatingPointIeee754_1<TSelf>> extends IBinaryNumber_1<TSelf>, IBitwiseOperators_3<TSelf, TSelf, TSelf>, INumber_1<TSelf>, IComparable, IComparable_1<TSelf>, IComparisonOperators_3<TSelf, TSelf, System_Internal.Boolean>, IEqualityOperators_3<TSelf, TSelf, System_Internal.Boolean>, IModulusOperators_3<TSelf, TSelf, TSelf>, INumberBase_1<TSelf>, IAdditionOperators_3<TSelf, TSelf, TSelf>, IAdditiveIdentity_2<TSelf, TSelf>, IDecrementOperators_1<TSelf>, IDivisionOperators_3<TSelf, TSelf, TSelf>, IEquatable_1<TSelf>, IIncrementOperators_1<TSelf>, IMultiplicativeIdentity_2<TSelf, TSelf>, IMultiplyOperators_3<TSelf, TSelf, TSelf>, ISpanFormattable, IFormattable, ISpanParsable_1<TSelf>, IParsable_1<TSelf>, ISubtractionOperators_3<TSelf, TSelf, TSelf>, IUnaryPlusOperators_2<TSelf, TSelf>, IUnaryNegationOperators_2<TSelf, TSelf>, IUtf8SpanFormattable, IUtf8SpanParsable_1<TSelf>, IFloatingPointIeee754_1<TSelf>, IExponentialFunctions_1<TSelf>, IFloatingPointConstants_1<TSelf>, IFloatingPoint_1<TSelf>, ISignedNumber_1<TSelf>, IHyperbolicFunctions_1<TSelf>, ILogarithmicFunctions_1<TSelf>, IPowerFunctions_1<TSelf>, IRootFunctions_1<TSelf>, ITrigonometricFunctions_1<TSelf> {
     CompareTo(obj: unknown): int;
     CompareTo(other: TSelf): int;
     GetExponentByteCount(): int;
     ToString(format: string, formatProvider: IFormatProvider): string;
-    TryFormat(destination: Span_1<CLROf<char>>, charsWritten: { value: ref<int> }, format: ReadOnlySpan_1<CLROf<char>>, provider: IFormatProvider): boolean;
-    TryFormat(utf8Destination: Span_1<CLROf<byte>>, bytesWritten: { value: ref<int> }, format: ReadOnlySpan_1<CLROf<char>>, provider: IFormatProvider): boolean;
-    TryWriteExponentBigEndian(destination: Span_1<CLROf<byte>>, bytesWritten: { value: ref<int> }): boolean;
+    TryFormat(destination: Span_1<System_Internal.Char>, charsWritten: int, format: ReadOnlySpan_1<System_Internal.Char>, provider: IFormatProvider): boolean;
+    TryFormat(utf8Destination: Span_1<System_Internal.Byte>, bytesWritten: int, format: ReadOnlySpan_1<System_Internal.Char>, provider: IFormatProvider): boolean;
+    TryWriteExponentBigEndian(destination: Span_1<System_Internal.Byte>, bytesWritten: int): boolean;
     WriteExponentBigEndian(destination: byte[], startIndex: int): int;
     WriteExponentBigEndian(destination: byte[]): int;
-    WriteExponentBigEndian(destination: Span_1<CLROf<byte>>): int;
+    WriteExponentBigEndian(destination: Span_1<System_Internal.Byte>): int;
     Equals(other: TSelf): boolean;
 }
 
 
 export type IBinaryFloatingPointIeee754_1<TSelf extends IBinaryFloatingPointIeee754_1<TSelf>> = IBinaryFloatingPointIeee754_1$instance<TSelf>;
 
-export interface IBinaryInteger_1$instance<TSelf extends IBinaryInteger_1<TSelf>> extends IBinaryNumber_1<TSelf>, IBitwiseOperators_3<TSelf, TSelf, TSelf>, INumber_1<TSelf>, IComparable, IComparable_1<TSelf>, IComparisonOperators_3<TSelf, TSelf, CLROf<boolean>>, IEqualityOperators_3<TSelf, TSelf, CLROf<boolean>>, IModulusOperators_3<TSelf, TSelf, TSelf>, INumberBase_1<TSelf>, IAdditionOperators_3<TSelf, TSelf, TSelf>, IAdditiveIdentity_2<TSelf, TSelf>, IDecrementOperators_1<TSelf>, IDivisionOperators_3<TSelf, TSelf, TSelf>, IEquatable_1<TSelf>, IIncrementOperators_1<TSelf>, IMultiplicativeIdentity_2<TSelf, TSelf>, IMultiplyOperators_3<TSelf, TSelf, TSelf>, ISpanFormattable, IFormattable, ISpanParsable_1<TSelf>, IParsable_1<TSelf>, ISubtractionOperators_3<TSelf, TSelf, TSelf>, IUnaryPlusOperators_2<TSelf, TSelf>, IUnaryNegationOperators_2<TSelf, TSelf>, IUtf8SpanFormattable, IUtf8SpanParsable_1<TSelf>, IShiftOperators_3<TSelf, CLROf<int>, TSelf> {
+export interface IBinaryInteger_1$instance<TSelf extends IBinaryInteger_1<TSelf>> extends IBinaryNumber_1<TSelf>, IBitwiseOperators_3<TSelf, TSelf, TSelf>, INumber_1<TSelf>, IComparable, IComparable_1<TSelf>, IComparisonOperators_3<TSelf, TSelf, System_Internal.Boolean>, IEqualityOperators_3<TSelf, TSelf, System_Internal.Boolean>, IModulusOperators_3<TSelf, TSelf, TSelf>, INumberBase_1<TSelf>, IAdditionOperators_3<TSelf, TSelf, TSelf>, IAdditiveIdentity_2<TSelf, TSelf>, IDecrementOperators_1<TSelf>, IDivisionOperators_3<TSelf, TSelf, TSelf>, IEquatable_1<TSelf>, IIncrementOperators_1<TSelf>, IMultiplicativeIdentity_2<TSelf, TSelf>, IMultiplyOperators_3<TSelf, TSelf, TSelf>, ISpanFormattable, IFormattable, ISpanParsable_1<TSelf>, IParsable_1<TSelf>, ISubtractionOperators_3<TSelf, TSelf, TSelf>, IUnaryPlusOperators_2<TSelf, TSelf>, IUnaryNegationOperators_2<TSelf, TSelf>, IUtf8SpanFormattable, IUtf8SpanParsable_1<TSelf>, IShiftOperators_3<TSelf, System_Internal.Int32, TSelf> {
     CompareTo(obj: unknown): int;
     CompareTo(other: TSelf): int;
     GetByteCount(): int;
     ToString(format: string, formatProvider: IFormatProvider): string;
-    TryFormat(destination: Span_1<CLROf<char>>, charsWritten: { value: ref<int> }, format: ReadOnlySpan_1<CLROf<char>>, provider: IFormatProvider): boolean;
-    TryFormat(utf8Destination: Span_1<CLROf<byte>>, bytesWritten: { value: ref<int> }, format: ReadOnlySpan_1<CLROf<char>>, provider: IFormatProvider): boolean;
-    TryWriteBigEndian(destination: Span_1<CLROf<byte>>, bytesWritten: { value: ref<int> }): boolean;
+    TryFormat(destination: Span_1<System_Internal.Char>, charsWritten: int, format: ReadOnlySpan_1<System_Internal.Char>, provider: IFormatProvider): boolean;
+    TryFormat(utf8Destination: Span_1<System_Internal.Byte>, bytesWritten: int, format: ReadOnlySpan_1<System_Internal.Char>, provider: IFormatProvider): boolean;
+    TryWriteBigEndian(destination: Span_1<System_Internal.Byte>, bytesWritten: int): boolean;
     WriteBigEndian(destination: byte[], startIndex: int): int;
     WriteBigEndian(destination: byte[]): int;
-    WriteBigEndian(destination: Span_1<CLROf<byte>>): int;
+    WriteBigEndian(destination: Span_1<System_Internal.Byte>): int;
     Equals(other: TSelf): boolean;
 }
 
 
-export interface IBinaryInteger_1$instance<TSelf extends IBinaryInteger_1<TSelf>> extends IShiftOperators_3$instance<TSelf, CLROf<int>, TSelf> {}
+export interface IBinaryInteger_1$instance<TSelf extends IBinaryInteger_1<TSelf>> extends IShiftOperators_3$instance<TSelf, System_Internal.Int32, TSelf> {}
 
 export type IBinaryInteger_1<TSelf extends IBinaryInteger_1<TSelf>> = IBinaryInteger_1$instance<TSelf>;
 
-export interface IBinaryNumber_1$instance<TSelf extends IBinaryNumber_1<TSelf>> extends IBitwiseOperators_3<TSelf, TSelf, TSelf>, INumber_1<TSelf>, IComparable, IComparable_1<TSelf>, IComparisonOperators_3<TSelf, TSelf, CLROf<boolean>>, IEqualityOperators_3<TSelf, TSelf, CLROf<boolean>>, IModulusOperators_3<TSelf, TSelf, TSelf>, INumberBase_1<TSelf>, IAdditionOperators_3<TSelf, TSelf, TSelf>, IAdditiveIdentity_2<TSelf, TSelf>, IDecrementOperators_1<TSelf>, IDivisionOperators_3<TSelf, TSelf, TSelf>, IEquatable_1<TSelf>, IIncrementOperators_1<TSelf>, IMultiplicativeIdentity_2<TSelf, TSelf>, IMultiplyOperators_3<TSelf, TSelf, TSelf>, ISpanFormattable, IFormattable, ISpanParsable_1<TSelf>, IParsable_1<TSelf>, ISubtractionOperators_3<TSelf, TSelf, TSelf>, IUnaryPlusOperators_2<TSelf, TSelf>, IUnaryNegationOperators_2<TSelf, TSelf>, IUtf8SpanFormattable, IUtf8SpanParsable_1<TSelf> {
+export interface IBinaryNumber_1$instance<TSelf extends IBinaryNumber_1<TSelf>> extends IBitwiseOperators_3<TSelf, TSelf, TSelf>, INumber_1<TSelf>, IComparable, IComparable_1<TSelf>, IComparisonOperators_3<TSelf, TSelf, System_Internal.Boolean>, IEqualityOperators_3<TSelf, TSelf, System_Internal.Boolean>, IModulusOperators_3<TSelf, TSelf, TSelf>, INumberBase_1<TSelf>, IAdditionOperators_3<TSelf, TSelf, TSelf>, IAdditiveIdentity_2<TSelf, TSelf>, IDecrementOperators_1<TSelf>, IDivisionOperators_3<TSelf, TSelf, TSelf>, IEquatable_1<TSelf>, IIncrementOperators_1<TSelf>, IMultiplicativeIdentity_2<TSelf, TSelf>, IMultiplyOperators_3<TSelf, TSelf, TSelf>, ISpanFormattable, IFormattable, ISpanParsable_1<TSelf>, IParsable_1<TSelf>, ISubtractionOperators_3<TSelf, TSelf, TSelf>, IUnaryPlusOperators_2<TSelf, TSelf>, IUnaryNegationOperators_2<TSelf, TSelf>, IUtf8SpanFormattable, IUtf8SpanParsable_1<TSelf> {
     CompareTo(obj: unknown): int;
     CompareTo(other: TSelf): int;
     ToString(format: string, formatProvider: IFormatProvider): string;
-    TryFormat(destination: Span_1<CLROf<char>>, charsWritten: { value: ref<int> }, format: ReadOnlySpan_1<CLROf<char>>, provider: IFormatProvider): boolean;
-    TryFormat(utf8Destination: Span_1<CLROf<byte>>, bytesWritten: { value: ref<int> }, format: ReadOnlySpan_1<CLROf<char>>, provider: IFormatProvider): boolean;
+    TryFormat(destination: Span_1<System_Internal.Char>, charsWritten: int, format: ReadOnlySpan_1<System_Internal.Char>, provider: IFormatProvider): boolean;
+    TryFormat(utf8Destination: Span_1<System_Internal.Byte>, bytesWritten: int, format: ReadOnlySpan_1<System_Internal.Char>, provider: IFormatProvider): boolean;
     Equals(other: TSelf): boolean;
 }
 
@@ -134,64 +109,64 @@ export interface IEqualityOperators_3$instance<TSelf extends IEqualityOperators_
 
 export type IEqualityOperators_3<TSelf extends IEqualityOperators_3<TSelf, TOther, TResult>, TOther, TResult> = IEqualityOperators_3$instance<TSelf, TOther, TResult>;
 
-export interface IExponentialFunctions_1$instance<TSelf extends IExponentialFunctions_1<TSelf>> extends IFloatingPointConstants_1<TSelf>, INumberBase_1<TSelf>, IAdditionOperators_3<TSelf, TSelf, TSelf>, IAdditiveIdentity_2<TSelf, TSelf>, IDecrementOperators_1<TSelf>, IDivisionOperators_3<TSelf, TSelf, TSelf>, IEquatable_1<TSelf>, IEqualityOperators_3<TSelf, TSelf, CLROf<boolean>>, IIncrementOperators_1<TSelf>, IMultiplicativeIdentity_2<TSelf, TSelf>, IMultiplyOperators_3<TSelf, TSelf, TSelf>, ISpanFormattable, IFormattable, ISpanParsable_1<TSelf>, IParsable_1<TSelf>, ISubtractionOperators_3<TSelf, TSelf, TSelf>, IUnaryPlusOperators_2<TSelf, TSelf>, IUnaryNegationOperators_2<TSelf, TSelf>, IUtf8SpanFormattable, IUtf8SpanParsable_1<TSelf> {
+export interface IExponentialFunctions_1$instance<TSelf extends IExponentialFunctions_1<TSelf>> extends IFloatingPointConstants_1<TSelf>, INumberBase_1<TSelf>, IAdditionOperators_3<TSelf, TSelf, TSelf>, IAdditiveIdentity_2<TSelf, TSelf>, IDecrementOperators_1<TSelf>, IDivisionOperators_3<TSelf, TSelf, TSelf>, IEquatable_1<TSelf>, IEqualityOperators_3<TSelf, TSelf, System_Internal.Boolean>, IIncrementOperators_1<TSelf>, IMultiplicativeIdentity_2<TSelf, TSelf>, IMultiplyOperators_3<TSelf, TSelf, TSelf>, ISpanFormattable, IFormattable, ISpanParsable_1<TSelf>, IParsable_1<TSelf>, ISubtractionOperators_3<TSelf, TSelf, TSelf>, IUnaryPlusOperators_2<TSelf, TSelf>, IUnaryNegationOperators_2<TSelf, TSelf>, IUtf8SpanFormattable, IUtf8SpanParsable_1<TSelf> {
     ToString(format: string, formatProvider: IFormatProvider): string;
-    TryFormat(destination: Span_1<CLROf<char>>, charsWritten: { value: ref<int> }, format: ReadOnlySpan_1<CLROf<char>>, provider: IFormatProvider): boolean;
-    TryFormat(utf8Destination: Span_1<CLROf<byte>>, bytesWritten: { value: ref<int> }, format: ReadOnlySpan_1<CLROf<char>>, provider: IFormatProvider): boolean;
+    TryFormat(destination: Span_1<System_Internal.Char>, charsWritten: int, format: ReadOnlySpan_1<System_Internal.Char>, provider: IFormatProvider): boolean;
+    TryFormat(utf8Destination: Span_1<System_Internal.Byte>, bytesWritten: int, format: ReadOnlySpan_1<System_Internal.Char>, provider: IFormatProvider): boolean;
     Equals(other: TSelf): boolean;
 }
 
 
 export type IExponentialFunctions_1<TSelf extends IExponentialFunctions_1<TSelf>> = IExponentialFunctions_1$instance<TSelf>;
 
-export interface IFloatingPoint_1$instance<TSelf extends IFloatingPoint_1<TSelf>> extends IFloatingPointConstants_1<TSelf>, INumberBase_1<TSelf>, IAdditionOperators_3<TSelf, TSelf, TSelf>, IAdditiveIdentity_2<TSelf, TSelf>, IDecrementOperators_1<TSelf>, IDivisionOperators_3<TSelf, TSelf, TSelf>, IEquatable_1<TSelf>, IEqualityOperators_3<TSelf, TSelf, CLROf<boolean>>, IIncrementOperators_1<TSelf>, IMultiplicativeIdentity_2<TSelf, TSelf>, IMultiplyOperators_3<TSelf, TSelf, TSelf>, ISpanFormattable, IFormattable, ISpanParsable_1<TSelf>, IParsable_1<TSelf>, ISubtractionOperators_3<TSelf, TSelf, TSelf>, IUnaryPlusOperators_2<TSelf, TSelf>, IUnaryNegationOperators_2<TSelf, TSelf>, IUtf8SpanFormattable, IUtf8SpanParsable_1<TSelf>, INumber_1<TSelf>, IComparable, IComparable_1<TSelf>, IComparisonOperators_3<TSelf, TSelf, CLROf<boolean>>, IModulusOperators_3<TSelf, TSelf, TSelf>, ISignedNumber_1<TSelf> {
+export interface IFloatingPoint_1$instance<TSelf extends IFloatingPoint_1<TSelf>> extends IFloatingPointConstants_1<TSelf>, INumberBase_1<TSelf>, IAdditionOperators_3<TSelf, TSelf, TSelf>, IAdditiveIdentity_2<TSelf, TSelf>, IDecrementOperators_1<TSelf>, IDivisionOperators_3<TSelf, TSelf, TSelf>, IEquatable_1<TSelf>, IEqualityOperators_3<TSelf, TSelf, System_Internal.Boolean>, IIncrementOperators_1<TSelf>, IMultiplicativeIdentity_2<TSelf, TSelf>, IMultiplyOperators_3<TSelf, TSelf, TSelf>, ISpanFormattable, IFormattable, ISpanParsable_1<TSelf>, IParsable_1<TSelf>, ISubtractionOperators_3<TSelf, TSelf, TSelf>, IUnaryPlusOperators_2<TSelf, TSelf>, IUnaryNegationOperators_2<TSelf, TSelf>, IUtf8SpanFormattable, IUtf8SpanParsable_1<TSelf>, INumber_1<TSelf>, IComparable, IComparable_1<TSelf>, IComparisonOperators_3<TSelf, TSelf, System_Internal.Boolean>, IModulusOperators_3<TSelf, TSelf, TSelf>, ISignedNumber_1<TSelf> {
     CompareTo(obj: unknown): int;
     CompareTo(other: TSelf): int;
     GetExponentByteCount(): int;
     ToString(format: string, formatProvider: IFormatProvider): string;
-    TryFormat(destination: Span_1<CLROf<char>>, charsWritten: { value: ref<int> }, format: ReadOnlySpan_1<CLROf<char>>, provider: IFormatProvider): boolean;
-    TryFormat(utf8Destination: Span_1<CLROf<byte>>, bytesWritten: { value: ref<int> }, format: ReadOnlySpan_1<CLROf<char>>, provider: IFormatProvider): boolean;
-    TryWriteExponentBigEndian(destination: Span_1<CLROf<byte>>, bytesWritten: { value: ref<int> }): boolean;
+    TryFormat(destination: Span_1<System_Internal.Char>, charsWritten: int, format: ReadOnlySpan_1<System_Internal.Char>, provider: IFormatProvider): boolean;
+    TryFormat(utf8Destination: Span_1<System_Internal.Byte>, bytesWritten: int, format: ReadOnlySpan_1<System_Internal.Char>, provider: IFormatProvider): boolean;
+    TryWriteExponentBigEndian(destination: Span_1<System_Internal.Byte>, bytesWritten: int): boolean;
     WriteExponentBigEndian(destination: byte[], startIndex: int): int;
     WriteExponentBigEndian(destination: byte[]): int;
-    WriteExponentBigEndian(destination: Span_1<CLROf<byte>>): int;
+    WriteExponentBigEndian(destination: Span_1<System_Internal.Byte>): int;
     Equals(other: TSelf): boolean;
 }
 
 
 export type IFloatingPoint_1<TSelf extends IFloatingPoint_1<TSelf>> = IFloatingPoint_1$instance<TSelf>;
 
-export interface IFloatingPointConstants_1$instance<TSelf extends IFloatingPointConstants_1<TSelf>> extends INumberBase_1<TSelf>, IAdditionOperators_3<TSelf, TSelf, TSelf>, IAdditiveIdentity_2<TSelf, TSelf>, IDecrementOperators_1<TSelf>, IDivisionOperators_3<TSelf, TSelf, TSelf>, IEquatable_1<TSelf>, IEqualityOperators_3<TSelf, TSelf, CLROf<boolean>>, IIncrementOperators_1<TSelf>, IMultiplicativeIdentity_2<TSelf, TSelf>, IMultiplyOperators_3<TSelf, TSelf, TSelf>, ISpanFormattable, IFormattable, ISpanParsable_1<TSelf>, IParsable_1<TSelf>, ISubtractionOperators_3<TSelf, TSelf, TSelf>, IUnaryPlusOperators_2<TSelf, TSelf>, IUnaryNegationOperators_2<TSelf, TSelf>, IUtf8SpanFormattable, IUtf8SpanParsable_1<TSelf> {
+export interface IFloatingPointConstants_1$instance<TSelf extends IFloatingPointConstants_1<TSelf>> extends INumberBase_1<TSelf>, IAdditionOperators_3<TSelf, TSelf, TSelf>, IAdditiveIdentity_2<TSelf, TSelf>, IDecrementOperators_1<TSelf>, IDivisionOperators_3<TSelf, TSelf, TSelf>, IEquatable_1<TSelf>, IEqualityOperators_3<TSelf, TSelf, System_Internal.Boolean>, IIncrementOperators_1<TSelf>, IMultiplicativeIdentity_2<TSelf, TSelf>, IMultiplyOperators_3<TSelf, TSelf, TSelf>, ISpanFormattable, IFormattable, ISpanParsable_1<TSelf>, IParsable_1<TSelf>, ISubtractionOperators_3<TSelf, TSelf, TSelf>, IUnaryPlusOperators_2<TSelf, TSelf>, IUnaryNegationOperators_2<TSelf, TSelf>, IUtf8SpanFormattable, IUtf8SpanParsable_1<TSelf> {
     ToString(format: string, formatProvider: IFormatProvider): string;
-    TryFormat(destination: Span_1<CLROf<char>>, charsWritten: { value: ref<int> }, format: ReadOnlySpan_1<CLROf<char>>, provider: IFormatProvider): boolean;
-    TryFormat(utf8Destination: Span_1<CLROf<byte>>, bytesWritten: { value: ref<int> }, format: ReadOnlySpan_1<CLROf<char>>, provider: IFormatProvider): boolean;
+    TryFormat(destination: Span_1<System_Internal.Char>, charsWritten: int, format: ReadOnlySpan_1<System_Internal.Char>, provider: IFormatProvider): boolean;
+    TryFormat(utf8Destination: Span_1<System_Internal.Byte>, bytesWritten: int, format: ReadOnlySpan_1<System_Internal.Char>, provider: IFormatProvider): boolean;
     Equals(other: TSelf): boolean;
 }
 
 
 export type IFloatingPointConstants_1<TSelf extends IFloatingPointConstants_1<TSelf>> = IFloatingPointConstants_1$instance<TSelf>;
 
-export interface IFloatingPointIeee754_1$instance<TSelf extends IFloatingPointIeee754_1<TSelf>> extends IExponentialFunctions_1<TSelf>, IFloatingPointConstants_1<TSelf>, INumberBase_1<TSelf>, IAdditionOperators_3<TSelf, TSelf, TSelf>, IAdditiveIdentity_2<TSelf, TSelf>, IDecrementOperators_1<TSelf>, IDivisionOperators_3<TSelf, TSelf, TSelf>, IEquatable_1<TSelf>, IEqualityOperators_3<TSelf, TSelf, CLROf<boolean>>, IIncrementOperators_1<TSelf>, IMultiplicativeIdentity_2<TSelf, TSelf>, IMultiplyOperators_3<TSelf, TSelf, TSelf>, ISpanFormattable, IFormattable, ISpanParsable_1<TSelf>, IParsable_1<TSelf>, ISubtractionOperators_3<TSelf, TSelf, TSelf>, IUnaryPlusOperators_2<TSelf, TSelf>, IUnaryNegationOperators_2<TSelf, TSelf>, IUtf8SpanFormattable, IUtf8SpanParsable_1<TSelf>, IFloatingPoint_1<TSelf>, INumber_1<TSelf>, IComparable, IComparable_1<TSelf>, IComparisonOperators_3<TSelf, TSelf, CLROf<boolean>>, IModulusOperators_3<TSelf, TSelf, TSelf>, ISignedNumber_1<TSelf>, IHyperbolicFunctions_1<TSelf>, ILogarithmicFunctions_1<TSelf>, IPowerFunctions_1<TSelf>, IRootFunctions_1<TSelf>, ITrigonometricFunctions_1<TSelf> {
+export interface IFloatingPointIeee754_1$instance<TSelf extends IFloatingPointIeee754_1<TSelf>> extends IExponentialFunctions_1<TSelf>, IFloatingPointConstants_1<TSelf>, INumberBase_1<TSelf>, IAdditionOperators_3<TSelf, TSelf, TSelf>, IAdditiveIdentity_2<TSelf, TSelf>, IDecrementOperators_1<TSelf>, IDivisionOperators_3<TSelf, TSelf, TSelf>, IEquatable_1<TSelf>, IEqualityOperators_3<TSelf, TSelf, System_Internal.Boolean>, IIncrementOperators_1<TSelf>, IMultiplicativeIdentity_2<TSelf, TSelf>, IMultiplyOperators_3<TSelf, TSelf, TSelf>, ISpanFormattable, IFormattable, ISpanParsable_1<TSelf>, IParsable_1<TSelf>, ISubtractionOperators_3<TSelf, TSelf, TSelf>, IUnaryPlusOperators_2<TSelf, TSelf>, IUnaryNegationOperators_2<TSelf, TSelf>, IUtf8SpanFormattable, IUtf8SpanParsable_1<TSelf>, IFloatingPoint_1<TSelf>, INumber_1<TSelf>, IComparable, IComparable_1<TSelf>, IComparisonOperators_3<TSelf, TSelf, System_Internal.Boolean>, IModulusOperators_3<TSelf, TSelf, TSelf>, ISignedNumber_1<TSelf>, IHyperbolicFunctions_1<TSelf>, ILogarithmicFunctions_1<TSelf>, IPowerFunctions_1<TSelf>, IRootFunctions_1<TSelf>, ITrigonometricFunctions_1<TSelf> {
     CompareTo(obj: unknown): int;
     CompareTo(other: TSelf): int;
     GetExponentByteCount(): int;
     ToString(format: string, formatProvider: IFormatProvider): string;
-    TryFormat(destination: Span_1<CLROf<char>>, charsWritten: { value: ref<int> }, format: ReadOnlySpan_1<CLROf<char>>, provider: IFormatProvider): boolean;
-    TryFormat(utf8Destination: Span_1<CLROf<byte>>, bytesWritten: { value: ref<int> }, format: ReadOnlySpan_1<CLROf<char>>, provider: IFormatProvider): boolean;
-    TryWriteExponentBigEndian(destination: Span_1<CLROf<byte>>, bytesWritten: { value: ref<int> }): boolean;
+    TryFormat(destination: Span_1<System_Internal.Char>, charsWritten: int, format: ReadOnlySpan_1<System_Internal.Char>, provider: IFormatProvider): boolean;
+    TryFormat(utf8Destination: Span_1<System_Internal.Byte>, bytesWritten: int, format: ReadOnlySpan_1<System_Internal.Char>, provider: IFormatProvider): boolean;
+    TryWriteExponentBigEndian(destination: Span_1<System_Internal.Byte>, bytesWritten: int): boolean;
     WriteExponentBigEndian(destination: byte[], startIndex: int): int;
     WriteExponentBigEndian(destination: byte[]): int;
-    WriteExponentBigEndian(destination: Span_1<CLROf<byte>>): int;
+    WriteExponentBigEndian(destination: Span_1<System_Internal.Byte>): int;
     Equals(other: TSelf): boolean;
 }
 
 
 export type IFloatingPointIeee754_1<TSelf extends IFloatingPointIeee754_1<TSelf>> = IFloatingPointIeee754_1$instance<TSelf>;
 
-export interface IHyperbolicFunctions_1$instance<TSelf extends IHyperbolicFunctions_1<TSelf>> extends IFloatingPointConstants_1<TSelf>, INumberBase_1<TSelf>, IAdditionOperators_3<TSelf, TSelf, TSelf>, IAdditiveIdentity_2<TSelf, TSelf>, IDecrementOperators_1<TSelf>, IDivisionOperators_3<TSelf, TSelf, TSelf>, IEquatable_1<TSelf>, IEqualityOperators_3<TSelf, TSelf, CLROf<boolean>>, IIncrementOperators_1<TSelf>, IMultiplicativeIdentity_2<TSelf, TSelf>, IMultiplyOperators_3<TSelf, TSelf, TSelf>, ISpanFormattable, IFormattable, ISpanParsable_1<TSelf>, IParsable_1<TSelf>, ISubtractionOperators_3<TSelf, TSelf, TSelf>, IUnaryPlusOperators_2<TSelf, TSelf>, IUnaryNegationOperators_2<TSelf, TSelf>, IUtf8SpanFormattable, IUtf8SpanParsable_1<TSelf> {
+export interface IHyperbolicFunctions_1$instance<TSelf extends IHyperbolicFunctions_1<TSelf>> extends IFloatingPointConstants_1<TSelf>, INumberBase_1<TSelf>, IAdditionOperators_3<TSelf, TSelf, TSelf>, IAdditiveIdentity_2<TSelf, TSelf>, IDecrementOperators_1<TSelf>, IDivisionOperators_3<TSelf, TSelf, TSelf>, IEquatable_1<TSelf>, IEqualityOperators_3<TSelf, TSelf, System_Internal.Boolean>, IIncrementOperators_1<TSelf>, IMultiplicativeIdentity_2<TSelf, TSelf>, IMultiplyOperators_3<TSelf, TSelf, TSelf>, ISpanFormattable, IFormattable, ISpanParsable_1<TSelf>, IParsable_1<TSelf>, ISubtractionOperators_3<TSelf, TSelf, TSelf>, IUnaryPlusOperators_2<TSelf, TSelf>, IUnaryNegationOperators_2<TSelf, TSelf>, IUtf8SpanFormattable, IUtf8SpanParsable_1<TSelf> {
     ToString(format: string, formatProvider: IFormatProvider): string;
-    TryFormat(destination: Span_1<CLROf<char>>, charsWritten: { value: ref<int> }, format: ReadOnlySpan_1<CLROf<char>>, provider: IFormatProvider): boolean;
-    TryFormat(utf8Destination: Span_1<CLROf<byte>>, bytesWritten: { value: ref<int> }, format: ReadOnlySpan_1<CLROf<char>>, provider: IFormatProvider): boolean;
+    TryFormat(destination: Span_1<System_Internal.Char>, charsWritten: int, format: ReadOnlySpan_1<System_Internal.Char>, provider: IFormatProvider): boolean;
+    TryFormat(utf8Destination: Span_1<System_Internal.Byte>, bytesWritten: int, format: ReadOnlySpan_1<System_Internal.Char>, provider: IFormatProvider): boolean;
     Equals(other: TSelf): boolean;
 }
 
@@ -204,10 +179,10 @@ export interface IIncrementOperators_1$instance<TSelf extends IIncrementOperator
 
 export type IIncrementOperators_1<TSelf extends IIncrementOperators_1<TSelf>> = IIncrementOperators_1$instance<TSelf>;
 
-export interface ILogarithmicFunctions_1$instance<TSelf extends ILogarithmicFunctions_1<TSelf>> extends IFloatingPointConstants_1<TSelf>, INumberBase_1<TSelf>, IAdditionOperators_3<TSelf, TSelf, TSelf>, IAdditiveIdentity_2<TSelf, TSelf>, IDecrementOperators_1<TSelf>, IDivisionOperators_3<TSelf, TSelf, TSelf>, IEquatable_1<TSelf>, IEqualityOperators_3<TSelf, TSelf, CLROf<boolean>>, IIncrementOperators_1<TSelf>, IMultiplicativeIdentity_2<TSelf, TSelf>, IMultiplyOperators_3<TSelf, TSelf, TSelf>, ISpanFormattable, IFormattable, ISpanParsable_1<TSelf>, IParsable_1<TSelf>, ISubtractionOperators_3<TSelf, TSelf, TSelf>, IUnaryPlusOperators_2<TSelf, TSelf>, IUnaryNegationOperators_2<TSelf, TSelf>, IUtf8SpanFormattable, IUtf8SpanParsable_1<TSelf> {
+export interface ILogarithmicFunctions_1$instance<TSelf extends ILogarithmicFunctions_1<TSelf>> extends IFloatingPointConstants_1<TSelf>, INumberBase_1<TSelf>, IAdditionOperators_3<TSelf, TSelf, TSelf>, IAdditiveIdentity_2<TSelf, TSelf>, IDecrementOperators_1<TSelf>, IDivisionOperators_3<TSelf, TSelf, TSelf>, IEquatable_1<TSelf>, IEqualityOperators_3<TSelf, TSelf, System_Internal.Boolean>, IIncrementOperators_1<TSelf>, IMultiplicativeIdentity_2<TSelf, TSelf>, IMultiplyOperators_3<TSelf, TSelf, TSelf>, ISpanFormattable, IFormattable, ISpanParsable_1<TSelf>, IParsable_1<TSelf>, ISubtractionOperators_3<TSelf, TSelf, TSelf>, IUnaryPlusOperators_2<TSelf, TSelf>, IUnaryNegationOperators_2<TSelf, TSelf>, IUtf8SpanFormattable, IUtf8SpanParsable_1<TSelf> {
     ToString(format: string, formatProvider: IFormatProvider): string;
-    TryFormat(destination: Span_1<CLROf<char>>, charsWritten: { value: ref<int> }, format: ReadOnlySpan_1<CLROf<char>>, provider: IFormatProvider): boolean;
-    TryFormat(utf8Destination: Span_1<CLROf<byte>>, bytesWritten: { value: ref<int> }, format: ReadOnlySpan_1<CLROf<char>>, provider: IFormatProvider): boolean;
+    TryFormat(destination: Span_1<System_Internal.Char>, charsWritten: int, format: ReadOnlySpan_1<System_Internal.Char>, provider: IFormatProvider): boolean;
+    TryFormat(utf8Destination: Span_1<System_Internal.Byte>, bytesWritten: int, format: ReadOnlySpan_1<System_Internal.Char>, provider: IFormatProvider): boolean;
     Equals(other: TSelf): boolean;
 }
 
@@ -238,46 +213,46 @@ export interface IMultiplyOperators_3$instance<TSelf extends IMultiplyOperators_
 
 export type IMultiplyOperators_3<TSelf extends IMultiplyOperators_3<TSelf, TOther, TResult>, TOther, TResult> = IMultiplyOperators_3$instance<TSelf, TOther, TResult>;
 
-export interface INumber_1$instance<TSelf extends INumber_1<TSelf>> extends IComparable, IComparable_1<TSelf>, IComparisonOperators_3<TSelf, TSelf, CLROf<boolean>>, IEqualityOperators_3<TSelf, TSelf, CLROf<boolean>>, IModulusOperators_3<TSelf, TSelf, TSelf>, INumberBase_1<TSelf>, IAdditionOperators_3<TSelf, TSelf, TSelf>, IAdditiveIdentity_2<TSelf, TSelf>, IDecrementOperators_1<TSelf>, IDivisionOperators_3<TSelf, TSelf, TSelf>, IEquatable_1<TSelf>, IIncrementOperators_1<TSelf>, IMultiplicativeIdentity_2<TSelf, TSelf>, IMultiplyOperators_3<TSelf, TSelf, TSelf>, ISpanFormattable, IFormattable, ISpanParsable_1<TSelf>, IParsable_1<TSelf>, ISubtractionOperators_3<TSelf, TSelf, TSelf>, IUnaryPlusOperators_2<TSelf, TSelf>, IUnaryNegationOperators_2<TSelf, TSelf>, IUtf8SpanFormattable, IUtf8SpanParsable_1<TSelf> {
+export interface INumber_1$instance<TSelf extends INumber_1<TSelf>> extends IComparable, IComparable_1<TSelf>, IComparisonOperators_3<TSelf, TSelf, System_Internal.Boolean>, IEqualityOperators_3<TSelf, TSelf, System_Internal.Boolean>, IModulusOperators_3<TSelf, TSelf, TSelf>, INumberBase_1<TSelf>, IAdditionOperators_3<TSelf, TSelf, TSelf>, IAdditiveIdentity_2<TSelf, TSelf>, IDecrementOperators_1<TSelf>, IDivisionOperators_3<TSelf, TSelf, TSelf>, IEquatable_1<TSelf>, IIncrementOperators_1<TSelf>, IMultiplicativeIdentity_2<TSelf, TSelf>, IMultiplyOperators_3<TSelf, TSelf, TSelf>, ISpanFormattable, IFormattable, ISpanParsable_1<TSelf>, IParsable_1<TSelf>, ISubtractionOperators_3<TSelf, TSelf, TSelf>, IUnaryPlusOperators_2<TSelf, TSelf>, IUnaryNegationOperators_2<TSelf, TSelf>, IUtf8SpanFormattable, IUtf8SpanParsable_1<TSelf> {
     CompareTo(obj: unknown): int;
     CompareTo(other: TSelf): int;
     ToString(format: string, formatProvider: IFormatProvider): string;
-    TryFormat(destination: Span_1<CLROf<char>>, charsWritten: { value: ref<int> }, format: ReadOnlySpan_1<CLROf<char>>, provider: IFormatProvider): boolean;
-    TryFormat(utf8Destination: Span_1<CLROf<byte>>, bytesWritten: { value: ref<int> }, format: ReadOnlySpan_1<CLROf<char>>, provider: IFormatProvider): boolean;
+    TryFormat(destination: Span_1<System_Internal.Char>, charsWritten: int, format: ReadOnlySpan_1<System_Internal.Char>, provider: IFormatProvider): boolean;
+    TryFormat(utf8Destination: Span_1<System_Internal.Byte>, bytesWritten: int, format: ReadOnlySpan_1<System_Internal.Char>, provider: IFormatProvider): boolean;
     Equals(other: TSelf): boolean;
 }
 
 
-export interface INumber_1$instance<TSelf extends INumber_1<TSelf>> extends System_Internal.IComparable$instance, IComparisonOperators_3$instance<TSelf, TSelf, CLROf<boolean>>, IModulusOperators_3$instance<TSelf, TSelf, TSelf> {}
+export interface INumber_1$instance<TSelf extends INumber_1<TSelf>> extends System_Internal.IComparable$instance, IComparisonOperators_3$instance<TSelf, TSelf, System_Internal.Boolean>, IModulusOperators_3$instance<TSelf, TSelf, TSelf> {}
 
 export type INumber_1<TSelf extends INumber_1<TSelf>> = INumber_1$instance<TSelf>;
 
-export interface INumberBase_1$instance<TSelf extends INumberBase_1<TSelf>> extends IAdditionOperators_3<TSelf, TSelf, TSelf>, IAdditiveIdentity_2<TSelf, TSelf>, IDecrementOperators_1<TSelf>, IDivisionOperators_3<TSelf, TSelf, TSelf>, IEquatable_1<TSelf>, IEqualityOperators_3<TSelf, TSelf, CLROf<boolean>>, IIncrementOperators_1<TSelf>, IMultiplicativeIdentity_2<TSelf, TSelf>, IMultiplyOperators_3<TSelf, TSelf, TSelf>, ISpanFormattable, IFormattable, ISpanParsable_1<TSelf>, IParsable_1<TSelf>, ISubtractionOperators_3<TSelf, TSelf, TSelf>, IUnaryPlusOperators_2<TSelf, TSelf>, IUnaryNegationOperators_2<TSelf, TSelf>, IUtf8SpanFormattable, IUtf8SpanParsable_1<TSelf> {
+export interface INumberBase_1$instance<TSelf extends INumberBase_1<TSelf>> extends IAdditionOperators_3<TSelf, TSelf, TSelf>, IAdditiveIdentity_2<TSelf, TSelf>, IDecrementOperators_1<TSelf>, IDivisionOperators_3<TSelf, TSelf, TSelf>, IEquatable_1<TSelf>, IEqualityOperators_3<TSelf, TSelf, System_Internal.Boolean>, IIncrementOperators_1<TSelf>, IMultiplicativeIdentity_2<TSelf, TSelf>, IMultiplyOperators_3<TSelf, TSelf, TSelf>, ISpanFormattable, IFormattable, ISpanParsable_1<TSelf>, IParsable_1<TSelf>, ISubtractionOperators_3<TSelf, TSelf, TSelf>, IUnaryPlusOperators_2<TSelf, TSelf>, IUnaryNegationOperators_2<TSelf, TSelf>, IUtf8SpanFormattable, IUtf8SpanParsable_1<TSelf> {
     ToString(format: string, formatProvider: IFormatProvider): string;
-    TryFormat(destination: Span_1<CLROf<char>>, charsWritten: { value: ref<int> }, format: ReadOnlySpan_1<CLROf<char>>, provider: IFormatProvider): boolean;
-    TryFormat(utf8Destination: Span_1<CLROf<byte>>, bytesWritten: { value: ref<int> }, format: ReadOnlySpan_1<CLROf<char>>, provider: IFormatProvider): boolean;
+    TryFormat(destination: Span_1<System_Internal.Char>, charsWritten: int, format: ReadOnlySpan_1<System_Internal.Char>, provider: IFormatProvider): boolean;
+    TryFormat(utf8Destination: Span_1<System_Internal.Byte>, bytesWritten: int, format: ReadOnlySpan_1<System_Internal.Char>, provider: IFormatProvider): boolean;
     Equals(other: TSelf): boolean;
 }
 
 
-export interface INumberBase_1$instance<TSelf extends INumberBase_1<TSelf>> extends System_Internal.IEquatable_1$instance<TSelf>, System_Internal.ISpanParsable_1$instance<TSelf>, IAdditionOperators_3$instance<TSelf, TSelf, TSelf>, IAdditiveIdentity_2$instance<TSelf, TSelf>, IDecrementOperators_1$instance<TSelf>, IDivisionOperators_3$instance<TSelf, TSelf, TSelf>, IEqualityOperators_3$instance<TSelf, TSelf, CLROf<boolean>>, IIncrementOperators_1$instance<TSelf>, IMultiplicativeIdentity_2$instance<TSelf, TSelf>, IMultiplyOperators_3$instance<TSelf, TSelf, TSelf>, ISubtractionOperators_3$instance<TSelf, TSelf, TSelf>, IUnaryNegationOperators_2$instance<TSelf, TSelf>, IUnaryPlusOperators_2$instance<TSelf, TSelf> {}
+export interface INumberBase_1$instance<TSelf extends INumberBase_1<TSelf>> extends System_Internal.IEquatable_1$instance<TSelf>, System_Internal.ISpanParsable_1$instance<TSelf>, IAdditionOperators_3$instance<TSelf, TSelf, TSelf>, IAdditiveIdentity_2$instance<TSelf, TSelf>, IDecrementOperators_1$instance<TSelf>, IDivisionOperators_3$instance<TSelf, TSelf, TSelf>, IEqualityOperators_3$instance<TSelf, TSelf, System_Internal.Boolean>, IIncrementOperators_1$instance<TSelf>, IMultiplicativeIdentity_2$instance<TSelf, TSelf>, IMultiplyOperators_3$instance<TSelf, TSelf, TSelf>, ISubtractionOperators_3$instance<TSelf, TSelf, TSelf>, IUnaryNegationOperators_2$instance<TSelf, TSelf>, IUnaryPlusOperators_2$instance<TSelf, TSelf> {}
 
 export type INumberBase_1<TSelf extends INumberBase_1<TSelf>> = INumberBase_1$instance<TSelf>;
 
-export interface IPowerFunctions_1$instance<TSelf extends IPowerFunctions_1<TSelf>> extends INumberBase_1<TSelf>, IAdditionOperators_3<TSelf, TSelf, TSelf>, IAdditiveIdentity_2<TSelf, TSelf>, IDecrementOperators_1<TSelf>, IDivisionOperators_3<TSelf, TSelf, TSelf>, IEquatable_1<TSelf>, IEqualityOperators_3<TSelf, TSelf, CLROf<boolean>>, IIncrementOperators_1<TSelf>, IMultiplicativeIdentity_2<TSelf, TSelf>, IMultiplyOperators_3<TSelf, TSelf, TSelf>, ISpanFormattable, IFormattable, ISpanParsable_1<TSelf>, IParsable_1<TSelf>, ISubtractionOperators_3<TSelf, TSelf, TSelf>, IUnaryPlusOperators_2<TSelf, TSelf>, IUnaryNegationOperators_2<TSelf, TSelf>, IUtf8SpanFormattable, IUtf8SpanParsable_1<TSelf> {
+export interface IPowerFunctions_1$instance<TSelf extends IPowerFunctions_1<TSelf>> extends INumberBase_1<TSelf>, IAdditionOperators_3<TSelf, TSelf, TSelf>, IAdditiveIdentity_2<TSelf, TSelf>, IDecrementOperators_1<TSelf>, IDivisionOperators_3<TSelf, TSelf, TSelf>, IEquatable_1<TSelf>, IEqualityOperators_3<TSelf, TSelf, System_Internal.Boolean>, IIncrementOperators_1<TSelf>, IMultiplicativeIdentity_2<TSelf, TSelf>, IMultiplyOperators_3<TSelf, TSelf, TSelf>, ISpanFormattable, IFormattable, ISpanParsable_1<TSelf>, IParsable_1<TSelf>, ISubtractionOperators_3<TSelf, TSelf, TSelf>, IUnaryPlusOperators_2<TSelf, TSelf>, IUnaryNegationOperators_2<TSelf, TSelf>, IUtf8SpanFormattable, IUtf8SpanParsable_1<TSelf> {
     ToString(format: string, formatProvider: IFormatProvider): string;
-    TryFormat(destination: Span_1<CLROf<char>>, charsWritten: { value: ref<int> }, format: ReadOnlySpan_1<CLROf<char>>, provider: IFormatProvider): boolean;
-    TryFormat(utf8Destination: Span_1<CLROf<byte>>, bytesWritten: { value: ref<int> }, format: ReadOnlySpan_1<CLROf<char>>, provider: IFormatProvider): boolean;
+    TryFormat(destination: Span_1<System_Internal.Char>, charsWritten: int, format: ReadOnlySpan_1<System_Internal.Char>, provider: IFormatProvider): boolean;
+    TryFormat(utf8Destination: Span_1<System_Internal.Byte>, bytesWritten: int, format: ReadOnlySpan_1<System_Internal.Char>, provider: IFormatProvider): boolean;
     Equals(other: TSelf): boolean;
 }
 
 
 export type IPowerFunctions_1<TSelf extends IPowerFunctions_1<TSelf>> = IPowerFunctions_1$instance<TSelf>;
 
-export interface IRootFunctions_1$instance<TSelf extends IRootFunctions_1<TSelf>> extends IFloatingPointConstants_1<TSelf>, INumberBase_1<TSelf>, IAdditionOperators_3<TSelf, TSelf, TSelf>, IAdditiveIdentity_2<TSelf, TSelf>, IDecrementOperators_1<TSelf>, IDivisionOperators_3<TSelf, TSelf, TSelf>, IEquatable_1<TSelf>, IEqualityOperators_3<TSelf, TSelf, CLROf<boolean>>, IIncrementOperators_1<TSelf>, IMultiplicativeIdentity_2<TSelf, TSelf>, IMultiplyOperators_3<TSelf, TSelf, TSelf>, ISpanFormattable, IFormattable, ISpanParsable_1<TSelf>, IParsable_1<TSelf>, ISubtractionOperators_3<TSelf, TSelf, TSelf>, IUnaryPlusOperators_2<TSelf, TSelf>, IUnaryNegationOperators_2<TSelf, TSelf>, IUtf8SpanFormattable, IUtf8SpanParsable_1<TSelf> {
+export interface IRootFunctions_1$instance<TSelf extends IRootFunctions_1<TSelf>> extends IFloatingPointConstants_1<TSelf>, INumberBase_1<TSelf>, IAdditionOperators_3<TSelf, TSelf, TSelf>, IAdditiveIdentity_2<TSelf, TSelf>, IDecrementOperators_1<TSelf>, IDivisionOperators_3<TSelf, TSelf, TSelf>, IEquatable_1<TSelf>, IEqualityOperators_3<TSelf, TSelf, System_Internal.Boolean>, IIncrementOperators_1<TSelf>, IMultiplicativeIdentity_2<TSelf, TSelf>, IMultiplyOperators_3<TSelf, TSelf, TSelf>, ISpanFormattable, IFormattable, ISpanParsable_1<TSelf>, IParsable_1<TSelf>, ISubtractionOperators_3<TSelf, TSelf, TSelf>, IUnaryPlusOperators_2<TSelf, TSelf>, IUnaryNegationOperators_2<TSelf, TSelf>, IUtf8SpanFormattable, IUtf8SpanParsable_1<TSelf> {
     ToString(format: string, formatProvider: IFormatProvider): string;
-    TryFormat(destination: Span_1<CLROf<char>>, charsWritten: { value: ref<int> }, format: ReadOnlySpan_1<CLROf<char>>, provider: IFormatProvider): boolean;
-    TryFormat(utf8Destination: Span_1<CLROf<byte>>, bytesWritten: { value: ref<int> }, format: ReadOnlySpan_1<CLROf<char>>, provider: IFormatProvider): boolean;
+    TryFormat(destination: Span_1<System_Internal.Char>, charsWritten: int, format: ReadOnlySpan_1<System_Internal.Char>, provider: IFormatProvider): boolean;
+    TryFormat(utf8Destination: Span_1<System_Internal.Byte>, bytesWritten: int, format: ReadOnlySpan_1<System_Internal.Char>, provider: IFormatProvider): boolean;
     Equals(other: TSelf): boolean;
 }
 
@@ -290,10 +265,10 @@ export interface IShiftOperators_3$instance<TSelf extends IShiftOperators_3<TSel
 
 export type IShiftOperators_3<TSelf extends IShiftOperators_3<TSelf, TOther, TResult>, TOther, TResult> = IShiftOperators_3$instance<TSelf, TOther, TResult>;
 
-export interface ISignedNumber_1$instance<TSelf extends ISignedNumber_1<TSelf>> extends INumberBase_1<TSelf>, IAdditionOperators_3<TSelf, TSelf, TSelf>, IAdditiveIdentity_2<TSelf, TSelf>, IDecrementOperators_1<TSelf>, IDivisionOperators_3<TSelf, TSelf, TSelf>, IEquatable_1<TSelf>, IEqualityOperators_3<TSelf, TSelf, CLROf<boolean>>, IIncrementOperators_1<TSelf>, IMultiplicativeIdentity_2<TSelf, TSelf>, IMultiplyOperators_3<TSelf, TSelf, TSelf>, ISpanFormattable, IFormattable, ISpanParsable_1<TSelf>, IParsable_1<TSelf>, ISubtractionOperators_3<TSelf, TSelf, TSelf>, IUnaryPlusOperators_2<TSelf, TSelf>, IUnaryNegationOperators_2<TSelf, TSelf>, IUtf8SpanFormattable, IUtf8SpanParsable_1<TSelf> {
+export interface ISignedNumber_1$instance<TSelf extends ISignedNumber_1<TSelf>> extends INumberBase_1<TSelf>, IAdditionOperators_3<TSelf, TSelf, TSelf>, IAdditiveIdentity_2<TSelf, TSelf>, IDecrementOperators_1<TSelf>, IDivisionOperators_3<TSelf, TSelf, TSelf>, IEquatable_1<TSelf>, IEqualityOperators_3<TSelf, TSelf, System_Internal.Boolean>, IIncrementOperators_1<TSelf>, IMultiplicativeIdentity_2<TSelf, TSelf>, IMultiplyOperators_3<TSelf, TSelf, TSelf>, ISpanFormattable, IFormattable, ISpanParsable_1<TSelf>, IParsable_1<TSelf>, ISubtractionOperators_3<TSelf, TSelf, TSelf>, IUnaryPlusOperators_2<TSelf, TSelf>, IUnaryNegationOperators_2<TSelf, TSelf>, IUtf8SpanFormattable, IUtf8SpanParsable_1<TSelf> {
     ToString(format: string, formatProvider: IFormatProvider): string;
-    TryFormat(destination: Span_1<CLROf<char>>, charsWritten: { value: ref<int> }, format: ReadOnlySpan_1<CLROf<char>>, provider: IFormatProvider): boolean;
-    TryFormat(utf8Destination: Span_1<CLROf<byte>>, bytesWritten: { value: ref<int> }, format: ReadOnlySpan_1<CLROf<char>>, provider: IFormatProvider): boolean;
+    TryFormat(destination: Span_1<System_Internal.Char>, charsWritten: int, format: ReadOnlySpan_1<System_Internal.Char>, provider: IFormatProvider): boolean;
+    TryFormat(utf8Destination: Span_1<System_Internal.Byte>, bytesWritten: int, format: ReadOnlySpan_1<System_Internal.Char>, provider: IFormatProvider): boolean;
     Equals(other: TSelf): boolean;
 }
 
@@ -306,10 +281,10 @@ export interface ISubtractionOperators_3$instance<TSelf extends ISubtractionOper
 
 export type ISubtractionOperators_3<TSelf extends ISubtractionOperators_3<TSelf, TOther, TResult>, TOther, TResult> = ISubtractionOperators_3$instance<TSelf, TOther, TResult>;
 
-export interface ITrigonometricFunctions_1$instance<TSelf extends ITrigonometricFunctions_1<TSelf>> extends IFloatingPointConstants_1<TSelf>, INumberBase_1<TSelf>, IAdditionOperators_3<TSelf, TSelf, TSelf>, IAdditiveIdentity_2<TSelf, TSelf>, IDecrementOperators_1<TSelf>, IDivisionOperators_3<TSelf, TSelf, TSelf>, IEquatable_1<TSelf>, IEqualityOperators_3<TSelf, TSelf, CLROf<boolean>>, IIncrementOperators_1<TSelf>, IMultiplicativeIdentity_2<TSelf, TSelf>, IMultiplyOperators_3<TSelf, TSelf, TSelf>, ISpanFormattable, IFormattable, ISpanParsable_1<TSelf>, IParsable_1<TSelf>, ISubtractionOperators_3<TSelf, TSelf, TSelf>, IUnaryPlusOperators_2<TSelf, TSelf>, IUnaryNegationOperators_2<TSelf, TSelf>, IUtf8SpanFormattable, IUtf8SpanParsable_1<TSelf> {
+export interface ITrigonometricFunctions_1$instance<TSelf extends ITrigonometricFunctions_1<TSelf>> extends IFloatingPointConstants_1<TSelf>, INumberBase_1<TSelf>, IAdditionOperators_3<TSelf, TSelf, TSelf>, IAdditiveIdentity_2<TSelf, TSelf>, IDecrementOperators_1<TSelf>, IDivisionOperators_3<TSelf, TSelf, TSelf>, IEquatable_1<TSelf>, IEqualityOperators_3<TSelf, TSelf, System_Internal.Boolean>, IIncrementOperators_1<TSelf>, IMultiplicativeIdentity_2<TSelf, TSelf>, IMultiplyOperators_3<TSelf, TSelf, TSelf>, ISpanFormattable, IFormattable, ISpanParsable_1<TSelf>, IParsable_1<TSelf>, ISubtractionOperators_3<TSelf, TSelf, TSelf>, IUnaryPlusOperators_2<TSelf, TSelf>, IUnaryNegationOperators_2<TSelf, TSelf>, IUtf8SpanFormattable, IUtf8SpanParsable_1<TSelf> {
     ToString(format: string, formatProvider: IFormatProvider): string;
-    TryFormat(destination: Span_1<CLROf<char>>, charsWritten: { value: ref<int> }, format: ReadOnlySpan_1<CLROf<char>>, provider: IFormatProvider): boolean;
-    TryFormat(utf8Destination: Span_1<CLROf<byte>>, bytesWritten: { value: ref<int> }, format: ReadOnlySpan_1<CLROf<char>>, provider: IFormatProvider): boolean;
+    TryFormat(destination: Span_1<System_Internal.Char>, charsWritten: int, format: ReadOnlySpan_1<System_Internal.Char>, provider: IFormatProvider): boolean;
+    TryFormat(utf8Destination: Span_1<System_Internal.Byte>, bytesWritten: int, format: ReadOnlySpan_1<System_Internal.Char>, provider: IFormatProvider): boolean;
     Equals(other: TSelf): boolean;
 }
 
@@ -328,17 +303,17 @@ export interface IUnaryPlusOperators_2$instance<TSelf extends IUnaryPlusOperator
 
 export type IUnaryPlusOperators_2<TSelf extends IUnaryPlusOperators_2<TSelf, TResult>, TResult> = IUnaryPlusOperators_2$instance<TSelf, TResult>;
 
-export interface IUnsignedNumber_1$instance<TSelf extends IUnsignedNumber_1<TSelf>> extends INumberBase_1<TSelf>, IAdditionOperators_3<TSelf, TSelf, TSelf>, IAdditiveIdentity_2<TSelf, TSelf>, IDecrementOperators_1<TSelf>, IDivisionOperators_3<TSelf, TSelf, TSelf>, IEquatable_1<TSelf>, IEqualityOperators_3<TSelf, TSelf, CLROf<boolean>>, IIncrementOperators_1<TSelf>, IMultiplicativeIdentity_2<TSelf, TSelf>, IMultiplyOperators_3<TSelf, TSelf, TSelf>, ISpanFormattable, IFormattable, ISpanParsable_1<TSelf>, IParsable_1<TSelf>, ISubtractionOperators_3<TSelf, TSelf, TSelf>, IUnaryPlusOperators_2<TSelf, TSelf>, IUnaryNegationOperators_2<TSelf, TSelf>, IUtf8SpanFormattable, IUtf8SpanParsable_1<TSelf> {
+export interface IUnsignedNumber_1$instance<TSelf extends IUnsignedNumber_1<TSelf>> extends INumberBase_1<TSelf>, IAdditionOperators_3<TSelf, TSelf, TSelf>, IAdditiveIdentity_2<TSelf, TSelf>, IDecrementOperators_1<TSelf>, IDivisionOperators_3<TSelf, TSelf, TSelf>, IEquatable_1<TSelf>, IEqualityOperators_3<TSelf, TSelf, System_Internal.Boolean>, IIncrementOperators_1<TSelf>, IMultiplicativeIdentity_2<TSelf, TSelf>, IMultiplyOperators_3<TSelf, TSelf, TSelf>, ISpanFormattable, IFormattable, ISpanParsable_1<TSelf>, IParsable_1<TSelf>, ISubtractionOperators_3<TSelf, TSelf, TSelf>, IUnaryPlusOperators_2<TSelf, TSelf>, IUnaryNegationOperators_2<TSelf, TSelf>, IUtf8SpanFormattable, IUtf8SpanParsable_1<TSelf> {
     ToString(format: string, formatProvider: IFormatProvider): string;
-    TryFormat(destination: Span_1<CLROf<char>>, charsWritten: { value: ref<int> }, format: ReadOnlySpan_1<CLROf<char>>, provider: IFormatProvider): boolean;
-    TryFormat(utf8Destination: Span_1<CLROf<byte>>, bytesWritten: { value: ref<int> }, format: ReadOnlySpan_1<CLROf<char>>, provider: IFormatProvider): boolean;
+    TryFormat(destination: Span_1<System_Internal.Char>, charsWritten: int, format: ReadOnlySpan_1<System_Internal.Char>, provider: IFormatProvider): boolean;
+    TryFormat(utf8Destination: Span_1<System_Internal.Byte>, bytesWritten: int, format: ReadOnlySpan_1<System_Internal.Char>, provider: IFormatProvider): boolean;
     Equals(other: TSelf): boolean;
 }
 
 
 export type IUnsignedNumber_1<TSelf extends IUnsignedNumber_1<TSelf>> = IUnsignedNumber_1$instance<TSelf>;
 
-export interface BigInteger$instance extends IAdditionOperators_3<BigInteger, BigInteger, BigInteger>, IBitwiseOperators_3<BigInteger, BigInteger, BigInteger>, IComparisonOperators_3<BigInteger, BigInteger, CLROf<boolean>>, IEqualityOperators_3<BigInteger, BigInteger, CLROf<boolean>>, IDecrementOperators_1<BigInteger>, IDivisionOperators_3<BigInteger, BigInteger, BigInteger>, IIncrementOperators_1<BigInteger>, IModulusOperators_3<BigInteger, BigInteger, BigInteger>, IMultiplyOperators_3<BigInteger, BigInteger, BigInteger>, ISubtractionOperators_3<BigInteger, BigInteger, BigInteger>, IUnaryNegationOperators_2<BigInteger, BigInteger>, IUnaryPlusOperators_2<BigInteger, BigInteger>, IShiftOperators_3<BigInteger, CLROf<int>, BigInteger> {
+export interface BigInteger$instance extends IAdditionOperators_3<BigInteger, BigInteger, BigInteger>, IBitwiseOperators_3<BigInteger, BigInteger, BigInteger>, IComparisonOperators_3<BigInteger, BigInteger, System_Internal.Boolean>, IEqualityOperators_3<BigInteger, BigInteger, System_Internal.Boolean>, IDecrementOperators_1<BigInteger>, IDivisionOperators_3<BigInteger, BigInteger, BigInteger>, IIncrementOperators_1<BigInteger>, IModulusOperators_3<BigInteger, BigInteger, BigInteger>, IMultiplyOperators_3<BigInteger, BigInteger, BigInteger>, ISubtractionOperators_3<BigInteger, BigInteger, BigInteger>, IUnaryNegationOperators_2<BigInteger, BigInteger>, IUnaryPlusOperators_2<BigInteger, BigInteger>, IShiftOperators_3<BigInteger, System_Internal.Int32, BigInteger> {
     readonly IsEven: boolean;
     readonly IsOne: boolean;
     readonly IsPowerOfTwo: boolean;
@@ -361,8 +336,8 @@ export interface BigInteger$instance extends IAdditionOperators_3<BigInteger, Bi
     ToString(provider: IFormatProvider): string;
     ToString(format: string): string;
     ToString(format: string, provider: IFormatProvider): string;
-    TryFormat(destination: Span_1<CLROf<char>>, charsWritten: { value: ref<int> }, format?: ReadOnlySpan_1<CLROf<char>>, provider?: IFormatProvider): boolean;
-    TryWriteBytes(destination: Span_1<CLROf<byte>>, bytesWritten: { value: ref<int> }, isUnsigned?: boolean, isBigEndian?: boolean): boolean;
+    TryFormat(destination: Span_1<System_Internal.Char>, charsWritten: int, format?: ReadOnlySpan_1<System_Internal.Char>, provider?: IFormatProvider): boolean;
+    TryWriteBytes(destination: Span_1<System_Internal.Byte>, bytesWritten: int, isUnsigned?: boolean, isBigEndian?: boolean): boolean;
 }
 
 
@@ -375,7 +350,7 @@ export const BigInteger: {
     new(value: double): BigInteger$instance;
     new(value: decimal): BigInteger$instance;
     new(value: byte[]): BigInteger$instance;
-    new(value: ReadOnlySpan_1<CLROf<byte>>, isUnsigned: boolean, isBigEndian: boolean): BigInteger$instance;
+    new(value: ReadOnlySpan_1<System_Internal.Byte>, isUnsigned: boolean, isBigEndian: boolean): BigInteger$instance;
     readonly Zero: BigInteger;
     readonly One: BigInteger;
     readonly MinusOne: BigInteger;
@@ -388,7 +363,7 @@ export const BigInteger: {
     CreateSaturating<TOther extends INumberBase_1<TOther>>(value: TOther): BigInteger;
     CreateTruncating<TOther extends INumberBase_1<TOther>>(value: TOther): BigInteger;
     Divide(dividend: BigInteger, divisor: BigInteger): BigInteger;
-    DivRem(dividend: BigInteger, divisor: BigInteger, remainder: { value: ref<BigInteger> }): BigInteger;
+    DivRem(dividend: BigInteger, divisor: BigInteger, remainder: BigInteger): BigInteger;
     DivRem(left: BigInteger, right: BigInteger): ValueTuple_2<BigInteger, BigInteger>;
     GreatestCommonDivisor(left: BigInteger, right: BigInteger): BigInteger;
     IsEvenInteger(value: BigInteger): boolean;
@@ -408,8 +383,8 @@ export const BigInteger: {
     ModPow(value: BigInteger, exponent: BigInteger, modulus: BigInteger): BigInteger;
     Multiply(left: BigInteger, right: BigInteger): BigInteger;
     Negate(value: BigInteger): BigInteger;
-    Parse(value: ReadOnlySpan_1<CLROf<char>>, style?: NumberStyles, provider?: IFormatProvider): BigInteger;
-    Parse(s: ReadOnlySpan_1<CLROf<char>>, provider: IFormatProvider): BigInteger;
+    Parse(value: ReadOnlySpan_1<System_Internal.Char>, style?: NumberStyles, provider?: IFormatProvider): BigInteger;
+    Parse(s: ReadOnlySpan_1<System_Internal.Char>, provider: IFormatProvider): BigInteger;
     Parse(value: string, style: NumberStyles, provider: IFormatProvider): BigInteger;
     Parse(value: string, style: NumberStyles): BigInteger;
     Parse(value: string, provider: IFormatProvider): BigInteger;
@@ -421,12 +396,12 @@ export const BigInteger: {
     RotateRight(value: BigInteger, rotateAmount: int): BigInteger;
     Subtract(left: BigInteger, right: BigInteger): BigInteger;
     TrailingZeroCount(value: BigInteger): BigInteger;
-    TryParse(value: ReadOnlySpan_1<CLROf<char>>, style: NumberStyles, provider: IFormatProvider, result: { value: ref<BigInteger> }): boolean;
-    TryParse(s: ReadOnlySpan_1<CLROf<char>>, provider: IFormatProvider, result: { value: ref<BigInteger> }): boolean;
-    TryParse(value: ReadOnlySpan_1<CLROf<char>>, result: { value: ref<BigInteger> }): boolean;
-    TryParse(value: string, style: NumberStyles, provider: IFormatProvider, result: { value: ref<BigInteger> }): boolean;
-    TryParse(s: string, provider: IFormatProvider, result: { value: ref<BigInteger> }): boolean;
-    TryParse(value: string, result: { value: ref<BigInteger> }): boolean;
+    TryParse(value: ReadOnlySpan_1<System_Internal.Char>, style: NumberStyles, provider: IFormatProvider, result: BigInteger): boolean;
+    TryParse(s: ReadOnlySpan_1<System_Internal.Char>, provider: IFormatProvider, result: BigInteger): boolean;
+    TryParse(value: ReadOnlySpan_1<System_Internal.Char>, result: BigInteger): boolean;
+    TryParse(value: string, style: NumberStyles, provider: IFormatProvider, result: BigInteger): boolean;
+    TryParse(s: string, provider: IFormatProvider, result: BigInteger): boolean;
+    TryParse(value: string, result: BigInteger): boolean;
 };
 
 
@@ -449,19 +424,19 @@ export interface __BigInteger$views {
     equals(other: BigInteger): boolean;
     compareTo(obj: unknown): int;
     toString(format: string, formatProvider: import("../../System/internal/index").IFormatProvider): string;
-    tryFormat(destination: import("../../System/internal/index").Span_1<import("../../System/internal/index").CLROf<char>>, charsWritten: { value: ref<int> }, format: import("../../System/internal/index").ReadOnlySpan_1<import("../../System/internal/index").CLROf<char>>, provider: import("../../System/internal/index").IFormatProvider): boolean;
-    tryFormat(utf8Destination: import("../../System/internal/index").Span_1<import("../../System/internal/index").CLROf<byte>>, bytesWritten: { value: ref<int> }, format: import("../../System/internal/index").ReadOnlySpan_1<import("../../System/internal/index").CLROf<char>>, provider: import("../../System/internal/index").IFormatProvider): boolean;
+    tryFormat(destination: import("../../System/internal/index").Span_1<import("../../System/internal/index").Char>, charsWritten: int, format: import("../../System/internal/index").ReadOnlySpan_1<import("../../System/internal/index").Char>, provider: import("../../System/internal/index").IFormatProvider): boolean;
+    tryFormat(utf8Destination: import("../../System/internal/index").Span_1<import("../../System/internal/index").Byte>, bytesWritten: int, format: import("../../System/internal/index").ReadOnlySpan_1<import("../../System/internal/index").Char>, provider: import("../../System/internal/index").IFormatProvider): boolean;
     getByteCount(): int;
-    tryWriteBigEndian(destination: import("../../System/internal/index").Span_1<import("../../System/internal/index").CLROf<byte>>, bytesWritten: { value: ref<int> }): boolean;
+    tryWriteBigEndian(destination: import("../../System/internal/index").Span_1<import("../../System/internal/index").Byte>, bytesWritten: int): boolean;
     writeBigEndian(destination: byte[], startIndex: int): int;
     writeBigEndian(destination: byte[]): int;
-    writeBigEndian(destination: import("../../System/internal/index").Span_1<import("../../System/internal/index").CLROf<byte>>): int;
+    writeBigEndian(destination: import("../../System/internal/index").Span_1<import("../../System/internal/index").Byte>): int;
 }
 
 export type BigInteger = BigInteger$instance & __BigInteger$views;
 
 
-export interface Complex$instance extends IAdditionOperators_3<Complex, Complex, Complex>, IDecrementOperators_1<Complex>, IDivisionOperators_3<Complex, Complex, Complex>, IEqualityOperators_3<Complex, Complex, CLROf<boolean>>, IIncrementOperators_1<Complex>, IMultiplyOperators_3<Complex, Complex, Complex>, ISubtractionOperators_3<Complex, Complex, Complex>, IUnaryNegationOperators_2<Complex, Complex>, IUnaryPlusOperators_2<Complex, Complex> {
+export interface Complex$instance extends IAdditionOperators_3<Complex, Complex, Complex>, IDecrementOperators_1<Complex>, IDivisionOperators_3<Complex, Complex, Complex>, IEqualityOperators_3<Complex, Complex, System_Internal.Boolean>, IIncrementOperators_1<Complex>, IMultiplyOperators_3<Complex, Complex, Complex>, ISubtractionOperators_3<Complex, Complex, Complex>, IUnaryNegationOperators_2<Complex, Complex>, IUnaryPlusOperators_2<Complex, Complex> {
     readonly Imaginary: double;
     readonly Magnitude: double;
     readonly Phase: double;
@@ -473,8 +448,8 @@ export interface Complex$instance extends IAdditionOperators_3<Complex, Complex,
     ToString(format: string): string;
     ToString(provider: IFormatProvider): string;
     ToString(format: string, provider: IFormatProvider): string;
-    TryFormat(destination: Span_1<CLROf<char>>, charsWritten: { value: ref<int> }, format?: ReadOnlySpan_1<CLROf<char>>, provider?: IFormatProvider): boolean;
-    TryFormat(utf8Destination: Span_1<CLROf<byte>>, bytesWritten: { value: ref<int> }, format?: ReadOnlySpan_1<CLROf<char>>, provider?: IFormatProvider): boolean;
+    TryFormat(destination: Span_1<System_Internal.Char>, charsWritten: int, format?: ReadOnlySpan_1<System_Internal.Char>, provider?: IFormatProvider): boolean;
+    TryFormat(utf8Destination: Span_1<System_Internal.Byte>, bytesWritten: int, format?: ReadOnlySpan_1<System_Internal.Char>, provider?: IFormatProvider): boolean;
 }
 
 
@@ -527,8 +502,8 @@ export const Complex: {
     Multiply(left: Complex, right: double): Complex;
     Multiply(left: Complex, right: Complex): Complex;
     Negate(value: Complex): Complex;
-    Parse(s: ReadOnlySpan_1<CLROf<char>>, style: NumberStyles, provider: IFormatProvider): Complex;
-    Parse(s: ReadOnlySpan_1<CLROf<char>>, provider: IFormatProvider): Complex;
+    Parse(s: ReadOnlySpan_1<System_Internal.Char>, style: NumberStyles, provider: IFormatProvider): Complex;
+    Parse(s: ReadOnlySpan_1<System_Internal.Char>, provider: IFormatProvider): Complex;
     Parse(s: string, style: NumberStyles, provider: IFormatProvider): Complex;
     Parse(s: string, provider: IFormatProvider): Complex;
     Pow(value: Complex, power: double): Complex;
@@ -542,10 +517,10 @@ export const Complex: {
     Subtract(left: Complex, right: Complex): Complex;
     Tan(value: Complex): Complex;
     Tanh(value: Complex): Complex;
-    TryParse(s: ReadOnlySpan_1<CLROf<char>>, style: NumberStyles, provider: IFormatProvider, result: { value: ref<Complex> }): boolean;
-    TryParse(s: ReadOnlySpan_1<CLROf<char>>, provider: IFormatProvider, result: { value: ref<Complex> }): boolean;
-    TryParse(s: string, style: NumberStyles, provider: IFormatProvider, result: { value: ref<Complex> }): boolean;
-    TryParse(s: string, provider: IFormatProvider, result: { value: ref<Complex> }): boolean;
+    TryParse(s: ReadOnlySpan_1<System_Internal.Char>, style: NumberStyles, provider: IFormatProvider, result: Complex): boolean;
+    TryParse(s: ReadOnlySpan_1<System_Internal.Char>, provider: IFormatProvider, result: Complex): boolean;
+    TryParse(s: string, style: NumberStyles, provider: IFormatProvider, result: Complex): boolean;
+    TryParse(s: string, provider: IFormatProvider, result: Complex): boolean;
 };
 
 
@@ -562,8 +537,8 @@ export interface __Complex$views {
     // Structural method bridges for numeric interface constraints
     equals(other: Complex): boolean;
     toString(format: string, formatProvider: import("../../System/internal/index").IFormatProvider): string;
-    tryFormat(destination: import("../../System/internal/index").Span_1<import("../../System/internal/index").CLROf<char>>, charsWritten: { value: ref<int> }, format: import("../../System/internal/index").ReadOnlySpan_1<import("../../System/internal/index").CLROf<char>>, provider: import("../../System/internal/index").IFormatProvider): boolean;
-    tryFormat(utf8Destination: import("../../System/internal/index").Span_1<import("../../System/internal/index").CLROf<byte>>, bytesWritten: { value: ref<int> }, format: import("../../System/internal/index").ReadOnlySpan_1<import("../../System/internal/index").CLROf<char>>, provider: import("../../System/internal/index").IFormatProvider): boolean;
+    tryFormat(destination: import("../../System/internal/index").Span_1<import("../../System/internal/index").Char>, charsWritten: int, format: import("../../System/internal/index").ReadOnlySpan_1<import("../../System/internal/index").Char>, provider: import("../../System/internal/index").IFormatProvider): boolean;
+    tryFormat(utf8Destination: import("../../System/internal/index").Span_1<import("../../System/internal/index").Byte>, bytesWritten: int, format: import("../../System/internal/index").ReadOnlySpan_1<import("../../System/internal/index").Char>, provider: import("../../System/internal/index").IFormatProvider): boolean;
 }
 
 export type Complex = Complex$instance & __Complex$views;
@@ -617,7 +592,7 @@ export const Matrix3x2: {
     CreateSkew(radiansX: float, radiansY: float): Matrix3x2;
     CreateTranslation(position: Vector2): Matrix3x2;
     CreateTranslation(xPosition: float, yPosition: float): Matrix3x2;
-    Invert(matrix: Matrix3x2, result: { value: ref<Matrix3x2> }): boolean;
+    Invert(matrix: Matrix3x2, result: Matrix3x2): boolean;
     Lerp(matrix1: Matrix3x2, matrix2: Matrix3x2, amount: float): Matrix3x2;
     Multiply(value1: Matrix3x2, value2: Matrix3x2): Matrix3x2;
     Multiply(value1: Matrix3x2, value2: float): Matrix3x2;
@@ -725,8 +700,8 @@ export const Matrix4x4: {
     CreateViewport(x: float, y: float, width: float, height: float, minDepth: float, maxDepth: float): Matrix4x4;
     CreateViewportLeftHanded(x: float, y: float, width: float, height: float, minDepth: float, maxDepth: float): Matrix4x4;
     CreateWorld(position: Vector3, forward: Vector3, up: Vector3): Matrix4x4;
-    Decompose(matrix: Matrix4x4, scale: { value: ref<Vector3> }, rotation: { value: ref<Quaternion> }, translation: { value: ref<Vector3> }): boolean;
-    Invert(matrix: Matrix4x4, result: { value: ref<Matrix4x4> }): boolean;
+    Decompose(matrix: Matrix4x4, scale: Vector3, rotation: Quaternion, translation: Vector3): boolean;
+    Invert(matrix: Matrix4x4, result: Matrix4x4): boolean;
     Lerp(matrix1: Matrix4x4, matrix2: Matrix4x4, amount: float): Matrix4x4;
     Multiply(value1: Matrix4x4, value2: Matrix4x4): Matrix4x4;
     Multiply(value1: Matrix4x4, value2: float): Matrix4x4;
@@ -865,11 +840,11 @@ export interface TotalOrderIeee754Comparer_1$instance<T extends IFloatingPointIe
 export type TotalOrderIeee754Comparer_1<T extends IFloatingPointIeee754_1<T>> = TotalOrderIeee754Comparer_1$instance<T> & __TotalOrderIeee754Comparer_1$views<T>;
 
 
-export interface Vector_1$instance<T> extends IAdditionOperators_3<Vector_1<T>, Vector_1<T>, Vector_1<T>>, IBitwiseOperators_3<Vector_1<T>, Vector_1<T>, Vector_1<T>>, IDivisionOperators_3<Vector_1<T>, Vector_1<T>, Vector_1<T>>, IEqualityOperators_3<Vector_1<T>, Vector_1<T>, CLROf<boolean>>, IMultiplyOperators_3<Vector_1<T>, Vector_1<T>, Vector_1<T>>, IShiftOperators_3<Vector_1<T>, CLROf<int>, Vector_1<T>>, ISubtractionOperators_3<Vector_1<T>, Vector_1<T>, Vector_1<T>>, IUnaryNegationOperators_2<Vector_1<T>, Vector_1<T>>, IUnaryPlusOperators_2<Vector_1<T>, Vector_1<T>> {
+export interface Vector_1$instance<T> extends IAdditionOperators_3<Vector_1<T>, Vector_1<T>, Vector_1<T>>, IBitwiseOperators_3<Vector_1<T>, Vector_1<T>, Vector_1<T>>, IDivisionOperators_3<Vector_1<T>, Vector_1<T>, Vector_1<T>>, IEqualityOperators_3<Vector_1<T>, Vector_1<T>, System_Internal.Boolean>, IMultiplyOperators_3<Vector_1<T>, Vector_1<T>, Vector_1<T>>, IShiftOperators_3<Vector_1<T>, System_Internal.Int32, Vector_1<T>>, ISubtractionOperators_3<Vector_1<T>, Vector_1<T>, Vector_1<T>>, IUnaryNegationOperators_2<Vector_1<T>, Vector_1<T>>, IUnaryPlusOperators_2<Vector_1<T>, Vector_1<T>> {
     readonly Item: T;
     CopyTo(destination: T[]): void;
     CopyTo(destination: T[], startIndex: int): void;
-    CopyTo(destination: Span_1<CLROf<byte>>): void;
+    CopyTo(destination: Span_1<System_Internal.Byte>): void;
     CopyTo(destination: Span_1<T>): void;
     Equals(obj: unknown): boolean;
     Equals(other: Vector_1<T>): boolean;
@@ -877,7 +852,7 @@ export interface Vector_1$instance<T> extends IAdditionOperators_3<Vector_1<T>, 
     ToString(): string;
     ToString(format: string): string;
     ToString(format: string, formatProvider: IFormatProvider): string;
-    TryCopyTo(destination: Span_1<CLROf<byte>>): boolean;
+    TryCopyTo(destination: Span_1<System_Internal.Byte>): boolean;
     TryCopyTo(destination: Span_1<T>): boolean;
 }
 
@@ -887,7 +862,7 @@ export const Vector_1: {
     new<T>(values: T[]): Vector_1$instance<T>;
     new<T>(values: T[], index: int): Vector_1$instance<T>;
     new<T>(values: ReadOnlySpan_1<T>): Vector_1$instance<T>;
-    new<T>(values: ReadOnlySpan_1<CLROf<byte>>): Vector_1$instance<T>;
+    new<T>(values: ReadOnlySpan_1<System_Internal.Byte>): Vector_1$instance<T>;
     new<T>(values: Span_1<T>): Vector_1$instance<T>;
     readonly AllBitsSet: unknown;
     readonly Count: int;
@@ -906,7 +881,7 @@ export interface __Vector_1$views<T> {
     equals(other: Vector_1<T>): boolean;
 }
 
-export interface Vector_1$instance<T> extends IAdditionOperators_3$instance<Vector_1<T>, Vector_1<T>, Vector_1<T>>, IBitwiseOperators_3$instance<Vector_1<T>, Vector_1<T>, Vector_1<T>>, IDivisionOperators_3$instance<Vector_1<T>, Vector_1<T>, Vector_1<T>>, IEqualityOperators_3$instance<Vector_1<T>, Vector_1<T>, CLROf<boolean>>, IMultiplyOperators_3$instance<Vector_1<T>, Vector_1<T>, Vector_1<T>>, IShiftOperators_3$instance<Vector_1<T>, CLROf<int>, Vector_1<T>>, ISubtractionOperators_3$instance<Vector_1<T>, Vector_1<T>, Vector_1<T>>, IUnaryNegationOperators_2$instance<Vector_1<T>, Vector_1<T>>, IUnaryPlusOperators_2$instance<Vector_1<T>, Vector_1<T>> {}
+export interface Vector_1$instance<T> extends IAdditionOperators_3$instance<Vector_1<T>, Vector_1<T>, Vector_1<T>>, IBitwiseOperators_3$instance<Vector_1<T>, Vector_1<T>, Vector_1<T>>, IDivisionOperators_3$instance<Vector_1<T>, Vector_1<T>, Vector_1<T>>, IEqualityOperators_3$instance<Vector_1<T>, Vector_1<T>, System_Internal.Boolean>, IMultiplyOperators_3$instance<Vector_1<T>, Vector_1<T>, Vector_1<T>>, IShiftOperators_3$instance<Vector_1<T>, System_Internal.Int32, Vector_1<T>>, ISubtractionOperators_3$instance<Vector_1<T>, Vector_1<T>, Vector_1<T>>, IUnaryNegationOperators_2$instance<Vector_1<T>, Vector_1<T>>, IUnaryPlusOperators_2$instance<Vector_1<T>, Vector_1<T>> {}
 
 export type Vector_1<T> = Vector_1$instance<T> & __Vector_1$views<T>;
 
@@ -917,7 +892,7 @@ export interface Vector2$instance {
     Item: float;
     CopyTo(array: float[]): void;
     CopyTo(array: float[], index: int): void;
-    CopyTo(destination: Span_1<CLROf<float>>): void;
+    CopyTo(destination: Span_1<System_Internal.Single>): void;
     Equals(obj: unknown): boolean;
     Equals(other: Vector2): boolean;
     GetHashCode(): int;
@@ -926,14 +901,14 @@ export interface Vector2$instance {
     ToString(): string;
     ToString(format: string): string;
     ToString(format: string, formatProvider: IFormatProvider): string;
-    TryCopyTo(destination: Span_1<CLROf<float>>): boolean;
+    TryCopyTo(destination: Span_1<System_Internal.Single>): boolean;
 }
 
 
 export const Vector2: {
     new(value: float): Vector2$instance;
     new(x: float, y: float): Vector2$instance;
-    new(values: ReadOnlySpan_1<CLROf<float>>): Vector2$instance;
+    new(values: ReadOnlySpan_1<System_Internal.Single>): Vector2$instance;
     readonly AllBitsSet: Vector2;
     readonly E: Vector2;
     readonly Epsilon: Vector2;
@@ -963,7 +938,7 @@ export const Vector2: {
     Cos(vector: Vector2): Vector2;
     Count(vector: Vector2, value: float): int;
     CountWhereAllBitsSet(vector: Vector2): int;
-    Create(values: ReadOnlySpan_1<CLROf<float>>): Vector2;
+    Create(values: ReadOnlySpan_1<System_Internal.Single>): Vector2;
     Create(x: float, y: float): Vector2;
     Create(value: float): Vector2;
     CreateScalar(x: float): Vector2;
@@ -1015,8 +990,8 @@ export const Vector2: {
     Load(source: ptr<float>): Vector2;
     LoadAligned(source: ptr<float>): Vector2;
     LoadAlignedNonTemporal(source: ptr<float>): Vector2;
-    LoadUnsafe(source: { value: ref<float> }, elementOffset: nuint): Vector2;
-    LoadUnsafe(source: { value: ref<float> }): Vector2;
+    LoadUnsafe(source: float, elementOffset: nuint): Vector2;
+    LoadUnsafe(source: float): Vector2;
     Log(vector: Vector2): Vector2;
     Log2(vector: Vector2): Vector2;
     Max(value1: Vector2, value2: Vector2): Vector2;
@@ -1076,7 +1051,7 @@ export interface Vector3$instance {
     Item: float;
     CopyTo(array: float[]): void;
     CopyTo(array: float[], index: int): void;
-    CopyTo(destination: Span_1<CLROf<float>>): void;
+    CopyTo(destination: Span_1<System_Internal.Single>): void;
     Equals(obj: unknown): boolean;
     Equals(other: Vector3): boolean;
     GetHashCode(): int;
@@ -1085,7 +1060,7 @@ export interface Vector3$instance {
     ToString(): string;
     ToString(format: string): string;
     ToString(format: string, formatProvider: IFormatProvider): string;
-    TryCopyTo(destination: Span_1<CLROf<float>>): boolean;
+    TryCopyTo(destination: Span_1<System_Internal.Single>): boolean;
 }
 
 
@@ -1093,7 +1068,7 @@ export const Vector3: {
     new(value: float): Vector3$instance;
     new(value: Vector2, z: float): Vector3$instance;
     new(x: float, y: float, z: float): Vector3$instance;
-    new(values: ReadOnlySpan_1<CLROf<float>>): Vector3$instance;
+    new(values: ReadOnlySpan_1<System_Internal.Single>): Vector3$instance;
     readonly AllBitsSet: Vector3;
     readonly E: Vector3;
     readonly Epsilon: Vector3;
@@ -1125,7 +1100,7 @@ export const Vector3: {
     Count(vector: Vector3, value: float): int;
     CountWhereAllBitsSet(vector: Vector3): int;
     Create(vector: Vector2, z: float): Vector3;
-    Create(values: ReadOnlySpan_1<CLROf<float>>): Vector3;
+    Create(values: ReadOnlySpan_1<System_Internal.Single>): Vector3;
     Create(x: float, y: float, z: float): Vector3;
     Create(value: float): Vector3;
     CreateScalar(x: float): Vector3;
@@ -1177,8 +1152,8 @@ export const Vector3: {
     Load(source: ptr<float>): Vector3;
     LoadAligned(source: ptr<float>): Vector3;
     LoadAlignedNonTemporal(source: ptr<float>): Vector3;
-    LoadUnsafe(source: { value: ref<float> }, elementOffset: nuint): Vector3;
-    LoadUnsafe(source: { value: ref<float> }): Vector3;
+    LoadUnsafe(source: float, elementOffset: nuint): Vector3;
+    LoadUnsafe(source: float): Vector3;
     Log(vector: Vector3): Vector3;
     Log2(vector: Vector3): Vector3;
     Max(value1: Vector3, value2: Vector3): Vector3;
@@ -1237,7 +1212,7 @@ export interface Vector4$instance {
     Item: float;
     CopyTo(array: float[]): void;
     CopyTo(array: float[], index: int): void;
-    CopyTo(destination: Span_1<CLROf<float>>): void;
+    CopyTo(destination: Span_1<System_Internal.Single>): void;
     Equals(other: Vector4): boolean;
     Equals(obj: unknown): boolean;
     GetHashCode(): int;
@@ -1246,7 +1221,7 @@ export interface Vector4$instance {
     ToString(): string;
     ToString(format: string): string;
     ToString(format: string, formatProvider: IFormatProvider): string;
-    TryCopyTo(destination: Span_1<CLROf<float>>): boolean;
+    TryCopyTo(destination: Span_1<System_Internal.Single>): boolean;
 }
 
 
@@ -1255,7 +1230,7 @@ export const Vector4: {
     new(value: Vector2, z: float, w: float): Vector4$instance;
     new(value: Vector3, w: float): Vector4$instance;
     new(x: float, y: float, z: float, w: float): Vector4$instance;
-    new(values: ReadOnlySpan_1<CLROf<float>>): Vector4$instance;
+    new(values: ReadOnlySpan_1<System_Internal.Single>): Vector4$instance;
     readonly AllBitsSet: Vector4;
     readonly E: Vector4;
     readonly Epsilon: Vector4;
@@ -1289,7 +1264,7 @@ export const Vector4: {
     CountWhereAllBitsSet(vector: Vector4): int;
     Create(vector: Vector2, z: float, w: float): Vector4;
     Create(vector: Vector3, w: float): Vector4;
-    Create(values: ReadOnlySpan_1<CLROf<float>>): Vector4;
+    Create(values: ReadOnlySpan_1<System_Internal.Single>): Vector4;
     Create(x: float, y: float, z: float, w: float): Vector4;
     Create(value: float): Vector4;
     CreateScalar(x: float): Vector4;
@@ -1341,8 +1316,8 @@ export const Vector4: {
     Load(source: ptr<float>): Vector4;
     LoadAligned(source: ptr<float>): Vector4;
     LoadAlignedNonTemporal(source: ptr<float>): Vector4;
-    LoadUnsafe(source: { value: ref<float> }, elementOffset: nuint): Vector4;
-    LoadUnsafe(source: { value: ref<float> }): Vector4;
+    LoadUnsafe(source: float, elementOffset: nuint): Vector4;
+    LoadUnsafe(source: float): Vector4;
     Log(vector: Vector4): Vector4;
     Log2(vector: Vector4): Vector4;
     Max(value1: Vector4, value2: Vector4): Vector4;
@@ -1459,42 +1434,42 @@ export abstract class Vector$instance {
     static AsVector4(value: Vector3): Vector4;
     static AsVector4Unsafe(value: Vector2): Vector4;
     static AsVector4Unsafe(value: Vector3): Vector4;
-    static AsVectorByte<T>(value: Vector_1<T>): Vector_1<CLROf<byte>>;
-    static AsVectorDouble<T>(value: Vector_1<T>): Vector_1<CLROf<double>>;
-    static AsVectorInt16<T>(value: Vector_1<T>): Vector_1<CLROf<short>>;
-    static AsVectorInt32<T>(value: Vector_1<T>): Vector_1<CLROf<int>>;
-    static AsVectorInt64<T>(value: Vector_1<T>): Vector_1<CLROf<long>>;
-    static AsVectorNInt<T>(value: Vector_1<T>): Vector_1<CLROf<nint>>;
-    static AsVectorNUInt<T>(value: Vector_1<T>): Vector_1<CLROf<nuint>>;
-    static AsVectorSByte<T>(value: Vector_1<T>): Vector_1<CLROf<sbyte>>;
-    static AsVectorSingle<T>(value: Vector_1<T>): Vector_1<CLROf<float>>;
-    static AsVectorUInt16<T>(value: Vector_1<T>): Vector_1<CLROf<ushort>>;
-    static AsVectorUInt32<T>(value: Vector_1<T>): Vector_1<CLROf<uint>>;
-    static AsVectorUInt64<T>(value: Vector_1<T>): Vector_1<CLROf<ulong>>;
+    static AsVectorByte<T>(value: Vector_1<T>): Vector_1<System_Internal.Byte>;
+    static AsVectorDouble<T>(value: Vector_1<T>): Vector_1<System_Internal.Double>;
+    static AsVectorInt16<T>(value: Vector_1<T>): Vector_1<System_Internal.Int16>;
+    static AsVectorInt32<T>(value: Vector_1<T>): Vector_1<System_Internal.Int32>;
+    static AsVectorInt64<T>(value: Vector_1<T>): Vector_1<System_Internal.Int64>;
+    static AsVectorNInt<T>(value: Vector_1<T>): Vector_1<System_Internal.IntPtr>;
+    static AsVectorNUInt<T>(value: Vector_1<T>): Vector_1<System_Internal.UIntPtr>;
+    static AsVectorSByte<T>(value: Vector_1<T>): Vector_1<System_Internal.SByte>;
+    static AsVectorSingle<T>(value: Vector_1<T>): Vector_1<System_Internal.Single>;
+    static AsVectorUInt16<T>(value: Vector_1<T>): Vector_1<System_Internal.UInt16>;
+    static AsVectorUInt32<T>(value: Vector_1<T>): Vector_1<System_Internal.UInt32>;
+    static AsVectorUInt64<T>(value: Vector_1<T>): Vector_1<System_Internal.UInt64>;
     static BitwiseAnd<T>(left: Vector_1<T>, right: Vector_1<T>): Vector_1<T>;
     static BitwiseOr<T>(left: Vector_1<T>, right: Vector_1<T>): Vector_1<T>;
-    static Ceiling(value: Vector_1<CLROf<double>>): Vector_1<CLROf<double>>;
-    static Ceiling(value: Vector_1<CLROf<float>>): Vector_1<CLROf<float>>;
+    static Ceiling(value: Vector_1<System_Internal.Double>): Vector_1<System_Internal.Double>;
+    static Ceiling(value: Vector_1<System_Internal.Single>): Vector_1<System_Internal.Single>;
     static Clamp<T>(value: Vector_1<T>, min: Vector_1<T>, max: Vector_1<T>): Vector_1<T>;
     static ClampNative<T>(value: Vector_1<T>, min: Vector_1<T>, max: Vector_1<T>): Vector_1<T>;
-    static ConditionalSelect(condition: Vector_1<CLROf<int>>, left: Vector_1<CLROf<float>>, right: Vector_1<CLROf<float>>): Vector_1<CLROf<float>>;
-    static ConditionalSelect(condition: Vector_1<CLROf<long>>, left: Vector_1<CLROf<double>>, right: Vector_1<CLROf<double>>): Vector_1<CLROf<double>>;
+    static ConditionalSelect(condition: Vector_1<System_Internal.Int32>, left: Vector_1<System_Internal.Single>, right: Vector_1<System_Internal.Single>): Vector_1<System_Internal.Single>;
+    static ConditionalSelect(condition: Vector_1<System_Internal.Int64>, left: Vector_1<System_Internal.Double>, right: Vector_1<System_Internal.Double>): Vector_1<System_Internal.Double>;
     static ConditionalSelect<T>(condition: Vector_1<T>, left: Vector_1<T>, right: Vector_1<T>): Vector_1<T>;
-    static ConvertToDouble(value: Vector_1<CLROf<long>>): Vector_1<CLROf<double>>;
-    static ConvertToDouble(value: Vector_1<CLROf<ulong>>): Vector_1<CLROf<double>>;
-    static ConvertToInt32(value: Vector_1<CLROf<float>>): Vector_1<CLROf<int>>;
-    static ConvertToInt32Native(value: Vector_1<CLROf<float>>): Vector_1<CLROf<int>>;
-    static ConvertToInt64(value: Vector_1<CLROf<double>>): Vector_1<CLROf<long>>;
-    static ConvertToInt64Native(value: Vector_1<CLROf<double>>): Vector_1<CLROf<long>>;
-    static ConvertToSingle(value: Vector_1<CLROf<int>>): Vector_1<CLROf<float>>;
-    static ConvertToSingle(value: Vector_1<CLROf<uint>>): Vector_1<CLROf<float>>;
-    static ConvertToUInt32(value: Vector_1<CLROf<float>>): Vector_1<CLROf<uint>>;
-    static ConvertToUInt32Native(value: Vector_1<CLROf<float>>): Vector_1<CLROf<uint>>;
-    static ConvertToUInt64(value: Vector_1<CLROf<double>>): Vector_1<CLROf<ulong>>;
-    static ConvertToUInt64Native(value: Vector_1<CLROf<double>>): Vector_1<CLROf<ulong>>;
+    static ConvertToDouble(value: Vector_1<System_Internal.Int64>): Vector_1<System_Internal.Double>;
+    static ConvertToDouble(value: Vector_1<System_Internal.UInt64>): Vector_1<System_Internal.Double>;
+    static ConvertToInt32(value: Vector_1<System_Internal.Single>): Vector_1<System_Internal.Int32>;
+    static ConvertToInt32Native(value: Vector_1<System_Internal.Single>): Vector_1<System_Internal.Int32>;
+    static ConvertToInt64(value: Vector_1<System_Internal.Double>): Vector_1<System_Internal.Int64>;
+    static ConvertToInt64Native(value: Vector_1<System_Internal.Double>): Vector_1<System_Internal.Int64>;
+    static ConvertToSingle(value: Vector_1<System_Internal.Int32>): Vector_1<System_Internal.Single>;
+    static ConvertToSingle(value: Vector_1<System_Internal.UInt32>): Vector_1<System_Internal.Single>;
+    static ConvertToUInt32(value: Vector_1<System_Internal.Single>): Vector_1<System_Internal.UInt32>;
+    static ConvertToUInt32Native(value: Vector_1<System_Internal.Single>): Vector_1<System_Internal.UInt32>;
+    static ConvertToUInt64(value: Vector_1<System_Internal.Double>): Vector_1<System_Internal.UInt64>;
+    static ConvertToUInt64Native(value: Vector_1<System_Internal.Double>): Vector_1<System_Internal.UInt64>;
     static CopySign<T>(value: Vector_1<T>, sign: Vector_1<T>): Vector_1<T>;
-    static Cos(vector: Vector_1<CLROf<double>>): Vector_1<CLROf<double>>;
-    static Cos(vector: Vector_1<CLROf<float>>): Vector_1<CLROf<float>>;
+    static Cos(vector: Vector_1<System_Internal.Double>): Vector_1<System_Internal.Double>;
+    static Cos(vector: Vector_1<System_Internal.Single>): Vector_1<System_Internal.Single>;
     static Count<T>(vector: Vector_1<T>, value: T): int;
     static CountWhereAllBitsSet<T>(vector: Vector_1<T>): int;
     static Create<T>(values: ReadOnlySpan_1<T>): Vector_1<T>;
@@ -1502,47 +1477,47 @@ export abstract class Vector$instance {
     static CreateScalar<T>(value: T): Vector_1<T>;
     static CreateScalarUnsafe<T>(value: T): Vector_1<T>;
     static CreateSequence<T>(start: T, step: T): Vector_1<T>;
-    static DegreesToRadians(degrees: Vector_1<CLROf<double>>): Vector_1<CLROf<double>>;
-    static DegreesToRadians(degrees: Vector_1<CLROf<float>>): Vector_1<CLROf<float>>;
+    static DegreesToRadians(degrees: Vector_1<System_Internal.Double>): Vector_1<System_Internal.Double>;
+    static DegreesToRadians(degrees: Vector_1<System_Internal.Single>): Vector_1<System_Internal.Single>;
     static Divide<T>(left: Vector_1<T>, right: T): Vector_1<T>;
     static Divide<T>(left: Vector_1<T>, right: Vector_1<T>): Vector_1<T>;
     static Dot<T>(left: Vector_1<T>, right: Vector_1<T>): T;
-    static Equals(left: Vector_1<CLROf<double>>, right: Vector_1<CLROf<double>>): Vector_1<CLROf<long>>;
-    static Equals(left: Vector_1<CLROf<int>>, right: Vector_1<CLROf<int>>): Vector_1<CLROf<int>>;
-    static Equals(left: Vector_1<CLROf<long>>, right: Vector_1<CLROf<long>>): Vector_1<CLROf<long>>;
-    static Equals(left: Vector_1<CLROf<float>>, right: Vector_1<CLROf<float>>): Vector_1<CLROf<int>>;
+    static Equals(left: Vector_1<System_Internal.Double>, right: Vector_1<System_Internal.Double>): Vector_1<System_Internal.Int64>;
+    static Equals(left: Vector_1<System_Internal.Int32>, right: Vector_1<System_Internal.Int32>): Vector_1<System_Internal.Int32>;
+    static Equals(left: Vector_1<System_Internal.Int64>, right: Vector_1<System_Internal.Int64>): Vector_1<System_Internal.Int64>;
+    static Equals(left: Vector_1<System_Internal.Single>, right: Vector_1<System_Internal.Single>): Vector_1<System_Internal.Int32>;
     static Equals<T>(left: Vector_1<T>, right: Vector_1<T>): Vector_1<T>;
     static EqualsAll<T>(left: Vector_1<T>, right: Vector_1<T>): boolean;
     static EqualsAny<T>(left: Vector_1<T>, right: Vector_1<T>): boolean;
-    static Exp(vector: Vector_1<CLROf<double>>): Vector_1<CLROf<double>>;
-    static Exp(vector: Vector_1<CLROf<float>>): Vector_1<CLROf<float>>;
+    static Exp(vector: Vector_1<System_Internal.Double>): Vector_1<System_Internal.Double>;
+    static Exp(vector: Vector_1<System_Internal.Single>): Vector_1<System_Internal.Single>;
     static ExtractMostSignificantBits(vector: Vector2): uint;
     static ExtractMostSignificantBits(vector: Vector3): uint;
     static ExtractMostSignificantBits(vector: Vector4): uint;
-    static Floor(value: Vector_1<CLROf<double>>): Vector_1<CLROf<double>>;
-    static Floor(value: Vector_1<CLROf<float>>): Vector_1<CLROf<float>>;
-    static FusedMultiplyAdd(left: Vector_1<CLROf<double>>, right: Vector_1<CLROf<double>>, addend: Vector_1<CLROf<double>>): Vector_1<CLROf<double>>;
-    static FusedMultiplyAdd(left: Vector_1<CLROf<float>>, right: Vector_1<CLROf<float>>, addend: Vector_1<CLROf<float>>): Vector_1<CLROf<float>>;
+    static Floor(value: Vector_1<System_Internal.Double>): Vector_1<System_Internal.Double>;
+    static Floor(value: Vector_1<System_Internal.Single>): Vector_1<System_Internal.Single>;
+    static FusedMultiplyAdd(left: Vector_1<System_Internal.Double>, right: Vector_1<System_Internal.Double>, addend: Vector_1<System_Internal.Double>): Vector_1<System_Internal.Double>;
+    static FusedMultiplyAdd(left: Vector_1<System_Internal.Single>, right: Vector_1<System_Internal.Single>, addend: Vector_1<System_Internal.Single>): Vector_1<System_Internal.Single>;
     static GetElement(vector: Vector2, index: int): float;
     static GetElement(vector: Vector3, index: int): float;
     static GetElement(vector: Vector4, index: int): float;
     static GetElement<T>(vector: Vector_1<T>, index: int): T;
-    static GreaterThan(left: Vector_1<CLROf<double>>, right: Vector_1<CLROf<double>>): Vector_1<CLROf<long>>;
-    static GreaterThan(left: Vector_1<CLROf<int>>, right: Vector_1<CLROf<int>>): Vector_1<CLROf<int>>;
-    static GreaterThan(left: Vector_1<CLROf<long>>, right: Vector_1<CLROf<long>>): Vector_1<CLROf<long>>;
-    static GreaterThan(left: Vector_1<CLROf<float>>, right: Vector_1<CLROf<float>>): Vector_1<CLROf<int>>;
+    static GreaterThan(left: Vector_1<System_Internal.Double>, right: Vector_1<System_Internal.Double>): Vector_1<System_Internal.Int64>;
+    static GreaterThan(left: Vector_1<System_Internal.Int32>, right: Vector_1<System_Internal.Int32>): Vector_1<System_Internal.Int32>;
+    static GreaterThan(left: Vector_1<System_Internal.Int64>, right: Vector_1<System_Internal.Int64>): Vector_1<System_Internal.Int64>;
+    static GreaterThan(left: Vector_1<System_Internal.Single>, right: Vector_1<System_Internal.Single>): Vector_1<System_Internal.Int32>;
     static GreaterThan<T>(left: Vector_1<T>, right: Vector_1<T>): Vector_1<T>;
     static GreaterThanAll<T>(left: Vector_1<T>, right: Vector_1<T>): boolean;
     static GreaterThanAny<T>(left: Vector_1<T>, right: Vector_1<T>): boolean;
-    static GreaterThanOrEqual(left: Vector_1<CLROf<double>>, right: Vector_1<CLROf<double>>): Vector_1<CLROf<long>>;
-    static GreaterThanOrEqual(left: Vector_1<CLROf<int>>, right: Vector_1<CLROf<int>>): Vector_1<CLROf<int>>;
-    static GreaterThanOrEqual(left: Vector_1<CLROf<long>>, right: Vector_1<CLROf<long>>): Vector_1<CLROf<long>>;
-    static GreaterThanOrEqual(left: Vector_1<CLROf<float>>, right: Vector_1<CLROf<float>>): Vector_1<CLROf<int>>;
+    static GreaterThanOrEqual(left: Vector_1<System_Internal.Double>, right: Vector_1<System_Internal.Double>): Vector_1<System_Internal.Int64>;
+    static GreaterThanOrEqual(left: Vector_1<System_Internal.Int32>, right: Vector_1<System_Internal.Int32>): Vector_1<System_Internal.Int32>;
+    static GreaterThanOrEqual(left: Vector_1<System_Internal.Int64>, right: Vector_1<System_Internal.Int64>): Vector_1<System_Internal.Int64>;
+    static GreaterThanOrEqual(left: Vector_1<System_Internal.Single>, right: Vector_1<System_Internal.Single>): Vector_1<System_Internal.Int32>;
     static GreaterThanOrEqual<T>(left: Vector_1<T>, right: Vector_1<T>): Vector_1<T>;
     static GreaterThanOrEqualAll<T>(left: Vector_1<T>, right: Vector_1<T>): boolean;
     static GreaterThanOrEqualAny<T>(left: Vector_1<T>, right: Vector_1<T>): boolean;
-    static Hypot(x: Vector_1<CLROf<double>>, y: Vector_1<CLROf<double>>): Vector_1<CLROf<double>>;
-    static Hypot(x: Vector_1<CLROf<float>>, y: Vector_1<CLROf<float>>): Vector_1<CLROf<float>>;
+    static Hypot(x: Vector_1<System_Internal.Double>, y: Vector_1<System_Internal.Double>): Vector_1<System_Internal.Double>;
+    static Hypot(x: Vector_1<System_Internal.Single>, y: Vector_1<System_Internal.Single>): Vector_1<System_Internal.Single>;
     static IndexOf<T>(vector: Vector_1<T>, value: T): int;
     static IndexOfWhereAllBitsSet<T>(vector: Vector_1<T>): int;
     static IsEvenInteger<T>(vector: Vector_1<T>): Vector_1<T>;
@@ -1560,31 +1535,31 @@ export abstract class Vector$instance {
     static IsZero<T>(vector: Vector_1<T>): Vector_1<T>;
     static LastIndexOf<T>(vector: Vector_1<T>, value: T): int;
     static LastIndexOfWhereAllBitsSet<T>(vector: Vector_1<T>): int;
-    static Lerp(x: Vector_1<CLROf<double>>, y: Vector_1<CLROf<double>>, amount: Vector_1<CLROf<double>>): Vector_1<CLROf<double>>;
-    static Lerp(x: Vector_1<CLROf<float>>, y: Vector_1<CLROf<float>>, amount: Vector_1<CLROf<float>>): Vector_1<CLROf<float>>;
-    static LessThan(left: Vector_1<CLROf<double>>, right: Vector_1<CLROf<double>>): Vector_1<CLROf<long>>;
-    static LessThan(left: Vector_1<CLROf<int>>, right: Vector_1<CLROf<int>>): Vector_1<CLROf<int>>;
-    static LessThan(left: Vector_1<CLROf<long>>, right: Vector_1<CLROf<long>>): Vector_1<CLROf<long>>;
-    static LessThan(left: Vector_1<CLROf<float>>, right: Vector_1<CLROf<float>>): Vector_1<CLROf<int>>;
+    static Lerp(x: Vector_1<System_Internal.Double>, y: Vector_1<System_Internal.Double>, amount: Vector_1<System_Internal.Double>): Vector_1<System_Internal.Double>;
+    static Lerp(x: Vector_1<System_Internal.Single>, y: Vector_1<System_Internal.Single>, amount: Vector_1<System_Internal.Single>): Vector_1<System_Internal.Single>;
+    static LessThan(left: Vector_1<System_Internal.Double>, right: Vector_1<System_Internal.Double>): Vector_1<System_Internal.Int64>;
+    static LessThan(left: Vector_1<System_Internal.Int32>, right: Vector_1<System_Internal.Int32>): Vector_1<System_Internal.Int32>;
+    static LessThan(left: Vector_1<System_Internal.Int64>, right: Vector_1<System_Internal.Int64>): Vector_1<System_Internal.Int64>;
+    static LessThan(left: Vector_1<System_Internal.Single>, right: Vector_1<System_Internal.Single>): Vector_1<System_Internal.Int32>;
     static LessThan<T>(left: Vector_1<T>, right: Vector_1<T>): Vector_1<T>;
     static LessThanAll<T>(left: Vector_1<T>, right: Vector_1<T>): boolean;
     static LessThanAny<T>(left: Vector_1<T>, right: Vector_1<T>): boolean;
-    static LessThanOrEqual(left: Vector_1<CLROf<double>>, right: Vector_1<CLROf<double>>): Vector_1<CLROf<long>>;
-    static LessThanOrEqual(left: Vector_1<CLROf<int>>, right: Vector_1<CLROf<int>>): Vector_1<CLROf<int>>;
-    static LessThanOrEqual(left: Vector_1<CLROf<long>>, right: Vector_1<CLROf<long>>): Vector_1<CLROf<long>>;
-    static LessThanOrEqual(left: Vector_1<CLROf<float>>, right: Vector_1<CLROf<float>>): Vector_1<CLROf<int>>;
+    static LessThanOrEqual(left: Vector_1<System_Internal.Double>, right: Vector_1<System_Internal.Double>): Vector_1<System_Internal.Int64>;
+    static LessThanOrEqual(left: Vector_1<System_Internal.Int32>, right: Vector_1<System_Internal.Int32>): Vector_1<System_Internal.Int32>;
+    static LessThanOrEqual(left: Vector_1<System_Internal.Int64>, right: Vector_1<System_Internal.Int64>): Vector_1<System_Internal.Int64>;
+    static LessThanOrEqual(left: Vector_1<System_Internal.Single>, right: Vector_1<System_Internal.Single>): Vector_1<System_Internal.Int32>;
     static LessThanOrEqual<T>(left: Vector_1<T>, right: Vector_1<T>): Vector_1<T>;
     static LessThanOrEqualAll<T>(left: Vector_1<T>, right: Vector_1<T>): boolean;
     static LessThanOrEqualAny<T>(left: Vector_1<T>, right: Vector_1<T>): boolean;
     static Load<T>(source: ptr<T>): Vector_1<T>;
     static LoadAligned<T>(source: ptr<T>): Vector_1<T>;
     static LoadAlignedNonTemporal<T>(source: ptr<T>): Vector_1<T>;
-    static LoadUnsafe<T>(source: { value: ref<T> }, elementOffset: nuint): Vector_1<T>;
-    static LoadUnsafe<T>(source: { value: ref<T> }): Vector_1<T>;
-    static Log(vector: Vector_1<CLROf<double>>): Vector_1<CLROf<double>>;
-    static Log(vector: Vector_1<CLROf<float>>): Vector_1<CLROf<float>>;
-    static Log2(vector: Vector_1<CLROf<double>>): Vector_1<CLROf<double>>;
-    static Log2(vector: Vector_1<CLROf<float>>): Vector_1<CLROf<float>>;
+    static LoadUnsafe<T>(source: T, elementOffset: nuint): Vector_1<T>;
+    static LoadUnsafe<T>(source: T): Vector_1<T>;
+    static Log(vector: Vector_1<System_Internal.Double>): Vector_1<System_Internal.Double>;
+    static Log(vector: Vector_1<System_Internal.Single>): Vector_1<System_Internal.Single>;
+    static Log2(vector: Vector_1<System_Internal.Double>): Vector_1<System_Internal.Double>;
+    static Log2(vector: Vector_1<System_Internal.Single>): Vector_1<System_Internal.Single>;
     static Max<T>(left: Vector_1<T>, right: Vector_1<T>): Vector_1<T>;
     static MaxMagnitude<T>(left: Vector_1<T>, right: Vector_1<T>): Vector_1<T>;
     static MaxMagnitudeNumber<T>(left: Vector_1<T>, right: Vector_1<T>): Vector_1<T>;
@@ -1598,61 +1573,61 @@ export abstract class Vector$instance {
     static Multiply<T>(left: T, right: Vector_1<T>): Vector_1<T>;
     static Multiply<T>(left: Vector_1<T>, right: T): Vector_1<T>;
     static Multiply<T>(left: Vector_1<T>, right: Vector_1<T>): Vector_1<T>;
-    static MultiplyAddEstimate(left: Vector_1<CLROf<double>>, right: Vector_1<CLROf<double>>, addend: Vector_1<CLROf<double>>): Vector_1<CLROf<double>>;
-    static MultiplyAddEstimate(left: Vector_1<CLROf<float>>, right: Vector_1<CLROf<float>>, addend: Vector_1<CLROf<float>>): Vector_1<CLROf<float>>;
-    static Narrow(low: Vector_1<CLROf<double>>, high: Vector_1<CLROf<double>>): Vector_1<CLROf<float>>;
-    static Narrow(low: Vector_1<CLROf<short>>, high: Vector_1<CLROf<short>>): Vector_1<CLROf<sbyte>>;
-    static Narrow(low: Vector_1<CLROf<int>>, high: Vector_1<CLROf<int>>): Vector_1<CLROf<short>>;
-    static Narrow(low: Vector_1<CLROf<long>>, high: Vector_1<CLROf<long>>): Vector_1<CLROf<int>>;
-    static Narrow(low: Vector_1<CLROf<ushort>>, high: Vector_1<CLROf<ushort>>): Vector_1<CLROf<byte>>;
-    static Narrow(low: Vector_1<CLROf<uint>>, high: Vector_1<CLROf<uint>>): Vector_1<CLROf<ushort>>;
-    static Narrow(low: Vector_1<CLROf<ulong>>, high: Vector_1<CLROf<ulong>>): Vector_1<CLROf<uint>>;
-    static NarrowWithSaturation(low: Vector_1<CLROf<double>>, high: Vector_1<CLROf<double>>): Vector_1<CLROf<float>>;
-    static NarrowWithSaturation(low: Vector_1<CLROf<short>>, high: Vector_1<CLROf<short>>): Vector_1<CLROf<sbyte>>;
-    static NarrowWithSaturation(low: Vector_1<CLROf<int>>, high: Vector_1<CLROf<int>>): Vector_1<CLROf<short>>;
-    static NarrowWithSaturation(low: Vector_1<CLROf<long>>, high: Vector_1<CLROf<long>>): Vector_1<CLROf<int>>;
-    static NarrowWithSaturation(low: Vector_1<CLROf<ushort>>, high: Vector_1<CLROf<ushort>>): Vector_1<CLROf<byte>>;
-    static NarrowWithSaturation(low: Vector_1<CLROf<uint>>, high: Vector_1<CLROf<uint>>): Vector_1<CLROf<ushort>>;
-    static NarrowWithSaturation(low: Vector_1<CLROf<ulong>>, high: Vector_1<CLROf<ulong>>): Vector_1<CLROf<uint>>;
+    static MultiplyAddEstimate(left: Vector_1<System_Internal.Double>, right: Vector_1<System_Internal.Double>, addend: Vector_1<System_Internal.Double>): Vector_1<System_Internal.Double>;
+    static MultiplyAddEstimate(left: Vector_1<System_Internal.Single>, right: Vector_1<System_Internal.Single>, addend: Vector_1<System_Internal.Single>): Vector_1<System_Internal.Single>;
+    static Narrow(low: Vector_1<System_Internal.Double>, high: Vector_1<System_Internal.Double>): Vector_1<System_Internal.Single>;
+    static Narrow(low: Vector_1<System_Internal.Int16>, high: Vector_1<System_Internal.Int16>): Vector_1<System_Internal.SByte>;
+    static Narrow(low: Vector_1<System_Internal.Int32>, high: Vector_1<System_Internal.Int32>): Vector_1<System_Internal.Int16>;
+    static Narrow(low: Vector_1<System_Internal.Int64>, high: Vector_1<System_Internal.Int64>): Vector_1<System_Internal.Int32>;
+    static Narrow(low: Vector_1<System_Internal.UInt16>, high: Vector_1<System_Internal.UInt16>): Vector_1<System_Internal.Byte>;
+    static Narrow(low: Vector_1<System_Internal.UInt32>, high: Vector_1<System_Internal.UInt32>): Vector_1<System_Internal.UInt16>;
+    static Narrow(low: Vector_1<System_Internal.UInt64>, high: Vector_1<System_Internal.UInt64>): Vector_1<System_Internal.UInt32>;
+    static NarrowWithSaturation(low: Vector_1<System_Internal.Double>, high: Vector_1<System_Internal.Double>): Vector_1<System_Internal.Single>;
+    static NarrowWithSaturation(low: Vector_1<System_Internal.Int16>, high: Vector_1<System_Internal.Int16>): Vector_1<System_Internal.SByte>;
+    static NarrowWithSaturation(low: Vector_1<System_Internal.Int32>, high: Vector_1<System_Internal.Int32>): Vector_1<System_Internal.Int16>;
+    static NarrowWithSaturation(low: Vector_1<System_Internal.Int64>, high: Vector_1<System_Internal.Int64>): Vector_1<System_Internal.Int32>;
+    static NarrowWithSaturation(low: Vector_1<System_Internal.UInt16>, high: Vector_1<System_Internal.UInt16>): Vector_1<System_Internal.Byte>;
+    static NarrowWithSaturation(low: Vector_1<System_Internal.UInt32>, high: Vector_1<System_Internal.UInt32>): Vector_1<System_Internal.UInt16>;
+    static NarrowWithSaturation(low: Vector_1<System_Internal.UInt64>, high: Vector_1<System_Internal.UInt64>): Vector_1<System_Internal.UInt32>;
     static Negate<T>(value: Vector_1<T>): Vector_1<T>;
     static None<T>(vector: Vector_1<T>, value: T): boolean;
     static NoneWhereAllBitsSet<T>(vector: Vector_1<T>): boolean;
     static OnesComplement<T>(value: Vector_1<T>): Vector_1<T>;
-    static RadiansToDegrees(radians: Vector_1<CLROf<double>>): Vector_1<CLROf<double>>;
-    static RadiansToDegrees(radians: Vector_1<CLROf<float>>): Vector_1<CLROf<float>>;
-    static Round(vector: Vector_1<CLROf<double>>, mode: MidpointRounding): Vector_1<CLROf<double>>;
-    static Round(vector: Vector_1<CLROf<double>>): Vector_1<CLROf<double>>;
-    static Round(vector: Vector_1<CLROf<float>>, mode: MidpointRounding): Vector_1<CLROf<float>>;
-    static Round(vector: Vector_1<CLROf<float>>): Vector_1<CLROf<float>>;
-    static ShiftLeft(value: Vector_1<CLROf<byte>>, shiftCount: int): Vector_1<CLROf<byte>>;
-    static ShiftLeft(value: Vector_1<CLROf<short>>, shiftCount: int): Vector_1<CLROf<short>>;
-    static ShiftLeft(value: Vector_1<CLROf<int>>, shiftCount: int): Vector_1<CLROf<int>>;
-    static ShiftLeft(value: Vector_1<CLROf<long>>, shiftCount: int): Vector_1<CLROf<long>>;
-    static ShiftLeft(value: Vector_1<CLROf<nint>>, shiftCount: int): Vector_1<CLROf<nint>>;
-    static ShiftLeft(value: Vector_1<CLROf<sbyte>>, shiftCount: int): Vector_1<CLROf<sbyte>>;
-    static ShiftLeft(value: Vector_1<CLROf<ushort>>, shiftCount: int): Vector_1<CLROf<ushort>>;
-    static ShiftLeft(value: Vector_1<CLROf<uint>>, shiftCount: int): Vector_1<CLROf<uint>>;
-    static ShiftLeft(value: Vector_1<CLROf<ulong>>, shiftCount: int): Vector_1<CLROf<ulong>>;
-    static ShiftLeft(value: Vector_1<CLROf<nuint>>, shiftCount: int): Vector_1<CLROf<nuint>>;
-    static ShiftRightArithmetic(value: Vector_1<CLROf<short>>, shiftCount: int): Vector_1<CLROf<short>>;
-    static ShiftRightArithmetic(value: Vector_1<CLROf<int>>, shiftCount: int): Vector_1<CLROf<int>>;
-    static ShiftRightArithmetic(value: Vector_1<CLROf<long>>, shiftCount: int): Vector_1<CLROf<long>>;
-    static ShiftRightArithmetic(value: Vector_1<CLROf<nint>>, shiftCount: int): Vector_1<CLROf<nint>>;
-    static ShiftRightArithmetic(value: Vector_1<CLROf<sbyte>>, shiftCount: int): Vector_1<CLROf<sbyte>>;
-    static ShiftRightLogical(value: Vector_1<CLROf<byte>>, shiftCount: int): Vector_1<CLROf<byte>>;
-    static ShiftRightLogical(value: Vector_1<CLROf<short>>, shiftCount: int): Vector_1<CLROf<short>>;
-    static ShiftRightLogical(value: Vector_1<CLROf<int>>, shiftCount: int): Vector_1<CLROf<int>>;
-    static ShiftRightLogical(value: Vector_1<CLROf<long>>, shiftCount: int): Vector_1<CLROf<long>>;
-    static ShiftRightLogical(value: Vector_1<CLROf<nint>>, shiftCount: int): Vector_1<CLROf<nint>>;
-    static ShiftRightLogical(value: Vector_1<CLROf<sbyte>>, shiftCount: int): Vector_1<CLROf<sbyte>>;
-    static ShiftRightLogical(value: Vector_1<CLROf<ushort>>, shiftCount: int): Vector_1<CLROf<ushort>>;
-    static ShiftRightLogical(value: Vector_1<CLROf<uint>>, shiftCount: int): Vector_1<CLROf<uint>>;
-    static ShiftRightLogical(value: Vector_1<CLROf<ulong>>, shiftCount: int): Vector_1<CLROf<ulong>>;
-    static ShiftRightLogical(value: Vector_1<CLROf<nuint>>, shiftCount: int): Vector_1<CLROf<nuint>>;
-    static Sin(vector: Vector_1<CLROf<double>>): Vector_1<CLROf<double>>;
-    static Sin(vector: Vector_1<CLROf<float>>): Vector_1<CLROf<float>>;
-    static SinCos(vector: Vector_1<CLROf<double>>): ValueTuple_2<Vector_1<CLROf<double>>, Vector_1<CLROf<double>>>;
-    static SinCos(vector: Vector_1<CLROf<float>>): ValueTuple_2<Vector_1<CLROf<float>>, Vector_1<CLROf<float>>>;
+    static RadiansToDegrees(radians: Vector_1<System_Internal.Double>): Vector_1<System_Internal.Double>;
+    static RadiansToDegrees(radians: Vector_1<System_Internal.Single>): Vector_1<System_Internal.Single>;
+    static Round(vector: Vector_1<System_Internal.Double>, mode: MidpointRounding): Vector_1<System_Internal.Double>;
+    static Round(vector: Vector_1<System_Internal.Double>): Vector_1<System_Internal.Double>;
+    static Round(vector: Vector_1<System_Internal.Single>, mode: MidpointRounding): Vector_1<System_Internal.Single>;
+    static Round(vector: Vector_1<System_Internal.Single>): Vector_1<System_Internal.Single>;
+    static ShiftLeft(value: Vector_1<System_Internal.Byte>, shiftCount: int): Vector_1<System_Internal.Byte>;
+    static ShiftLeft(value: Vector_1<System_Internal.Int16>, shiftCount: int): Vector_1<System_Internal.Int16>;
+    static ShiftLeft(value: Vector_1<System_Internal.Int32>, shiftCount: int): Vector_1<System_Internal.Int32>;
+    static ShiftLeft(value: Vector_1<System_Internal.Int64>, shiftCount: int): Vector_1<System_Internal.Int64>;
+    static ShiftLeft(value: Vector_1<System_Internal.IntPtr>, shiftCount: int): Vector_1<System_Internal.IntPtr>;
+    static ShiftLeft(value: Vector_1<System_Internal.SByte>, shiftCount: int): Vector_1<System_Internal.SByte>;
+    static ShiftLeft(value: Vector_1<System_Internal.UInt16>, shiftCount: int): Vector_1<System_Internal.UInt16>;
+    static ShiftLeft(value: Vector_1<System_Internal.UInt32>, shiftCount: int): Vector_1<System_Internal.UInt32>;
+    static ShiftLeft(value: Vector_1<System_Internal.UInt64>, shiftCount: int): Vector_1<System_Internal.UInt64>;
+    static ShiftLeft(value: Vector_1<System_Internal.UIntPtr>, shiftCount: int): Vector_1<System_Internal.UIntPtr>;
+    static ShiftRightArithmetic(value: Vector_1<System_Internal.Int16>, shiftCount: int): Vector_1<System_Internal.Int16>;
+    static ShiftRightArithmetic(value: Vector_1<System_Internal.Int32>, shiftCount: int): Vector_1<System_Internal.Int32>;
+    static ShiftRightArithmetic(value: Vector_1<System_Internal.Int64>, shiftCount: int): Vector_1<System_Internal.Int64>;
+    static ShiftRightArithmetic(value: Vector_1<System_Internal.IntPtr>, shiftCount: int): Vector_1<System_Internal.IntPtr>;
+    static ShiftRightArithmetic(value: Vector_1<System_Internal.SByte>, shiftCount: int): Vector_1<System_Internal.SByte>;
+    static ShiftRightLogical(value: Vector_1<System_Internal.Byte>, shiftCount: int): Vector_1<System_Internal.Byte>;
+    static ShiftRightLogical(value: Vector_1<System_Internal.Int16>, shiftCount: int): Vector_1<System_Internal.Int16>;
+    static ShiftRightLogical(value: Vector_1<System_Internal.Int32>, shiftCount: int): Vector_1<System_Internal.Int32>;
+    static ShiftRightLogical(value: Vector_1<System_Internal.Int64>, shiftCount: int): Vector_1<System_Internal.Int64>;
+    static ShiftRightLogical(value: Vector_1<System_Internal.IntPtr>, shiftCount: int): Vector_1<System_Internal.IntPtr>;
+    static ShiftRightLogical(value: Vector_1<System_Internal.SByte>, shiftCount: int): Vector_1<System_Internal.SByte>;
+    static ShiftRightLogical(value: Vector_1<System_Internal.UInt16>, shiftCount: int): Vector_1<System_Internal.UInt16>;
+    static ShiftRightLogical(value: Vector_1<System_Internal.UInt32>, shiftCount: int): Vector_1<System_Internal.UInt32>;
+    static ShiftRightLogical(value: Vector_1<System_Internal.UInt64>, shiftCount: int): Vector_1<System_Internal.UInt64>;
+    static ShiftRightLogical(value: Vector_1<System_Internal.UIntPtr>, shiftCount: int): Vector_1<System_Internal.UIntPtr>;
+    static Sin(vector: Vector_1<System_Internal.Double>): Vector_1<System_Internal.Double>;
+    static Sin(vector: Vector_1<System_Internal.Single>): Vector_1<System_Internal.Single>;
+    static SinCos(vector: Vector_1<System_Internal.Double>): ValueTuple_2<Vector_1<System_Internal.Double>, Vector_1<System_Internal.Double>>;
+    static SinCos(vector: Vector_1<System_Internal.Single>): ValueTuple_2<Vector_1<System_Internal.Single>, Vector_1<System_Internal.Single>>;
     static SquareRoot<T>(value: Vector_1<T>): Vector_1<T>;
     static Store(source: Vector2, destination: ptr<float>): void;
     static Store(source: Vector3, destination: ptr<float>): void;
@@ -1666,14 +1641,14 @@ export abstract class Vector$instance {
     static StoreAlignedNonTemporal(source: Vector3, destination: ptr<float>): void;
     static StoreAlignedNonTemporal(source: Vector4, destination: ptr<float>): void;
     static StoreAlignedNonTemporal<T>(source: Vector_1<T>, destination: ptr<T>): void;
-    static StoreUnsafe(source: Vector2, destination: { value: ref<float> }, elementOffset: nuint): void;
-    static StoreUnsafe(source: Vector2, destination: { value: ref<float> }): void;
-    static StoreUnsafe(source: Vector3, destination: { value: ref<float> }, elementOffset: nuint): void;
-    static StoreUnsafe(source: Vector3, destination: { value: ref<float> }): void;
-    static StoreUnsafe(source: Vector4, destination: { value: ref<float> }, elementOffset: nuint): void;
-    static StoreUnsafe(source: Vector4, destination: { value: ref<float> }): void;
-    static StoreUnsafe<T>(source: Vector_1<T>, destination: { value: ref<T> }, elementOffset: nuint): void;
-    static StoreUnsafe<T>(source: Vector_1<T>, destination: { value: ref<T> }): void;
+    static StoreUnsafe(source: Vector2, destination: float, elementOffset: nuint): void;
+    static StoreUnsafe(source: Vector2, destination: float): void;
+    static StoreUnsafe(source: Vector3, destination: float, elementOffset: nuint): void;
+    static StoreUnsafe(source: Vector3, destination: float): void;
+    static StoreUnsafe(source: Vector4, destination: float, elementOffset: nuint): void;
+    static StoreUnsafe(source: Vector4, destination: float): void;
+    static StoreUnsafe<T>(source: Vector_1<T>, destination: T, elementOffset: nuint): void;
+    static StoreUnsafe<T>(source: Vector_1<T>, destination: T): void;
     static Subtract<T>(left: Vector_1<T>, right: Vector_1<T>): Vector_1<T>;
     static SubtractSaturate<T>(left: Vector_1<T>, right: Vector_1<T>): Vector_1<T>;
     static Sum<T>(value: Vector_1<T>): T;
@@ -1681,29 +1656,29 @@ export abstract class Vector$instance {
     static ToScalar(vector: Vector3): float;
     static ToScalar(vector: Vector4): float;
     static ToScalar<T>(vector: Vector_1<T>): T;
-    static Truncate(vector: Vector_1<CLROf<double>>): Vector_1<CLROf<double>>;
-    static Truncate(vector: Vector_1<CLROf<float>>): Vector_1<CLROf<float>>;
-    static Widen(source: Vector_1<CLROf<byte>>, low: { value: ref<Vector_1<CLROf<ushort>>> }, high: { value: ref<Vector_1<CLROf<ushort>>> }): void;
-    static Widen(source: Vector_1<CLROf<short>>, low: { value: ref<Vector_1<CLROf<int>>> }, high: { value: ref<Vector_1<CLROf<int>>> }): void;
-    static Widen(source: Vector_1<CLROf<int>>, low: { value: ref<Vector_1<CLROf<long>>> }, high: { value: ref<Vector_1<CLROf<long>>> }): void;
-    static Widen(source: Vector_1<CLROf<sbyte>>, low: { value: ref<Vector_1<CLROf<short>>> }, high: { value: ref<Vector_1<CLROf<short>>> }): void;
-    static Widen(source: Vector_1<CLROf<float>>, low: { value: ref<Vector_1<CLROf<double>>> }, high: { value: ref<Vector_1<CLROf<double>>> }): void;
-    static Widen(source: Vector_1<CLROf<ushort>>, low: { value: ref<Vector_1<CLROf<uint>>> }, high: { value: ref<Vector_1<CLROf<uint>>> }): void;
-    static Widen(source: Vector_1<CLROf<uint>>, low: { value: ref<Vector_1<CLROf<ulong>>> }, high: { value: ref<Vector_1<CLROf<ulong>>> }): void;
-    static WidenLower(source: Vector_1<CLROf<byte>>): Vector_1<CLROf<ushort>>;
-    static WidenLower(source: Vector_1<CLROf<short>>): Vector_1<CLROf<int>>;
-    static WidenLower(source: Vector_1<CLROf<int>>): Vector_1<CLROf<long>>;
-    static WidenLower(source: Vector_1<CLROf<sbyte>>): Vector_1<CLROf<short>>;
-    static WidenLower(source: Vector_1<CLROf<float>>): Vector_1<CLROf<double>>;
-    static WidenLower(source: Vector_1<CLROf<ushort>>): Vector_1<CLROf<uint>>;
-    static WidenLower(source: Vector_1<CLROf<uint>>): Vector_1<CLROf<ulong>>;
-    static WidenUpper(source: Vector_1<CLROf<byte>>): Vector_1<CLROf<ushort>>;
-    static WidenUpper(source: Vector_1<CLROf<short>>): Vector_1<CLROf<int>>;
-    static WidenUpper(source: Vector_1<CLROf<int>>): Vector_1<CLROf<long>>;
-    static WidenUpper(source: Vector_1<CLROf<sbyte>>): Vector_1<CLROf<short>>;
-    static WidenUpper(source: Vector_1<CLROf<float>>): Vector_1<CLROf<double>>;
-    static WidenUpper(source: Vector_1<CLROf<ushort>>): Vector_1<CLROf<uint>>;
-    static WidenUpper(source: Vector_1<CLROf<uint>>): Vector_1<CLROf<ulong>>;
+    static Truncate(vector: Vector_1<System_Internal.Double>): Vector_1<System_Internal.Double>;
+    static Truncate(vector: Vector_1<System_Internal.Single>): Vector_1<System_Internal.Single>;
+    static Widen(source: Vector_1<System_Internal.Byte>, low: Vector_1<System_Internal.UInt16>, high: Vector_1<System_Internal.UInt16>): void;
+    static Widen(source: Vector_1<System_Internal.Int16>, low: Vector_1<System_Internal.Int32>, high: Vector_1<System_Internal.Int32>): void;
+    static Widen(source: Vector_1<System_Internal.Int32>, low: Vector_1<System_Internal.Int64>, high: Vector_1<System_Internal.Int64>): void;
+    static Widen(source: Vector_1<System_Internal.SByte>, low: Vector_1<System_Internal.Int16>, high: Vector_1<System_Internal.Int16>): void;
+    static Widen(source: Vector_1<System_Internal.Single>, low: Vector_1<System_Internal.Double>, high: Vector_1<System_Internal.Double>): void;
+    static Widen(source: Vector_1<System_Internal.UInt16>, low: Vector_1<System_Internal.UInt32>, high: Vector_1<System_Internal.UInt32>): void;
+    static Widen(source: Vector_1<System_Internal.UInt32>, low: Vector_1<System_Internal.UInt64>, high: Vector_1<System_Internal.UInt64>): void;
+    static WidenLower(source: Vector_1<System_Internal.Byte>): Vector_1<System_Internal.UInt16>;
+    static WidenLower(source: Vector_1<System_Internal.Int16>): Vector_1<System_Internal.Int32>;
+    static WidenLower(source: Vector_1<System_Internal.Int32>): Vector_1<System_Internal.Int64>;
+    static WidenLower(source: Vector_1<System_Internal.SByte>): Vector_1<System_Internal.Int16>;
+    static WidenLower(source: Vector_1<System_Internal.Single>): Vector_1<System_Internal.Double>;
+    static WidenLower(source: Vector_1<System_Internal.UInt16>): Vector_1<System_Internal.UInt32>;
+    static WidenLower(source: Vector_1<System_Internal.UInt32>): Vector_1<System_Internal.UInt64>;
+    static WidenUpper(source: Vector_1<System_Internal.Byte>): Vector_1<System_Internal.UInt16>;
+    static WidenUpper(source: Vector_1<System_Internal.Int16>): Vector_1<System_Internal.Int32>;
+    static WidenUpper(source: Vector_1<System_Internal.Int32>): Vector_1<System_Internal.Int64>;
+    static WidenUpper(source: Vector_1<System_Internal.SByte>): Vector_1<System_Internal.Int16>;
+    static WidenUpper(source: Vector_1<System_Internal.Single>): Vector_1<System_Internal.Double>;
+    static WidenUpper(source: Vector_1<System_Internal.UInt16>): Vector_1<System_Internal.UInt32>;
+    static WidenUpper(source: Vector_1<System_Internal.UInt32>): Vector_1<System_Internal.UInt64>;
     static WithElement(vector: Vector2, index: int, value: float): Vector2;
     static WithElement(vector: Vector3, index: int, value: float): Vector3;
     static WithElement(vector: Vector4, index: int, value: float): Vector4;

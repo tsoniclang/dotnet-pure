@@ -197,7 +197,13 @@
           "parameterCount": 4,
           "declaringClrType": "System.Numerics.INumberBase\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 3,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Numerics.INumberBase\u00601::TryParse(System.ReadOnlySpan_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Globalization.NumberStyles,System.IFormatProvider,TSelf\u0026):System.Boolean",
@@ -211,7 +217,13 @@
           "parameterCount": 4,
           "declaringClrType": "System.Numerics.INumberBase\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 3,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.ISpanFormattable::TryFormat(System.Span_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Int32\u0026,System.ReadOnlySpan_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.IFormatProvider):System.Boolean",
@@ -225,7 +237,13 @@
           "parameterCount": 4,
           "declaringClrType": "System.ISpanFormattable",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.IFormattable::ToString(System.String,System.IFormatProvider):System.String",
@@ -267,7 +285,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.ISpanParsable\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.IParsable\u00601::Parse(System.String,System.IFormatProvider):TSelf",
@@ -295,7 +319,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.IParsable\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Numerics.IFloatingPointIeee754\u00601::ScaleB(TSelf,System.Int32):TSelf",
@@ -379,7 +409,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Numerics.IFloatingPoint\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Numerics.IFloatingPoint\u00601::WriteExponentBigEndian(System.Byte[]):System.Int32",
@@ -1181,7 +1217,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.Numerics.IBinaryInteger\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Numerics.IBinaryInteger\u00601::GetByteCount():System.Int32",
@@ -1209,7 +1251,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Numerics.IBinaryInteger\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Numerics.IBinaryInteger\u00601::WriteBigEndian(System.Byte[]):System.Int32",
@@ -1377,7 +1425,13 @@
           "parameterCount": 4,
           "declaringClrType": "System.Numerics.INumberBase\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 3,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Numerics.INumberBase\u00601::TryParse(System.ReadOnlySpan_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Globalization.NumberStyles,System.IFormatProvider,TSelf\u0026):System.Boolean",
@@ -1391,7 +1445,13 @@
           "parameterCount": 4,
           "declaringClrType": "System.Numerics.INumberBase\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 3,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.ISpanFormattable::TryFormat(System.Span_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Int32\u0026,System.ReadOnlySpan_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.IFormatProvider):System.Boolean",
@@ -1405,7 +1465,13 @@
           "parameterCount": 4,
           "declaringClrType": "System.ISpanFormattable",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.IFormattable::ToString(System.String,System.IFormatProvider):System.String",
@@ -1447,7 +1513,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.ISpanParsable\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.IParsable\u00601::Parse(System.String,System.IFormatProvider):TSelf",
@@ -1475,7 +1547,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.IParsable\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         }
       ],
       "properties": [
@@ -2057,7 +2135,13 @@
           "parameterCount": 4,
           "declaringClrType": "System.Numerics.INumberBase\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 3,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Numerics.INumberBase\u00601::TryParse(System.ReadOnlySpan_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Globalization.NumberStyles,System.IFormatProvider,TSelf\u0026):System.Boolean",
@@ -2071,7 +2155,13 @@
           "parameterCount": 4,
           "declaringClrType": "System.Numerics.INumberBase\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 3,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.ISpanFormattable::TryFormat(System.Span_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Int32\u0026,System.ReadOnlySpan_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.IFormatProvider):System.Boolean",
@@ -2085,7 +2175,13 @@
           "parameterCount": 4,
           "declaringClrType": "System.ISpanFormattable",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.IFormattable::ToString(System.String,System.IFormatProvider):System.String",
@@ -2127,7 +2223,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.ISpanParsable\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.IParsable\u00601::Parse(System.String,System.IFormatProvider):TSelf",
@@ -2155,7 +2257,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.IParsable\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         }
       ],
       "properties": [
@@ -2659,7 +2767,13 @@
           "parameterCount": 4,
           "declaringClrType": "System.Numerics.INumberBase\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 3,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Numerics.INumberBase\u00601::TryParse(System.ReadOnlySpan_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Globalization.NumberStyles,System.IFormatProvider,TSelf\u0026):System.Boolean",
@@ -2673,7 +2787,13 @@
           "parameterCount": 4,
           "declaringClrType": "System.Numerics.INumberBase\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 3,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.ISpanFormattable::TryFormat(System.Span_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Int32\u0026,System.ReadOnlySpan_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.IFormatProvider):System.Boolean",
@@ -2687,7 +2807,13 @@
           "parameterCount": 4,
           "declaringClrType": "System.ISpanFormattable",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.IFormattable::ToString(System.String,System.IFormatProvider):System.String",
@@ -2729,7 +2855,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.ISpanParsable\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.IParsable\u00601::Parse(System.String,System.IFormatProvider):TSelf",
@@ -2757,7 +2889,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.IParsable\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         }
       ],
       "properties": [
@@ -3215,7 +3353,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Numerics.IFloatingPoint\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Numerics.IFloatingPoint\u00601::WriteExponentBigEndian(System.Byte[]):System.Int32",
@@ -3355,7 +3499,13 @@
           "parameterCount": 4,
           "declaringClrType": "System.Numerics.INumberBase\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 3,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Numerics.INumberBase\u00601::TryParse(System.ReadOnlySpan_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Globalization.NumberStyles,System.IFormatProvider,TSelf\u0026):System.Boolean",
@@ -3369,7 +3519,13 @@
           "parameterCount": 4,
           "declaringClrType": "System.Numerics.INumberBase\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 3,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.ISpanFormattable::TryFormat(System.Span_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Int32\u0026,System.ReadOnlySpan_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.IFormatProvider):System.Boolean",
@@ -3383,7 +3539,13 @@
           "parameterCount": 4,
           "declaringClrType": "System.ISpanFormattable",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.IFormattable::ToString(System.String,System.IFormatProvider):System.String",
@@ -3425,7 +3587,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.ISpanParsable\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.IParsable\u00601::Parse(System.String,System.IFormatProvider):TSelf",
@@ -3453,7 +3621,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.IParsable\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Numerics.INumber\u00601::Sign(TSelf):System.Int32",
@@ -4087,7 +4261,13 @@
           "parameterCount": 4,
           "declaringClrType": "System.Numerics.INumberBase\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 3,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Numerics.INumberBase\u00601::TryParse(System.ReadOnlySpan_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Globalization.NumberStyles,System.IFormatProvider,TSelf\u0026):System.Boolean",
@@ -4101,7 +4281,13 @@
           "parameterCount": 4,
           "declaringClrType": "System.Numerics.INumberBase\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 3,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.ISpanFormattable::TryFormat(System.Span_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Int32\u0026,System.ReadOnlySpan_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.IFormatProvider):System.Boolean",
@@ -4115,7 +4301,13 @@
           "parameterCount": 4,
           "declaringClrType": "System.ISpanFormattable",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.IFormattable::ToString(System.String,System.IFormatProvider):System.String",
@@ -4157,7 +4349,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.ISpanParsable\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.IParsable\u00601::Parse(System.String,System.IFormatProvider):TSelf",
@@ -4185,7 +4383,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.IParsable\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         }
       ],
       "properties": [
@@ -4685,7 +4889,13 @@
           "parameterCount": 4,
           "declaringClrType": "System.Numerics.INumberBase\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 3,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Numerics.INumberBase\u00601::TryParse(System.ReadOnlySpan_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Globalization.NumberStyles,System.IFormatProvider,TSelf\u0026):System.Boolean",
@@ -4699,7 +4909,13 @@
           "parameterCount": 4,
           "declaringClrType": "System.Numerics.INumberBase\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 3,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.ISpanFormattable::TryFormat(System.Span_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Int32\u0026,System.ReadOnlySpan_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.IFormatProvider):System.Boolean",
@@ -4713,7 +4929,13 @@
           "parameterCount": 4,
           "declaringClrType": "System.ISpanFormattable",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.IFormattable::ToString(System.String,System.IFormatProvider):System.String",
@@ -4755,7 +4977,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.ISpanParsable\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.IParsable\u00601::Parse(System.String,System.IFormatProvider):TSelf",
@@ -4783,7 +5011,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.IParsable\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Numerics.IFloatingPoint\u00601::ConvertToInteger(TSelf):TInteger",
@@ -4853,7 +5087,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Numerics.IFloatingPoint\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Numerics.IFloatingPoint\u00601::WriteExponentBigEndian(System.Byte[]):System.Int32",
@@ -5659,7 +5899,13 @@
           "parameterCount": 4,
           "declaringClrType": "System.Numerics.INumberBase\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 3,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Numerics.INumberBase\u00601::TryParse(System.ReadOnlySpan_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Globalization.NumberStyles,System.IFormatProvider,TSelf\u0026):System.Boolean",
@@ -5673,7 +5919,13 @@
           "parameterCount": 4,
           "declaringClrType": "System.Numerics.INumberBase\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 3,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.ISpanFormattable::TryFormat(System.Span_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Int32\u0026,System.ReadOnlySpan_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.IFormatProvider):System.Boolean",
@@ -5687,7 +5939,13 @@
           "parameterCount": 4,
           "declaringClrType": "System.ISpanFormattable",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.IFormattable::ToString(System.String,System.IFormatProvider):System.String",
@@ -5729,7 +5987,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.ISpanParsable\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.IParsable\u00601::Parse(System.String,System.IFormatProvider):TSelf",
@@ -5757,7 +6021,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.IParsable\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         }
       ],
       "properties": [
@@ -6241,7 +6511,13 @@
           "parameterCount": 4,
           "declaringClrType": "System.Numerics.INumberBase\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 3,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Numerics.INumberBase\u00601::TryParse(System.ReadOnlySpan_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Globalization.NumberStyles,System.IFormatProvider,TSelf\u0026):System.Boolean",
@@ -6255,7 +6531,13 @@
           "parameterCount": 4,
           "declaringClrType": "System.Numerics.INumberBase\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 3,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.ISpanFormattable::TryFormat(System.Span_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Int32\u0026,System.ReadOnlySpan_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.IFormatProvider):System.Boolean",
@@ -6269,7 +6551,13 @@
           "parameterCount": 4,
           "declaringClrType": "System.ISpanFormattable",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.IFormattable::ToString(System.String,System.IFormatProvider):System.String",
@@ -6311,7 +6599,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.ISpanParsable\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.IParsable\u00601::Parse(System.String,System.IFormatProvider):TSelf",
@@ -6339,7 +6633,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.IParsable\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         }
       ],
       "properties": [
@@ -6965,7 +7265,13 @@
           "parameterCount": 4,
           "declaringClrType": "System.Numerics.INumberBase\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 3,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Numerics.INumberBase\u00601::TryParse(System.ReadOnlySpan_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Globalization.NumberStyles,System.IFormatProvider,TSelf\u0026):System.Boolean",
@@ -6979,7 +7285,13 @@
           "parameterCount": 4,
           "declaringClrType": "System.Numerics.INumberBase\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 3,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.ISpanFormattable::TryFormat(System.Span_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Int32\u0026,System.ReadOnlySpan_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.IFormatProvider):System.Boolean",
@@ -6993,7 +7305,13 @@
           "parameterCount": 4,
           "declaringClrType": "System.ISpanFormattable",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.IFormattable::ToString(System.String,System.IFormatProvider):System.String",
@@ -7035,7 +7353,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.ISpanParsable\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.IParsable\u00601::Parse(System.String,System.IFormatProvider):TSelf",
@@ -7063,7 +7387,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.IParsable\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         }
       ],
       "properties": [
@@ -7483,7 +7813,13 @@
           "parameterCount": 4,
           "declaringClrType": "System.Numerics.INumberBase\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 3,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Numerics.INumberBase\u00601::TryParse(System.ReadOnlySpan_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Globalization.NumberStyles,System.IFormatProvider,TSelf\u0026):System.Boolean",
@@ -7497,7 +7833,13 @@
           "parameterCount": 4,
           "declaringClrType": "System.Numerics.INumberBase\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 3,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.ISpanFormattable::TryFormat(System.Span_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Int32\u0026,System.ReadOnlySpan_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.IFormatProvider):System.Boolean",
@@ -7511,7 +7853,13 @@
           "parameterCount": 4,
           "declaringClrType": "System.ISpanFormattable",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.IFormattable::ToString(System.String,System.IFormatProvider):System.String",
@@ -7553,7 +7901,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.ISpanParsable\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.IParsable\u00601::Parse(System.String,System.IFormatProvider):TSelf",
@@ -7581,7 +7935,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.IParsable\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         }
       ],
       "properties": [
@@ -7981,7 +8341,13 @@
           "parameterCount": 4,
           "declaringClrType": "System.Numerics.INumberBase\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 3,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Numerics.INumberBase\u00601::TryParse(System.ReadOnlySpan_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Globalization.NumberStyles,System.IFormatProvider,TSelf\u0026):System.Boolean",
@@ -7995,7 +8361,13 @@
           "parameterCount": 4,
           "declaringClrType": "System.Numerics.INumberBase\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 3,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.ISpanFormattable::TryFormat(System.Span_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Int32\u0026,System.ReadOnlySpan_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.IFormatProvider):System.Boolean",
@@ -8009,7 +8381,13 @@
           "parameterCount": 4,
           "declaringClrType": "System.ISpanFormattable",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.IFormattable::ToString(System.String,System.IFormatProvider):System.String",
@@ -8051,7 +8429,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.ISpanParsable\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.IParsable\u00601::Parse(System.String,System.IFormatProvider):TSelf",
@@ -8079,7 +8463,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.IParsable\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         }
       ],
       "properties": [
@@ -8493,7 +8883,13 @@
           "parameterCount": 4,
           "declaringClrType": "System.Numerics.INumberBase\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 3,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Numerics.INumberBase\u00601::TryParse(System.ReadOnlySpan_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Globalization.NumberStyles,System.IFormatProvider,TSelf\u0026):System.Boolean",
@@ -8507,7 +8903,13 @@
           "parameterCount": 4,
           "declaringClrType": "System.Numerics.INumberBase\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 3,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.ISpanFormattable::TryFormat(System.Span_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Int32\u0026,System.ReadOnlySpan_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.IFormatProvider):System.Boolean",
@@ -8521,7 +8923,13 @@
           "parameterCount": 4,
           "declaringClrType": "System.ISpanFormattable",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.IFormattable::ToString(System.String,System.IFormatProvider):System.String",
@@ -8563,7 +8971,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.ISpanParsable\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.IParsable\u00601::Parse(System.String,System.IFormatProvider):TSelf",
@@ -8591,7 +9005,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.IParsable\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         }
       ],
       "properties": [
@@ -9085,7 +9505,13 @@
           "parameterCount": 4,
           "declaringClrType": "System.Numerics.INumberBase\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 3,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Numerics.INumberBase\u00601::TryParse(System.ReadOnlySpan_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Globalization.NumberStyles,System.IFormatProvider,TSelf\u0026):System.Boolean",
@@ -9099,7 +9525,13 @@
           "parameterCount": 4,
           "declaringClrType": "System.Numerics.INumberBase\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 3,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.ISpanFormattable::TryFormat(System.Span_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Int32\u0026,System.ReadOnlySpan_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.IFormatProvider):System.Boolean",
@@ -9113,7 +9545,13 @@
           "parameterCount": 4,
           "declaringClrType": "System.ISpanFormattable",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.IFormattable::ToString(System.String,System.IFormatProvider):System.String",
@@ -9155,7 +9593,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.ISpanParsable\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.IParsable\u00601::Parse(System.String,System.IFormatProvider):TSelf",
@@ -9183,7 +9627,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.IParsable\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         }
       ],
       "properties": [
@@ -9633,7 +10083,13 @@
           "parameterCount": 4,
           "declaringClrType": "System.Numerics.INumberBase\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 3,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Numerics.INumberBase\u00601::TryParse(System.ReadOnlySpan_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Globalization.NumberStyles,System.IFormatProvider,TSelf\u0026):System.Boolean",
@@ -9647,7 +10103,13 @@
           "parameterCount": 4,
           "declaringClrType": "System.Numerics.INumberBase\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 3,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.ISpanFormattable::TryFormat(System.Span_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Int32\u0026,System.ReadOnlySpan_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.IFormatProvider):System.Boolean",
@@ -9661,7 +10123,13 @@
           "parameterCount": 4,
           "declaringClrType": "System.ISpanFormattable",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.IFormattable::ToString(System.String,System.IFormatProvider):System.String",
@@ -9703,7 +10171,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.ISpanParsable\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.IParsable\u00601::Parse(System.String,System.IFormatProvider):TSelf",
@@ -9731,7 +10205,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.IParsable\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         }
       ],
       "properties": [
@@ -10237,7 +10717,13 @@
           "parameterCount": 4,
           "declaringClrType": "System.Numerics.INumberBase\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 3,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Numerics.INumberBase\u00601::TryParse(System.ReadOnlySpan_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Globalization.NumberStyles,System.IFormatProvider,TSelf\u0026):System.Boolean",
@@ -10251,7 +10737,13 @@
           "parameterCount": 4,
           "declaringClrType": "System.Numerics.INumberBase\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 3,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.ISpanFormattable::TryFormat(System.Span_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Int32\u0026,System.ReadOnlySpan_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.IFormatProvider):System.Boolean",
@@ -10265,7 +10757,13 @@
           "parameterCount": 4,
           "declaringClrType": "System.ISpanFormattable",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.IFormattable::ToString(System.String,System.IFormatProvider):System.String",
@@ -10307,7 +10805,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.ISpanParsable\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.IParsable\u00601::Parse(System.String,System.IFormatProvider):TSelf",
@@ -10335,7 +10839,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.IParsable\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         }
       ],
       "properties": [
@@ -10693,7 +11203,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Numerics.BigInteger",
           "declaringAssemblyName": "System.Runtime.Numerics",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Runtime.Numerics:System.Numerics.BigInteger::TryParse(System.String,System.Globalization.NumberStyles,System.IFormatProvider,System.Numerics.BigInteger\u0026):System.Boolean",
@@ -10707,7 +11223,13 @@
           "parameterCount": 4,
           "declaringClrType": "System.Numerics.BigInteger",
           "declaringAssemblyName": "System.Runtime.Numerics",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 3,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Runtime.Numerics:System.Numerics.BigInteger::Parse(System.ReadOnlySpan_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Globalization.NumberStyles,System.IFormatProvider):System.Numerics.BigInteger",
@@ -10735,7 +11257,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Numerics.BigInteger",
           "declaringAssemblyName": "System.Runtime.Numerics",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Runtime.Numerics:System.Numerics.BigInteger::TryParse(System.ReadOnlySpan_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Globalization.NumberStyles,System.IFormatProvider,System.Numerics.BigInteger\u0026):System.Boolean",
@@ -10749,7 +11277,13 @@
           "parameterCount": 4,
           "declaringClrType": "System.Numerics.BigInteger",
           "declaringAssemblyName": "System.Runtime.Numerics",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 3,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Runtime.Numerics:System.Numerics.BigInteger::Compare(System.Numerics.BigInteger,System.Numerics.BigInteger):System.Int32",
@@ -10861,7 +11395,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.Numerics.BigInteger",
           "declaringAssemblyName": "System.Runtime.Numerics",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Runtime.Numerics:System.Numerics.BigInteger::Negate(System.Numerics.BigInteger):System.Numerics.BigInteger",
@@ -11155,7 +11695,13 @@
           "parameterCount": 4,
           "declaringClrType": "System.Numerics.BigInteger",
           "declaringAssemblyName": "System.Runtime.Numerics",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Runtime.Numerics:System.Numerics.BigInteger::GetByteCount(System.Boolean):System.Int32",
@@ -11239,7 +11785,13 @@
           "parameterCount": 4,
           "declaringClrType": "System.Numerics.BigInteger",
           "declaringAssemblyName": "System.Runtime.Numerics",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Runtime.Numerics:System.Numerics.BigInteger::GetBitLength():System.Int64",
@@ -11533,7 +12085,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.Numerics.BigInteger",
           "declaringAssemblyName": "System.Runtime.Numerics",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Runtime.Numerics:System.Numerics.BigInteger::Parse(System.ReadOnlySpan_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.IFormatProvider):System.Numerics.BigInteger",
@@ -11561,7 +12119,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.Numerics.BigInteger",
           "declaringAssemblyName": "System.Runtime.Numerics",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.IComparable\u00601::CompareTo(T):System.Int32",
@@ -11687,7 +12251,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.Numerics.IBinaryInteger\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Numerics.IBinaryInteger\u00601::GetByteCount():System.Int32",
@@ -11715,7 +12285,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Numerics.IBinaryInteger\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Numerics.IBinaryInteger\u00601::WriteBigEndian(System.Byte[]):System.Int32",
@@ -11785,7 +12361,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.IParsable\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.ISpanParsable\u00601::Parse(System.ReadOnlySpan_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.IFormatProvider):TSelf",
@@ -11813,7 +12395,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.ISpanParsable\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Numerics.IBinaryNumber\u00601::IsPow2(TSelf):System.Boolean",
@@ -11925,7 +12513,13 @@
           "parameterCount": 4,
           "declaringClrType": "System.Numerics.INumberBase\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 3,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Numerics.INumberBase\u00601::TryParse(System.ReadOnlySpan_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Globalization.NumberStyles,System.IFormatProvider,TSelf\u0026):System.Boolean",
@@ -11939,7 +12533,13 @@
           "parameterCount": 4,
           "declaringClrType": "System.Numerics.INumberBase\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 3,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.IUtf8SpanFormattable::TryFormat(System.Span_1[[System.Byte,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Int32\u0026,System.ReadOnlySpan_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.IFormatProvider):System.Boolean",
@@ -11953,7 +12553,13 @@
           "parameterCount": 4,
           "declaringClrType": "System.IUtf8SpanFormattable",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.ISpanFormattable::TryFormat(System.Span_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Int32\u0026,System.ReadOnlySpan_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.IFormatProvider):System.Boolean",
@@ -11967,7 +12573,13 @@
           "parameterCount": 4,
           "declaringClrType": "System.ISpanFormattable",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.IFormattable::ToString(System.String,System.IFormatProvider):System.String",
@@ -12093,7 +12705,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.IUtf8SpanParsable\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         }
       ],
       "properties": [
@@ -14607,7 +15225,13 @@
           "parameterCount": 4,
           "declaringClrType": "System.Numerics.Complex",
           "declaringAssemblyName": "System.Runtime.Numerics",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 3,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Runtime.Numerics:System.Numerics.Complex::TryParse(System.String,System.Globalization.NumberStyles,System.IFormatProvider,System.Numerics.Complex\u0026):System.Boolean",
@@ -14621,7 +15245,13 @@
           "parameterCount": 4,
           "declaringClrType": "System.Numerics.Complex",
           "declaringAssemblyName": "System.Runtime.Numerics",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 3,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Runtime.Numerics:System.Numerics.Complex::Parse(System.String,System.IFormatProvider):System.Numerics.Complex",
@@ -14649,7 +15279,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.Numerics.Complex",
           "declaringAssemblyName": "System.Runtime.Numerics",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Runtime.Numerics:System.Numerics.Complex::TryFormat(System.Span_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Int32\u0026,System.ReadOnlySpan_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.IFormatProvider):System.Boolean",
@@ -14663,7 +15299,13 @@
           "parameterCount": 4,
           "declaringClrType": "System.Numerics.Complex",
           "declaringAssemblyName": "System.Runtime.Numerics",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Runtime.Numerics:System.Numerics.Complex::TryFormat(System.Span_1[[System.Byte,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Int32\u0026,System.ReadOnlySpan_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.IFormatProvider):System.Boolean",
@@ -14677,7 +15319,13 @@
           "parameterCount": 4,
           "declaringClrType": "System.Numerics.Complex",
           "declaringAssemblyName": "System.Runtime.Numerics",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Runtime.Numerics:System.Numerics.Complex::Parse(System.ReadOnlySpan_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.IFormatProvider):System.Numerics.Complex",
@@ -14705,7 +15353,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.Numerics.Complex",
           "declaringAssemblyName": "System.Runtime.Numerics",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.IEquatable\u00601::Equals(T):System.Boolean",
@@ -14831,7 +15485,13 @@
           "parameterCount": 4,
           "declaringClrType": "System.Numerics.INumberBase\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 3,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Numerics.INumberBase\u00601::TryParse(System.ReadOnlySpan_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Globalization.NumberStyles,System.IFormatProvider,TSelf\u0026):System.Boolean",
@@ -14845,7 +15505,13 @@
           "parameterCount": 4,
           "declaringClrType": "System.Numerics.INumberBase\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 3,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.IParsable\u00601::Parse(System.String,System.IFormatProvider):TSelf",
@@ -14873,7 +15539,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.IParsable\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.ISpanParsable\u00601::Parse(System.ReadOnlySpan_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.IFormatProvider):TSelf",
@@ -14901,7 +15573,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.ISpanParsable\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.IFormattable::ToString(System.String,System.IFormatProvider):System.String",
@@ -14929,7 +15607,13 @@
           "parameterCount": 4,
           "declaringClrType": "System.ISpanFormattable",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.IUtf8SpanFormattable::TryFormat(System.Span_1[[System.Byte,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Int32\u0026,System.ReadOnlySpan_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.IFormatProvider):System.Boolean",
@@ -14943,7 +15627,13 @@
           "parameterCount": 4,
           "declaringClrType": "System.IUtf8SpanFormattable",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.IUtf8SpanParsable\u00601::Parse(System.ReadOnlySpan_1[[System.Byte,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.IFormatProvider):TSelf",
@@ -14971,7 +15661,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.IUtf8SpanParsable\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         }
       ],
       "properties": [
@@ -16531,7 +17227,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Numerics.Matrix3x2",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Numerics.Matrix3x2::Lerp(System.Numerics.Matrix3x2,System.Numerics.Matrix3x2,System.Single):System.Numerics.Matrix3x2",
@@ -18168,7 +18870,21 @@
           "parameterCount": 4,
           "declaringClrType": "System.Numerics.Matrix4x4",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            },
+            {
+              "index": 2,
+              "modifier": "out"
+            },
+            {
+              "index": 3,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Numerics.Matrix4x4::Invert(System.Numerics.Matrix4x4,System.Numerics.Matrix4x4\u0026):System.Boolean",
@@ -18182,7 +18898,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Numerics.Matrix4x4",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Numerics.Matrix4x4::Lerp(System.Numerics.Matrix4x4,System.Numerics.Matrix4x4,System.Single):System.Numerics.Matrix4x4",
@@ -23074,7 +23796,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Numerics.Vector2",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "in"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Numerics.Vector2::LoadUnsafe(System.Single\u0026,System.UIntPtr):System.Numerics.Vector2",
@@ -23088,7 +23816,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Numerics.Vector2",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "in"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Numerics.Vector2::Log(System.Numerics.Vector2):System.Numerics.Vector2",
@@ -26505,7 +27239,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Numerics.Vector3",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "in"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Numerics.Vector3::LoadUnsafe(System.Single\u0026,System.UIntPtr):System.Numerics.Vector3",
@@ -26519,7 +27259,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Numerics.Vector3",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "in"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Numerics.Vector3::Log(System.Numerics.Vector3):System.Numerics.Vector3",
@@ -29976,7 +30722,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Numerics.Vector4",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "in"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Numerics.Vector4::LoadUnsafe(System.Single\u0026,System.UIntPtr):System.Numerics.Vector4",
@@ -29990,7 +30742,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Numerics.Vector4",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "in"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Numerics.Vector4::Log(System.Numerics.Vector4):System.Numerics.Vector4",
@@ -35230,7 +35988,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Numerics.Vector",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "in"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Numerics.Vector::LoadUnsafe(T\u0026,System.UIntPtr):Vector_1",
@@ -35244,7 +36008,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Numerics.Vector",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "in"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Numerics.Vector::Log(System.Numerics.Vector_1[[System.Double,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]):System.Numerics.Vector_1[[System.Double,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]",
@@ -36322,7 +37092,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Numerics.Vector",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": true
+          "isExtensionMethod": true,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Numerics.Vector::StoreUnsafe(Vector_1,T\u0026,System.UIntPtr):System.Void",
@@ -36336,7 +37112,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.Numerics.Vector",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": true
+          "isExtensionMethod": true,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Numerics.Vector::Subtract(Vector_1,Vector_1):Vector_1",
@@ -36434,7 +37216,17 @@
           "parameterCount": 3,
           "declaringClrType": "System.Numerics.Vector",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            },
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Numerics.Vector::Widen(System.Numerics.Vector_1[[System.Int16,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Numerics.Vector_1[[System.Int32,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]\u0026,System.Numerics.Vector_1[[System.Int32,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]\u0026):System.Void",
@@ -36448,7 +37240,17 @@
           "parameterCount": 3,
           "declaringClrType": "System.Numerics.Vector",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            },
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Numerics.Vector::Widen(System.Numerics.Vector_1[[System.Int32,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Numerics.Vector_1[[System.Int64,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]\u0026,System.Numerics.Vector_1[[System.Int64,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]\u0026):System.Void",
@@ -36462,7 +37264,17 @@
           "parameterCount": 3,
           "declaringClrType": "System.Numerics.Vector",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            },
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Numerics.Vector::Widen(System.Numerics.Vector_1[[System.SByte,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Numerics.Vector_1[[System.Int16,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]\u0026,System.Numerics.Vector_1[[System.Int16,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]\u0026):System.Void",
@@ -36476,7 +37288,17 @@
           "parameterCount": 3,
           "declaringClrType": "System.Numerics.Vector",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            },
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Numerics.Vector::Widen(System.Numerics.Vector_1[[System.Single,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Numerics.Vector_1[[System.Double,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]\u0026,System.Numerics.Vector_1[[System.Double,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]\u0026):System.Void",
@@ -36490,7 +37312,17 @@
           "parameterCount": 3,
           "declaringClrType": "System.Numerics.Vector",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            },
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Numerics.Vector::Widen(System.Numerics.Vector_1[[System.UInt16,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Numerics.Vector_1[[System.UInt32,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]\u0026,System.Numerics.Vector_1[[System.UInt32,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]\u0026):System.Void",
@@ -36504,7 +37336,17 @@
           "parameterCount": 3,
           "declaringClrType": "System.Numerics.Vector",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            },
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Numerics.Vector::Widen(System.Numerics.Vector_1[[System.UInt32,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Numerics.Vector_1[[System.UInt64,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]\u0026,System.Numerics.Vector_1[[System.UInt64,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]\u0026):System.Void",
@@ -36518,7 +37360,17 @@
           "parameterCount": 3,
           "declaringClrType": "System.Numerics.Vector",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            },
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Numerics.Vector::WidenLower(System.Numerics.Vector_1[[System.Byte,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]):System.Numerics.Vector_1[[System.UInt16,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]",
@@ -36882,7 +37734,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Numerics.Vector",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": true
+          "isExtensionMethod": true,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Numerics.Vector::StoreUnsafe(System.Numerics.Vector2,System.Single\u0026,System.UIntPtr):System.Void",
@@ -36896,7 +37754,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.Numerics.Vector",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": true
+          "isExtensionMethod": true,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Numerics.Vector::ToScalar(System.Numerics.Vector2):System.Single",
@@ -37050,7 +37914,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Numerics.Vector",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": true
+          "isExtensionMethod": true,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Numerics.Vector::StoreUnsafe(System.Numerics.Vector3,System.Single\u0026,System.UIntPtr):System.Void",
@@ -37064,7 +37934,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.Numerics.Vector",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": true
+          "isExtensionMethod": true,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Numerics.Vector::ToScalar(System.Numerics.Vector3):System.Single",
@@ -37232,7 +38108,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Numerics.Vector",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": true
+          "isExtensionMethod": true,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Numerics.Vector::StoreUnsafe(System.Numerics.Vector4,System.Single\u0026,System.UIntPtr):System.Void",
@@ -37246,7 +38128,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.Numerics.Vector",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": true
+          "isExtensionMethod": true,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Numerics.Vector::ToScalar(System.Numerics.Vector4):System.Single",

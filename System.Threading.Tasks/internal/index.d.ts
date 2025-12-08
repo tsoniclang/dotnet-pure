@@ -19,31 +19,6 @@ import type { CancellationToken, WaitHandle } from "../../System.Threading/inter
 import * as System_Internal from "../../System/internal/index.js";
 import type { Action, Action_1, Action_2, Action_3, AggregateException, AsyncCallback, Boolean as ClrBoolean, Enum, EventArgs, EventHandler_1, Exception, Func_1, Func_2, Func_3, Func_4, Func_5, Func_6, IAsyncDisposable, IAsyncResult, IComparable, IConvertible, IDisposable, IEquatable_1, IFormatProvider, IFormattable, Int16, Int32, Int64, ISpanFormattable, Nullable_1, Object as ClrObject, OperationCanceledException, ReadOnlySpan_1, String as ClrString, TimeProvider, TimeSpan, Type, TypeCode, ValueType, Void } from "../../System/internal/index.js";
 
-// CLROf<T> - Maps ergonomic primitives to their CLR types for generic constraints
-// This utility is used ONLY in generic type arguments to satisfy CLR interface constraints
-// Value positions (parameters, return types) use lowercase primitives for ergonomics
-export type CLROf<T> =
-    T extends sbyte ? System_Internal.SByte :
-    T extends short ? System_Internal.Int16 :
-    T extends int ? System_Internal.Int32 :
-    T extends long ? System_Internal.Int64 :
-    T extends int128 ? System_Internal.Int128 :
-    T extends nint ? System_Internal.IntPtr :
-    T extends byte ? System_Internal.Byte :
-    T extends ushort ? System_Internal.UInt16 :
-    T extends uint ? System_Internal.UInt32 :
-    T extends ulong ? System_Internal.UInt64 :
-    T extends uint128 ? System_Internal.UInt128 :
-    T extends nuint ? System_Internal.UIntPtr :
-    T extends half ? System_Internal.Half :
-    T extends float ? System_Internal.Single :
-    T extends double ? System_Internal.Double :
-    T extends decimal ? System_Internal.Decimal :
-    T extends char ? System_Internal.Char :
-    T extends boolean ? System_Internal.Boolean :
-    T extends string ? System_Internal.String :
-    T; // Identity fallback for non-primitive types
-
 export enum ConfigureAwaitOptions {
     None = 0,
     ContinueOnCapturedContext = 1,
@@ -96,7 +71,7 @@ export enum TaskStatus {
 
 export interface ParallelLoopResult$instance {
     readonly IsCompleted: boolean;
-    readonly LowestBreakIteration: Nullable_1<CLROf<long>>;
+    readonly LowestBreakIteration: Nullable_1<System_Internal.Int64>;
 }
 
 
@@ -199,7 +174,7 @@ export type ConcurrentExclusiveSchedulerPair = ConcurrentExclusiveSchedulerPair$
 export interface ParallelLoopState$instance {
     readonly IsExceptional: boolean;
     readonly IsStopped: boolean;
-    readonly LowestBreakIteration: Nullable_1<CLROf<long>>;
+    readonly LowestBreakIteration: Nullable_1<System_Internal.Int64>;
     readonly ShouldExitCurrentIteration: boolean;
     Break(): void;
     Stop(): void;
@@ -288,7 +263,7 @@ export const Task: {
     new(action: Action_1<unknown>, state: unknown, cancellationToken: CancellationToken): Task$instance;
     new(action: Action_1<unknown>, state: unknown, creationOptions: TaskCreationOptions): Task$instance;
     new(action: Action_1<unknown>, state: unknown, cancellationToken: CancellationToken, creationOptions: TaskCreationOptions): Task$instance;
-    readonly CurrentId: Nullable_1<CLROf<int>>;
+    readonly CurrentId: Nullable_1<System_Internal.Int32>;
     readonly Factory: TaskFactory;
     readonly CompletedTask: Task;
     Delay(millisecondsDelay: int, cancellationToken: CancellationToken): Task;
@@ -702,35 +677,35 @@ export const UnobservedTaskExceptionEventArgs: {
 export type UnobservedTaskExceptionEventArgs = UnobservedTaskExceptionEventArgs$instance;
 
 export abstract class Parallel$instance {
-    static For<TLocal>(fromInclusive: int, toExclusive: int, localInit: Func_1<TLocal>, body: Func_4<CLROf<int>, ParallelLoopState, TLocal, TLocal>, localFinally: Action_1<TLocal>): ParallelLoopResult;
-    static For(fromInclusive: int, toExclusive: int, body: Action_1<CLROf<int>>): ParallelLoopResult;
-    static For(fromInclusive: int, toExclusive: int, body: Action_2<CLROf<int>, ParallelLoopState>): ParallelLoopResult;
-    static For<TLocal>(fromInclusive: int, toExclusive: int, parallelOptions: ParallelOptions, localInit: Func_1<TLocal>, body: Func_4<CLROf<int>, ParallelLoopState, TLocal, TLocal>, localFinally: Action_1<TLocal>): ParallelLoopResult;
-    static For(fromInclusive: int, toExclusive: int, parallelOptions: ParallelOptions, body: Action_1<CLROf<int>>): ParallelLoopResult;
-    static For(fromInclusive: int, toExclusive: int, parallelOptions: ParallelOptions, body: Action_2<CLROf<int>, ParallelLoopState>): ParallelLoopResult;
-    static For<TLocal>(fromInclusive: long, toExclusive: long, localInit: Func_1<TLocal>, body: Func_4<CLROf<long>, ParallelLoopState, TLocal, TLocal>, localFinally: Action_1<TLocal>): ParallelLoopResult;
-    static For(fromInclusive: long, toExclusive: long, body: Action_1<CLROf<long>>): ParallelLoopResult;
-    static For(fromInclusive: long, toExclusive: long, body: Action_2<CLROf<long>, ParallelLoopState>): ParallelLoopResult;
-    static For<TLocal>(fromInclusive: long, toExclusive: long, parallelOptions: ParallelOptions, localInit: Func_1<TLocal>, body: Func_4<CLROf<long>, ParallelLoopState, TLocal, TLocal>, localFinally: Action_1<TLocal>): ParallelLoopResult;
-    static For(fromInclusive: long, toExclusive: long, parallelOptions: ParallelOptions, body: Action_1<CLROf<long>>): ParallelLoopResult;
-    static For(fromInclusive: long, toExclusive: long, parallelOptions: ParallelOptions, body: Action_2<CLROf<long>, ParallelLoopState>): ParallelLoopResult;
+    static For<TLocal>(fromInclusive: int, toExclusive: int, localInit: Func_1<TLocal>, body: Func_4<System_Internal.Int32, ParallelLoopState, TLocal, TLocal>, localFinally: Action_1<TLocal>): ParallelLoopResult;
+    static For(fromInclusive: int, toExclusive: int, body: Action_1<System_Internal.Int32>): ParallelLoopResult;
+    static For(fromInclusive: int, toExclusive: int, body: Action_2<System_Internal.Int32, ParallelLoopState>): ParallelLoopResult;
+    static For<TLocal>(fromInclusive: int, toExclusive: int, parallelOptions: ParallelOptions, localInit: Func_1<TLocal>, body: Func_4<System_Internal.Int32, ParallelLoopState, TLocal, TLocal>, localFinally: Action_1<TLocal>): ParallelLoopResult;
+    static For(fromInclusive: int, toExclusive: int, parallelOptions: ParallelOptions, body: Action_1<System_Internal.Int32>): ParallelLoopResult;
+    static For(fromInclusive: int, toExclusive: int, parallelOptions: ParallelOptions, body: Action_2<System_Internal.Int32, ParallelLoopState>): ParallelLoopResult;
+    static For<TLocal>(fromInclusive: long, toExclusive: long, localInit: Func_1<TLocal>, body: Func_4<System_Internal.Int64, ParallelLoopState, TLocal, TLocal>, localFinally: Action_1<TLocal>): ParallelLoopResult;
+    static For(fromInclusive: long, toExclusive: long, body: Action_1<System_Internal.Int64>): ParallelLoopResult;
+    static For(fromInclusive: long, toExclusive: long, body: Action_2<System_Internal.Int64, ParallelLoopState>): ParallelLoopResult;
+    static For<TLocal>(fromInclusive: long, toExclusive: long, parallelOptions: ParallelOptions, localInit: Func_1<TLocal>, body: Func_4<System_Internal.Int64, ParallelLoopState, TLocal, TLocal>, localFinally: Action_1<TLocal>): ParallelLoopResult;
+    static For(fromInclusive: long, toExclusive: long, parallelOptions: ParallelOptions, body: Action_1<System_Internal.Int64>): ParallelLoopResult;
+    static For(fromInclusive: long, toExclusive: long, parallelOptions: ParallelOptions, body: Action_2<System_Internal.Int64, ParallelLoopState>): ParallelLoopResult;
     static ForAsync<T extends IBinaryInteger_1<T>>(fromInclusive: T, toExclusive: T, body: Func_3<T, CancellationToken, ValueTask>): Task;
     static ForAsync<T extends IBinaryInteger_1<T>>(fromInclusive: T, toExclusive: T, cancellationToken: CancellationToken, body: Func_3<T, CancellationToken, ValueTask>): Task;
     static ForAsync<T extends IBinaryInteger_1<T>>(fromInclusive: T, toExclusive: T, parallelOptions: ParallelOptions, body: Func_3<T, CancellationToken, ValueTask>): Task;
     static ForEach<TSource>(source: IEnumerable_1<TSource>, body: Action_1<TSource>): ParallelLoopResult;
     static ForEach<TSource>(source: IEnumerable_1<TSource>, body: Action_2<TSource, ParallelLoopState>): ParallelLoopResult;
-    static ForEach<TSource>(source: IEnumerable_1<TSource>, body: Action_3<TSource, ParallelLoopState, CLROf<long>>): ParallelLoopResult;
+    static ForEach<TSource>(source: IEnumerable_1<TSource>, body: Action_3<TSource, ParallelLoopState, System_Internal.Int64>): ParallelLoopResult;
     static ForEach<TSource, TLocal>(source: IEnumerable_1<TSource>, localInit: Func_1<TLocal>, body: Func_4<TSource, ParallelLoopState, TLocal, TLocal>, localFinally: Action_1<TLocal>): ParallelLoopResult;
-    static ForEach<TSource, TLocal>(source: IEnumerable_1<TSource>, localInit: Func_1<TLocal>, body: Func_5<TSource, ParallelLoopState, CLROf<long>, TLocal, TLocal>, localFinally: Action_1<TLocal>): ParallelLoopResult;
+    static ForEach<TSource, TLocal>(source: IEnumerable_1<TSource>, localInit: Func_1<TLocal>, body: Func_5<TSource, ParallelLoopState, System_Internal.Int64, TLocal, TLocal>, localFinally: Action_1<TLocal>): ParallelLoopResult;
     static ForEach<TSource>(source: IEnumerable_1<TSource>, parallelOptions: ParallelOptions, body: Action_1<TSource>): ParallelLoopResult;
     static ForEach<TSource>(source: IEnumerable_1<TSource>, parallelOptions: ParallelOptions, body: Action_2<TSource, ParallelLoopState>): ParallelLoopResult;
-    static ForEach<TSource>(source: IEnumerable_1<TSource>, parallelOptions: ParallelOptions, body: Action_3<TSource, ParallelLoopState, CLROf<long>>): ParallelLoopResult;
+    static ForEach<TSource>(source: IEnumerable_1<TSource>, parallelOptions: ParallelOptions, body: Action_3<TSource, ParallelLoopState, System_Internal.Int64>): ParallelLoopResult;
     static ForEach<TSource, TLocal>(source: IEnumerable_1<TSource>, parallelOptions: ParallelOptions, localInit: Func_1<TLocal>, body: Func_4<TSource, ParallelLoopState, TLocal, TLocal>, localFinally: Action_1<TLocal>): ParallelLoopResult;
-    static ForEach<TSource, TLocal>(source: IEnumerable_1<TSource>, parallelOptions: ParallelOptions, localInit: Func_1<TLocal>, body: Func_5<TSource, ParallelLoopState, CLROf<long>, TLocal, TLocal>, localFinally: Action_1<TLocal>): ParallelLoopResult;
-    static ForEach<TSource>(source: OrderablePartitioner_1<TSource>, body: Action_3<TSource, ParallelLoopState, CLROf<long>>): ParallelLoopResult;
-    static ForEach<TSource, TLocal>(source: OrderablePartitioner_1<TSource>, localInit: Func_1<TLocal>, body: Func_5<TSource, ParallelLoopState, CLROf<long>, TLocal, TLocal>, localFinally: Action_1<TLocal>): ParallelLoopResult;
-    static ForEach<TSource>(source: OrderablePartitioner_1<TSource>, parallelOptions: ParallelOptions, body: Action_3<TSource, ParallelLoopState, CLROf<long>>): ParallelLoopResult;
-    static ForEach<TSource, TLocal>(source: OrderablePartitioner_1<TSource>, parallelOptions: ParallelOptions, localInit: Func_1<TLocal>, body: Func_5<TSource, ParallelLoopState, CLROf<long>, TLocal, TLocal>, localFinally: Action_1<TLocal>): ParallelLoopResult;
+    static ForEach<TSource, TLocal>(source: IEnumerable_1<TSource>, parallelOptions: ParallelOptions, localInit: Func_1<TLocal>, body: Func_5<TSource, ParallelLoopState, System_Internal.Int64, TLocal, TLocal>, localFinally: Action_1<TLocal>): ParallelLoopResult;
+    static ForEach<TSource>(source: OrderablePartitioner_1<TSource>, body: Action_3<TSource, ParallelLoopState, System_Internal.Int64>): ParallelLoopResult;
+    static ForEach<TSource, TLocal>(source: OrderablePartitioner_1<TSource>, localInit: Func_1<TLocal>, body: Func_5<TSource, ParallelLoopState, System_Internal.Int64, TLocal, TLocal>, localFinally: Action_1<TLocal>): ParallelLoopResult;
+    static ForEach<TSource>(source: OrderablePartitioner_1<TSource>, parallelOptions: ParallelOptions, body: Action_3<TSource, ParallelLoopState, System_Internal.Int64>): ParallelLoopResult;
+    static ForEach<TSource, TLocal>(source: OrderablePartitioner_1<TSource>, parallelOptions: ParallelOptions, localInit: Func_1<TLocal>, body: Func_5<TSource, ParallelLoopState, System_Internal.Int64, TLocal, TLocal>, localFinally: Action_1<TLocal>): ParallelLoopResult;
     static ForEach<TSource>(source: Partitioner_1<TSource>, body: Action_1<TSource>): ParallelLoopResult;
     static ForEach<TSource>(source: Partitioner_1<TSource>, body: Action_2<TSource, ParallelLoopState>): ParallelLoopResult;
     static ForEach<TSource, TLocal>(source: Partitioner_1<TSource>, localInit: Func_1<TLocal>, body: Func_4<TSource, ParallelLoopState, TLocal, TLocal>, localFinally: Action_1<TLocal>): ParallelLoopResult;

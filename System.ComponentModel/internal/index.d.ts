@@ -6,7 +6,7 @@
 import type { sbyte, byte, short, ushort, int, uint, long, ulong, int128, uint128, half, float, double, decimal, nint, nuint, char } from '@tsonic/types';
 
 // Import support types from @tsonic/types
-import type { ptr, ref } from "@tsonic/types";
+import type { ptr } from "@tsonic/types";
 
 // Import types from other namespaces
 import * as System_Collections_Generic_Internal from "../../System.Collections.Generic/internal/index.js";
@@ -28,31 +28,6 @@ import type { ISerializable, SerializationInfo, StreamingContext } from "../../S
 import type { SendOrPostCallback, SynchronizationContext } from "../../System.Threading/internal/index.js";
 import * as System_Internal from "../../System/internal/index.js";
 import type { ArgumentException, Array as ClrArray, AsyncCallback, Attribute, Boolean as ClrBoolean, Byte, Char, Delegate, Double, Enum, EventArgs, EventHandler, EventHandler_1, Exception, IAsyncResult, ICloneable, IComparable, IConvertible, IDisposable, IFormatProvider, IFormattable, Int16, Int32, Int64, IntPtr, IServiceProvider, ISpanFormattable, MarshalByRefObject, MulticastDelegate, Nullable_1, Object as ClrObject, SByte, Single, String as ClrString, SystemException, Type, TypeCode, UInt16, UInt32, UInt64, Void } from "../../System/internal/index.js";
-
-// CLROf<T> - Maps ergonomic primitives to their CLR types for generic constraints
-// This utility is used ONLY in generic type arguments to satisfy CLR interface constraints
-// Value positions (parameters, return types) use lowercase primitives for ergonomics
-export type CLROf<T> =
-    T extends sbyte ? System_Internal.SByte :
-    T extends short ? System_Internal.Int16 :
-    T extends int ? System_Internal.Int32 :
-    T extends long ? System_Internal.Int64 :
-    T extends int128 ? System_Internal.Int128 :
-    T extends nint ? System_Internal.IntPtr :
-    T extends byte ? System_Internal.Byte :
-    T extends ushort ? System_Internal.UInt16 :
-    T extends uint ? System_Internal.UInt32 :
-    T extends ulong ? System_Internal.UInt64 :
-    T extends uint128 ? System_Internal.UInt128 :
-    T extends nuint ? System_Internal.UIntPtr :
-    T extends half ? System_Internal.Half :
-    T extends float ? System_Internal.Single :
-    T extends double ? System_Internal.Double :
-    T extends decimal ? System_Internal.Decimal :
-    T extends char ? System_Internal.Char :
-    T extends boolean ? System_Internal.Boolean :
-    T extends string ? System_Internal.String :
-    T; // Identity fallback for non-primitive types
 
 export enum BindableSupport {
     No = 0,
@@ -305,8 +280,8 @@ export interface IComNativeDescriptorHandler$instance {
     GetEvents(component: unknown, attributes: Attribute[]): EventDescriptorCollection;
     GetEvents(component: unknown): EventDescriptorCollection;
     GetProperties(component: unknown, attributes: Attribute[]): PropertyDescriptorCollection;
-    GetPropertyValue(component: unknown, dispid: int, success: { value: ref<boolean> }): unknown;
-    GetPropertyValue(component: unknown, propertyName: string, success: { value: ref<boolean> }): unknown;
+    GetPropertyValue(component: unknown, dispid: int, success: boolean): unknown;
+    GetPropertyValue(component: unknown, propertyName: string, success: boolean): unknown;
 }
 
 
@@ -335,7 +310,7 @@ export interface IContainer$instance extends System_Internal.IDisposable$instanc
 export type IContainer = IContainer$instance;
 
 export interface ICustomTypeDescriptor$instance {
-    readonly RequireRegisteredTypes: Nullable_1<CLROf<boolean>>;
+    readonly RequireRegisteredTypes: Nullable_1<System_Internal.Boolean>;
     GetAttributes(): AttributeCollection;
     GetClassName(): string;
     GetConverter(): TypeConverter;
@@ -376,7 +351,7 @@ export type IExtenderProvider = IExtenderProvider$instance;
 
 export interface IIntellisenseBuilder$instance {
     readonly Name: string;
-    Show(language: string, value: string, newValue: { value: ref<string> }): boolean;
+    Show(language: string, value: string, newValue: string): boolean;
 }
 
 
@@ -1065,7 +1040,7 @@ export const CultureInfoConverter: {
 export type CultureInfoConverter = CultureInfoConverter$instance;
 
 export interface CustomTypeDescriptor$instance {
-    readonly RequireRegisteredTypes: Nullable_1<CLROf<boolean>>;
+    readonly RequireRegisteredTypes: Nullable_1<System_Internal.Boolean>;
     GetAttributes(): AttributeCollection;
     GetClassName(): string;
     GetComponentName(): string;
@@ -1911,7 +1886,7 @@ export const LicenseManager: {
     CreateWithContext(type_: Type, creationContext: LicenseContext, args: unknown[]): unknown;
     CreateWithContext(type_: Type, creationContext: LicenseContext): unknown;
     IsLicensed(type_: Type): boolean;
-    IsValid(type_: Type, instance: unknown, license: { value: ref<License> }): boolean;
+    IsValid(type_: Type, instance: unknown, license: License): boolean;
     IsValid(type_: Type): boolean;
     LockContext(contextUser: unknown): void;
     UnlockContext(contextUser: unknown): void;
@@ -2123,11 +2098,11 @@ export interface MaskedTextProvider$instance {
     ResetOnSpace: boolean;
     SkipLiterals: boolean;
     Add(input: char): boolean;
-    Add(input: char, testPosition: { value: ref<int> }, resultHint: { value: ref<MaskedTextResultHint> }): boolean;
+    Add(input: char, testPosition: int, resultHint: MaskedTextResultHint): boolean;
     Add(input: string): boolean;
-    Add(input: string, testPosition: { value: ref<int> }, resultHint: { value: ref<MaskedTextResultHint> }): boolean;
+    Add(input: string, testPosition: int, resultHint: MaskedTextResultHint): boolean;
     Clear(): void;
-    Clear(resultHint: { value: ref<MaskedTextResultHint> }): void;
+    Clear(resultHint: MaskedTextResultHint): void;
     Clone(): unknown;
     FindAssignedEditPositionFrom(position: int, direction: boolean): int;
     FindAssignedEditPositionInRange(startPosition: int, endPosition: int, direction: boolean): int;
@@ -2138,24 +2113,24 @@ export interface MaskedTextProvider$instance {
     FindUnassignedEditPositionFrom(position: int, direction: boolean): int;
     FindUnassignedEditPositionInRange(startPosition: int, endPosition: int, direction: boolean): int;
     InsertAt(input: char, position: int): boolean;
-    InsertAt(input: char, position: int, testPosition: { value: ref<int> }, resultHint: { value: ref<MaskedTextResultHint> }): boolean;
+    InsertAt(input: char, position: int, testPosition: int, resultHint: MaskedTextResultHint): boolean;
     InsertAt(input: string, position: int): boolean;
-    InsertAt(input: string, position: int, testPosition: { value: ref<int> }, resultHint: { value: ref<MaskedTextResultHint> }): boolean;
+    InsertAt(input: string, position: int, testPosition: int, resultHint: MaskedTextResultHint): boolean;
     IsAvailablePosition(position: int): boolean;
     IsEditPosition(position: int): boolean;
     Remove(): boolean;
-    Remove(testPosition: { value: ref<int> }, resultHint: { value: ref<MaskedTextResultHint> }): boolean;
+    Remove(testPosition: int, resultHint: MaskedTextResultHint): boolean;
     RemoveAt(position: int): boolean;
     RemoveAt(startPosition: int, endPosition: int): boolean;
-    RemoveAt(startPosition: int, endPosition: int, testPosition: { value: ref<int> }, resultHint: { value: ref<MaskedTextResultHint> }): boolean;
+    RemoveAt(startPosition: int, endPosition: int, testPosition: int, resultHint: MaskedTextResultHint): boolean;
     Replace(input: char, position: int): boolean;
-    Replace(input: char, position: int, testPosition: { value: ref<int> }, resultHint: { value: ref<MaskedTextResultHint> }): boolean;
-    Replace(input: char, startPosition: int, endPosition: int, testPosition: { value: ref<int> }, resultHint: { value: ref<MaskedTextResultHint> }): boolean;
+    Replace(input: char, position: int, testPosition: int, resultHint: MaskedTextResultHint): boolean;
+    Replace(input: char, startPosition: int, endPosition: int, testPosition: int, resultHint: MaskedTextResultHint): boolean;
     Replace(input: string, position: int): boolean;
-    Replace(input: string, position: int, testPosition: { value: ref<int> }, resultHint: { value: ref<MaskedTextResultHint> }): boolean;
-    Replace(input: string, startPosition: int, endPosition: int, testPosition: { value: ref<int> }, resultHint: { value: ref<MaskedTextResultHint> }): boolean;
+    Replace(input: string, position: int, testPosition: int, resultHint: MaskedTextResultHint): boolean;
+    Replace(input: string, startPosition: int, endPosition: int, testPosition: int, resultHint: MaskedTextResultHint): boolean;
     Set(input: string): boolean;
-    Set(input: string, testPosition: { value: ref<int> }, resultHint: { value: ref<MaskedTextResultHint> }): boolean;
+    Set(input: string, testPosition: int, resultHint: MaskedTextResultHint): boolean;
     ToDisplayString(): string;
     ToString(): string;
     ToString(ignorePasswordChar: boolean): string;
@@ -2164,10 +2139,10 @@ export interface MaskedTextProvider$instance {
     ToString(includePrompt: boolean, includeLiterals: boolean): string;
     ToString(includePrompt: boolean, includeLiterals: boolean, startPosition: int, length: int): string;
     ToString(ignorePasswordChar: boolean, includePrompt: boolean, includeLiterals: boolean, startPosition: int, length: int): string;
-    VerifyChar(input: char, position: int, hint: { value: ref<MaskedTextResultHint> }): boolean;
+    VerifyChar(input: char, position: int, hint: MaskedTextResultHint): boolean;
     VerifyEscapeChar(input: char, position: int): boolean;
     VerifyString(input: string): boolean;
-    VerifyString(input: string, testPosition: { value: ref<int> }, resultHint: { value: ref<MaskedTextResultHint> }): boolean;
+    VerifyString(input: string, testPosition: int, resultHint: MaskedTextResultHint): boolean;
 }
 
 
@@ -2848,7 +2823,7 @@ export const TypeConverterAttribute: {
 export type TypeConverterAttribute = TypeConverterAttribute$instance;
 
 export interface TypeDescriptionProvider$instance {
-    readonly RequireRegisteredTypes: Nullable_1<CLROf<boolean>>;
+    readonly RequireRegisteredTypes: Nullable_1<System_Internal.Boolean>;
     CreateInstance(provider: IServiceProvider, objectType: Type, argTypes: Type[], args: unknown[]): unknown;
     GetCache(instance: unknown): IDictionary;
     GetExtendedTypeDescriptor(instance: unknown): ICustomTypeDescriptor;

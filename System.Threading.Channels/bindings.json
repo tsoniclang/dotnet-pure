@@ -1513,7 +1513,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Threading.Channels.ChannelReader\u00601",
           "declaringAssemblyName": "System.Threading.Channels",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Threading.Channels:System.Threading.Channels.ChannelReader\u00601::TryPeek(T\u0026):System.Boolean",
@@ -1527,7 +1533,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Threading.Channels.ChannelReader\u00601",
           "declaringAssemblyName": "System.Threading.Channels",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Threading.Channels:System.Threading.Channels.ChannelReader\u00601::WaitToReadAsync(System.Threading.CancellationToken):System.Threading.Tasks.ValueTask_1[[System.Boolean,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]",

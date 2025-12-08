@@ -5398,7 +5398,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Linq.Expressions:System.Linq.Expressions.Expression::GetActionType(System.Type[]):System.Type",
@@ -5430,7 +5436,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Linq.Expressions:System.Linq.Expressions.Expression::GetDelegateType(System.Type[]):System.Type",

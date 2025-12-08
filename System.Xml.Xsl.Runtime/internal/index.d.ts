@@ -6,7 +6,7 @@
 import type { sbyte, byte, short, ushort, int, uint, long, ulong, int128, uint128, half, float, double, decimal, nint, nuint, char } from '@tsonic/types';
 
 // Import support types from @tsonic/types
-import type { ptr, ref } from "@tsonic/types";
+import type { ptr } from "@tsonic/types";
 
 // Import types from other namespaces
 import * as System_Collections_Generic_Internal from "../../System.Collections.Generic/internal/index.js";
@@ -21,31 +21,6 @@ import * as System_Xml_Internal from "../../System.Xml/internal/index.js";
 import type { WriteState, XmlNameTable, XmlQualifiedName, XmlReader, XmlSpace, XmlWriter, XmlWriterSettings } from "../../System.Xml/internal/index.js";
 import * as System_Internal from "../../System/internal/index.js";
 import type { Array as ClrArray, Boolean as ClrBoolean, Byte, Char, DateTime, DateTimeOffset, Decimal, Double, Enum, IAsyncDisposable, IComparable, IConvertible, IDisposable, IFormatProvider, IFormattable, Int32, Int64, ISpanFormattable, Object as ClrObject, Single, String as ClrString, TimeSpan, Type, TypeCode, ValueType, Void } from "../../System/internal/index.js";
-
-// CLROf<T> - Maps ergonomic primitives to their CLR types for generic constraints
-// This utility is used ONLY in generic type arguments to satisfy CLR interface constraints
-// Value positions (parameters, return types) use lowercase primitives for ergonomics
-export type CLROf<T> =
-    T extends sbyte ? System_Internal.SByte :
-    T extends short ? System_Internal.Int16 :
-    T extends int ? System_Internal.Int32 :
-    T extends long ? System_Internal.Int64 :
-    T extends int128 ? System_Internal.Int128 :
-    T extends nint ? System_Internal.IntPtr :
-    T extends byte ? System_Internal.Byte :
-    T extends ushort ? System_Internal.UInt16 :
-    T extends uint ? System_Internal.UInt32 :
-    T extends ulong ? System_Internal.UInt64 :
-    T extends uint128 ? System_Internal.UInt128 :
-    T extends nuint ? System_Internal.UIntPtr :
-    T extends half ? System_Internal.Half :
-    T extends float ? System_Internal.Single :
-    T extends double ? System_Internal.Double :
-    T extends decimal ? System_Internal.Decimal :
-    T extends char ? System_Internal.Char :
-    T extends boolean ? System_Internal.Boolean :
-    T extends string ? System_Internal.String :
-    T; // Identity fallback for non-primitive types
 
 export enum IteratorResult {
     NoMoreNodes = 0,
@@ -824,9 +799,9 @@ export interface XmlQueryRuntime$instance {
     DebugSetGlobalValue(name: string, value: unknown): void;
     DocOrderDistinct(seq: IList_1<XPathNavigator>): IList_1<XPathNavigator>;
     EarlyBoundFunctionExists(name: string, namespaceUri: string): boolean;
-    EndRtfConstruction(output: { value: ref<XmlQueryOutput> }): XPathNavigator;
-    EndSequenceConstruction(output: { value: ref<XmlQueryOutput> }): IList_1<XPathItem>;
-    FindIndex(context: XPathNavigator, indexId: int, index: { value: ref<XmlILIndex> }): boolean;
+    EndRtfConstruction(output: XmlQueryOutput): XPathNavigator;
+    EndSequenceConstruction(output: XmlQueryOutput): IList_1<XPathItem>;
+    FindIndex(context: XPathNavigator, indexId: int, index: XmlILIndex): boolean;
     GenerateId(navigator: XPathNavigator): string;
     GetAtomizedName(index: int): string;
     GetCollation(index: int): XmlCollation;
@@ -845,8 +820,8 @@ export interface XmlQueryRuntime$instance {
     ParseTagName(tagName: string, ns: string): XmlQualifiedName;
     SendMessage(message: string): void;
     SetGlobalValue(index: int, value: unknown): void;
-    StartRtfConstruction(baseUri: string, output: { value: ref<XmlQueryOutput> }): void;
-    StartSequenceConstruction(output: { value: ref<XmlQueryOutput> }): void;
+    StartRtfConstruction(baseUri: string, output: XmlQueryOutput): void;
+    StartSequenceConstruction(output: XmlQueryOutput): void;
     TextRtfConstruction(text: string, baseUri: string): XPathNavigator;
     ThrowException(text: string): void;
 }
@@ -900,7 +875,7 @@ export interface XsltLibrary$instance {
     CheckScriptNamespace(nsUri: string): int;
     ElementAvailable(name: XmlQualifiedName): boolean;
     EqualityOperator(opCode: double, left: IList_1<XPathItem>, right: IList_1<XPathItem>): boolean;
-    FormatMessage(res: string, args: IList_1<CLROf<string>>): string;
+    FormatMessage(res: string, args: IList_1<System_Internal.String>): string;
     FormatNumberDynamic(value: double, formatPicture: string, decimalFormatName: XmlQualifiedName, errorMessageName: string): string;
     FormatNumberStatic(value: double, decimalFormatterIndex: double): string;
     FunctionAvailable(name: XmlQualifiedName): boolean;

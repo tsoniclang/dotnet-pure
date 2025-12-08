@@ -56,23 +56,23 @@ import * as System_Xml_XPath from "../../System.Xml.XPath/internal/index.js";
 // Import branded primitive types
 import type { sbyte, byte, short, ushort, int, uint, long, ulong, int128, uint128, half, float, double, decimal, nint, nuint, char } from '@tsonic/types';
 
-// Import CLROf utility for primitive type lifting
-import type { CLROf } from '../../System/internal/index.js';
+// Import CLR type aliases for generic type arguments
+import * as System_Internal from "../../System/internal/index.js";
 
 // Import unsafe type markers
-import type { ptr, ref } from '@tsonic/types';
+import type { ptr } from '@tsonic/types';
 
 export interface __Ext_String {
-  AsSpan(): System.ReadOnlySpan_1<CLROf<char>>;
-  AsSpan(start: int): System.ReadOnlySpan_1<CLROf<char>>;
-  AsSpan(startIndex: System.Index): System.ReadOnlySpan_1<CLROf<char>>;
-  AsSpan(range: System.Range): System.ReadOnlySpan_1<CLROf<char>>;
-  AsSpan(start: int, length: int): System.ReadOnlySpan_1<CLROf<char>>;
-  AsMemory(): System.ReadOnlyMemory_1<CLROf<char>>;
-  AsMemory(start: int): System.ReadOnlyMemory_1<CLROf<char>>;
-  AsMemory(startIndex: System.Index): System.ReadOnlyMemory_1<CLROf<char>>;
-  AsMemory(start: int, length: int): System.ReadOnlyMemory_1<CLROf<char>>;
-  AsMemory(range: System.Range): System.ReadOnlyMemory_1<CLROf<char>>;
+  AsSpan(): System.ReadOnlySpan_1<System_Internal.Char>;
+  AsSpan(start: int): System.ReadOnlySpan_1<System_Internal.Char>;
+  AsSpan(startIndex: System.Index): System.ReadOnlySpan_1<System_Internal.Char>;
+  AsSpan(range: System.Range): System.ReadOnlySpan_1<System_Internal.Char>;
+  AsSpan(start: int, length: int): System.ReadOnlySpan_1<System_Internal.Char>;
+  AsMemory(): System.ReadOnlyMemory_1<System_Internal.Char>;
+  AsMemory(start: int): System.ReadOnlyMemory_1<System_Internal.Char>;
+  AsMemory(startIndex: System.Index): System.ReadOnlyMemory_1<System_Internal.Char>;
+  AsMemory(start: int, length: int): System.ReadOnlyMemory_1<System_Internal.Char>;
+  AsMemory(range: System.Range): System.ReadOnlyMemory_1<System_Internal.Char>;
   IsNormalized(): boolean;
   IsNormalized(normalizationForm: System_Text.NormalizationForm): boolean;
   Normalize(): string;
@@ -85,7 +85,7 @@ export interface __Ext_Span_1<T extends System.IEquatable_1<T>> {
   ContainsAny(value0: T, value1: T, value2: T): boolean;
   ContainsAny(values: System.ReadOnlySpan_1<T>): boolean;
   ContainsAny(values: System_Buffers.SearchValues_1<T>): boolean;
-  ContainsAny(values: System_Buffers.SearchValues_1<CLROf<string>>): boolean;
+  ContainsAny(values: System_Buffers.SearchValues_1<System_Internal.String>): boolean;
   ContainsAnyExcept(value: T): boolean;
   ContainsAnyExcept(value0: T, value1: T): boolean;
   ContainsAnyExcept(value0: T, value1: T, value2: T): boolean;
@@ -117,7 +117,7 @@ export interface __Ext_Span_1<T extends System.IEquatable_1<T>> {
   IndexOfAny(value0: T, value1: T, value2: T): int;
   IndexOfAny(values: System.ReadOnlySpan_1<T>): int;
   IndexOfAny(values: System_Buffers.SearchValues_1<T>): int;
-  IndexOfAny(values: System_Buffers.SearchValues_1<CLROf<string>>): int;
+  IndexOfAny(values: System_Buffers.SearchValues_1<System_Internal.String>): int;
   LastIndexOfAny(value0: T, value1: T): int;
   LastIndexOfAny(value0: T, value1: T, value2: T): int;
   LastIndexOfAny(values: System.ReadOnlySpan_1<T>): int;
@@ -127,7 +127,7 @@ export interface __Ext_Span_1<T extends System.IEquatable_1<T>> {
   EndsWith(value: System.ReadOnlySpan_1<T>): boolean;
   Reverse(): void;
   Overlaps(other: System.ReadOnlySpan_1<T>): boolean;
-  Overlaps(other: System.ReadOnlySpan_1<T>, elementOffset: ref<int>): boolean;
+  Overlaps(other: System.ReadOnlySpan_1<T>, elementOffset: int): boolean;
   BinarySearch(comparable: System.IComparable_1<T>): int;
   BinarySearch<TComparable>(comparable: TComparable): int;
   BinarySearch<TComparer>(value: T, comparer: TComparer): int;
@@ -145,13 +145,13 @@ export interface __Ext_Span_1<T extends System.IEquatable_1<T>> {
   CommonPrefixLength(other: System.ReadOnlySpan_1<T>, comparer: System_Collections_Generic.IEqualityComparer_1<T>): int;
   Count(value: T): int;
   Count(value: System.ReadOnlySpan_1<T>): int;
-  TryWrite(handler: ref<System.MemoryExtensions_TryWriteInterpolatedStringHandler>, charsWritten: ref<int>): boolean;
-  TryWrite(provider: System.IFormatProvider, handler: ref<System.MemoryExtensions_TryWriteInterpolatedStringHandler>, charsWritten: ref<int>): boolean;
-  TryWrite<TArg0>(provider: System.IFormatProvider, format: System_Text.CompositeFormat, charsWritten: ref<int>, arg0: TArg0): boolean;
-  TryWrite<TArg0, TArg1>(provider: System.IFormatProvider, format: System_Text.CompositeFormat, charsWritten: ref<int>, arg0: TArg0, arg1: TArg1): boolean;
-  TryWrite<TArg0, TArg1, TArg2>(provider: System.IFormatProvider, format: System_Text.CompositeFormat, charsWritten: ref<int>, arg0: TArg0, arg1: TArg1, arg2: TArg2): boolean;
-  TryWrite(provider: System.IFormatProvider, format: System_Text.CompositeFormat, charsWritten: ref<int>, args: unknown[]): boolean;
-  TryWrite(provider: System.IFormatProvider, format: System_Text.CompositeFormat, charsWritten: ref<int>, args: System.ReadOnlySpan_1<unknown>): boolean;
+  TryWrite(handler: System.MemoryExtensions_TryWriteInterpolatedStringHandler, charsWritten: int): boolean;
+  TryWrite(provider: System.IFormatProvider, handler: System.MemoryExtensions_TryWriteInterpolatedStringHandler, charsWritten: int): boolean;
+  TryWrite<TArg0>(provider: System.IFormatProvider, format: System_Text.CompositeFormat, charsWritten: int, arg0: TArg0): boolean;
+  TryWrite<TArg0, TArg1>(provider: System.IFormatProvider, format: System_Text.CompositeFormat, charsWritten: int, arg0: TArg0, arg1: TArg1): boolean;
+  TryWrite<TArg0, TArg1, TArg2>(provider: System.IFormatProvider, format: System_Text.CompositeFormat, charsWritten: int, arg0: TArg0, arg1: TArg1, arg2: TArg2): boolean;
+  TryWrite(provider: System.IFormatProvider, format: System_Text.CompositeFormat, charsWritten: int, args: unknown[]): boolean;
+  TryWrite(provider: System.IFormatProvider, format: System_Text.CompositeFormat, charsWritten: int, args: System.ReadOnlySpan_1<unknown>): boolean;
   EnumerateRunes(): System_Text.SpanRuneEnumerator;
   EnumerateLines(): System_Text.SpanLineEnumerator;
   Trim(trimElement: T): System.Span_1<T>;
@@ -160,9 +160,9 @@ export interface __Ext_Span_1<T extends System.IEquatable_1<T>> {
   Trim(trimElements: System.ReadOnlySpan_1<T>): System.Span_1<T>;
   TrimStart(trimElements: System.ReadOnlySpan_1<T>): System.Span_1<T>;
   TrimEnd(trimElements: System.ReadOnlySpan_1<T>): System.Span_1<T>;
-  Trim(): System.Span_1<CLROf<char>>;
-  TrimStart(): System.Span_1<CLROf<char>>;
-  TrimEnd(): System.Span_1<CLROf<char>>;
+  Trim(): System.Span_1<System_Internal.Char>;
+  TrimStart(): System.Span_1<System_Internal.Char>;
+  TrimEnd(): System.Span_1<System_Internal.Char>;
   ToImmutableArray(): System_Collections_Immutable.ImmutableArray_1<T>;
 }
 
@@ -176,7 +176,7 @@ export interface __Ext_ReadOnlySpan_1<T extends System.IEquatable_1<T>> {
   ContainsAny(values: System.ReadOnlySpan_1<T>): boolean;
   ContainsAny(values: System.ReadOnlySpan_1<T>, comparer: System_Collections_Generic.IEqualityComparer_1<T>): boolean;
   ContainsAny(values: System_Buffers.SearchValues_1<T>): boolean;
-  ContainsAny(values: System_Buffers.SearchValues_1<CLROf<string>>): boolean;
+  ContainsAny(values: System_Buffers.SearchValues_1<System_Internal.String>): boolean;
   ContainsAnyExcept(value: T): boolean;
   ContainsAnyExcept(value: T, comparer: System_Collections_Generic.IEqualityComparer_1<T>): boolean;
   ContainsAnyExcept(value0: T, value1: T): boolean;
@@ -225,7 +225,7 @@ export interface __Ext_ReadOnlySpan_1<T extends System.IEquatable_1<T>> {
   IndexOfAny(values: System.ReadOnlySpan_1<T>): int;
   IndexOfAny(values: System.ReadOnlySpan_1<T>, comparer: System_Collections_Generic.IEqualityComparer_1<T>): int;
   IndexOfAny(values: System_Buffers.SearchValues_1<T>): int;
-  IndexOfAny(values: System_Buffers.SearchValues_1<CLROf<string>>): int;
+  IndexOfAny(values: System_Buffers.SearchValues_1<System_Internal.String>): int;
   LastIndexOfAny(value0: T, value1: T): int;
   LastIndexOfAny(value0: T, value1: T, comparer: System_Collections_Generic.IEqualityComparer_1<T>): int;
   LastIndexOfAny(value0: T, value1: T, value2: T): int;
@@ -246,7 +246,7 @@ export interface __Ext_ReadOnlySpan_1<T extends System.IEquatable_1<T>> {
   EndsWith(value: T): boolean;
   EndsWith(value: T, comparer: System_Collections_Generic.IEqualityComparer_1<T>): boolean;
   Overlaps(other: System.ReadOnlySpan_1<T>): boolean;
-  Overlaps(other: System.ReadOnlySpan_1<T>, elementOffset: ref<int>): boolean;
+  Overlaps(other: System.ReadOnlySpan_1<T>, elementOffset: int): boolean;
   BinarySearch(comparable: System.IComparable_1<T>): int;
   BinarySearch<TComparable>(comparable: TComparable): int;
   BinarySearch<TComparer>(value: T, comparer: TComparer): int;
@@ -261,9 +261,9 @@ export interface __Ext_ReadOnlySpan_1<T extends System.IEquatable_1<T>> {
   SplitAny(separators: System.ReadOnlySpan_1<T>): System.MemoryExtensions_SpanSplitEnumerator_1<T>;
   SplitAny(separators: System_Buffers.SearchValues_1<T>): System.MemoryExtensions_SpanSplitEnumerator_1<T>;
   Split(destination: System.Span_1<System.Range>, separator: char, options: System.StringSplitOptions): int;
-  Split(destination: System.Span_1<System.Range>, separator: System.ReadOnlySpan_1<CLROf<char>>, options: System.StringSplitOptions): int;
-  SplitAny(destination: System.Span_1<System.Range>, separators: System.ReadOnlySpan_1<CLROf<char>>, options: System.StringSplitOptions): int;
-  SplitAny(destination: System.Span_1<System.Range>, separators: System.ReadOnlySpan_1<CLROf<string>>, options: System.StringSplitOptions): int;
+  Split(destination: System.Span_1<System.Range>, separator: System.ReadOnlySpan_1<System_Internal.Char>, options: System.StringSplitOptions): int;
+  SplitAny(destination: System.Span_1<System.Range>, separators: System.ReadOnlySpan_1<System_Internal.Char>, options: System.StringSplitOptions): int;
+  SplitAny(destination: System.Span_1<System.Range>, separators: System.ReadOnlySpan_1<System_Internal.String>, options: System.StringSplitOptions): int;
   Count(value: T): int;
   Count(value: T, comparer: System_Collections_Generic.IEqualityComparer_1<T>): int;
   Count(value: System.ReadOnlySpan_1<T>): int;
@@ -272,17 +272,17 @@ export interface __Ext_ReadOnlySpan_1<T extends System.IEquatable_1<T>> {
   CountAny(values: System.ReadOnlySpan_1<T>): int;
   CountAny(values: System.ReadOnlySpan_1<T>, comparer: System_Collections_Generic.IEqualityComparer_1<T>): int;
   IsWhiteSpace(): boolean;
-  Contains(value: System.ReadOnlySpan_1<CLROf<char>>, comparisonType: System.StringComparison): boolean;
-  Equals(other: System.ReadOnlySpan_1<CLROf<char>>, comparisonType: System.StringComparison): boolean;
-  CompareTo(other: System.ReadOnlySpan_1<CLROf<char>>, comparisonType: System.StringComparison): int;
-  IndexOf(value: System.ReadOnlySpan_1<CLROf<char>>, comparisonType: System.StringComparison): int;
-  LastIndexOf(value: System.ReadOnlySpan_1<CLROf<char>>, comparisonType: System.StringComparison): int;
-  ToLower(destination: System.Span_1<CLROf<char>>, culture: System_Globalization.CultureInfo): int;
-  ToLowerInvariant(destination: System.Span_1<CLROf<char>>): int;
-  ToUpper(destination: System.Span_1<CLROf<char>>, culture: System_Globalization.CultureInfo): int;
-  ToUpperInvariant(destination: System.Span_1<CLROf<char>>): int;
-  EndsWith(value: System.ReadOnlySpan_1<CLROf<char>>, comparisonType: System.StringComparison): boolean;
-  StartsWith(value: System.ReadOnlySpan_1<CLROf<char>>, comparisonType: System.StringComparison): boolean;
+  Contains(value: System.ReadOnlySpan_1<System_Internal.Char>, comparisonType: System.StringComparison): boolean;
+  Equals(other: System.ReadOnlySpan_1<System_Internal.Char>, comparisonType: System.StringComparison): boolean;
+  CompareTo(other: System.ReadOnlySpan_1<System_Internal.Char>, comparisonType: System.StringComparison): int;
+  IndexOf(value: System.ReadOnlySpan_1<System_Internal.Char>, comparisonType: System.StringComparison): int;
+  LastIndexOf(value: System.ReadOnlySpan_1<System_Internal.Char>, comparisonType: System.StringComparison): int;
+  ToLower(destination: System.Span_1<System_Internal.Char>, culture: System_Globalization.CultureInfo): int;
+  ToLowerInvariant(destination: System.Span_1<System_Internal.Char>): int;
+  ToUpper(destination: System.Span_1<System_Internal.Char>, culture: System_Globalization.CultureInfo): int;
+  ToUpperInvariant(destination: System.Span_1<System_Internal.Char>): int;
+  EndsWith(value: System.ReadOnlySpan_1<System_Internal.Char>, comparisonType: System.StringComparison): boolean;
+  StartsWith(value: System.ReadOnlySpan_1<System_Internal.Char>, comparisonType: System.StringComparison): boolean;
   EnumerateRunes(): System_Text.SpanRuneEnumerator;
   EnumerateLines(): System_Text.SpanLineEnumerator;
   Trim(trimElement: T): System.ReadOnlySpan_1<T>;
@@ -291,17 +291,17 @@ export interface __Ext_ReadOnlySpan_1<T extends System.IEquatable_1<T>> {
   Trim(trimElements: System.ReadOnlySpan_1<T>): System.ReadOnlySpan_1<T>;
   TrimStart(trimElements: System.ReadOnlySpan_1<T>): System.ReadOnlySpan_1<T>;
   TrimEnd(trimElements: System.ReadOnlySpan_1<T>): System.ReadOnlySpan_1<T>;
-  Trim(): System.ReadOnlySpan_1<CLROf<char>>;
-  TrimStart(): System.ReadOnlySpan_1<CLROf<char>>;
-  TrimEnd(): System.ReadOnlySpan_1<CLROf<char>>;
-  Trim(trimChar: char): System.ReadOnlySpan_1<CLROf<char>>;
-  TrimStart(trimChar: char): System.ReadOnlySpan_1<CLROf<char>>;
-  TrimEnd(trimChar: char): System.ReadOnlySpan_1<CLROf<char>>;
-  Trim(trimChars: System.ReadOnlySpan_1<CLROf<char>>): System.ReadOnlySpan_1<CLROf<char>>;
-  TrimStart(trimChars: System.ReadOnlySpan_1<CLROf<char>>): System.ReadOnlySpan_1<CLROf<char>>;
-  TrimEnd(trimChars: System.ReadOnlySpan_1<CLROf<char>>): System.ReadOnlySpan_1<CLROf<char>>;
+  Trim(): System.ReadOnlySpan_1<System_Internal.Char>;
+  TrimStart(): System.ReadOnlySpan_1<System_Internal.Char>;
+  TrimEnd(): System.ReadOnlySpan_1<System_Internal.Char>;
+  Trim(trimChar: char): System.ReadOnlySpan_1<System_Internal.Char>;
+  TrimStart(trimChar: char): System.ReadOnlySpan_1<System_Internal.Char>;
+  TrimEnd(trimChar: char): System.ReadOnlySpan_1<System_Internal.Char>;
+  Trim(trimChars: System.ReadOnlySpan_1<System_Internal.Char>): System.ReadOnlySpan_1<System_Internal.Char>;
+  TrimStart(trimChars: System.ReadOnlySpan_1<System_Internal.Char>): System.ReadOnlySpan_1<System_Internal.Char>;
+  TrimEnd(trimChars: System.ReadOnlySpan_1<System_Internal.Char>): System.ReadOnlySpan_1<System_Internal.Char>;
   IsNormalized(normalizationForm: System_Text.NormalizationForm): boolean;
-  TryNormalize(destination: System.Span_1<CLROf<char>>, charsWritten: ref<int>, normalizationForm: System_Text.NormalizationForm): boolean;
+  TryNormalize(destination: System.Span_1<System_Internal.Char>, charsWritten: int, normalizationForm: System_Text.NormalizationForm): boolean;
   GetNormalizedLength(normalizationForm: System_Text.NormalizationForm): int;
   ToImmutableArray(): System_Collections_Immutable.ImmutableArray_1<T>;
 }
@@ -324,9 +324,9 @@ export interface __Ext_Memory_1<T extends System.IEquatable_1<T>> {
   Trim(trimElements: System.ReadOnlySpan_1<T>): System.Memory_1<T>;
   TrimStart(trimElements: System.ReadOnlySpan_1<T>): System.Memory_1<T>;
   TrimEnd(trimElements: System.ReadOnlySpan_1<T>): System.Memory_1<T>;
-  Trim(): System.Memory_1<CLROf<char>>;
-  TrimStart(): System.Memory_1<CLROf<char>>;
-  TrimEnd(): System.Memory_1<CLROf<char>>;
+  Trim(): System.Memory_1<System_Internal.Char>;
+  TrimStart(): System.Memory_1<System_Internal.Char>;
+  TrimEnd(): System.Memory_1<System_Internal.Char>;
 }
 
 export interface __Ext_ReadOnlyMemory_1<T extends System.IEquatable_1<T>> {
@@ -336,61 +336,61 @@ export interface __Ext_ReadOnlyMemory_1<T extends System.IEquatable_1<T>> {
   Trim(trimElements: System.ReadOnlySpan_1<T>): System.ReadOnlyMemory_1<T>;
   TrimStart(trimElements: System.ReadOnlySpan_1<T>): System.ReadOnlyMemory_1<T>;
   TrimEnd(trimElements: System.ReadOnlySpan_1<T>): System.ReadOnlyMemory_1<T>;
-  Trim(): System.ReadOnlyMemory_1<CLROf<char>>;
-  TrimStart(): System.ReadOnlyMemory_1<CLROf<char>>;
-  TrimEnd(): System.ReadOnlyMemory_1<CLROf<char>>;
+  Trim(): System.ReadOnlyMemory_1<System_Internal.Char>;
+  TrimStart(): System.ReadOnlyMemory_1<System_Internal.Char>;
+  TrimEnd(): System.ReadOnlyMemory_1<System_Internal.Char>;
 }
 
 export interface __Ext_Tuple_1<T1> {
-  Deconstruct(item1: ref<T1>): void;
+  Deconstruct(item1: T1): void;
   ToValueTuple(): System.ValueTuple_1<T1>;
 }
 
 export interface __Ext_Tuple_2<T1, T2> {
-  Deconstruct(item1: ref<T1>, item2: ref<T2>): void;
+  Deconstruct(item1: T1, item2: T2): void;
   ToValueTuple(): System.ValueTuple_2<T1, T2>;
 }
 
 export interface __Ext_Tuple_3<T1, T2, T3> {
-  Deconstruct(item1: ref<T1>, item2: ref<T2>, item3: ref<T3>): void;
+  Deconstruct(item1: T1, item2: T2, item3: T3): void;
   ToValueTuple(): System.ValueTuple_3<T1, T2, T3>;
 }
 
 export interface __Ext_Tuple_4<T1, T2, T3, T4> {
-  Deconstruct(item1: ref<T1>, item2: ref<T2>, item3: ref<T3>, item4: ref<T4>): void;
+  Deconstruct(item1: T1, item2: T2, item3: T3, item4: T4): void;
   ToValueTuple(): System.ValueTuple_4<T1, T2, T3, T4>;
 }
 
 export interface __Ext_Tuple_5<T1, T2, T3, T4, T5> {
-  Deconstruct(item1: ref<T1>, item2: ref<T2>, item3: ref<T3>, item4: ref<T4>, item5: ref<T5>): void;
+  Deconstruct(item1: T1, item2: T2, item3: T3, item4: T4, item5: T5): void;
   ToValueTuple(): System.ValueTuple_5<T1, T2, T3, T4, T5>;
 }
 
 export interface __Ext_Tuple_6<T1, T2, T3, T4, T5, T6> {
-  Deconstruct(item1: ref<T1>, item2: ref<T2>, item3: ref<T3>, item4: ref<T4>, item5: ref<T5>, item6: ref<T6>): void;
+  Deconstruct(item1: T1, item2: T2, item3: T3, item4: T4, item5: T5, item6: T6): void;
   ToValueTuple(): System.ValueTuple_6<T1, T2, T3, T4, T5, T6>;
 }
 
 export interface __Ext_Tuple_7<T1, T2, T3, T4, T5, T6, T7> {
-  Deconstruct(item1: ref<T1>, item2: ref<T2>, item3: ref<T3>, item4: ref<T4>, item5: ref<T5>, item6: ref<T6>, item7: ref<T7>): void;
+  Deconstruct(item1: T1, item2: T2, item3: T3, item4: T4, item5: T5, item6: T6, item7: T7): void;
   ToValueTuple(): System.ValueTuple_7<T1, T2, T3, T4, T5, T6, T7>;
 }
 
 export interface __Ext_Tuple_8<T1, T2, T3, T4, T5, T6, T7, TRest> {
-  Deconstruct<T8>(item1: ref<T1>, item2: ref<T2>, item3: ref<T3>, item4: ref<T4>, item5: ref<T5>, item6: ref<T6>, item7: ref<T7>, item8: ref<T8>): void;
-  Deconstruct<T8, T9>(item1: ref<T1>, item2: ref<T2>, item3: ref<T3>, item4: ref<T4>, item5: ref<T5>, item6: ref<T6>, item7: ref<T7>, item8: ref<T8>, item9: ref<T9>): void;
-  Deconstruct<T8, T9, T10>(item1: ref<T1>, item2: ref<T2>, item3: ref<T3>, item4: ref<T4>, item5: ref<T5>, item6: ref<T6>, item7: ref<T7>, item8: ref<T8>, item9: ref<T9>, item10: ref<T10>): void;
-  Deconstruct<T8, T9, T10, T11>(item1: ref<T1>, item2: ref<T2>, item3: ref<T3>, item4: ref<T4>, item5: ref<T5>, item6: ref<T6>, item7: ref<T7>, item8: ref<T8>, item9: ref<T9>, item10: ref<T10>, item11: ref<T11>): void;
-  Deconstruct<T8, T9, T10, T11, T12>(item1: ref<T1>, item2: ref<T2>, item3: ref<T3>, item4: ref<T4>, item5: ref<T5>, item6: ref<T6>, item7: ref<T7>, item8: ref<T8>, item9: ref<T9>, item10: ref<T10>, item11: ref<T11>, item12: ref<T12>): void;
-  Deconstruct<T8, T9, T10, T11, T12, T13>(item1: ref<T1>, item2: ref<T2>, item3: ref<T3>, item4: ref<T4>, item5: ref<T5>, item6: ref<T6>, item7: ref<T7>, item8: ref<T8>, item9: ref<T9>, item10: ref<T10>, item11: ref<T11>, item12: ref<T12>, item13: ref<T13>): void;
-  Deconstruct<T8, T9, T10, T11, T12, T13, T14>(item1: ref<T1>, item2: ref<T2>, item3: ref<T3>, item4: ref<T4>, item5: ref<T5>, item6: ref<T6>, item7: ref<T7>, item8: ref<T8>, item9: ref<T9>, item10: ref<T10>, item11: ref<T11>, item12: ref<T12>, item13: ref<T13>, item14: ref<T14>): void;
-  Deconstruct<T8, T9, T10, T11, T12, T13, T14, T15>(item1: ref<T1>, item2: ref<T2>, item3: ref<T3>, item4: ref<T4>, item5: ref<T5>, item6: ref<T6>, item7: ref<T7>, item8: ref<T8>, item9: ref<T9>, item10: ref<T10>, item11: ref<T11>, item12: ref<T12>, item13: ref<T13>, item14: ref<T14>, item15: ref<T15>): void;
-  Deconstruct<T8, T9, T10, T11, T12, T13, T14, T15, T16>(item1: ref<T1>, item2: ref<T2>, item3: ref<T3>, item4: ref<T4>, item5: ref<T5>, item6: ref<T6>, item7: ref<T7>, item8: ref<T8>, item9: ref<T9>, item10: ref<T10>, item11: ref<T11>, item12: ref<T12>, item13: ref<T13>, item14: ref<T14>, item15: ref<T15>, item16: ref<T16>): void;
-  Deconstruct<T8, T9, T10, T11, T12, T13, T14, T15, T16, T17>(item1: ref<T1>, item2: ref<T2>, item3: ref<T3>, item4: ref<T4>, item5: ref<T5>, item6: ref<T6>, item7: ref<T7>, item8: ref<T8>, item9: ref<T9>, item10: ref<T10>, item11: ref<T11>, item12: ref<T12>, item13: ref<T13>, item14: ref<T14>, item15: ref<T15>, item16: ref<T16>, item17: ref<T17>): void;
-  Deconstruct<T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18>(item1: ref<T1>, item2: ref<T2>, item3: ref<T3>, item4: ref<T4>, item5: ref<T5>, item6: ref<T6>, item7: ref<T7>, item8: ref<T8>, item9: ref<T9>, item10: ref<T10>, item11: ref<T11>, item12: ref<T12>, item13: ref<T13>, item14: ref<T14>, item15: ref<T15>, item16: ref<T16>, item17: ref<T17>, item18: ref<T18>): void;
-  Deconstruct<T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19>(item1: ref<T1>, item2: ref<T2>, item3: ref<T3>, item4: ref<T4>, item5: ref<T5>, item6: ref<T6>, item7: ref<T7>, item8: ref<T8>, item9: ref<T9>, item10: ref<T10>, item11: ref<T11>, item12: ref<T12>, item13: ref<T13>, item14: ref<T14>, item15: ref<T15>, item16: ref<T16>, item17: ref<T17>, item18: ref<T18>, item19: ref<T19>): void;
-  Deconstruct<T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20>(item1: ref<T1>, item2: ref<T2>, item3: ref<T3>, item4: ref<T4>, item5: ref<T5>, item6: ref<T6>, item7: ref<T7>, item8: ref<T8>, item9: ref<T9>, item10: ref<T10>, item11: ref<T11>, item12: ref<T12>, item13: ref<T13>, item14: ref<T14>, item15: ref<T15>, item16: ref<T16>, item17: ref<T17>, item18: ref<T18>, item19: ref<T19>, item20: ref<T20>): void;
-  Deconstruct<T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21>(item1: ref<T1>, item2: ref<T2>, item3: ref<T3>, item4: ref<T4>, item5: ref<T5>, item6: ref<T6>, item7: ref<T7>, item8: ref<T8>, item9: ref<T9>, item10: ref<T10>, item11: ref<T11>, item12: ref<T12>, item13: ref<T13>, item14: ref<T14>, item15: ref<T15>, item16: ref<T16>, item17: ref<T17>, item18: ref<T18>, item19: ref<T19>, item20: ref<T20>, item21: ref<T21>): void;
+  Deconstruct<T8>(item1: T1, item2: T2, item3: T3, item4: T4, item5: T5, item6: T6, item7: T7, item8: T8): void;
+  Deconstruct<T8, T9>(item1: T1, item2: T2, item3: T3, item4: T4, item5: T5, item6: T6, item7: T7, item8: T8, item9: T9): void;
+  Deconstruct<T8, T9, T10>(item1: T1, item2: T2, item3: T3, item4: T4, item5: T5, item6: T6, item7: T7, item8: T8, item9: T9, item10: T10): void;
+  Deconstruct<T8, T9, T10, T11>(item1: T1, item2: T2, item3: T3, item4: T4, item5: T5, item6: T6, item7: T7, item8: T8, item9: T9, item10: T10, item11: T11): void;
+  Deconstruct<T8, T9, T10, T11, T12>(item1: T1, item2: T2, item3: T3, item4: T4, item5: T5, item6: T6, item7: T7, item8: T8, item9: T9, item10: T10, item11: T11, item12: T12): void;
+  Deconstruct<T8, T9, T10, T11, T12, T13>(item1: T1, item2: T2, item3: T3, item4: T4, item5: T5, item6: T6, item7: T7, item8: T8, item9: T9, item10: T10, item11: T11, item12: T12, item13: T13): void;
+  Deconstruct<T8, T9, T10, T11, T12, T13, T14>(item1: T1, item2: T2, item3: T3, item4: T4, item5: T5, item6: T6, item7: T7, item8: T8, item9: T9, item10: T10, item11: T11, item12: T12, item13: T13, item14: T14): void;
+  Deconstruct<T8, T9, T10, T11, T12, T13, T14, T15>(item1: T1, item2: T2, item3: T3, item4: T4, item5: T5, item6: T6, item7: T7, item8: T8, item9: T9, item10: T10, item11: T11, item12: T12, item13: T13, item14: T14, item15: T15): void;
+  Deconstruct<T8, T9, T10, T11, T12, T13, T14, T15, T16>(item1: T1, item2: T2, item3: T3, item4: T4, item5: T5, item6: T6, item7: T7, item8: T8, item9: T9, item10: T10, item11: T11, item12: T12, item13: T13, item14: T14, item15: T15, item16: T16): void;
+  Deconstruct<T8, T9, T10, T11, T12, T13, T14, T15, T16, T17>(item1: T1, item2: T2, item3: T3, item4: T4, item5: T5, item6: T6, item7: T7, item8: T8, item9: T9, item10: T10, item11: T11, item12: T12, item13: T13, item14: T14, item15: T15, item16: T16, item17: T17): void;
+  Deconstruct<T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18>(item1: T1, item2: T2, item3: T3, item4: T4, item5: T5, item6: T6, item7: T7, item8: T8, item9: T9, item10: T10, item11: T11, item12: T12, item13: T13, item14: T14, item15: T15, item16: T16, item17: T17, item18: T18): void;
+  Deconstruct<T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19>(item1: T1, item2: T2, item3: T3, item4: T4, item5: T5, item6: T6, item7: T7, item8: T8, item9: T9, item10: T10, item11: T11, item12: T12, item13: T13, item14: T14, item15: T15, item16: T16, item17: T17, item18: T18, item19: T19): void;
+  Deconstruct<T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20>(item1: T1, item2: T2, item3: T3, item4: T4, item5: T5, item6: T6, item7: T7, item8: T8, item9: T9, item10: T10, item11: T11, item12: T12, item13: T13, item14: T14, item15: T15, item16: T16, item17: T17, item18: T18, item19: T19, item20: T20): void;
+  Deconstruct<T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21>(item1: T1, item2: T2, item3: T3, item4: T4, item5: T5, item6: T6, item7: T7, item8: T8, item9: T9, item10: T10, item11: T11, item12: T12, item13: T13, item14: T14, item15: T15, item16: T16, item17: T17, item18: T18, item19: T19, item20: T20, item21: T21): void;
   ToValueTuple<T8>(): System.ValueTuple_8<T1, T2, T3, T4, T5, T6, T7, System.ValueTuple_1<T8>>;
 }
 
@@ -462,8 +462,8 @@ export interface __Ext_IEnumerable_1<T> {
   Aggregate<TAccumulate>(seed: TAccumulate, func: System.Func_3<TAccumulate, T, TAccumulate>): TAccumulate;
   Aggregate<TAccumulate, TResult>(seed: TAccumulate, func: System.Func_3<TAccumulate, T, TAccumulate>, resultSelector: System.Func_2<TAccumulate, TResult>): TResult;
   Any(): boolean;
-  Any(predicate: System.Func_2<T, CLROf<boolean>>): boolean;
-  All(predicate: System.Func_2<T, CLROf<boolean>>): boolean;
+  Any(predicate: System.Func_2<T, System_Internal.Boolean>): boolean;
+  All(predicate: System.Func_2<T, System_Internal.Boolean>): boolean;
   Append(element: T): System_Collections_Generic.IEnumerable_1<T>;
   Prepend(element: T): System_Collections_Generic.IEnumerable_1<T>;
   Average(): double;
@@ -471,29 +471,29 @@ export interface __Ext_IEnumerable_1<T> {
   Average(): float;
   Average(): double;
   Average(): decimal;
-  Average(): System.Nullable_1<CLROf<double>>;
-  Average(): System.Nullable_1<CLROf<double>>;
-  Average(): System.Nullable_1<CLROf<float>>;
-  Average(): System.Nullable_1<CLROf<double>>;
-  Average(): System.Nullable_1<CLROf<decimal>>;
-  Average(selector: System.Func_2<T, CLROf<int>>): double;
-  Average(selector: System.Func_2<T, CLROf<float>>): float;
-  Average(selector: System.Func_2<T, CLROf<decimal>>): decimal;
-  Average(selector: System.Func_2<T, System.Nullable_1<CLROf<int>>>): System.Nullable_1<CLROf<double>>;
-  Average(selector: System.Func_2<T, System.Nullable_1<CLROf<float>>>): System.Nullable_1<CLROf<float>>;
-  Average(selector: System.Func_2<T, System.Nullable_1<CLROf<decimal>>>): System.Nullable_1<CLROf<decimal>>;
+  Average(): System.Nullable_1<System_Internal.Double>;
+  Average(): System.Nullable_1<System_Internal.Double>;
+  Average(): System.Nullable_1<System_Internal.Single>;
+  Average(): System.Nullable_1<System_Internal.Double>;
+  Average(): System.Nullable_1<System_Internal.Decimal>;
+  Average(selector: System.Func_2<T, System_Internal.Int32>): double;
+  Average(selector: System.Func_2<T, System_Internal.Single>): float;
+  Average(selector: System.Func_2<T, System_Internal.Decimal>): decimal;
+  Average(selector: System.Func_2<T, System.Nullable_1<System_Internal.Int32>>): System.Nullable_1<System_Internal.Double>;
+  Average(selector: System.Func_2<T, System.Nullable_1<System_Internal.Single>>): System.Nullable_1<System_Internal.Single>;
+  Average(selector: System.Func_2<T, System.Nullable_1<System_Internal.Decimal>>): System.Nullable_1<System_Internal.Decimal>;
   Chunk(size: int): System_Collections_Generic.IEnumerable_1<T[]>;
   Concat(second: System_Collections_Generic.IEnumerable_1<T>): System_Collections_Generic.IEnumerable_1<T>;
   Contains(value: T): boolean;
   Contains(value: T, comparer: System_Collections_Generic.IEqualityComparer_1<T>): boolean;
   AggregateBy<TKey, TAccumulate>(keySelector: System.Func_2<T, TKey>, seed: TAccumulate, func: System.Func_3<TAccumulate, T, TAccumulate>, keyComparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.IEnumerable_1<System_Collections_Generic.KeyValuePair_2<TKey, TAccumulate>>;
   AggregateBy<TKey, TAccumulate>(keySelector: System.Func_2<T, TKey>, seedSelector: System.Func_2<TKey, TAccumulate>, func: System.Func_3<TAccumulate, T, TAccumulate>, keyComparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.IEnumerable_1<System_Collections_Generic.KeyValuePair_2<TKey, TAccumulate>>;
-  CountBy<TKey>(keySelector: System.Func_2<T, TKey>, keyComparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.IEnumerable_1<System_Collections_Generic.KeyValuePair_2<TKey, CLROf<int>>>;
+  CountBy<TKey>(keySelector: System.Func_2<T, TKey>, keyComparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.IEnumerable_1<System_Collections_Generic.KeyValuePair_2<TKey, System_Internal.Int32>>;
   Count(): int;
-  Count(predicate: System.Func_2<T, CLROf<boolean>>): int;
-  TryGetNonEnumeratedCount(count: ref<int>): boolean;
+  Count(predicate: System.Func_2<T, System_Internal.Boolean>): int;
+  TryGetNonEnumeratedCount(count: int): boolean;
   LongCount(): long;
-  LongCount(predicate: System.Func_2<T, CLROf<boolean>>): long;
+  LongCount(predicate: System.Func_2<T, System_Internal.Boolean>): long;
   DefaultIfEmpty(): System_Collections_Generic.IEnumerable_1<T>;
   DefaultIfEmpty(defaultValue: T): System_Collections_Generic.IEnumerable_1<T>;
   Distinct(): System_Collections_Generic.IEnumerable_1<T>;
@@ -510,11 +510,11 @@ export interface __Ext_IEnumerable_1<T> {
   ExceptBy<TKey>(second: System_Collections_Generic.IEnumerable_1<TKey>, keySelector: System.Func_2<T, TKey>): System_Collections_Generic.IEnumerable_1<T>;
   ExceptBy<TKey>(second: System_Collections_Generic.IEnumerable_1<TKey>, keySelector: System.Func_2<T, TKey>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.IEnumerable_1<T>;
   First(): T;
-  First(predicate: System.Func_2<T, CLROf<boolean>>): T;
+  First(predicate: System.Func_2<T, System_Internal.Boolean>): T;
   FirstOrDefault(): T;
   FirstOrDefault(defaultValue: T): T;
-  FirstOrDefault(predicate: System.Func_2<T, CLROf<boolean>>): T;
-  FirstOrDefault(predicate: System.Func_2<T, CLROf<boolean>>, defaultValue: T): T;
+  FirstOrDefault(predicate: System.Func_2<T, System_Internal.Boolean>): T;
+  FirstOrDefault(predicate: System.Func_2<T, System_Internal.Boolean>, defaultValue: T): T;
   GroupBy<TKey>(keySelector: System.Func_2<T, TKey>): System_Collections_Generic.IEnumerable_1<System_Linq.IGrouping_2<TKey, T>>;
   GroupBy<TKey>(keySelector: System.Func_2<T, TKey>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.IEnumerable_1<System_Linq.IGrouping_2<TKey, T>>;
   GroupBy<TKey, TElement>(keySelector: System.Func_2<T, TKey>, elementSelector: System.Func_2<T, TElement>): System_Collections_Generic.IEnumerable_1<System_Linq.IGrouping_2<TKey, TElement>>;
@@ -525,7 +525,7 @@ export interface __Ext_IEnumerable_1<T> {
   GroupBy<TKey, TElement, TResult>(keySelector: System.Func_2<T, TKey>, elementSelector: System.Func_2<T, TElement>, resultSelector: System.Func_3<TKey, System_Collections_Generic.IEnumerable_1<TElement>, TResult>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.IEnumerable_1<TResult>;
   GroupJoin<TInner, TKey, TResult>(inner: System_Collections_Generic.IEnumerable_1<TInner>, outerKeySelector: System.Func_2<T, TKey>, innerKeySelector: System.Func_2<TInner, TKey>, resultSelector: System.Func_3<T, System_Collections_Generic.IEnumerable_1<TInner>, TResult>): System_Collections_Generic.IEnumerable_1<TResult>;
   GroupJoin<TInner, TKey, TResult>(inner: System_Collections_Generic.IEnumerable_1<TInner>, outerKeySelector: System.Func_2<T, TKey>, innerKeySelector: System.Func_2<TInner, TKey>, resultSelector: System.Func_3<T, System_Collections_Generic.IEnumerable_1<TInner>, TResult>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.IEnumerable_1<TResult>;
-  Index(): System_Collections_Generic.IEnumerable_1<System.ValueTuple_2<CLROf<int>, T>>;
+  Index(): System_Collections_Generic.IEnumerable_1<System.ValueTuple_2<System_Internal.Int32, T>>;
   Intersect(second: System_Collections_Generic.IEnumerable_1<T>): System_Collections_Generic.IEnumerable_1<T>;
   Intersect(second: System_Collections_Generic.IEnumerable_1<T>, comparer: System_Collections_Generic.IEqualityComparer_1<T>): System_Collections_Generic.IEnumerable_1<T>;
   IntersectBy<TKey>(second: System_Collections_Generic.IEnumerable_1<TKey>, keySelector: System.Func_2<T, TKey>): System_Collections_Generic.IEnumerable_1<T>;
@@ -533,11 +533,11 @@ export interface __Ext_IEnumerable_1<T> {
   Join<TInner, TKey, TResult>(inner: System_Collections_Generic.IEnumerable_1<TInner>, outerKeySelector: System.Func_2<T, TKey>, innerKeySelector: System.Func_2<TInner, TKey>, resultSelector: System.Func_3<T, TInner, TResult>): System_Collections_Generic.IEnumerable_1<TResult>;
   Join<TInner, TKey, TResult>(inner: System_Collections_Generic.IEnumerable_1<TInner>, outerKeySelector: System.Func_2<T, TKey>, innerKeySelector: System.Func_2<TInner, TKey>, resultSelector: System.Func_3<T, TInner, TResult>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.IEnumerable_1<TResult>;
   Last(): T;
-  Last(predicate: System.Func_2<T, CLROf<boolean>>): T;
+  Last(predicate: System.Func_2<T, System_Internal.Boolean>): T;
   LastOrDefault(): T;
   LastOrDefault(defaultValue: T): T;
-  LastOrDefault(predicate: System.Func_2<T, CLROf<boolean>>): T;
-  LastOrDefault(predicate: System.Func_2<T, CLROf<boolean>>, defaultValue: T): T;
+  LastOrDefault(predicate: System.Func_2<T, System_Internal.Boolean>): T;
+  LastOrDefault(predicate: System.Func_2<T, System_Internal.Boolean>, defaultValue: T): T;
   LeftJoin<TInner, TKey, TResult>(inner: System_Collections_Generic.IEnumerable_1<TInner>, outerKeySelector: System.Func_2<T, TKey>, innerKeySelector: System.Func_2<TInner, TKey>, resultSelector: System.Func_3<T, TInner, TResult>): System_Collections_Generic.IEnumerable_1<TResult>;
   LeftJoin<TInner, TKey, TResult>(inner: System_Collections_Generic.IEnumerable_1<TInner>, outerKeySelector: System.Func_2<T, TKey>, innerKeySelector: System.Func_2<TInner, TKey>, resultSelector: System.Func_3<T, TInner, TResult>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.IEnumerable_1<TResult>;
   ToLookup<TKey>(keySelector: System.Func_2<T, TKey>): System_Linq.ILookup_2<TKey, T>;
@@ -546,53 +546,53 @@ export interface __Ext_IEnumerable_1<T> {
   ToLookup<TKey, TElement>(keySelector: System.Func_2<T, TKey>, elementSelector: System.Func_2<T, TElement>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Linq.ILookup_2<TKey, TElement>;
   Max(): int;
   Max(): long;
-  Max(): System.Nullable_1<CLROf<int>>;
-  Max(): System.Nullable_1<CLROf<long>>;
+  Max(): System.Nullable_1<System_Internal.Int32>;
+  Max(): System.Nullable_1<System_Internal.Int64>;
   Max(): double;
-  Max(): System.Nullable_1<CLROf<double>>;
+  Max(): System.Nullable_1<System_Internal.Double>;
   Max(): float;
-  Max(): System.Nullable_1<CLROf<float>>;
+  Max(): System.Nullable_1<System_Internal.Single>;
   Max(): decimal;
-  Max(): System.Nullable_1<CLROf<decimal>>;
+  Max(): System.Nullable_1<System_Internal.Decimal>;
   Max(): T;
   Max(comparer: System_Collections_Generic.IComparer_1<T>): T;
   MaxBy<TKey>(keySelector: System.Func_2<T, TKey>): T;
   MaxBy<TKey>(keySelector: System.Func_2<T, TKey>, comparer: System_Collections_Generic.IComparer_1<TKey>): T;
-  Max(selector: System.Func_2<T, CLROf<int>>): int;
-  Max(selector: System.Func_2<T, System.Nullable_1<CLROf<int>>>): System.Nullable_1<CLROf<int>>;
-  Max(selector: System.Func_2<T, CLROf<long>>): long;
-  Max(selector: System.Func_2<T, System.Nullable_1<CLROf<long>>>): System.Nullable_1<CLROf<long>>;
-  Max(selector: System.Func_2<T, CLROf<float>>): float;
-  Max(selector: System.Func_2<T, System.Nullable_1<CLROf<float>>>): System.Nullable_1<CLROf<float>>;
-  Max(selector: System.Func_2<T, CLROf<double>>): double;
-  Max(selector: System.Func_2<T, System.Nullable_1<CLROf<double>>>): System.Nullable_1<CLROf<double>>;
-  Max(selector: System.Func_2<T, CLROf<decimal>>): decimal;
-  Max(selector: System.Func_2<T, System.Nullable_1<CLROf<decimal>>>): System.Nullable_1<CLROf<decimal>>;
+  Max(selector: System.Func_2<T, System_Internal.Int32>): int;
+  Max(selector: System.Func_2<T, System.Nullable_1<System_Internal.Int32>>): System.Nullable_1<System_Internal.Int32>;
+  Max(selector: System.Func_2<T, System_Internal.Int64>): long;
+  Max(selector: System.Func_2<T, System.Nullable_1<System_Internal.Int64>>): System.Nullable_1<System_Internal.Int64>;
+  Max(selector: System.Func_2<T, System_Internal.Single>): float;
+  Max(selector: System.Func_2<T, System.Nullable_1<System_Internal.Single>>): System.Nullable_1<System_Internal.Single>;
+  Max(selector: System.Func_2<T, System_Internal.Double>): double;
+  Max(selector: System.Func_2<T, System.Nullable_1<System_Internal.Double>>): System.Nullable_1<System_Internal.Double>;
+  Max(selector: System.Func_2<T, System_Internal.Decimal>): decimal;
+  Max(selector: System.Func_2<T, System.Nullable_1<System_Internal.Decimal>>): System.Nullable_1<System_Internal.Decimal>;
   Max<TResult>(selector: System.Func_2<T, TResult>): TResult;
   Min(): int;
   Min(): long;
-  Min(): System.Nullable_1<CLROf<int>>;
-  Min(): System.Nullable_1<CLROf<long>>;
+  Min(): System.Nullable_1<System_Internal.Int32>;
+  Min(): System.Nullable_1<System_Internal.Int64>;
   Min(): float;
-  Min(): System.Nullable_1<CLROf<float>>;
+  Min(): System.Nullable_1<System_Internal.Single>;
   Min(): double;
-  Min(): System.Nullable_1<CLROf<double>>;
+  Min(): System.Nullable_1<System_Internal.Double>;
   Min(): decimal;
-  Min(): System.Nullable_1<CLROf<decimal>>;
+  Min(): System.Nullable_1<System_Internal.Decimal>;
   Min(): T;
   Min(comparer: System_Collections_Generic.IComparer_1<T>): T;
   MinBy<TKey>(keySelector: System.Func_2<T, TKey>): T;
   MinBy<TKey>(keySelector: System.Func_2<T, TKey>, comparer: System_Collections_Generic.IComparer_1<TKey>): T;
-  Min(selector: System.Func_2<T, CLROf<int>>): int;
-  Min(selector: System.Func_2<T, System.Nullable_1<CLROf<int>>>): System.Nullable_1<CLROf<int>>;
-  Min(selector: System.Func_2<T, CLROf<long>>): long;
-  Min(selector: System.Func_2<T, System.Nullable_1<CLROf<long>>>): System.Nullable_1<CLROf<long>>;
-  Min(selector: System.Func_2<T, CLROf<float>>): float;
-  Min(selector: System.Func_2<T, System.Nullable_1<CLROf<float>>>): System.Nullable_1<CLROf<float>>;
-  Min(selector: System.Func_2<T, CLROf<double>>): double;
-  Min(selector: System.Func_2<T, System.Nullable_1<CLROf<double>>>): System.Nullable_1<CLROf<double>>;
-  Min(selector: System.Func_2<T, CLROf<decimal>>): decimal;
-  Min(selector: System.Func_2<T, System.Nullable_1<CLROf<decimal>>>): System.Nullable_1<CLROf<decimal>>;
+  Min(selector: System.Func_2<T, System_Internal.Int32>): int;
+  Min(selector: System.Func_2<T, System.Nullable_1<System_Internal.Int32>>): System.Nullable_1<System_Internal.Int32>;
+  Min(selector: System.Func_2<T, System_Internal.Int64>): long;
+  Min(selector: System.Func_2<T, System.Nullable_1<System_Internal.Int64>>): System.Nullable_1<System_Internal.Int64>;
+  Min(selector: System.Func_2<T, System_Internal.Single>): float;
+  Min(selector: System.Func_2<T, System.Nullable_1<System_Internal.Single>>): System.Nullable_1<System_Internal.Single>;
+  Min(selector: System.Func_2<T, System_Internal.Double>): double;
+  Min(selector: System.Func_2<T, System.Nullable_1<System_Internal.Double>>): System.Nullable_1<System_Internal.Double>;
+  Min(selector: System.Func_2<T, System_Internal.Decimal>): decimal;
+  Min(selector: System.Func_2<T, System.Nullable_1<System_Internal.Decimal>>): System.Nullable_1<System_Internal.Decimal>;
   Min<TResult>(selector: System.Func_2<T, TResult>): TResult;
   Order(): System_Linq.IOrderedEnumerable_1<T>;
   Order(comparer: System_Collections_Generic.IComparer_1<T>): System_Linq.IOrderedEnumerable_1<T>;
@@ -607,47 +607,47 @@ export interface __Ext_IEnumerable_1<T> {
   RightJoin<TInner, TKey, TResult>(inner: System_Collections_Generic.IEnumerable_1<TInner>, outerKeySelector: System.Func_2<T, TKey>, innerKeySelector: System.Func_2<TInner, TKey>, resultSelector: System.Func_3<T, TInner, TResult>): System_Collections_Generic.IEnumerable_1<TResult>;
   RightJoin<TInner, TKey, TResult>(inner: System_Collections_Generic.IEnumerable_1<TInner>, outerKeySelector: System.Func_2<T, TKey>, innerKeySelector: System.Func_2<TInner, TKey>, resultSelector: System.Func_3<T, TInner, TResult>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.IEnumerable_1<TResult>;
   Select<TResult>(selector: System.Func_2<T, TResult>): System_Collections_Generic.IEnumerable_1<TResult>;
-  Select<TResult>(selector: System.Func_3<T, CLROf<int>, TResult>): System_Collections_Generic.IEnumerable_1<TResult>;
+  Select<TResult>(selector: System.Func_3<T, System_Internal.Int32, TResult>): System_Collections_Generic.IEnumerable_1<TResult>;
   SelectMany<TResult>(selector: System.Func_2<T, System_Collections_Generic.IEnumerable_1<TResult>>): System_Collections_Generic.IEnumerable_1<TResult>;
-  SelectMany<TResult>(selector: System.Func_3<T, CLROf<int>, System_Collections_Generic.IEnumerable_1<TResult>>): System_Collections_Generic.IEnumerable_1<TResult>;
-  SelectMany<TCollection, TResult>(collectionSelector: System.Func_3<T, CLROf<int>, System_Collections_Generic.IEnumerable_1<TCollection>>, resultSelector: System.Func_3<T, TCollection, TResult>): System_Collections_Generic.IEnumerable_1<TResult>;
+  SelectMany<TResult>(selector: System.Func_3<T, System_Internal.Int32, System_Collections_Generic.IEnumerable_1<TResult>>): System_Collections_Generic.IEnumerable_1<TResult>;
+  SelectMany<TCollection, TResult>(collectionSelector: System.Func_3<T, System_Internal.Int32, System_Collections_Generic.IEnumerable_1<TCollection>>, resultSelector: System.Func_3<T, TCollection, TResult>): System_Collections_Generic.IEnumerable_1<TResult>;
   SelectMany<TCollection, TResult>(collectionSelector: System.Func_2<T, System_Collections_Generic.IEnumerable_1<TCollection>>, resultSelector: System.Func_3<T, TCollection, TResult>): System_Collections_Generic.IEnumerable_1<TResult>;
   SequenceEqual(second: System_Collections_Generic.IEnumerable_1<T>): boolean;
   SequenceEqual(second: System_Collections_Generic.IEnumerable_1<T>, comparer: System_Collections_Generic.IEqualityComparer_1<T>): boolean;
   Single(): T;
-  Single(predicate: System.Func_2<T, CLROf<boolean>>): T;
+  Single(predicate: System.Func_2<T, System_Internal.Boolean>): T;
   SingleOrDefault(): T;
   SingleOrDefault(defaultValue: T): T;
-  SingleOrDefault(predicate: System.Func_2<T, CLROf<boolean>>): T;
-  SingleOrDefault(predicate: System.Func_2<T, CLROf<boolean>>, defaultValue: T): T;
+  SingleOrDefault(predicate: System.Func_2<T, System_Internal.Boolean>): T;
+  SingleOrDefault(predicate: System.Func_2<T, System_Internal.Boolean>, defaultValue: T): T;
   Skip(count: int): System_Collections_Generic.IEnumerable_1<T>;
-  SkipWhile(predicate: System.Func_2<T, CLROf<boolean>>): System_Collections_Generic.IEnumerable_1<T>;
-  SkipWhile(predicate: System.Func_3<T, CLROf<int>, CLROf<boolean>>): System_Collections_Generic.IEnumerable_1<T>;
+  SkipWhile(predicate: System.Func_2<T, System_Internal.Boolean>): System_Collections_Generic.IEnumerable_1<T>;
+  SkipWhile(predicate: System.Func_3<T, System_Internal.Int32, System_Internal.Boolean>): System_Collections_Generic.IEnumerable_1<T>;
   SkipLast(count: int): System_Collections_Generic.IEnumerable_1<T>;
   Sum(): int;
   Sum(): long;
   Sum(): float;
   Sum(): double;
   Sum(): decimal;
-  Sum(): System.Nullable_1<CLROf<int>>;
-  Sum(): System.Nullable_1<CLROf<long>>;
-  Sum(): System.Nullable_1<CLROf<float>>;
-  Sum(): System.Nullable_1<CLROf<double>>;
-  Sum(): System.Nullable_1<CLROf<decimal>>;
-  Sum(selector: System.Func_2<T, CLROf<int>>): int;
-  Sum(selector: System.Func_2<T, CLROf<long>>): long;
-  Sum(selector: System.Func_2<T, CLROf<float>>): float;
-  Sum(selector: System.Func_2<T, CLROf<double>>): double;
-  Sum(selector: System.Func_2<T, CLROf<decimal>>): decimal;
-  Sum(selector: System.Func_2<T, System.Nullable_1<CLROf<int>>>): System.Nullable_1<CLROf<int>>;
-  Sum(selector: System.Func_2<T, System.Nullable_1<CLROf<long>>>): System.Nullable_1<CLROf<long>>;
-  Sum(selector: System.Func_2<T, System.Nullable_1<CLROf<float>>>): System.Nullable_1<CLROf<float>>;
-  Sum(selector: System.Func_2<T, System.Nullable_1<CLROf<double>>>): System.Nullable_1<CLROf<double>>;
-  Sum(selector: System.Func_2<T, System.Nullable_1<CLROf<decimal>>>): System.Nullable_1<CLROf<decimal>>;
+  Sum(): System.Nullable_1<System_Internal.Int32>;
+  Sum(): System.Nullable_1<System_Internal.Int64>;
+  Sum(): System.Nullable_1<System_Internal.Single>;
+  Sum(): System.Nullable_1<System_Internal.Double>;
+  Sum(): System.Nullable_1<System_Internal.Decimal>;
+  Sum(selector: System.Func_2<T, System_Internal.Int32>): int;
+  Sum(selector: System.Func_2<T, System_Internal.Int64>): long;
+  Sum(selector: System.Func_2<T, System_Internal.Single>): float;
+  Sum(selector: System.Func_2<T, System_Internal.Double>): double;
+  Sum(selector: System.Func_2<T, System_Internal.Decimal>): decimal;
+  Sum(selector: System.Func_2<T, System.Nullable_1<System_Internal.Int32>>): System.Nullable_1<System_Internal.Int32>;
+  Sum(selector: System.Func_2<T, System.Nullable_1<System_Internal.Int64>>): System.Nullable_1<System_Internal.Int64>;
+  Sum(selector: System.Func_2<T, System.Nullable_1<System_Internal.Single>>): System.Nullable_1<System_Internal.Single>;
+  Sum(selector: System.Func_2<T, System.Nullable_1<System_Internal.Double>>): System.Nullable_1<System_Internal.Double>;
+  Sum(selector: System.Func_2<T, System.Nullable_1<System_Internal.Decimal>>): System.Nullable_1<System_Internal.Decimal>;
   Take(count: int): System_Collections_Generic.IEnumerable_1<T>;
   Take(range: System.Range): System_Collections_Generic.IEnumerable_1<T>;
-  TakeWhile(predicate: System.Func_2<T, CLROf<boolean>>): System_Collections_Generic.IEnumerable_1<T>;
-  TakeWhile(predicate: System.Func_3<T, CLROf<int>, CLROf<boolean>>): System_Collections_Generic.IEnumerable_1<T>;
+  TakeWhile(predicate: System.Func_2<T, System_Internal.Boolean>): System_Collections_Generic.IEnumerable_1<T>;
+  TakeWhile(predicate: System.Func_3<T, System_Internal.Int32, System_Internal.Boolean>): System_Collections_Generic.IEnumerable_1<T>;
   TakeLast(count: int): System_Collections_Generic.IEnumerable_1<T>;
   ToArray(): T[];
   ToList(): System_Collections_Generic.List_1<T>;
@@ -663,8 +663,8 @@ export interface __Ext_IEnumerable_1<T> {
   Union(second: System_Collections_Generic.IEnumerable_1<T>, comparer: System_Collections_Generic.IEqualityComparer_1<T>): System_Collections_Generic.IEnumerable_1<T>;
   UnionBy<TKey>(second: System_Collections_Generic.IEnumerable_1<T>, keySelector: System.Func_2<T, TKey>): System_Collections_Generic.IEnumerable_1<T>;
   UnionBy<TKey>(second: System_Collections_Generic.IEnumerable_1<T>, keySelector: System.Func_2<T, TKey>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.IEnumerable_1<T>;
-  Where(predicate: System.Func_2<T, CLROf<boolean>>): System_Collections_Generic.IEnumerable_1<T>;
-  Where(predicate: System.Func_3<T, CLROf<int>, CLROf<boolean>>): System_Collections_Generic.IEnumerable_1<T>;
+  Where(predicate: System.Func_2<T, System_Internal.Boolean>): System_Collections_Generic.IEnumerable_1<T>;
+  Where(predicate: System.Func_3<T, System_Internal.Int32, System_Internal.Boolean>): System_Collections_Generic.IEnumerable_1<T>;
   Zip<TSecond, TResult>(second: System_Collections_Generic.IEnumerable_1<TSecond>, resultSelector: System.Func_3<T, TSecond, TResult>): System_Collections_Generic.IEnumerable_1<TResult>;
   Zip<TSecond>(second: System_Collections_Generic.IEnumerable_1<TSecond>): System_Collections_Generic.IEnumerable_1<System.ValueTuple_2<T, TSecond>>;
   Zip<TSecond, TThird>(second: System_Collections_Generic.IEnumerable_1<TSecond>, third: System_Collections_Generic.IEnumerable_1<TThird>): System_Collections_Generic.IEnumerable_1<System.ValueTuple_3<T, TSecond, TThird>>;
@@ -698,7 +698,7 @@ export interface __Ext_IReadOnlyDictionary_2<TKey, TValue> {
 
 export interface __Ext_IDictionary_2<TKey, TValue> {
   TryAdd(key: TKey, value: TValue): boolean;
-  Remove(key: TKey, value: ref<TValue>): boolean;
+  Remove(key: TKey, value: TValue): boolean;
   AsReadOnly(): System_Collections_ObjectModel.ReadOnlyDictionary_2<TKey, TValue>;
 }
 
@@ -732,30 +732,30 @@ export interface __Ext_ImmutableArray_1<T> {
   BinarySearch(index: int, length: int, value: T, comparer: System_Collections_Generic.IComparer_1<T>): int;
   Select<TResult>(selector: System.Func_2<T, TResult>): System_Collections_Generic.IEnumerable_1<TResult>;
   SelectMany<TCollection, TResult>(collectionSelector: System.Func_2<T, System_Collections_Generic.IEnumerable_1<TCollection>>, resultSelector: System.Func_3<T, TCollection, TResult>): System_Collections_Generic.IEnumerable_1<TResult>;
-  Where(predicate: System.Func_2<T, CLROf<boolean>>): System_Collections_Generic.IEnumerable_1<T>;
+  Where(predicate: System.Func_2<T, System_Internal.Boolean>): System_Collections_Generic.IEnumerable_1<T>;
   Any(): boolean;
-  Any(predicate: System.Func_2<T, CLROf<boolean>>): boolean;
-  All(predicate: System.Func_2<T, CLROf<boolean>>): boolean;
+  Any(predicate: System.Func_2<T, System_Internal.Boolean>): boolean;
+  All(predicate: System.Func_2<T, System_Internal.Boolean>): boolean;
   SequenceEqual<TDerived>(items: System_Collections_Immutable.ImmutableArray_1<TDerived>, comparer: System_Collections_Generic.IEqualityComparer_1<T>): boolean;
   SequenceEqual<TDerived>(items: System_Collections_Generic.IEnumerable_1<TDerived>, comparer: System_Collections_Generic.IEqualityComparer_1<T>): boolean;
-  SequenceEqual<TDerived>(items: System_Collections_Immutable.ImmutableArray_1<TDerived>, predicate: System.Func_3<T, T, CLROf<boolean>>): boolean;
+  SequenceEqual<TDerived>(items: System_Collections_Immutable.ImmutableArray_1<TDerived>, predicate: System.Func_3<T, T, System_Internal.Boolean>): boolean;
   Aggregate(func: System.Func_3<T, T, T>): T;
   Aggregate<TAccumulate>(seed: TAccumulate, func: System.Func_3<TAccumulate, T, TAccumulate>): TAccumulate;
   Aggregate<TAccumulate, TResult>(seed: TAccumulate, func: System.Func_3<TAccumulate, T, TAccumulate>, resultSelector: System.Func_2<TAccumulate, TResult>): TResult;
   ElementAt(index: int): T;
   ElementAtOrDefault(index: int): T;
-  First(predicate: System.Func_2<T, CLROf<boolean>>): T;
+  First(predicate: System.Func_2<T, System_Internal.Boolean>): T;
   First(): T;
   FirstOrDefault(): T;
-  FirstOrDefault(predicate: System.Func_2<T, CLROf<boolean>>): T;
+  FirstOrDefault(predicate: System.Func_2<T, System_Internal.Boolean>): T;
   Last(): T;
-  Last(predicate: System.Func_2<T, CLROf<boolean>>): T;
+  Last(predicate: System.Func_2<T, System_Internal.Boolean>): T;
   LastOrDefault(): T;
-  LastOrDefault(predicate: System.Func_2<T, CLROf<boolean>>): T;
+  LastOrDefault(predicate: System.Func_2<T, System_Internal.Boolean>): T;
   Single(): T;
-  Single(predicate: System.Func_2<T, CLROf<boolean>>): T;
+  Single(predicate: System.Func_2<T, System_Internal.Boolean>): T;
   SingleOrDefault(): T;
-  SingleOrDefault(predicate: System.Func_2<T, CLROf<boolean>>): T;
+  SingleOrDefault(predicate: System.Func_2<T, System_Internal.Boolean>): T;
   ToDictionary<TKey>(keySelector: System.Func_2<T, TKey>): System_Collections_Generic.Dictionary_2<TKey, T>;
   ToDictionary<TKey, TElement>(keySelector: System.Func_2<T, TKey>, elementSelector: System.Func_2<T, TElement>): System_Collections_Generic.Dictionary_2<TKey, TElement>;
   ToDictionary<TKey>(keySelector: System.Func_2<T, TKey>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.Dictionary_2<TKey, T>;
@@ -796,7 +796,7 @@ export interface __Ext_IImmutableList_1<T> {
 }
 
 export interface __Ext_IImmutableQueue_1<T> {
-  Dequeue(value: ref<T>): System_Collections_Immutable.IImmutableQueue_1<T>;
+  Dequeue(value: T): System_Collections_Immutable.IImmutableQueue_1<T>;
 }
 
 export interface __Ext_ImmutableSortedDictionary_2_Builder<TKey, TValue> {
@@ -808,7 +808,7 @@ export interface __Ext_ImmutableSortedSet_1_Builder<T> {
 }
 
 export interface __Ext_IImmutableStack_1<T> {
-  Pop(value: ref<T>): System_Collections_Immutable.IImmutableStack_1<T>;
+  Pop(value: T): System_Collections_Immutable.IImmutableStack_1<T>;
 }
 
 export interface __Ext_DbDataReader {
@@ -837,7 +837,7 @@ export interface __Ext_DbDataReader {
   GetTextReader(name: string): System_IO.TextReader;
   GetValue(name: string): unknown;
   IsDBNull(name: string): boolean;
-  IsDBNullAsync(name: string, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<CLROf<boolean>>;
+  IsDBNullAsync(name: string, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<System_Internal.Boolean>;
   GetColumnSchema(): System_Collections_ObjectModel.ReadOnlyCollection_1<System_Data_Common.DbColumn>;
   CanGetColumnSchema(): boolean;
 }
@@ -861,7 +861,7 @@ export interface __Ext_DataTable {
 
 export interface __Ext_EnumerableRowCollection_1<TRow> {
   AsDataView(): System_Data.DataView;
-  Where(predicate: System.Func_2<TRow, CLROf<boolean>>): System_Data.EnumerableRowCollection_1<TRow>;
+  Where(predicate: System.Func_2<TRow, System_Internal.Boolean>): System_Data.EnumerableRowCollection_1<TRow>;
   OrderBy<TKey>(keySelector: System.Func_2<TRow, TKey>): System_Data.OrderedEnumerableRowCollection_1<TRow>;
   OrderBy<TKey>(keySelector: System.Func_2<TRow, TKey>, comparer: System_Collections_Generic.IComparer_1<TKey>): System_Data.OrderedEnumerableRowCollection_1<TRow>;
   OrderByDescending<TKey>(keySelector: System.Func_2<TRow, TKey>): System_Data.OrderedEnumerableRowCollection_1<TRow>;
@@ -881,7 +881,7 @@ export interface __Ext_EnumerableRowCollection {
 }
 
 export interface __Ext_TypedTableBase_1<T> {
-  Where(predicate: System.Func_2<T, CLROf<boolean>>): System_Data.EnumerableRowCollection_1<T>;
+  Where(predicate: System.Func_2<T, System_Internal.Boolean>): System_Data.EnumerableRowCollection_1<T>;
   OrderBy<TKey>(keySelector: System.Func_2<T, TKey>): System_Data.OrderedEnumerableRowCollection_1<T>;
   OrderBy<TKey>(keySelector: System.Func_2<T, TKey>, comparer: System_Collections_Generic.IComparer_1<TKey>): System_Data.OrderedEnumerableRowCollection_1<T>;
   OrderByDescending<TKey>(keySelector: System.Func_2<T, TKey>): System_Data.OrderedEnumerableRowCollection_1<T>;
@@ -901,7 +901,7 @@ export interface __Ext_StackFrame {
 }
 
 export interface __Ext_IMeterFactory {
-  Create(name: string, version: string, tags: System_Collections_Generic.IEnumerable_1<System_Collections_Generic.KeyValuePair_2<CLROf<string>, unknown>>): System_Diagnostics_Metrics.Meter;
+  Create(name: string, version: string, tags: System_Collections_Generic.IEnumerable_1<System_Collections_Generic.KeyValuePair_2<System_Internal.String, unknown>>): System_Diagnostics_Metrics.Meter;
 }
 
 export interface __Ext_CompareInfo {
@@ -983,34 +983,34 @@ export interface __Ext_IAsyncEnumerable_1<T> {
   AggregateBy<TKey, TAccumulate>(keySelector: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TKey>>, seed: TAccumulate, func: System.Func_4<TAccumulate, T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TAccumulate>>, keyComparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.IAsyncEnumerable_1<System_Collections_Generic.KeyValuePair_2<TKey, TAccumulate>>;
   AggregateBy<TKey, TAccumulate>(keySelector: System.Func_2<T, TKey>, seedSelector: System.Func_2<TKey, TAccumulate>, func: System.Func_3<TAccumulate, T, TAccumulate>, keyComparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.IAsyncEnumerable_1<System_Collections_Generic.KeyValuePair_2<TKey, TAccumulate>>;
   AggregateBy<TKey, TAccumulate>(keySelector: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TKey>>, seedSelector: System.Func_3<TKey, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TAccumulate>>, func: System.Func_4<TAccumulate, T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TAccumulate>>, keyComparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.IAsyncEnumerable_1<System_Collections_Generic.KeyValuePair_2<TKey, TAccumulate>>;
-  AllAsync(predicate: System.Func_2<T, CLROf<boolean>>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<CLROf<boolean>>;
-  AllAsync(predicate: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<CLROf<boolean>>>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<CLROf<boolean>>;
-  AnyAsync(cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<CLROf<boolean>>;
-  AnyAsync(predicate: System.Func_2<T, CLROf<boolean>>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<CLROf<boolean>>;
-  AnyAsync(predicate: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<CLROf<boolean>>>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<CLROf<boolean>>;
+  AllAsync(predicate: System.Func_2<T, System_Internal.Boolean>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<System_Internal.Boolean>;
+  AllAsync(predicate: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<System_Internal.Boolean>>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<System_Internal.Boolean>;
+  AnyAsync(cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<System_Internal.Boolean>;
+  AnyAsync(predicate: System.Func_2<T, System_Internal.Boolean>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<System_Internal.Boolean>;
+  AnyAsync(predicate: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<System_Internal.Boolean>>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<System_Internal.Boolean>;
   Append(element: T): System_Collections_Generic.IAsyncEnumerable_1<T>;
-  AverageAsync(cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<CLROf<double>>;
-  AverageAsync(cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<CLROf<double>>;
-  AverageAsync(cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<CLROf<float>>;
-  AverageAsync(cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<CLROf<double>>;
-  AverageAsync(cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<CLROf<decimal>>;
-  AverageAsync(cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<System.Nullable_1<CLROf<double>>>;
-  AverageAsync(cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<System.Nullable_1<CLROf<double>>>;
-  AverageAsync(cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<System.Nullable_1<CLROf<float>>>;
-  AverageAsync(cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<System.Nullable_1<CLROf<double>>>;
-  AverageAsync(cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<System.Nullable_1<CLROf<decimal>>>;
+  AverageAsync(cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<System_Internal.Double>;
+  AverageAsync(cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<System_Internal.Double>;
+  AverageAsync(cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<System_Internal.Single>;
+  AverageAsync(cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<System_Internal.Double>;
+  AverageAsync(cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<System_Internal.Decimal>;
+  AverageAsync(cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<System.Nullable_1<System_Internal.Double>>;
+  AverageAsync(cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<System.Nullable_1<System_Internal.Double>>;
+  AverageAsync(cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<System.Nullable_1<System_Internal.Single>>;
+  AverageAsync(cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<System.Nullable_1<System_Internal.Double>>;
+  AverageAsync(cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<System.Nullable_1<System_Internal.Decimal>>;
   Cast<TResult>(): System_Collections_Generic.IAsyncEnumerable_1<TResult>;
   Chunk(size: int): System_Collections_Generic.IAsyncEnumerable_1<T[]>;
   Concat(second: System_Collections_Generic.IAsyncEnumerable_1<T>): System_Collections_Generic.IAsyncEnumerable_1<T>;
-  ContainsAsync(value: T, comparer: System_Collections_Generic.IEqualityComparer_1<T>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<CLROf<boolean>>;
-  CountAsync(cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<CLROf<int>>;
-  CountAsync(predicate: System.Func_2<T, CLROf<boolean>>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<CLROf<int>>;
-  CountAsync(predicate: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<CLROf<boolean>>>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<CLROf<int>>;
-  LongCountAsync(cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<CLROf<long>>;
-  LongCountAsync(predicate: System.Func_2<T, CLROf<boolean>>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<CLROf<long>>;
-  LongCountAsync(predicate: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<CLROf<boolean>>>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<CLROf<long>>;
-  CountBy<TKey>(keySelector: System.Func_2<T, TKey>, keyComparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.IAsyncEnumerable_1<System_Collections_Generic.KeyValuePair_2<TKey, CLROf<int>>>;
-  CountBy<TKey>(keySelector: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TKey>>, keyComparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.IAsyncEnumerable_1<System_Collections_Generic.KeyValuePair_2<TKey, CLROf<int>>>;
+  ContainsAsync(value: T, comparer: System_Collections_Generic.IEqualityComparer_1<T>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<System_Internal.Boolean>;
+  CountAsync(cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<System_Internal.Int32>;
+  CountAsync(predicate: System.Func_2<T, System_Internal.Boolean>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<System_Internal.Int32>;
+  CountAsync(predicate: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<System_Internal.Boolean>>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<System_Internal.Int32>;
+  LongCountAsync(cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<System_Internal.Int64>;
+  LongCountAsync(predicate: System.Func_2<T, System_Internal.Boolean>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<System_Internal.Int64>;
+  LongCountAsync(predicate: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<System_Internal.Boolean>>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<System_Internal.Int64>;
+  CountBy<TKey>(keySelector: System.Func_2<T, TKey>, keyComparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.IAsyncEnumerable_1<System_Collections_Generic.KeyValuePair_2<TKey, System_Internal.Int32>>;
+  CountBy<TKey>(keySelector: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TKey>>, keyComparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.IAsyncEnumerable_1<System_Collections_Generic.KeyValuePair_2<TKey, System_Internal.Int32>>;
   DefaultIfEmpty(): System_Collections_Generic.IAsyncEnumerable_1<T>;
   DefaultIfEmpty(defaultValue: T): System_Collections_Generic.IAsyncEnumerable_1<T>;
   Distinct(comparer: System_Collections_Generic.IEqualityComparer_1<T>): System_Collections_Generic.IAsyncEnumerable_1<T>;
@@ -1024,14 +1024,14 @@ export interface __Ext_IAsyncEnumerable_1<T> {
   ExceptBy<TKey>(second: System_Collections_Generic.IAsyncEnumerable_1<TKey>, keySelector: System.Func_2<T, TKey>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.IAsyncEnumerable_1<T>;
   ExceptBy<TKey>(second: System_Collections_Generic.IAsyncEnumerable_1<TKey>, keySelector: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TKey>>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.IAsyncEnumerable_1<T>;
   FirstAsync(cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<T>;
-  FirstAsync(predicate: System.Func_2<T, CLROf<boolean>>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<T>;
-  FirstAsync(predicate: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<CLROf<boolean>>>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<T>;
+  FirstAsync(predicate: System.Func_2<T, System_Internal.Boolean>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<T>;
+  FirstAsync(predicate: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<System_Internal.Boolean>>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<T>;
   FirstOrDefaultAsync(cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<T>;
   FirstOrDefaultAsync(defaultValue: T, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<T>;
-  FirstOrDefaultAsync(predicate: System.Func_2<T, CLROf<boolean>>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<T>;
-  FirstOrDefaultAsync(predicate: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<CLROf<boolean>>>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<T>;
-  FirstOrDefaultAsync(predicate: System.Func_2<T, CLROf<boolean>>, defaultValue: T, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<T>;
-  FirstOrDefaultAsync(predicate: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<CLROf<boolean>>>, defaultValue: T, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<T>;
+  FirstOrDefaultAsync(predicate: System.Func_2<T, System_Internal.Boolean>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<T>;
+  FirstOrDefaultAsync(predicate: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<System_Internal.Boolean>>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<T>;
+  FirstOrDefaultAsync(predicate: System.Func_2<T, System_Internal.Boolean>, defaultValue: T, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<T>;
+  FirstOrDefaultAsync(predicate: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<System_Internal.Boolean>>, defaultValue: T, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<T>;
   GroupBy<TKey>(keySelector: System.Func_2<T, TKey>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.IAsyncEnumerable_1<System_Linq.IGrouping_2<TKey, T>>;
   GroupBy<TKey>(keySelector: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TKey>>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.IAsyncEnumerable_1<System_Linq.IGrouping_2<TKey, T>>;
   GroupBy<TKey, TElement>(keySelector: System.Func_2<T, TKey>, elementSelector: System.Func_2<T, TElement>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.IAsyncEnumerable_1<System_Linq.IGrouping_2<TKey, TElement>>;
@@ -1042,21 +1042,21 @@ export interface __Ext_IAsyncEnumerable_1<T> {
   GroupBy<TKey, TElement, TResult>(keySelector: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TKey>>, elementSelector: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TElement>>, resultSelector: System.Func_4<TKey, System_Collections_Generic.IEnumerable_1<TElement>, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TResult>>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.IAsyncEnumerable_1<TResult>;
   GroupJoin<TInner, TKey, TResult>(inner: System_Collections_Generic.IAsyncEnumerable_1<TInner>, outerKeySelector: System.Func_2<T, TKey>, innerKeySelector: System.Func_2<TInner, TKey>, resultSelector: System.Func_3<T, System_Collections_Generic.IEnumerable_1<TInner>, TResult>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.IAsyncEnumerable_1<TResult>;
   GroupJoin<TInner, TKey, TResult>(inner: System_Collections_Generic.IAsyncEnumerable_1<TInner>, outerKeySelector: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TKey>>, innerKeySelector: System.Func_3<TInner, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TKey>>, resultSelector: System.Func_4<T, System_Collections_Generic.IEnumerable_1<TInner>, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TResult>>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.IAsyncEnumerable_1<TResult>;
-  Index(): System_Collections_Generic.IAsyncEnumerable_1<System.ValueTuple_2<CLROf<int>, T>>;
+  Index(): System_Collections_Generic.IAsyncEnumerable_1<System.ValueTuple_2<System_Internal.Int32, T>>;
   Intersect(second: System_Collections_Generic.IAsyncEnumerable_1<T>, comparer: System_Collections_Generic.IEqualityComparer_1<T>): System_Collections_Generic.IAsyncEnumerable_1<T>;
   IntersectBy<TKey>(second: System_Collections_Generic.IAsyncEnumerable_1<TKey>, keySelector: System.Func_2<T, TKey>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.IAsyncEnumerable_1<T>;
   IntersectBy<TKey>(second: System_Collections_Generic.IAsyncEnumerable_1<TKey>, keySelector: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TKey>>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.IAsyncEnumerable_1<T>;
   Join<TInner, TKey, TResult>(inner: System_Collections_Generic.IAsyncEnumerable_1<TInner>, outerKeySelector: System.Func_2<T, TKey>, innerKeySelector: System.Func_2<TInner, TKey>, resultSelector: System.Func_3<T, TInner, TResult>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.IAsyncEnumerable_1<TResult>;
   Join<TInner, TKey, TResult>(inner: System_Collections_Generic.IAsyncEnumerable_1<TInner>, outerKeySelector: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TKey>>, innerKeySelector: System.Func_3<TInner, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TKey>>, resultSelector: System.Func_4<T, TInner, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TResult>>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.IAsyncEnumerable_1<TResult>;
   LastAsync(cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<T>;
-  LastAsync(predicate: System.Func_2<T, CLROf<boolean>>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<T>;
-  LastAsync(predicate: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<CLROf<boolean>>>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<T>;
+  LastAsync(predicate: System.Func_2<T, System_Internal.Boolean>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<T>;
+  LastAsync(predicate: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<System_Internal.Boolean>>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<T>;
   LastOrDefaultAsync(cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<T>;
   LastOrDefaultAsync(defaultValue: T, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<T>;
-  LastOrDefaultAsync(predicate: System.Func_2<T, CLROf<boolean>>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<T>;
-  LastOrDefaultAsync(predicate: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<CLROf<boolean>>>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<T>;
-  LastOrDefaultAsync(predicate: System.Func_2<T, CLROf<boolean>>, defaultValue: T, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<T>;
-  LastOrDefaultAsync(predicate: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<CLROf<boolean>>>, defaultValue: T, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<T>;
+  LastOrDefaultAsync(predicate: System.Func_2<T, System_Internal.Boolean>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<T>;
+  LastOrDefaultAsync(predicate: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<System_Internal.Boolean>>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<T>;
+  LastOrDefaultAsync(predicate: System.Func_2<T, System_Internal.Boolean>, defaultValue: T, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<T>;
+  LastOrDefaultAsync(predicate: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<System_Internal.Boolean>>, defaultValue: T, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<T>;
   LeftJoin<TInner, TKey, TResult>(inner: System_Collections_Generic.IAsyncEnumerable_1<TInner>, outerKeySelector: System.Func_2<T, TKey>, innerKeySelector: System.Func_2<TInner, TKey>, resultSelector: System.Func_3<T, TInner, TResult>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.IAsyncEnumerable_1<TResult>;
   LeftJoin<TInner, TKey, TResult>(inner: System_Collections_Generic.IAsyncEnumerable_1<TInner>, outerKeySelector: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TKey>>, innerKeySelector: System.Func_3<TInner, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TKey>>, resultSelector: System.Func_4<T, TInner, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TResult>>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.IAsyncEnumerable_1<TResult>;
   MaxAsync(comparer: System_Collections_Generic.IComparer_1<T>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<T>;
@@ -1078,47 +1078,47 @@ export interface __Ext_IAsyncEnumerable_1<T> {
   RightJoin<TInner, TKey, TResult>(inner: System_Collections_Generic.IAsyncEnumerable_1<TInner>, outerKeySelector: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TKey>>, innerKeySelector: System.Func_3<TInner, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TKey>>, resultSelector: System.Func_4<T, TInner, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TResult>>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.IAsyncEnumerable_1<TResult>;
   Select<TResult>(selector: System.Func_2<T, TResult>): System_Collections_Generic.IAsyncEnumerable_1<TResult>;
   Select<TResult>(selector: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TResult>>): System_Collections_Generic.IAsyncEnumerable_1<TResult>;
-  Select<TResult>(selector: System.Func_4<T, CLROf<int>, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TResult>>): System_Collections_Generic.IAsyncEnumerable_1<TResult>;
+  Select<TResult>(selector: System.Func_4<T, System_Internal.Int32, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TResult>>): System_Collections_Generic.IAsyncEnumerable_1<TResult>;
   SelectMany<TResult>(selector: System.Func_2<T, System_Collections_Generic.IEnumerable_1<TResult>>): System_Collections_Generic.IAsyncEnumerable_1<TResult>;
   SelectMany<TResult>(selector: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<System_Collections_Generic.IEnumerable_1<TResult>>>): System_Collections_Generic.IAsyncEnumerable_1<TResult>;
-  SelectMany<TResult>(selector: System.Func_4<T, CLROf<int>, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<System_Collections_Generic.IEnumerable_1<TResult>>>): System_Collections_Generic.IAsyncEnumerable_1<TResult>;
+  SelectMany<TResult>(selector: System.Func_4<T, System_Internal.Int32, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<System_Collections_Generic.IEnumerable_1<TResult>>>): System_Collections_Generic.IAsyncEnumerable_1<TResult>;
   SelectMany<TCollection, TResult>(collectionSelector: System.Func_2<T, System_Collections_Generic.IEnumerable_1<TCollection>>, resultSelector: System.Func_3<T, TCollection, TResult>): System_Collections_Generic.IAsyncEnumerable_1<TResult>;
   SelectMany<TCollection, TResult>(collectionSelector: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<System_Collections_Generic.IEnumerable_1<TCollection>>>, resultSelector: System.Func_4<T, TCollection, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TResult>>): System_Collections_Generic.IAsyncEnumerable_1<TResult>;
   SelectMany<TCollection, TResult>(collectionSelector: System.Func_2<T, System_Collections_Generic.IAsyncEnumerable_1<TCollection>>, resultSelector: System.Func_4<T, TCollection, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TResult>>): System_Collections_Generic.IAsyncEnumerable_1<TResult>;
-  SelectMany<TCollection, TResult>(collectionSelector: System.Func_3<T, CLROf<int>, System_Collections_Generic.IEnumerable_1<TCollection>>, resultSelector: System.Func_3<T, TCollection, TResult>): System_Collections_Generic.IAsyncEnumerable_1<TResult>;
-  SelectMany<TCollection, TResult>(collectionSelector: System.Func_4<T, CLROf<int>, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<System_Collections_Generic.IEnumerable_1<TCollection>>>, resultSelector: System.Func_4<T, TCollection, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TResult>>): System_Collections_Generic.IAsyncEnumerable_1<TResult>;
-  SequenceEqualAsync(second: System_Collections_Generic.IAsyncEnumerable_1<T>, comparer: System_Collections_Generic.IEqualityComparer_1<T>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<CLROf<boolean>>;
+  SelectMany<TCollection, TResult>(collectionSelector: System.Func_3<T, System_Internal.Int32, System_Collections_Generic.IEnumerable_1<TCollection>>, resultSelector: System.Func_3<T, TCollection, TResult>): System_Collections_Generic.IAsyncEnumerable_1<TResult>;
+  SelectMany<TCollection, TResult>(collectionSelector: System.Func_4<T, System_Internal.Int32, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<System_Collections_Generic.IEnumerable_1<TCollection>>>, resultSelector: System.Func_4<T, TCollection, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TResult>>): System_Collections_Generic.IAsyncEnumerable_1<TResult>;
+  SequenceEqualAsync(second: System_Collections_Generic.IAsyncEnumerable_1<T>, comparer: System_Collections_Generic.IEqualityComparer_1<T>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<System_Internal.Boolean>;
   Shuffle(): System_Collections_Generic.IAsyncEnumerable_1<T>;
   SingleAsync(cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<T>;
-  SingleAsync(predicate: System.Func_2<T, CLROf<boolean>>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<T>;
-  SingleAsync(predicate: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<CLROf<boolean>>>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<T>;
+  SingleAsync(predicate: System.Func_2<T, System_Internal.Boolean>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<T>;
+  SingleAsync(predicate: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<System_Internal.Boolean>>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<T>;
   SingleOrDefaultAsync(cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<T>;
   SingleOrDefaultAsync(defaultValue: T, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<T>;
-  SingleOrDefaultAsync(predicate: System.Func_2<T, CLROf<boolean>>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<T>;
-  SingleOrDefaultAsync(predicate: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<CLROf<boolean>>>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<T>;
-  SingleOrDefaultAsync(predicate: System.Func_2<T, CLROf<boolean>>, defaultValue: T, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<T>;
-  SingleOrDefaultAsync(predicate: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<CLROf<boolean>>>, defaultValue: T, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<T>;
+  SingleOrDefaultAsync(predicate: System.Func_2<T, System_Internal.Boolean>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<T>;
+  SingleOrDefaultAsync(predicate: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<System_Internal.Boolean>>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<T>;
+  SingleOrDefaultAsync(predicate: System.Func_2<T, System_Internal.Boolean>, defaultValue: T, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<T>;
+  SingleOrDefaultAsync(predicate: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<System_Internal.Boolean>>, defaultValue: T, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<T>;
   Skip(count: int): System_Collections_Generic.IAsyncEnumerable_1<T>;
   SkipLast(count: int): System_Collections_Generic.IAsyncEnumerable_1<T>;
-  SkipWhile(predicate: System.Func_2<T, CLROf<boolean>>): System_Collections_Generic.IAsyncEnumerable_1<T>;
-  SkipWhile(predicate: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<CLROf<boolean>>>): System_Collections_Generic.IAsyncEnumerable_1<T>;
-  SkipWhile(predicate: System.Func_4<T, CLROf<int>, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<CLROf<boolean>>>): System_Collections_Generic.IAsyncEnumerable_1<T>;
-  SumAsync(cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<CLROf<int>>;
-  SumAsync(cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<CLROf<long>>;
-  SumAsync(cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<CLROf<float>>;
-  SumAsync(cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<CLROf<double>>;
-  SumAsync(cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<CLROf<decimal>>;
-  SumAsync(cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<System.Nullable_1<CLROf<int>>>;
-  SumAsync(cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<System.Nullable_1<CLROf<long>>>;
-  SumAsync(cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<System.Nullable_1<CLROf<float>>>;
-  SumAsync(cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<System.Nullable_1<CLROf<double>>>;
-  SumAsync(cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<System.Nullable_1<CLROf<decimal>>>;
+  SkipWhile(predicate: System.Func_2<T, System_Internal.Boolean>): System_Collections_Generic.IAsyncEnumerable_1<T>;
+  SkipWhile(predicate: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<System_Internal.Boolean>>): System_Collections_Generic.IAsyncEnumerable_1<T>;
+  SkipWhile(predicate: System.Func_4<T, System_Internal.Int32, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<System_Internal.Boolean>>): System_Collections_Generic.IAsyncEnumerable_1<T>;
+  SumAsync(cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<System_Internal.Int32>;
+  SumAsync(cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<System_Internal.Int64>;
+  SumAsync(cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<System_Internal.Single>;
+  SumAsync(cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<System_Internal.Double>;
+  SumAsync(cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<System_Internal.Decimal>;
+  SumAsync(cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<System.Nullable_1<System_Internal.Int32>>;
+  SumAsync(cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<System.Nullable_1<System_Internal.Int64>>;
+  SumAsync(cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<System.Nullable_1<System_Internal.Single>>;
+  SumAsync(cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<System.Nullable_1<System_Internal.Double>>;
+  SumAsync(cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<System.Nullable_1<System_Internal.Decimal>>;
   Take(count: int): System_Collections_Generic.IAsyncEnumerable_1<T>;
   Take(range: System.Range): System_Collections_Generic.IAsyncEnumerable_1<T>;
   TakeLast(count: int): System_Collections_Generic.IAsyncEnumerable_1<T>;
-  TakeWhile(predicate: System.Func_2<T, CLROf<boolean>>): System_Collections_Generic.IAsyncEnumerable_1<T>;
-  TakeWhile(predicate: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<CLROf<boolean>>>): System_Collections_Generic.IAsyncEnumerable_1<T>;
-  TakeWhile(predicate: System.Func_4<T, CLROf<int>, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<CLROf<boolean>>>): System_Collections_Generic.IAsyncEnumerable_1<T>;
+  TakeWhile(predicate: System.Func_2<T, System_Internal.Boolean>): System_Collections_Generic.IAsyncEnumerable_1<T>;
+  TakeWhile(predicate: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<System_Internal.Boolean>>): System_Collections_Generic.IAsyncEnumerable_1<T>;
+  TakeWhile(predicate: System.Func_4<T, System_Internal.Int32, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<System_Internal.Boolean>>): System_Collections_Generic.IAsyncEnumerable_1<T>;
   ToArrayAsync(cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<T[]>;
   ToDictionaryAsync<TKey, TValue>(comparer: System_Collections_Generic.IEqualityComparer_1<TKey>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<System_Collections_Generic.Dictionary_2<TKey, TValue>>;
   ToDictionaryAsync<TKey>(keySelector: System.Func_2<T, TKey>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<System_Collections_Generic.Dictionary_2<TKey, T>>;
@@ -1134,9 +1134,9 @@ export interface __Ext_IAsyncEnumerable_1<T> {
   Union(second: System_Collections_Generic.IAsyncEnumerable_1<T>, comparer: System_Collections_Generic.IEqualityComparer_1<T>): System_Collections_Generic.IAsyncEnumerable_1<T>;
   UnionBy<TKey>(second: System_Collections_Generic.IAsyncEnumerable_1<T>, keySelector: System.Func_2<T, TKey>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.IAsyncEnumerable_1<T>;
   UnionBy<TKey>(second: System_Collections_Generic.IAsyncEnumerable_1<T>, keySelector: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TKey>>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.IAsyncEnumerable_1<T>;
-  Where(predicate: System.Func_2<T, CLROf<boolean>>): System_Collections_Generic.IAsyncEnumerable_1<T>;
-  Where(predicate: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<CLROf<boolean>>>): System_Collections_Generic.IAsyncEnumerable_1<T>;
-  Where(predicate: System.Func_4<T, CLROf<int>, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<CLROf<boolean>>>): System_Collections_Generic.IAsyncEnumerable_1<T>;
+  Where(predicate: System.Func_2<T, System_Internal.Boolean>): System_Collections_Generic.IAsyncEnumerable_1<T>;
+  Where(predicate: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<System_Internal.Boolean>>): System_Collections_Generic.IAsyncEnumerable_1<T>;
+  Where(predicate: System.Func_4<T, System_Internal.Int32, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<System_Internal.Boolean>>): System_Collections_Generic.IAsyncEnumerable_1<T>;
   Zip<TSecond, TResult>(second: System_Collections_Generic.IAsyncEnumerable_1<TSecond>, resultSelector: System.Func_3<T, TSecond, TResult>): System_Collections_Generic.IAsyncEnumerable_1<TResult>;
   Zip<TSecond, TResult>(second: System_Collections_Generic.IAsyncEnumerable_1<TSecond>, resultSelector: System.Func_4<T, TSecond, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TResult>>): System_Collections_Generic.IAsyncEnumerable_1<TResult>;
   Zip<TSecond>(second: System_Collections_Generic.IAsyncEnumerable_1<TSecond>): System_Collections_Generic.IAsyncEnumerable_1<System.ValueTuple_2<T, TSecond>>;
@@ -1166,10 +1166,10 @@ export interface __Ext_ParallelQuery_1<TSource> {
   WithExecutionMode(executionMode: System_Linq.ParallelExecutionMode): System_Linq.ParallelQuery_1<TSource>;
   WithMergeOptions(mergeOptions: System_Linq.ParallelMergeOptions): System_Linq.ParallelQuery_1<TSource>;
   ForAll(action: System.Action_1<TSource>): void;
-  Where(predicate: System.Func_2<TSource, CLROf<boolean>>): System_Linq.ParallelQuery_1<TSource>;
-  Where(predicate: System.Func_3<TSource, CLROf<int>, CLROf<boolean>>): System_Linq.ParallelQuery_1<TSource>;
+  Where(predicate: System.Func_2<TSource, System_Internal.Boolean>): System_Linq.ParallelQuery_1<TSource>;
+  Where(predicate: System.Func_3<TSource, System_Internal.Int32, System_Internal.Boolean>): System_Linq.ParallelQuery_1<TSource>;
   Select<TResult>(selector: System.Func_2<TSource, TResult>): System_Linq.ParallelQuery_1<TResult>;
-  Select<TResult>(selector: System.Func_3<TSource, CLROf<int>, TResult>): System_Linq.ParallelQuery_1<TResult>;
+  Select<TResult>(selector: System.Func_3<TSource, System_Internal.Int32, TResult>): System_Linq.ParallelQuery_1<TResult>;
   Zip<TSecond, TResult>(second: System_Linq.ParallelQuery_1<TSecond>, resultSelector: System.Func_3<TSource, TSecond, TResult>): System_Linq.ParallelQuery_1<TResult>;
   Zip<TSecond, TResult>(second: System_Collections_Generic.IEnumerable_1<TSecond>, resultSelector: System.Func_3<TSource, TSecond, TResult>): System_Linq.ParallelQuery_1<TResult>;
   Join<TInner, TKey, TResult>(inner: System_Linq.ParallelQuery_1<TInner>, outerKeySelector: System.Func_2<TSource, TKey>, innerKeySelector: System.Func_2<TInner, TKey>, resultSelector: System.Func_3<TSource, TInner, TResult>): System_Linq.ParallelQuery_1<TResult>;
@@ -1181,9 +1181,9 @@ export interface __Ext_ParallelQuery_1<TSource> {
   GroupJoin<TInner, TKey, TResult>(inner: System_Linq.ParallelQuery_1<TInner>, outerKeySelector: System.Func_2<TSource, TKey>, innerKeySelector: System.Func_2<TInner, TKey>, resultSelector: System.Func_3<TSource, System_Collections_Generic.IEnumerable_1<TInner>, TResult>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Linq.ParallelQuery_1<TResult>;
   GroupJoin<TInner, TKey, TResult>(inner: System_Collections_Generic.IEnumerable_1<TInner>, outerKeySelector: System.Func_2<TSource, TKey>, innerKeySelector: System.Func_2<TInner, TKey>, resultSelector: System.Func_3<TSource, System_Collections_Generic.IEnumerable_1<TInner>, TResult>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Linq.ParallelQuery_1<TResult>;
   SelectMany<TResult>(selector: System.Func_2<TSource, System_Collections_Generic.IEnumerable_1<TResult>>): System_Linq.ParallelQuery_1<TResult>;
-  SelectMany<TResult>(selector: System.Func_3<TSource, CLROf<int>, System_Collections_Generic.IEnumerable_1<TResult>>): System_Linq.ParallelQuery_1<TResult>;
+  SelectMany<TResult>(selector: System.Func_3<TSource, System_Internal.Int32, System_Collections_Generic.IEnumerable_1<TResult>>): System_Linq.ParallelQuery_1<TResult>;
   SelectMany<TCollection, TResult>(collectionSelector: System.Func_2<TSource, System_Collections_Generic.IEnumerable_1<TCollection>>, resultSelector: System.Func_3<TSource, TCollection, TResult>): System_Linq.ParallelQuery_1<TResult>;
-  SelectMany<TCollection, TResult>(collectionSelector: System.Func_3<TSource, CLROf<int>, System_Collections_Generic.IEnumerable_1<TCollection>>, resultSelector: System.Func_3<TSource, TCollection, TResult>): System_Linq.ParallelQuery_1<TResult>;
+  SelectMany<TCollection, TResult>(collectionSelector: System.Func_3<TSource, System_Internal.Int32, System_Collections_Generic.IEnumerable_1<TCollection>>, resultSelector: System.Func_3<TSource, TCollection, TResult>): System_Linq.ParallelQuery_1<TResult>;
   OrderBy<TKey>(keySelector: System.Func_2<TSource, TKey>): System_Linq.OrderedParallelQuery_1<TSource>;
   OrderBy<TKey>(keySelector: System.Func_2<TSource, TKey>, comparer: System_Collections_Generic.IComparer_1<TKey>): System_Linq.OrderedParallelQuery_1<TSource>;
   OrderByDescending<TKey>(keySelector: System.Func_2<TSource, TKey>): System_Linq.OrderedParallelQuery_1<TSource>;
@@ -1202,100 +1202,100 @@ export interface __Ext_ParallelQuery_1<TSource> {
   Aggregate<TAccumulate, TResult>(seed: TAccumulate, updateAccumulatorFunc: System.Func_3<TAccumulate, TSource, TAccumulate>, combineAccumulatorsFunc: System.Func_3<TAccumulate, TAccumulate, TAccumulate>, resultSelector: System.Func_2<TAccumulate, TResult>): TResult;
   Aggregate<TAccumulate, TResult>(seedFactory: System.Func_1<TAccumulate>, updateAccumulatorFunc: System.Func_3<TAccumulate, TSource, TAccumulate>, combineAccumulatorsFunc: System.Func_3<TAccumulate, TAccumulate, TAccumulate>, resultSelector: System.Func_2<TAccumulate, TResult>): TResult;
   Count(): int;
-  Count(predicate: System.Func_2<TSource, CLROf<boolean>>): int;
+  Count(predicate: System.Func_2<TSource, System_Internal.Boolean>): int;
   LongCount(): long;
-  LongCount(predicate: System.Func_2<TSource, CLROf<boolean>>): long;
+  LongCount(predicate: System.Func_2<TSource, System_Internal.Boolean>): long;
   Sum(): int;
-  Sum(): System.Nullable_1<CLROf<int>>;
+  Sum(): System.Nullable_1<System_Internal.Int32>;
   Sum(): long;
-  Sum(): System.Nullable_1<CLROf<long>>;
+  Sum(): System.Nullable_1<System_Internal.Int64>;
   Sum(): float;
-  Sum(): System.Nullable_1<CLROf<float>>;
+  Sum(): System.Nullable_1<System_Internal.Single>;
   Sum(): double;
-  Sum(): System.Nullable_1<CLROf<double>>;
+  Sum(): System.Nullable_1<System_Internal.Double>;
   Sum(): decimal;
-  Sum(): System.Nullable_1<CLROf<decimal>>;
-  Sum(selector: System.Func_2<TSource, CLROf<int>>): int;
-  Sum(selector: System.Func_2<TSource, System.Nullable_1<CLROf<int>>>): System.Nullable_1<CLROf<int>>;
-  Sum(selector: System.Func_2<TSource, CLROf<long>>): long;
-  Sum(selector: System.Func_2<TSource, System.Nullable_1<CLROf<long>>>): System.Nullable_1<CLROf<long>>;
-  Sum(selector: System.Func_2<TSource, CLROf<float>>): float;
-  Sum(selector: System.Func_2<TSource, System.Nullable_1<CLROf<float>>>): System.Nullable_1<CLROf<float>>;
-  Sum(selector: System.Func_2<TSource, CLROf<double>>): double;
-  Sum(selector: System.Func_2<TSource, System.Nullable_1<CLROf<double>>>): System.Nullable_1<CLROf<double>>;
-  Sum(selector: System.Func_2<TSource, CLROf<decimal>>): decimal;
-  Sum(selector: System.Func_2<TSource, System.Nullable_1<CLROf<decimal>>>): System.Nullable_1<CLROf<decimal>>;
+  Sum(): System.Nullable_1<System_Internal.Decimal>;
+  Sum(selector: System.Func_2<TSource, System_Internal.Int32>): int;
+  Sum(selector: System.Func_2<TSource, System.Nullable_1<System_Internal.Int32>>): System.Nullable_1<System_Internal.Int32>;
+  Sum(selector: System.Func_2<TSource, System_Internal.Int64>): long;
+  Sum(selector: System.Func_2<TSource, System.Nullable_1<System_Internal.Int64>>): System.Nullable_1<System_Internal.Int64>;
+  Sum(selector: System.Func_2<TSource, System_Internal.Single>): float;
+  Sum(selector: System.Func_2<TSource, System.Nullable_1<System_Internal.Single>>): System.Nullable_1<System_Internal.Single>;
+  Sum(selector: System.Func_2<TSource, System_Internal.Double>): double;
+  Sum(selector: System.Func_2<TSource, System.Nullable_1<System_Internal.Double>>): System.Nullable_1<System_Internal.Double>;
+  Sum(selector: System.Func_2<TSource, System_Internal.Decimal>): decimal;
+  Sum(selector: System.Func_2<TSource, System.Nullable_1<System_Internal.Decimal>>): System.Nullable_1<System_Internal.Decimal>;
   Min(): int;
-  Min(): System.Nullable_1<CLROf<int>>;
+  Min(): System.Nullable_1<System_Internal.Int32>;
   Min(): long;
-  Min(): System.Nullable_1<CLROf<long>>;
+  Min(): System.Nullable_1<System_Internal.Int64>;
   Min(): float;
-  Min(): System.Nullable_1<CLROf<float>>;
+  Min(): System.Nullable_1<System_Internal.Single>;
   Min(): double;
-  Min(): System.Nullable_1<CLROf<double>>;
+  Min(): System.Nullable_1<System_Internal.Double>;
   Min(): decimal;
-  Min(): System.Nullable_1<CLROf<decimal>>;
+  Min(): System.Nullable_1<System_Internal.Decimal>;
   Min(): TSource;
-  Min(selector: System.Func_2<TSource, CLROf<int>>): int;
-  Min(selector: System.Func_2<TSource, System.Nullable_1<CLROf<int>>>): System.Nullable_1<CLROf<int>>;
-  Min(selector: System.Func_2<TSource, CLROf<long>>): long;
-  Min(selector: System.Func_2<TSource, System.Nullable_1<CLROf<long>>>): System.Nullable_1<CLROf<long>>;
-  Min(selector: System.Func_2<TSource, CLROf<float>>): float;
-  Min(selector: System.Func_2<TSource, System.Nullable_1<CLROf<float>>>): System.Nullable_1<CLROf<float>>;
-  Min(selector: System.Func_2<TSource, CLROf<double>>): double;
-  Min(selector: System.Func_2<TSource, System.Nullable_1<CLROf<double>>>): System.Nullable_1<CLROf<double>>;
-  Min(selector: System.Func_2<TSource, CLROf<decimal>>): decimal;
-  Min(selector: System.Func_2<TSource, System.Nullable_1<CLROf<decimal>>>): System.Nullable_1<CLROf<decimal>>;
+  Min(selector: System.Func_2<TSource, System_Internal.Int32>): int;
+  Min(selector: System.Func_2<TSource, System.Nullable_1<System_Internal.Int32>>): System.Nullable_1<System_Internal.Int32>;
+  Min(selector: System.Func_2<TSource, System_Internal.Int64>): long;
+  Min(selector: System.Func_2<TSource, System.Nullable_1<System_Internal.Int64>>): System.Nullable_1<System_Internal.Int64>;
+  Min(selector: System.Func_2<TSource, System_Internal.Single>): float;
+  Min(selector: System.Func_2<TSource, System.Nullable_1<System_Internal.Single>>): System.Nullable_1<System_Internal.Single>;
+  Min(selector: System.Func_2<TSource, System_Internal.Double>): double;
+  Min(selector: System.Func_2<TSource, System.Nullable_1<System_Internal.Double>>): System.Nullable_1<System_Internal.Double>;
+  Min(selector: System.Func_2<TSource, System_Internal.Decimal>): decimal;
+  Min(selector: System.Func_2<TSource, System.Nullable_1<System_Internal.Decimal>>): System.Nullable_1<System_Internal.Decimal>;
   Min<TResult>(selector: System.Func_2<TSource, TResult>): TResult;
   Max(): int;
-  Max(): System.Nullable_1<CLROf<int>>;
+  Max(): System.Nullable_1<System_Internal.Int32>;
   Max(): long;
-  Max(): System.Nullable_1<CLROf<long>>;
+  Max(): System.Nullable_1<System_Internal.Int64>;
   Max(): float;
-  Max(): System.Nullable_1<CLROf<float>>;
+  Max(): System.Nullable_1<System_Internal.Single>;
   Max(): double;
-  Max(): System.Nullable_1<CLROf<double>>;
+  Max(): System.Nullable_1<System_Internal.Double>;
   Max(): decimal;
-  Max(): System.Nullable_1<CLROf<decimal>>;
+  Max(): System.Nullable_1<System_Internal.Decimal>;
   Max(): TSource;
-  Max(selector: System.Func_2<TSource, CLROf<int>>): int;
-  Max(selector: System.Func_2<TSource, System.Nullable_1<CLROf<int>>>): System.Nullable_1<CLROf<int>>;
-  Max(selector: System.Func_2<TSource, CLROf<long>>): long;
-  Max(selector: System.Func_2<TSource, System.Nullable_1<CLROf<long>>>): System.Nullable_1<CLROf<long>>;
-  Max(selector: System.Func_2<TSource, CLROf<float>>): float;
-  Max(selector: System.Func_2<TSource, System.Nullable_1<CLROf<float>>>): System.Nullable_1<CLROf<float>>;
-  Max(selector: System.Func_2<TSource, CLROf<double>>): double;
-  Max(selector: System.Func_2<TSource, System.Nullable_1<CLROf<double>>>): System.Nullable_1<CLROf<double>>;
-  Max(selector: System.Func_2<TSource, CLROf<decimal>>): decimal;
-  Max(selector: System.Func_2<TSource, System.Nullable_1<CLROf<decimal>>>): System.Nullable_1<CLROf<decimal>>;
+  Max(selector: System.Func_2<TSource, System_Internal.Int32>): int;
+  Max(selector: System.Func_2<TSource, System.Nullable_1<System_Internal.Int32>>): System.Nullable_1<System_Internal.Int32>;
+  Max(selector: System.Func_2<TSource, System_Internal.Int64>): long;
+  Max(selector: System.Func_2<TSource, System.Nullable_1<System_Internal.Int64>>): System.Nullable_1<System_Internal.Int64>;
+  Max(selector: System.Func_2<TSource, System_Internal.Single>): float;
+  Max(selector: System.Func_2<TSource, System.Nullable_1<System_Internal.Single>>): System.Nullable_1<System_Internal.Single>;
+  Max(selector: System.Func_2<TSource, System_Internal.Double>): double;
+  Max(selector: System.Func_2<TSource, System.Nullable_1<System_Internal.Double>>): System.Nullable_1<System_Internal.Double>;
+  Max(selector: System.Func_2<TSource, System_Internal.Decimal>): decimal;
+  Max(selector: System.Func_2<TSource, System.Nullable_1<System_Internal.Decimal>>): System.Nullable_1<System_Internal.Decimal>;
   Max<TResult>(selector: System.Func_2<TSource, TResult>): TResult;
   Average(): double;
-  Average(): System.Nullable_1<CLROf<double>>;
+  Average(): System.Nullable_1<System_Internal.Double>;
   Average(): double;
-  Average(): System.Nullable_1<CLROf<double>>;
+  Average(): System.Nullable_1<System_Internal.Double>;
   Average(): float;
-  Average(): System.Nullable_1<CLROf<float>>;
+  Average(): System.Nullable_1<System_Internal.Single>;
   Average(): double;
-  Average(): System.Nullable_1<CLROf<double>>;
+  Average(): System.Nullable_1<System_Internal.Double>;
   Average(): decimal;
-  Average(): System.Nullable_1<CLROf<decimal>>;
-  Average(selector: System.Func_2<TSource, CLROf<int>>): double;
-  Average(selector: System.Func_2<TSource, System.Nullable_1<CLROf<int>>>): System.Nullable_1<CLROf<double>>;
-  Average(selector: System.Func_2<TSource, CLROf<float>>): float;
-  Average(selector: System.Func_2<TSource, System.Nullable_1<CLROf<float>>>): System.Nullable_1<CLROf<float>>;
-  Average(selector: System.Func_2<TSource, CLROf<decimal>>): decimal;
-  Average(selector: System.Func_2<TSource, System.Nullable_1<CLROf<decimal>>>): System.Nullable_1<CLROf<decimal>>;
-  Any(predicate: System.Func_2<TSource, CLROf<boolean>>): boolean;
+  Average(): System.Nullable_1<System_Internal.Decimal>;
+  Average(selector: System.Func_2<TSource, System_Internal.Int32>): double;
+  Average(selector: System.Func_2<TSource, System.Nullable_1<System_Internal.Int32>>): System.Nullable_1<System_Internal.Double>;
+  Average(selector: System.Func_2<TSource, System_Internal.Single>): float;
+  Average(selector: System.Func_2<TSource, System.Nullable_1<System_Internal.Single>>): System.Nullable_1<System_Internal.Single>;
+  Average(selector: System.Func_2<TSource, System_Internal.Decimal>): decimal;
+  Average(selector: System.Func_2<TSource, System.Nullable_1<System_Internal.Decimal>>): System.Nullable_1<System_Internal.Decimal>;
+  Any(predicate: System.Func_2<TSource, System_Internal.Boolean>): boolean;
   Any(): boolean;
-  All(predicate: System.Func_2<TSource, CLROf<boolean>>): boolean;
+  All(predicate: System.Func_2<TSource, System_Internal.Boolean>): boolean;
   Contains(value: TSource): boolean;
   Contains(value: TSource, comparer: System_Collections_Generic.IEqualityComparer_1<TSource>): boolean;
   Take(count: int): System_Linq.ParallelQuery_1<TSource>;
-  TakeWhile(predicate: System.Func_2<TSource, CLROf<boolean>>): System_Linq.ParallelQuery_1<TSource>;
-  TakeWhile(predicate: System.Func_3<TSource, CLROf<int>, CLROf<boolean>>): System_Linq.ParallelQuery_1<TSource>;
+  TakeWhile(predicate: System.Func_2<TSource, System_Internal.Boolean>): System_Linq.ParallelQuery_1<TSource>;
+  TakeWhile(predicate: System.Func_3<TSource, System_Internal.Int32, System_Internal.Boolean>): System_Linq.ParallelQuery_1<TSource>;
   Skip(count: int): System_Linq.ParallelQuery_1<TSource>;
-  SkipWhile(predicate: System.Func_2<TSource, CLROf<boolean>>): System_Linq.ParallelQuery_1<TSource>;
-  SkipWhile(predicate: System.Func_3<TSource, CLROf<int>, CLROf<boolean>>): System_Linq.ParallelQuery_1<TSource>;
+  SkipWhile(predicate: System.Func_2<TSource, System_Internal.Boolean>): System_Linq.ParallelQuery_1<TSource>;
+  SkipWhile(predicate: System.Func_3<TSource, System_Internal.Int32, System_Internal.Boolean>): System_Linq.ParallelQuery_1<TSource>;
   Concat(second: System_Linq.ParallelQuery_1<TSource>): System_Linq.ParallelQuery_1<TSource>;
   Concat(second: System_Collections_Generic.IEnumerable_1<TSource>): System_Linq.ParallelQuery_1<TSource>;
   SequenceEqual(second: System_Linq.ParallelQuery_1<TSource>): boolean;
@@ -1329,17 +1329,17 @@ export interface __Ext_ParallelQuery_1<TSource> {
   ToLookup<TKey, TElement>(keySelector: System.Func_2<TSource, TKey>, elementSelector: System.Func_2<TSource, TElement>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Linq.ILookup_2<TKey, TElement>;
   Reverse(): System_Linq.ParallelQuery_1<TSource>;
   First(): TSource;
-  First(predicate: System.Func_2<TSource, CLROf<boolean>>): TSource;
+  First(predicate: System.Func_2<TSource, System_Internal.Boolean>): TSource;
   FirstOrDefault(): TSource;
-  FirstOrDefault(predicate: System.Func_2<TSource, CLROf<boolean>>): TSource;
+  FirstOrDefault(predicate: System.Func_2<TSource, System_Internal.Boolean>): TSource;
   Last(): TSource;
-  Last(predicate: System.Func_2<TSource, CLROf<boolean>>): TSource;
+  Last(predicate: System.Func_2<TSource, System_Internal.Boolean>): TSource;
   LastOrDefault(): TSource;
-  LastOrDefault(predicate: System.Func_2<TSource, CLROf<boolean>>): TSource;
+  LastOrDefault(predicate: System.Func_2<TSource, System_Internal.Boolean>): TSource;
   Single(): TSource;
-  Single(predicate: System.Func_2<TSource, CLROf<boolean>>): TSource;
+  Single(predicate: System.Func_2<TSource, System_Internal.Boolean>): TSource;
   SingleOrDefault(): TSource;
-  SingleOrDefault(predicate: System.Func_2<TSource, CLROf<boolean>>): TSource;
+  SingleOrDefault(predicate: System.Func_2<TSource, System_Internal.Boolean>): TSource;
   DefaultIfEmpty(): System_Linq.ParallelQuery_1<TSource>;
   DefaultIfEmpty(defaultValue: TSource): System_Linq.ParallelQuery_1<TSource>;
   ElementAt(index: int): TSource;
@@ -1360,10 +1360,10 @@ export interface __Ext_OrderedParallelQuery_1<TSource> {
 }
 
 export interface __Ext_IQueryable_1<T> {
-  Where(predicate: System_Linq_Expressions.Expression_1<System.Func_2<T, CLROf<boolean>>>): System_Linq.IQueryable_1<T>;
+  Where(predicate: System_Linq_Expressions.Expression_1<System.Func_2<T, System_Internal.Boolean>>): System_Linq.IQueryable_1<T>;
   Select<TResult>(selector: System_Linq_Expressions.Expression_1<System.Func_2<T, TResult>>): System_Linq.IQueryable_1<TResult>;
   SelectMany<TResult>(selector: System_Linq_Expressions.Expression_1<System.Func_2<T, System_Collections_Generic.IEnumerable_1<TResult>>>): System_Linq.IQueryable_1<TResult>;
-  SelectMany<TCollection, TResult>(collectionSelector: System_Linq_Expressions.Expression_1<System.Func_3<T, CLROf<int>, System_Collections_Generic.IEnumerable_1<TCollection>>>, resultSelector: System_Linq_Expressions.Expression_1<System.Func_3<T, TCollection, TResult>>): System_Linq.IQueryable_1<TResult>;
+  SelectMany<TCollection, TResult>(collectionSelector: System_Linq_Expressions.Expression_1<System.Func_3<T, System_Internal.Int32, System_Collections_Generic.IEnumerable_1<TCollection>>>, resultSelector: System_Linq_Expressions.Expression_1<System.Func_3<T, TCollection, TResult>>): System_Linq.IQueryable_1<TResult>;
   Join<TInner, TKey, TResult>(inner: System_Collections_Generic.IEnumerable_1<TInner>, outerKeySelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TKey>>, innerKeySelector: System_Linq_Expressions.Expression_1<System.Func_2<TInner, TKey>>, resultSelector: System_Linq_Expressions.Expression_1<System.Func_3<T, TInner, TResult>>): System_Linq.IQueryable_1<TResult>;
   Join<TInner, TKey, TResult>(inner: System_Collections_Generic.IEnumerable_1<TInner>, outerKeySelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TKey>>, innerKeySelector: System_Linq_Expressions.Expression_1<System.Func_2<TInner, TKey>>, resultSelector: System_Linq_Expressions.Expression_1<System.Func_3<T, TInner, TResult>>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Linq.IQueryable_1<TResult>;
   GroupJoin<TInner, TKey, TResult>(inner: System_Collections_Generic.IEnumerable_1<TInner>, outerKeySelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TKey>>, innerKeySelector: System_Linq_Expressions.Expression_1<System.Func_2<TInner, TKey>>, resultSelector: System_Linq_Expressions.Expression_1<System.Func_3<T, System_Collections_Generic.IEnumerable_1<TInner>, TResult>>): System_Linq.IQueryable_1<TResult>;
@@ -1382,9 +1382,9 @@ export interface __Ext_IQueryable_1<T> {
   RightJoin<TInner, TKey, TResult>(inner: System_Collections_Generic.IEnumerable_1<TInner>, outerKeySelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TKey>>, innerKeySelector: System_Linq_Expressions.Expression_1<System.Func_2<TInner, TKey>>, resultSelector: System_Linq_Expressions.Expression_1<System.Func_3<T, TInner, TResult>>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Linq.IQueryable_1<TResult>;
   Take(count: int): System_Linq.IQueryable_1<T>;
   Take(range: System.Range): System_Linq.IQueryable_1<T>;
-  TakeWhile(predicate: System_Linq_Expressions.Expression_1<System.Func_2<T, CLROf<boolean>>>): System_Linq.IQueryable_1<T>;
+  TakeWhile(predicate: System_Linq_Expressions.Expression_1<System.Func_2<T, System_Internal.Boolean>>): System_Linq.IQueryable_1<T>;
   Skip(count: int): System_Linq.IQueryable_1<T>;
-  SkipWhile(predicate: System_Linq_Expressions.Expression_1<System.Func_2<T, CLROf<boolean>>>): System_Linq.IQueryable_1<T>;
+  SkipWhile(predicate: System_Linq_Expressions.Expression_1<System.Func_2<T, System_Internal.Boolean>>): System_Linq.IQueryable_1<T>;
   GroupBy<TKey>(keySelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TKey>>): System_Linq.IQueryable_1<System_Linq.IGrouping_2<TKey, T>>;
   GroupBy<TKey, TElement>(keySelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TKey>>, elementSelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TElement>>): System_Linq.IQueryable_1<System_Linq.IGrouping_2<TKey, TElement>>;
   GroupBy<TKey>(keySelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TKey>>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Linq.IQueryable_1<System_Linq.IGrouping_2<TKey, T>>;
@@ -1404,7 +1404,7 @@ export interface __Ext_IQueryable_1<T> {
   Union(source2: System_Collections_Generic.IEnumerable_1<T>, comparer: System_Collections_Generic.IEqualityComparer_1<T>): System_Linq.IQueryable_1<T>;
   UnionBy<TKey>(source2: System_Collections_Generic.IEnumerable_1<T>, keySelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TKey>>): System_Linq.IQueryable_1<T>;
   UnionBy<TKey>(source2: System_Collections_Generic.IEnumerable_1<T>, keySelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TKey>>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Linq.IQueryable_1<T>;
-  Index(): System_Linq.IQueryable_1<System.ValueTuple_2<CLROf<int>, T>>;
+  Index(): System_Linq.IQueryable_1<System.ValueTuple_2<System_Internal.Int32, T>>;
   Intersect(source2: System_Collections_Generic.IEnumerable_1<T>): System_Linq.IQueryable_1<T>;
   Intersect(source2: System_Collections_Generic.IEnumerable_1<T>, comparer: System_Collections_Generic.IEqualityComparer_1<T>): System_Linq.IQueryable_1<T>;
   IntersectBy<TKey>(source2: System_Collections_Generic.IEnumerable_1<TKey>, keySelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TKey>>): System_Linq.IQueryable_1<T>;
@@ -1414,23 +1414,23 @@ export interface __Ext_IQueryable_1<T> {
   ExceptBy<TKey>(source2: System_Collections_Generic.IEnumerable_1<TKey>, keySelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TKey>>): System_Linq.IQueryable_1<T>;
   ExceptBy<TKey>(source2: System_Collections_Generic.IEnumerable_1<TKey>, keySelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TKey>>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Linq.IQueryable_1<T>;
   First(): T;
-  First(predicate: System_Linq_Expressions.Expression_1<System.Func_2<T, CLROf<boolean>>>): T;
+  First(predicate: System_Linq_Expressions.Expression_1<System.Func_2<T, System_Internal.Boolean>>): T;
   FirstOrDefault(): T;
   FirstOrDefault(defaultValue: T): T;
-  FirstOrDefault(predicate: System_Linq_Expressions.Expression_1<System.Func_2<T, CLROf<boolean>>>): T;
-  FirstOrDefault(predicate: System_Linq_Expressions.Expression_1<System.Func_2<T, CLROf<boolean>>>, defaultValue: T): T;
+  FirstOrDefault(predicate: System_Linq_Expressions.Expression_1<System.Func_2<T, System_Internal.Boolean>>): T;
+  FirstOrDefault(predicate: System_Linq_Expressions.Expression_1<System.Func_2<T, System_Internal.Boolean>>, defaultValue: T): T;
   Last(): T;
-  Last(predicate: System_Linq_Expressions.Expression_1<System.Func_2<T, CLROf<boolean>>>): T;
+  Last(predicate: System_Linq_Expressions.Expression_1<System.Func_2<T, System_Internal.Boolean>>): T;
   LastOrDefault(): T;
   LastOrDefault(defaultValue: T): T;
-  LastOrDefault(predicate: System_Linq_Expressions.Expression_1<System.Func_2<T, CLROf<boolean>>>): T;
-  LastOrDefault(predicate: System_Linq_Expressions.Expression_1<System.Func_2<T, CLROf<boolean>>>, defaultValue: T): T;
+  LastOrDefault(predicate: System_Linq_Expressions.Expression_1<System.Func_2<T, System_Internal.Boolean>>): T;
+  LastOrDefault(predicate: System_Linq_Expressions.Expression_1<System.Func_2<T, System_Internal.Boolean>>, defaultValue: T): T;
   Single(): T;
-  Single(predicate: System_Linq_Expressions.Expression_1<System.Func_2<T, CLROf<boolean>>>): T;
+  Single(predicate: System_Linq_Expressions.Expression_1<System.Func_2<T, System_Internal.Boolean>>): T;
   SingleOrDefault(): T;
   SingleOrDefault(defaultValue: T): T;
-  SingleOrDefault(predicate: System_Linq_Expressions.Expression_1<System.Func_2<T, CLROf<boolean>>>): T;
-  SingleOrDefault(predicate: System_Linq_Expressions.Expression_1<System.Func_2<T, CLROf<boolean>>>, defaultValue: T): T;
+  SingleOrDefault(predicate: System_Linq_Expressions.Expression_1<System.Func_2<T, System_Internal.Boolean>>): T;
+  SingleOrDefault(predicate: System_Linq_Expressions.Expression_1<System.Func_2<T, System_Internal.Boolean>>, defaultValue: T): T;
   ElementAt(index: int): T;
   ElementAt(index: System.Index): T;
   ElementAtOrDefault(index: int): T;
@@ -1444,13 +1444,13 @@ export interface __Ext_IQueryable_1<T> {
   SequenceEqual(source2: System_Collections_Generic.IEnumerable_1<T>, comparer: System_Collections_Generic.IEqualityComparer_1<T>): boolean;
   Shuffle(): System_Linq.IQueryable_1<T>;
   Any(): boolean;
-  Any(predicate: System_Linq_Expressions.Expression_1<System.Func_2<T, CLROf<boolean>>>): boolean;
-  All(predicate: System_Linq_Expressions.Expression_1<System.Func_2<T, CLROf<boolean>>>): boolean;
+  Any(predicate: System_Linq_Expressions.Expression_1<System.Func_2<T, System_Internal.Boolean>>): boolean;
+  All(predicate: System_Linq_Expressions.Expression_1<System.Func_2<T, System_Internal.Boolean>>): boolean;
   Count(): int;
-  Count(predicate: System_Linq_Expressions.Expression_1<System.Func_2<T, CLROf<boolean>>>): int;
-  CountBy<TKey>(keySelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TKey>>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Linq.IQueryable_1<System_Collections_Generic.KeyValuePair_2<TKey, CLROf<int>>>;
+  Count(predicate: System_Linq_Expressions.Expression_1<System.Func_2<T, System_Internal.Boolean>>): int;
+  CountBy<TKey>(keySelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TKey>>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Linq.IQueryable_1<System_Collections_Generic.KeyValuePair_2<TKey, System_Internal.Int32>>;
   LongCount(): long;
-  LongCount(predicate: System_Linq_Expressions.Expression_1<System.Func_2<T, CLROf<boolean>>>): long;
+  LongCount(predicate: System_Linq_Expressions.Expression_1<System.Func_2<T, System_Internal.Boolean>>): long;
   Min(): T;
   Min(comparer: System_Collections_Generic.IComparer_1<T>): T;
   Min<TResult>(selector: System_Linq_Expressions.Expression_1<System.Func_2<T, TResult>>): TResult;
@@ -1462,41 +1462,41 @@ export interface __Ext_IQueryable_1<T> {
   MaxBy<TKey>(keySelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TKey>>): T;
   MaxBy<TKey>(keySelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TKey>>, comparer: System_Collections_Generic.IComparer_1<T>): T;
   Sum(): int;
-  Sum(): System.Nullable_1<CLROf<int>>;
+  Sum(): System.Nullable_1<System_Internal.Int32>;
   Sum(): long;
-  Sum(): System.Nullable_1<CLROf<long>>;
+  Sum(): System.Nullable_1<System_Internal.Int64>;
   Sum(): float;
-  Sum(): System.Nullable_1<CLROf<float>>;
+  Sum(): System.Nullable_1<System_Internal.Single>;
   Sum(): double;
-  Sum(): System.Nullable_1<CLROf<double>>;
+  Sum(): System.Nullable_1<System_Internal.Double>;
   Sum(): decimal;
-  Sum(): System.Nullable_1<CLROf<decimal>>;
-  Sum(selector: System_Linq_Expressions.Expression_1<System.Func_2<T, CLROf<int>>>): int;
-  Sum(selector: System_Linq_Expressions.Expression_1<System.Func_2<T, System.Nullable_1<CLROf<int>>>>): System.Nullable_1<CLROf<int>>;
-  Sum(selector: System_Linq_Expressions.Expression_1<System.Func_2<T, CLROf<long>>>): long;
-  Sum(selector: System_Linq_Expressions.Expression_1<System.Func_2<T, System.Nullable_1<CLROf<long>>>>): System.Nullable_1<CLROf<long>>;
-  Sum(selector: System_Linq_Expressions.Expression_1<System.Func_2<T, CLROf<float>>>): float;
-  Sum(selector: System_Linq_Expressions.Expression_1<System.Func_2<T, System.Nullable_1<CLROf<float>>>>): System.Nullable_1<CLROf<float>>;
-  Sum(selector: System_Linq_Expressions.Expression_1<System.Func_2<T, CLROf<double>>>): double;
-  Sum(selector: System_Linq_Expressions.Expression_1<System.Func_2<T, System.Nullable_1<CLROf<double>>>>): System.Nullable_1<CLROf<double>>;
-  Sum(selector: System_Linq_Expressions.Expression_1<System.Func_2<T, CLROf<decimal>>>): decimal;
-  Sum(selector: System_Linq_Expressions.Expression_1<System.Func_2<T, System.Nullable_1<CLROf<decimal>>>>): System.Nullable_1<CLROf<decimal>>;
+  Sum(): System.Nullable_1<System_Internal.Decimal>;
+  Sum(selector: System_Linq_Expressions.Expression_1<System.Func_2<T, System_Internal.Int32>>): int;
+  Sum(selector: System_Linq_Expressions.Expression_1<System.Func_2<T, System.Nullable_1<System_Internal.Int32>>>): System.Nullable_1<System_Internal.Int32>;
+  Sum(selector: System_Linq_Expressions.Expression_1<System.Func_2<T, System_Internal.Int64>>): long;
+  Sum(selector: System_Linq_Expressions.Expression_1<System.Func_2<T, System.Nullable_1<System_Internal.Int64>>>): System.Nullable_1<System_Internal.Int64>;
+  Sum(selector: System_Linq_Expressions.Expression_1<System.Func_2<T, System_Internal.Single>>): float;
+  Sum(selector: System_Linq_Expressions.Expression_1<System.Func_2<T, System.Nullable_1<System_Internal.Single>>>): System.Nullable_1<System_Internal.Single>;
+  Sum(selector: System_Linq_Expressions.Expression_1<System.Func_2<T, System_Internal.Double>>): double;
+  Sum(selector: System_Linq_Expressions.Expression_1<System.Func_2<T, System.Nullable_1<System_Internal.Double>>>): System.Nullable_1<System_Internal.Double>;
+  Sum(selector: System_Linq_Expressions.Expression_1<System.Func_2<T, System_Internal.Decimal>>): decimal;
+  Sum(selector: System_Linq_Expressions.Expression_1<System.Func_2<T, System.Nullable_1<System_Internal.Decimal>>>): System.Nullable_1<System_Internal.Decimal>;
   Average(): double;
-  Average(): System.Nullable_1<CLROf<double>>;
+  Average(): System.Nullable_1<System_Internal.Double>;
   Average(): double;
-  Average(): System.Nullable_1<CLROf<double>>;
+  Average(): System.Nullable_1<System_Internal.Double>;
   Average(): float;
-  Average(): System.Nullable_1<CLROf<float>>;
+  Average(): System.Nullable_1<System_Internal.Single>;
   Average(): double;
-  Average(): System.Nullable_1<CLROf<double>>;
+  Average(): System.Nullable_1<System_Internal.Double>;
   Average(): decimal;
-  Average(): System.Nullable_1<CLROf<decimal>>;
-  Average(selector: System_Linq_Expressions.Expression_1<System.Func_2<T, CLROf<int>>>): double;
-  Average(selector: System_Linq_Expressions.Expression_1<System.Func_2<T, System.Nullable_1<CLROf<int>>>>): System.Nullable_1<CLROf<double>>;
-  Average(selector: System_Linq_Expressions.Expression_1<System.Func_2<T, CLROf<float>>>): float;
-  Average(selector: System_Linq_Expressions.Expression_1<System.Func_2<T, System.Nullable_1<CLROf<float>>>>): System.Nullable_1<CLROf<float>>;
-  Average(selector: System_Linq_Expressions.Expression_1<System.Func_2<T, CLROf<decimal>>>): decimal;
-  Average(selector: System_Linq_Expressions.Expression_1<System.Func_2<T, System.Nullable_1<CLROf<decimal>>>>): System.Nullable_1<CLROf<decimal>>;
+  Average(): System.Nullable_1<System_Internal.Decimal>;
+  Average(selector: System_Linq_Expressions.Expression_1<System.Func_2<T, System_Internal.Int32>>): double;
+  Average(selector: System_Linq_Expressions.Expression_1<System.Func_2<T, System.Nullable_1<System_Internal.Int32>>>): System.Nullable_1<System_Internal.Double>;
+  Average(selector: System_Linq_Expressions.Expression_1<System.Func_2<T, System_Internal.Single>>): float;
+  Average(selector: System_Linq_Expressions.Expression_1<System.Func_2<T, System.Nullable_1<System_Internal.Single>>>): System.Nullable_1<System_Internal.Single>;
+  Average(selector: System_Linq_Expressions.Expression_1<System.Func_2<T, System_Internal.Decimal>>): decimal;
+  Average(selector: System_Linq_Expressions.Expression_1<System.Func_2<T, System.Nullable_1<System_Internal.Decimal>>>): System.Nullable_1<System_Internal.Decimal>;
   Aggregate(func: System_Linq_Expressions.Expression_1<System.Func_3<T, T, T>>): T;
   Aggregate<TAccumulate>(seed: TAccumulate, func: System_Linq_Expressions.Expression_1<System.Func_3<TAccumulate, T, TAccumulate>>): TAccumulate;
   Aggregate<TAccumulate, TResult>(seed: TAccumulate, func: System_Linq_Expressions.Expression_1<System.Func_3<TAccumulate, T, TAccumulate>>, selector: System_Linq_Expressions.Expression_1<System.Func_2<TAccumulate, TResult>>): TResult;
@@ -1594,25 +1594,25 @@ export interface __Ext_Socket {
   ConnectAsync(addresses: System_Net.IPAddress[], port: int, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask;
   ConnectAsync(host: string, port: int): System_Threading_Tasks.Task;
   ConnectAsync(host: string, port: int, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask;
-  ReceiveAsync(buffer: System.ArraySegment_1<CLROf<byte>>, socketFlags: System_Net_Sockets.SocketFlags): System_Threading_Tasks.Task_1<CLROf<int>>;
-  ReceiveAsync(buffer: System.Memory_1<CLROf<byte>>, socketFlags: System_Net_Sockets.SocketFlags, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<CLROf<int>>;
-  ReceiveAsync(buffers: System_Collections_Generic.IList_1<System.ArraySegment_1<CLROf<byte>>>, socketFlags: System_Net_Sockets.SocketFlags): System_Threading_Tasks.Task_1<CLROf<int>>;
-  ReceiveFromAsync(buffer: System.ArraySegment_1<CLROf<byte>>, socketFlags: System_Net_Sockets.SocketFlags, remoteEndPoint: System_Net.EndPoint): System_Threading_Tasks.Task_1<System_Net_Sockets.SocketReceiveFromResult>;
-  ReceiveMessageFromAsync(buffer: System.ArraySegment_1<CLROf<byte>>, socketFlags: System_Net_Sockets.SocketFlags, remoteEndPoint: System_Net.EndPoint): System_Threading_Tasks.Task_1<System_Net_Sockets.SocketReceiveMessageFromResult>;
-  SendAsync(buffer: System.ArraySegment_1<CLROf<byte>>, socketFlags: System_Net_Sockets.SocketFlags): System_Threading_Tasks.Task_1<CLROf<int>>;
-  SendAsync(buffer: System.ReadOnlyMemory_1<CLROf<byte>>, socketFlags: System_Net_Sockets.SocketFlags, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<CLROf<int>>;
-  SendAsync(buffers: System_Collections_Generic.IList_1<System.ArraySegment_1<CLROf<byte>>>, socketFlags: System_Net_Sockets.SocketFlags): System_Threading_Tasks.Task_1<CLROf<int>>;
-  SendToAsync(buffer: System.ArraySegment_1<CLROf<byte>>, socketFlags: System_Net_Sockets.SocketFlags, remoteEP: System_Net.EndPoint): System_Threading_Tasks.Task_1<CLROf<int>>;
+  ReceiveAsync(buffer: System.ArraySegment_1<System_Internal.Byte>, socketFlags: System_Net_Sockets.SocketFlags): System_Threading_Tasks.Task_1<System_Internal.Int32>;
+  ReceiveAsync(buffer: System.Memory_1<System_Internal.Byte>, socketFlags: System_Net_Sockets.SocketFlags, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<System_Internal.Int32>;
+  ReceiveAsync(buffers: System_Collections_Generic.IList_1<System.ArraySegment_1<System_Internal.Byte>>, socketFlags: System_Net_Sockets.SocketFlags): System_Threading_Tasks.Task_1<System_Internal.Int32>;
+  ReceiveFromAsync(buffer: System.ArraySegment_1<System_Internal.Byte>, socketFlags: System_Net_Sockets.SocketFlags, remoteEndPoint: System_Net.EndPoint): System_Threading_Tasks.Task_1<System_Net_Sockets.SocketReceiveFromResult>;
+  ReceiveMessageFromAsync(buffer: System.ArraySegment_1<System_Internal.Byte>, socketFlags: System_Net_Sockets.SocketFlags, remoteEndPoint: System_Net.EndPoint): System_Threading_Tasks.Task_1<System_Net_Sockets.SocketReceiveMessageFromResult>;
+  SendAsync(buffer: System.ArraySegment_1<System_Internal.Byte>, socketFlags: System_Net_Sockets.SocketFlags): System_Threading_Tasks.Task_1<System_Internal.Int32>;
+  SendAsync(buffer: System.ReadOnlyMemory_1<System_Internal.Byte>, socketFlags: System_Net_Sockets.SocketFlags, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<System_Internal.Int32>;
+  SendAsync(buffers: System_Collections_Generic.IList_1<System.ArraySegment_1<System_Internal.Byte>>, socketFlags: System_Net_Sockets.SocketFlags): System_Threading_Tasks.Task_1<System_Internal.Int32>;
+  SendToAsync(buffer: System.ArraySegment_1<System_Internal.Byte>, socketFlags: System_Net_Sockets.SocketFlags, remoteEP: System_Net.EndPoint): System_Threading_Tasks.Task_1<System_Internal.Int32>;
 }
 
 export interface __Ext_Plane {
   AsVector4(): System_Numerics.Vector4;
-  AsVector128(): System_Runtime_Intrinsics.Vector128_1<CLROf<float>>;
+  AsVector128(): System_Runtime_Intrinsics.Vector128_1<System_Internal.Single>;
 }
 
 export interface __Ext_Quaternion {
   AsVector4(): System_Numerics.Vector4;
-  AsVector128(): System_Runtime_Intrinsics.Vector128_1<CLROf<float>>;
+  AsVector128(): System_Runtime_Intrinsics.Vector128_1<System_Internal.Single>;
 }
 
 export interface __Ext_Vector_1<T> {
@@ -1621,8 +1621,8 @@ export interface __Ext_Vector_1<T> {
   Store(destination: ptr<T>): void;
   StoreAligned(destination: ptr<T>): void;
   StoreAlignedNonTemporal(destination: ptr<T>): void;
-  StoreUnsafe(destination: ref<T>): void;
-  StoreUnsafe(destination: ref<T>, elementOffset: nuint): void;
+  StoreUnsafe(destination: T): void;
+  StoreUnsafe(destination: T, elementOffset: nuint): void;
   ToScalar(): T;
   WithElement(index: int, value: T): System_Numerics.Vector_1<T>;
   AsVector128(): System_Runtime_Intrinsics.Vector128_1<T>;
@@ -1640,12 +1640,12 @@ export interface __Ext_Vector2 {
   Store(destination: ptr<float>): void;
   StoreAligned(destination: ptr<float>): void;
   StoreAlignedNonTemporal(destination: ptr<float>): void;
-  StoreUnsafe(destination: ref<float>): void;
-  StoreUnsafe(destination: ref<float>, elementOffset: nuint): void;
+  StoreUnsafe(destination: float): void;
+  StoreUnsafe(destination: float, elementOffset: nuint): void;
   ToScalar(): float;
   WithElement(index: int, value: float): System_Numerics.Vector2;
-  AsVector128(): System_Runtime_Intrinsics.Vector128_1<CLROf<float>>;
-  AsVector128Unsafe(): System_Runtime_Intrinsics.Vector128_1<CLROf<float>>;
+  AsVector128(): System_Runtime_Intrinsics.Vector128_1<System_Internal.Single>;
+  AsVector128Unsafe(): System_Runtime_Intrinsics.Vector128_1<System_Internal.Single>;
 }
 
 export interface __Ext_Vector3 {
@@ -1657,12 +1657,12 @@ export interface __Ext_Vector3 {
   Store(destination: ptr<float>): void;
   StoreAligned(destination: ptr<float>): void;
   StoreAlignedNonTemporal(destination: ptr<float>): void;
-  StoreUnsafe(destination: ref<float>): void;
-  StoreUnsafe(destination: ref<float>, elementOffset: nuint): void;
+  StoreUnsafe(destination: float): void;
+  StoreUnsafe(destination: float, elementOffset: nuint): void;
   ToScalar(): float;
   WithElement(index: int, value: float): System_Numerics.Vector3;
-  AsVector128(): System_Runtime_Intrinsics.Vector128_1<CLROf<float>>;
-  AsVector128Unsafe(): System_Runtime_Intrinsics.Vector128_1<CLROf<float>>;
+  AsVector128(): System_Runtime_Intrinsics.Vector128_1<System_Internal.Single>;
+  AsVector128Unsafe(): System_Runtime_Intrinsics.Vector128_1<System_Internal.Single>;
 }
 
 export interface __Ext_Vector4 {
@@ -1675,11 +1675,11 @@ export interface __Ext_Vector4 {
   Store(destination: ptr<float>): void;
   StoreAligned(destination: ptr<float>): void;
   StoreAlignedNonTemporal(destination: ptr<float>): void;
-  StoreUnsafe(destination: ref<float>): void;
-  StoreUnsafe(destination: ref<float>, elementOffset: nuint): void;
+  StoreUnsafe(destination: float): void;
+  StoreUnsafe(destination: float, elementOffset: nuint): void;
   ToScalar(): float;
   WithElement(index: int, value: float): System_Numerics.Vector4;
-  AsVector128(): System_Runtime_Intrinsics.Vector128_1<CLROf<float>>;
+  AsVector128(): System_Runtime_Intrinsics.Vector128_1<System_Internal.Single>;
 }
 
 export interface __Ext_Assembly {
@@ -1692,7 +1692,7 @@ export interface __Ext_Assembly {
   GetExportedTypes(): System.Type[];
   GetModules(): System_Reflection.Module[];
   GetTypes(): System.Type[];
-  TryGetRawMetadata(blob: ref<ptr<byte>>, length: ref<int>): boolean;
+  TryGetRawMetadata(blob: ptr<byte>, length: int): boolean;
 }
 
 export interface __Ext_Module {
@@ -1859,18 +1859,18 @@ export interface __Ext_PinnedGCHandle_1<T> {
 
 export interface __Ext_Vector128_1<T> {
   As<TTo>(): System_Runtime_Intrinsics.Vector128_1<TTo>;
-  AsByte(): System_Runtime_Intrinsics.Vector128_1<CLROf<byte>>;
-  AsDouble(): System_Runtime_Intrinsics.Vector128_1<CLROf<double>>;
-  AsInt16(): System_Runtime_Intrinsics.Vector128_1<CLROf<short>>;
-  AsInt32(): System_Runtime_Intrinsics.Vector128_1<CLROf<int>>;
-  AsInt64(): System_Runtime_Intrinsics.Vector128_1<CLROf<long>>;
-  AsNInt(): System_Runtime_Intrinsics.Vector128_1<CLROf<nint>>;
-  AsNUInt(): System_Runtime_Intrinsics.Vector128_1<CLROf<nuint>>;
-  AsSByte(): System_Runtime_Intrinsics.Vector128_1<CLROf<sbyte>>;
-  AsSingle(): System_Runtime_Intrinsics.Vector128_1<CLROf<float>>;
-  AsUInt16(): System_Runtime_Intrinsics.Vector128_1<CLROf<ushort>>;
-  AsUInt32(): System_Runtime_Intrinsics.Vector128_1<CLROf<uint>>;
-  AsUInt64(): System_Runtime_Intrinsics.Vector128_1<CLROf<ulong>>;
+  AsByte(): System_Runtime_Intrinsics.Vector128_1<System_Internal.Byte>;
+  AsDouble(): System_Runtime_Intrinsics.Vector128_1<System_Internal.Double>;
+  AsInt16(): System_Runtime_Intrinsics.Vector128_1<System_Internal.Int16>;
+  AsInt32(): System_Runtime_Intrinsics.Vector128_1<System_Internal.Int32>;
+  AsInt64(): System_Runtime_Intrinsics.Vector128_1<System_Internal.Int64>;
+  AsNInt(): System_Runtime_Intrinsics.Vector128_1<System_Internal.IntPtr>;
+  AsNUInt(): System_Runtime_Intrinsics.Vector128_1<System_Internal.UIntPtr>;
+  AsSByte(): System_Runtime_Intrinsics.Vector128_1<System_Internal.SByte>;
+  AsSingle(): System_Runtime_Intrinsics.Vector128_1<System_Internal.Single>;
+  AsUInt16(): System_Runtime_Intrinsics.Vector128_1<System_Internal.UInt16>;
+  AsUInt32(): System_Runtime_Intrinsics.Vector128_1<System_Internal.UInt32>;
+  AsUInt64(): System_Runtime_Intrinsics.Vector128_1<System_Internal.UInt64>;
   CopyTo(destination: T[]): void;
   CopyTo(destination: T[], startIndex: int): void;
   CopyTo(destination: System.Span_1<T>): void;
@@ -1881,8 +1881,8 @@ export interface __Ext_Vector128_1<T> {
   Store(destination: ptr<T>): void;
   StoreAligned(destination: ptr<T>): void;
   StoreAlignedNonTemporal(destination: ptr<T>): void;
-  StoreUnsafe(destination: ref<T>): void;
-  StoreUnsafe(destination: ref<T>, elementOffset: nuint): void;
+  StoreUnsafe(destination: T): void;
+  StoreUnsafe(destination: T, elementOffset: nuint): void;
   ToScalar(): T;
   ToVector256(): System_Runtime_Intrinsics.Vector256_1<T>;
   ToVector256Unsafe(): System_Runtime_Intrinsics.Vector256_1<T>;
@@ -1900,18 +1900,18 @@ export interface __Ext_Vector128_1<T> {
 
 export interface __Ext_Vector256_1<T> {
   As<TTo>(): System_Runtime_Intrinsics.Vector256_1<TTo>;
-  AsByte(): System_Runtime_Intrinsics.Vector256_1<CLROf<byte>>;
-  AsDouble(): System_Runtime_Intrinsics.Vector256_1<CLROf<double>>;
-  AsInt16(): System_Runtime_Intrinsics.Vector256_1<CLROf<short>>;
-  AsInt32(): System_Runtime_Intrinsics.Vector256_1<CLROf<int>>;
-  AsInt64(): System_Runtime_Intrinsics.Vector256_1<CLROf<long>>;
-  AsNInt(): System_Runtime_Intrinsics.Vector256_1<CLROf<nint>>;
-  AsNUInt(): System_Runtime_Intrinsics.Vector256_1<CLROf<nuint>>;
-  AsSByte(): System_Runtime_Intrinsics.Vector256_1<CLROf<sbyte>>;
-  AsSingle(): System_Runtime_Intrinsics.Vector256_1<CLROf<float>>;
-  AsUInt16(): System_Runtime_Intrinsics.Vector256_1<CLROf<ushort>>;
-  AsUInt32(): System_Runtime_Intrinsics.Vector256_1<CLROf<uint>>;
-  AsUInt64(): System_Runtime_Intrinsics.Vector256_1<CLROf<ulong>>;
+  AsByte(): System_Runtime_Intrinsics.Vector256_1<System_Internal.Byte>;
+  AsDouble(): System_Runtime_Intrinsics.Vector256_1<System_Internal.Double>;
+  AsInt16(): System_Runtime_Intrinsics.Vector256_1<System_Internal.Int16>;
+  AsInt32(): System_Runtime_Intrinsics.Vector256_1<System_Internal.Int32>;
+  AsInt64(): System_Runtime_Intrinsics.Vector256_1<System_Internal.Int64>;
+  AsNInt(): System_Runtime_Intrinsics.Vector256_1<System_Internal.IntPtr>;
+  AsNUInt(): System_Runtime_Intrinsics.Vector256_1<System_Internal.UIntPtr>;
+  AsSByte(): System_Runtime_Intrinsics.Vector256_1<System_Internal.SByte>;
+  AsSingle(): System_Runtime_Intrinsics.Vector256_1<System_Internal.Single>;
+  AsUInt16(): System_Runtime_Intrinsics.Vector256_1<System_Internal.UInt16>;
+  AsUInt32(): System_Runtime_Intrinsics.Vector256_1<System_Internal.UInt32>;
+  AsUInt64(): System_Runtime_Intrinsics.Vector256_1<System_Internal.UInt64>;
   AsVector(): System_Numerics.Vector_1<T>;
   CopyTo(destination: T[]): void;
   CopyTo(destination: T[], startIndex: int): void;
@@ -1923,8 +1923,8 @@ export interface __Ext_Vector256_1<T> {
   Store(destination: ptr<T>): void;
   StoreAligned(destination: ptr<T>): void;
   StoreAlignedNonTemporal(destination: ptr<T>): void;
-  StoreUnsafe(destination: ref<T>): void;
-  StoreUnsafe(destination: ref<T>, elementOffset: nuint): void;
+  StoreUnsafe(destination: T): void;
+  StoreUnsafe(destination: T, elementOffset: nuint): void;
   ToScalar(): T;
   ToVector512(): System_Runtime_Intrinsics.Vector512_1<T>;
   ToVector512Unsafe(): System_Runtime_Intrinsics.Vector512_1<T>;
@@ -1936,18 +1936,18 @@ export interface __Ext_Vector256_1<T> {
 
 export interface __Ext_Vector512_1<T> {
   As<TTo>(): System_Runtime_Intrinsics.Vector512_1<TTo>;
-  AsByte(): System_Runtime_Intrinsics.Vector512_1<CLROf<byte>>;
-  AsDouble(): System_Runtime_Intrinsics.Vector512_1<CLROf<double>>;
-  AsInt16(): System_Runtime_Intrinsics.Vector512_1<CLROf<short>>;
-  AsInt32(): System_Runtime_Intrinsics.Vector512_1<CLROf<int>>;
-  AsInt64(): System_Runtime_Intrinsics.Vector512_1<CLROf<long>>;
-  AsNInt(): System_Runtime_Intrinsics.Vector512_1<CLROf<nint>>;
-  AsNUInt(): System_Runtime_Intrinsics.Vector512_1<CLROf<nuint>>;
-  AsSByte(): System_Runtime_Intrinsics.Vector512_1<CLROf<sbyte>>;
-  AsSingle(): System_Runtime_Intrinsics.Vector512_1<CLROf<float>>;
-  AsUInt16(): System_Runtime_Intrinsics.Vector512_1<CLROf<ushort>>;
-  AsUInt32(): System_Runtime_Intrinsics.Vector512_1<CLROf<uint>>;
-  AsUInt64(): System_Runtime_Intrinsics.Vector512_1<CLROf<ulong>>;
+  AsByte(): System_Runtime_Intrinsics.Vector512_1<System_Internal.Byte>;
+  AsDouble(): System_Runtime_Intrinsics.Vector512_1<System_Internal.Double>;
+  AsInt16(): System_Runtime_Intrinsics.Vector512_1<System_Internal.Int16>;
+  AsInt32(): System_Runtime_Intrinsics.Vector512_1<System_Internal.Int32>;
+  AsInt64(): System_Runtime_Intrinsics.Vector512_1<System_Internal.Int64>;
+  AsNInt(): System_Runtime_Intrinsics.Vector512_1<System_Internal.IntPtr>;
+  AsNUInt(): System_Runtime_Intrinsics.Vector512_1<System_Internal.UIntPtr>;
+  AsSByte(): System_Runtime_Intrinsics.Vector512_1<System_Internal.SByte>;
+  AsSingle(): System_Runtime_Intrinsics.Vector512_1<System_Internal.Single>;
+  AsUInt16(): System_Runtime_Intrinsics.Vector512_1<System_Internal.UInt16>;
+  AsUInt32(): System_Runtime_Intrinsics.Vector512_1<System_Internal.UInt32>;
+  AsUInt64(): System_Runtime_Intrinsics.Vector512_1<System_Internal.UInt64>;
   AsVector(): System_Numerics.Vector_1<T>;
   CopyTo(destination: T[]): void;
   CopyTo(destination: T[], startIndex: int): void;
@@ -1959,8 +1959,8 @@ export interface __Ext_Vector512_1<T> {
   Store(destination: ptr<T>): void;
   StoreAligned(destination: ptr<T>): void;
   StoreAlignedNonTemporal(destination: ptr<T>): void;
-  StoreUnsafe(destination: ref<T>): void;
-  StoreUnsafe(destination: ref<T>, elementOffset: nuint): void;
+  StoreUnsafe(destination: T): void;
+  StoreUnsafe(destination: T, elementOffset: nuint): void;
   ToScalar(): T;
   TryCopyTo(destination: System.Span_1<T>): boolean;
   WithElement(index: int, value: T): System_Runtime_Intrinsics.Vector512_1<T>;
@@ -1970,18 +1970,18 @@ export interface __Ext_Vector512_1<T> {
 
 export interface __Ext_Vector64_1<T> {
   As<TTo>(): System_Runtime_Intrinsics.Vector64_1<TTo>;
-  AsByte(): System_Runtime_Intrinsics.Vector64_1<CLROf<byte>>;
-  AsDouble(): System_Runtime_Intrinsics.Vector64_1<CLROf<double>>;
-  AsInt16(): System_Runtime_Intrinsics.Vector64_1<CLROf<short>>;
-  AsInt32(): System_Runtime_Intrinsics.Vector64_1<CLROf<int>>;
-  AsInt64(): System_Runtime_Intrinsics.Vector64_1<CLROf<long>>;
-  AsNInt(): System_Runtime_Intrinsics.Vector64_1<CLROf<nint>>;
-  AsNUInt(): System_Runtime_Intrinsics.Vector64_1<CLROf<nuint>>;
-  AsSByte(): System_Runtime_Intrinsics.Vector64_1<CLROf<sbyte>>;
-  AsSingle(): System_Runtime_Intrinsics.Vector64_1<CLROf<float>>;
-  AsUInt16(): System_Runtime_Intrinsics.Vector64_1<CLROf<ushort>>;
-  AsUInt32(): System_Runtime_Intrinsics.Vector64_1<CLROf<uint>>;
-  AsUInt64(): System_Runtime_Intrinsics.Vector64_1<CLROf<ulong>>;
+  AsByte(): System_Runtime_Intrinsics.Vector64_1<System_Internal.Byte>;
+  AsDouble(): System_Runtime_Intrinsics.Vector64_1<System_Internal.Double>;
+  AsInt16(): System_Runtime_Intrinsics.Vector64_1<System_Internal.Int16>;
+  AsInt32(): System_Runtime_Intrinsics.Vector64_1<System_Internal.Int32>;
+  AsInt64(): System_Runtime_Intrinsics.Vector64_1<System_Internal.Int64>;
+  AsNInt(): System_Runtime_Intrinsics.Vector64_1<System_Internal.IntPtr>;
+  AsNUInt(): System_Runtime_Intrinsics.Vector64_1<System_Internal.UIntPtr>;
+  AsSByte(): System_Runtime_Intrinsics.Vector64_1<System_Internal.SByte>;
+  AsSingle(): System_Runtime_Intrinsics.Vector64_1<System_Internal.Single>;
+  AsUInt16(): System_Runtime_Intrinsics.Vector64_1<System_Internal.UInt16>;
+  AsUInt32(): System_Runtime_Intrinsics.Vector64_1<System_Internal.UInt32>;
+  AsUInt64(): System_Runtime_Intrinsics.Vector64_1<System_Internal.UInt64>;
   CopyTo(destination: T[]): void;
   CopyTo(destination: T[], startIndex: int): void;
   CopyTo(destination: System.Span_1<T>): void;
@@ -1990,8 +1990,8 @@ export interface __Ext_Vector64_1<T> {
   Store(destination: ptr<T>): void;
   StoreAligned(destination: ptr<T>): void;
   StoreAlignedNonTemporal(destination: ptr<T>): void;
-  StoreUnsafe(destination: ref<T>): void;
-  StoreUnsafe(destination: ref<T>, elementOffset: nuint): void;
+  StoreUnsafe(destination: T): void;
+  StoreUnsafe(destination: T, elementOffset: nuint): void;
   ToScalar(): T;
   ToVector128(): System_Runtime_Intrinsics.Vector128_1<T>;
   ToVector128Unsafe(): System_Runtime_Intrinsics.Vector128_1<T>;
@@ -2022,24 +2022,24 @@ export interface __Ext_X509Certificate2 {
 }
 
 export interface __Ext_Encoding {
-  GetBytes(chars: System.ReadOnlySpan_1<CLROf<char>>, writer: System_Buffers.IBufferWriter_1<CLROf<byte>>): long;
-  GetBytes(chars: ref<System_Buffers.ReadOnlySequence_1<CLROf<char>>>, writer: System_Buffers.IBufferWriter_1<CLROf<byte>>): long;
-  GetBytes(chars: ref<System_Buffers.ReadOnlySequence_1<CLROf<char>>>, bytes: System.Span_1<CLROf<byte>>): int;
-  GetBytes(chars: ref<System_Buffers.ReadOnlySequence_1<CLROf<char>>>): byte[];
-  GetChars(bytes: System.ReadOnlySpan_1<CLROf<byte>>, writer: System_Buffers.IBufferWriter_1<CLROf<char>>): long;
-  GetChars(bytes: ref<System_Buffers.ReadOnlySequence_1<CLROf<byte>>>, writer: System_Buffers.IBufferWriter_1<CLROf<char>>): long;
-  GetChars(bytes: ref<System_Buffers.ReadOnlySequence_1<CLROf<byte>>>, chars: System.Span_1<CLROf<char>>): int;
-  GetString(bytes: ref<System_Buffers.ReadOnlySequence_1<CLROf<byte>>>): string;
+  GetBytes(chars: System.ReadOnlySpan_1<System_Internal.Char>, writer: System_Buffers.IBufferWriter_1<System_Internal.Byte>): long;
+  GetBytes(chars: System_Buffers.ReadOnlySequence_1<System_Internal.Char>, writer: System_Buffers.IBufferWriter_1<System_Internal.Byte>): long;
+  GetBytes(chars: System_Buffers.ReadOnlySequence_1<System_Internal.Char>, bytes: System.Span_1<System_Internal.Byte>): int;
+  GetBytes(chars: System_Buffers.ReadOnlySequence_1<System_Internal.Char>): byte[];
+  GetChars(bytes: System.ReadOnlySpan_1<System_Internal.Byte>, writer: System_Buffers.IBufferWriter_1<System_Internal.Char>): long;
+  GetChars(bytes: System_Buffers.ReadOnlySequence_1<System_Internal.Byte>, writer: System_Buffers.IBufferWriter_1<System_Internal.Char>): long;
+  GetChars(bytes: System_Buffers.ReadOnlySequence_1<System_Internal.Byte>, chars: System.Span_1<System_Internal.Char>): int;
+  GetString(bytes: System_Buffers.ReadOnlySequence_1<System_Internal.Byte>): string;
 }
 
 export interface __Ext_Encoder {
-  Convert(chars: System.ReadOnlySpan_1<CLROf<char>>, writer: System_Buffers.IBufferWriter_1<CLROf<byte>>, flush: boolean, bytesUsed: ref<long>, completed: ref<boolean>): void;
-  Convert(chars: ref<System_Buffers.ReadOnlySequence_1<CLROf<char>>>, writer: System_Buffers.IBufferWriter_1<CLROf<byte>>, flush: boolean, bytesUsed: ref<long>, completed: ref<boolean>): void;
+  Convert(chars: System.ReadOnlySpan_1<System_Internal.Char>, writer: System_Buffers.IBufferWriter_1<System_Internal.Byte>, flush: boolean, bytesUsed: long, completed: boolean): void;
+  Convert(chars: System_Buffers.ReadOnlySequence_1<System_Internal.Char>, writer: System_Buffers.IBufferWriter_1<System_Internal.Byte>, flush: boolean, bytesUsed: long, completed: boolean): void;
 }
 
 export interface __Ext_Decoder {
-  Convert(bytes: System.ReadOnlySpan_1<CLROf<byte>>, writer: System_Buffers.IBufferWriter_1<CLROf<char>>, flush: boolean, charsUsed: ref<long>, completed: ref<boolean>): void;
-  Convert(bytes: ref<System_Buffers.ReadOnlySequence_1<CLROf<byte>>>, writer: System_Buffers.IBufferWriter_1<CLROf<char>>, flush: boolean, charsUsed: ref<long>, completed: ref<boolean>): void;
+  Convert(bytes: System.ReadOnlySpan_1<System_Internal.Byte>, writer: System_Buffers.IBufferWriter_1<System_Internal.Char>, flush: boolean, charsUsed: long, completed: boolean): void;
+  Convert(bytes: System_Buffers.ReadOnlySequence_1<System_Internal.Byte>, writer: System_Buffers.IBufferWriter_1<System_Internal.Char>, flush: boolean, charsUsed: long, completed: boolean): void;
 }
 
 export interface __Ext_JsonDocument {
@@ -2119,20 +2119,20 @@ export interface __Ext_ISourceBlock_1<TOutput> {
   Receive(cancellationToken: System_Threading.CancellationToken): TOutput;
   Receive(timeout: System.TimeSpan): TOutput;
   Receive(timeout: System.TimeSpan, cancellationToken: System_Threading.CancellationToken): TOutput;
-  OutputAvailableAsync(): System_Threading_Tasks.Task_1<CLROf<boolean>>;
-  OutputAvailableAsync(cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<CLROf<boolean>>;
+  OutputAvailableAsync(): System_Threading_Tasks.Task_1<System_Internal.Boolean>;
+  OutputAvailableAsync(cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<System_Internal.Boolean>;
   AsObservable(): System.IObservable_1<TOutput>;
 }
 
 export interface __Ext_ITargetBlock_1<TInput> {
   Post(item: TInput): boolean;
-  SendAsync(item: TInput): System_Threading_Tasks.Task_1<CLROf<boolean>>;
-  SendAsync(item: TInput, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<CLROf<boolean>>;
+  SendAsync(item: TInput): System_Threading_Tasks.Task_1<System_Internal.Boolean>;
+  SendAsync(item: TInput, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<System_Internal.Boolean>;
   AsObserver(): System.IObserver_1<TInput>;
 }
 
 export interface __Ext_IReceivableSourceBlock_1<TOutput> {
-  TryReceive(item: ref<TOutput>): boolean;
+  TryReceive(item: TOutput): boolean;
   ReceiveAllAsync(cancellationToken: System_Threading.CancellationToken): System_Collections_Generic.IAsyncEnumerable_1<TOutput>;
 }
 

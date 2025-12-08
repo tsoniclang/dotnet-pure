@@ -6,7 +6,7 @@
 import type { sbyte, byte, short, ushort, int, uint, long, ulong, int128, uint128, half, float, double, decimal, nint, nuint, char } from '@tsonic/types';
 
 // Import support types from @tsonic/types
-import type { ptr, ref } from "@tsonic/types";
+import type { ptr } from "@tsonic/types";
 
 // Import types from other namespaces
 import * as System_Collections_Generic_Internal from "../../System.Collections.Generic/internal/index.js";
@@ -16,31 +16,6 @@ import type { ICollection, IDictionary, IDictionaryEnumerator, IEnumerable, IEnu
 import type { CancellationToken } from "../../System.Threading/internal/index.js";
 import * as System_Internal from "../../System/internal/index.js";
 import type { Array as ClrArray, Boolean as ClrBoolean, Enum, Func_2, Func_3, Func_4, IComparable, IConvertible, IDisposable, IFormatProvider, IFormattable, Int32, Int64, ISpanFormattable, Object as ClrObject, String as ClrString, TimeSpan, Tuple_2, Type, TypeCode, ValueType, Void } from "../../System/internal/index.js";
-
-// CLROf<T> - Maps ergonomic primitives to their CLR types for generic constraints
-// This utility is used ONLY in generic type arguments to satisfy CLR interface constraints
-// Value positions (parameters, return types) use lowercase primitives for ergonomics
-export type CLROf<T> =
-    T extends sbyte ? System_Internal.SByte :
-    T extends short ? System_Internal.Int16 :
-    T extends int ? System_Internal.Int32 :
-    T extends long ? System_Internal.Int64 :
-    T extends int128 ? System_Internal.Int128 :
-    T extends nint ? System_Internal.IntPtr :
-    T extends byte ? System_Internal.Byte :
-    T extends ushort ? System_Internal.UInt16 :
-    T extends uint ? System_Internal.UInt32 :
-    T extends ulong ? System_Internal.UInt64 :
-    T extends uint128 ? System_Internal.UInt128 :
-    T extends nuint ? System_Internal.UIntPtr :
-    T extends half ? System_Internal.Half :
-    T extends float ? System_Internal.Single :
-    T extends double ? System_Internal.Double :
-    T extends decimal ? System_Internal.Decimal :
-    T extends char ? System_Internal.Char :
-    T extends boolean ? System_Internal.Boolean :
-    T extends string ? System_Internal.String :
-    T; // Identity fallback for non-primitive types
 
 export enum EnumerablePartitionerOptions {
     None = 0,
@@ -58,7 +33,7 @@ export interface IProducerConsumerCollection_1$instance<T> extends IEnumerable_1
     GetEnumerator(): IEnumerator;
     ToArray(): T[];
     TryAdd(item: T): boolean;
-    TryTake(item: { value: ref<T> }): boolean;
+    TryTake(item: T): boolean;
     GetEnumerator2(): IEnumerator;
 }
 
@@ -70,10 +45,10 @@ export interface ConcurrentDictionary_2_AlternateLookup_1$instance<TKey, TValue,
     Item: TValue;
     ContainsKey(key: TAlternateKey): boolean;
     TryAdd(key: TAlternateKey, value: TValue): boolean;
-    TryGetValue(key: TAlternateKey, value: { value: ref<TValue> }): boolean;
-    TryGetValue(key: TAlternateKey, actualKey: { value: ref<TKey> }, value: { value: ref<TValue> }): boolean;
-    TryRemove(key: TAlternateKey, value: { value: ref<TValue> }): boolean;
-    TryRemove(key: TAlternateKey, actualKey: { value: ref<TKey> }, value: { value: ref<TValue> }): boolean;
+    TryGetValue(key: TAlternateKey, value: TValue): boolean;
+    TryGetValue(key: TAlternateKey, actualKey: TKey, value: TValue): boolean;
+    TryRemove(key: TAlternateKey, value: TValue): boolean;
+    TryRemove(key: TAlternateKey, actualKey: TKey, value: TValue): boolean;
 }
 
 
@@ -103,10 +78,10 @@ export interface BlockingCollection_1$instance<T> {
     TryAdd(item: T, timeout: TimeSpan): boolean;
     TryAdd(item: T, millisecondsTimeout: int): boolean;
     TryAdd(item: T, millisecondsTimeout: int, cancellationToken: CancellationToken): boolean;
-    TryTake(item: { value: ref<T> }): boolean;
-    TryTake(item: { value: ref<T> }, timeout: TimeSpan): boolean;
-    TryTake(item: { value: ref<T> }, millisecondsTimeout: int): boolean;
-    TryTake(item: { value: ref<T> }, millisecondsTimeout: int, cancellationToken: CancellationToken): boolean;
+    TryTake(item: T): boolean;
+    TryTake(item: T, timeout: TimeSpan): boolean;
+    TryTake(item: T, millisecondsTimeout: int): boolean;
+    TryTake(item: T, millisecondsTimeout: int, cancellationToken: CancellationToken): boolean;
 }
 
 
@@ -117,16 +92,16 @@ export const BlockingCollection_1: {
     new<T>(collection: IProducerConsumerCollection_1<T>): BlockingCollection_1$instance<T>;
     AddToAny<T>(collections: BlockingCollection_1<T>[], item: T, cancellationToken: CancellationToken): int;
     AddToAny<T>(collections: BlockingCollection_1<T>[], item: T): int;
-    TakeFromAny<T>(collections: BlockingCollection_1<T>[], item: { value: ref<T> }, cancellationToken: CancellationToken): int;
-    TakeFromAny<T>(collections: BlockingCollection_1<T>[], item: { value: ref<T> }): int;
+    TakeFromAny<T>(collections: BlockingCollection_1<T>[], item: T, cancellationToken: CancellationToken): int;
+    TakeFromAny<T>(collections: BlockingCollection_1<T>[], item: T): int;
     TryAddToAny<T>(collections: BlockingCollection_1<T>[], item: T, millisecondsTimeout: int, cancellationToken: CancellationToken): int;
     TryAddToAny<T>(collections: BlockingCollection_1<T>[], item: T, millisecondsTimeout: int): int;
     TryAddToAny<T>(collections: BlockingCollection_1<T>[], item: T, timeout: TimeSpan): int;
     TryAddToAny<T>(collections: BlockingCollection_1<T>[], item: T): int;
-    TryTakeFromAny<T>(collections: BlockingCollection_1<T>[], item: { value: ref<T> }, millisecondsTimeout: int, cancellationToken: CancellationToken): int;
-    TryTakeFromAny<T>(collections: BlockingCollection_1<T>[], item: { value: ref<T> }, millisecondsTimeout: int): int;
-    TryTakeFromAny<T>(collections: BlockingCollection_1<T>[], item: { value: ref<T> }, timeout: TimeSpan): int;
-    TryTakeFromAny<T>(collections: BlockingCollection_1<T>[], item: { value: ref<T> }): int;
+    TryTakeFromAny<T>(collections: BlockingCollection_1<T>[], item: T, millisecondsTimeout: int, cancellationToken: CancellationToken): int;
+    TryTakeFromAny<T>(collections: BlockingCollection_1<T>[], item: T, millisecondsTimeout: int): int;
+    TryTakeFromAny<T>(collections: BlockingCollection_1<T>[], item: T, timeout: TimeSpan): int;
+    TryTakeFromAny<T>(collections: BlockingCollection_1<T>[], item: T): int;
 };
 
 
@@ -151,8 +126,8 @@ export interface ConcurrentBag_1$instance<T> {
     CopyTo(array: T[], index: int): void;
     GetEnumerator(): IEnumerator_1<T>;
     ToArray(): T[];
-    TryPeek(result: { value: ref<T> }): boolean;
-    TryTake(result: { value: ref<T> }): boolean;
+    TryPeek(result: T): boolean;
+    TryTake(result: T): boolean;
 }
 
 
@@ -192,9 +167,9 @@ export interface ConcurrentDictionary_2$instance<TKey, TValue> {
     GetOrAdd(key: TKey, value: TValue): TValue;
     ToArray(): KeyValuePair_2<TKey, TValue>[];
     TryAdd(key: TKey, value: TValue): boolean;
-    TryGetAlternateLookup<TAlternateKey>(lookup: { value: ref<ConcurrentDictionary_2_AlternateLookup_1<TKey, TValue, TAlternateKey>> }): boolean;
-    TryGetValue(key: TKey, value: { value: ref<TValue> }): boolean;
-    TryRemove(key: TKey, value: { value: ref<TValue> }): boolean;
+    TryGetAlternateLookup<TAlternateKey>(lookup: ConcurrentDictionary_2_AlternateLookup_1<TKey, TValue, TAlternateKey>): boolean;
+    TryGetValue(key: TKey, value: TValue): boolean;
+    TryRemove(key: TKey, value: TValue): boolean;
     TryRemove(item: KeyValuePair_2<TKey, TValue>): boolean;
     TryUpdate(key: TKey, newValue: TValue, comparisonValue: TValue): boolean;
 }
@@ -233,8 +208,8 @@ export interface ConcurrentQueue_1$instance<T> {
     Enqueue(item: T): void;
     GetEnumerator(): IEnumerator_1<T>;
     ToArray(): T[];
-    TryDequeue(result: { value: ref<T> }): boolean;
-    TryPeek(result: { value: ref<T> }): boolean;
+    TryDequeue(result: T): boolean;
+    TryPeek(result: T): boolean;
 }
 
 
@@ -265,8 +240,8 @@ export interface ConcurrentStack_1$instance<T> {
     PushRange(items: T[]): void;
     PushRange(items: T[], startIndex: int, count: int): void;
     ToArray(): T[];
-    TryPeek(result: { value: ref<T> }): boolean;
-    TryPop(result: { value: ref<T> }): boolean;
+    TryPeek(result: T): boolean;
+    TryPop(result: T): boolean;
     TryPopRange(items: T[]): int;
     TryPopRange(items: T[], startIndex: int, count: int): int;
 }
@@ -295,8 +270,8 @@ export interface OrderablePartitioner_1$instance<TSource> extends Partitioner_1<
     readonly KeysOrderedInEachPartition: boolean;
     GetDynamicPartitions(): IEnumerable_1<TSource>;
     GetDynamicPartitions(): IEnumerable_1<TSource>;
-    GetOrderableDynamicPartitions(): IEnumerable_1<KeyValuePair_2<CLROf<long>, TSource>>;
-    GetOrderablePartitions(partitionCount: int): IList_1<IEnumerator_1<KeyValuePair_2<CLROf<long>, TSource>>>;
+    GetOrderableDynamicPartitions(): IEnumerable_1<KeyValuePair_2<System_Internal.Int64, TSource>>;
+    GetOrderablePartitions(partitionCount: int): IList_1<IEnumerator_1<KeyValuePair_2<System_Internal.Int64, TSource>>>;
     GetPartitions(partitionCount: int): IList_1<IEnumerator_1<TSource>>;
     GetPartitions(partitionCount: int): IList_1<IEnumerator_1<TSource>>;
 }
@@ -325,10 +300,10 @@ export abstract class Partitioner$instance {
     static Create<TSource>(source: IEnumerable_1<TSource>, partitionerOptions: EnumerablePartitionerOptions): OrderablePartitioner_1<TSource>;
     static Create<TSource>(source: IEnumerable_1<TSource>): OrderablePartitioner_1<TSource>;
     static Create<TSource>(list: IList_1<TSource>, loadBalance: boolean): OrderablePartitioner_1<TSource>;
-    static Create(fromInclusive: int, toExclusive: int, rangeSize: int): OrderablePartitioner_1<Tuple_2<CLROf<int>, CLROf<int>>>;
-    static Create(fromInclusive: int, toExclusive: int): OrderablePartitioner_1<Tuple_2<CLROf<int>, CLROf<int>>>;
-    static Create(fromInclusive: long, toExclusive: long, rangeSize: long): OrderablePartitioner_1<Tuple_2<CLROf<long>, CLROf<long>>>;
-    static Create(fromInclusive: long, toExclusive: long): OrderablePartitioner_1<Tuple_2<CLROf<long>, CLROf<long>>>;
+    static Create(fromInclusive: int, toExclusive: int, rangeSize: int): OrderablePartitioner_1<Tuple_2<System_Internal.Int32, System_Internal.Int32>>;
+    static Create(fromInclusive: int, toExclusive: int): OrderablePartitioner_1<Tuple_2<System_Internal.Int32, System_Internal.Int32>>;
+    static Create(fromInclusive: long, toExclusive: long, rangeSize: long): OrderablePartitioner_1<Tuple_2<System_Internal.Int64, System_Internal.Int64>>;
+    static Create(fromInclusive: long, toExclusive: long): OrderablePartitioner_1<Tuple_2<System_Internal.Int64, System_Internal.Int64>>;
     static Create<TSource>(array: TSource[], loadBalance: boolean): OrderablePartitioner_1<TSource>;
 }
 

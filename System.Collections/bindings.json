@@ -1424,7 +1424,17 @@
           "parameterCount": 2,
           "declaringClrType": "System.Collections.DictionaryEntry",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            },
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Collections.DictionaryEntry::ToString():System.String",

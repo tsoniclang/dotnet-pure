@@ -6,7 +6,7 @@
 import type { sbyte, byte, short, ushort, int, uint, long, ulong, int128, uint128, half, float, double, decimal, nint, nuint, char } from '@tsonic/types';
 
 // Import support types from @tsonic/types
-import type { ptr, ref } from "@tsonic/types";
+import type { ptr } from "@tsonic/types";
 
 // Import types from other namespaces
 import type { ICollection_1, IEnumerable_1 } from "../../System.Collections.Generic/internal/index.js";
@@ -22,31 +22,6 @@ import type { XmlSchemaSet, XmlSchemaType } from "../../System.Xml.Schema/intern
 import type { XmlDictionaryReader, XmlDictionaryString, XmlDictionaryWriter, XmlNamespaceManager, XmlNode, XmlQualifiedName, XmlReader, XmlWriter } from "../../System.Xml/internal/index.js";
 import * as System_Internal from "../../System/internal/index.js";
 import type { AsyncCallback, Attribute, Boolean as ClrBoolean, Byte, Char, DateTime, Decimal, Delegate, Double, Enum, EventArgs, Exception, IAsyncResult, ICloneable, IComparable, IConvertible, IDisposable, IFormatProvider, IFormattable, Int16, Int32, Int64, IntPtr, ISpanFormattable, MulticastDelegate, Object as ClrObject, SByte, Single, String as ClrString, SystemException, Type, TypeCode, UInt16, UInt32, UInt64, ValueType, Void } from "../../System/internal/index.js";
-
-// CLROf<T> - Maps ergonomic primitives to their CLR types for generic constraints
-// This utility is used ONLY in generic type arguments to satisfy CLR interface constraints
-// Value positions (parameters, return types) use lowercase primitives for ergonomics
-export type CLROf<T> =
-    T extends sbyte ? System_Internal.SByte :
-    T extends short ? System_Internal.Int16 :
-    T extends int ? System_Internal.Int32 :
-    T extends long ? System_Internal.Int64 :
-    T extends int128 ? System_Internal.Int128 :
-    T extends nint ? System_Internal.IntPtr :
-    T extends byte ? System_Internal.Byte :
-    T extends ushort ? System_Internal.UInt16 :
-    T extends uint ? System_Internal.UInt32 :
-    T extends ulong ? System_Internal.UInt64 :
-    T extends uint128 ? System_Internal.UInt128 :
-    T extends nuint ? System_Internal.UIntPtr :
-    T extends half ? System_Internal.Half :
-    T extends float ? System_Internal.Single :
-    T extends double ? System_Internal.Double :
-    T extends decimal ? System_Internal.Decimal :
-    T extends char ? System_Internal.Char :
-    T extends boolean ? System_Internal.Boolean :
-    T extends string ? System_Internal.String :
-    T; // Identity fallback for non-primitive types
 
 export enum EmitTypeInformation {
     AsNeeded = 0,
@@ -173,7 +148,7 @@ export type ISerializationSurrogateProvider2 = ISerializationSurrogateProvider2$
 export interface ISurrogateSelector$instance {
     ChainSelector(selector: ISurrogateSelector): void;
     GetNextSelector(): ISurrogateSelector;
-    GetSurrogate(type_: Type, context: StreamingContext, selector: { value: ref<ISurrogateSelector> }): ISerializationSurrogate;
+    GetSurrogate(type_: Type, context: StreamingContext, selector: ISurrogateSelector): ISerializationSurrogate;
 }
 
 
@@ -283,7 +258,7 @@ export type DataContractAttribute = DataContractAttribute$instance;
 
 export interface DataContractResolver$instance {
     ResolveName(typeName: string, typeNamespace: string, declaredType: Type, knownTypeResolver: DataContractResolver): Type;
-    TryResolveType(type_: Type, declaredType: Type, knownTypeResolver: DataContractResolver, typeName: { value: ref<XmlDictionaryString> }, typeNamespace: { value: ref<XmlDictionaryString> }): boolean;
+    TryResolveType(type_: Type, declaredType: Type, knownTypeResolver: DataContractResolver, typeName: XmlDictionaryString, typeNamespace: XmlDictionaryString): boolean;
 }
 
 
@@ -521,8 +496,8 @@ export const KnownTypeAttribute: {
 export type KnownTypeAttribute = KnownTypeAttribute$instance;
 
 export interface ObjectIDGenerator$instance {
-    GetId(obj: unknown, firstTime: { value: ref<boolean> }): long;
-    HasId(obj: unknown, firstTime: { value: ref<boolean> }): long;
+    GetId(obj: unknown, firstTime: boolean): long;
+    HasId(obj: unknown, firstTime: boolean): long;
 }
 
 
@@ -626,7 +601,7 @@ export const SafeSerializationEventArgs: {
 export type SafeSerializationEventArgs = SafeSerializationEventArgs$instance;
 
 export interface SerializationBinder$instance {
-    BindToName(serializedType: Type, assemblyName: { value: ref<string> }, typeName: { value: ref<string> }): void;
+    BindToName(serializedType: Type, assemblyName: string, typeName: string): void;
     BindToType(assemblyName: string, typeName: string): Type;
 }
 
@@ -748,7 +723,7 @@ export interface SurrogateSelector$instance {
     AddSurrogate(type_: Type, context: StreamingContext, surrogate: ISerializationSurrogate): void;
     ChainSelector(selector: ISurrogateSelector): void;
     GetNextSelector(): ISurrogateSelector;
-    GetSurrogate(type_: Type, context: StreamingContext, selector: { value: ref<ISurrogateSelector> }): ISerializationSurrogate;
+    GetSurrogate(type_: Type, context: StreamingContext, selector: ISurrogateSelector): ISerializationSurrogate;
     RemoveSurrogate(type_: Type, context: StreamingContext): void;
 }
 
@@ -902,8 +877,8 @@ export abstract class XmlSerializableServices$instance {
 export type XmlSerializableServices = XmlSerializableServices$instance;
 
 export abstract class XPathQueryGenerator$instance {
-    static CreateFromDataContractSerializer(type_: Type, pathToMember: MemberInfo[], rootElementXpath: StringBuilder, namespaces: { value: ref<XmlNamespaceManager> }): string;
-    static CreateFromDataContractSerializer(type_: Type, pathToMember: MemberInfo[], namespaces: { value: ref<XmlNamespaceManager> }): string;
+    static CreateFromDataContractSerializer(type_: Type, pathToMember: MemberInfo[], rootElementXpath: StringBuilder, namespaces: XmlNamespaceManager): string;
+    static CreateFromDataContractSerializer(type_: Type, pathToMember: MemberInfo[], namespaces: XmlNamespaceManager): string;
 }
 
 

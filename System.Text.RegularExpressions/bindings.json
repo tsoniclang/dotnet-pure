@@ -4736,7 +4736,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Text.RegularExpressions.GroupCollection",
           "declaringAssemblyName": "System.Text.RegularExpressions",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Text.RegularExpressions:System.Text.RegularExpressions.GroupCollection::ContainsKey(System.String):System.Boolean",
@@ -4946,7 +4952,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Collections.Generic.IReadOnlyDictionary\u00602",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Collections.IEnumerable::GetEnumerator():System.Collections.IEnumerator",
