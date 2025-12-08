@@ -6,7 +6,7 @@
 import type { sbyte, byte, short, ushort, int, uint, long, ulong, int128, uint128, half, float, double, decimal, nint, nuint, char } from '@tsonic/types';
 
 // Import support types from @tsonic/types
-import type { ptr, ref } from "@tsonic/types";
+import type { ptr } from "@tsonic/types";
 
 // Import types from other namespaces
 import type { SafeProcessHandle } from "../../Microsoft.Win32.SafeHandles/internal/index.js";
@@ -28,31 +28,6 @@ import type { Task } from "../../System.Threading.Tasks/internal/index.js";
 import type { CancellationToken } from "../../System.Threading/internal/index.js";
 import * as System_Internal from "../../System/internal/index.js";
 import type { Action_1, Action_2, Array as ClrArray, AsyncCallback, Attribute, Boolean as ClrBoolean, Byte, Char, DateTime, DateTimeOffset, Delegate, Enum, EventArgs, EventHandler, EventHandler_1, Exception, Func_1, Func_2, Func_4, Guid, IAsyncResult, ICloneable, IComparable, IConvertible, IDisposable, IEquatable_1, IFormatProvider, IFormattable, Int32, Int64, IntPtr, IObservable_1, IObserver_1, ISpanFormattable, MarshalByRefObject, MulticastDelegate, Object as ClrObject, Predicate_1, ReadOnlySpan_1, Span_1, String as ClrString, TimeSpan, Type, TypeCode, ValueType, Void } from "../../System/internal/index.js";
-
-// CLROf<T> - Maps ergonomic primitives to their CLR types for generic constraints
-// This utility is used ONLY in generic type arguments to satisfy CLR interface constraints
-// Value positions (parameters, return types) use lowercase primitives for ergonomics
-export type CLROf<T> =
-    T extends sbyte ? System_Internal.SByte :
-    T extends short ? System_Internal.Int16 :
-    T extends int ? System_Internal.Int32 :
-    T extends long ? System_Internal.Int64 :
-    T extends int128 ? System_Internal.Int128 :
-    T extends nint ? System_Internal.IntPtr :
-    T extends byte ? System_Internal.Byte :
-    T extends ushort ? System_Internal.UInt16 :
-    T extends uint ? System_Internal.UInt32 :
-    T extends ulong ? System_Internal.UInt64 :
-    T extends uint128 ? System_Internal.UInt128 :
-    T extends nuint ? System_Internal.UIntPtr :
-    T extends half ? System_Internal.Half :
-    T extends float ? System_Internal.Single :
-    T extends double ? System_Internal.Double :
-    T extends decimal ? System_Internal.Decimal :
-    T extends char ? System_Internal.Char :
-    T extends boolean ? System_Internal.Boolean :
-    T extends string ? System_Internal.String :
-    T; // Identity fallback for non-primitive types
 
 export enum ActivityIdFormat {
     Unknown = 0,
@@ -215,20 +190,20 @@ export enum TraceOptions {
 export type DataReceivedEventHandler = (sender: unknown, e: DataReceivedEventArgs) => void;
 
 
-export type DistributedContextPropagator_PropagatorGetterCallback = (carrier: unknown, fieldName: string, fieldValue: ref<string>, fieldValues: ref<IEnumerable_1<CLROf<string>>>) => void;
+export type DistributedContextPropagator_PropagatorGetterCallback = (carrier: unknown, fieldName: string, fieldValue: string, fieldValues: IEnumerable_1<System_Internal.String>) => void;
 
 
 export type DistributedContextPropagator_PropagatorSetterCallback = (carrier: unknown, fieldName: string, fieldValue: string) => void;
 
 
-export type ExceptionRecorder = (activity: Activity, exception: Exception, tags: ref<TagList>) => void;
+export type ExceptionRecorder = (activity: Activity, exception: Exception, tags: TagList) => void;
 
 
-export type SampleActivity_1<T> = (options: ref<ActivityCreationOptions_1<T>>) => ActivitySamplingResult;
+export type SampleActivity_1<T> = (options: ActivityCreationOptions_1<T>) => ActivitySamplingResult;
 
 
 export interface Activity_Enumerator_1$instance<T> {
-    readonly Current: ref<T>;
+    readonly Current: T;
     GetEnumerator(): Activity_Enumerator_1<T>;
     MoveNext(): boolean;
 }
@@ -269,8 +244,8 @@ export interface ActivityContext$instance {
 export const ActivityContext: {
     new(traceId: ActivityTraceId, spanId: ActivitySpanId, traceFlags: ActivityTraceFlags, traceState: string, isRemote: boolean): ActivityContext$instance;
     Parse(traceParent: string, traceState: string): ActivityContext;
-    TryParse(traceParent: string, traceState: string, isRemote: boolean, context: { value: ref<ActivityContext> }): boolean;
-    TryParse(traceParent: string, traceState: string, context: { value: ref<ActivityContext> }): boolean;
+    TryParse(traceParent: string, traceState: string, isRemote: boolean, context: ActivityContext): boolean;
+    TryParse(traceParent: string, traceState: string, context: ActivityContext): boolean;
 };
 
 
@@ -291,7 +266,7 @@ export interface ActivityCreationOptions_1$instance<T> {
     readonly Parent: T;
     readonly SamplingTags: ActivityTagsCollection;
     readonly Source: ActivitySource;
-    readonly Tags: IEnumerable_1<KeyValuePair_2<CLROf<string>, unknown>>;
+    readonly Tags: IEnumerable_1<KeyValuePair_2<System_Internal.String, unknown>>;
     readonly TraceId: ActivityTraceId;
     TraceState: string;
 }
@@ -306,9 +281,9 @@ export type ActivityCreationOptions_1<T> = ActivityCreationOptions_1$instance<T>
 
 export interface ActivityEvent$instance {
     readonly Name: string;
-    readonly Tags: IEnumerable_1<KeyValuePair_2<CLROf<string>, unknown>>;
+    readonly Tags: IEnumerable_1<KeyValuePair_2<System_Internal.String, unknown>>;
     readonly Timestamp: DateTimeOffset;
-    EnumerateTagObjects(): Activity_Enumerator_1<KeyValuePair_2<CLROf<string>, unknown>>;
+    EnumerateTagObjects(): Activity_Enumerator_1<KeyValuePair_2<System_Internal.String, unknown>>;
 }
 
 
@@ -322,8 +297,8 @@ export type ActivityEvent = ActivityEvent$instance;
 
 export interface ActivityLink$instance {
     readonly Context: ActivityContext;
-    readonly Tags: IEnumerable_1<KeyValuePair_2<CLROf<string>, unknown>>;
-    EnumerateTagObjects(): Activity_Enumerator_1<KeyValuePair_2<CLROf<string>, unknown>>;
+    readonly Tags: IEnumerable_1<KeyValuePair_2<System_Internal.String, unknown>>;
+    EnumerateTagObjects(): Activity_Enumerator_1<KeyValuePair_2<System_Internal.String, unknown>>;
     Equals(obj: unknown): boolean;
     Equals(value: ActivityLink): boolean;
     GetHashCode(): int;
@@ -346,7 +321,7 @@ export type ActivityLink = ActivityLink$instance & __ActivityLink$views;
 
 
 export interface ActivitySpanId$instance {
-    CopyTo(destination: Span_1<CLROf<byte>>): void;
+    CopyTo(destination: Span_1<System_Internal.Byte>): void;
     Equals(spanId: ActivitySpanId): boolean;
     Equals(obj: unknown): boolean;
     GetHashCode(): int;
@@ -357,9 +332,9 @@ export interface ActivitySpanId$instance {
 
 export const ActivitySpanId: {
     new(): ActivitySpanId$instance;
-    CreateFromBytes(idData: ReadOnlySpan_1<CLROf<byte>>): ActivitySpanId;
-    CreateFromString(idData: ReadOnlySpan_1<CLROf<char>>): ActivitySpanId;
-    CreateFromUtf8String(idData: ReadOnlySpan_1<CLROf<byte>>): ActivitySpanId;
+    CreateFromBytes(idData: ReadOnlySpan_1<System_Internal.Byte>): ActivitySpanId;
+    CreateFromString(idData: ReadOnlySpan_1<System_Internal.Char>): ActivitySpanId;
+    CreateFromUtf8String(idData: ReadOnlySpan_1<System_Internal.Byte>): ActivitySpanId;
     CreateRandom(): ActivitySpanId;
 };
 
@@ -375,7 +350,7 @@ export type ActivitySpanId = ActivitySpanId$instance & __ActivitySpanId$views;
 
 
 export interface ActivityTagsCollection_Enumerator$instance extends IDisposable {
-    readonly Current: KeyValuePair_2<CLROf<string>, unknown>;
+    readonly Current: KeyValuePair_2<System_Internal.String, unknown>;
     Dispose(): void;
     MoveNext(): boolean;
     Reset(): void;
@@ -388,7 +363,7 @@ export const ActivityTagsCollection_Enumerator: {
 
 
 export interface __ActivityTagsCollection_Enumerator$views {
-    As_IEnumerator_1(): System_Collections_Generic_Internal.IEnumerator_1$instance<KeyValuePair_2<CLROf<string>, unknown>>;
+    As_IEnumerator_1(): System_Collections_Generic_Internal.IEnumerator_1$instance<KeyValuePair_2<System_Internal.String, unknown>>;
     As_IEnumerator(): System_Collections_Internal.IEnumerator$instance;
 }
 
@@ -396,7 +371,7 @@ export type ActivityTagsCollection_Enumerator = ActivityTagsCollection_Enumerato
 
 
 export interface ActivityTraceId$instance {
-    CopyTo(destination: Span_1<CLROf<byte>>): void;
+    CopyTo(destination: Span_1<System_Internal.Byte>): void;
     Equals(traceId: ActivityTraceId): boolean;
     Equals(obj: unknown): boolean;
     GetHashCode(): int;
@@ -407,9 +382,9 @@ export interface ActivityTraceId$instance {
 
 export const ActivityTraceId: {
     new(): ActivityTraceId$instance;
-    CreateFromBytes(idData: ReadOnlySpan_1<CLROf<byte>>): ActivityTraceId;
-    CreateFromString(idData: ReadOnlySpan_1<CLROf<char>>): ActivityTraceId;
-    CreateFromUtf8String(idData: ReadOnlySpan_1<CLROf<byte>>): ActivityTraceId;
+    CreateFromBytes(idData: ReadOnlySpan_1<System_Internal.Byte>): ActivityTraceId;
+    CreateFromString(idData: ReadOnlySpan_1<System_Internal.Char>): ActivityTraceId;
+    CreateFromUtf8String(idData: ReadOnlySpan_1<System_Internal.Byte>): ActivityTraceId;
     CreateRandom(): ActivityTraceId;
 };
 
@@ -429,8 +404,8 @@ export interface Debug_AssertInterpolatedStringHandler$instance {
     AppendFormatted<T>(value: T, format: string): void;
     AppendFormatted<T>(value: T, alignment: int): void;
     AppendFormatted<T>(value: T, alignment: int, format: string): void;
-    AppendFormatted(value: ReadOnlySpan_1<CLROf<char>>): void;
-    AppendFormatted(value: ReadOnlySpan_1<CLROf<char>>, alignment?: int, format?: string): void;
+    AppendFormatted(value: ReadOnlySpan_1<System_Internal.Char>): void;
+    AppendFormatted(value: ReadOnlySpan_1<System_Internal.Char>, alignment?: int, format?: string): void;
     AppendFormatted(value: string): void;
     AppendFormatted(value: string, alignment?: int, format?: string): void;
     AppendFormatted(value: unknown, alignment?: int, format?: string): void;
@@ -439,7 +414,7 @@ export interface Debug_AssertInterpolatedStringHandler$instance {
 
 
 export const Debug_AssertInterpolatedStringHandler: {
-    new(literalLength: int, formattedCount: int, condition: boolean, shouldAppend: ref<boolean>): Debug_AssertInterpolatedStringHandler$instance;
+    new(literalLength: int, formattedCount: int, condition: boolean, shouldAppend: boolean): Debug_AssertInterpolatedStringHandler$instance;
 };
 
 
@@ -450,8 +425,8 @@ export interface Debug_WriteIfInterpolatedStringHandler$instance {
     AppendFormatted<T>(value: T, format: string): void;
     AppendFormatted<T>(value: T, alignment: int): void;
     AppendFormatted<T>(value: T, alignment: int, format: string): void;
-    AppendFormatted(value: ReadOnlySpan_1<CLROf<char>>): void;
-    AppendFormatted(value: ReadOnlySpan_1<CLROf<char>>, alignment?: int, format?: string): void;
+    AppendFormatted(value: ReadOnlySpan_1<System_Internal.Char>): void;
+    AppendFormatted(value: ReadOnlySpan_1<System_Internal.Char>, alignment?: int, format?: string): void;
     AppendFormatted(value: string): void;
     AppendFormatted(value: string, alignment?: int, format?: string): void;
     AppendFormatted(value: unknown, alignment?: int, format?: string): void;
@@ -460,7 +435,7 @@ export interface Debug_WriteIfInterpolatedStringHandler$instance {
 
 
 export const Debug_WriteIfInterpolatedStringHandler: {
-    new(literalLength: int, formattedCount: int, condition: boolean, shouldAppend: ref<boolean>): Debug_WriteIfInterpolatedStringHandler$instance;
+    new(literalLength: int, formattedCount: int, condition: boolean, shouldAppend: boolean): Debug_WriteIfInterpolatedStringHandler$instance;
 };
 
 
@@ -469,31 +444,31 @@ export type Debug_WriteIfInterpolatedStringHandler = Debug_WriteIfInterpolatedSt
 export interface TagList$instance {
     readonly Count: int;
     readonly IsReadOnly: boolean;
-    Item: KeyValuePair_2<CLROf<string>, unknown>;
+    Item: KeyValuePair_2<System_Internal.String, unknown>;
     Add(key: string, value: unknown): void;
-    Add(tag: KeyValuePair_2<CLROf<string>, unknown>): void;
+    Add(tag: KeyValuePair_2<System_Internal.String, unknown>): void;
     Clear(): void;
-    Contains(item: KeyValuePair_2<CLROf<string>, unknown>): boolean;
-    CopyTo(tags: Span_1<KeyValuePair_2<CLROf<string>, unknown>>): void;
-    CopyTo(array: KeyValuePair_2<CLROf<string>, unknown>[], arrayIndex: int): void;
-    GetEnumerator(): IEnumerator_1<KeyValuePair_2<CLROf<string>, unknown>>;
-    IndexOf(item: KeyValuePair_2<CLROf<string>, unknown>): int;
-    Insert(index: int, item: KeyValuePair_2<CLROf<string>, unknown>): void;
-    Remove(item: KeyValuePair_2<CLROf<string>, unknown>): boolean;
+    Contains(item: KeyValuePair_2<System_Internal.String, unknown>): boolean;
+    CopyTo(tags: Span_1<KeyValuePair_2<System_Internal.String, unknown>>): void;
+    CopyTo(array: KeyValuePair_2<System_Internal.String, unknown>[], arrayIndex: int): void;
+    GetEnumerator(): IEnumerator_1<KeyValuePair_2<System_Internal.String, unknown>>;
+    IndexOf(item: KeyValuePair_2<System_Internal.String, unknown>): int;
+    Insert(index: int, item: KeyValuePair_2<System_Internal.String, unknown>): void;
+    Remove(item: KeyValuePair_2<System_Internal.String, unknown>): boolean;
     RemoveAt(index: int): void;
 }
 
 
 export const TagList: {
-    new(tagList: ReadOnlySpan_1<KeyValuePair_2<CLROf<string>, unknown>>): TagList$instance;
+    new(tagList: ReadOnlySpan_1<KeyValuePair_2<System_Internal.String, unknown>>): TagList$instance;
 };
 
 
 export interface __TagList$views {
-    As_ICollection_1(): System_Collections_Generic_Internal.ICollection_1$instance<KeyValuePair_2<CLROf<string>, unknown>>;
-    As_IEnumerable_1(): System_Collections_Generic_Internal.IEnumerable_1$instance<KeyValuePair_2<CLROf<string>, unknown>>;
-    As_IList_1(): System_Collections_Generic_Internal.IList_1$instance<KeyValuePair_2<CLROf<string>, unknown>>;
-    As_IReadOnlyCollection_1(): System_Collections_Generic_Internal.IReadOnlyCollection_1$instance<KeyValuePair_2<CLROf<string>, unknown>>;
+    As_ICollection_1(): System_Collections_Generic_Internal.ICollection_1$instance<KeyValuePair_2<System_Internal.String, unknown>>;
+    As_IEnumerable_1(): System_Collections_Generic_Internal.IEnumerable_1$instance<KeyValuePair_2<System_Internal.String, unknown>>;
+    As_IList_1(): System_Collections_Generic_Internal.IList_1$instance<KeyValuePair_2<System_Internal.String, unknown>>;
+    As_IReadOnlyCollection_1(): System_Collections_Generic_Internal.IReadOnlyCollection_1$instance<KeyValuePair_2<System_Internal.String, unknown>>;
     As_IEnumerable(): System_Collections_Internal.IEnumerable$instance;
 }
 
@@ -501,7 +476,7 @@ export type TagList = TagList$instance & __TagList$views;
 
 
 export interface TagList_Enumerator$instance extends IDisposable {
-    readonly Current: KeyValuePair_2<CLROf<string>, unknown>;
+    readonly Current: KeyValuePair_2<System_Internal.String, unknown>;
     Dispose(): void;
     MoveNext(): boolean;
     Reset(): void;
@@ -514,7 +489,7 @@ export const TagList_Enumerator: {
 
 
 export interface __TagList_Enumerator$views {
-    As_IEnumerator_1(): System_Collections_Generic_Internal.IEnumerator_1$instance<KeyValuePair_2<CLROf<string>, unknown>>;
+    As_IEnumerator_1(): System_Collections_Generic_Internal.IEnumerator_1$instance<KeyValuePair_2<System_Internal.String, unknown>>;
     As_IEnumerator(): System_Collections_Internal.IEnumerator$instance;
 }
 
@@ -523,7 +498,7 @@ export type TagList_Enumerator = TagList_Enumerator$instance & __TagList_Enumera
 
 export interface Activity$instance {
     ActivityTraceFlags: ActivityTraceFlags;
-    readonly Baggage: IEnumerable_1<KeyValuePair_2<CLROf<string>, CLROf<string>>>;
+    readonly Baggage: IEnumerable_1<KeyValuePair_2<System_Internal.String, System_Internal.String>>;
     readonly Context: ActivityContext;
     DisplayName: string;
     readonly Duration: TimeSpan;
@@ -546,20 +521,20 @@ export interface Activity$instance {
     readonly StartTimeUtc: DateTime;
     readonly Status: ActivityStatusCode;
     readonly StatusDescription: string;
-    readonly TagObjects: IEnumerable_1<KeyValuePair_2<CLROf<string>, unknown>>;
-    readonly Tags: IEnumerable_1<KeyValuePair_2<CLROf<string>, CLROf<string>>>;
+    readonly TagObjects: IEnumerable_1<KeyValuePair_2<System_Internal.String, unknown>>;
+    readonly Tags: IEnumerable_1<KeyValuePair_2<System_Internal.String, System_Internal.String>>;
     readonly TraceId: ActivityTraceId;
     TraceStateString: string;
     AddBaggage(key: string, value: string): Activity;
     AddEvent(e: ActivityEvent): Activity;
-    AddException(exception: Exception, tags?: { value: ref<TagList> }, timestamp?: DateTimeOffset): Activity;
+    AddException(exception: Exception, tags?: TagList, timestamp?: DateTimeOffset): Activity;
     AddLink(link: ActivityLink): Activity;
     AddTag(key: string, value: string): Activity;
     AddTag(key: string, value: unknown): Activity;
     Dispose(): void;
     EnumerateEvents(): Activity_Enumerator_1<ActivityEvent>;
     EnumerateLinks(): Activity_Enumerator_1<ActivityLink>;
-    EnumerateTagObjects(): Activity_Enumerator_1<KeyValuePair_2<CLROf<string>, unknown>>;
+    EnumerateTagObjects(): Activity_Enumerator_1<KeyValuePair_2<System_Internal.String, unknown>>;
     GetBaggageItem(key: string): string;
     GetCustomProperty(propertyName: string): unknown;
     GetTagItem(key: string): unknown;
@@ -600,8 +575,8 @@ export interface ActivityListener$instance {
     ActivityStopped: Action_1<Activity>;
     ExceptionRecorder: ExceptionRecorder;
     Sample: SampleActivity_1<ActivityContext>;
-    SampleUsingParentId: SampleActivity_1<CLROf<string>>;
-    ShouldListenTo: Func_2<ActivitySource, CLROf<boolean>>;
+    SampleUsingParentId: SampleActivity_1<System_Internal.String>;
+    ShouldListenTo: Func_2<ActivitySource, System_Internal.Boolean>;
     Dispose(): void;
 }
 
@@ -622,25 +597,25 @@ export type ActivityListener = ActivityListener$instance & __ActivityListener$vi
 
 export interface ActivitySource$instance {
     readonly Name: string;
-    readonly Tags: IEnumerable_1<KeyValuePair_2<CLROf<string>, unknown>>;
+    readonly Tags: IEnumerable_1<KeyValuePair_2<System_Internal.String, unknown>>;
     readonly TelemetrySchemaUrl: string;
     readonly Version: string;
     CreateActivity(name: string, kind: ActivityKind): Activity;
-    CreateActivity(name: string, kind: ActivityKind, parentContext: ActivityContext, tags?: IEnumerable_1<KeyValuePair_2<CLROf<string>, unknown>>, links?: IEnumerable_1<ActivityLink>, idFormat?: ActivityIdFormat): Activity;
-    CreateActivity(name: string, kind: ActivityKind, parentId: string, tags?: IEnumerable_1<KeyValuePair_2<CLROf<string>, unknown>>, links?: IEnumerable_1<ActivityLink>, idFormat?: ActivityIdFormat): Activity;
+    CreateActivity(name: string, kind: ActivityKind, parentContext: ActivityContext, tags?: IEnumerable_1<KeyValuePair_2<System_Internal.String, unknown>>, links?: IEnumerable_1<ActivityLink>, idFormat?: ActivityIdFormat): Activity;
+    CreateActivity(name: string, kind: ActivityKind, parentId: string, tags?: IEnumerable_1<KeyValuePair_2<System_Internal.String, unknown>>, links?: IEnumerable_1<ActivityLink>, idFormat?: ActivityIdFormat): Activity;
     Dispose(): void;
     HasListeners(): boolean;
     StartActivity(name?: string, kind?: ActivityKind): Activity;
-    StartActivity(name: string, kind: ActivityKind, parentContext: ActivityContext, tags?: IEnumerable_1<KeyValuePair_2<CLROf<string>, unknown>>, links?: IEnumerable_1<ActivityLink>, startTime?: DateTimeOffset): Activity;
-    StartActivity(name: string, kind: ActivityKind, parentId: string, tags?: IEnumerable_1<KeyValuePair_2<CLROf<string>, unknown>>, links?: IEnumerable_1<ActivityLink>, startTime?: DateTimeOffset): Activity;
-    StartActivity(kind: ActivityKind, parentContext?: ActivityContext, tags?: IEnumerable_1<KeyValuePair_2<CLROf<string>, unknown>>, links?: IEnumerable_1<ActivityLink>, startTime?: DateTimeOffset, name?: string): Activity;
+    StartActivity(name: string, kind: ActivityKind, parentContext: ActivityContext, tags?: IEnumerable_1<KeyValuePair_2<System_Internal.String, unknown>>, links?: IEnumerable_1<ActivityLink>, startTime?: DateTimeOffset): Activity;
+    StartActivity(name: string, kind: ActivityKind, parentId: string, tags?: IEnumerable_1<KeyValuePair_2<System_Internal.String, unknown>>, links?: IEnumerable_1<ActivityLink>, startTime?: DateTimeOffset): Activity;
+    StartActivity(kind: ActivityKind, parentContext?: ActivityContext, tags?: IEnumerable_1<KeyValuePair_2<System_Internal.String, unknown>>, links?: IEnumerable_1<ActivityLink>, startTime?: DateTimeOffset, name?: string): Activity;
 }
 
 
 export const ActivitySource: {
     new(name: string): ActivitySource$instance;
     new(name: string, version: string): ActivitySource$instance;
-    new(name: string, version: string, tags: IEnumerable_1<KeyValuePair_2<CLROf<string>, unknown>>): ActivitySource$instance;
+    new(name: string, version: string, tags: IEnumerable_1<KeyValuePair_2<System_Internal.String, unknown>>): ActivitySource$instance;
     new(options: ActivitySourceOptions): ActivitySource$instance;
     AddActivityListener(listener: ActivityListener): void;
 };
@@ -657,7 +632,7 @@ export type ActivitySource = ActivitySource$instance & __ActivitySource$views;
 
 export interface ActivitySourceOptions$instance {
     Name: string;
-    Tags: IEnumerable_1<KeyValuePair_2<CLROf<string>, unknown>>;
+    Tags: IEnumerable_1<KeyValuePair_2<System_Internal.String, unknown>>;
     TelemetrySchemaUrl: string;
     Version: string;
 }
@@ -674,31 +649,31 @@ export interface ActivityTagsCollection$instance {
     readonly Count: int;
     readonly IsReadOnly: boolean;
     Item: unknown;
-    readonly Keys: ICollection_1<CLROf<string>>;
+    readonly Keys: ICollection_1<System_Internal.String>;
     readonly Values: ICollection_1<unknown>;
     Add(key: string, value: unknown): void;
-    Add(item: KeyValuePair_2<CLROf<string>, unknown>): void;
+    Add(item: KeyValuePair_2<System_Internal.String, unknown>): void;
     Clear(): void;
-    Contains(item: KeyValuePair_2<CLROf<string>, unknown>): boolean;
+    Contains(item: KeyValuePair_2<System_Internal.String, unknown>): boolean;
     ContainsKey(key: string): boolean;
-    CopyTo(array: KeyValuePair_2<CLROf<string>, unknown>[], arrayIndex: int): void;
+    CopyTo(array: KeyValuePair_2<System_Internal.String, unknown>[], arrayIndex: int): void;
     GetEnumerator(): ActivityTagsCollection_Enumerator;
     Remove(key: string): boolean;
-    Remove(item: KeyValuePair_2<CLROf<string>, unknown>): boolean;
-    TryGetValue(key: string, value: { value: ref<unknown> }): boolean;
+    Remove(item: KeyValuePair_2<System_Internal.String, unknown>): boolean;
+    TryGetValue(key: string, value: unknown): boolean;
 }
 
 
 export const ActivityTagsCollection: {
     new(): ActivityTagsCollection$instance;
-    new(list: IEnumerable_1<KeyValuePair_2<CLROf<string>, unknown>>): ActivityTagsCollection$instance;
+    new(list: IEnumerable_1<KeyValuePair_2<System_Internal.String, unknown>>): ActivityTagsCollection$instance;
 };
 
 
 export interface __ActivityTagsCollection$views {
-    As_ICollection_1(): System_Collections_Generic_Internal.ICollection_1$instance<KeyValuePair_2<CLROf<string>, unknown>>;
-    As_IDictionary_2(): System_Collections_Generic_Internal.IDictionary_2$instance<CLROf<string>, unknown>;
-    As_IEnumerable_1(): System_Collections_Generic_Internal.IEnumerable_1$instance<KeyValuePair_2<CLROf<string>, unknown>>;
+    As_ICollection_1(): System_Collections_Generic_Internal.ICollection_1$instance<KeyValuePair_2<System_Internal.String, unknown>>;
+    As_IDictionary_2(): System_Collections_Generic_Internal.IDictionary_2$instance<System_Internal.String, unknown>;
+    As_IEnumerable_1(): System_Collections_Generic_Internal.IEnumerable_1$instance<KeyValuePair_2<System_Internal.String, unknown>>;
     As_IEnumerable(): System_Collections_Internal.IEnumerable$instance;
 }
 
@@ -993,10 +968,10 @@ export interface DiagnosticListener$instance extends DiagnosticSource {
     IsEnabled(name: string, arg1: unknown, arg2?: unknown): boolean;
     OnActivityExport(activity: Activity, payload: unknown): void;
     OnActivityImport(activity: Activity, payload: unknown): void;
-    Subscribe(observer: IObserver_1<KeyValuePair_2<CLROf<string>, unknown>>, isEnabled: Func_4<CLROf<string>, unknown, unknown, CLROf<boolean>>, onActivityImport?: Action_2<Activity, unknown>, onActivityExport?: Action_2<Activity, unknown>): IDisposable;
-    Subscribe(observer: IObserver_1<KeyValuePair_2<CLROf<string>, unknown>>, isEnabled: Predicate_1<CLROf<string>>): IDisposable;
-    Subscribe(observer: IObserver_1<KeyValuePair_2<CLROf<string>, unknown>>, isEnabled: Func_4<CLROf<string>, unknown, unknown, CLROf<boolean>>): IDisposable;
-    Subscribe(observer: IObserver_1<KeyValuePair_2<CLROf<string>, unknown>>): IDisposable;
+    Subscribe(observer: IObserver_1<KeyValuePair_2<System_Internal.String, unknown>>, isEnabled: Func_4<System_Internal.String, unknown, unknown, System_Internal.Boolean>, onActivityImport?: Action_2<Activity, unknown>, onActivityExport?: Action_2<Activity, unknown>): IDisposable;
+    Subscribe(observer: IObserver_1<KeyValuePair_2<System_Internal.String, unknown>>, isEnabled: Predicate_1<System_Internal.String>): IDisposable;
+    Subscribe(observer: IObserver_1<KeyValuePair_2<System_Internal.String, unknown>>, isEnabled: Func_4<System_Internal.String, unknown, unknown, System_Internal.Boolean>): IDisposable;
+    Subscribe(observer: IObserver_1<KeyValuePair_2<System_Internal.String, unknown>>): IDisposable;
     ToString(): string;
     Write(name: string, value: unknown): void;
     Write<T>(name: string, value: T): void;
@@ -1011,7 +986,7 @@ export const DiagnosticListener: {
 
 export interface __DiagnosticListener$views {
     As_IDisposable(): System_Internal.IDisposable$instance;
-    As_IObservable_1(): System_Internal.IObservable_1$instance<KeyValuePair_2<CLROf<string>, unknown>>;
+    As_IObservable_1(): System_Internal.IObservable_1$instance<KeyValuePair_2<System_Internal.String, unknown>>;
 }
 
 export interface DiagnosticListener$instance extends System_Internal.IDisposable$instance {}
@@ -1056,9 +1031,9 @@ export const DiagnosticSource: {
 export type DiagnosticSource = DiagnosticSource$instance;
 
 export interface DistributedContextPropagator$instance {
-    readonly Fields: IReadOnlyCollection_1<CLROf<string>>;
-    ExtractBaggage(carrier: unknown, getter: DistributedContextPropagator_PropagatorGetterCallback): IEnumerable_1<KeyValuePair_2<CLROf<string>, CLROf<string>>>;
-    ExtractTraceIdAndState(carrier: unknown, getter: DistributedContextPropagator_PropagatorGetterCallback, traceId: { value: ref<string> }, traceState: { value: ref<string> }): void;
+    readonly Fields: IReadOnlyCollection_1<System_Internal.String>;
+    ExtractBaggage(carrier: unknown, getter: DistributedContextPropagator_PropagatorGetterCallback): IEnumerable_1<KeyValuePair_2<System_Internal.String, System_Internal.String>>;
+    ExtractTraceIdAndState(carrier: unknown, getter: DistributedContextPropagator_PropagatorGetterCallback, traceId: string, traceState: string): void;
     Inject(activity: Activity, carrier: unknown, setter: DistributedContextPropagator_PropagatorSetterCallback): void;
 }
 
@@ -1250,7 +1225,7 @@ export const Process: {
     GetProcessesByName(processName: string): Process[];
     LeaveDebugMode(): void;
     Start(startInfo: ProcessStartInfo): Process;
-    Start(fileName: string, arguments: IEnumerable_1<CLROf<string>>): Process;
+    Start(fileName: string, arguments: IEnumerable_1<System_Internal.String>): Process;
     Start(fileName: string, userName: string, password: SecureString, domain: string): Process;
     Start(fileName: string, arguments: string, userName: string, password: SecureString, domain: string): Process;
     Start(fileName: string, arguments: string): Process;
@@ -1320,12 +1295,12 @@ export type ProcessModuleCollection = ProcessModuleCollection$instance & __Proce
 
 
 export interface ProcessStartInfo$instance {
-    readonly ArgumentList: Collection_1<CLROf<string>>;
+    readonly ArgumentList: Collection_1<System_Internal.String>;
     Arguments: string;
     CreateNewProcessGroup: boolean;
     CreateNoWindow: boolean;
     Domain: string;
-    readonly Environment: IDictionary_2<CLROf<string>, CLROf<string>>;
+    readonly Environment: IDictionary_2<System_Internal.String, System_Internal.String>;
     readonly EnvironmentVariables: StringDictionary;
     ErrorDialog: boolean;
     ErrorDialogParentHandle: nint;
@@ -1353,7 +1328,7 @@ export const ProcessStartInfo: {
     new(): ProcessStartInfo$instance;
     new(fileName: string): ProcessStartInfo$instance;
     new(fileName: string, arguments: string): ProcessStartInfo$instance;
-    new(fileName: string, arguments: IEnumerable_1<CLROf<string>>): ProcessStartInfo$instance;
+    new(fileName: string, arguments: IEnumerable_1<System_Internal.String>): ProcessStartInfo$instance;
 };
 
 
@@ -1871,8 +1846,8 @@ export abstract class Debug$instance {
     static AutoFlush: boolean;
     static IndentLevel: int;
     static IndentSize: int;
-    static Assert(condition: boolean, message: { value: ref<Debug_AssertInterpolatedStringHandler> }, detailMessage: { value: ref<Debug_AssertInterpolatedStringHandler> }): void;
-    static Assert(condition: boolean, message: { value: ref<Debug_AssertInterpolatedStringHandler> }): void;
+    static Assert(condition: boolean, message: Debug_AssertInterpolatedStringHandler, detailMessage: Debug_AssertInterpolatedStringHandler): void;
+    static Assert(condition: boolean, message: Debug_AssertInterpolatedStringHandler): void;
     static Assert(condition: boolean, message: string, detailMessageFormat: string, ...args: unknown[]): void;
     static Assert(condition: boolean, message: string, detailMessage: string): void;
     static Assert(condition: boolean, message?: string): void;
@@ -1890,8 +1865,8 @@ export abstract class Debug$instance {
     static Write(value: unknown): void;
     static Write(message: string, category: string): void;
     static Write(message: string): void;
-    static WriteIf(condition: boolean, message: { value: ref<Debug_WriteIfInterpolatedStringHandler> }, category: string): void;
-    static WriteIf(condition: boolean, message: { value: ref<Debug_WriteIfInterpolatedStringHandler> }): void;
+    static WriteIf(condition: boolean, message: Debug_WriteIfInterpolatedStringHandler, category: string): void;
+    static WriteIf(condition: boolean, message: Debug_WriteIfInterpolatedStringHandler): void;
     static WriteIf(condition: boolean, value: unknown, category: string): void;
     static WriteIf(condition: boolean, value: unknown): void;
     static WriteIf(condition: boolean, message: string, category: string): void;
@@ -1901,8 +1876,8 @@ export abstract class Debug$instance {
     static WriteLine(format: string, ...args: unknown[]): void;
     static WriteLine(message: string, category: string): void;
     static WriteLine(message: string): void;
-    static WriteLineIf(condition: boolean, message: { value: ref<Debug_WriteIfInterpolatedStringHandler> }, category: string): void;
-    static WriteLineIf(condition: boolean, message: { value: ref<Debug_WriteIfInterpolatedStringHandler> }): void;
+    static WriteLineIf(condition: boolean, message: Debug_WriteIfInterpolatedStringHandler, category: string): void;
+    static WriteLineIf(condition: boolean, message: Debug_WriteIfInterpolatedStringHandler): void;
     static WriteLineIf(condition: boolean, value: unknown, category: string): void;
     static WriteLineIf(condition: boolean, value: unknown): void;
     static WriteLineIf(condition: boolean, message: string, category: string): void;

@@ -2600,7 +2600,17 @@
           "parameterCount": 4,
           "declaringClrType": "System.IO.Compression.BrotliDecoder",
           "declaringAssemblyName": "System.IO.Compression.Brotli",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            },
+            {
+              "index": 3,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.IO.Compression.Brotli:System.IO.Compression.BrotliDecoder::TryDecompress(System.ReadOnlySpan_1[[System.Byte,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Span_1[[System.Byte,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Int32\u0026):System.Boolean",
@@ -2614,7 +2624,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.IO.Compression.BrotliDecoder",
           "declaringAssemblyName": "System.IO.Compression.Brotli",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.IDisposable::Dispose():System.Void",
@@ -2785,7 +2801,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.IO.Compression.BrotliEncoder",
           "declaringAssemblyName": "System.IO.Compression.Brotli",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.IO.Compression.Brotli:System.IO.Compression.BrotliEncoder::Compress(System.ReadOnlySpan_1[[System.Byte,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Span_1[[System.Byte,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Int32\u0026,System.Int32\u0026,System.Boolean):System.Buffers.OperationStatus",
@@ -2799,7 +2821,17 @@
           "parameterCount": 5,
           "declaringClrType": "System.IO.Compression.BrotliEncoder",
           "declaringAssemblyName": "System.IO.Compression.Brotli",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            },
+            {
+              "index": 3,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.IO.Compression.Brotli:System.IO.Compression.BrotliEncoder::TryCompress(System.ReadOnlySpan_1[[System.Byte,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Span_1[[System.Byte,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Int32\u0026):System.Boolean",
@@ -2813,7 +2845,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.IO.Compression.BrotliEncoder",
           "declaringAssemblyName": "System.IO.Compression.Brotli",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.IO.Compression.Brotli:System.IO.Compression.BrotliEncoder::TryCompress(System.ReadOnlySpan_1[[System.Byte,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Span_1[[System.Byte,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Int32\u0026,System.Int32,System.Int32):System.Boolean",
@@ -2827,7 +2865,13 @@
           "parameterCount": 5,
           "declaringClrType": "System.IO.Compression.BrotliEncoder",
           "declaringAssemblyName": "System.IO.Compression.Brotli",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.IDisposable::Dispose():System.Void",

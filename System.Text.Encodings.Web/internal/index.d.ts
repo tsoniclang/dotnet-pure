@@ -6,7 +6,7 @@
 import type { sbyte, byte, short, ushort, int, uint, long, ulong, int128, uint128, half, float, double, decimal, nint, nuint, char } from '@tsonic/types';
 
 // Import support types from @tsonic/types
-import type { ptr, ref } from "@tsonic/types";
+import type { ptr } from "@tsonic/types";
 
 // Import types from other namespaces
 import type { OperationStatus } from "../../System.Buffers/internal/index.js";
@@ -15,31 +15,6 @@ import type { TextWriter } from "../../System.IO/internal/index.js";
 import type { UnicodeRange } from "../../System.Text.Unicode/internal/index.js";
 import * as System_Internal from "../../System/internal/index.js";
 import type { Boolean as ClrBoolean, Byte, Char, Int32, Object as ClrObject, ReadOnlySpan_1, Span_1, String as ClrString, Type, Void } from "../../System/internal/index.js";
-
-// CLROf<T> - Maps ergonomic primitives to their CLR types for generic constraints
-// This utility is used ONLY in generic type arguments to satisfy CLR interface constraints
-// Value positions (parameters, return types) use lowercase primitives for ergonomics
-export type CLROf<T> =
-    T extends sbyte ? System_Internal.SByte :
-    T extends short ? System_Internal.Int16 :
-    T extends int ? System_Internal.Int32 :
-    T extends long ? System_Internal.Int64 :
-    T extends int128 ? System_Internal.Int128 :
-    T extends nint ? System_Internal.IntPtr :
-    T extends byte ? System_Internal.Byte :
-    T extends ushort ? System_Internal.UInt16 :
-    T extends uint ? System_Internal.UInt32 :
-    T extends ulong ? System_Internal.UInt64 :
-    T extends uint128 ? System_Internal.UInt128 :
-    T extends nuint ? System_Internal.UIntPtr :
-    T extends half ? System_Internal.Half :
-    T extends float ? System_Internal.Single :
-    T extends double ? System_Internal.Double :
-    T extends decimal ? System_Internal.Decimal :
-    T extends char ? System_Internal.Char :
-    T extends boolean ? System_Internal.Boolean :
-    T extends string ? System_Internal.String :
-    T; // Identity fallback for non-primitive types
 
 export interface HtmlEncoder$instance extends TextEncoder {
 }
@@ -74,11 +49,11 @@ export interface TextEncoder$instance {
     Encode(output: TextWriter, value: string): void;
     Encode(output: TextWriter, value: string, startIndex: int, characterCount: int): void;
     Encode(output: TextWriter, value: char[], startIndex: int, characterCount: int): void;
-    Encode(source: ReadOnlySpan_1<CLROf<char>>, destination: Span_1<CLROf<char>>, charsConsumed: { value: ref<int> }, charsWritten: { value: ref<int> }, isFinalBlock?: boolean): OperationStatus;
-    EncodeUtf8(utf8Source: ReadOnlySpan_1<CLROf<byte>>, utf8Destination: Span_1<CLROf<byte>>, bytesConsumed: { value: ref<int> }, bytesWritten: { value: ref<int> }, isFinalBlock?: boolean): OperationStatus;
+    Encode(source: ReadOnlySpan_1<System_Internal.Char>, destination: Span_1<System_Internal.Char>, charsConsumed: int, charsWritten: int, isFinalBlock?: boolean): OperationStatus;
+    EncodeUtf8(utf8Source: ReadOnlySpan_1<System_Internal.Byte>, utf8Destination: Span_1<System_Internal.Byte>, bytesConsumed: int, bytesWritten: int, isFinalBlock?: boolean): OperationStatus;
     FindFirstCharacterToEncode(text: ptr<char>, textLength: int): int;
-    FindFirstCharacterToEncodeUtf8(utf8Text: ReadOnlySpan_1<CLROf<byte>>): int;
-    TryEncodeUnicodeScalar(unicodeScalar: int, buffer: ptr<char>, bufferLength: int, numberOfCharactersWritten: { value: ref<int> }): boolean;
+    FindFirstCharacterToEncodeUtf8(utf8Text: ReadOnlySpan_1<System_Internal.Byte>): int;
+    TryEncodeUnicodeScalar(unicodeScalar: int, buffer: ptr<char>, bufferLength: int, numberOfCharactersWritten: int): boolean;
     WillEncode(unicodeScalar: int): boolean;
 }
 
@@ -92,7 +67,7 @@ export type TextEncoder = TextEncoder$instance;
 export interface TextEncoderSettings$instance {
     AllowCharacter(character: char): void;
     AllowCharacters(...characters: char[]): void;
-    AllowCodePoints(codePoints: IEnumerable_1<CLROf<int>>): void;
+    AllowCodePoints(codePoints: IEnumerable_1<System_Internal.Int32>): void;
     AllowRange(range: UnicodeRange): void;
     AllowRanges(...ranges: UnicodeRange[]): void;
     Clear(): void;
@@ -100,7 +75,7 @@ export interface TextEncoderSettings$instance {
     ForbidCharacters(...characters: char[]): void;
     ForbidRange(range: UnicodeRange): void;
     ForbidRanges(...ranges: UnicodeRange[]): void;
-    GetAllowedCodePoints(): IEnumerable_1<CLROf<int>>;
+    GetAllowedCodePoints(): IEnumerable_1<System_Internal.Int32>;
 }
 
 

@@ -6,7 +6,7 @@
 import type { sbyte, byte, short, ushort, int, uint, long, ulong, int128, uint128, half, float, double, decimal, nint, nuint, char } from '@tsonic/types';
 
 // Import support types from @tsonic/types
-import type { ptr, ref } from "@tsonic/types";
+import type { ptr } from "@tsonic/types";
 
 // Import types from other namespaces
 import type { Dictionary_2, IEnumerable_1, List_1 } from "../../System.Collections.Generic/internal/index.js";
@@ -17,31 +17,6 @@ import type { XmlSchemaElement, XmlSchemaSet, XmlSchemaType } from "../../System
 import type { XmlDictionaryString, XmlQualifiedName } from "../../System.Xml/internal/index.js";
 import * as System_Internal from "../../System/internal/index.js";
 import type { Boolean as ClrBoolean, Int32, Int64, Nullable_1, Object as ClrObject, String as ClrString, Type, Void } from "../../System/internal/index.js";
-
-// CLROf<T> - Maps ergonomic primitives to their CLR types for generic constraints
-// This utility is used ONLY in generic type arguments to satisfy CLR interface constraints
-// Value positions (parameters, return types) use lowercase primitives for ergonomics
-export type CLROf<T> =
-    T extends sbyte ? System_Internal.SByte :
-    T extends short ? System_Internal.Int16 :
-    T extends int ? System_Internal.Int32 :
-    T extends long ? System_Internal.Int64 :
-    T extends int128 ? System_Internal.Int128 :
-    T extends nint ? System_Internal.IntPtr :
-    T extends byte ? System_Internal.Byte :
-    T extends ushort ? System_Internal.UInt16 :
-    T extends uint ? System_Internal.UInt32 :
-    T extends ulong ? System_Internal.UInt64 :
-    T extends uint128 ? System_Internal.UInt128 :
-    T extends nuint ? System_Internal.UIntPtr :
-    T extends half ? System_Internal.Half :
-    T extends float ? System_Internal.Single :
-    T extends double ? System_Internal.Double :
-    T extends decimal ? System_Internal.Decimal :
-    T extends char ? System_Internal.Char :
-    T extends boolean ? System_Internal.Boolean :
-    T extends string ? System_Internal.String :
-    T; // Identity fallback for non-primitive types
 
 export interface DataContract$instance {
     readonly BaseContract: DataContract;
@@ -60,7 +35,7 @@ export interface DataContract$instance {
     Equals(obj: unknown): boolean;
     GetArrayTypeName(isNullable: boolean): XmlQualifiedName;
     GetHashCode(): int;
-    IsDictionaryLike(keyName: { value: ref<string> }, valueName: { value: ref<string> }, itemName: { value: ref<string> }): boolean;
+    IsDictionaryLike(keyName: string, valueName: string, itemName: string): boolean;
 }
 
 
@@ -79,7 +54,7 @@ export interface DataContractSet$instance {
     readonly SurrogateData: Hashtable;
     GetDataContract(type_: Type): DataContract;
     GetDataContract(key: XmlQualifiedName): DataContract;
-    GetReferencedType(xmlName: XmlQualifiedName, dataContract: DataContract, referencedContract: { value: ref<DataContract> }, genericParameters: { value: ref<unknown[]> }, supportGenericTypes?: Nullable_1<CLROf<boolean>>): Type;
+    GetReferencedType(xmlName: XmlQualifiedName, dataContract: DataContract, referencedContract: DataContract, genericParameters: unknown[], supportGenericTypes?: Nullable_1<System_Internal.Boolean>): Type;
     ImportSchemaSet(schemaSet: XmlSchemaSet, typeNames: IEnumerable_1<XmlQualifiedName>, importXmlDataType: boolean): void;
     ImportSchemaSet(schemaSet: XmlSchemaSet, elements: IEnumerable_1<XmlSchemaElement>, importXmlDataType: boolean): List_1<XmlQualifiedName>;
 }

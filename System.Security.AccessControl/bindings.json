@@ -26598,7 +26598,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.Security.AccessControl.ObjectSecurity",
           "declaringAssemblyName": "System.Security.AccessControl",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Security.AccessControl:System.Security.AccessControl.ObjectSecurity::ModifyAuditRule(System.Security.AccessControl.AccessControlModification,System.Security.AccessControl.AuditRule,System.Boolean\u0026):System.Boolean",
@@ -26612,7 +26618,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.Security.AccessControl.ObjectSecurity",
           "declaringAssemblyName": "System.Security.AccessControl",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Security.AccessControl:System.Security.AccessControl.ObjectSecurity::PurgeAccessRules(System.Security.Principal.IdentityReference):System.Void",

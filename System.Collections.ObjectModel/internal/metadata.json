@@ -649,7 +649,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.ObjectModel:System.Collections.ObjectModel.KeyedCollection\u00602::Remove(TKey):System.Boolean",
@@ -2633,7 +2639,13 @@
           "isSealed": true,
           "arity": 0,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Collections.ObjectModel.ReadOnlyDictionary\u00602::GetEnumerator():IEnumerator_1",
@@ -2904,7 +2916,13 @@
           "arity": 0,
           "parameterCount": 2,
           "sourceInterface": "System.Collections.Generic.IDictionary\u00602",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Collections.IDictionary::Clear():System.Void",
@@ -2955,7 +2973,13 @@
           "arity": 0,
           "parameterCount": 2,
           "sourceInterface": "System.Collections.Generic.IReadOnlyDictionary\u00602",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         }
       ],
       "properties": [

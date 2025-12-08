@@ -6784,7 +6784,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 1,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Reflection.Metadata:System.Reflection.Metadata.BlobReader::ReadCompressedInteger():System.Int32",
@@ -6816,7 +6822,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 1,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Reflection.Metadata:System.Reflection.Metadata.BlobReader::ReadCompressedSignedInteger():System.Int32",
@@ -21770,7 +21782,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         }
       ],
       "properties": [
@@ -22028,7 +22046,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 1,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Reflection.Metadata:System.Reflection.Metadata.BlobBuilder::WriteContentTo(System.Reflection.Metadata.BlobBuilder):System.Void",
@@ -24775,7 +24799,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 3,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Reflection.Metadata:System.Reflection.Metadata.TypeName::Unescape(System.String):System.String",
@@ -25201,7 +25231,17 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 3,
-          "isExtensionMethod": true
+          "isExtensionMethod": true,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            },
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         }
       ],
       "properties": [],

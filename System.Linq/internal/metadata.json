@@ -4897,7 +4897,13 @@
           "isSealed": false,
           "arity": 1,
           "parameterCount": 2,
-          "isExtensionMethod": true
+          "isExtensionMethod": true,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Linq:System.Linq.Enumerable::LongCount(IEnumerable_1):System.Int64",

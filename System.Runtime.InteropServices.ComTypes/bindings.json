@@ -12869,7 +12869,17 @@
           "parameterCount": 2,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.IAdviseSink",
           "declaringAssemblyName": "System.Runtime.InteropServices",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "in"
+            },
+            {
+              "index": 1,
+              "modifier": "in"
+            }
+          ]
         },
         {
           "stableId": "System.Runtime.InteropServices:System.Runtime.InteropServices.ComTypes.IAdviseSink::OnViewChange(System.Int32,System.Int32):System.Void",
@@ -13008,7 +13018,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.IBindCtx",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "in"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.ComTypes.IBindCtx::GetRunningObjectTable(System.Runtime.InteropServices.ComTypes.IRunningObjectTable\u0026):System.Void",
@@ -13022,7 +13038,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.IBindCtx",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.ComTypes.IBindCtx::RegisterObjectParam(System.String,System.Object):System.Void",
@@ -13050,7 +13072,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.IBindCtx",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.ComTypes.IBindCtx::EnumObjectParam(System.Runtime.InteropServices.ComTypes.IEnumString\u0026):System.Void",
@@ -13064,7 +13092,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.IBindCtx",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.ComTypes.IBindCtx::RevokeObjectParam(System.String):System.Int32",
@@ -13187,7 +13221,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.IConnectionPoint",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.ComTypes.IConnectionPoint::GetConnectionPointContainer(System.Runtime.InteropServices.ComTypes.IConnectionPointContainer\u0026):System.Void",
@@ -13201,7 +13241,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.IConnectionPoint",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.ComTypes.IConnectionPoint::Advise(System.Object,System.Int32\u0026):System.Void",
@@ -13215,7 +13261,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.IConnectionPoint",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.ComTypes.IConnectionPoint::Unadvise(System.Int32):System.Void",
@@ -13243,7 +13295,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.IConnectionPoint",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         }
       ],
       "properties": [],
@@ -13322,7 +13380,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.IConnectionPointContainer",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.ComTypes.IConnectionPointContainer::FindConnectionPoint(System.Guid\u0026,System.Runtime.InteropServices.ComTypes.IConnectionPoint\u0026):System.Void",
@@ -13336,7 +13400,17 @@
           "parameterCount": 2,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.IConnectionPointContainer",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "in"
+            },
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         }
       ],
       "properties": [],
@@ -13385,7 +13459,17 @@
           "parameterCount": 2,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.IDataObject",
           "declaringAssemblyName": "System.Runtime.InteropServices",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "in"
+            },
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Runtime.InteropServices:System.Runtime.InteropServices.ComTypes.IDataObject::QueryGetData(System.Runtime.InteropServices.ComTypes.FORMATETC\u0026):System.Int32",
@@ -13399,7 +13483,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.IDataObject",
           "declaringAssemblyName": "System.Runtime.InteropServices",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "in"
+            }
+          ]
         },
         {
           "stableId": "System.Runtime.InteropServices:System.Runtime.InteropServices.ComTypes.IDataObject::GetCanonicalFormatEtc(System.Runtime.InteropServices.ComTypes.FORMATETC\u0026,System.Runtime.InteropServices.ComTypes.FORMATETC\u0026):System.Int32",
@@ -13413,7 +13503,17 @@
           "parameterCount": 2,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.IDataObject",
           "declaringAssemblyName": "System.Runtime.InteropServices",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "in"
+            },
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Runtime.InteropServices:System.Runtime.InteropServices.ComTypes.IDataObject::SetData(System.Runtime.InteropServices.ComTypes.FORMATETC\u0026,System.Runtime.InteropServices.ComTypes.STGMEDIUM\u0026,System.Boolean):System.Void",
@@ -13427,7 +13527,17 @@
           "parameterCount": 3,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.IDataObject",
           "declaringAssemblyName": "System.Runtime.InteropServices",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "in"
+            },
+            {
+              "index": 1,
+              "modifier": "in"
+            }
+          ]
         },
         {
           "stableId": "System.Runtime.InteropServices:System.Runtime.InteropServices.ComTypes.IDataObject::EnumFormatEtc(System.Runtime.InteropServices.ComTypes.DATADIR):System.Runtime.InteropServices.ComTypes.IEnumFORMATETC",
@@ -13455,7 +13565,17 @@
           "parameterCount": 4,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.IDataObject",
           "declaringAssemblyName": "System.Runtime.InteropServices",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "in"
+            },
+            {
+              "index": 3,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Runtime.InteropServices:System.Runtime.InteropServices.ComTypes.IDataObject::DUnadvise(System.Int32):System.Void",
@@ -13483,7 +13603,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.IDataObject",
           "declaringAssemblyName": "System.Runtime.InteropServices",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         }
       ],
       "properties": [],
@@ -13634,7 +13760,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.IEnumConnectionPoints",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         }
       ],
       "properties": [],
@@ -13745,7 +13877,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.IEnumConnections",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         }
       ],
       "properties": [],
@@ -13856,7 +13994,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.IEnumFORMATETC",
           "declaringAssemblyName": "System.Runtime.InteropServices",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         }
       ],
       "properties": [],
@@ -13967,7 +14111,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.IEnumMoniker",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         }
       ],
       "properties": [],
@@ -14078,7 +14228,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.IEnumSTATDATA",
           "declaringAssemblyName": "System.Runtime.InteropServices",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         }
       ],
       "properties": [],
@@ -14189,7 +14345,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.IEnumString",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         }
       ],
       "properties": [],
@@ -14369,7 +14531,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.IMoniker",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.ComTypes.IMoniker::IsDirty():System.Int32",
@@ -14425,7 +14593,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.IMoniker",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.ComTypes.IMoniker::BindToObject(System.Runtime.InteropServices.ComTypes.IBindCtx,System.Runtime.InteropServices.ComTypes.IMoniker,System.Guid\u0026,System.Object\u0026):System.Void",
@@ -14439,7 +14613,17 @@
           "parameterCount": 4,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.IMoniker",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "in"
+            },
+            {
+              "index": 3,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.ComTypes.IMoniker::Reduce(System.Runtime.InteropServices.ComTypes.IBindCtx,System.Int32,System.Runtime.InteropServices.ComTypes.IMoniker\u0026,System.Runtime.InteropServices.ComTypes.IMoniker\u0026):System.Void",
@@ -14453,7 +14637,17 @@
           "parameterCount": 4,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.IMoniker",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "ref"
+            },
+            {
+              "index": 3,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.ComTypes.IMoniker::ComposeWith(System.Runtime.InteropServices.ComTypes.IMoniker,System.Boolean,System.Runtime.InteropServices.ComTypes.IMoniker\u0026):System.Void",
@@ -14467,7 +14661,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.IMoniker",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.ComTypes.IMoniker::Enum(System.Boolean,System.Runtime.InteropServices.ComTypes.IEnumMoniker\u0026):System.Void",
@@ -14481,7 +14681,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.IMoniker",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.ComTypes.IMoniker::IsEqual(System.Runtime.InteropServices.ComTypes.IMoniker):System.Int32",
@@ -14509,7 +14715,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.IMoniker",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.ComTypes.IMoniker::IsRunning(System.Runtime.InteropServices.ComTypes.IBindCtx,System.Runtime.InteropServices.ComTypes.IMoniker,System.Runtime.InteropServices.ComTypes.IMoniker):System.Int32",
@@ -14537,7 +14749,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.IMoniker",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.ComTypes.IMoniker::Inverse(System.Runtime.InteropServices.ComTypes.IMoniker\u0026):System.Void",
@@ -14551,7 +14769,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.IMoniker",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.ComTypes.IMoniker::CommonPrefixWith(System.Runtime.InteropServices.ComTypes.IMoniker,System.Runtime.InteropServices.ComTypes.IMoniker\u0026):System.Void",
@@ -14565,7 +14789,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.IMoniker",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.ComTypes.IMoniker::GetDisplayName(System.Runtime.InteropServices.ComTypes.IBindCtx,System.Runtime.InteropServices.ComTypes.IMoniker,System.String\u0026):System.Void",
@@ -14579,7 +14809,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.IMoniker",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.ComTypes.IMoniker::ParseDisplayName(System.Runtime.InteropServices.ComTypes.IBindCtx,System.Runtime.InteropServices.ComTypes.IMoniker,System.String,System.Int32\u0026,System.Runtime.InteropServices.ComTypes.IMoniker\u0026):System.Void",
@@ -14593,7 +14829,17 @@
           "parameterCount": 5,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.IMoniker",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 3,
+              "modifier": "out"
+            },
+            {
+              "index": 4,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.ComTypes.IMoniker::IsSystemMoniker(System.Int32\u0026):System.Int32",
@@ -14607,7 +14853,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.IMoniker",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         }
       ],
       "properties": [],
@@ -14816,7 +15068,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.IPersistFile",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.ComTypes.IPersistFile::IsDirty():System.Int32",
@@ -14886,7 +15144,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.IPersistFile",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         }
       ],
       "properties": [],
@@ -15017,7 +15281,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.IRunningObjectTable",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.ComTypes.IRunningObjectTable::NoteChangeTime(System.Int32,System.Runtime.InteropServices.ComTypes.FILETIME\u0026):System.Void",
@@ -15031,7 +15301,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.IRunningObjectTable",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.ComTypes.IRunningObjectTable::GetTimeOfLastChange(System.Runtime.InteropServices.ComTypes.IMoniker,System.Runtime.InteropServices.ComTypes.FILETIME\u0026):System.Int32",
@@ -15045,7 +15321,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.IRunningObjectTable",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.ComTypes.IRunningObjectTable::EnumRunning(System.Runtime.InteropServices.ComTypes.IEnumMoniker\u0026):System.Void",
@@ -15059,7 +15341,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.IRunningObjectTable",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         }
       ],
       "properties": [],
@@ -15256,7 +15544,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.IStream",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.ComTypes.IStream::Clone(System.Runtime.InteropServices.ComTypes.IStream\u0026):System.Void",
@@ -15270,7 +15564,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.IStream",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         }
       ],
       "properties": [],
@@ -15389,7 +15689,21 @@
           "parameterCount": 6,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.ITypeComp",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 3,
+              "modifier": "out"
+            },
+            {
+              "index": 4,
+              "modifier": "out"
+            },
+            {
+              "index": 5,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.ComTypes.ITypeComp::BindType(System.String,System.Int32,System.Runtime.InteropServices.ComTypes.ITypeInfo\u0026,System.Runtime.InteropServices.ComTypes.ITypeComp\u0026):System.Void",
@@ -15403,7 +15717,17 @@
           "parameterCount": 4,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.ITypeComp",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            },
+            {
+              "index": 3,
+              "modifier": "out"
+            }
+          ]
         }
       ],
       "properties": [],
@@ -15452,7 +15776,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.ITypeInfo",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.ComTypes.ITypeInfo::GetTypeComp(System.Runtime.InteropServices.ComTypes.ITypeComp\u0026):System.Void",
@@ -15466,7 +15796,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.ITypeInfo",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.ComTypes.ITypeInfo::GetFuncDesc(System.Int32,System.IntPtr\u0026):System.Void",
@@ -15480,7 +15816,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.ITypeInfo",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.ComTypes.ITypeInfo::GetNames(System.Int32,System.String[],System.Int32,System.Int32\u0026):System.Void",
@@ -15494,7 +15836,13 @@
           "parameterCount": 4,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.ITypeInfo",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 3,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.ComTypes.ITypeInfo::GetRefTypeOfImplType(System.Int32,System.Int32\u0026):System.Void",
@@ -15508,7 +15856,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.ITypeInfo",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.ComTypes.ITypeInfo::GetImplTypeFlags(System.Int32,System.Runtime.InteropServices.ComTypes.IMPLTYPEFLAGS\u0026):System.Void",
@@ -15522,7 +15876,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.ITypeInfo",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.ComTypes.ITypeInfo::GetIDsOfNames(System.String[],System.Int32,System.Int32[]):System.Void",
@@ -15550,7 +15910,17 @@
           "parameterCount": 7,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.ITypeInfo",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 3,
+              "modifier": "ref"
+            },
+            {
+              "index": 6,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.ComTypes.ITypeInfo::GetDocumentation(System.Int32,System.String\u0026,System.String\u0026,System.Int32\u0026,System.String\u0026):System.Void",
@@ -15564,7 +15934,25 @@
           "parameterCount": 5,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.ITypeInfo",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            },
+            {
+              "index": 2,
+              "modifier": "out"
+            },
+            {
+              "index": 3,
+              "modifier": "out"
+            },
+            {
+              "index": 4,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.ComTypes.ITypeInfo::GetDllEntry(System.Int32,System.Runtime.InteropServices.ComTypes.INVOKEKIND,System.IntPtr,System.IntPtr,System.IntPtr):System.Void",
@@ -15592,7 +15980,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.ITypeInfo",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.ComTypes.ITypeInfo::AddressOfMember(System.Int32,System.Runtime.InteropServices.ComTypes.INVOKEKIND,System.IntPtr\u0026):System.Void",
@@ -15606,7 +16000,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.ITypeInfo",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.ComTypes.ITypeInfo::CreateInstance(System.Object,System.Guid\u0026,System.Object\u0026):System.Void",
@@ -15620,7 +16020,17 @@
           "parameterCount": 3,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.ITypeInfo",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "in"
+            },
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.ComTypes.ITypeInfo::GetMops(System.Int32,System.String\u0026):System.Void",
@@ -15634,7 +16044,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.ITypeInfo",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.ComTypes.ITypeInfo::GetContainingTypeLib(System.Runtime.InteropServices.ComTypes.ITypeLib\u0026,System.Int32\u0026):System.Void",
@@ -15648,7 +16064,17 @@
           "parameterCount": 2,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.ITypeInfo",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            },
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.ComTypes.ITypeInfo::ReleaseTypeAttr(System.IntPtr):System.Void",
@@ -15851,7 +16277,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.ITypeInfo2",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.ComTypes.ITypeInfo2::GetTypeComp(System.Runtime.InteropServices.ComTypes.ITypeComp\u0026):System.Void",
@@ -15865,7 +16297,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.ITypeInfo2",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.ComTypes.ITypeInfo2::GetFuncDesc(System.Int32,System.IntPtr\u0026):System.Void",
@@ -15879,7 +16317,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.ITypeInfo2",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.ComTypes.ITypeInfo2::GetNames(System.Int32,System.String[],System.Int32,System.Int32\u0026):System.Void",
@@ -15893,7 +16337,13 @@
           "parameterCount": 4,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.ITypeInfo2",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 3,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.ComTypes.ITypeInfo2::GetRefTypeOfImplType(System.Int32,System.Int32\u0026):System.Void",
@@ -15907,7 +16357,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.ITypeInfo2",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.ComTypes.ITypeInfo2::GetImplTypeFlags(System.Int32,System.Runtime.InteropServices.ComTypes.IMPLTYPEFLAGS\u0026):System.Void",
@@ -15921,7 +16377,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.ITypeInfo2",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.ComTypes.ITypeInfo2::GetIDsOfNames(System.String[],System.Int32,System.Int32[]):System.Void",
@@ -15949,7 +16411,17 @@
           "parameterCount": 7,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.ITypeInfo2",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 3,
+              "modifier": "ref"
+            },
+            {
+              "index": 6,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.ComTypes.ITypeInfo2::GetDocumentation(System.Int32,System.String\u0026,System.String\u0026,System.Int32\u0026,System.String\u0026):System.Void",
@@ -15963,7 +16435,25 @@
           "parameterCount": 5,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.ITypeInfo2",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            },
+            {
+              "index": 2,
+              "modifier": "out"
+            },
+            {
+              "index": 3,
+              "modifier": "out"
+            },
+            {
+              "index": 4,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.ComTypes.ITypeInfo2::GetDllEntry(System.Int32,System.Runtime.InteropServices.ComTypes.INVOKEKIND,System.IntPtr,System.IntPtr,System.IntPtr):System.Void",
@@ -15991,7 +16481,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.ITypeInfo2",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.ComTypes.ITypeInfo2::AddressOfMember(System.Int32,System.Runtime.InteropServices.ComTypes.INVOKEKIND,System.IntPtr\u0026):System.Void",
@@ -16005,7 +16501,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.ITypeInfo2",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.ComTypes.ITypeInfo2::CreateInstance(System.Object,System.Guid\u0026,System.Object\u0026):System.Void",
@@ -16019,7 +16521,17 @@
           "parameterCount": 3,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.ITypeInfo2",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "in"
+            },
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.ComTypes.ITypeInfo2::GetMops(System.Int32,System.String\u0026):System.Void",
@@ -16033,7 +16545,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.ITypeInfo2",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.ComTypes.ITypeInfo2::GetContainingTypeLib(System.Runtime.InteropServices.ComTypes.ITypeLib\u0026,System.Int32\u0026):System.Void",
@@ -16047,7 +16565,17 @@
           "parameterCount": 2,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.ITypeInfo2",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            },
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.ComTypes.ITypeInfo2::ReleaseTypeAttr(System.IntPtr):System.Void",
@@ -16075,7 +16603,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.ITypeInfo2",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.ComTypes.ITypeInfo2::GetTypeFlags(System.Int32\u0026):System.Void",
@@ -16089,7 +16623,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.ITypeInfo2",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.ComTypes.ITypeInfo2::GetFuncIndexOfMemId(System.Int32,System.Runtime.InteropServices.ComTypes.INVOKEKIND,System.Int32\u0026):System.Void",
@@ -16103,7 +16643,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.ITypeInfo2",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.ComTypes.ITypeInfo2::GetCustData(System.Guid\u0026,System.Object\u0026):System.Void",
@@ -16117,7 +16663,17 @@
           "parameterCount": 2,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.ITypeInfo2",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            },
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.ComTypes.ITypeInfo2::GetFuncCustData(System.Int32,System.Guid\u0026,System.Object\u0026):System.Void",
@@ -16131,7 +16687,17 @@
           "parameterCount": 3,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.ITypeInfo2",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "ref"
+            },
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.ComTypes.ITypeInfo2::GetParamCustData(System.Int32,System.Int32,System.Guid\u0026,System.Object\u0026):System.Void",
@@ -16145,7 +16711,17 @@
           "parameterCount": 4,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.ITypeInfo2",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "ref"
+            },
+            {
+              "index": 3,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.ComTypes.ITypeInfo2::GetDocumentation2(System.Int32,System.String\u0026,System.Int32\u0026,System.String\u0026):System.Void",
@@ -16159,7 +16735,21 @@
           "parameterCount": 4,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.ITypeInfo2",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            },
+            {
+              "index": 2,
+              "modifier": "out"
+            },
+            {
+              "index": 3,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.ComTypes.ITypeInfo2::GetAllFuncCustData(System.Int32,System.IntPtr):System.Void",
@@ -16480,7 +17070,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.ITypeLib",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.ComTypes.ITypeLib::GetTypeInfoType(System.Int32,System.Runtime.InteropServices.ComTypes.TYPEKIND\u0026):System.Void",
@@ -16494,7 +17090,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.ITypeLib",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.ComTypes.ITypeLib::GetTypeInfoOfGuid(System.Guid\u0026,System.Runtime.InteropServices.ComTypes.ITypeInfo\u0026):System.Void",
@@ -16508,7 +17110,17 @@
           "parameterCount": 2,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.ITypeLib",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            },
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.ComTypes.ITypeLib::GetLibAttr(System.IntPtr\u0026):System.Void",
@@ -16522,7 +17134,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.ITypeLib",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.ComTypes.ITypeLib::GetTypeComp(System.Runtime.InteropServices.ComTypes.ITypeComp\u0026):System.Void",
@@ -16536,7 +17154,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.ITypeLib",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.ComTypes.ITypeLib::GetDocumentation(System.Int32,System.String\u0026,System.String\u0026,System.Int32\u0026,System.String\u0026):System.Void",
@@ -16550,7 +17174,25 @@
           "parameterCount": 5,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.ITypeLib",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            },
+            {
+              "index": 2,
+              "modifier": "out"
+            },
+            {
+              "index": 3,
+              "modifier": "out"
+            },
+            {
+              "index": 4,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.ComTypes.ITypeLib::IsName(System.String,System.Int32):System.Boolean",
@@ -16578,7 +17220,13 @@
           "parameterCount": 5,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.ITypeLib",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 4,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.ComTypes.ITypeLib::ReleaseTLibAttr(System.IntPtr):System.Void",
@@ -16735,7 +17383,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.ITypeLib2",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.ComTypes.ITypeLib2::GetTypeInfoType(System.Int32,System.Runtime.InteropServices.ComTypes.TYPEKIND\u0026):System.Void",
@@ -16749,7 +17403,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.ITypeLib2",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.ComTypes.ITypeLib2::GetTypeInfoOfGuid(System.Guid\u0026,System.Runtime.InteropServices.ComTypes.ITypeInfo\u0026):System.Void",
@@ -16763,7 +17423,17 @@
           "parameterCount": 2,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.ITypeLib2",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            },
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.ComTypes.ITypeLib2::GetLibAttr(System.IntPtr\u0026):System.Void",
@@ -16777,7 +17447,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.ITypeLib2",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.ComTypes.ITypeLib2::GetTypeComp(System.Runtime.InteropServices.ComTypes.ITypeComp\u0026):System.Void",
@@ -16791,7 +17467,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.ITypeLib2",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.ComTypes.ITypeLib2::GetDocumentation(System.Int32,System.String\u0026,System.String\u0026,System.Int32\u0026,System.String\u0026):System.Void",
@@ -16805,7 +17487,25 @@
           "parameterCount": 5,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.ITypeLib2",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            },
+            {
+              "index": 2,
+              "modifier": "out"
+            },
+            {
+              "index": 3,
+              "modifier": "out"
+            },
+            {
+              "index": 4,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.ComTypes.ITypeLib2::IsName(System.String,System.Int32):System.Boolean",
@@ -16833,7 +17533,13 @@
           "parameterCount": 5,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.ITypeLib2",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 4,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.ComTypes.ITypeLib2::ReleaseTLibAttr(System.IntPtr):System.Void",
@@ -16861,7 +17567,17 @@
           "parameterCount": 2,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.ITypeLib2",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            },
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.ComTypes.ITypeLib2::GetLibStatistics(System.IntPtr,System.Int32\u0026):System.Void",
@@ -16875,7 +17591,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.ITypeLib2",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.ComTypes.ITypeLib2::GetDocumentation2(System.Int32,System.String\u0026,System.Int32\u0026,System.String\u0026):System.Void",
@@ -16889,7 +17611,21 @@
           "parameterCount": 4,
           "declaringClrType": "System.Runtime.InteropServices.ComTypes.ITypeLib2",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            },
+            {
+              "index": 2,
+              "modifier": "out"
+            },
+            {
+              "index": 3,
+              "modifier": "out"
+            }
+          ]
         }
       ],
       "properties": [],

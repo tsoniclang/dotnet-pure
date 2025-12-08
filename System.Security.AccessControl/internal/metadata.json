@@ -6036,7 +6036,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 3,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Security.AccessControl:System.Security.AccessControl.ObjectSecurity::ModifyAuditRule(System.Security.AccessControl.AccessControlModification,System.Security.AccessControl.AuditRule,System.Boolean\u0026):System.Boolean",
@@ -6052,7 +6058,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 3,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Security.AccessControl:System.Security.AccessControl.ObjectSecurity::PurgeAccessRules(System.Security.Principal.IdentityReference):System.Void",

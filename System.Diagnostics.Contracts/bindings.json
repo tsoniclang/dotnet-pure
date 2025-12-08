@@ -3888,7 +3888,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Diagnostics.Contracts.Contract",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Diagnostics.Contracts.Contract::OldValue(T):T",

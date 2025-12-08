@@ -6,7 +6,7 @@
 import type { sbyte, byte, short, ushort, int, uint, long, ulong, int128, uint128, half, float, double, decimal, nint, nuint, char } from '@tsonic/types';
 
 // Import support types from @tsonic/types
-import type { ptr, ref } from "@tsonic/types";
+import type { ptr } from "@tsonic/types";
 
 // Import types from other namespaces
 import type { IDictionary_2, IEnumerable_1 } from "../../System.Collections.Generic/internal/index.js";
@@ -17,31 +17,6 @@ import * as System_Runtime_Serialization_Internal from "../../System.Runtime.Ser
 import type { ISerializable, SerializationInfo, StreamingContext } from "../../System.Runtime.Serialization/internal/index.js";
 import * as System_Internal from "../../System/internal/index.js";
 import type { Attribute, Boolean as ClrBoolean, Byte, DateTime, Double, Enum, EventArgs, EventHandler_1, Exception, Func_1, Guid, IComparable, IConvertible, IDisposable, IFormatProvider, IFormattable, Int32, Int64, ISpanFormattable, Object as ClrObject, Single, String as ClrString, TimeSpan, Type, TypeCode, ValueType, Void } from "../../System/internal/index.js";
-
-// CLROf<T> - Maps ergonomic primitives to their CLR types for generic constraints
-// This utility is used ONLY in generic type arguments to satisfy CLR interface constraints
-// Value positions (parameters, return types) use lowercase primitives for ergonomics
-export type CLROf<T> =
-    T extends sbyte ? System_Internal.SByte :
-    T extends short ? System_Internal.Int16 :
-    T extends int ? System_Internal.Int32 :
-    T extends long ? System_Internal.Int64 :
-    T extends int128 ? System_Internal.Int128 :
-    T extends nint ? System_Internal.IntPtr :
-    T extends byte ? System_Internal.Byte :
-    T extends ushort ? System_Internal.UInt16 :
-    T extends uint ? System_Internal.UInt32 :
-    T extends ulong ? System_Internal.UInt64 :
-    T extends uint128 ? System_Internal.UInt128 :
-    T extends nuint ? System_Internal.UIntPtr :
-    T extends half ? System_Internal.Half :
-    T extends float ? System_Internal.Single :
-    T extends double ? System_Internal.Double :
-    T extends decimal ? System_Internal.Decimal :
-    T extends char ? System_Internal.Char :
-    T extends boolean ? System_Internal.Boolean :
-    T extends string ? System_Internal.String :
-    T; // Identity fallback for non-primitive types
 
 export enum EventActivityOptions {
     None = 0,
@@ -222,7 +197,7 @@ export const EventAttribute: {
 export type EventAttribute = EventAttribute$instance;
 
 export interface EventCommandEventArgs$instance extends EventArgs {
-    readonly Arguments: IDictionary_2<CLROf<string>, CLROf<string>>;
+    readonly Arguments: IDictionary_2<System_Internal.String, System_Internal.String>;
     readonly Command: EventCommand;
     DisableEvent(eventId: int): boolean;
     EnableEvent(eventId: int): boolean;
@@ -297,7 +272,7 @@ export interface EventListener$instance {
     Dispose(): void;
     EnableEvents(eventSource: EventSource, level: EventLevel): void;
     EnableEvents(eventSource: EventSource, level: EventLevel, matchAnyKeyword: EventKeywords): void;
-    EnableEvents(eventSource: EventSource, level: EventLevel, matchAnyKeyword: EventKeywords, arguments: IDictionary_2<CLROf<string>, CLROf<string>>): void;
+    EnableEvents(eventSource: EventSource, level: EventLevel, matchAnyKeyword: EventKeywords, arguments: IDictionary_2<System_Internal.String, System_Internal.String>): void;
 }
 
 
@@ -329,8 +304,8 @@ export interface EventSource$instance {
     Write(eventName: string, options: EventSourceOptions): void;
     Write<T>(eventName: string, data: T): void;
     Write<T>(eventName: string, options: EventSourceOptions, data: T): void;
-    Write<T>(eventName: string, options: { value: ref<EventSourceOptions> }, data: { value: ref<T> }): void;
-    Write<T>(eventName: string, options: { value: ref<EventSourceOptions> }, activityId: { value: ref<Guid> }, relatedActivityId: { value: ref<Guid> }, data: { value: ref<T> }): void;
+    Write<T>(eventName: string, options: EventSourceOptions, data: T): void;
+    Write<T>(eventName: string, options: EventSourceOptions, activityId: Guid, relatedActivityId: Guid, data: T): void;
 }
 
 
@@ -344,8 +319,8 @@ export const EventSource: {
     GetGuid(eventSourceType: Type): Guid;
     GetName(eventSourceType: Type): string;
     GetSources(): IEnumerable_1<EventSource>;
-    SendCommand(eventSource: EventSource, command: EventCommand, commandArguments: IDictionary_2<CLROf<string>, CLROf<string>>): void;
-    SetCurrentThreadActivityId(activityId: Guid, oldActivityThatWillContinue: { value: ref<Guid> }): void;
+    SendCommand(eventSource: EventSource, command: EventCommand, commandArguments: IDictionary_2<System_Internal.String, System_Internal.String>): void;
+    SetCurrentThreadActivityId(activityId: Guid, oldActivityThatWillContinue: Guid): void;
     SetCurrentThreadActivityId(activityId: Guid): void;
 };
 
@@ -416,7 +391,7 @@ export interface EventWrittenEventArgs$instance extends EventArgs {
     readonly Opcode: EventOpcode;
     readonly OSThreadId: long;
     readonly Payload: ReadOnlyCollection_1<unknown>;
-    readonly PayloadNames: ReadOnlyCollection_1<CLROf<string>>;
+    readonly PayloadNames: ReadOnlyCollection_1<System_Internal.String>;
     readonly RelatedActivityId: Guid;
     readonly Tags: EventTags;
     readonly Task: EventTask;
@@ -460,7 +435,7 @@ export interface IncrementingPollingCounter$instance extends DiagnosticCounter$i
 
 
 export const IncrementingPollingCounter: {
-    new(name: string, eventSource: EventSource, totalValueProvider: Func_1<CLROf<double>>): IncrementingPollingCounter$instance;
+    new(name: string, eventSource: EventSource, totalValueProvider: Func_1<System_Internal.Double>): IncrementingPollingCounter$instance;
 };
 
 
@@ -489,7 +464,7 @@ export interface PollingCounter$instance extends DiagnosticCounter$instance {
 
 
 export const PollingCounter: {
-    new(name: string, eventSource: EventSource, metricProvider: Func_1<CLROf<double>>): PollingCounter$instance;
+    new(name: string, eventSource: EventSource, metricProvider: Func_1<System_Internal.Double>): PollingCounter$instance;
 };
 
 

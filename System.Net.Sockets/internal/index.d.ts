@@ -6,7 +6,7 @@
 import type { sbyte, byte, short, ushort, int, uint, long, ulong, int128, uint128, half, float, double, decimal, nint, nuint, char } from '@tsonic/types';
 
 // Import support types from @tsonic/types
-import type { ptr, ref } from "@tsonic/types";
+import type { ptr } from "@tsonic/types";
 
 // Import types from other namespaces
 import * as Microsoft_Win32_SafeHandles_Internal from "../../Microsoft.Win32.SafeHandles/internal/index.js";
@@ -26,31 +26,6 @@ import type { Task, Task_1, ValueTask, ValueTask_1 } from "../../System.Threadin
 import type { CancellationToken } from "../../System.Threading/internal/index.js";
 import * as System_Internal from "../../System/internal/index.js";
 import type { ArraySegment_1, AsyncCallback, Boolean as ClrBoolean, Byte, Enum, EventArgs, EventHandler_1, Exception, IAsyncDisposable, IAsyncResult, IComparable, IConvertible, IDisposable, IEquatable_1, IFormatProvider, IFormattable, Int16, Int32, Int64, IntPtr, ISpanFormattable, Memory_1, Nullable_1, Object as ClrObject, ReadOnlyMemory_1, ReadOnlySpan_1, Span_1, String as ClrString, TimeSpan, Type, TypeCode, ValueType, Void } from "../../System/internal/index.js";
-
-// CLROf<T> - Maps ergonomic primitives to their CLR types for generic constraints
-// This utility is used ONLY in generic type arguments to satisfy CLR interface constraints
-// Value positions (parameters, return types) use lowercase primitives for ergonomics
-export type CLROf<T> =
-    T extends sbyte ? System_Internal.SByte :
-    T extends short ? System_Internal.Int16 :
-    T extends int ? System_Internal.Int32 :
-    T extends long ? System_Internal.Int64 :
-    T extends int128 ? System_Internal.Int128 :
-    T extends nint ? System_Internal.IntPtr :
-    T extends byte ? System_Internal.Byte :
-    T extends ushort ? System_Internal.UInt16 :
-    T extends uint ? System_Internal.UInt32 :
-    T extends ulong ? System_Internal.UInt64 :
-    T extends uint128 ? System_Internal.UInt128 :
-    T extends nuint ? System_Internal.UIntPtr :
-    T extends half ? System_Internal.Half :
-    T extends float ? System_Internal.Single :
-    T extends double ? System_Internal.Double :
-    T extends decimal ? System_Internal.Decimal :
-    T extends char ? System_Internal.Char :
-    T extends boolean ? System_Internal.Boolean :
-    T extends string ? System_Internal.String :
-    T; // Identity fallback for non-primitive types
 
 export enum AddressFamily {
     Unknown = -1,
@@ -541,23 +516,23 @@ export interface NetworkStream$instance extends Stream {
     FlushAsync(cancellationToken: CancellationToken): Task;
     FlushAsync(): Task;
     Read(buffer: byte[], offset: int, count: int): int;
-    Read(buffer: Span_1<CLROf<byte>>): int;
-    Read(buffer: Span_1<CLROf<byte>>): int;
-    ReadAsync(buffer: byte[], offset: int, count: int, cancellationToken: CancellationToken): Task_1<CLROf<int>>;
-    ReadAsync(buffer: Memory_1<CLROf<byte>>, cancellationToken?: CancellationToken): ValueTask_1<CLROf<int>>;
-    ReadAsync(buffer: byte[], offset: int, count: int): Task_1<CLROf<int>>;
-    ReadAsync(buffer: byte[], offset: int, count: int, cancellationToken: CancellationToken): Task_1<CLROf<int>>;
-    ReadAsync(buffer: Memory_1<CLROf<byte>>, cancellationToken?: CancellationToken): ValueTask_1<CLROf<int>>;
+    Read(buffer: Span_1<System_Internal.Byte>): int;
+    Read(buffer: Span_1<System_Internal.Byte>): int;
+    ReadAsync(buffer: byte[], offset: int, count: int, cancellationToken: CancellationToken): Task_1<System_Internal.Int32>;
+    ReadAsync(buffer: Memory_1<System_Internal.Byte>, cancellationToken?: CancellationToken): ValueTask_1<System_Internal.Int32>;
+    ReadAsync(buffer: byte[], offset: int, count: int): Task_1<System_Internal.Int32>;
+    ReadAsync(buffer: byte[], offset: int, count: int, cancellationToken: CancellationToken): Task_1<System_Internal.Int32>;
+    ReadAsync(buffer: Memory_1<System_Internal.Byte>, cancellationToken?: CancellationToken): ValueTask_1<System_Internal.Int32>;
     ReadByte(): int;
     Seek(offset: long, origin: SeekOrigin): long;
     SetLength(value: long): void;
     Write(buffer: byte[], offset: int, count: int): void;
-    Write(buffer: ReadOnlySpan_1<CLROf<byte>>): void;
-    Write(buffer: ReadOnlySpan_1<CLROf<byte>>): void;
+    Write(buffer: ReadOnlySpan_1<System_Internal.Byte>): void;
+    Write(buffer: ReadOnlySpan_1<System_Internal.Byte>): void;
     WriteAsync(buffer: byte[], offset: int, count: int, cancellationToken: CancellationToken): Task;
-    WriteAsync(buffer: ReadOnlyMemory_1<CLROf<byte>>, cancellationToken?: CancellationToken): ValueTask;
+    WriteAsync(buffer: ReadOnlyMemory_1<System_Internal.Byte>, cancellationToken?: CancellationToken): ValueTask;
     WriteAsync(buffer: byte[], offset: int, count: int): Task;
-    WriteAsync(buffer: ReadOnlyMemory_1<CLROf<byte>>, cancellationToken?: CancellationToken): ValueTask;
+    WriteAsync(buffer: ReadOnlyMemory_1<System_Internal.Byte>, cancellationToken?: CancellationToken): ValueTask;
     WriteByte(value: byte): void;
 }
 
@@ -603,7 +578,7 @@ export interface SendPacketsElement$instance {
     readonly EndOfPacket: boolean;
     readonly FilePath: string;
     readonly FileStream: FileStream;
-    readonly MemoryBuffer: Nullable_1<ReadOnlyMemory_1<CLROf<byte>>>;
+    readonly MemoryBuffer: Nullable_1<ReadOnlyMemory_1<System_Internal.Byte>>;
     readonly Offset: int;
     readonly OffsetLong: long;
 }
@@ -621,8 +596,8 @@ export const SendPacketsElement: {
     new(buffer: byte[]): SendPacketsElement$instance;
     new(buffer: byte[], offset: int, count: int): SendPacketsElement$instance;
     new(buffer: byte[], offset: int, count: int, endOfPacket: boolean): SendPacketsElement$instance;
-    new(buffer: ReadOnlyMemory_1<CLROf<byte>>): SendPacketsElement$instance;
-    new(buffer: ReadOnlyMemory_1<CLROf<byte>>, endOfPacket: boolean): SendPacketsElement$instance;
+    new(buffer: ReadOnlyMemory_1<System_Internal.Byte>): SendPacketsElement$instance;
+    new(buffer: ReadOnlyMemory_1<System_Internal.Byte>, endOfPacket: boolean): SendPacketsElement$instance;
 };
 
 
@@ -668,15 +643,15 @@ export interface Socket$instance {
     BeginConnect(addresses: IPAddress[], port: int, requestCallback: AsyncCallback, state: unknown): IAsyncResult;
     BeginDisconnect(reuseSocket: boolean, callback: AsyncCallback, state: unknown): IAsyncResult;
     BeginReceive(buffer: byte[], offset: int, size: int, socketFlags: SocketFlags, callback: AsyncCallback, state: unknown): IAsyncResult;
-    BeginReceive(buffer: byte[], offset: int, size: int, socketFlags: SocketFlags, errorCode: { value: ref<SocketError> }, callback: AsyncCallback, state: unknown): IAsyncResult;
-    BeginReceive(buffers: IList_1<ArraySegment_1<CLROf<byte>>>, socketFlags: SocketFlags, callback: AsyncCallback, state: unknown): IAsyncResult;
-    BeginReceive(buffers: IList_1<ArraySegment_1<CLROf<byte>>>, socketFlags: SocketFlags, errorCode: { value: ref<SocketError> }, callback: AsyncCallback, state: unknown): IAsyncResult;
-    BeginReceiveFrom(buffer: byte[], offset: int, size: int, socketFlags: SocketFlags, remoteEP: { value: ref<EndPoint> }, callback: AsyncCallback, state: unknown): IAsyncResult;
-    BeginReceiveMessageFrom(buffer: byte[], offset: int, size: int, socketFlags: SocketFlags, remoteEP: { value: ref<EndPoint> }, callback: AsyncCallback, state: unknown): IAsyncResult;
+    BeginReceive(buffer: byte[], offset: int, size: int, socketFlags: SocketFlags, errorCode: SocketError, callback: AsyncCallback, state: unknown): IAsyncResult;
+    BeginReceive(buffers: IList_1<ArraySegment_1<System_Internal.Byte>>, socketFlags: SocketFlags, callback: AsyncCallback, state: unknown): IAsyncResult;
+    BeginReceive(buffers: IList_1<ArraySegment_1<System_Internal.Byte>>, socketFlags: SocketFlags, errorCode: SocketError, callback: AsyncCallback, state: unknown): IAsyncResult;
+    BeginReceiveFrom(buffer: byte[], offset: int, size: int, socketFlags: SocketFlags, remoteEP: EndPoint, callback: AsyncCallback, state: unknown): IAsyncResult;
+    BeginReceiveMessageFrom(buffer: byte[], offset: int, size: int, socketFlags: SocketFlags, remoteEP: EndPoint, callback: AsyncCallback, state: unknown): IAsyncResult;
     BeginSend(buffer: byte[], offset: int, size: int, socketFlags: SocketFlags, callback: AsyncCallback, state: unknown): IAsyncResult;
-    BeginSend(buffer: byte[], offset: int, size: int, socketFlags: SocketFlags, errorCode: { value: ref<SocketError> }, callback: AsyncCallback, state: unknown): IAsyncResult;
-    BeginSend(buffers: IList_1<ArraySegment_1<CLROf<byte>>>, socketFlags: SocketFlags, callback: AsyncCallback, state: unknown): IAsyncResult;
-    BeginSend(buffers: IList_1<ArraySegment_1<CLROf<byte>>>, socketFlags: SocketFlags, errorCode: { value: ref<SocketError> }, callback: AsyncCallback, state: unknown): IAsyncResult;
+    BeginSend(buffer: byte[], offset: int, size: int, socketFlags: SocketFlags, errorCode: SocketError, callback: AsyncCallback, state: unknown): IAsyncResult;
+    BeginSend(buffers: IList_1<ArraySegment_1<System_Internal.Byte>>, socketFlags: SocketFlags, callback: AsyncCallback, state: unknown): IAsyncResult;
+    BeginSend(buffers: IList_1<ArraySegment_1<System_Internal.Byte>>, socketFlags: SocketFlags, errorCode: SocketError, callback: AsyncCallback, state: unknown): IAsyncResult;
     BeginSendFile(fileName: string, callback: AsyncCallback, state: unknown): IAsyncResult;
     BeginSendFile(fileName: string, preBuffer: byte[], postBuffer: byte[], flags: TransmitFileOptions, callback: AsyncCallback, state: unknown): IAsyncResult;
     BeginSendTo(buffer: byte[], offset: int, size: int, socketFlags: SocketFlags, remoteEP: EndPoint, callback: AsyncCallback, state: unknown): IAsyncResult;
@@ -702,19 +677,19 @@ export interface Socket$instance {
     Dispose(): void;
     DuplicateAndClose(targetProcessId: int): SocketInformation;
     EndAccept(asyncResult: IAsyncResult): Socket;
-    EndAccept(buffer: { value: ref<byte[]> }, asyncResult: IAsyncResult): Socket;
-    EndAccept(buffer: { value: ref<byte[]> }, bytesTransferred: { value: ref<int> }, asyncResult: IAsyncResult): Socket;
+    EndAccept(buffer: byte[], asyncResult: IAsyncResult): Socket;
+    EndAccept(buffer: byte[], bytesTransferred: int, asyncResult: IAsyncResult): Socket;
     EndConnect(asyncResult: IAsyncResult): void;
     EndDisconnect(asyncResult: IAsyncResult): void;
     EndReceive(asyncResult: IAsyncResult): int;
-    EndReceive(asyncResult: IAsyncResult, errorCode: { value: ref<SocketError> }): int;
-    EndReceiveFrom(asyncResult: IAsyncResult, endPoint: { value: ref<EndPoint> }): int;
-    EndReceiveMessageFrom(asyncResult: IAsyncResult, socketFlags: { value: ref<SocketFlags> }, endPoint: { value: ref<EndPoint> }, ipPacketInformation: { value: ref<IPPacketInformation> }): int;
+    EndReceive(asyncResult: IAsyncResult, errorCode: SocketError): int;
+    EndReceiveFrom(asyncResult: IAsyncResult, endPoint: EndPoint): int;
+    EndReceiveMessageFrom(asyncResult: IAsyncResult, socketFlags: SocketFlags, endPoint: EndPoint, ipPacketInformation: IPPacketInformation): int;
     EndSend(asyncResult: IAsyncResult): int;
-    EndSend(asyncResult: IAsyncResult, errorCode: { value: ref<SocketError> }): int;
+    EndSend(asyncResult: IAsyncResult, errorCode: SocketError): int;
     EndSendFile(asyncResult: IAsyncResult): void;
     EndSendTo(asyncResult: IAsyncResult): int;
-    GetRawSocketOption(optionLevel: int, optionName: int, optionValue: Span_1<CLROf<byte>>): int;
+    GetRawSocketOption(optionLevel: int, optionName: int, optionValue: Span_1<System_Internal.Byte>): int;
     GetSocketOption(optionLevel: SocketOptionLevel, optionName: SocketOptionName): unknown;
     GetSocketOption(optionLevel: SocketOptionLevel, optionName: SocketOptionName, optionValue: byte[]): void;
     GetSocketOption(optionLevel: SocketOptionLevel, optionName: SocketOptionName, optionLength: int): byte[];
@@ -728,79 +703,79 @@ export interface Socket$instance {
     Receive(buffer: byte[], socketFlags: SocketFlags): int;
     Receive(buffer: byte[]): int;
     Receive(buffer: byte[], offset: int, size: int, socketFlags: SocketFlags): int;
-    Receive(buffer: byte[], offset: int, size: int, socketFlags: SocketFlags, errorCode: { value: ref<SocketError> }): int;
-    Receive(buffer: Span_1<CLROf<byte>>): int;
-    Receive(buffer: Span_1<CLROf<byte>>, socketFlags: SocketFlags): int;
-    Receive(buffer: Span_1<CLROf<byte>>, socketFlags: SocketFlags, errorCode: { value: ref<SocketError> }): int;
-    Receive(buffers: IList_1<ArraySegment_1<CLROf<byte>>>): int;
-    Receive(buffers: IList_1<ArraySegment_1<CLROf<byte>>>, socketFlags: SocketFlags): int;
-    Receive(buffers: IList_1<ArraySegment_1<CLROf<byte>>>, socketFlags: SocketFlags, errorCode: { value: ref<SocketError> }): int;
+    Receive(buffer: byte[], offset: int, size: int, socketFlags: SocketFlags, errorCode: SocketError): int;
+    Receive(buffer: Span_1<System_Internal.Byte>): int;
+    Receive(buffer: Span_1<System_Internal.Byte>, socketFlags: SocketFlags): int;
+    Receive(buffer: Span_1<System_Internal.Byte>, socketFlags: SocketFlags, errorCode: SocketError): int;
+    Receive(buffers: IList_1<ArraySegment_1<System_Internal.Byte>>): int;
+    Receive(buffers: IList_1<ArraySegment_1<System_Internal.Byte>>, socketFlags: SocketFlags): int;
+    Receive(buffers: IList_1<ArraySegment_1<System_Internal.Byte>>, socketFlags: SocketFlags, errorCode: SocketError): int;
     ReceiveAsync(e: SocketAsyncEventArgs): boolean;
-    ReceiveAsync(buffer: ArraySegment_1<CLROf<byte>>): Task_1<CLROf<int>>;
-    ReceiveAsync(buffer: ArraySegment_1<CLROf<byte>>, socketFlags: SocketFlags): Task_1<CLROf<int>>;
-    ReceiveAsync(buffer: Memory_1<CLROf<byte>>, cancellationToken?: CancellationToken): ValueTask_1<CLROf<int>>;
-    ReceiveAsync(buffer: Memory_1<CLROf<byte>>, socketFlags: SocketFlags, cancellationToken?: CancellationToken): ValueTask_1<CLROf<int>>;
-    ReceiveAsync(buffers: IList_1<ArraySegment_1<CLROf<byte>>>): Task_1<CLROf<int>>;
-    ReceiveAsync(buffers: IList_1<ArraySegment_1<CLROf<byte>>>, socketFlags: SocketFlags): Task_1<CLROf<int>>;
-    ReceiveFrom(buffer: byte[], offset: int, size: int, socketFlags: SocketFlags, remoteEP: { value: ref<EndPoint> }): int;
-    ReceiveFrom(buffer: byte[], size: int, socketFlags: SocketFlags, remoteEP: { value: ref<EndPoint> }): int;
-    ReceiveFrom(buffer: byte[], socketFlags: SocketFlags, remoteEP: { value: ref<EndPoint> }): int;
-    ReceiveFrom(buffer: byte[], remoteEP: { value: ref<EndPoint> }): int;
-    ReceiveFrom(buffer: Span_1<CLROf<byte>>, remoteEP: { value: ref<EndPoint> }): int;
-    ReceiveFrom(buffer: Span_1<CLROf<byte>>, socketFlags: SocketFlags, remoteEP: { value: ref<EndPoint> }): int;
-    ReceiveFrom(buffer: Span_1<CLROf<byte>>, socketFlags: SocketFlags, receivedAddress: SocketAddress): int;
+    ReceiveAsync(buffer: ArraySegment_1<System_Internal.Byte>): Task_1<System_Internal.Int32>;
+    ReceiveAsync(buffer: ArraySegment_1<System_Internal.Byte>, socketFlags: SocketFlags): Task_1<System_Internal.Int32>;
+    ReceiveAsync(buffer: Memory_1<System_Internal.Byte>, cancellationToken?: CancellationToken): ValueTask_1<System_Internal.Int32>;
+    ReceiveAsync(buffer: Memory_1<System_Internal.Byte>, socketFlags: SocketFlags, cancellationToken?: CancellationToken): ValueTask_1<System_Internal.Int32>;
+    ReceiveAsync(buffers: IList_1<ArraySegment_1<System_Internal.Byte>>): Task_1<System_Internal.Int32>;
+    ReceiveAsync(buffers: IList_1<ArraySegment_1<System_Internal.Byte>>, socketFlags: SocketFlags): Task_1<System_Internal.Int32>;
+    ReceiveFrom(buffer: byte[], offset: int, size: int, socketFlags: SocketFlags, remoteEP: EndPoint): int;
+    ReceiveFrom(buffer: byte[], size: int, socketFlags: SocketFlags, remoteEP: EndPoint): int;
+    ReceiveFrom(buffer: byte[], socketFlags: SocketFlags, remoteEP: EndPoint): int;
+    ReceiveFrom(buffer: byte[], remoteEP: EndPoint): int;
+    ReceiveFrom(buffer: Span_1<System_Internal.Byte>, remoteEP: EndPoint): int;
+    ReceiveFrom(buffer: Span_1<System_Internal.Byte>, socketFlags: SocketFlags, remoteEP: EndPoint): int;
+    ReceiveFrom(buffer: Span_1<System_Internal.Byte>, socketFlags: SocketFlags, receivedAddress: SocketAddress): int;
     ReceiveFromAsync(e: SocketAsyncEventArgs): boolean;
-    ReceiveFromAsync(buffer: ArraySegment_1<CLROf<byte>>, remoteEndPoint: EndPoint): Task_1<SocketReceiveFromResult>;
-    ReceiveFromAsync(buffer: ArraySegment_1<CLROf<byte>>, socketFlags: SocketFlags, remoteEndPoint: EndPoint): Task_1<SocketReceiveFromResult>;
-    ReceiveFromAsync(buffer: Memory_1<CLROf<byte>>, remoteEndPoint: EndPoint, cancellationToken?: CancellationToken): ValueTask_1<SocketReceiveFromResult>;
-    ReceiveFromAsync(buffer: Memory_1<CLROf<byte>>, socketFlags: SocketFlags, remoteEndPoint: EndPoint, cancellationToken?: CancellationToken): ValueTask_1<SocketReceiveFromResult>;
-    ReceiveFromAsync(buffer: Memory_1<CLROf<byte>>, socketFlags: SocketFlags, receivedAddress: SocketAddress, cancellationToken?: CancellationToken): ValueTask_1<CLROf<int>>;
-    ReceiveMessageFrom(buffer: byte[], offset: int, size: int, socketFlags: { value: ref<SocketFlags> }, remoteEP: { value: ref<EndPoint> }, ipPacketInformation: { value: ref<IPPacketInformation> }): int;
-    ReceiveMessageFrom(buffer: Span_1<CLROf<byte>>, socketFlags: { value: ref<SocketFlags> }, remoteEP: { value: ref<EndPoint> }, ipPacketInformation: { value: ref<IPPacketInformation> }): int;
+    ReceiveFromAsync(buffer: ArraySegment_1<System_Internal.Byte>, remoteEndPoint: EndPoint): Task_1<SocketReceiveFromResult>;
+    ReceiveFromAsync(buffer: ArraySegment_1<System_Internal.Byte>, socketFlags: SocketFlags, remoteEndPoint: EndPoint): Task_1<SocketReceiveFromResult>;
+    ReceiveFromAsync(buffer: Memory_1<System_Internal.Byte>, remoteEndPoint: EndPoint, cancellationToken?: CancellationToken): ValueTask_1<SocketReceiveFromResult>;
+    ReceiveFromAsync(buffer: Memory_1<System_Internal.Byte>, socketFlags: SocketFlags, remoteEndPoint: EndPoint, cancellationToken?: CancellationToken): ValueTask_1<SocketReceiveFromResult>;
+    ReceiveFromAsync(buffer: Memory_1<System_Internal.Byte>, socketFlags: SocketFlags, receivedAddress: SocketAddress, cancellationToken?: CancellationToken): ValueTask_1<System_Internal.Int32>;
+    ReceiveMessageFrom(buffer: byte[], offset: int, size: int, socketFlags: SocketFlags, remoteEP: EndPoint, ipPacketInformation: IPPacketInformation): int;
+    ReceiveMessageFrom(buffer: Span_1<System_Internal.Byte>, socketFlags: SocketFlags, remoteEP: EndPoint, ipPacketInformation: IPPacketInformation): int;
     ReceiveMessageFromAsync(e: SocketAsyncEventArgs): boolean;
-    ReceiveMessageFromAsync(buffer: ArraySegment_1<CLROf<byte>>, remoteEndPoint: EndPoint): Task_1<SocketReceiveMessageFromResult>;
-    ReceiveMessageFromAsync(buffer: ArraySegment_1<CLROf<byte>>, socketFlags: SocketFlags, remoteEndPoint: EndPoint): Task_1<SocketReceiveMessageFromResult>;
-    ReceiveMessageFromAsync(buffer: Memory_1<CLROf<byte>>, remoteEndPoint: EndPoint, cancellationToken?: CancellationToken): ValueTask_1<SocketReceiveMessageFromResult>;
-    ReceiveMessageFromAsync(buffer: Memory_1<CLROf<byte>>, socketFlags: SocketFlags, remoteEndPoint: EndPoint, cancellationToken?: CancellationToken): ValueTask_1<SocketReceiveMessageFromResult>;
+    ReceiveMessageFromAsync(buffer: ArraySegment_1<System_Internal.Byte>, remoteEndPoint: EndPoint): Task_1<SocketReceiveMessageFromResult>;
+    ReceiveMessageFromAsync(buffer: ArraySegment_1<System_Internal.Byte>, socketFlags: SocketFlags, remoteEndPoint: EndPoint): Task_1<SocketReceiveMessageFromResult>;
+    ReceiveMessageFromAsync(buffer: Memory_1<System_Internal.Byte>, remoteEndPoint: EndPoint, cancellationToken?: CancellationToken): ValueTask_1<SocketReceiveMessageFromResult>;
+    ReceiveMessageFromAsync(buffer: Memory_1<System_Internal.Byte>, socketFlags: SocketFlags, remoteEndPoint: EndPoint, cancellationToken?: CancellationToken): ValueTask_1<SocketReceiveMessageFromResult>;
     Send(buffer: byte[], size: int, socketFlags: SocketFlags): int;
     Send(buffer: byte[], socketFlags: SocketFlags): int;
     Send(buffer: byte[]): int;
-    Send(buffers: IList_1<ArraySegment_1<CLROf<byte>>>): int;
-    Send(buffers: IList_1<ArraySegment_1<CLROf<byte>>>, socketFlags: SocketFlags): int;
-    Send(buffers: IList_1<ArraySegment_1<CLROf<byte>>>, socketFlags: SocketFlags, errorCode: { value: ref<SocketError> }): int;
+    Send(buffers: IList_1<ArraySegment_1<System_Internal.Byte>>): int;
+    Send(buffers: IList_1<ArraySegment_1<System_Internal.Byte>>, socketFlags: SocketFlags): int;
+    Send(buffers: IList_1<ArraySegment_1<System_Internal.Byte>>, socketFlags: SocketFlags, errorCode: SocketError): int;
     Send(buffer: byte[], offset: int, size: int, socketFlags: SocketFlags): int;
-    Send(buffer: byte[], offset: int, size: int, socketFlags: SocketFlags, errorCode: { value: ref<SocketError> }): int;
-    Send(buffer: ReadOnlySpan_1<CLROf<byte>>): int;
-    Send(buffer: ReadOnlySpan_1<CLROf<byte>>, socketFlags: SocketFlags): int;
-    Send(buffer: ReadOnlySpan_1<CLROf<byte>>, socketFlags: SocketFlags, errorCode: { value: ref<SocketError> }): int;
+    Send(buffer: byte[], offset: int, size: int, socketFlags: SocketFlags, errorCode: SocketError): int;
+    Send(buffer: ReadOnlySpan_1<System_Internal.Byte>): int;
+    Send(buffer: ReadOnlySpan_1<System_Internal.Byte>, socketFlags: SocketFlags): int;
+    Send(buffer: ReadOnlySpan_1<System_Internal.Byte>, socketFlags: SocketFlags, errorCode: SocketError): int;
     SendAsync(e: SocketAsyncEventArgs): boolean;
-    SendAsync(buffer: ArraySegment_1<CLROf<byte>>): Task_1<CLROf<int>>;
-    SendAsync(buffer: ArraySegment_1<CLROf<byte>>, socketFlags: SocketFlags): Task_1<CLROf<int>>;
-    SendAsync(buffer: ReadOnlyMemory_1<CLROf<byte>>, cancellationToken?: CancellationToken): ValueTask_1<CLROf<int>>;
-    SendAsync(buffer: ReadOnlyMemory_1<CLROf<byte>>, socketFlags: SocketFlags, cancellationToken?: CancellationToken): ValueTask_1<CLROf<int>>;
-    SendAsync(buffers: IList_1<ArraySegment_1<CLROf<byte>>>): Task_1<CLROf<int>>;
-    SendAsync(buffers: IList_1<ArraySegment_1<CLROf<byte>>>, socketFlags: SocketFlags): Task_1<CLROf<int>>;
+    SendAsync(buffer: ArraySegment_1<System_Internal.Byte>): Task_1<System_Internal.Int32>;
+    SendAsync(buffer: ArraySegment_1<System_Internal.Byte>, socketFlags: SocketFlags): Task_1<System_Internal.Int32>;
+    SendAsync(buffer: ReadOnlyMemory_1<System_Internal.Byte>, cancellationToken?: CancellationToken): ValueTask_1<System_Internal.Int32>;
+    SendAsync(buffer: ReadOnlyMemory_1<System_Internal.Byte>, socketFlags: SocketFlags, cancellationToken?: CancellationToken): ValueTask_1<System_Internal.Int32>;
+    SendAsync(buffers: IList_1<ArraySegment_1<System_Internal.Byte>>): Task_1<System_Internal.Int32>;
+    SendAsync(buffers: IList_1<ArraySegment_1<System_Internal.Byte>>, socketFlags: SocketFlags): Task_1<System_Internal.Int32>;
     SendFile(fileName: string): void;
     SendFile(fileName: string, preBuffer: byte[], postBuffer: byte[], flags: TransmitFileOptions): void;
-    SendFile(fileName: string, preBuffer: ReadOnlySpan_1<CLROf<byte>>, postBuffer: ReadOnlySpan_1<CLROf<byte>>, flags: TransmitFileOptions): void;
+    SendFile(fileName: string, preBuffer: ReadOnlySpan_1<System_Internal.Byte>, postBuffer: ReadOnlySpan_1<System_Internal.Byte>, flags: TransmitFileOptions): void;
     SendFileAsync(fileName: string, cancellationToken?: CancellationToken): ValueTask;
-    SendFileAsync(fileName: string, preBuffer: ReadOnlyMemory_1<CLROf<byte>>, postBuffer: ReadOnlyMemory_1<CLROf<byte>>, flags: TransmitFileOptions, cancellationToken?: CancellationToken): ValueTask;
+    SendFileAsync(fileName: string, preBuffer: ReadOnlyMemory_1<System_Internal.Byte>, postBuffer: ReadOnlyMemory_1<System_Internal.Byte>, flags: TransmitFileOptions, cancellationToken?: CancellationToken): ValueTask;
     SendPacketsAsync(e: SocketAsyncEventArgs): boolean;
     SendTo(buffer: byte[], offset: int, size: int, socketFlags: SocketFlags, remoteEP: EndPoint): int;
     SendTo(buffer: byte[], size: int, socketFlags: SocketFlags, remoteEP: EndPoint): int;
     SendTo(buffer: byte[], socketFlags: SocketFlags, remoteEP: EndPoint): int;
     SendTo(buffer: byte[], remoteEP: EndPoint): int;
-    SendTo(buffer: ReadOnlySpan_1<CLROf<byte>>, remoteEP: EndPoint): int;
-    SendTo(buffer: ReadOnlySpan_1<CLROf<byte>>, socketFlags: SocketFlags, remoteEP: EndPoint): int;
-    SendTo(buffer: ReadOnlySpan_1<CLROf<byte>>, socketFlags: SocketFlags, socketAddress: SocketAddress): int;
+    SendTo(buffer: ReadOnlySpan_1<System_Internal.Byte>, remoteEP: EndPoint): int;
+    SendTo(buffer: ReadOnlySpan_1<System_Internal.Byte>, socketFlags: SocketFlags, remoteEP: EndPoint): int;
+    SendTo(buffer: ReadOnlySpan_1<System_Internal.Byte>, socketFlags: SocketFlags, socketAddress: SocketAddress): int;
     SendToAsync(e: SocketAsyncEventArgs): boolean;
-    SendToAsync(buffer: ArraySegment_1<CLROf<byte>>, remoteEP: EndPoint): Task_1<CLROf<int>>;
-    SendToAsync(buffer: ArraySegment_1<CLROf<byte>>, socketFlags: SocketFlags, remoteEP: EndPoint): Task_1<CLROf<int>>;
-    SendToAsync(buffer: ReadOnlyMemory_1<CLROf<byte>>, remoteEP: EndPoint, cancellationToken?: CancellationToken): ValueTask_1<CLROf<int>>;
-    SendToAsync(buffer: ReadOnlyMemory_1<CLROf<byte>>, socketFlags: SocketFlags, remoteEP: EndPoint, cancellationToken?: CancellationToken): ValueTask_1<CLROf<int>>;
-    SendToAsync(buffer: ReadOnlyMemory_1<CLROf<byte>>, socketFlags: SocketFlags, socketAddress: SocketAddress, cancellationToken?: CancellationToken): ValueTask_1<CLROf<int>>;
+    SendToAsync(buffer: ArraySegment_1<System_Internal.Byte>, remoteEP: EndPoint): Task_1<System_Internal.Int32>;
+    SendToAsync(buffer: ArraySegment_1<System_Internal.Byte>, socketFlags: SocketFlags, remoteEP: EndPoint): Task_1<System_Internal.Int32>;
+    SendToAsync(buffer: ReadOnlyMemory_1<System_Internal.Byte>, remoteEP: EndPoint, cancellationToken?: CancellationToken): ValueTask_1<System_Internal.Int32>;
+    SendToAsync(buffer: ReadOnlyMemory_1<System_Internal.Byte>, socketFlags: SocketFlags, remoteEP: EndPoint, cancellationToken?: CancellationToken): ValueTask_1<System_Internal.Int32>;
+    SendToAsync(buffer: ReadOnlyMemory_1<System_Internal.Byte>, socketFlags: SocketFlags, socketAddress: SocketAddress, cancellationToken?: CancellationToken): ValueTask_1<System_Internal.Int32>;
     SetIPProtectionLevel(level: IPProtectionLevel): void;
-    SetRawSocketOption(optionLevel: int, optionName: int, optionValue: ReadOnlySpan_1<CLROf<byte>>): void;
+    SetRawSocketOption(optionLevel: int, optionName: int, optionValue: ReadOnlySpan_1<System_Internal.Byte>): void;
     SetSocketOption(optionLevel: SocketOptionLevel, optionName: SocketOptionName, optionValue: int): void;
     SetSocketOption(optionLevel: SocketOptionLevel, optionName: SocketOptionName, optionValue: byte[]): void;
     SetSocketOption(optionLevel: SocketOptionLevel, optionName: SocketOptionName, optionValue: boolean): void;
@@ -838,14 +813,14 @@ export type Socket = Socket$instance & __Socket$views;
 export interface SocketAsyncEventArgs$instance extends EventArgs {
     AcceptSocket: Socket;
     readonly Buffer: byte[];
-    BufferList: IList_1<ArraySegment_1<CLROf<byte>>>;
+    BufferList: IList_1<ArraySegment_1<System_Internal.Byte>>;
     readonly BytesTransferred: int;
     readonly ConnectByNameError: Exception;
     readonly ConnectSocket: Socket;
     readonly Count: int;
     DisconnectReuseSocket: boolean;
     readonly LastOperation: SocketAsyncOperation;
-    readonly MemoryBuffer: Memory_1<CLROf<byte>>;
+    readonly MemoryBuffer: Memory_1<System_Internal.Byte>;
     readonly Offset: int;
     readonly ReceiveMessageFromPacketInfo: IPPacketInformation;
     RemoteEndPoint: EndPoint;
@@ -858,7 +833,7 @@ export interface SocketAsyncEventArgs$instance extends EventArgs {
     Dispose(): void;
     SetBuffer(offset: int, count: int): void;
     SetBuffer(buffer: byte[], offset: int, count: int): void;
-    SetBuffer(buffer: Memory_1<CLROf<byte>>): void;
+    SetBuffer(buffer: Memory_1<System_Internal.Byte>): void;
 }
 
 
@@ -1009,27 +984,27 @@ export interface UdpClient$instance {
     Dispose(): void;
     DropMulticastGroup(multicastAddr: IPAddress): void;
     DropMulticastGroup(multicastAddr: IPAddress, ifindex: int): void;
-    EndReceive(asyncResult: IAsyncResult, remoteEP: { value: ref<IPEndPoint> }): byte[];
+    EndReceive(asyncResult: IAsyncResult, remoteEP: IPEndPoint): byte[];
     EndSend(asyncResult: IAsyncResult): int;
     JoinMulticastGroup(multicastAddr: IPAddress): void;
     JoinMulticastGroup(multicastAddr: IPAddress, localAddress: IPAddress): void;
     JoinMulticastGroup(ifindex: int, multicastAddr: IPAddress): void;
     JoinMulticastGroup(multicastAddr: IPAddress, timeToLive: int): void;
-    Receive(remoteEP: { value: ref<IPEndPoint> }): byte[];
+    Receive(remoteEP: IPEndPoint): byte[];
     ReceiveAsync(): Task_1<UdpReceiveResult>;
     ReceiveAsync(cancellationToken: CancellationToken): ValueTask_1<UdpReceiveResult>;
     Send(dgram: byte[], bytes: int, endPoint: IPEndPoint): int;
-    Send(datagram: ReadOnlySpan_1<CLROf<byte>>, endPoint: IPEndPoint): int;
+    Send(datagram: ReadOnlySpan_1<System_Internal.Byte>, endPoint: IPEndPoint): int;
     Send(dgram: byte[], bytes: int, hostname: string, port: int): int;
-    Send(datagram: ReadOnlySpan_1<CLROf<byte>>, hostname: string, port: int): int;
+    Send(datagram: ReadOnlySpan_1<System_Internal.Byte>, hostname: string, port: int): int;
     Send(dgram: byte[], bytes: int): int;
-    Send(datagram: ReadOnlySpan_1<CLROf<byte>>): int;
-    SendAsync(datagram: byte[], bytes: int): Task_1<CLROf<int>>;
-    SendAsync(datagram: ReadOnlyMemory_1<CLROf<byte>>, cancellationToken?: CancellationToken): ValueTask_1<CLROf<int>>;
-    SendAsync(datagram: byte[], bytes: int, hostname: string, port: int): Task_1<CLROf<int>>;
-    SendAsync(datagram: ReadOnlyMemory_1<CLROf<byte>>, hostname: string, port: int, cancellationToken?: CancellationToken): ValueTask_1<CLROf<int>>;
-    SendAsync(datagram: byte[], bytes: int, endPoint: IPEndPoint): Task_1<CLROf<int>>;
-    SendAsync(datagram: ReadOnlyMemory_1<CLROf<byte>>, endPoint: IPEndPoint, cancellationToken?: CancellationToken): ValueTask_1<CLROf<int>>;
+    Send(datagram: ReadOnlySpan_1<System_Internal.Byte>): int;
+    SendAsync(datagram: byte[], bytes: int): Task_1<System_Internal.Int32>;
+    SendAsync(datagram: ReadOnlyMemory_1<System_Internal.Byte>, cancellationToken?: CancellationToken): ValueTask_1<System_Internal.Int32>;
+    SendAsync(datagram: byte[], bytes: int, hostname: string, port: int): Task_1<System_Internal.Int32>;
+    SendAsync(datagram: ReadOnlyMemory_1<System_Internal.Byte>, hostname: string, port: int, cancellationToken?: CancellationToken): ValueTask_1<System_Internal.Int32>;
+    SendAsync(datagram: byte[], bytes: int, endPoint: IPEndPoint): Task_1<System_Internal.Int32>;
+    SendAsync(datagram: ReadOnlyMemory_1<System_Internal.Byte>, endPoint: IPEndPoint, cancellationToken?: CancellationToken): ValueTask_1<System_Internal.Int32>;
 }
 
 
@@ -1080,15 +1055,15 @@ export abstract class SocketTaskExtensions$instance {
     static ConnectAsync(socket: Socket, addresses: IPAddress[], port: int): Task;
     static ConnectAsync(socket: Socket, host: string, port: int, cancellationToken: CancellationToken): ValueTask;
     static ConnectAsync(socket: Socket, host: string, port: int): Task;
-    static ReceiveAsync(socket: Socket, buffer: ArraySegment_1<CLROf<byte>>, socketFlags: SocketFlags): Task_1<CLROf<int>>;
-    static ReceiveAsync(socket: Socket, buffers: IList_1<ArraySegment_1<CLROf<byte>>>, socketFlags: SocketFlags): Task_1<CLROf<int>>;
-    static ReceiveAsync(socket: Socket, buffer: Memory_1<CLROf<byte>>, socketFlags: SocketFlags, cancellationToken?: CancellationToken): ValueTask_1<CLROf<int>>;
-    static ReceiveFromAsync(socket: Socket, buffer: ArraySegment_1<CLROf<byte>>, socketFlags: SocketFlags, remoteEndPoint: EndPoint): Task_1<SocketReceiveFromResult>;
-    static ReceiveMessageFromAsync(socket: Socket, buffer: ArraySegment_1<CLROf<byte>>, socketFlags: SocketFlags, remoteEndPoint: EndPoint): Task_1<SocketReceiveMessageFromResult>;
-    static SendAsync(socket: Socket, buffer: ArraySegment_1<CLROf<byte>>, socketFlags: SocketFlags): Task_1<CLROf<int>>;
-    static SendAsync(socket: Socket, buffers: IList_1<ArraySegment_1<CLROf<byte>>>, socketFlags: SocketFlags): Task_1<CLROf<int>>;
-    static SendAsync(socket: Socket, buffer: ReadOnlyMemory_1<CLROf<byte>>, socketFlags: SocketFlags, cancellationToken?: CancellationToken): ValueTask_1<CLROf<int>>;
-    static SendToAsync(socket: Socket, buffer: ArraySegment_1<CLROf<byte>>, socketFlags: SocketFlags, remoteEP: EndPoint): Task_1<CLROf<int>>;
+    static ReceiveAsync(socket: Socket, buffer: ArraySegment_1<System_Internal.Byte>, socketFlags: SocketFlags): Task_1<System_Internal.Int32>;
+    static ReceiveAsync(socket: Socket, buffers: IList_1<ArraySegment_1<System_Internal.Byte>>, socketFlags: SocketFlags): Task_1<System_Internal.Int32>;
+    static ReceiveAsync(socket: Socket, buffer: Memory_1<System_Internal.Byte>, socketFlags: SocketFlags, cancellationToken?: CancellationToken): ValueTask_1<System_Internal.Int32>;
+    static ReceiveFromAsync(socket: Socket, buffer: ArraySegment_1<System_Internal.Byte>, socketFlags: SocketFlags, remoteEndPoint: EndPoint): Task_1<SocketReceiveFromResult>;
+    static ReceiveMessageFromAsync(socket: Socket, buffer: ArraySegment_1<System_Internal.Byte>, socketFlags: SocketFlags, remoteEndPoint: EndPoint): Task_1<SocketReceiveMessageFromResult>;
+    static SendAsync(socket: Socket, buffer: ArraySegment_1<System_Internal.Byte>, socketFlags: SocketFlags): Task_1<System_Internal.Int32>;
+    static SendAsync(socket: Socket, buffers: IList_1<ArraySegment_1<System_Internal.Byte>>, socketFlags: SocketFlags): Task_1<System_Internal.Int32>;
+    static SendAsync(socket: Socket, buffer: ReadOnlyMemory_1<System_Internal.Byte>, socketFlags: SocketFlags, cancellationToken?: CancellationToken): ValueTask_1<System_Internal.Int32>;
+    static SendToAsync(socket: Socket, buffer: ArraySegment_1<System_Internal.Byte>, socketFlags: SocketFlags, remoteEP: EndPoint): Task_1<System_Internal.Int32>;
 }
 
 

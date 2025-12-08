@@ -5612,7 +5612,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Collections.IDictionary::Contains(System.Object):System.Boolean",
@@ -11928,7 +11934,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Data.Common:System.Data.Common.DbProviderFactories::GetFactory(System.String):System.Data.Common.DbProviderFactory",

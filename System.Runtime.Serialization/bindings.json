@@ -2814,7 +2814,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.Runtime.Serialization.ISurrogateSelector",
           "declaringAssemblyName": "System.Runtime.Serialization.Formatters",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Runtime.Serialization.Formatters:System.Runtime.Serialization.ISurrogateSelector::GetNextSelector():System.Runtime.Serialization.ISurrogateSelector",
@@ -4431,7 +4437,17 @@
           "parameterCount": 5,
           "declaringClrType": "System.Runtime.Serialization.DataContractResolver",
           "declaringAssemblyName": "System.Private.DataContractSerialization",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 3,
+              "modifier": "out"
+            },
+            {
+              "index": 4,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.DataContractSerialization:System.Runtime.Serialization.DataContractResolver::ResolveName(System.String,System.String,System.Type,System.Runtime.Serialization.DataContractResolver):System.Type",
@@ -8582,7 +8598,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Runtime.Serialization.ObjectIDGenerator",
           "declaringAssemblyName": "System.Runtime.Serialization.Formatters",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Runtime.Serialization.Formatters:System.Runtime.Serialization.ObjectIDGenerator::HasId(System.Object,System.Boolean\u0026):System.Int64",
@@ -8596,7 +8618,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Runtime.Serialization.ObjectIDGenerator",
           "declaringAssemblyName": "System.Runtime.Serialization.Formatters",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         }
       ],
       "properties": [],
@@ -10253,7 +10281,17 @@
           "parameterCount": 3,
           "declaringClrType": "System.Runtime.Serialization.SerializationBinder",
           "declaringAssemblyName": "System.Runtime.Serialization.Formatters",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            },
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Runtime.Serialization.Formatters:System.Runtime.Serialization.SerializationBinder::BindToType(System.String,System.String):System.Type",
@@ -12235,7 +12273,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.Runtime.Serialization.SurrogateSelector",
           "declaringAssemblyName": "System.Runtime.Serialization.Formatters",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Runtime.Serialization.Formatters:System.Runtime.Serialization.SurrogateSelector::RemoveSurrogate(System.Type,System.Runtime.Serialization.StreamingContext):System.Void",
@@ -12277,7 +12321,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.Runtime.Serialization.ISurrogateSelector",
           "declaringAssemblyName": "System.Runtime.Serialization.Formatters",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Runtime.Serialization.Formatters:System.Runtime.Serialization.ISurrogateSelector::GetNextSelector():System.Runtime.Serialization.ISurrogateSelector",
@@ -14900,7 +14950,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.Runtime.Serialization.XPathQueryGenerator",
           "declaringAssemblyName": "System.Private.DataContractSerialization",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.DataContractSerialization:System.Runtime.Serialization.XPathQueryGenerator::CreateFromDataContractSerializer(System.Type,System.Reflection.MemberInfo[],System.Text.StringBuilder,System.Xml.XmlNamespaceManager\u0026):System.String",
@@ -14914,7 +14970,13 @@
           "parameterCount": 4,
           "declaringClrType": "System.Runtime.Serialization.XPathQueryGenerator",
           "declaringAssemblyName": "System.Private.DataContractSerialization",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 3,
+              "modifier": "out"
+            }
+          ]
         }
       ],
       "properties": [],

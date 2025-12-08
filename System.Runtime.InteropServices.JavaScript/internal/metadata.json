@@ -29,7 +29,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Runtime.InteropServices.JavaScript:System.Runtime.InteropServices.JavaScript.JSMarshalerArgument\u002BArgumentToJSCallback\u00601::BeginInvoke(System.Runtime.InteropServices.JavaScript.JSMarshalerArgument\u0026,T,System.AsyncCallback,System.Object):System.IAsyncResult",
@@ -45,7 +51,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 4,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Runtime.InteropServices.JavaScript:System.Runtime.InteropServices.JavaScript.JSMarshalerArgument\u002BArgumentToJSCallback\u00601::EndInvoke(System.Runtime.InteropServices.JavaScript.JSMarshalerArgument\u0026,System.IAsyncResult):System.Void",
@@ -61,7 +73,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            }
+          ]
         }
       ],
       "properties": [],
@@ -100,7 +118,17 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            },
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Runtime.InteropServices.JavaScript:System.Runtime.InteropServices.JavaScript.JSMarshalerArgument\u002BArgumentToManagedCallback\u00601::BeginInvoke(System.Runtime.InteropServices.JavaScript.JSMarshalerArgument\u0026,T\u0026,System.AsyncCallback,System.Object):System.IAsyncResult",
@@ -116,7 +144,17 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 4,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            },
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Runtime.InteropServices.JavaScript:System.Runtime.InteropServices.JavaScript.JSMarshalerArgument\u002BArgumentToManagedCallback\u00601::EndInvoke(System.Runtime.InteropServices.JavaScript.JSMarshalerArgument\u0026,T\u0026,System.IAsyncResult):System.Void",
@@ -132,7 +170,17 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 3,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            },
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         }
       ],
       "properties": [],
@@ -187,7 +235,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 1,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Runtime.InteropServices.JavaScript:System.Runtime.InteropServices.JavaScript.JSMarshalerArgument::ToJS(System.Boolean):System.Void",
@@ -219,7 +273,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 1,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Runtime.InteropServices.JavaScript:System.Runtime.InteropServices.JavaScript.JSMarshalerArgument::ToJS(System.Nullable_1[[System.Boolean,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]):System.Void",
@@ -251,7 +311,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 1,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Runtime.InteropServices.JavaScript:System.Runtime.InteropServices.JavaScript.JSMarshalerArgument::ToJS(System.Byte):System.Void",
@@ -283,7 +349,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 1,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Runtime.InteropServices.JavaScript:System.Runtime.InteropServices.JavaScript.JSMarshalerArgument::ToJS(System.Nullable_1[[System.Byte,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]):System.Void",
@@ -315,7 +387,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 1,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Runtime.InteropServices.JavaScript:System.Runtime.InteropServices.JavaScript.JSMarshalerArgument::ToJS(System.Byte[]):System.Void",
@@ -347,7 +425,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 1,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Runtime.InteropServices.JavaScript:System.Runtime.InteropServices.JavaScript.JSMarshalerArgument::ToJS(System.Char):System.Void",
@@ -379,7 +463,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 1,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Runtime.InteropServices.JavaScript:System.Runtime.InteropServices.JavaScript.JSMarshalerArgument::ToJS(System.Nullable_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]):System.Void",
@@ -411,7 +501,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 1,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Runtime.InteropServices.JavaScript:System.Runtime.InteropServices.JavaScript.JSMarshalerArgument::ToJS(System.Int16):System.Void",
@@ -443,7 +539,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 1,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Runtime.InteropServices.JavaScript:System.Runtime.InteropServices.JavaScript.JSMarshalerArgument::ToJS(System.Nullable_1[[System.Int16,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]):System.Void",
@@ -475,7 +577,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 1,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Runtime.InteropServices.JavaScript:System.Runtime.InteropServices.JavaScript.JSMarshalerArgument::ToJS(System.Int32):System.Void",
@@ -507,7 +615,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 1,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Runtime.InteropServices.JavaScript:System.Runtime.InteropServices.JavaScript.JSMarshalerArgument::ToJS(System.Nullable_1[[System.Int32,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]):System.Void",
@@ -539,7 +653,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 1,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Runtime.InteropServices.JavaScript:System.Runtime.InteropServices.JavaScript.JSMarshalerArgument::ToJS(System.Int32[]):System.Void",
@@ -571,7 +691,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 1,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Runtime.InteropServices.JavaScript:System.Runtime.InteropServices.JavaScript.JSMarshalerArgument::ToJS(System.Int64):System.Void",
@@ -603,7 +729,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 1,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Runtime.InteropServices.JavaScript:System.Runtime.InteropServices.JavaScript.JSMarshalerArgument::ToJS(System.Nullable_1[[System.Int64,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]):System.Void",
@@ -635,7 +767,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 1,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Runtime.InteropServices.JavaScript:System.Runtime.InteropServices.JavaScript.JSMarshalerArgument::ToJSBig(System.Int64):System.Void",
@@ -667,7 +805,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 1,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Runtime.InteropServices.JavaScript:System.Runtime.InteropServices.JavaScript.JSMarshalerArgument::ToJSBig(System.Nullable_1[[System.Int64,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]):System.Void",
@@ -699,7 +843,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 1,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Runtime.InteropServices.JavaScript:System.Runtime.InteropServices.JavaScript.JSMarshalerArgument::ToJS(System.Single):System.Void",
@@ -731,7 +881,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 1,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Runtime.InteropServices.JavaScript:System.Runtime.InteropServices.JavaScript.JSMarshalerArgument::ToJS(System.Nullable_1[[System.Single,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]):System.Void",
@@ -763,7 +919,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 1,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Runtime.InteropServices.JavaScript:System.Runtime.InteropServices.JavaScript.JSMarshalerArgument::ToJS(System.Double):System.Void",
@@ -795,7 +957,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 1,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Runtime.InteropServices.JavaScript:System.Runtime.InteropServices.JavaScript.JSMarshalerArgument::ToJS(System.Nullable_1[[System.Double,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]):System.Void",
@@ -827,7 +995,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 1,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Runtime.InteropServices.JavaScript:System.Runtime.InteropServices.JavaScript.JSMarshalerArgument::ToJS(System.Double[]):System.Void",
@@ -859,7 +1033,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 1,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Runtime.InteropServices.JavaScript:System.Runtime.InteropServices.JavaScript.JSMarshalerArgument::ToJS(System.IntPtr):System.Void",
@@ -891,7 +1071,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 1,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Runtime.InteropServices.JavaScript:System.Runtime.InteropServices.JavaScript.JSMarshalerArgument::ToJS(System.Nullable_1[[System.IntPtr,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]):System.Void",
@@ -923,7 +1109,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 1,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Runtime.InteropServices.JavaScript:System.Runtime.InteropServices.JavaScript.JSMarshalerArgument::ToJS(System.DateTimeOffset):System.Void",
@@ -955,7 +1147,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 1,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Runtime.InteropServices.JavaScript:System.Runtime.InteropServices.JavaScript.JSMarshalerArgument::ToJS(System.Nullable_1[[System.DateTimeOffset,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]):System.Void",
@@ -987,7 +1185,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 1,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Runtime.InteropServices.JavaScript:System.Runtime.InteropServices.JavaScript.JSMarshalerArgument::ToJS(System.DateTime):System.Void",
@@ -1019,7 +1223,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 1,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Runtime.InteropServices.JavaScript:System.Runtime.InteropServices.JavaScript.JSMarshalerArgument::ToJS(System.Nullable_1[[System.DateTime,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]):System.Void",
@@ -1051,7 +1261,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 1,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Runtime.InteropServices.JavaScript:System.Runtime.InteropServices.JavaScript.JSMarshalerArgument::ToJS(System.String):System.Void",
@@ -1083,7 +1299,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 1,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Runtime.InteropServices.JavaScript:System.Runtime.InteropServices.JavaScript.JSMarshalerArgument::ToJS(System.String[]):System.Void",
@@ -1115,7 +1337,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 1,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Runtime.InteropServices.JavaScript:System.Runtime.InteropServices.JavaScript.JSMarshalerArgument::ToJS(System.Exception):System.Void",
@@ -1147,7 +1375,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 1,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Runtime.InteropServices.JavaScript:System.Runtime.InteropServices.JavaScript.JSMarshalerArgument::ToJS(System.Object):System.Void",
@@ -1179,7 +1413,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 1,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Runtime.InteropServices.JavaScript:System.Runtime.InteropServices.JavaScript.JSMarshalerArgument::ToJS(System.Object[]):System.Void",
@@ -1211,7 +1451,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 1,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Runtime.InteropServices.JavaScript:System.Runtime.InteropServices.JavaScript.JSMarshalerArgument::ToJS(System.Runtime.InteropServices.JavaScript.JSObject):System.Void",
@@ -1243,7 +1489,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 1,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Runtime.InteropServices.JavaScript:System.Runtime.InteropServices.JavaScript.JSMarshalerArgument::ToJS(System.Runtime.InteropServices.JavaScript.JSObject[]):System.Void",
@@ -1275,7 +1527,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 1,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Runtime.InteropServices.JavaScript:System.Runtime.InteropServices.JavaScript.JSMarshalerArgument::ToJS(System.Threading.Tasks.Task):System.Void",
@@ -1307,7 +1565,13 @@
           "isSealed": false,
           "arity": 1,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Runtime.InteropServices.JavaScript:System.Runtime.InteropServices.JavaScript.JSMarshalerArgument::ToJS(Task_1,ArgumentToJSCallback_1):System.Void",
@@ -1339,7 +1603,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 1,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Runtime.InteropServices.JavaScript:System.Runtime.InteropServices.JavaScript.JSMarshalerArgument::ToJS(System.Action):System.Void",
@@ -1371,7 +1641,13 @@
           "isSealed": false,
           "arity": 1,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Runtime.InteropServices.JavaScript:System.Runtime.InteropServices.JavaScript.JSMarshalerArgument::ToJS(Action_1,ArgumentToManagedCallback_1):System.Void",
@@ -1403,7 +1679,13 @@
           "isSealed": false,
           "arity": 2,
           "parameterCount": 3,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Runtime.InteropServices.JavaScript:System.Runtime.InteropServices.JavaScript.JSMarshalerArgument::ToJS(Action_2,ArgumentToManagedCallback_1,ArgumentToManagedCallback_1):System.Void",
@@ -1435,7 +1717,13 @@
           "isSealed": false,
           "arity": 3,
           "parameterCount": 4,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Runtime.InteropServices.JavaScript:System.Runtime.InteropServices.JavaScript.JSMarshalerArgument::ToJS(Action_3,ArgumentToManagedCallback_1,ArgumentToManagedCallback_1,ArgumentToManagedCallback_1):System.Void",
@@ -1467,7 +1755,13 @@
           "isSealed": false,
           "arity": 1,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Runtime.InteropServices.JavaScript:System.Runtime.InteropServices.JavaScript.JSMarshalerArgument::ToJS(Func_1,ArgumentToJSCallback_1):System.Void",
@@ -1499,7 +1793,13 @@
           "isSealed": false,
           "arity": 2,
           "parameterCount": 3,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Runtime.InteropServices.JavaScript:System.Runtime.InteropServices.JavaScript.JSMarshalerArgument::ToJS(Func_2,ArgumentToManagedCallback_1,ArgumentToJSCallback_1):System.Void",
@@ -1531,7 +1831,13 @@
           "isSealed": false,
           "arity": 3,
           "parameterCount": 4,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Runtime.InteropServices.JavaScript:System.Runtime.InteropServices.JavaScript.JSMarshalerArgument::ToJS(Func_3,ArgumentToManagedCallback_1,ArgumentToManagedCallback_1,ArgumentToJSCallback_1):System.Void",
@@ -1563,7 +1869,13 @@
           "isSealed": false,
           "arity": 4,
           "parameterCount": 5,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Runtime.InteropServices.JavaScript:System.Runtime.InteropServices.JavaScript.JSMarshalerArgument::ToJS(Func_4,ArgumentToManagedCallback_1,ArgumentToManagedCallback_1,ArgumentToManagedCallback_1,ArgumentToJSCallback_1):System.Void",
@@ -1595,7 +1907,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 1,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Runtime.InteropServices.JavaScript:System.Runtime.InteropServices.JavaScript.JSMarshalerArgument::ToJS(System.Void*):System.Void",
@@ -1627,7 +1945,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 1,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Runtime.InteropServices.JavaScript:System.Runtime.InteropServices.JavaScript.JSMarshalerArgument::ToJS(System.Span_1[[System.Byte,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]):System.Void",
@@ -1659,7 +1983,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 1,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Runtime.InteropServices.JavaScript:System.Runtime.InteropServices.JavaScript.JSMarshalerArgument::ToJS(System.ArraySegment_1[[System.Byte,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]):System.Void",
@@ -1691,7 +2021,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 1,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Runtime.InteropServices.JavaScript:System.Runtime.InteropServices.JavaScript.JSMarshalerArgument::ToJS(System.Span_1[[System.Int32,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]):System.Void",
@@ -1723,7 +2059,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 1,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Runtime.InteropServices.JavaScript:System.Runtime.InteropServices.JavaScript.JSMarshalerArgument::ToJS(System.Span_1[[System.Double,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]):System.Void",
@@ -1755,7 +2097,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 1,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Runtime.InteropServices.JavaScript:System.Runtime.InteropServices.JavaScript.JSMarshalerArgument::ToJS(System.ArraySegment_1[[System.Int32,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]):System.Void",
@@ -1787,7 +2135,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 1,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Runtime.InteropServices.JavaScript:System.Runtime.InteropServices.JavaScript.JSMarshalerArgument::ToJS(System.ArraySegment_1[[System.Double,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]):System.Void",

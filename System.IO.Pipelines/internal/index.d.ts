@@ -6,7 +6,7 @@
 import type { sbyte, byte, short, ushort, int, uint, long, ulong, int128, uint128, half, float, double, decimal, nint, nuint, char } from '@tsonic/types';
 
 // Import support types from @tsonic/types
-import type { ptr, ref } from "@tsonic/types";
+import type { ptr } from "@tsonic/types";
 
 // Import types from other namespaces
 import * as System_Buffers_Internal from "../../System.Buffers/internal/index.js";
@@ -16,31 +16,6 @@ import type { Task, ValueTask, ValueTask_1 } from "../../System.Threading.Tasks/
 import type { CancellationToken } from "../../System.Threading/internal/index.js";
 import * as System_Internal from "../../System/internal/index.js";
 import type { Action_1, Action_2, Boolean as ClrBoolean, Byte, Exception, Int32, Int64, Memory_1, Object as ClrObject, ReadOnlyMemory_1, SequencePosition, Span_1, String as ClrString, Type, ValueType, Void } from "../../System/internal/index.js";
-
-// CLROf<T> - Maps ergonomic primitives to their CLR types for generic constraints
-// This utility is used ONLY in generic type arguments to satisfy CLR interface constraints
-// Value positions (parameters, return types) use lowercase primitives for ergonomics
-export type CLROf<T> =
-    T extends sbyte ? System_Internal.SByte :
-    T extends short ? System_Internal.Int16 :
-    T extends int ? System_Internal.Int32 :
-    T extends long ? System_Internal.Int64 :
-    T extends int128 ? System_Internal.Int128 :
-    T extends nint ? System_Internal.IntPtr :
-    T extends byte ? System_Internal.Byte :
-    T extends ushort ? System_Internal.UInt16 :
-    T extends uint ? System_Internal.UInt32 :
-    T extends ulong ? System_Internal.UInt64 :
-    T extends uint128 ? System_Internal.UInt128 :
-    T extends nuint ? System_Internal.UIntPtr :
-    T extends half ? System_Internal.Half :
-    T extends float ? System_Internal.Single :
-    T extends double ? System_Internal.Double :
-    T extends decimal ? System_Internal.Decimal :
-    T extends char ? System_Internal.Char :
-    T extends boolean ? System_Internal.Boolean :
-    T extends string ? System_Internal.String :
-    T; // Identity fallback for non-primitive types
 
 export interface IDuplexPipe$instance {
     readonly Input: PipeReader;
@@ -64,14 +39,14 @@ export const FlushResult: {
 export type FlushResult = FlushResult$instance;
 
 export interface ReadResult$instance {
-    readonly Buffer: ReadOnlySequence_1<CLROf<byte>>;
+    readonly Buffer: ReadOnlySequence_1<System_Internal.Byte>;
     readonly IsCanceled: boolean;
     readonly IsCompleted: boolean;
 }
 
 
 export const ReadResult: {
-    new(buffer: ReadOnlySequence_1<CLROf<byte>>, isCanceled: boolean, isCompleted: boolean): ReadResult$instance;
+    new(buffer: ReadOnlySequence_1<System_Internal.Byte>, isCanceled: boolean, isCompleted: boolean): ReadResult$instance;
 };
 
 
@@ -95,7 +70,7 @@ export type Pipe = Pipe$instance;
 export interface PipeOptions$instance {
     readonly MinimumSegmentSize: int;
     readonly PauseWriterThreshold: long;
-    readonly Pool: MemoryPool_1<CLROf<byte>>;
+    readonly Pool: MemoryPool_1<System_Internal.Byte>;
     readonly ReaderScheduler: PipeScheduler;
     readonly ResumeWriterThreshold: long;
     readonly UseSynchronizationContext: boolean;
@@ -104,7 +79,7 @@ export interface PipeOptions$instance {
 
 
 export const PipeOptions: {
-    new(pool: MemoryPool_1<CLROf<byte>>, readerScheduler: PipeScheduler, writerScheduler: PipeScheduler, pauseWriterThreshold: long, resumeWriterThreshold: long, minimumSegmentSize: int, useSynchronizationContext: boolean): PipeOptions$instance;
+    new(pool: MemoryPool_1<System_Internal.Byte>, readerScheduler: PipeScheduler, writerScheduler: PipeScheduler, pauseWriterThreshold: long, resumeWriterThreshold: long, minimumSegmentSize: int, useSynchronizationContext: boolean): PipeOptions$instance;
     readonly Default: PipeOptions;
 };
 
@@ -123,12 +98,12 @@ export interface PipeReader$instance {
     OnWriterCompleted(callback: Action_2<Exception, unknown>, state: unknown): void;
     ReadAsync(cancellationToken?: CancellationToken): ValueTask_1<ReadResult>;
     ReadAtLeastAsync(minimumSize: int, cancellationToken?: CancellationToken): ValueTask_1<ReadResult>;
-    TryRead(result: { value: ref<ReadResult> }): boolean;
+    TryRead(result: ReadResult): boolean;
 }
 
 
 export const PipeReader: {
-    Create(sequence: ReadOnlySequence_1<CLROf<byte>>): PipeReader;
+    Create(sequence: ReadOnlySequence_1<System_Internal.Byte>): PipeReader;
     Create(stream: Stream, readerOptions?: StreamPipeReaderOptions): PipeReader;
 };
 
@@ -157,10 +132,10 @@ export interface PipeWriter$instance {
     Complete(exception?: Exception): void;
     CompleteAsync(exception?: Exception): ValueTask;
     FlushAsync(cancellationToken?: CancellationToken): ValueTask_1<FlushResult>;
-    GetMemory(sizeHint?: int): Memory_1<CLROf<byte>>;
-    GetSpan(sizeHint?: int): Span_1<CLROf<byte>>;
+    GetMemory(sizeHint?: int): Memory_1<System_Internal.Byte>;
+    GetSpan(sizeHint?: int): Span_1<System_Internal.Byte>;
     OnReaderCompleted(callback: Action_2<Exception, unknown>, state: unknown): void;
-    WriteAsync(source: ReadOnlyMemory_1<CLROf<byte>>, cancellationToken?: CancellationToken): ValueTask_1<FlushResult>;
+    WriteAsync(source: ReadOnlyMemory_1<System_Internal.Byte>, cancellationToken?: CancellationToken): ValueTask_1<FlushResult>;
 }
 
 
@@ -170,10 +145,10 @@ export const PipeWriter: {
 
 
 export interface __PipeWriter$views {
-    As_IBufferWriter_1(): System_Buffers_Internal.IBufferWriter_1$instance<CLROf<byte>>;
+    As_IBufferWriter_1(): System_Buffers_Internal.IBufferWriter_1$instance<System_Internal.Byte>;
 }
 
-export interface PipeWriter$instance extends System_Buffers_Internal.IBufferWriter_1$instance<CLROf<byte>> {}
+export interface PipeWriter$instance extends System_Buffers_Internal.IBufferWriter_1$instance<System_Internal.Byte> {}
 
 export type PipeWriter = PipeWriter$instance & __PipeWriter$views;
 
@@ -182,14 +157,14 @@ export interface StreamPipeReaderOptions$instance {
     readonly BufferSize: int;
     readonly LeaveOpen: boolean;
     readonly MinimumReadSize: int;
-    readonly Pool: MemoryPool_1<CLROf<byte>>;
+    readonly Pool: MemoryPool_1<System_Internal.Byte>;
     readonly UseZeroByteReads: boolean;
 }
 
 
 export const StreamPipeReaderOptions: {
-    new(pool: MemoryPool_1<CLROf<byte>>, bufferSize: int, minimumReadSize: int, leaveOpen: boolean): StreamPipeReaderOptions$instance;
-    new(pool: MemoryPool_1<CLROf<byte>>, bufferSize: int, minimumReadSize: int, leaveOpen: boolean, useZeroByteReads: boolean): StreamPipeReaderOptions$instance;
+    new(pool: MemoryPool_1<System_Internal.Byte>, bufferSize: int, minimumReadSize: int, leaveOpen: boolean): StreamPipeReaderOptions$instance;
+    new(pool: MemoryPool_1<System_Internal.Byte>, bufferSize: int, minimumReadSize: int, leaveOpen: boolean, useZeroByteReads: boolean): StreamPipeReaderOptions$instance;
 };
 
 
@@ -198,12 +173,12 @@ export type StreamPipeReaderOptions = StreamPipeReaderOptions$instance;
 export interface StreamPipeWriterOptions$instance {
     readonly LeaveOpen: boolean;
     readonly MinimumBufferSize: int;
-    readonly Pool: MemoryPool_1<CLROf<byte>>;
+    readonly Pool: MemoryPool_1<System_Internal.Byte>;
 }
 
 
 export const StreamPipeWriterOptions: {
-    new(pool: MemoryPool_1<CLROf<byte>>, minimumBufferSize: int, leaveOpen: boolean): StreamPipeWriterOptions$instance;
+    new(pool: MemoryPool_1<System_Internal.Byte>, minimumBufferSize: int, leaveOpen: boolean): StreamPipeWriterOptions$instance;
 };
 
 

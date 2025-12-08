@@ -13803,7 +13803,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Xml.IXmlDictionary",
           "declaringAssemblyName": "System.Private.DataContractSerialization",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.DataContractSerialization:System.Xml.IXmlDictionary::TryLookup(System.Int32,System.Xml.XmlDictionaryString\u0026):System.Boolean",
@@ -13817,7 +13823,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Xml.IXmlDictionary",
           "declaringAssemblyName": "System.Private.DataContractSerialization",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.DataContractSerialization:System.Xml.IXmlDictionary::TryLookup(System.Xml.XmlDictionaryString,System.Xml.XmlDictionaryString\u0026):System.Boolean",
@@ -13831,7 +13843,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Xml.IXmlDictionary",
           "declaringAssemblyName": "System.Private.DataContractSerialization",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         }
       ],
       "properties": [],
@@ -14352,7 +14370,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Xml.UniqueId",
           "declaringAssemblyName": "System.Private.DataContractSerialization",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.DataContractSerialization:System.Xml.UniqueId::TryGetGuid(System.Byte[],System.Int32):System.Boolean",
@@ -16297,7 +16321,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Xml.XmlBinaryReaderSession",
           "declaringAssemblyName": "System.Private.DataContractSerialization",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.DataContractSerialization:System.Xml.XmlBinaryReaderSession::TryLookup(System.String,System.Xml.XmlDictionaryString\u0026):System.Boolean",
@@ -16311,7 +16341,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Xml.XmlBinaryReaderSession",
           "declaringAssemblyName": "System.Private.DataContractSerialization",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.DataContractSerialization:System.Xml.XmlBinaryReaderSession::TryLookup(System.Xml.XmlDictionaryString,System.Xml.XmlDictionaryString\u0026):System.Boolean",
@@ -16325,7 +16361,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Xml.XmlBinaryReaderSession",
           "declaringAssemblyName": "System.Private.DataContractSerialization",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.DataContractSerialization:System.Xml.XmlBinaryReaderSession::Clear():System.Void",
@@ -16353,7 +16395,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Xml.IXmlDictionary",
           "declaringAssemblyName": "System.Private.DataContractSerialization",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.DataContractSerialization:System.Xml.IXmlDictionary::TryLookup(System.Int32,System.Xml.XmlDictionaryString\u0026):System.Boolean",
@@ -16367,7 +16415,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Xml.IXmlDictionary",
           "declaringAssemblyName": "System.Private.DataContractSerialization",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.DataContractSerialization:System.Xml.IXmlDictionary::TryLookup(System.Xml.XmlDictionaryString,System.Xml.XmlDictionaryString\u0026):System.Boolean",
@@ -16381,7 +16435,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Xml.IXmlDictionary",
           "declaringAssemblyName": "System.Private.DataContractSerialization",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         }
       ],
       "properties": [],
@@ -16572,7 +16632,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Xml.XmlBinaryWriterSession",
           "declaringAssemblyName": "System.Private.DataContractSerialization",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.DataContractSerialization:System.Xml.XmlBinaryWriterSession::Reset():System.Void",
@@ -23023,7 +23089,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Xml.XmlDictionary",
           "declaringAssemblyName": "System.Private.DataContractSerialization",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.DataContractSerialization:System.Xml.XmlDictionary::TryLookup(System.Int32,System.Xml.XmlDictionaryString\u0026):System.Boolean",
@@ -23037,7 +23109,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Xml.XmlDictionary",
           "declaringAssemblyName": "System.Private.DataContractSerialization",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.DataContractSerialization:System.Xml.XmlDictionary::TryLookup(System.Xml.XmlDictionaryString,System.Xml.XmlDictionaryString\u0026):System.Boolean",
@@ -23051,7 +23129,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Xml.XmlDictionary",
           "declaringAssemblyName": "System.Private.DataContractSerialization",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.DataContractSerialization:System.Xml.IXmlDictionary::TryLookup(System.String,System.Xml.XmlDictionaryString\u0026):System.Boolean",
@@ -23065,7 +23149,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Xml.IXmlDictionary",
           "declaringAssemblyName": "System.Private.DataContractSerialization",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.DataContractSerialization:System.Xml.IXmlDictionary::TryLookup(System.Int32,System.Xml.XmlDictionaryString\u0026):System.Boolean",
@@ -23079,7 +23169,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Xml.IXmlDictionary",
           "declaringAssemblyName": "System.Private.DataContractSerialization",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.DataContractSerialization:System.Xml.IXmlDictionary::TryLookup(System.Xml.XmlDictionaryString,System.Xml.XmlDictionaryString\u0026):System.Boolean",
@@ -23093,7 +23189,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Xml.IXmlDictionary",
           "declaringAssemblyName": "System.Private.DataContractSerialization",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         }
       ],
       "properties": [
@@ -23908,7 +24010,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Xml.XmlDictionaryReader",
           "declaringAssemblyName": "System.Private.DataContractSerialization",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.DataContractSerialization:System.Xml.XmlDictionaryReader::ReadValueAsBase64(System.Byte[],System.Int32,System.Int32):System.Int32",
@@ -24020,7 +24128,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Xml.XmlDictionaryReader",
           "declaringAssemblyName": "System.Private.DataContractSerialization",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.DataContractSerialization:System.Xml.XmlDictionaryReader::ReadContentAsString(System.Xml.XmlDictionaryString[],System.Int32\u0026):System.String",
@@ -24034,7 +24148,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Xml.XmlDictionaryReader",
           "declaringAssemblyName": "System.Private.DataContractSerialization",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.DataContractSerialization:System.Xml.XmlDictionaryReader::ReadContentAsDecimal():System.Decimal",
@@ -24118,7 +24238,17 @@
           "parameterCount": 2,
           "declaringClrType": "System.Xml.XmlDictionaryReader",
           "declaringAssemblyName": "System.Private.DataContractSerialization",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            },
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.DataContractSerialization:System.Xml.XmlDictionaryReader::ReadElementContentAsString():System.String",
@@ -24314,7 +24444,17 @@
           "parameterCount": 2,
           "declaringClrType": "System.Xml.XmlDictionaryReader",
           "declaringAssemblyName": "System.Private.DataContractSerialization",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            },
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.DataContractSerialization:System.Xml.XmlDictionaryReader::TryGetLocalNameAsDictionaryString(System.Xml.XmlDictionaryString\u0026):System.Boolean",
@@ -24328,7 +24468,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Xml.XmlDictionaryReader",
           "declaringAssemblyName": "System.Private.DataContractSerialization",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.DataContractSerialization:System.Xml.XmlDictionaryReader::TryGetNamespaceUriAsDictionaryString(System.Xml.XmlDictionaryString\u0026):System.Boolean",
@@ -24342,7 +24488,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Xml.XmlDictionaryReader",
           "declaringAssemblyName": "System.Private.DataContractSerialization",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.DataContractSerialization:System.Xml.XmlDictionaryReader::TryGetValueAsDictionaryString(System.Xml.XmlDictionaryString\u0026):System.Boolean",
@@ -24356,7 +24508,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Xml.XmlDictionaryReader",
           "declaringAssemblyName": "System.Private.DataContractSerialization",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.DataContractSerialization:System.Xml.XmlDictionaryReader::IsStartArray(System.Type\u0026):System.Boolean",
@@ -24370,7 +24528,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Xml.XmlDictionaryReader",
           "declaringAssemblyName": "System.Private.DataContractSerialization",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.DataContractSerialization:System.Xml.XmlDictionaryReader::TryGetArrayLength(System.Int32\u0026):System.Boolean",
@@ -24384,7 +24548,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Xml.XmlDictionaryReader",
           "declaringAssemblyName": "System.Private.DataContractSerialization",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.DataContractSerialization:System.Xml.XmlDictionaryReader::ReadBooleanArray(System.String,System.String):System.Boolean[]",

@@ -4097,7 +4097,17 @@
           "parameterCount": 6,
           "declaringClrType": "Microsoft.VisualBasic.CompilerServices.ObjectFlowControl\u002BForLoopControl",
           "declaringAssemblyName": "Microsoft.VisualBasic.Core",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 4,
+              "modifier": "ref"
+            },
+            {
+              "index": 5,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "Microsoft.VisualBasic.Core:Microsoft.VisualBasic.CompilerServices.ObjectFlowControl\u002BForLoopControl::ForNextCheckObj(System.Object,System.Object,System.Object\u0026):System.Boolean",
@@ -4111,7 +4121,13 @@
           "parameterCount": 3,
           "declaringClrType": "Microsoft.VisualBasic.CompilerServices.ObjectFlowControl\u002BForLoopControl",
           "declaringAssemblyName": "Microsoft.VisualBasic.Core",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "Microsoft.VisualBasic.Core:Microsoft.VisualBasic.CompilerServices.ObjectFlowControl\u002BForLoopControl::ForNextCheckR4(System.Single,System.Single,System.Single):System.Boolean",
@@ -7119,7 +7135,13 @@
           "parameterCount": 4,
           "declaringClrType": "Microsoft.VisualBasic.CompilerServices.StringType",
           "declaringAssemblyName": "Microsoft.VisualBasic.Core",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            }
+          ]
         }
       ],
       "properties": [],

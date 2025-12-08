@@ -6,7 +6,7 @@
 import type { sbyte, byte, short, ushort, int, uint, long, ulong, int128, uint128, half, float, double, decimal, nint, nuint, char } from '@tsonic/types';
 
 // Import support types from @tsonic/types
-import type { ptr, ref } from "@tsonic/types";
+import type { ptr } from "@tsonic/types";
 
 // Import types from other namespaces
 import type { MethodInfo } from "../../System.Reflection/internal/index.js";
@@ -15,31 +15,6 @@ import * as System_Runtime_Serialization_Internal from "../../System.Runtime.Ser
 import type { ISerializable, SerializationInfo, StreamingContext } from "../../System.Runtime.Serialization/internal/index.js";
 import * as System_Internal from "../../System/internal/index.js";
 import type { AsyncCallback, Boolean as ClrBoolean, Byte, Char, Delegate, Enum, IAsyncResult, ICloneable, IComparable, IConvertible, IDisposable, IEquatable_1, IFormatProvider, IFormattable, Int16, Int32, Int64, IntPtr, ISpanFormattable, Memory_1, MulticastDelegate, Nullable_1, Object as ClrObject, ReadOnlyMemory_1, ReadOnlySpan_1, SequencePosition, Span_1, String as ClrString, StringComparison, Type, TypeCode, ValueType, Void } from "../../System/internal/index.js";
-
-// CLROf<T> - Maps ergonomic primitives to their CLR types for generic constraints
-// This utility is used ONLY in generic type arguments to satisfy CLR interface constraints
-// Value positions (parameters, return types) use lowercase primitives for ergonomics
-export type CLROf<T> =
-    T extends sbyte ? System_Internal.SByte :
-    T extends short ? System_Internal.Int16 :
-    T extends int ? System_Internal.Int32 :
-    T extends long ? System_Internal.Int64 :
-    T extends int128 ? System_Internal.Int128 :
-    T extends nint ? System_Internal.IntPtr :
-    T extends byte ? System_Internal.Byte :
-    T extends ushort ? System_Internal.UInt16 :
-    T extends uint ? System_Internal.UInt32 :
-    T extends ulong ? System_Internal.UInt64 :
-    T extends uint128 ? System_Internal.UInt128 :
-    T extends nuint ? System_Internal.UIntPtr :
-    T extends half ? System_Internal.Half :
-    T extends float ? System_Internal.Single :
-    T extends double ? System_Internal.Double :
-    T extends decimal ? System_Internal.Decimal :
-    T extends char ? System_Internal.Char :
-    T extends boolean ? System_Internal.Boolean :
-    T extends string ? System_Internal.String :
-    T; // Identity fallback for non-primitive types
 
 export enum OperationStatus {
     Done = 0,
@@ -124,7 +99,7 @@ export interface ReadOnlySequence_1$instance<T> {
     Slice(start: SequencePosition): ReadOnlySequence_1<T>;
     Slice(start: long): ReadOnlySequence_1<T>;
     ToString(): string;
-    TryGet(position: { value: ref<SequencePosition> }, memory: { value: ref<ReadOnlyMemory_1<T>> }, advance?: boolean): boolean;
+    TryGet(position: SequencePosition, memory: ReadOnlyMemory_1<T>, advance?: boolean): boolean;
 }
 
 
@@ -146,7 +121,7 @@ export interface ReadOnlySequence_1_Enumerator$instance<T> {
 
 
 export const ReadOnlySequence_1_Enumerator: {
-    new<T>(sequence: ref<ReadOnlySequence_1<T>>): ReadOnlySequence_1_Enumerator$instance<T>;
+    new<T>(sequence: ReadOnlySequence_1<T>): ReadOnlySequence_1_Enumerator$instance<T>;
 };
 
 
@@ -176,18 +151,18 @@ export interface SequenceReader_1$instance<T extends (IEquatable_1<T> | number |
     TryAdvanceTo(delimiter: T, advancePastDelimiter?: boolean): boolean;
     TryAdvanceToAny(delimiters: ReadOnlySpan_1<T>, advancePastDelimiter?: boolean): boolean;
     TryCopyTo(destination: Span_1<T>): boolean;
-    TryPeek(value: { value: ref<T> }): boolean;
-    TryPeek(offset: long, value: { value: ref<T> }): boolean;
-    TryRead(value: { value: ref<T> }): boolean;
-    TryReadExact(count: int, sequence: { value: ref<ReadOnlySequence_1<T>> }): boolean;
-    TryReadTo(span: { value: ref<ReadOnlySpan_1<T>> }, delimiter: T, advancePastDelimiter?: boolean): boolean;
-    TryReadTo(span: { value: ref<ReadOnlySpan_1<T>> }, delimiter: T, delimiterEscape: T, advancePastDelimiter?: boolean): boolean;
-    TryReadTo(sequence: { value: ref<ReadOnlySequence_1<T>> }, delimiter: T, advancePastDelimiter?: boolean): boolean;
-    TryReadTo(sequence: { value: ref<ReadOnlySequence_1<T>> }, delimiter: T, delimiterEscape: T, advancePastDelimiter?: boolean): boolean;
-    TryReadTo(span: { value: ref<ReadOnlySpan_1<T>> }, delimiter: ReadOnlySpan_1<T>, advancePastDelimiter?: boolean): boolean;
-    TryReadTo(sequence: { value: ref<ReadOnlySequence_1<T>> }, delimiter: ReadOnlySpan_1<T>, advancePastDelimiter?: boolean): boolean;
-    TryReadToAny(span: { value: ref<ReadOnlySpan_1<T>> }, delimiters: ReadOnlySpan_1<T>, advancePastDelimiter?: boolean): boolean;
-    TryReadToAny(sequence: { value: ref<ReadOnlySequence_1<T>> }, delimiters: ReadOnlySpan_1<T>, advancePastDelimiter?: boolean): boolean;
+    TryPeek(value: T): boolean;
+    TryPeek(offset: long, value: T): boolean;
+    TryRead(value: T): boolean;
+    TryReadExact(count: int, sequence: ReadOnlySequence_1<T>): boolean;
+    TryReadTo(span: ReadOnlySpan_1<T>, delimiter: T, advancePastDelimiter?: boolean): boolean;
+    TryReadTo(span: ReadOnlySpan_1<T>, delimiter: T, delimiterEscape: T, advancePastDelimiter?: boolean): boolean;
+    TryReadTo(sequence: ReadOnlySequence_1<T>, delimiter: T, advancePastDelimiter?: boolean): boolean;
+    TryReadTo(sequence: ReadOnlySequence_1<T>, delimiter: T, delimiterEscape: T, advancePastDelimiter?: boolean): boolean;
+    TryReadTo(span: ReadOnlySpan_1<T>, delimiter: ReadOnlySpan_1<T>, advancePastDelimiter?: boolean): boolean;
+    TryReadTo(sequence: ReadOnlySequence_1<T>, delimiter: ReadOnlySpan_1<T>, advancePastDelimiter?: boolean): boolean;
+    TryReadToAny(span: ReadOnlySpan_1<T>, delimiters: ReadOnlySpan_1<T>, advancePastDelimiter?: boolean): boolean;
+    TryReadToAny(sequence: ReadOnlySequence_1<T>, delimiters: ReadOnlySpan_1<T>, advancePastDelimiter?: boolean): boolean;
 }
 
 
@@ -214,9 +189,9 @@ export const StandardFormat: {
     new(symbol_: char, precision: byte): StandardFormat$instance;
     readonly NoPrecision: byte;
     readonly MaxPrecision: byte;
-    Parse(format: ReadOnlySpan_1<CLROf<char>>): StandardFormat;
+    Parse(format: ReadOnlySpan_1<System_Internal.Char>): StandardFormat;
     Parse(format: string): StandardFormat;
-    TryParse(format: ReadOnlySpan_1<CLROf<char>>, result: { value: ref<StandardFormat> }): boolean;
+    TryParse(format: ReadOnlySpan_1<System_Internal.Char>, result: StandardFormat): boolean;
 };
 
 
@@ -344,9 +319,9 @@ export const SearchValues_1: {
 export type SearchValues_1<T extends (IEquatable_1<T> | number | string | boolean)> = SearchValues_1$instance<T>;
 
 export abstract class BuffersExtensions$instance {
-    static CopyTo<T>(source: { value: ref<ReadOnlySequence_1<T>> }, destination: Span_1<T>): void;
-    static PositionOf<T extends IEquatable_1<T>>(source: { value: ref<ReadOnlySequence_1<T>> }, value: T): Nullable_1<SequencePosition>;
-    static ToArray<T>(sequence: { value: ref<ReadOnlySequence_1<T>> }): T[];
+    static CopyTo<T>(source: ReadOnlySequence_1<T>, destination: Span_1<T>): void;
+    static PositionOf<T extends IEquatable_1<T>>(source: ReadOnlySequence_1<T>, value: T): Nullable_1<SequencePosition>;
+    static ToArray<T>(sequence: ReadOnlySequence_1<T>): T[];
     static Write<T>(writer: IBufferWriter_1<T>, value: ReadOnlySpan_1<T>): void;
 }
 
@@ -354,21 +329,21 @@ export abstract class BuffersExtensions$instance {
 export type BuffersExtensions = BuffersExtensions$instance;
 
 export abstract class SearchValues$instance {
-    static Create(values: ReadOnlySpan_1<CLROf<byte>>): SearchValues_1<CLROf<byte>>;
-    static Create(values: ReadOnlySpan_1<CLROf<char>>): SearchValues_1<CLROf<char>>;
-    static Create(values: ReadOnlySpan_1<CLROf<string>>, comparisonType: StringComparison): SearchValues_1<CLROf<string>>;
+    static Create(values: ReadOnlySpan_1<System_Internal.Byte>): SearchValues_1<System_Internal.Byte>;
+    static Create(values: ReadOnlySpan_1<System_Internal.Char>): SearchValues_1<System_Internal.Char>;
+    static Create(values: ReadOnlySpan_1<System_Internal.String>, comparisonType: StringComparison): SearchValues_1<System_Internal.String>;
 }
 
 
 export type SearchValues = SearchValues$instance;
 
 export abstract class SequenceReaderExtensions$instance {
-    static TryReadBigEndian(reader: { value: ref<SequenceReader_1<CLROf<byte>>> }, value: { value: ref<short> }): boolean;
-    static TryReadBigEndian(reader: { value: ref<SequenceReader_1<CLROf<byte>>> }, value: { value: ref<int> }): boolean;
-    static TryReadBigEndian(reader: { value: ref<SequenceReader_1<CLROf<byte>>> }, value: { value: ref<long> }): boolean;
-    static TryReadLittleEndian(reader: { value: ref<SequenceReader_1<CLROf<byte>>> }, value: { value: ref<short> }): boolean;
-    static TryReadLittleEndian(reader: { value: ref<SequenceReader_1<CLROf<byte>>> }, value: { value: ref<int> }): boolean;
-    static TryReadLittleEndian(reader: { value: ref<SequenceReader_1<CLROf<byte>>> }, value: { value: ref<long> }): boolean;
+    static TryReadBigEndian(reader: SequenceReader_1<System_Internal.Byte>, value: short): boolean;
+    static TryReadBigEndian(reader: SequenceReader_1<System_Internal.Byte>, value: int): boolean;
+    static TryReadBigEndian(reader: SequenceReader_1<System_Internal.Byte>, value: long): boolean;
+    static TryReadLittleEndian(reader: SequenceReader_1<System_Internal.Byte>, value: short): boolean;
+    static TryReadLittleEndian(reader: SequenceReader_1<System_Internal.Byte>, value: int): boolean;
+    static TryReadLittleEndian(reader: SequenceReader_1<System_Internal.Byte>, value: long): boolean;
 }
 
 

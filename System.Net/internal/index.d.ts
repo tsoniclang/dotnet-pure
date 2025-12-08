@@ -6,7 +6,7 @@
 import type { sbyte, byte, short, ushort, int, uint, long, ulong, int128, uint128, half, float, double, decimal, nint, nuint, char } from '@tsonic/types';
 
 // Import support types from @tsonic/types
-import type { ptr, ref } from "@tsonic/types";
+import type { ptr } from "@tsonic/types";
 
 // Import types from other namespaces
 import * as System_Collections_Generic_Internal from "../../System.Collections.Generic/internal/index.js";
@@ -36,31 +36,6 @@ import type { Task, Task_1 } from "../../System.Threading.Tasks/internal/index.j
 import type { CancellationToken } from "../../System.Threading/internal/index.js";
 import * as System_Internal from "../../System/internal/index.js";
 import type { Array as ClrArray, ArraySegment_1, AsyncCallback, Boolean as ClrBoolean, Byte, Char, DateTime, Delegate, Enum, EventArgs, Exception, FormatException, Guid, IAsyncResult, ICloneable, IComparable, IConvertible, IDisposable, IEquatable_1, IFormatProvider, IFormattable, Int16, Int32, Int64, IntPtr, InvalidOperationException, IParsable_1, ISpanFormattable, ISpanParsable_1, IUtf8SpanFormattable, IUtf8SpanParsable_1, MarshalByRefObject, Memory_1, MulticastDelegate, Object as ClrObject, Predicate_1, ReadOnlySpan_1, Span_1, String as ClrString, TimeSpan, Type, TypeCode, Uri, ValueType, Version, Void } from "../../System/internal/index.js";
-
-// CLROf<T> - Maps ergonomic primitives to their CLR types for generic constraints
-// This utility is used ONLY in generic type arguments to satisfy CLR interface constraints
-// Value positions (parameters, return types) use lowercase primitives for ergonomics
-export type CLROf<T> =
-    T extends sbyte ? System_Internal.SByte :
-    T extends short ? System_Internal.Int16 :
-    T extends int ? System_Internal.Int32 :
-    T extends long ? System_Internal.Int64 :
-    T extends int128 ? System_Internal.Int128 :
-    T extends nint ? System_Internal.IntPtr :
-    T extends byte ? System_Internal.Byte :
-    T extends ushort ? System_Internal.UInt16 :
-    T extends uint ? System_Internal.UInt32 :
-    T extends ulong ? System_Internal.UInt64 :
-    T extends uint128 ? System_Internal.UInt128 :
-    T extends nuint ? System_Internal.UIntPtr :
-    T extends half ? System_Internal.Half :
-    T extends float ? System_Internal.Single :
-    T extends double ? System_Internal.Double :
-    T extends decimal ? System_Internal.Decimal :
-    T extends char ? System_Internal.Char :
-    T extends boolean ? System_Internal.Boolean :
-    T extends string ? System_Internal.String :
-    T; // Identity fallback for non-primitive types
 
 export enum AuthenticationSchemes {
     None = 0,
@@ -426,19 +401,19 @@ export interface IPNetwork$instance {
     Equals(obj: unknown): boolean;
     GetHashCode(): int;
     ToString(): string;
-    TryFormat(destination: Span_1<CLROf<char>>, charsWritten: { value: ref<int> }): boolean;
-    TryFormat(utf8Destination: Span_1<CLROf<byte>>, bytesWritten: { value: ref<int> }): boolean;
+    TryFormat(destination: Span_1<System_Internal.Char>, charsWritten: int): boolean;
+    TryFormat(utf8Destination: Span_1<System_Internal.Byte>, bytesWritten: int): boolean;
 }
 
 
 export const IPNetwork: {
     new(baseAddress: IPAddress, prefixLength: int): IPNetwork$instance;
-    Parse(utf8Text: ReadOnlySpan_1<CLROf<byte>>): IPNetwork;
-    Parse(s: ReadOnlySpan_1<CLROf<char>>): IPNetwork;
+    Parse(utf8Text: ReadOnlySpan_1<System_Internal.Byte>): IPNetwork;
+    Parse(s: ReadOnlySpan_1<System_Internal.Char>): IPNetwork;
     Parse(s: string): IPNetwork;
-    TryParse(utf8Text: ReadOnlySpan_1<CLROf<byte>>, result: { value: ref<IPNetwork> }): boolean;
-    TryParse(s: ReadOnlySpan_1<CLROf<char>>, result: { value: ref<IPNetwork> }): boolean;
-    TryParse(s: string, result: { value: ref<IPNetwork> }): boolean;
+    TryParse(utf8Text: ReadOnlySpan_1<System_Internal.Byte>, result: IPNetwork): boolean;
+    TryParse(s: ReadOnlySpan_1<System_Internal.Char>, result: IPNetwork): boolean;
+    TryParse(s: string, result: IPNetwork): boolean;
 };
 
 
@@ -453,7 +428,7 @@ export interface __IPNetwork$views {
 
     // Structural method bridges for numeric interface constraints
     equals(other: IPNetwork): boolean;
-    tryFormat(utf8Destination: import("../../System/internal/index").Span_1<import("../../System/internal/index").CLROf<byte>>, bytesWritten: { value: ref<int> }, format: import("../../System/internal/index").ReadOnlySpan_1<import("../../System/internal/index").CLROf<char>>, provider: import("../../System/internal/index").IFormatProvider): boolean;
+    tryFormat(utf8Destination: import("../../System/internal/index").Span_1<import("../../System/internal/index").Byte>, bytesWritten: int, format: import("../../System/internal/index").ReadOnlySpan_1<import("../../System/internal/index").Char>, provider: import("../../System/internal/index").IFormatProvider): boolean;
 }
 
 export interface IPNetwork$instance extends System_Internal.ISpanParsable_1$instance<IPNetwork> {}
@@ -934,7 +909,7 @@ export interface HttpListenerContext$instance {
     AcceptWebSocketAsync(subProtocol: string): Task_1<HttpListenerWebSocketContext>;
     AcceptWebSocketAsync(subProtocol: string, keepAliveInterval: TimeSpan): Task_1<HttpListenerWebSocketContext>;
     AcceptWebSocketAsync(subProtocol: string, receiveBufferSize: int, keepAliveInterval: TimeSpan): Task_1<HttpListenerWebSocketContext>;
-    AcceptWebSocketAsync(subProtocol: string, receiveBufferSize: int, keepAliveInterval: TimeSpan, internalBuffer: ArraySegment_1<CLROf<byte>>): Task_1<HttpListenerWebSocketContext>;
+    AcceptWebSocketAsync(subProtocol: string, receiveBufferSize: int, keepAliveInterval: TimeSpan, internalBuffer: ArraySegment_1<System_Internal.Byte>): Task_1<HttpListenerWebSocketContext>;
 }
 
 
@@ -974,7 +949,7 @@ export interface HttpListenerPrefixCollection$instance {
     Contains(uriPrefix: string): boolean;
     CopyTo(array: ClrArray, offset: int): void;
     CopyTo(array: string[], offset: int): void;
-    GetEnumerator(): IEnumerator_1<CLROf<string>>;
+    GetEnumerator(): IEnumerator_1<System_Internal.String>;
     Remove(uriPrefix: string): boolean;
 }
 
@@ -985,8 +960,8 @@ export const HttpListenerPrefixCollection: {
 
 
 export interface __HttpListenerPrefixCollection$views {
-    As_ICollection_1(): System_Collections_Generic_Internal.ICollection_1$instance<CLROf<string>>;
-    As_IEnumerable_1(): System_Collections_Generic_Internal.IEnumerable_1$instance<CLROf<string>>;
+    As_ICollection_1(): System_Collections_Generic_Internal.ICollection_1$instance<System_Internal.String>;
+    As_IEnumerable_1(): System_Collections_Generic_Internal.IEnumerable_1$instance<System_Internal.String>;
     As_IEnumerable(): System_Collections_Internal.IEnumerable$instance;
 }
 
@@ -1227,18 +1202,18 @@ export interface IPAddress$instance {
     MapToIPv4(): IPAddress;
     MapToIPv6(): IPAddress;
     ToString(): string;
-    TryFormat(destination: Span_1<CLROf<char>>, charsWritten: { value: ref<int> }): boolean;
-    TryFormat(utf8Destination: Span_1<CLROf<byte>>, bytesWritten: { value: ref<int> }): boolean;
-    TryWriteBytes(destination: Span_1<CLROf<byte>>, bytesWritten: { value: ref<int> }): boolean;
+    TryFormat(destination: Span_1<System_Internal.Char>, charsWritten: int): boolean;
+    TryFormat(utf8Destination: Span_1<System_Internal.Byte>, bytesWritten: int): boolean;
+    TryWriteBytes(destination: Span_1<System_Internal.Byte>, bytesWritten: int): boolean;
 }
 
 
 export const IPAddress: {
     new(newAddress: long): IPAddress$instance;
     new(address: byte[], scopeid: long): IPAddress$instance;
-    new(address: ReadOnlySpan_1<CLROf<byte>>, scopeid: long): IPAddress$instance;
+    new(address: ReadOnlySpan_1<System_Internal.Byte>, scopeid: long): IPAddress$instance;
     new(address: byte[]): IPAddress$instance;
-    new(address: ReadOnlySpan_1<CLROf<byte>>): IPAddress$instance;
+    new(address: ReadOnlySpan_1<System_Internal.Byte>): IPAddress$instance;
     readonly Any: IPAddress;
     readonly Loopback: IPAddress;
     readonly Broadcast: IPAddress;
@@ -1250,17 +1225,17 @@ export const IPAddress: {
     HostToNetworkOrder(host: int): int;
     HostToNetworkOrder(host: long): long;
     IsLoopback(address: IPAddress): boolean;
-    IsValid(ipSpan: ReadOnlySpan_1<CLROf<char>>): boolean;
-    IsValidUtf8(utf8Text: ReadOnlySpan_1<CLROf<byte>>): boolean;
+    IsValid(ipSpan: ReadOnlySpan_1<System_Internal.Char>): boolean;
+    IsValidUtf8(utf8Text: ReadOnlySpan_1<System_Internal.Byte>): boolean;
     NetworkToHostOrder(network: short): short;
     NetworkToHostOrder(network: int): int;
     NetworkToHostOrder(network: long): long;
-    Parse(utf8Text: ReadOnlySpan_1<CLROf<byte>>): IPAddress;
-    Parse(ipSpan: ReadOnlySpan_1<CLROf<char>>): IPAddress;
+    Parse(utf8Text: ReadOnlySpan_1<System_Internal.Byte>): IPAddress;
+    Parse(ipSpan: ReadOnlySpan_1<System_Internal.Char>): IPAddress;
     Parse(ipString: string): IPAddress;
-    TryParse(utf8Text: ReadOnlySpan_1<CLROf<byte>>, result: { value: ref<IPAddress> }): boolean;
-    TryParse(ipSpan: ReadOnlySpan_1<CLROf<char>>, address: { value: ref<IPAddress> }): boolean;
-    TryParse(ipString: string, address: { value: ref<IPAddress> }): boolean;
+    TryParse(utf8Text: ReadOnlySpan_1<System_Internal.Byte>, result: IPAddress): boolean;
+    TryParse(ipSpan: ReadOnlySpan_1<System_Internal.Char>, address: IPAddress): boolean;
+    TryParse(ipString: string, address: IPAddress): boolean;
 };
 
 
@@ -1273,7 +1248,7 @@ export interface __IPAddress$views {
     As_IUtf8SpanParsable_1(): System_Internal.IUtf8SpanParsable_1$instance<IPAddress>;
 
     // Structural method bridges for numeric interface constraints
-    tryFormat(utf8Destination: import("../../System/internal/index").Span_1<import("../../System/internal/index").CLROf<byte>>, bytesWritten: { value: ref<int> }, format: import("../../System/internal/index").ReadOnlySpan_1<import("../../System/internal/index").CLROf<char>>, provider: import("../../System/internal/index").IFormatProvider): boolean;
+    tryFormat(utf8Destination: import("../../System/internal/index").Span_1<import("../../System/internal/index").Byte>, bytesWritten: int, format: import("../../System/internal/index").ReadOnlySpan_1<import("../../System/internal/index").Char>, provider: import("../../System/internal/index").IFormatProvider): boolean;
 }
 
 export interface IPAddress$instance extends System_Internal.ISpanParsable_1$instance<IPAddress> {}
@@ -1298,10 +1273,10 @@ export const IPEndPoint: {
     new(address: IPAddress, port: int): IPEndPoint$instance;
     readonly MinPort: int;
     readonly MaxPort: int;
-    Parse(s: ReadOnlySpan_1<CLROf<char>>): IPEndPoint;
+    Parse(s: ReadOnlySpan_1<System_Internal.Char>): IPEndPoint;
     Parse(s: string): IPEndPoint;
-    TryParse(s: ReadOnlySpan_1<CLROf<char>>, result: { value: ref<IPEndPoint> }): boolean;
-    TryParse(s: string, result: { value: ref<IPEndPoint> }): boolean;
+    TryParse(s: ReadOnlySpan_1<System_Internal.Char>, result: IPEndPoint): boolean;
+    TryParse(s: string, result: IPEndPoint): boolean;
 };
 
 
@@ -1459,7 +1434,7 @@ export const ServicePointManager: {
 export type ServicePointManager = ServicePointManager$instance;
 
 export interface SocketAddress$instance {
-    readonly Buffer: Memory_1<CLROf<byte>>;
+    readonly Buffer: Memory_1<System_Internal.Byte>;
     readonly Family: AddressFamily;
     Item: byte;
     Size: int;
@@ -1592,8 +1567,8 @@ export interface WebClient$instance extends Component {
     DownloadString(address: Uri): string;
     DownloadStringAsync(address: Uri): void;
     DownloadStringAsync(address: Uri, userToken: unknown): void;
-    DownloadStringTaskAsync(address: string): Task_1<CLROf<string>>;
-    DownloadStringTaskAsync(address: Uri): Task_1<CLROf<string>>;
+    DownloadStringTaskAsync(address: string): Task_1<System_Internal.String>;
+    DownloadStringTaskAsync(address: Uri): Task_1<System_Internal.String>;
     OpenRead(address: string): Stream;
     OpenRead(address: Uri): Stream;
     OpenReadAsync(address: Uri): void;
@@ -1640,10 +1615,10 @@ export interface WebClient$instance extends Component {
     UploadStringAsync(address: Uri, data: string): void;
     UploadStringAsync(address: Uri, method: string, data: string): void;
     UploadStringAsync(address: Uri, method: string, data: string, userToken: unknown): void;
-    UploadStringTaskAsync(address: string, data: string): Task_1<CLROf<string>>;
-    UploadStringTaskAsync(address: Uri, data: string): Task_1<CLROf<string>>;
-    UploadStringTaskAsync(address: string, method: string, data: string): Task_1<CLROf<string>>;
-    UploadStringTaskAsync(address: Uri, method: string, data: string): Task_1<CLROf<string>>;
+    UploadStringTaskAsync(address: string, data: string): Task_1<System_Internal.String>;
+    UploadStringTaskAsync(address: Uri, data: string): Task_1<System_Internal.String>;
+    UploadStringTaskAsync(address: string, method: string, data: string): Task_1<System_Internal.String>;
+    UploadStringTaskAsync(address: Uri, method: string, data: string): Task_1<System_Internal.String>;
     UploadValues(address: string, data: NameValueCollection): byte[];
     UploadValues(address: Uri, data: NameValueCollection): byte[];
     UploadValues(address: string, method: string, data: NameValueCollection): byte[];

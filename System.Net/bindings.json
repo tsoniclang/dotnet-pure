@@ -15499,7 +15499,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Net.IPNetwork",
           "declaringAssemblyName": "System.Net.Primitives",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Net.Primitives:System.Net.IPNetwork::TryParse(System.ReadOnlySpan_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Net.IPNetwork\u0026):System.Boolean",
@@ -15513,7 +15519,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Net.IPNetwork",
           "declaringAssemblyName": "System.Net.Primitives",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Net.Primitives:System.Net.IPNetwork::TryParse(System.ReadOnlySpan_1[[System.Byte,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Net.IPNetwork\u0026):System.Boolean",
@@ -15527,7 +15539,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Net.IPNetwork",
           "declaringAssemblyName": "System.Net.Primitives",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Net.Primitives:System.Net.IPNetwork::ToString():System.String",
@@ -15555,7 +15573,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Net.IPNetwork",
           "declaringAssemblyName": "System.Net.Primitives",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Net.Primitives:System.Net.IPNetwork::TryFormat(System.Span_1[[System.Byte,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Int32\u0026):System.Boolean",
@@ -15569,7 +15593,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Net.IPNetwork",
           "declaringAssemblyName": "System.Net.Primitives",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Net.Primitives:System.Net.IPNetwork::Equals(System.Net.IPNetwork):System.Boolean",
@@ -15639,7 +15669,13 @@
           "parameterCount": 4,
           "declaringClrType": "System.ISpanFormattable",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.IFormattable::ToString(System.String,System.IFormatProvider):System.String",
@@ -15681,7 +15717,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.ISpanParsable\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.IParsable\u00601::Parse(System.String,System.IFormatProvider):TSelf",
@@ -15709,7 +15751,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.IParsable\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.IUtf8SpanFormattable::TryFormat(System.Span_1[[System.Byte,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Int32\u0026,System.ReadOnlySpan_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.IFormatProvider):System.Boolean",
@@ -15723,7 +15771,13 @@
           "parameterCount": 4,
           "declaringClrType": "System.IUtf8SpanFormattable",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.IUtf8SpanParsable\u00601::Parse(System.ReadOnlySpan_1[[System.Byte,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.IFormatProvider):TSelf",
@@ -15751,7 +15805,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.IUtf8SpanParsable\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         }
       ],
       "properties": [
@@ -26450,7 +26510,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Net.HttpWebRequest",
           "declaringAssemblyName": "System.Net.Requests",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Net.Requests:System.Net.HttpWebRequest::GetRequestStream(System.Net.TransportContext\u0026):System.IO.Stream",
@@ -26464,7 +26530,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Net.HttpWebRequest",
           "declaringAssemblyName": "System.Net.Requests",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Net.Requests:System.Net.HttpWebRequest::BeginGetRequestStream(System.AsyncCallback,System.Object):System.IAsyncResult",
@@ -28858,7 +28930,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Net.IPAddress",
           "declaringAssemblyName": "System.Net.Primitives",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Net.Primitives:System.Net.IPAddress::TryParse(System.ReadOnlySpan_1[[System.Byte,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Net.IPAddress\u0026):System.Boolean",
@@ -28872,7 +28950,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Net.IPAddress",
           "declaringAssemblyName": "System.Net.Primitives",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Net.Primitives:System.Net.IPAddress::TryParse(System.ReadOnlySpan_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Net.IPAddress\u0026):System.Boolean",
@@ -28886,7 +28970,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Net.IPAddress",
           "declaringAssemblyName": "System.Net.Primitives",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Net.Primitives:System.Net.IPAddress::Parse(System.String):System.Net.IPAddress",
@@ -28942,7 +29032,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Net.IPAddress",
           "declaringAssemblyName": "System.Net.Primitives",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Net.Primitives:System.Net.IPAddress::GetAddressBytes():System.Byte[]",
@@ -28984,7 +29080,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Net.IPAddress",
           "declaringAssemblyName": "System.Net.Primitives",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Net.Primitives:System.Net.IPAddress::TryFormat(System.Span_1[[System.Byte,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Int32\u0026):System.Boolean",
@@ -28998,7 +29100,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Net.IPAddress",
           "declaringAssemblyName": "System.Net.Primitives",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Net.Primitives:System.Net.IPAddress::HostToNetworkOrder(System.Int64):System.Int64",
@@ -29166,7 +29274,13 @@
           "parameterCount": 4,
           "declaringClrType": "System.ISpanFormattable",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.IFormattable::ToString(System.String,System.IFormatProvider):System.String",
@@ -29208,7 +29322,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.ISpanParsable\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.IParsable\u00601::Parse(System.String,System.IFormatProvider):TSelf",
@@ -29236,7 +29356,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.IParsable\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.IUtf8SpanFormattable::TryFormat(System.Span_1[[System.Byte,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Int32\u0026,System.ReadOnlySpan_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.IFormatProvider):System.Boolean",
@@ -29250,7 +29376,13 @@
           "parameterCount": 4,
           "declaringClrType": "System.IUtf8SpanFormattable",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.IUtf8SpanParsable\u00601::Parse(System.ReadOnlySpan_1[[System.Byte,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.IFormatProvider):TSelf",
@@ -29278,7 +29410,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.IUtf8SpanParsable\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         }
       ],
       "properties": [
@@ -30134,7 +30272,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Net.IPEndPoint",
           "declaringAssemblyName": "System.Net.Primitives",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Net.Primitives:System.Net.IPEndPoint::TryParse(System.ReadOnlySpan_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Net.IPEndPoint\u0026):System.Boolean",
@@ -30148,7 +30292,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Net.IPEndPoint",
           "declaringAssemblyName": "System.Net.Primitives",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Net.Primitives:System.Net.IPEndPoint::Parse(System.String):System.Net.IPEndPoint",

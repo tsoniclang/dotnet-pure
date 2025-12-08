@@ -3081,7 +3081,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Text.Json.JsonElement",
           "declaringAssemblyName": "System.Text.Json",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Text.Json:System.Text.Json.JsonElement::TryGetProperty(System.ReadOnlySpan_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Text.Json.JsonElement\u0026):System.Boolean",
@@ -3095,7 +3101,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Text.Json.JsonElement",
           "declaringAssemblyName": "System.Text.Json",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Text.Json:System.Text.Json.JsonElement::TryGetProperty(System.ReadOnlySpan_1[[System.Byte,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Text.Json.JsonElement\u0026):System.Boolean",
@@ -3109,7 +3121,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Text.Json.JsonElement",
           "declaringAssemblyName": "System.Text.Json",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Text.Json:System.Text.Json.JsonElement::GetBoolean():System.Boolean",
@@ -3151,7 +3169,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Text.Json.JsonElement",
           "declaringAssemblyName": "System.Text.Json",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Text.Json:System.Text.Json.JsonElement::GetBytesFromBase64():System.Byte[]",
@@ -3179,7 +3203,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Text.Json.JsonElement",
           "declaringAssemblyName": "System.Text.Json",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Text.Json:System.Text.Json.JsonElement::GetSByte():System.SByte",
@@ -3207,7 +3237,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Text.Json.JsonElement",
           "declaringAssemblyName": "System.Text.Json",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Text.Json:System.Text.Json.JsonElement::GetByte():System.Byte",
@@ -3235,7 +3271,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Text.Json.JsonElement",
           "declaringAssemblyName": "System.Text.Json",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Text.Json:System.Text.Json.JsonElement::GetInt16():System.Int16",
@@ -3263,7 +3305,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Text.Json.JsonElement",
           "declaringAssemblyName": "System.Text.Json",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Text.Json:System.Text.Json.JsonElement::GetUInt16():System.UInt16",
@@ -3291,7 +3339,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Text.Json.JsonElement",
           "declaringAssemblyName": "System.Text.Json",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Text.Json:System.Text.Json.JsonElement::GetInt32():System.Int32",
@@ -3319,7 +3373,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Text.Json.JsonElement",
           "declaringAssemblyName": "System.Text.Json",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Text.Json:System.Text.Json.JsonElement::GetUInt32():System.UInt32",
@@ -3347,7 +3407,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Text.Json.JsonElement",
           "declaringAssemblyName": "System.Text.Json",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Text.Json:System.Text.Json.JsonElement::GetInt64():System.Int64",
@@ -3375,7 +3441,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Text.Json.JsonElement",
           "declaringAssemblyName": "System.Text.Json",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Text.Json:System.Text.Json.JsonElement::GetUInt64():System.UInt64",
@@ -3403,7 +3475,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Text.Json.JsonElement",
           "declaringAssemblyName": "System.Text.Json",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Text.Json:System.Text.Json.JsonElement::GetDouble():System.Double",
@@ -3431,7 +3509,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Text.Json.JsonElement",
           "declaringAssemblyName": "System.Text.Json",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Text.Json:System.Text.Json.JsonElement::GetSingle():System.Single",
@@ -3459,7 +3543,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Text.Json.JsonElement",
           "declaringAssemblyName": "System.Text.Json",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Text.Json:System.Text.Json.JsonElement::GetDecimal():System.Decimal",
@@ -3487,7 +3577,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Text.Json.JsonElement",
           "declaringAssemblyName": "System.Text.Json",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Text.Json:System.Text.Json.JsonElement::GetDateTime():System.DateTime",
@@ -3515,7 +3611,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Text.Json.JsonElement",
           "declaringAssemblyName": "System.Text.Json",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Text.Json:System.Text.Json.JsonElement::GetDateTimeOffset():System.DateTimeOffset",
@@ -3543,7 +3645,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Text.Json.JsonElement",
           "declaringAssemblyName": "System.Text.Json",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Text.Json:System.Text.Json.JsonElement::GetGuid():System.Guid",
@@ -3711,7 +3819,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Text.Json.JsonElement",
           "declaringAssemblyName": "System.Text.Json",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Text.Json:System.Text.Json.JsonElement::Parse(System.ReadOnlySpan_1[[System.Byte,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Text.Json.JsonDocumentOptions):System.Text.Json.JsonElement",
@@ -3767,7 +3881,17 @@
           "parameterCount": 2,
           "declaringClrType": "System.Text.Json.JsonElement",
           "declaringAssemblyName": "System.Text.Json",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            },
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         }
       ],
       "properties": [
@@ -6608,7 +6732,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Text.Json.Utf8JsonReader",
           "declaringAssemblyName": "System.Text.Json",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Text.Json:System.Text.Json.Utf8JsonReader::TryGetByte(System.Byte\u0026):System.Boolean",
@@ -6622,7 +6752,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Text.Json.Utf8JsonReader",
           "declaringAssemblyName": "System.Text.Json",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Text.Json:System.Text.Json.Utf8JsonReader::TryGetSByte(System.SByte\u0026):System.Boolean",
@@ -6636,7 +6772,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Text.Json.Utf8JsonReader",
           "declaringAssemblyName": "System.Text.Json",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Text.Json:System.Text.Json.Utf8JsonReader::TryGetInt16(System.Int16\u0026):System.Boolean",
@@ -6650,7 +6792,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Text.Json.Utf8JsonReader",
           "declaringAssemblyName": "System.Text.Json",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Text.Json:System.Text.Json.Utf8JsonReader::TryGetInt32(System.Int32\u0026):System.Boolean",
@@ -6664,7 +6812,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Text.Json.Utf8JsonReader",
           "declaringAssemblyName": "System.Text.Json",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Text.Json:System.Text.Json.Utf8JsonReader::TryGetInt64(System.Int64\u0026):System.Boolean",
@@ -6678,7 +6832,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Text.Json.Utf8JsonReader",
           "declaringAssemblyName": "System.Text.Json",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Text.Json:System.Text.Json.Utf8JsonReader::TryGetUInt16(System.UInt16\u0026):System.Boolean",
@@ -6692,7 +6852,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Text.Json.Utf8JsonReader",
           "declaringAssemblyName": "System.Text.Json",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Text.Json:System.Text.Json.Utf8JsonReader::TryGetUInt32(System.UInt32\u0026):System.Boolean",
@@ -6706,7 +6872,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Text.Json.Utf8JsonReader",
           "declaringAssemblyName": "System.Text.Json",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Text.Json:System.Text.Json.Utf8JsonReader::TryGetUInt64(System.UInt64\u0026):System.Boolean",
@@ -6720,7 +6892,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Text.Json.Utf8JsonReader",
           "declaringAssemblyName": "System.Text.Json",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Text.Json:System.Text.Json.Utf8JsonReader::TryGetSingle(System.Single\u0026):System.Boolean",
@@ -6734,7 +6912,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Text.Json.Utf8JsonReader",
           "declaringAssemblyName": "System.Text.Json",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Text.Json:System.Text.Json.Utf8JsonReader::TryGetDouble(System.Double\u0026):System.Boolean",
@@ -6748,7 +6932,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Text.Json.Utf8JsonReader",
           "declaringAssemblyName": "System.Text.Json",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Text.Json:System.Text.Json.Utf8JsonReader::TryGetDecimal(System.Decimal\u0026):System.Boolean",
@@ -6762,7 +6952,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Text.Json.Utf8JsonReader",
           "declaringAssemblyName": "System.Text.Json",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Text.Json:System.Text.Json.Utf8JsonReader::TryGetDateTime(System.DateTime\u0026):System.Boolean",
@@ -6776,7 +6972,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Text.Json.Utf8JsonReader",
           "declaringAssemblyName": "System.Text.Json",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Text.Json:System.Text.Json.Utf8JsonReader::TryGetDateTimeOffset(System.DateTimeOffset\u0026):System.Boolean",
@@ -6790,7 +6992,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Text.Json.Utf8JsonReader",
           "declaringAssemblyName": "System.Text.Json",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Text.Json:System.Text.Json.Utf8JsonReader::TryGetGuid(System.Guid\u0026):System.Boolean",
@@ -6804,7 +7012,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Text.Json.Utf8JsonReader",
           "declaringAssemblyName": "System.Text.Json",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         }
       ],
       "properties": [
@@ -7761,7 +7975,17 @@
           "parameterCount": 2,
           "declaringClrType": "System.Text.Json.JsonDocument",
           "declaringAssemblyName": "System.Text.Json",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            },
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Text.Json:System.Text.Json.JsonDocument::ParseValue(System.Text.Json.Utf8JsonReader\u0026):System.Text.Json.JsonDocument",
@@ -7775,7 +7999,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Text.Json.JsonDocument",
           "declaringAssemblyName": "System.Text.Json",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.IDisposable::Dispose():System.Void",
@@ -8651,7 +8881,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Text.Json.JsonSerializerOptions",
           "declaringAssemblyName": "System.Text.Json",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Text.Json:System.Text.Json.JsonSerializerOptions::GetConverter(System.Type):System.Text.Json.Serialization.JsonConverter",
@@ -13758,7 +13994,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Text.Json.JsonSerializer",
           "declaringAssemblyName": "System.Text.Json",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Text.Json:System.Text.Json.JsonSerializer::Deserialize(System.Text.Json.Utf8JsonReader\u0026,System.Type,System.Text.Json.JsonSerializerOptions):System.Object",
@@ -13772,7 +14014,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.Text.Json.JsonSerializer",
           "declaringAssemblyName": "System.Text.Json",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Text.Json:System.Text.Json.JsonSerializer::Deserialize(System.Text.Json.Utf8JsonReader\u0026,JsonTypeInfo_1):TValue",
@@ -13786,7 +14034,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Text.Json.JsonSerializer",
           "declaringAssemblyName": "System.Text.Json",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Text.Json:System.Text.Json.JsonSerializer::Deserialize(System.Text.Json.Utf8JsonReader\u0026,System.Text.Json.Serialization.Metadata.JsonTypeInfo):System.Object",
@@ -13800,7 +14054,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Text.Json.JsonSerializer",
           "declaringAssemblyName": "System.Text.Json",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Text.Json:System.Text.Json.JsonSerializer::Deserialize(System.Text.Json.Utf8JsonReader\u0026,System.Type,System.Text.Json.Serialization.JsonSerializerContext):System.Object",
@@ -13814,7 +14074,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.Text.Json.JsonSerializer",
           "declaringAssemblyName": "System.Text.Json",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Text.Json:System.Text.Json.JsonSerializer::SerializeToUtf8Bytes(TValue,System.Text.Json.JsonSerializerOptions):System.Byte[]",

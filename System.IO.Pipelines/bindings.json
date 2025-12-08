@@ -883,7 +883,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.IO.Pipelines.PipeReader",
           "declaringAssemblyName": "System.IO.Pipelines",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.IO.Pipelines:System.IO.Pipelines.PipeReader::ReadAsync(System.Threading.CancellationToken):System.Threading.Tasks.ValueTask_1[[System.IO.Pipelines.ReadResult,System.IO.Pipelines,Version=10.0.0.0,Culture=neutral,PublicKeyToken=cc7b13ffcd2ddd51]]",

@@ -34,7 +34,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Collections.Frozen.FrozenDictionary\u00602\u002BAlternateLookup\u00601",
           "declaringAssemblyName": "System.Collections.Immutable",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         }
       ],
       "properties": [
@@ -454,7 +460,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Collections.Frozen.FrozenSet\u00601\u002BAlternateLookup\u00601",
           "declaringAssemblyName": "System.Collections.Immutable",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         }
       ],
       "properties": [
@@ -892,7 +904,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Collections.Frozen.FrozenDictionary\u00602",
           "declaringAssemblyName": "System.Collections.Immutable",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Collections.Immutable:System.Collections.Frozen.FrozenDictionary\u00602::GetEnumerator():Enumerator",
@@ -934,7 +952,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Collections.Frozen.FrozenDictionary\u00602",
           "declaringAssemblyName": "System.Collections.Immutable",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Collections.Generic.IDictionary\u00602::Add(TKey,TValue):System.Void",
@@ -1144,7 +1168,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Collections.Generic.IDictionary\u00602",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Collections.Generic.IReadOnlyDictionary\u00602::ContainsKey(TKey):System.Boolean",
@@ -1172,7 +1202,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Collections.Generic.IReadOnlyDictionary\u00602",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Collections.IDictionary::Clear():System.Void",
@@ -2060,7 +2096,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Collections.Frozen.FrozenSet\u00601",
           "declaringAssemblyName": "System.Collections.Immutable",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Collections.Immutable:System.Collections.Frozen.FrozenSet\u00601::GetEnumerator():Enumerator",
@@ -2186,7 +2228,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Collections.Frozen.FrozenSet\u00601",
           "declaringAssemblyName": "System.Collections.Immutable",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Collections.Generic.ISet\u00601::Add(T):System.Boolean",

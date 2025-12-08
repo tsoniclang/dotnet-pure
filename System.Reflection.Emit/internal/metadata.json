@@ -8937,7 +8937,17 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            },
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Reflection.Emit:System.Reflection.Emit.PersistedAssemblyBuilder::GenerateMetadata(System.Reflection.Metadata.BlobBuilder\u0026,System.Reflection.Metadata.BlobBuilder\u0026,System.Reflection.Metadata.Ecma335.MetadataBuilder\u0026):System.Reflection.Metadata.Ecma335.MetadataBuilder",
@@ -8953,7 +8963,21 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 3,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            },
+            {
+              "index": 1,
+              "modifier": "out"
+            },
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Reflection.Emit:System.Reflection.Emit.PersistedAssemblyBuilder::GetName(System.Boolean):System.Reflection.AssemblyName",

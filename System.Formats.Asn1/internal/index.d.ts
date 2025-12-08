@@ -6,7 +6,7 @@
 import type { sbyte, byte, short, ushort, int, uint, long, ulong, int128, uint128, half, float, double, decimal, nint, nuint, char } from '@tsonic/types';
 
 // Import support types from @tsonic/types
-import type { ptr, ref } from "@tsonic/types";
+import type { ptr } from "@tsonic/types";
 
 // Import types from other namespaces
 import type { BitArray, IDictionary } from "../../System.Collections/internal/index.js";
@@ -16,31 +16,6 @@ import * as System_Runtime_Serialization_Internal from "../../System.Runtime.Ser
 import type { ISerializable, SerializationInfo, StreamingContext } from "../../System.Runtime.Serialization/internal/index.js";
 import * as System_Internal from "../../System/internal/index.js";
 import type { Action_2, Boolean as ClrBoolean, Byte, Char, DateTimeOffset, Enum, Exception, Func_2, Func_3, IComparable, IConvertible, IDisposable, IEquatable_1, IFormatProvider, IFormattable, Int32, Int64, ISpanFormattable, Nullable_1, Object as ClrObject, ReadOnlyMemory_1, ReadOnlySpan_1, Span_1, String as ClrString, Type, TypeCode, UInt32, UInt64, ValueType, Void } from "../../System/internal/index.js";
-
-// CLROf<T> - Maps ergonomic primitives to their CLR types for generic constraints
-// This utility is used ONLY in generic type arguments to satisfy CLR interface constraints
-// Value positions (parameters, return types) use lowercase primitives for ergonomics
-export type CLROf<T> =
-    T extends sbyte ? System_Internal.SByte :
-    T extends short ? System_Internal.Int16 :
-    T extends int ? System_Internal.Int32 :
-    T extends long ? System_Internal.Int64 :
-    T extends int128 ? System_Internal.Int128 :
-    T extends nint ? System_Internal.IntPtr :
-    T extends byte ? System_Internal.Byte :
-    T extends ushort ? System_Internal.UInt16 :
-    T extends uint ? System_Internal.UInt32 :
-    T extends ulong ? System_Internal.UInt64 :
-    T extends uint128 ? System_Internal.UInt128 :
-    T extends nuint ? System_Internal.UIntPtr :
-    T extends half ? System_Internal.Half :
-    T extends float ? System_Internal.Single :
-    T extends double ? System_Internal.Double :
-    T extends decimal ? System_Internal.Decimal :
-    T extends char ? System_Internal.Char :
-    T extends boolean ? System_Internal.Boolean :
-    T extends string ? System_Internal.String :
-    T; // Identity fallback for non-primitive types
 
 export enum AsnEncodingRules {
     BER = 0,
@@ -109,13 +84,13 @@ export interface Asn1Tag$instance {
     AsConstructed(): Asn1Tag;
     AsPrimitive(): Asn1Tag;
     CalculateEncodedSize(): int;
-    Encode(destination: Span_1<CLROf<byte>>): int;
+    Encode(destination: Span_1<System_Internal.Byte>): int;
     Equals(other: Asn1Tag): boolean;
     Equals(obj: unknown): boolean;
     GetHashCode(): int;
     HasSameClassAndValue(other: Asn1Tag): boolean;
     ToString(): string;
-    TryEncode(destination: Span_1<CLROf<byte>>, bytesWritten: { value: ref<int> }): boolean;
+    TryEncode(destination: Span_1<System_Internal.Byte>, bytesWritten: int): boolean;
 }
 
 
@@ -135,8 +110,8 @@ export const Asn1Tag: {
     readonly SetOf: Asn1Tag;
     readonly UtcTime: Asn1Tag;
     readonly GeneralizedTime: Asn1Tag;
-    Decode(source: ReadOnlySpan_1<CLROf<byte>>, bytesConsumed: { value: ref<int> }): Asn1Tag;
-    TryDecode(source: ReadOnlySpan_1<CLROf<byte>>, tag: { value: ref<Asn1Tag> }, bytesConsumed: { value: ref<int> }): boolean;
+    Decode(source: ReadOnlySpan_1<System_Internal.Byte>, bytesConsumed: int): Asn1Tag;
+    TryDecode(source: ReadOnlySpan_1<System_Internal.Byte>, tag: Asn1Tag, bytesConsumed: int): boolean;
 };
 
 
@@ -205,19 +180,19 @@ export interface AsnReader$instance {
     readonly HasData: boolean;
     readonly RuleSet: AsnEncodingRules;
     Clone(): AsnReader;
-    PeekContentBytes(): ReadOnlyMemory_1<CLROf<byte>>;
-    PeekEncodedValue(): ReadOnlyMemory_1<CLROf<byte>>;
+    PeekContentBytes(): ReadOnlyMemory_1<System_Internal.Byte>;
+    PeekEncodedValue(): ReadOnlyMemory_1<System_Internal.Byte>;
     PeekTag(): Asn1Tag;
-    ReadBitString(unusedBitCount: { value: ref<int> }, expectedTag?: Nullable_1<Asn1Tag>): byte[];
+    ReadBitString(unusedBitCount: int, expectedTag?: Nullable_1<Asn1Tag>): byte[];
     ReadBoolean(expectedTag?: Nullable_1<Asn1Tag>): boolean;
     ReadCharacterString(encodingType: UniversalTagNumber, expectedTag?: Nullable_1<Asn1Tag>): string;
-    ReadEncodedValue(): ReadOnlyMemory_1<CLROf<byte>>;
-    ReadEnumeratedBytes(expectedTag?: Nullable_1<Asn1Tag>): ReadOnlyMemory_1<CLROf<byte>>;
+    ReadEncodedValue(): ReadOnlyMemory_1<System_Internal.Byte>;
+    ReadEnumeratedBytes(expectedTag?: Nullable_1<Asn1Tag>): ReadOnlyMemory_1<System_Internal.Byte>;
     ReadEnumeratedValue<TEnum extends number>(expectedTag?: Nullable_1<Asn1Tag>): TEnum;
     ReadEnumeratedValue(enumType: Type, expectedTag?: Nullable_1<Asn1Tag>): number;
     ReadGeneralizedTime(expectedTag?: Nullable_1<Asn1Tag>): DateTimeOffset;
     ReadInteger(expectedTag?: Nullable_1<Asn1Tag>): BigInteger;
-    ReadIntegerBytes(expectedTag?: Nullable_1<Asn1Tag>): ReadOnlyMemory_1<CLROf<byte>>;
+    ReadIntegerBytes(expectedTag?: Nullable_1<Asn1Tag>): ReadOnlyMemory_1<System_Internal.Byte>;
     ReadNamedBitList(expectedTag?: Nullable_1<Asn1Tag>): BitArray;
     ReadNamedBitListValue<TFlagsEnum extends number>(expectedTag?: Nullable_1<Asn1Tag>): TFlagsEnum;
     ReadNamedBitListValue(flagsEnumType: Type, expectedTag?: Nullable_1<Asn1Tag>): number;
@@ -230,22 +205,22 @@ export interface AsnReader$instance {
     ReadUtcTime(expectedTag?: Nullable_1<Asn1Tag>): DateTimeOffset;
     ReadUtcTime(twoDigitYearMax: int, expectedTag?: Nullable_1<Asn1Tag>): DateTimeOffset;
     ThrowIfNotEmpty(): void;
-    TryReadBitString(destination: Span_1<CLROf<byte>>, unusedBitCount: { value: ref<int> }, bytesWritten: { value: ref<int> }, expectedTag?: Nullable_1<Asn1Tag>): boolean;
-    TryReadCharacterString(destination: Span_1<CLROf<char>>, encodingType: UniversalTagNumber, charsWritten: { value: ref<int> }, expectedTag?: Nullable_1<Asn1Tag>): boolean;
-    TryReadCharacterStringBytes(destination: Span_1<CLROf<byte>>, expectedTag: Asn1Tag, bytesWritten: { value: ref<int> }): boolean;
-    TryReadInt32(value: { value: ref<int> }, expectedTag?: Nullable_1<Asn1Tag>): boolean;
-    TryReadInt64(value: { value: ref<long> }, expectedTag?: Nullable_1<Asn1Tag>): boolean;
-    TryReadOctetString(destination: Span_1<CLROf<byte>>, bytesWritten: { value: ref<int> }, expectedTag?: Nullable_1<Asn1Tag>): boolean;
-    TryReadPrimitiveBitString(unusedBitCount: { value: ref<int> }, value: { value: ref<ReadOnlyMemory_1<CLROf<byte>>> }, expectedTag?: Nullable_1<Asn1Tag>): boolean;
-    TryReadPrimitiveCharacterStringBytes(expectedTag: Asn1Tag, contents: { value: ref<ReadOnlyMemory_1<CLROf<byte>>> }): boolean;
-    TryReadPrimitiveOctetString(contents: { value: ref<ReadOnlyMemory_1<CLROf<byte>>> }, expectedTag?: Nullable_1<Asn1Tag>): boolean;
-    TryReadUInt32(value: { value: ref<uint> }, expectedTag?: Nullable_1<Asn1Tag>): boolean;
-    TryReadUInt64(value: { value: ref<ulong> }, expectedTag?: Nullable_1<Asn1Tag>): boolean;
+    TryReadBitString(destination: Span_1<System_Internal.Byte>, unusedBitCount: int, bytesWritten: int, expectedTag?: Nullable_1<Asn1Tag>): boolean;
+    TryReadCharacterString(destination: Span_1<System_Internal.Char>, encodingType: UniversalTagNumber, charsWritten: int, expectedTag?: Nullable_1<Asn1Tag>): boolean;
+    TryReadCharacterStringBytes(destination: Span_1<System_Internal.Byte>, expectedTag: Asn1Tag, bytesWritten: int): boolean;
+    TryReadInt32(value: int, expectedTag?: Nullable_1<Asn1Tag>): boolean;
+    TryReadInt64(value: long, expectedTag?: Nullable_1<Asn1Tag>): boolean;
+    TryReadOctetString(destination: Span_1<System_Internal.Byte>, bytesWritten: int, expectedTag?: Nullable_1<Asn1Tag>): boolean;
+    TryReadPrimitiveBitString(unusedBitCount: int, value: ReadOnlyMemory_1<System_Internal.Byte>, expectedTag?: Nullable_1<Asn1Tag>): boolean;
+    TryReadPrimitiveCharacterStringBytes(expectedTag: Asn1Tag, contents: ReadOnlyMemory_1<System_Internal.Byte>): boolean;
+    TryReadPrimitiveOctetString(contents: ReadOnlyMemory_1<System_Internal.Byte>, expectedTag?: Nullable_1<Asn1Tag>): boolean;
+    TryReadUInt32(value: uint, expectedTag?: Nullable_1<Asn1Tag>): boolean;
+    TryReadUInt64(value: ulong, expectedTag?: Nullable_1<Asn1Tag>): boolean;
 }
 
 
 export const AsnReader: {
-    new(data: ReadOnlyMemory_1<CLROf<byte>>, ruleSet: AsnEncodingRules, options: AsnReaderOptions): AsnReader$instance;
+    new(data: ReadOnlyMemory_1<System_Internal.Byte>, ruleSet: AsnEncodingRules, options: AsnReaderOptions): AsnReader$instance;
 };
 
 
@@ -254,12 +229,12 @@ export type AsnReader = AsnReader$instance;
 export interface AsnWriter$instance {
     readonly RuleSet: AsnEncodingRules;
     CopyTo(destination: AsnWriter): void;
-    Encode(destination: Span_1<CLROf<byte>>): int;
+    Encode(destination: Span_1<System_Internal.Byte>): int;
     Encode(): byte[];
-    Encode<TReturn>(encodeCallback: Func_2<ReadOnlySpan_1<CLROf<byte>>, TReturn>): TReturn;
-    Encode<TState, TReturn>(state: TState, encodeCallback: Func_3<TState, ReadOnlySpan_1<CLROf<byte>>, TReturn>): TReturn;
-    Encode<TState>(state: TState, encodeCallback: Action_2<TState, ReadOnlySpan_1<CLROf<byte>>>): void;
-    EncodedValueEquals(other: ReadOnlySpan_1<CLROf<byte>>): boolean;
+    Encode<TReturn>(encodeCallback: Func_2<ReadOnlySpan_1<System_Internal.Byte>, TReturn>): TReturn;
+    Encode<TState, TReturn>(state: TState, encodeCallback: Func_3<TState, ReadOnlySpan_1<System_Internal.Byte>, TReturn>): TReturn;
+    Encode<TState>(state: TState, encodeCallback: Action_2<TState, ReadOnlySpan_1<System_Internal.Byte>>): void;
+    EncodedValueEquals(other: ReadOnlySpan_1<System_Internal.Byte>): boolean;
     EncodedValueEquals(other: AsnWriter): boolean;
     GetEncodedLength(): int;
     PopOctetString(tag?: Nullable_1<Asn1Tag>): void;
@@ -269,27 +244,27 @@ export interface AsnWriter$instance {
     PushSequence(tag?: Nullable_1<Asn1Tag>): AsnWriter_Scope;
     PushSetOf(tag?: Nullable_1<Asn1Tag>): AsnWriter_Scope;
     Reset(): void;
-    TryEncode(destination: Span_1<CLROf<byte>>, bytesWritten: { value: ref<int> }): boolean;
-    WriteBitString(value: ReadOnlySpan_1<CLROf<byte>>, unusedBitCount?: int, tag?: Nullable_1<Asn1Tag>): void;
+    TryEncode(destination: Span_1<System_Internal.Byte>, bytesWritten: int): boolean;
+    WriteBitString(value: ReadOnlySpan_1<System_Internal.Byte>, unusedBitCount?: int, tag?: Nullable_1<Asn1Tag>): void;
     WriteBoolean(value: boolean, tag?: Nullable_1<Asn1Tag>): void;
     WriteCharacterString(encodingType: UniversalTagNumber, value: string, tag?: Nullable_1<Asn1Tag>): void;
-    WriteCharacterString(encodingType: UniversalTagNumber, str: ReadOnlySpan_1<CLROf<char>>, tag?: Nullable_1<Asn1Tag>): void;
-    WriteEncodedValue(value: ReadOnlySpan_1<CLROf<byte>>): void;
+    WriteCharacterString(encodingType: UniversalTagNumber, str: ReadOnlySpan_1<System_Internal.Char>, tag?: Nullable_1<Asn1Tag>): void;
+    WriteEncodedValue(value: ReadOnlySpan_1<System_Internal.Byte>): void;
     WriteEnumeratedValue(value: number, tag?: Nullable_1<Asn1Tag>): void;
     WriteEnumeratedValue<TEnum extends number>(value: TEnum, tag?: Nullable_1<Asn1Tag>): void;
     WriteGeneralizedTime(value: DateTimeOffset, omitFractionalSeconds?: boolean, tag?: Nullable_1<Asn1Tag>): void;
     WriteInteger(value: long, tag?: Nullable_1<Asn1Tag>): void;
     WriteInteger(value: ulong, tag?: Nullable_1<Asn1Tag>): void;
     WriteInteger(value: BigInteger, tag?: Nullable_1<Asn1Tag>): void;
-    WriteInteger(value: ReadOnlySpan_1<CLROf<byte>>, tag?: Nullable_1<Asn1Tag>): void;
-    WriteIntegerUnsigned(value: ReadOnlySpan_1<CLROf<byte>>, tag?: Nullable_1<Asn1Tag>): void;
+    WriteInteger(value: ReadOnlySpan_1<System_Internal.Byte>, tag?: Nullable_1<Asn1Tag>): void;
+    WriteIntegerUnsigned(value: ReadOnlySpan_1<System_Internal.Byte>, tag?: Nullable_1<Asn1Tag>): void;
     WriteNamedBitList(value: number, tag?: Nullable_1<Asn1Tag>): void;
     WriteNamedBitList<TEnum extends number>(value: TEnum, tag?: Nullable_1<Asn1Tag>): void;
     WriteNamedBitList(value: BitArray, tag?: Nullable_1<Asn1Tag>): void;
     WriteNull(tag?: Nullable_1<Asn1Tag>): void;
     WriteObjectIdentifier(oidValue: string, tag?: Nullable_1<Asn1Tag>): void;
-    WriteObjectIdentifier(oidValue: ReadOnlySpan_1<CLROf<char>>, tag?: Nullable_1<Asn1Tag>): void;
-    WriteOctetString(value: ReadOnlySpan_1<CLROf<byte>>, tag?: Nullable_1<Asn1Tag>): void;
+    WriteObjectIdentifier(oidValue: ReadOnlySpan_1<System_Internal.Char>, tag?: Nullable_1<Asn1Tag>): void;
+    WriteOctetString(value: ReadOnlySpan_1<System_Internal.Byte>, tag?: Nullable_1<Asn1Tag>): void;
     WriteUtcTime(value: DateTimeOffset, tag?: Nullable_1<Asn1Tag>): void;
     WriteUtcTime(value: DateTimeOffset, twoDigitYearMax: int, tag?: Nullable_1<Asn1Tag>): void;
 }
@@ -304,39 +279,39 @@ export const AsnWriter: {
 export type AsnWriter = AsnWriter$instance;
 
 export abstract class AsnDecoder$instance {
-    static DecodeLength(source: ReadOnlySpan_1<CLROf<byte>>, ruleSet: AsnEncodingRules, bytesConsumed: { value: ref<int> }): Nullable_1<CLROf<int>>;
-    static ReadBitString(source: ReadOnlySpan_1<CLROf<byte>>, ruleSet: AsnEncodingRules, unusedBitCount: { value: ref<int> }, bytesConsumed: { value: ref<int> }, expectedTag?: Nullable_1<Asn1Tag>): byte[];
-    static ReadBoolean(source: ReadOnlySpan_1<CLROf<byte>>, ruleSet: AsnEncodingRules, bytesConsumed: { value: ref<int> }, expectedTag?: Nullable_1<Asn1Tag>): boolean;
-    static ReadCharacterString(source: ReadOnlySpan_1<CLROf<byte>>, ruleSet: AsnEncodingRules, encodingType: UniversalTagNumber, bytesConsumed: { value: ref<int> }, expectedTag?: Nullable_1<Asn1Tag>): string;
-    static ReadEncodedValue(source: ReadOnlySpan_1<CLROf<byte>>, ruleSet: AsnEncodingRules, contentOffset: { value: ref<int> }, contentLength: { value: ref<int> }, bytesConsumed: { value: ref<int> }): Asn1Tag;
-    static ReadEnumeratedBytes(source: ReadOnlySpan_1<CLROf<byte>>, ruleSet: AsnEncodingRules, bytesConsumed: { value: ref<int> }, expectedTag?: Nullable_1<Asn1Tag>): ReadOnlySpan_1<CLROf<byte>>;
-    static ReadEnumeratedValue<TEnum extends number>(source: ReadOnlySpan_1<CLROf<byte>>, ruleSet: AsnEncodingRules, bytesConsumed: { value: ref<int> }, expectedTag?: Nullable_1<Asn1Tag>): TEnum;
-    static ReadEnumeratedValue(source: ReadOnlySpan_1<CLROf<byte>>, ruleSet: AsnEncodingRules, enumType: Type, bytesConsumed: { value: ref<int> }, expectedTag?: Nullable_1<Asn1Tag>): number;
-    static ReadGeneralizedTime(source: ReadOnlySpan_1<CLROf<byte>>, ruleSet: AsnEncodingRules, bytesConsumed: { value: ref<int> }, expectedTag?: Nullable_1<Asn1Tag>): DateTimeOffset;
-    static ReadInteger(source: ReadOnlySpan_1<CLROf<byte>>, ruleSet: AsnEncodingRules, bytesConsumed: { value: ref<int> }, expectedTag?: Nullable_1<Asn1Tag>): BigInteger;
-    static ReadIntegerBytes(source: ReadOnlySpan_1<CLROf<byte>>, ruleSet: AsnEncodingRules, bytesConsumed: { value: ref<int> }, expectedTag?: Nullable_1<Asn1Tag>): ReadOnlySpan_1<CLROf<byte>>;
-    static ReadNamedBitList(source: ReadOnlySpan_1<CLROf<byte>>, ruleSet: AsnEncodingRules, bytesConsumed: { value: ref<int> }, expectedTag?: Nullable_1<Asn1Tag>): BitArray;
-    static ReadNamedBitListValue<TFlagsEnum extends number>(source: ReadOnlySpan_1<CLROf<byte>>, ruleSet: AsnEncodingRules, bytesConsumed: { value: ref<int> }, expectedTag?: Nullable_1<Asn1Tag>): TFlagsEnum;
-    static ReadNamedBitListValue(source: ReadOnlySpan_1<CLROf<byte>>, ruleSet: AsnEncodingRules, flagsEnumType: Type, bytesConsumed: { value: ref<int> }, expectedTag?: Nullable_1<Asn1Tag>): number;
-    static ReadNull(source: ReadOnlySpan_1<CLROf<byte>>, ruleSet: AsnEncodingRules, bytesConsumed: { value: ref<int> }, expectedTag?: Nullable_1<Asn1Tag>): void;
-    static ReadObjectIdentifier(source: ReadOnlySpan_1<CLROf<byte>>, ruleSet: AsnEncodingRules, bytesConsumed: { value: ref<int> }, expectedTag?: Nullable_1<Asn1Tag>): string;
-    static ReadOctetString(source: ReadOnlySpan_1<CLROf<byte>>, ruleSet: AsnEncodingRules, bytesConsumed: { value: ref<int> }, expectedTag?: Nullable_1<Asn1Tag>): byte[];
-    static ReadSequence(source: ReadOnlySpan_1<CLROf<byte>>, ruleSet: AsnEncodingRules, contentOffset: { value: ref<int> }, contentLength: { value: ref<int> }, bytesConsumed: { value: ref<int> }, expectedTag?: Nullable_1<Asn1Tag>): void;
-    static ReadSetOf(source: ReadOnlySpan_1<CLROf<byte>>, ruleSet: AsnEncodingRules, contentOffset: { value: ref<int> }, contentLength: { value: ref<int> }, bytesConsumed: { value: ref<int> }, skipSortOrderValidation?: boolean, expectedTag?: Nullable_1<Asn1Tag>): void;
-    static ReadUtcTime(source: ReadOnlySpan_1<CLROf<byte>>, ruleSet: AsnEncodingRules, bytesConsumed: { value: ref<int> }, twoDigitYearMax?: int, expectedTag?: Nullable_1<Asn1Tag>): DateTimeOffset;
-    static TryDecodeLength(source: ReadOnlySpan_1<CLROf<byte>>, ruleSet: AsnEncodingRules, decodedLength: { value: ref<Nullable_1<CLROf<int>>> }, bytesConsumed: { value: ref<int> }): boolean;
-    static TryReadBitString(source: ReadOnlySpan_1<CLROf<byte>>, destination: Span_1<CLROf<byte>>, ruleSet: AsnEncodingRules, unusedBitCount: { value: ref<int> }, bytesConsumed: { value: ref<int> }, bytesWritten: { value: ref<int> }, expectedTag?: Nullable_1<Asn1Tag>): boolean;
-    static TryReadCharacterString(source: ReadOnlySpan_1<CLROf<byte>>, destination: Span_1<CLROf<char>>, ruleSet: AsnEncodingRules, encodingType: UniversalTagNumber, bytesConsumed: { value: ref<int> }, charsWritten: { value: ref<int> }, expectedTag?: Nullable_1<Asn1Tag>): boolean;
-    static TryReadCharacterStringBytes(source: ReadOnlySpan_1<CLROf<byte>>, destination: Span_1<CLROf<byte>>, ruleSet: AsnEncodingRules, expectedTag: Asn1Tag, bytesConsumed: { value: ref<int> }, bytesWritten: { value: ref<int> }): boolean;
-    static TryReadEncodedValue(source: ReadOnlySpan_1<CLROf<byte>>, ruleSet: AsnEncodingRules, tag: { value: ref<Asn1Tag> }, contentOffset: { value: ref<int> }, contentLength: { value: ref<int> }, bytesConsumed: { value: ref<int> }): boolean;
-    static TryReadInt32(source: ReadOnlySpan_1<CLROf<byte>>, ruleSet: AsnEncodingRules, value: { value: ref<int> }, bytesConsumed: { value: ref<int> }, expectedTag?: Nullable_1<Asn1Tag>): boolean;
-    static TryReadInt64(source: ReadOnlySpan_1<CLROf<byte>>, ruleSet: AsnEncodingRules, value: { value: ref<long> }, bytesConsumed: { value: ref<int> }, expectedTag?: Nullable_1<Asn1Tag>): boolean;
-    static TryReadOctetString(source: ReadOnlySpan_1<CLROf<byte>>, destination: Span_1<CLROf<byte>>, ruleSet: AsnEncodingRules, bytesConsumed: { value: ref<int> }, bytesWritten: { value: ref<int> }, expectedTag?: Nullable_1<Asn1Tag>): boolean;
-    static TryReadPrimitiveBitString(source: ReadOnlySpan_1<CLROf<byte>>, ruleSet: AsnEncodingRules, unusedBitCount: { value: ref<int> }, value: { value: ref<ReadOnlySpan_1<CLROf<byte>>> }, bytesConsumed: { value: ref<int> }, expectedTag?: Nullable_1<Asn1Tag>): boolean;
-    static TryReadPrimitiveCharacterStringBytes(source: ReadOnlySpan_1<CLROf<byte>>, ruleSet: AsnEncodingRules, expectedTag: Asn1Tag, value: { value: ref<ReadOnlySpan_1<CLROf<byte>>> }, bytesConsumed: { value: ref<int> }): boolean;
-    static TryReadPrimitiveOctetString(source: ReadOnlySpan_1<CLROf<byte>>, ruleSet: AsnEncodingRules, value: { value: ref<ReadOnlySpan_1<CLROf<byte>>> }, bytesConsumed: { value: ref<int> }, expectedTag?: Nullable_1<Asn1Tag>): boolean;
-    static TryReadUInt32(source: ReadOnlySpan_1<CLROf<byte>>, ruleSet: AsnEncodingRules, value: { value: ref<uint> }, bytesConsumed: { value: ref<int> }, expectedTag?: Nullable_1<Asn1Tag>): boolean;
-    static TryReadUInt64(source: ReadOnlySpan_1<CLROf<byte>>, ruleSet: AsnEncodingRules, value: { value: ref<ulong> }, bytesConsumed: { value: ref<int> }, expectedTag?: Nullable_1<Asn1Tag>): boolean;
+    static DecodeLength(source: ReadOnlySpan_1<System_Internal.Byte>, ruleSet: AsnEncodingRules, bytesConsumed: int): Nullable_1<System_Internal.Int32>;
+    static ReadBitString(source: ReadOnlySpan_1<System_Internal.Byte>, ruleSet: AsnEncodingRules, unusedBitCount: int, bytesConsumed: int, expectedTag?: Nullable_1<Asn1Tag>): byte[];
+    static ReadBoolean(source: ReadOnlySpan_1<System_Internal.Byte>, ruleSet: AsnEncodingRules, bytesConsumed: int, expectedTag?: Nullable_1<Asn1Tag>): boolean;
+    static ReadCharacterString(source: ReadOnlySpan_1<System_Internal.Byte>, ruleSet: AsnEncodingRules, encodingType: UniversalTagNumber, bytesConsumed: int, expectedTag?: Nullable_1<Asn1Tag>): string;
+    static ReadEncodedValue(source: ReadOnlySpan_1<System_Internal.Byte>, ruleSet: AsnEncodingRules, contentOffset: int, contentLength: int, bytesConsumed: int): Asn1Tag;
+    static ReadEnumeratedBytes(source: ReadOnlySpan_1<System_Internal.Byte>, ruleSet: AsnEncodingRules, bytesConsumed: int, expectedTag?: Nullable_1<Asn1Tag>): ReadOnlySpan_1<System_Internal.Byte>;
+    static ReadEnumeratedValue<TEnum extends number>(source: ReadOnlySpan_1<System_Internal.Byte>, ruleSet: AsnEncodingRules, bytesConsumed: int, expectedTag?: Nullable_1<Asn1Tag>): TEnum;
+    static ReadEnumeratedValue(source: ReadOnlySpan_1<System_Internal.Byte>, ruleSet: AsnEncodingRules, enumType: Type, bytesConsumed: int, expectedTag?: Nullable_1<Asn1Tag>): number;
+    static ReadGeneralizedTime(source: ReadOnlySpan_1<System_Internal.Byte>, ruleSet: AsnEncodingRules, bytesConsumed: int, expectedTag?: Nullable_1<Asn1Tag>): DateTimeOffset;
+    static ReadInteger(source: ReadOnlySpan_1<System_Internal.Byte>, ruleSet: AsnEncodingRules, bytesConsumed: int, expectedTag?: Nullable_1<Asn1Tag>): BigInteger;
+    static ReadIntegerBytes(source: ReadOnlySpan_1<System_Internal.Byte>, ruleSet: AsnEncodingRules, bytesConsumed: int, expectedTag?: Nullable_1<Asn1Tag>): ReadOnlySpan_1<System_Internal.Byte>;
+    static ReadNamedBitList(source: ReadOnlySpan_1<System_Internal.Byte>, ruleSet: AsnEncodingRules, bytesConsumed: int, expectedTag?: Nullable_1<Asn1Tag>): BitArray;
+    static ReadNamedBitListValue<TFlagsEnum extends number>(source: ReadOnlySpan_1<System_Internal.Byte>, ruleSet: AsnEncodingRules, bytesConsumed: int, expectedTag?: Nullable_1<Asn1Tag>): TFlagsEnum;
+    static ReadNamedBitListValue(source: ReadOnlySpan_1<System_Internal.Byte>, ruleSet: AsnEncodingRules, flagsEnumType: Type, bytesConsumed: int, expectedTag?: Nullable_1<Asn1Tag>): number;
+    static ReadNull(source: ReadOnlySpan_1<System_Internal.Byte>, ruleSet: AsnEncodingRules, bytesConsumed: int, expectedTag?: Nullable_1<Asn1Tag>): void;
+    static ReadObjectIdentifier(source: ReadOnlySpan_1<System_Internal.Byte>, ruleSet: AsnEncodingRules, bytesConsumed: int, expectedTag?: Nullable_1<Asn1Tag>): string;
+    static ReadOctetString(source: ReadOnlySpan_1<System_Internal.Byte>, ruleSet: AsnEncodingRules, bytesConsumed: int, expectedTag?: Nullable_1<Asn1Tag>): byte[];
+    static ReadSequence(source: ReadOnlySpan_1<System_Internal.Byte>, ruleSet: AsnEncodingRules, contentOffset: int, contentLength: int, bytesConsumed: int, expectedTag?: Nullable_1<Asn1Tag>): void;
+    static ReadSetOf(source: ReadOnlySpan_1<System_Internal.Byte>, ruleSet: AsnEncodingRules, contentOffset: int, contentLength: int, bytesConsumed: int, skipSortOrderValidation?: boolean, expectedTag?: Nullable_1<Asn1Tag>): void;
+    static ReadUtcTime(source: ReadOnlySpan_1<System_Internal.Byte>, ruleSet: AsnEncodingRules, bytesConsumed: int, twoDigitYearMax?: int, expectedTag?: Nullable_1<Asn1Tag>): DateTimeOffset;
+    static TryDecodeLength(source: ReadOnlySpan_1<System_Internal.Byte>, ruleSet: AsnEncodingRules, decodedLength: Nullable_1<System_Internal.Int32>, bytesConsumed: int): boolean;
+    static TryReadBitString(source: ReadOnlySpan_1<System_Internal.Byte>, destination: Span_1<System_Internal.Byte>, ruleSet: AsnEncodingRules, unusedBitCount: int, bytesConsumed: int, bytesWritten: int, expectedTag?: Nullable_1<Asn1Tag>): boolean;
+    static TryReadCharacterString(source: ReadOnlySpan_1<System_Internal.Byte>, destination: Span_1<System_Internal.Char>, ruleSet: AsnEncodingRules, encodingType: UniversalTagNumber, bytesConsumed: int, charsWritten: int, expectedTag?: Nullable_1<Asn1Tag>): boolean;
+    static TryReadCharacterStringBytes(source: ReadOnlySpan_1<System_Internal.Byte>, destination: Span_1<System_Internal.Byte>, ruleSet: AsnEncodingRules, expectedTag: Asn1Tag, bytesConsumed: int, bytesWritten: int): boolean;
+    static TryReadEncodedValue(source: ReadOnlySpan_1<System_Internal.Byte>, ruleSet: AsnEncodingRules, tag: Asn1Tag, contentOffset: int, contentLength: int, bytesConsumed: int): boolean;
+    static TryReadInt32(source: ReadOnlySpan_1<System_Internal.Byte>, ruleSet: AsnEncodingRules, value: int, bytesConsumed: int, expectedTag?: Nullable_1<Asn1Tag>): boolean;
+    static TryReadInt64(source: ReadOnlySpan_1<System_Internal.Byte>, ruleSet: AsnEncodingRules, value: long, bytesConsumed: int, expectedTag?: Nullable_1<Asn1Tag>): boolean;
+    static TryReadOctetString(source: ReadOnlySpan_1<System_Internal.Byte>, destination: Span_1<System_Internal.Byte>, ruleSet: AsnEncodingRules, bytesConsumed: int, bytesWritten: int, expectedTag?: Nullable_1<Asn1Tag>): boolean;
+    static TryReadPrimitiveBitString(source: ReadOnlySpan_1<System_Internal.Byte>, ruleSet: AsnEncodingRules, unusedBitCount: int, value: ReadOnlySpan_1<System_Internal.Byte>, bytesConsumed: int, expectedTag?: Nullable_1<Asn1Tag>): boolean;
+    static TryReadPrimitiveCharacterStringBytes(source: ReadOnlySpan_1<System_Internal.Byte>, ruleSet: AsnEncodingRules, expectedTag: Asn1Tag, value: ReadOnlySpan_1<System_Internal.Byte>, bytesConsumed: int): boolean;
+    static TryReadPrimitiveOctetString(source: ReadOnlySpan_1<System_Internal.Byte>, ruleSet: AsnEncodingRules, value: ReadOnlySpan_1<System_Internal.Byte>, bytesConsumed: int, expectedTag?: Nullable_1<Asn1Tag>): boolean;
+    static TryReadUInt32(source: ReadOnlySpan_1<System_Internal.Byte>, ruleSet: AsnEncodingRules, value: uint, bytesConsumed: int, expectedTag?: Nullable_1<Asn1Tag>): boolean;
+    static TryReadUInt64(source: ReadOnlySpan_1<System_Internal.Byte>, ruleSet: AsnEncodingRules, value: ulong, bytesConsumed: int, expectedTag?: Nullable_1<Asn1Tag>): boolean;
 }
 
 

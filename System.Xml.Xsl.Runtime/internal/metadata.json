@@ -6399,7 +6399,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 3,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.Xml:System.Xml.Xsl.Runtime.XmlQueryRuntime::AddNewIndex(System.Xml.XPath.XPathNavigator,System.Int32,System.Xml.Xsl.Runtime.XmlILIndex):System.Void",
@@ -6431,7 +6437,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 1,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.Xml:System.Xml.Xsl.Runtime.XmlQueryRuntime::EndSequenceConstruction(System.Xml.Xsl.Runtime.XmlQueryOutput\u0026):System.Collections.Generic.IList_1[[System.Xml.XPath.XPathItem,System.Private.Xml,Version=10.0.0.0,Culture=neutral,PublicKeyToken=cc7b13ffcd2ddd51]]",
@@ -6447,7 +6459,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 1,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.Xml:System.Xml.Xsl.Runtime.XmlQueryRuntime::StartRtfConstruction(System.String,System.Xml.Xsl.Runtime.XmlQueryOutput\u0026):System.Void",
@@ -6463,7 +6481,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.Xml:System.Xml.Xsl.Runtime.XmlQueryRuntime::EndRtfConstruction(System.Xml.Xsl.Runtime.XmlQueryOutput\u0026):System.Xml.XPath.XPathNavigator",
@@ -6479,7 +6503,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 1,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.Xml:System.Xml.Xsl.Runtime.XmlQueryRuntime::TextRtfConstruction(System.String,System.String):System.Xml.XPath.XPathNavigator",

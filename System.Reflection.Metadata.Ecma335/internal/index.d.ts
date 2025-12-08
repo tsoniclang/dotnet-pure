@@ -6,7 +6,7 @@
 import type { sbyte, byte, short, ushort, int, uint, long, ulong, int128, uint128, half, float, double, decimal, nint, nuint, char } from '@tsonic/types';
 
 // Import support types from @tsonic/types
-import type { ptr, ref } from "@tsonic/types";
+import type { ptr } from "@tsonic/types";
 
 // Import types from other namespaces
 import type { IEnumerable_1, IReadOnlyList_1 } from "../../System.Collections.Generic/internal/index.js";
@@ -15,31 +15,6 @@ import type { AssemblyDefinitionHandle, AssemblyFileHandle, AssemblyReferenceHan
 import type { AssemblyFlags, AssemblyHashAlgorithm, DeclarativeSecurityAction, EventAttributes, FieldAttributes, GenericParameterAttributes, ManifestResourceAttributes, MethodAttributes, MethodImplAttributes, MethodImportAttributes, MethodSemanticsAttributes, ParameterAttributes, PropertyAttributes, TypeAttributes } from "../../System.Reflection/internal/index.js";
 import * as System_Internal from "../../System/internal/index.js";
 import type { Action_1, Boolean as ClrBoolean, Byte, Double, Enum, Func_2, Guid, IComparable, IConvertible, IEquatable_1, IFormatProvider, IFormattable, Int32, Int64, ISpanFormattable, Object as ClrObject, Single, String as ClrString, Type, TypeCode, UInt16, UInt32, ValueType, Version, Void } from "../../System/internal/index.js";
-
-// CLROf<T> - Maps ergonomic primitives to their CLR types for generic constraints
-// This utility is used ONLY in generic type arguments to satisfy CLR interface constraints
-// Value positions (parameters, return types) use lowercase primitives for ergonomics
-export type CLROf<T> =
-    T extends sbyte ? System_Internal.SByte :
-    T extends short ? System_Internal.Int16 :
-    T extends int ? System_Internal.Int32 :
-    T extends long ? System_Internal.Int64 :
-    T extends int128 ? System_Internal.Int128 :
-    T extends nint ? System_Internal.IntPtr :
-    T extends byte ? System_Internal.Byte :
-    T extends ushort ? System_Internal.UInt16 :
-    T extends uint ? System_Internal.UInt32 :
-    T extends ulong ? System_Internal.UInt64 :
-    T extends uint128 ? System_Internal.UInt128 :
-    T extends nuint ? System_Internal.UIntPtr :
-    T extends half ? System_Internal.Half :
-    T extends float ? System_Internal.Single :
-    T extends double ? System_Internal.Double :
-    T extends decimal ? System_Internal.Decimal :
-    T extends char ? System_Internal.Char :
-    T extends boolean ? System_Internal.Boolean :
-    T extends string ? System_Internal.String :
-    T; // Identity fallback for non-primitive types
 
 export enum EditAndContinueOperation {
     Default = 0,
@@ -131,7 +106,7 @@ export enum TableIndex {
 
 export interface ArrayShapeEncoder$instance {
     readonly Builder: BlobBuilder;
-    Shape(rank: int, sizes: ImmutableArray_1<CLROf<int>>, lowerBounds: ImmutableArray_1<CLROf<int>>): void;
+    Shape(rank: int, sizes: ImmutableArray_1<System_Internal.Int32>, lowerBounds: ImmutableArray_1<System_Internal.Int32>): void;
 }
 
 
@@ -144,7 +119,7 @@ export type ArrayShapeEncoder = ArrayShapeEncoder$instance;
 
 export interface BlobEncoder$instance {
     readonly Builder: BlobBuilder;
-    CustomAttributeSignature(fixedArguments: { value: ref<FixedArgumentsEncoder> }, namedArguments: { value: ref<CustomAttributeNamedArgumentsEncoder> }): void;
+    CustomAttributeSignature(fixedArguments: FixedArgumentsEncoder, namedArguments: CustomAttributeNamedArgumentsEncoder): void;
     CustomAttributeSignature(fixedArguments: Action_1<FixedArgumentsEncoder>, namedArguments: Action_1<CustomAttributeNamedArgumentsEncoder>): void;
     Field(): FieldTypeEncoder;
     FieldSignature(): SignatureTypeEncoder;
@@ -382,9 +357,9 @@ export type LabelHandle = LabelHandle$instance & __LabelHandle$views;
 export interface LiteralEncoder$instance {
     readonly Builder: BlobBuilder;
     Scalar(): ScalarEncoder;
-    TaggedScalar(type_: { value: ref<CustomAttributeElementTypeEncoder> }, scalar: { value: ref<ScalarEncoder> }): void;
+    TaggedScalar(type_: CustomAttributeElementTypeEncoder, scalar: ScalarEncoder): void;
     TaggedScalar(type_: Action_1<CustomAttributeElementTypeEncoder>, scalar: Action_1<ScalarEncoder>): void;
-    TaggedVector(arrayType: { value: ref<CustomAttributeArrayTypeEncoder> }, vector: { value: ref<VectorEncoder> }): void;
+    TaggedVector(arrayType: CustomAttributeArrayTypeEncoder, vector: VectorEncoder): void;
     TaggedVector(arrayType: Action_1<CustomAttributeArrayTypeEncoder>, vector: Action_1<VectorEncoder>): void;
     Vector(): VectorEncoder;
 }
@@ -471,7 +446,7 @@ export type MethodBodyStreamEncoder_MethodBody = MethodBodyStreamEncoder_MethodB
 export interface MethodSignatureEncoder$instance {
     readonly Builder: BlobBuilder;
     readonly HasVarArgs: boolean;
-    Parameters(parameterCount: int, returnType: { value: ref<ReturnTypeEncoder> }, parameters: { value: ref<ParametersEncoder> }): void;
+    Parameters(parameterCount: int, returnType: ReturnTypeEncoder, parameters: ParametersEncoder): void;
     Parameters(parameterCount: int, returnType: Action_1<ReturnTypeEncoder>, parameters: Action_1<ParametersEncoder>): void;
 }
 
@@ -485,7 +460,7 @@ export type MethodSignatureEncoder = MethodSignatureEncoder$instance;
 
 export interface NamedArgumentsEncoder$instance {
     readonly Builder: BlobBuilder;
-    AddArgument(isField: boolean, type_: { value: ref<NamedArgumentTypeEncoder> }, name: { value: ref<NameEncoder> }, literal: { value: ref<LiteralEncoder> }): void;
+    AddArgument(isField: boolean, type_: NamedArgumentTypeEncoder, name: NameEncoder, literal: LiteralEncoder): void;
     AddArgument(isField: boolean, type_: Action_1<NamedArgumentTypeEncoder>, name: Action_1<NameEncoder>, literal: Action_1<LiteralEncoder>): void;
 }
 
@@ -557,7 +532,7 @@ export type ParameterTypeEncoder = ParameterTypeEncoder$instance;
 
 export interface PermissionSetEncoder$instance {
     readonly Builder: BlobBuilder;
-    AddPermission(typeName: string, encodedArguments: ImmutableArray_1<CLROf<byte>>): PermissionSetEncoder;
+    AddPermission(typeName: string, encodedArguments: ImmutableArray_1<System_Internal.Byte>): PermissionSetEncoder;
     AddPermission(typeName: string, encodedArguments: BlobBuilder): PermissionSetEncoder;
 }
 
@@ -601,11 +576,11 @@ export const ScalarEncoder: {
 export type ScalarEncoder = ScalarEncoder$instance;
 
 export interface SignatureDecoder_2$instance<TType, TGenericContext> {
-    DecodeFieldSignature(blobReader: { value: ref<BlobReader> }): TType;
-    DecodeLocalSignature(blobReader: { value: ref<BlobReader> }): ImmutableArray_1<TType>;
-    DecodeMethodSignature(blobReader: { value: ref<BlobReader> }): MethodSignature_1<TType>;
-    DecodeMethodSpecificationSignature(blobReader: { value: ref<BlobReader> }): ImmutableArray_1<TType>;
-    DecodeType(blobReader: { value: ref<BlobReader> }, allowTypeSpecifications?: boolean): TType;
+    DecodeFieldSignature(blobReader: BlobReader): TType;
+    DecodeLocalSignature(blobReader: BlobReader): ImmutableArray_1<TType>;
+    DecodeMethodSignature(blobReader: BlobReader): MethodSignature_1<TType>;
+    DecodeMethodSpecificationSignature(blobReader: BlobReader): ImmutableArray_1<TType>;
+    DecodeType(blobReader: BlobReader, allowTypeSpecifications?: boolean): TType;
 }
 
 
@@ -618,7 +593,7 @@ export type SignatureDecoder_2<TType, TGenericContext> = SignatureDecoder_2$inst
 
 export interface SignatureTypeEncoder$instance {
     readonly Builder: BlobBuilder;
-    Array(elementType: { value: ref<SignatureTypeEncoder> }, arrayShape: { value: ref<ArrayShapeEncoder> }): void;
+    Array(elementType: SignatureTypeEncoder, arrayShape: ArrayShapeEncoder): void;
     Array(elementType: Action_1<SignatureTypeEncoder>, arrayShape: Action_1<ArrayShapeEncoder>): void;
     Boolean(): void;
     Byte(): void;
@@ -699,13 +674,13 @@ export const ControlFlowBuilder: {
 export type ControlFlowBuilder = ControlFlowBuilder$instance;
 
 export interface MetadataAggregator$instance {
-    GetGenerationHandle(handle: Handle, generation: { value: ref<int> }): Handle;
+    GetGenerationHandle(handle: Handle, generation: int): Handle;
 }
 
 
 export const MetadataAggregator: {
     new(baseReader: MetadataReader, deltaReaders: IReadOnlyList_1<MetadataReader>): MetadataAggregator$instance;
-    new(baseTableRowCounts: IReadOnlyList_1<CLROf<int>>, baseHeapSizes: IReadOnlyList_1<CLROf<int>>, deltaReaders: IReadOnlyList_1<MetadataReader>): MetadataAggregator$instance;
+    new(baseTableRowCounts: IReadOnlyList_1<System_Internal.Int32>, baseHeapSizes: IReadOnlyList_1<System_Internal.Int32>, deltaReaders: IReadOnlyList_1<MetadataReader>): MetadataAggregator$instance;
 };
 
 
@@ -758,7 +733,7 @@ export interface MetadataBuilder$instance {
     AddTypeSpecification(signature: BlobHandle): TypeSpecificationHandle;
     GetOrAddBlob(value: BlobBuilder): BlobHandle;
     GetOrAddBlob(value: byte[]): BlobHandle;
-    GetOrAddBlob(value: ImmutableArray_1<CLROf<byte>>): BlobHandle;
+    GetOrAddBlob(value: ImmutableArray_1<System_Internal.Byte>): BlobHandle;
     GetOrAddBlobUTF16(value: string): BlobHandle;
     GetOrAddBlobUTF8(value: string, allowUnpairedSurrogates?: boolean): BlobHandle;
     GetOrAddConstantBlob(value: unknown): BlobHandle;
@@ -767,7 +742,7 @@ export interface MetadataBuilder$instance {
     GetOrAddString(value: string): StringHandle;
     GetOrAddUserString(value: string): UserStringHandle;
     GetRowCount(table: TableIndex): int;
-    GetRowCounts(): ImmutableArray_1<CLROf<int>>;
+    GetRowCounts(): ImmutableArray_1<System_Internal.Int32>;
     ReserveGuid(): ReservedBlob_1<GuidHandle>;
     ReserveUserString(length: int): ReservedBlob_1<UserStringHandle>;
     SetCapacity(table: TableIndex, rowCount: int): void;
@@ -798,9 +773,9 @@ export const MetadataRootBuilder: {
 export type MetadataRootBuilder = MetadataRootBuilder$instance;
 
 export interface MetadataSizes$instance {
-    readonly ExternalRowCounts: ImmutableArray_1<CLROf<int>>;
-    readonly HeapSizes: ImmutableArray_1<CLROf<int>>;
-    readonly RowCounts: ImmutableArray_1<CLROf<int>>;
+    readonly ExternalRowCounts: ImmutableArray_1<System_Internal.Int32>;
+    readonly HeapSizes: ImmutableArray_1<System_Internal.Int32>;
+    readonly RowCounts: ImmutableArray_1<System_Internal.Int32>;
     GetAlignedHeapSize(index: HeapIndex): int;
 }
 
@@ -821,7 +796,7 @@ export interface PortablePdbBuilder$instance {
 
 
 export const PortablePdbBuilder: {
-    new(tablesAndHeaps: MetadataBuilder, typeSystemRowCounts: ImmutableArray_1<CLROf<int>>, entryPoint: MethodDefinitionHandle, idProvider: Func_2<IEnumerable_1<Blob>, BlobContentId>): PortablePdbBuilder$instance;
+    new(tablesAndHeaps: MetadataBuilder, typeSystemRowCounts: ImmutableArray_1<System_Internal.Int32>, entryPoint: MethodDefinitionHandle, idProvider: Func_2<IEnumerable_1<Blob>, BlobContentId>): PortablePdbBuilder$instance;
 };
 
 
@@ -924,8 +899,8 @@ export abstract class MetadataTokens$instance {
     static PropertyDefinitionHandle(rowNumber: int): PropertyDefinitionHandle;
     static StandaloneSignatureHandle(rowNumber: int): StandaloneSignatureHandle;
     static StringHandle(offset: int): StringHandle;
-    static TryGetHeapIndex(type_: HandleKind, index: { value: ref<HeapIndex> }): boolean;
-    static TryGetTableIndex(type_: HandleKind, index: { value: ref<TableIndex> }): boolean;
+    static TryGetHeapIndex(type_: HandleKind, index: HeapIndex): boolean;
+    static TryGetTableIndex(type_: HandleKind, index: TableIndex): boolean;
     static TypeDefinitionHandle(rowNumber: int): TypeDefinitionHandle;
     static TypeReferenceHandle(rowNumber: int): TypeReferenceHandle;
     static TypeSpecificationHandle(rowNumber: int): TypeSpecificationHandle;

@@ -993,7 +993,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Collections.ObjectModel.KeyedCollection\u00602",
           "declaringAssemblyName": "System.ObjectModel",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.ObjectModel:System.Collections.ObjectModel.KeyedCollection\u00602::Remove(TKey):System.Boolean",
@@ -4136,7 +4142,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Collections.ObjectModel.ReadOnlyDictionary\u00602",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Collections.ObjectModel.ReadOnlyDictionary\u00602::GetEnumerator():IEnumerator_1",
@@ -4360,7 +4372,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Collections.Generic.IDictionary\u00602",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Collections.IDictionary::Clear():System.Void",
@@ -4402,7 +4420,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Collections.Generic.IReadOnlyDictionary\u00602",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         }
       ],
       "properties": [

@@ -25958,7 +25958,17 @@
           "parameterCount": 2,
           "declaringClrType": "System.Reflection.Emit.PersistedAssemblyBuilder",
           "declaringAssemblyName": "System.Reflection.Emit",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            },
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Reflection.Emit:System.Reflection.Emit.PersistedAssemblyBuilder::GenerateMetadata(System.Reflection.Metadata.BlobBuilder\u0026,System.Reflection.Metadata.BlobBuilder\u0026,System.Reflection.Metadata.Ecma335.MetadataBuilder\u0026):System.Reflection.Metadata.Ecma335.MetadataBuilder",
@@ -25972,7 +25982,21 @@
           "parameterCount": 3,
           "declaringClrType": "System.Reflection.Emit.PersistedAssemblyBuilder",
           "declaringAssemblyName": "System.Reflection.Emit",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            },
+            {
+              "index": 1,
+              "modifier": "out"
+            },
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Reflection.Emit:System.Reflection.Emit.PersistedAssemblyBuilder::GetName(System.Boolean):System.Reflection.AssemblyName",

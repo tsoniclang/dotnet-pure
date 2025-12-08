@@ -6,7 +6,7 @@
 import type { sbyte, byte, short, ushort, int, uint, long, ulong, int128, uint128, half, float, double, decimal, nint, nuint, char } from '@tsonic/types';
 
 // Import support types from @tsonic/types
-import type { ptr, ref } from "@tsonic/types";
+import type { ptr } from "@tsonic/types";
 
 // Import types from other namespaces
 import * as System_Collections_Generic_Internal from "../../System.Collections.Generic/internal/index.js";
@@ -15,31 +15,6 @@ import * as System_Collections_Internal from "../../System.Collections/internal/
 import type { IEnumerable, IEnumerator } from "../../System.Collections/internal/index.js";
 import * as System_Internal from "../../System/internal/index.js";
 import type { Boolean as ClrBoolean, Byte, DateTimeOffset, Double, ICloneable, IDisposable, Int32, Int64, Nullable_1, Object as ClrObject, String as ClrString, TimeSpan, Type, Uri, ValueType, Void } from "../../System/internal/index.js";
-
-// CLROf<T> - Maps ergonomic primitives to their CLR types for generic constraints
-// This utility is used ONLY in generic type arguments to satisfy CLR interface constraints
-// Value positions (parameters, return types) use lowercase primitives for ergonomics
-export type CLROf<T> =
-    T extends sbyte ? System_Internal.SByte :
-    T extends short ? System_Internal.Int16 :
-    T extends int ? System_Internal.Int32 :
-    T extends long ? System_Internal.Int64 :
-    T extends int128 ? System_Internal.Int128 :
-    T extends nint ? System_Internal.IntPtr :
-    T extends byte ? System_Internal.Byte :
-    T extends ushort ? System_Internal.UInt16 :
-    T extends uint ? System_Internal.UInt32 :
-    T extends ulong ? System_Internal.UInt64 :
-    T extends uint128 ? System_Internal.UInt128 :
-    T extends nuint ? System_Internal.UIntPtr :
-    T extends half ? System_Internal.Half :
-    T extends float ? System_Internal.Single :
-    T extends double ? System_Internal.Double :
-    T extends decimal ? System_Internal.Decimal :
-    T extends char ? System_Internal.Char :
-    T extends boolean ? System_Internal.Boolean :
-    T extends string ? System_Internal.String :
-    T; // Identity fallback for non-primitive types
 
 export interface HeaderStringValues$instance {
     readonly Count: int;
@@ -54,8 +29,8 @@ export const HeaderStringValues: {
 
 
 export interface __HeaderStringValues$views {
-    As_IEnumerable_1(): System_Collections_Generic_Internal.IEnumerable_1$instance<CLROf<string>>;
-    As_IReadOnlyCollection_1(): System_Collections_Generic_Internal.IReadOnlyCollection_1$instance<CLROf<string>>;
+    As_IEnumerable_1(): System_Collections_Generic_Internal.IEnumerable_1$instance<System_Internal.String>;
+    As_IReadOnlyCollection_1(): System_Collections_Generic_Internal.IReadOnlyCollection_1$instance<System_Internal.String>;
     As_IEnumerable(): System_Collections_Internal.IEnumerable$instance;
 }
 
@@ -76,7 +51,7 @@ export const HeaderStringValues_Enumerator: {
 
 
 export interface __HeaderStringValues_Enumerator$views {
-    As_IEnumerator_1(): System_Collections_Generic_Internal.IEnumerator_1$instance<CLROf<string>>;
+    As_IEnumerator_1(): System_Collections_Generic_Internal.IEnumerator_1$instance<System_Internal.String>;
     As_IEnumerator(): System_Collections_Internal.IEnumerator$instance;
 }
 
@@ -88,7 +63,7 @@ export interface HttpHeadersNonValidated$instance {
     readonly Item: HeaderStringValues;
     Contains(headerName: string): boolean;
     GetEnumerator(): HttpHeadersNonValidated_Enumerator;
-    TryGetValues(headerName: string, values: { value: ref<HeaderStringValues> }): boolean;
+    TryGetValues(headerName: string, values: HeaderStringValues): boolean;
 }
 
 
@@ -98,9 +73,9 @@ export const HttpHeadersNonValidated: {
 
 
 export interface __HttpHeadersNonValidated$views {
-    As_IEnumerable_1(): System_Collections_Generic_Internal.IEnumerable_1$instance<KeyValuePair_2<CLROf<string>, HeaderStringValues>>;
-    As_IReadOnlyCollection_1(): System_Collections_Generic_Internal.IReadOnlyCollection_1$instance<KeyValuePair_2<CLROf<string>, HeaderStringValues>>;
-    As_IReadOnlyDictionary_2(): System_Collections_Generic_Internal.IReadOnlyDictionary_2$instance<CLROf<string>, HeaderStringValues>;
+    As_IEnumerable_1(): System_Collections_Generic_Internal.IEnumerable_1$instance<KeyValuePair_2<System_Internal.String, HeaderStringValues>>;
+    As_IReadOnlyCollection_1(): System_Collections_Generic_Internal.IReadOnlyCollection_1$instance<KeyValuePair_2<System_Internal.String, HeaderStringValues>>;
+    As_IReadOnlyDictionary_2(): System_Collections_Generic_Internal.IReadOnlyDictionary_2$instance<System_Internal.String, HeaderStringValues>;
     As_IEnumerable(): System_Collections_Internal.IEnumerable$instance;
 }
 
@@ -108,7 +83,7 @@ export type HttpHeadersNonValidated = HttpHeadersNonValidated$instance & __HttpH
 
 
 export interface HttpHeadersNonValidated_Enumerator$instance extends IDisposable {
-    readonly Current: KeyValuePair_2<CLROf<string>, HeaderStringValues>;
+    readonly Current: KeyValuePair_2<System_Internal.String, HeaderStringValues>;
     Dispose(): void;
     MoveNext(): boolean;
     Reset(): void;
@@ -121,7 +96,7 @@ export const HttpHeadersNonValidated_Enumerator: {
 
 
 export interface __HttpHeadersNonValidated_Enumerator$views {
-    As_IEnumerator_1(): System_Collections_Generic_Internal.IEnumerator_1$instance<KeyValuePair_2<CLROf<string>, HeaderStringValues>>;
+    As_IEnumerator_1(): System_Collections_Generic_Internal.IEnumerator_1$instance<KeyValuePair_2<System_Internal.String, HeaderStringValues>>;
     As_IEnumerator(): System_Collections_Internal.IEnumerator$instance;
 }
 
@@ -141,7 +116,7 @@ export const AuthenticationHeaderValue: {
     new(scheme: string): AuthenticationHeaderValue$instance;
     new(scheme: string, parameter: string): AuthenticationHeaderValue$instance;
     Parse(input: string): AuthenticationHeaderValue;
-    TryParse(input: string, parsedValue: { value: ref<AuthenticationHeaderValue> }): boolean;
+    TryParse(input: string, parsedValue: AuthenticationHeaderValue): boolean;
 };
 
 
@@ -162,12 +137,12 @@ export interface CacheControlHeaderValue$instance {
     MinFresh: Nullable_1<TimeSpan>;
     MustRevalidate: boolean;
     NoCache: boolean;
-    readonly NoCacheHeaders: ICollection_1<CLROf<string>>;
+    readonly NoCacheHeaders: ICollection_1<System_Internal.String>;
     NoStore: boolean;
     NoTransform: boolean;
     OnlyIfCached: boolean;
     Private: boolean;
-    readonly PrivateHeaders: ICollection_1<CLROf<string>>;
+    readonly PrivateHeaders: ICollection_1<System_Internal.String>;
     ProxyRevalidate: boolean;
     Public: boolean;
     SharedMaxAge: Nullable_1<TimeSpan>;
@@ -180,7 +155,7 @@ export interface CacheControlHeaderValue$instance {
 export const CacheControlHeaderValue: {
     new(): CacheControlHeaderValue$instance;
     Parse(input: string): CacheControlHeaderValue;
-    TryParse(input: string, parsedValue: { value: ref<CacheControlHeaderValue> }): boolean;
+    TryParse(input: string, parsedValue: CacheControlHeaderValue): boolean;
 };
 
 
@@ -202,7 +177,7 @@ export interface ContentDispositionHeaderValue$instance {
     Name: string;
     readonly Parameters: ICollection_1<NameValueHeaderValue>;
     ReadDate: Nullable_1<DateTimeOffset>;
-    Size: Nullable_1<CLROf<long>>;
+    Size: Nullable_1<System_Internal.Int64>;
     Equals(obj: unknown): boolean;
     GetHashCode(): int;
     ToString(): string;
@@ -212,7 +187,7 @@ export interface ContentDispositionHeaderValue$instance {
 export const ContentDispositionHeaderValue: {
     new(dispositionType: string): ContentDispositionHeaderValue$instance;
     Parse(input: string): ContentDispositionHeaderValue;
-    TryParse(input: string, parsedValue: { value: ref<ContentDispositionHeaderValue> }): boolean;
+    TryParse(input: string, parsedValue: ContentDispositionHeaderValue): boolean;
 };
 
 
@@ -226,11 +201,11 @@ export type ContentDispositionHeaderValue = ContentDispositionHeaderValue$instan
 
 
 export interface ContentRangeHeaderValue$instance {
-    readonly From: Nullable_1<CLROf<long>>;
+    readonly From: Nullable_1<System_Internal.Int64>;
     readonly HasLength: boolean;
     readonly HasRange: boolean;
-    readonly Length: Nullable_1<CLROf<long>>;
-    readonly To: Nullable_1<CLROf<long>>;
+    readonly Length: Nullable_1<System_Internal.Int64>;
+    readonly To: Nullable_1<System_Internal.Int64>;
     Unit: string;
     Equals(obj: unknown): boolean;
     GetHashCode(): int;
@@ -243,7 +218,7 @@ export const ContentRangeHeaderValue: {
     new(length: long): ContentRangeHeaderValue$instance;
     new(from_: long, to: long): ContentRangeHeaderValue$instance;
     Parse(input: string): ContentRangeHeaderValue;
-    TryParse(input: string, parsedValue: { value: ref<ContentRangeHeaderValue> }): boolean;
+    TryParse(input: string, parsedValue: ContentRangeHeaderValue): boolean;
 };
 
 
@@ -270,7 +245,7 @@ export const EntityTagHeaderValue: {
     new(tag: string, isWeak: boolean): EntityTagHeaderValue$instance;
     readonly Any: EntityTagHeaderValue;
     Parse(input: string): EntityTagHeaderValue;
-    TryParse(input: string, parsedValue: { value: ref<EntityTagHeaderValue> }): boolean;
+    TryParse(input: string, parsedValue: EntityTagHeaderValue): boolean;
 };
 
 
@@ -284,18 +259,18 @@ export type EntityTagHeaderValue = EntityTagHeaderValue$instance & __EntityTagHe
 
 
 export interface HttpContentHeaders$instance extends HttpHeaders$instance {
-    readonly Allow: ICollection_1<CLROf<string>>;
+    readonly Allow: ICollection_1<System_Internal.String>;
     ContentDisposition: ContentDispositionHeaderValue;
-    readonly ContentEncoding: ICollection_1<CLROf<string>>;
-    readonly ContentLanguage: ICollection_1<CLROf<string>>;
-    ContentLength: Nullable_1<CLROf<long>>;
+    readonly ContentEncoding: ICollection_1<System_Internal.String>;
+    readonly ContentLanguage: ICollection_1<System_Internal.String>;
+    ContentLength: Nullable_1<System_Internal.Int64>;
     ContentLocation: Uri;
     ContentMD5: byte[];
     ContentRange: ContentRangeHeaderValue;
     ContentType: MediaTypeHeaderValue;
     Expires: Nullable_1<DateTimeOffset>;
     LastModified: Nullable_1<DateTimeOffset>;
-    GetEnumerator(): IEnumerator_1<KeyValuePair_2<CLROf<string>, IEnumerable_1<CLROf<string>>>>;
+    GetEnumerator(): IEnumerator_1<KeyValuePair_2<System_Internal.String, IEnumerable_1<System_Internal.String>>>;
     GetEnumerator(): IEnumerator;
 }
 
@@ -306,7 +281,7 @@ export const HttpContentHeaders: {
 
 
 export interface __HttpContentHeaders$views {
-    As_IEnumerable_1(): System_Collections_Generic_Internal.IEnumerable_1$instance<KeyValuePair_2<CLROf<string>, IEnumerable_1<CLROf<string>>>>;
+    As_IEnumerable_1(): System_Collections_Generic_Internal.IEnumerable_1$instance<KeyValuePair_2<System_Internal.String, IEnumerable_1<System_Internal.String>>>;
     As_IEnumerable(): System_Collections_Internal.IEnumerable$instance;
 }
 
@@ -316,16 +291,16 @@ export type HttpContentHeaders = HttpContentHeaders$instance & __HttpContentHead
 export interface HttpHeaders$instance {
     readonly NonValidated: HttpHeadersNonValidated;
     Add(name: string, value: string): void;
-    Add(name: string, values: IEnumerable_1<CLROf<string>>): void;
+    Add(name: string, values: IEnumerable_1<System_Internal.String>): void;
     Clear(): void;
     Contains(name: string): boolean;
-    GetEnumerator(): IEnumerator_1<KeyValuePair_2<CLROf<string>, IEnumerable_1<CLROf<string>>>>;
-    GetValues(name: string): IEnumerable_1<CLROf<string>>;
+    GetEnumerator(): IEnumerator_1<KeyValuePair_2<System_Internal.String, IEnumerable_1<System_Internal.String>>>;
+    GetValues(name: string): IEnumerable_1<System_Internal.String>;
     Remove(name: string): boolean;
     ToString(): string;
     TryAddWithoutValidation(name: string, value: string): boolean;
-    TryAddWithoutValidation(name: string, values: IEnumerable_1<CLROf<string>>): boolean;
-    TryGetValues(name: string, values: { value: ref<IEnumerable_1<CLROf<string>>> }): boolean;
+    TryAddWithoutValidation(name: string, values: IEnumerable_1<System_Internal.String>): boolean;
+    TryGetValues(name: string, values: IEnumerable_1<System_Internal.String>): boolean;
 }
 
 
@@ -334,7 +309,7 @@ export const HttpHeaders: {
 
 
 export interface __HttpHeaders$views {
-    As_IEnumerable_1(): System_Collections_Generic_Internal.IEnumerable_1$instance<KeyValuePair_2<CLROf<string>, IEnumerable_1<CLROf<string>>>>;
+    As_IEnumerable_1(): System_Collections_Generic_Internal.IEnumerable_1$instance<KeyValuePair_2<System_Internal.String, IEnumerable_1<System_Internal.String>>>;
     As_IEnumerable(): System_Collections_Internal.IEnumerable$instance;
 }
 
@@ -377,11 +352,11 @@ export interface HttpRequestHeaders$instance extends HttpHeaders$instance {
     readonly AcceptLanguage: HttpHeaderValueCollection_1<StringWithQualityHeaderValue>;
     Authorization: AuthenticationHeaderValue;
     CacheControl: CacheControlHeaderValue;
-    readonly Connection: HttpHeaderValueCollection_1<CLROf<string>>;
-    ConnectionClose: Nullable_1<CLROf<boolean>>;
+    readonly Connection: HttpHeaderValueCollection_1<System_Internal.String>;
+    ConnectionClose: Nullable_1<System_Internal.Boolean>;
     Date: Nullable_1<DateTimeOffset>;
     readonly Expect: HttpHeaderValueCollection_1<NameValueWithParametersHeaderValue>;
-    ExpectContinue: Nullable_1<CLROf<boolean>>;
+    ExpectContinue: Nullable_1<System_Internal.Boolean>;
     From: string;
     Host: string;
     readonly IfMatch: HttpHeaderValueCollection_1<EntityTagHeaderValue>;
@@ -389,21 +364,21 @@ export interface HttpRequestHeaders$instance extends HttpHeaders$instance {
     readonly IfNoneMatch: HttpHeaderValueCollection_1<EntityTagHeaderValue>;
     IfRange: RangeConditionHeaderValue;
     IfUnmodifiedSince: Nullable_1<DateTimeOffset>;
-    MaxForwards: Nullable_1<CLROf<int>>;
+    MaxForwards: Nullable_1<System_Internal.Int32>;
     readonly Pragma: HttpHeaderValueCollection_1<NameValueHeaderValue>;
     Protocol: string;
     ProxyAuthorization: AuthenticationHeaderValue;
     Range: RangeHeaderValue;
     Referrer: Uri;
     readonly TE: HttpHeaderValueCollection_1<TransferCodingWithQualityHeaderValue>;
-    readonly Trailer: HttpHeaderValueCollection_1<CLROf<string>>;
+    readonly Trailer: HttpHeaderValueCollection_1<System_Internal.String>;
     readonly TransferEncoding: HttpHeaderValueCollection_1<TransferCodingHeaderValue>;
-    TransferEncodingChunked: Nullable_1<CLROf<boolean>>;
+    TransferEncodingChunked: Nullable_1<System_Internal.Boolean>;
     readonly Upgrade: HttpHeaderValueCollection_1<ProductHeaderValue>;
     readonly UserAgent: HttpHeaderValueCollection_1<ProductInfoHeaderValue>;
     readonly Via: HttpHeaderValueCollection_1<ViaHeaderValue>;
     readonly Warning: HttpHeaderValueCollection_1<WarningHeaderValue>;
-    GetEnumerator(): IEnumerator_1<KeyValuePair_2<CLROf<string>, IEnumerable_1<CLROf<string>>>>;
+    GetEnumerator(): IEnumerator_1<KeyValuePair_2<System_Internal.String, IEnumerable_1<System_Internal.String>>>;
     GetEnumerator(): IEnumerator;
 }
 
@@ -414,7 +389,7 @@ export const HttpRequestHeaders: {
 
 
 export interface __HttpRequestHeaders$views {
-    As_IEnumerable_1(): System_Collections_Generic_Internal.IEnumerable_1$instance<KeyValuePair_2<CLROf<string>, IEnumerable_1<CLROf<string>>>>;
+    As_IEnumerable_1(): System_Collections_Generic_Internal.IEnumerable_1$instance<KeyValuePair_2<System_Internal.String, IEnumerable_1<System_Internal.String>>>;
     As_IEnumerable(): System_Collections_Internal.IEnumerable$instance;
 }
 
@@ -422,11 +397,11 @@ export type HttpRequestHeaders = HttpRequestHeaders$instance & __HttpRequestHead
 
 
 export interface HttpResponseHeaders$instance extends HttpHeaders$instance {
-    readonly AcceptRanges: HttpHeaderValueCollection_1<CLROf<string>>;
+    readonly AcceptRanges: HttpHeaderValueCollection_1<System_Internal.String>;
     Age: Nullable_1<TimeSpan>;
     CacheControl: CacheControlHeaderValue;
-    readonly Connection: HttpHeaderValueCollection_1<CLROf<string>>;
-    ConnectionClose: Nullable_1<CLROf<boolean>>;
+    readonly Connection: HttpHeaderValueCollection_1<System_Internal.String>;
+    ConnectionClose: Nullable_1<System_Internal.Boolean>;
     Date: Nullable_1<DateTimeOffset>;
     ETag: EntityTagHeaderValue;
     Location: Uri;
@@ -434,15 +409,15 @@ export interface HttpResponseHeaders$instance extends HttpHeaders$instance {
     readonly ProxyAuthenticate: HttpHeaderValueCollection_1<AuthenticationHeaderValue>;
     RetryAfter: RetryConditionHeaderValue;
     readonly Server: HttpHeaderValueCollection_1<ProductInfoHeaderValue>;
-    readonly Trailer: HttpHeaderValueCollection_1<CLROf<string>>;
+    readonly Trailer: HttpHeaderValueCollection_1<System_Internal.String>;
     readonly TransferEncoding: HttpHeaderValueCollection_1<TransferCodingHeaderValue>;
-    TransferEncodingChunked: Nullable_1<CLROf<boolean>>;
+    TransferEncodingChunked: Nullable_1<System_Internal.Boolean>;
     readonly Upgrade: HttpHeaderValueCollection_1<ProductHeaderValue>;
-    readonly Vary: HttpHeaderValueCollection_1<CLROf<string>>;
+    readonly Vary: HttpHeaderValueCollection_1<System_Internal.String>;
     readonly Via: HttpHeaderValueCollection_1<ViaHeaderValue>;
     readonly Warning: HttpHeaderValueCollection_1<WarningHeaderValue>;
     readonly WwwAuthenticate: HttpHeaderValueCollection_1<AuthenticationHeaderValue>;
-    GetEnumerator(): IEnumerator_1<KeyValuePair_2<CLROf<string>, IEnumerable_1<CLROf<string>>>>;
+    GetEnumerator(): IEnumerator_1<KeyValuePair_2<System_Internal.String, IEnumerable_1<System_Internal.String>>>;
     GetEnumerator(): IEnumerator;
 }
 
@@ -453,7 +428,7 @@ export const HttpResponseHeaders: {
 
 
 export interface __HttpResponseHeaders$views {
-    As_IEnumerable_1(): System_Collections_Generic_Internal.IEnumerable_1$instance<KeyValuePair_2<CLROf<string>, IEnumerable_1<CLROf<string>>>>;
+    As_IEnumerable_1(): System_Collections_Generic_Internal.IEnumerable_1$instance<KeyValuePair_2<System_Internal.String, IEnumerable_1<System_Internal.String>>>;
     As_IEnumerable(): System_Collections_Internal.IEnumerable$instance;
 }
 
@@ -474,7 +449,7 @@ export const MediaTypeHeaderValue: {
     new(mediaType: string): MediaTypeHeaderValue$instance;
     new(mediaType: string, charSet: string): MediaTypeHeaderValue$instance;
     Parse(input: string): MediaTypeHeaderValue;
-    TryParse(input: string, parsedValue: { value: ref<MediaTypeHeaderValue> }): boolean;
+    TryParse(input: string, parsedValue: MediaTypeHeaderValue): boolean;
 };
 
 
@@ -488,7 +463,7 @@ export type MediaTypeHeaderValue = MediaTypeHeaderValue$instance & __MediaTypeHe
 
 
 export interface MediaTypeWithQualityHeaderValue$instance extends MediaTypeHeaderValue$instance {
-    Quality: Nullable_1<CLROf<double>>;
+    Quality: Nullable_1<System_Internal.Double>;
     Clone(): unknown;
 }
 
@@ -521,7 +496,7 @@ export const NameValueHeaderValue: {
     new(name: string): NameValueHeaderValue$instance;
     new(name: string, value: string): NameValueHeaderValue$instance;
     Parse(input: string): NameValueHeaderValue;
-    TryParse(input: string, parsedValue: { value: ref<NameValueHeaderValue> }): boolean;
+    TryParse(input: string, parsedValue: NameValueHeaderValue): boolean;
 };
 
 
@@ -571,7 +546,7 @@ export const ProductHeaderValue: {
     new(name: string): ProductHeaderValue$instance;
     new(name: string, version: string): ProductHeaderValue$instance;
     Parse(input: string): ProductHeaderValue;
-    TryParse(input: string, parsedValue: { value: ref<ProductHeaderValue> }): boolean;
+    TryParse(input: string, parsedValue: ProductHeaderValue): boolean;
 };
 
 
@@ -598,7 +573,7 @@ export const ProductInfoHeaderValue: {
     new(product: ProductHeaderValue): ProductInfoHeaderValue$instance;
     new(comment: string): ProductInfoHeaderValue$instance;
     Parse(input: string): ProductInfoHeaderValue;
-    TryParse(input: string, parsedValue: { value: ref<ProductInfoHeaderValue> }): boolean;
+    TryParse(input: string, parsedValue: ProductInfoHeaderValue): boolean;
 };
 
 
@@ -625,7 +600,7 @@ export const RangeConditionHeaderValue: {
     new(entityTag: EntityTagHeaderValue): RangeConditionHeaderValue$instance;
     new(entityTag: string): RangeConditionHeaderValue$instance;
     Parse(input: string): RangeConditionHeaderValue;
-    TryParse(input: string, parsedValue: { value: ref<RangeConditionHeaderValue> }): boolean;
+    TryParse(input: string, parsedValue: RangeConditionHeaderValue): boolean;
 };
 
 
@@ -649,9 +624,9 @@ export interface RangeHeaderValue$instance {
 
 export const RangeHeaderValue: {
     new(): RangeHeaderValue$instance;
-    new(from_: Nullable_1<CLROf<long>>, to: Nullable_1<CLROf<long>>): RangeHeaderValue$instance;
+    new(from_: Nullable_1<System_Internal.Int64>, to: Nullable_1<System_Internal.Int64>): RangeHeaderValue$instance;
     Parse(input: string): RangeHeaderValue;
-    TryParse(input: string, parsedValue: { value: ref<RangeHeaderValue> }): boolean;
+    TryParse(input: string, parsedValue: RangeHeaderValue): boolean;
 };
 
 
@@ -665,8 +640,8 @@ export type RangeHeaderValue = RangeHeaderValue$instance & __RangeHeaderValue$vi
 
 
 export interface RangeItemHeaderValue$instance {
-    readonly From: Nullable_1<CLROf<long>>;
-    readonly To: Nullable_1<CLROf<long>>;
+    readonly From: Nullable_1<System_Internal.Int64>;
+    readonly To: Nullable_1<System_Internal.Int64>;
     Equals(obj: unknown): boolean;
     GetHashCode(): int;
     ToString(): string;
@@ -674,7 +649,7 @@ export interface RangeItemHeaderValue$instance {
 
 
 export const RangeItemHeaderValue: {
-    new(from_: Nullable_1<CLROf<long>>, to: Nullable_1<CLROf<long>>): RangeItemHeaderValue$instance;
+    new(from_: Nullable_1<System_Internal.Int64>, to: Nullable_1<System_Internal.Int64>): RangeItemHeaderValue$instance;
 };
 
 
@@ -700,7 +675,7 @@ export const RetryConditionHeaderValue: {
     new(date: DateTimeOffset): RetryConditionHeaderValue$instance;
     new(delta: TimeSpan): RetryConditionHeaderValue$instance;
     Parse(input: string): RetryConditionHeaderValue;
-    TryParse(input: string, parsedValue: { value: ref<RetryConditionHeaderValue> }): boolean;
+    TryParse(input: string, parsedValue: RetryConditionHeaderValue): boolean;
 };
 
 
@@ -714,7 +689,7 @@ export type RetryConditionHeaderValue = RetryConditionHeaderValue$instance & __R
 
 
 export interface StringWithQualityHeaderValue$instance {
-    readonly Quality: Nullable_1<CLROf<double>>;
+    readonly Quality: Nullable_1<System_Internal.Double>;
     readonly Value: string;
     Equals(obj: unknown): boolean;
     GetHashCode(): int;
@@ -726,7 +701,7 @@ export const StringWithQualityHeaderValue: {
     new(value: string): StringWithQualityHeaderValue$instance;
     new(value: string, quality: double): StringWithQualityHeaderValue$instance;
     Parse(input: string): StringWithQualityHeaderValue;
-    TryParse(input: string, parsedValue: { value: ref<StringWithQualityHeaderValue> }): boolean;
+    TryParse(input: string, parsedValue: StringWithQualityHeaderValue): boolean;
 };
 
 
@@ -751,7 +726,7 @@ export interface TransferCodingHeaderValue$instance {
 export const TransferCodingHeaderValue: {
     new(value: string): TransferCodingHeaderValue$instance;
     Parse(input: string): TransferCodingHeaderValue;
-    TryParse(input: string, parsedValue: { value: ref<TransferCodingHeaderValue> }): boolean;
+    TryParse(input: string, parsedValue: TransferCodingHeaderValue): boolean;
 };
 
 
@@ -765,7 +740,7 @@ export type TransferCodingHeaderValue = TransferCodingHeaderValue$instance & __T
 
 
 export interface TransferCodingWithQualityHeaderValue$instance extends TransferCodingHeaderValue$instance {
-    Quality: Nullable_1<CLROf<double>>;
+    Quality: Nullable_1<System_Internal.Double>;
     Clone(): unknown;
 }
 
@@ -801,7 +776,7 @@ export const ViaHeaderValue: {
     new(protocolVersion: string, receivedBy: string, protocolName: string): ViaHeaderValue$instance;
     new(protocolVersion: string, receivedBy: string, protocolName: string, comment: string): ViaHeaderValue$instance;
     Parse(input: string): ViaHeaderValue;
-    TryParse(input: string, parsedValue: { value: ref<ViaHeaderValue> }): boolean;
+    TryParse(input: string, parsedValue: ViaHeaderValue): boolean;
 };
 
 
@@ -829,7 +804,7 @@ export const WarningHeaderValue: {
     new(code: int, agent: string, text: string): WarningHeaderValue$instance;
     new(code: int, agent: string, text: string, date: DateTimeOffset): WarningHeaderValue$instance;
     Parse(input: string): WarningHeaderValue;
-    TryParse(input: string, parsedValue: { value: ref<WarningHeaderValue> }): boolean;
+    TryParse(input: string, parsedValue: WarningHeaderValue): boolean;
 };
 
 

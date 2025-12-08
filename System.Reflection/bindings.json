@@ -29727,7 +29727,17 @@
           "parameterCount": 7,
           "declaringClrType": "System.Reflection.Binder",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "ref"
+            },
+            {
+              "index": 6,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Reflection.Binder::ChangeType(System.Object,System.Type,System.Globalization.CultureInfo):System.Object",
@@ -29755,7 +29765,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Reflection.Binder",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Reflection.Binder::SelectMethod(System.Reflection.BindingFlags,System.Reflection.MethodBase[],System.Type[],System.Reflection.ParameterModifier[]):System.Reflection.MethodBase",
@@ -37765,7 +37781,17 @@
           "parameterCount": 2,
           "declaringClrType": "System.Reflection.Module",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            },
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Reflection.Module::IsResource():System.Boolean",

@@ -503,7 +503,13 @@
           "isStatic": false,
           "parameterCount": 2,
           "declaringClrType": "System.Diagnostics.Metrics.Measurement\u00601",
-          "declaringAssemblyName": "System.Diagnostics.DiagnosticSource"
+          "declaringAssemblyName": "System.Diagnostics.DiagnosticSource",
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "in"
+            }
+          ]
         }
       ],
       "exposedMethods": [
@@ -741,7 +747,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Diagnostics.Metrics.Counter\u00601",
           "declaringAssemblyName": "System.Diagnostics.DiagnosticSource",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "in"
+            }
+          ]
         }
       ],
       "properties": [],
@@ -1066,7 +1078,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Diagnostics.Metrics.Gauge\u00601",
           "declaringAssemblyName": "System.Diagnostics.DiagnosticSource",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "in"
+            }
+          ]
         }
       ],
       "properties": [],
@@ -1391,7 +1409,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Diagnostics.Metrics.Histogram\u00601",
           "declaringAssemblyName": "System.Diagnostics.DiagnosticSource",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "in"
+            }
+          ]
         }
       ],
       "properties": [],
@@ -4098,7 +4122,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Diagnostics.Metrics.UpDownCounter\u00601",
           "declaringAssemblyName": "System.Diagnostics.DiagnosticSource",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "in"
+            }
+          ]
         }
       ],
       "properties": [],

@@ -516,7 +516,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Net.Http.Headers.HttpHeadersNonValidated",
           "declaringAssemblyName": "System.Net.Http",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Net.Http:System.Net.Http.Headers.HttpHeadersNonValidated::GetEnumerator():System.Net.Http.Headers.HttpHeadersNonValidated\u002BEnumerator",
@@ -558,7 +564,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Collections.Generic.IReadOnlyDictionary\u00602",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Collections.Generic.IEnumerable\u00601::GetEnumerator():IEnumerator_1",
@@ -1194,7 +1206,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Net.Http.Headers.AuthenticationHeaderValue",
           "declaringAssemblyName": "System.Net.Http",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.ICloneable::Clone():System.Object",
@@ -1475,7 +1493,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Net.Http.Headers.CacheControlHeaderValue",
           "declaringAssemblyName": "System.Net.Http",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.ICloneable::Clone():System.Object",
@@ -2073,7 +2097,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Net.Http.Headers.ContentDispositionHeaderValue",
           "declaringAssemblyName": "System.Net.Http",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.ICloneable::Clone():System.Object",
@@ -2503,7 +2533,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Net.Http.Headers.ContentRangeHeaderValue",
           "declaringAssemblyName": "System.Net.Http",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.ICloneable::Clone():System.Object",
@@ -2899,7 +2935,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Net.Http.Headers.EntityTagHeaderValue",
           "declaringAssemblyName": "System.Net.Http",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.ICloneable::Clone():System.Object",
@@ -3746,7 +3788,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Net.Http.Headers.HttpHeaders",
           "declaringAssemblyName": "System.Net.Http",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Net.Http:System.Net.Http.Headers.HttpHeaders::Contains(System.String):System.Boolean",
@@ -6436,7 +6484,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Net.Http.Headers.MediaTypeHeaderValue",
           "declaringAssemblyName": "System.Net.Http",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.ICloneable::Clone():System.Object",
@@ -6699,7 +6753,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Net.Http.Headers.MediaTypeWithQualityHeaderValue",
           "declaringAssemblyName": "System.Net.Http",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.ICloneable::Clone():System.Object",
@@ -7016,7 +7076,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Net.Http.Headers.NameValueHeaderValue",
           "declaringAssemblyName": "System.Net.Http",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Net.Http:System.Net.Http.Headers.NameValueHeaderValue::ToString():System.String",
@@ -7311,7 +7377,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Net.Http.Headers.NameValueWithParametersHeaderValue",
           "declaringAssemblyName": "System.Net.Http",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.ICloneable::Clone():System.Object",
@@ -7632,7 +7704,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Net.Http.Headers.ProductHeaderValue",
           "declaringAssemblyName": "System.Net.Http",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.ICloneable::Clone():System.Object",
@@ -7913,7 +7991,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Net.Http.Headers.ProductInfoHeaderValue",
           "declaringAssemblyName": "System.Net.Http",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.ICloneable::Clone():System.Object",
@@ -8213,7 +8297,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Net.Http.Headers.RangeConditionHeaderValue",
           "declaringAssemblyName": "System.Net.Http",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.ICloneable::Clone():System.Object",
@@ -8513,7 +8603,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Net.Http.Headers.RangeHeaderValue",
           "declaringAssemblyName": "System.Net.Http",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.ICloneable::Clone():System.Object",
@@ -9008,7 +9104,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Net.Http.Headers.RetryConditionHeaderValue",
           "declaringAssemblyName": "System.Net.Http",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.ICloneable::Clone():System.Object",
@@ -9289,7 +9391,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Net.Http.Headers.StringWithQualityHeaderValue",
           "declaringAssemblyName": "System.Net.Http",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.ICloneable::Clone():System.Object",
@@ -9528,7 +9636,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Net.Http.Headers.TransferCodingHeaderValue",
           "declaringAssemblyName": "System.Net.Http",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Net.Http:System.Net.Http.Headers.TransferCodingHeaderValue::ToString():System.String",
@@ -9790,7 +9904,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Net.Http.Headers.TransferCodingWithQualityHeaderValue",
           "declaringAssemblyName": "System.Net.Http",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.ICloneable::Clone():System.Object",
@@ -10111,7 +10231,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Net.Http.Headers.ViaHeaderValue",
           "declaringAssemblyName": "System.Net.Http",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.ICloneable::Clone():System.Object",
@@ -10459,7 +10585,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Net.Http.Headers.WarningHeaderValue",
           "declaringAssemblyName": "System.Net.Http",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.ICloneable::Clone():System.Object",

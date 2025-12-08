@@ -2978,7 +2978,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 3,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.ComponentModel.TypeConverter:System.ComponentModel.IComNativeDescriptorHandler::GetPropertyValue(System.Object,System.Int32,System.Boolean\u0026):System.Object",
@@ -2994,7 +3000,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 3,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "ref"
+            }
+          ]
         }
       ],
       "properties": [],
@@ -3487,7 +3499,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 3,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "ref"
+            }
+          ]
         }
       ],
       "properties": [
@@ -14155,7 +14173,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 3,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.ComponentModel.TypeConverter:System.ComponentModel.LicenseManager::LockContext(System.Object):System.Void",
@@ -15508,7 +15532,17 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 3,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            },
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.ComponentModel.TypeConverter:System.ComponentModel.MaskedTextProvider::Add(System.String):System.Boolean",
@@ -15540,7 +15574,17 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 3,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            },
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.ComponentModel.TypeConverter:System.ComponentModel.MaskedTextProvider::Clear():System.Void",
@@ -15572,7 +15616,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 1,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.ComponentModel.TypeConverter:System.ComponentModel.MaskedTextProvider::FindAssignedEditPositionFrom(System.Int32,System.Boolean):System.Int32",
@@ -15748,7 +15798,17 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 4,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            },
+            {
+              "index": 3,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.ComponentModel.TypeConverter:System.ComponentModel.MaskedTextProvider::InsertAt(System.String,System.Int32):System.Boolean",
@@ -15780,7 +15840,17 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 4,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            },
+            {
+              "index": 3,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.ComponentModel.TypeConverter:System.ComponentModel.MaskedTextProvider::IsAvailablePosition(System.Int32):System.Boolean",
@@ -15892,7 +15962,17 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            },
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.ComponentModel.TypeConverter:System.ComponentModel.MaskedTextProvider::RemoveAt(System.Int32):System.Boolean",
@@ -15940,7 +16020,17 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 4,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            },
+            {
+              "index": 3,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.ComponentModel.TypeConverter:System.ComponentModel.MaskedTextProvider::Replace(System.Char,System.Int32):System.Boolean",
@@ -15972,7 +16062,17 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 4,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            },
+            {
+              "index": 3,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.ComponentModel.TypeConverter:System.ComponentModel.MaskedTextProvider::Replace(System.Char,System.Int32,System.Int32,System.Int32\u0026,System.ComponentModel.MaskedTextResultHint\u0026):System.Boolean",
@@ -15988,7 +16088,17 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 5,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 3,
+              "modifier": "out"
+            },
+            {
+              "index": 4,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.ComponentModel.TypeConverter:System.ComponentModel.MaskedTextProvider::Replace(System.String,System.Int32):System.Boolean",
@@ -16020,7 +16130,17 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 4,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            },
+            {
+              "index": 3,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.ComponentModel.TypeConverter:System.ComponentModel.MaskedTextProvider::Replace(System.String,System.Int32,System.Int32,System.Int32\u0026,System.ComponentModel.MaskedTextResultHint\u0026):System.Boolean",
@@ -16036,7 +16156,17 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 5,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 3,
+              "modifier": "out"
+            },
+            {
+              "index": 4,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.ComponentModel.TypeConverter:System.ComponentModel.MaskedTextProvider::Set(System.String):System.Boolean",
@@ -16068,7 +16198,17 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 3,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            },
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.ComponentModel.TypeConverter:System.ComponentModel.MaskedTextProvider::ToDisplayString():System.String",
@@ -16212,7 +16352,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 3,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.ComponentModel.TypeConverter:System.ComponentModel.MaskedTextProvider::VerifyEscapeChar(System.Char,System.Int32):System.Boolean",
@@ -16260,7 +16406,17 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 3,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            },
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.ICloneable::Clone():System.Object",

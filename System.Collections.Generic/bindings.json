@@ -513,7 +513,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Collections.Generic.IDictionary\u00602",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Collections.Generic.ICollection\u00601::Add(T):System.Void",
@@ -1465,7 +1471,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Collections.Generic.IReadOnlyDictionary\u00602",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Collections.Generic.IEnumerable\u00601::GetEnumerator():IEnumerator_1",
@@ -2171,7 +2183,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Collections.Generic.Dictionary\u00602\u002BAlternateLookup\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Collections.Generic.Dictionary\u00602\u002BAlternateLookup\u00601::TryGetValue(TAlternateKey,TKey\u0026,TValue\u0026):System.Boolean",
@@ -2185,7 +2203,17 @@
           "parameterCount": 3,
           "declaringClrType": "System.Collections.Generic.Dictionary\u00602\u002BAlternateLookup\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            },
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Collections.Generic.Dictionary\u00602\u002BAlternateLookup\u00601::ContainsKey(TAlternateKey):System.Boolean",
@@ -2227,7 +2255,17 @@
           "parameterCount": 3,
           "declaringClrType": "System.Collections.Generic.Dictionary\u00602\u002BAlternateLookup\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            },
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Collections.Generic.Dictionary\u00602\u002BAlternateLookup\u00601::TryAdd(TAlternateKey,TValue):System.Boolean",
@@ -3365,7 +3403,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Collections.Generic.HashSet\u00601\u002BAlternateLookup\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         }
       ],
       "properties": [
@@ -3805,7 +3849,17 @@
           "parameterCount": 2,
           "declaringClrType": "System.Collections.Generic.KeyValuePair\u00602",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            },
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         }
       ],
       "properties": [
@@ -8068,7 +8122,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Collections.Generic.Dictionary\u00602",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Collections.Generic.Dictionary\u00602::OnDeserialization(System.Object):System.Void",
@@ -8110,7 +8170,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Collections.Generic.Dictionary\u00602",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Collections.Generic.Dictionary\u00602::TryGetValue(TKey,TValue\u0026):System.Boolean",
@@ -8124,7 +8190,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Collections.Generic.Dictionary\u00602",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Collections.Generic.Dictionary\u00602::TryAdd(TKey,TValue):System.Boolean",
@@ -8362,7 +8434,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Collections.Generic.IDictionary\u00602",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Collections.Generic.ICollection\u00601::Clear():System.Void",
@@ -8418,7 +8496,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Collections.Generic.IReadOnlyDictionary\u00602",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.Serialization.ISerializable::GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext):System.Void",
@@ -11810,7 +11894,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Collections.Generic.HashSet\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Collections.Generic.HashSet\u00601::GetEnumerator():Enumerator",
@@ -11880,7 +11970,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Collections.Generic.HashSet\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Collections.Generic.HashSet\u00601::UnionWith(IEnumerable_1):System.Void",
@@ -18143,7 +18239,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.Collections.Generic.OrderedDictionary\u00602",
           "declaringAssemblyName": "System.Collections",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Collections:System.Collections.Generic.OrderedDictionary\u00602::Clear():System.Void",
@@ -18255,7 +18357,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Collections.Generic.OrderedDictionary\u00602",
           "declaringAssemblyName": "System.Collections",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Collections:System.Collections.Generic.OrderedDictionary\u00602::RemoveAt(System.Int32):System.Void",
@@ -18353,7 +18461,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Collections.Generic.OrderedDictionary\u00602",
           "declaringAssemblyName": "System.Collections",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Collections:System.Collections.Generic.OrderedDictionary\u00602::TryGetValue(TKey,TValue\u0026,System.Int32\u0026):System.Boolean",
@@ -18367,7 +18481,17 @@
           "parameterCount": 3,
           "declaringClrType": "System.Collections.Generic.OrderedDictionary\u00602",
           "declaringAssemblyName": "System.Collections",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            },
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Collections:System.Collections.Generic.OrderedDictionary\u00602::GetEnumerator():Enumerator",
@@ -18619,7 +18743,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Collections.Generic.IDictionary\u00602",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Collections.Generic.ICollection\u00601::Clear():System.Void",
@@ -18661,7 +18791,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Collections.Generic.IReadOnlyDictionary\u00602",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Collections.IDictionary::Clear():System.Void",
@@ -21512,7 +21648,17 @@
           "parameterCount": 2,
           "declaringClrType": "System.Collections.Generic.PriorityQueue\u00602",
           "declaringAssemblyName": "System.Collections",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            },
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Collections:System.Collections.Generic.PriorityQueue\u00602::TryPeek(TElement\u0026,TPriority\u0026):System.Boolean",
@@ -21526,7 +21672,17 @@
           "parameterCount": 2,
           "declaringClrType": "System.Collections.Generic.PriorityQueue\u00602",
           "declaringAssemblyName": "System.Collections",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            },
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Collections:System.Collections.Generic.PriorityQueue\u00602::EnqueueDequeue(TElement,TPriority):TElement",
@@ -21582,7 +21738,17 @@
           "parameterCount": 4,
           "declaringClrType": "System.Collections.Generic.PriorityQueue\u00602",
           "declaringAssemblyName": "System.Collections",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            },
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Collections:System.Collections.Generic.PriorityQueue\u00602::Clear():System.Void",
@@ -22423,7 +22589,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Collections.Generic.Queue\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Collections.Generic.Queue\u00601::Peek():T",
@@ -22451,7 +22623,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Collections.Generic.Queue\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Collections.Generic.Queue\u00601::Contains(T):System.Boolean",
@@ -23363,7 +23541,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Collections.Generic.SortedDictionary\u00602",
           "declaringAssemblyName": "System.Collections",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Collections.Generic.ICollection\u00601::Add(T):System.Void",
@@ -23545,7 +23729,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Collections.Generic.IDictionary\u00602",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Collections.Generic.ICollection\u00601::Clear():System.Void",
@@ -23601,7 +23791,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Collections.Generic.IReadOnlyDictionary\u00602",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         }
       ],
       "properties": [
@@ -25877,7 +26073,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Collections.Generic.SortedList\u00602",
           "declaringAssemblyName": "System.Collections",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Collections:System.Collections.Generic.SortedList\u00602::RemoveAt(System.Int32):System.Void",
@@ -26101,7 +26303,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Collections.Generic.IDictionary\u00602",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Collections.Generic.ICollection\u00601::Clear():System.Void",
@@ -26157,7 +26365,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Collections.Generic.IReadOnlyDictionary\u00602",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         }
       ],
       "properties": [
@@ -28930,7 +29144,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Collections.Generic.SortedSet\u00601",
           "declaringAssemblyName": "System.Collections",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Collections.Generic.ICollection\u00601::Add(T):System.Void",
@@ -30015,7 +30235,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Collections.Generic.Stack\u00601",
           "declaringAssemblyName": "System.Collections",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Collections:System.Collections.Generic.Stack\u00601::Pop():T",
@@ -30043,7 +30269,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Collections.Generic.Stack\u00601",
           "declaringAssemblyName": "System.Collections",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Collections:System.Collections.Generic.Stack\u00601::Push(T):System.Void",
@@ -31788,7 +32020,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.Collections.Generic.CollectionExtensions",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": true
+          "isExtensionMethod": true,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Collections.Generic.CollectionExtensions::AsReadOnly(IList_1):ReadOnlyCollection_1",

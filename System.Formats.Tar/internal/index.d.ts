@@ -13,31 +13,6 @@ import type { CancellationToken } from "../../System.Threading/internal/index.js
 import * as System_Internal from "../../System/internal/index.js";
 import type { Boolean as ClrBoolean, Byte, DateTimeOffset, Enum, IAsyncDisposable, IComparable, IConvertible, IDisposable, IFormatProvider, IFormattable, Int32, Int64, ISpanFormattable, Object as ClrObject, String as ClrString, Type, TypeCode, Void } from "../../System/internal/index.js";
 
-// CLROf<T> - Maps ergonomic primitives to their CLR types for generic constraints
-// This utility is used ONLY in generic type arguments to satisfy CLR interface constraints
-// Value positions (parameters, return types) use lowercase primitives for ergonomics
-export type CLROf<T> =
-    T extends sbyte ? System_Internal.SByte :
-    T extends short ? System_Internal.Int16 :
-    T extends int ? System_Internal.Int32 :
-    T extends long ? System_Internal.Int64 :
-    T extends int128 ? System_Internal.Int128 :
-    T extends nint ? System_Internal.IntPtr :
-    T extends byte ? System_Internal.Byte :
-    T extends ushort ? System_Internal.UInt16 :
-    T extends uint ? System_Internal.UInt32 :
-    T extends ulong ? System_Internal.UInt64 :
-    T extends uint128 ? System_Internal.UInt128 :
-    T extends nuint ? System_Internal.UIntPtr :
-    T extends half ? System_Internal.Half :
-    T extends float ? System_Internal.Single :
-    T extends double ? System_Internal.Double :
-    T extends decimal ? System_Internal.Decimal :
-    T extends char ? System_Internal.Char :
-    T extends boolean ? System_Internal.Boolean :
-    T extends string ? System_Internal.String :
-    T; // Identity fallback for non-primitive types
-
 export enum TarEntryFormat {
     Unknown = 0,
     V7 = 1,
@@ -84,25 +59,25 @@ export const GnuTarEntry: {
 export type GnuTarEntry = GnuTarEntry$instance;
 
 export interface PaxGlobalExtendedAttributesTarEntry$instance extends PosixTarEntry {
-    readonly GlobalExtendedAttributes: IReadOnlyDictionary_2<CLROf<string>, CLROf<string>>;
+    readonly GlobalExtendedAttributes: IReadOnlyDictionary_2<System_Internal.String, System_Internal.String>;
 }
 
 
 export const PaxGlobalExtendedAttributesTarEntry: {
-    new(globalExtendedAttributes: IEnumerable_1<KeyValuePair_2<CLROf<string>, CLROf<string>>>): PaxGlobalExtendedAttributesTarEntry$instance;
+    new(globalExtendedAttributes: IEnumerable_1<KeyValuePair_2<System_Internal.String, System_Internal.String>>): PaxGlobalExtendedAttributesTarEntry$instance;
 };
 
 
 export type PaxGlobalExtendedAttributesTarEntry = PaxGlobalExtendedAttributesTarEntry$instance;
 
 export interface PaxTarEntry$instance extends PosixTarEntry {
-    readonly ExtendedAttributes: IReadOnlyDictionary_2<CLROf<string>, CLROf<string>>;
+    readonly ExtendedAttributes: IReadOnlyDictionary_2<System_Internal.String, System_Internal.String>;
 }
 
 
 export const PaxTarEntry: {
     new(entryType: TarEntryType, entryName: string): PaxTarEntry$instance;
-    new(entryType: TarEntryType, entryName: string, extendedAttributes: IEnumerable_1<KeyValuePair_2<CLROf<string>, CLROf<string>>>): PaxTarEntry$instance;
+    new(entryType: TarEntryType, entryName: string, extendedAttributes: IEnumerable_1<KeyValuePair_2<System_Internal.String, System_Internal.String>>): PaxTarEntry$instance;
     new(other: TarEntry): PaxTarEntry$instance;
 };
 

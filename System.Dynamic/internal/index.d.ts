@@ -6,7 +6,7 @@
 import type { sbyte, byte, short, ushort, int, uint, long, ulong, int128, uint128, half, float, double, decimal, nint, nuint, char } from '@tsonic/types';
 
 // Import support types from @tsonic/types
-import type { ptr, ref } from "@tsonic/types";
+import type { ptr } from "@tsonic/types";
 
 // Import types from other namespaces
 import * as System_Collections_Generic_Internal from "../../System.Collections.Generic/internal/index.js";
@@ -21,31 +21,6 @@ import * as System_Runtime_CompilerServices_Internal from "../../System.Runtime.
 import type { CallSite_1, CallSiteBinder } from "../../System.Runtime.CompilerServices/internal/index.js";
 import * as System_Internal from "../../System/internal/index.js";
 import type { Boolean as ClrBoolean, Int32, Object as ClrObject, String as ClrString, Type, Void } from "../../System/internal/index.js";
-
-// CLROf<T> - Maps ergonomic primitives to their CLR types for generic constraints
-// This utility is used ONLY in generic type arguments to satisfy CLR interface constraints
-// Value positions (parameters, return types) use lowercase primitives for ergonomics
-export type CLROf<T> =
-    T extends sbyte ? System_Internal.SByte :
-    T extends short ? System_Internal.Int16 :
-    T extends int ? System_Internal.Int32 :
-    T extends long ? System_Internal.Int64 :
-    T extends int128 ? System_Internal.Int128 :
-    T extends nint ? System_Internal.IntPtr :
-    T extends byte ? System_Internal.Byte :
-    T extends ushort ? System_Internal.UInt16 :
-    T extends uint ? System_Internal.UInt32 :
-    T extends ulong ? System_Internal.UInt64 :
-    T extends uint128 ? System_Internal.UInt128 :
-    T extends nuint ? System_Internal.UIntPtr :
-    T extends half ? System_Internal.Half :
-    T extends float ? System_Internal.Single :
-    T extends double ? System_Internal.Double :
-    T extends decimal ? System_Internal.Decimal :
-    T extends char ? System_Internal.Char :
-    T extends boolean ? System_Internal.Boolean :
-    T extends string ? System_Internal.String :
-    T; // Identity fallback for non-primitive types
 
 export interface IDynamicMetaObjectProvider$instance {
     GetMetaObject(parameter: Expression): DynamicMetaObject;
@@ -96,7 +71,7 @@ export type BindingRestrictions = BindingRestrictions$instance;
 
 export interface CallInfo$instance {
     readonly ArgumentCount: int;
-    readonly ArgumentNames: ReadOnlyCollection_1<CLROf<string>>;
+    readonly ArgumentNames: ReadOnlyCollection_1<System_Internal.String>;
     Equals(obj: unknown): boolean;
     GetHashCode(): int;
 }
@@ -104,7 +79,7 @@ export interface CallInfo$instance {
 
 export const CallInfo: {
     new(argCount: int, argNames: string[]): CallInfo$instance;
-    new(argCount: int, argNames: IEnumerable_1<CLROf<string>>): CallInfo$instance;
+    new(argCount: int, argNames: IEnumerable_1<System_Internal.String>): CallInfo$instance;
 };
 
 
@@ -195,7 +170,7 @@ export interface DynamicMetaObject$instance {
     BindSetIndex(binder: SetIndexBinder, indexes: DynamicMetaObject[], value: DynamicMetaObject): DynamicMetaObject;
     BindSetMember(binder: SetMemberBinder, value: DynamicMetaObject): DynamicMetaObject;
     BindUnaryOperation(binder: UnaryOperationBinder): DynamicMetaObject;
-    GetDynamicMemberNames(): IEnumerable_1<CLROf<string>>;
+    GetDynamicMemberNames(): IEnumerable_1<System_Internal.String>;
 }
 
 
@@ -227,20 +202,20 @@ export const DynamicMetaObjectBinder: {
 export type DynamicMetaObjectBinder = DynamicMetaObjectBinder$instance;
 
 export interface DynamicObject$instance {
-    GetDynamicMemberNames(): IEnumerable_1<CLROf<string>>;
+    GetDynamicMemberNames(): IEnumerable_1<System_Internal.String>;
     GetMetaObject(parameter: Expression): DynamicMetaObject;
-    TryBinaryOperation(binder: BinaryOperationBinder, arg: unknown, result: { value: ref<unknown> }): boolean;
-    TryConvert(binder: ConvertBinder, result: { value: ref<unknown> }): boolean;
-    TryCreateInstance(binder: CreateInstanceBinder, args: unknown[], result: { value: ref<unknown> }): boolean;
+    TryBinaryOperation(binder: BinaryOperationBinder, arg: unknown, result: unknown): boolean;
+    TryConvert(binder: ConvertBinder, result: unknown): boolean;
+    TryCreateInstance(binder: CreateInstanceBinder, args: unknown[], result: unknown): boolean;
     TryDeleteIndex(binder: DeleteIndexBinder, indexes: unknown[]): boolean;
     TryDeleteMember(binder: DeleteMemberBinder): boolean;
-    TryGetIndex(binder: GetIndexBinder, indexes: unknown[], result: { value: ref<unknown> }): boolean;
-    TryGetMember(binder: GetMemberBinder, result: { value: ref<unknown> }): boolean;
-    TryInvoke(binder: InvokeBinder, args: unknown[], result: { value: ref<unknown> }): boolean;
-    TryInvokeMember(binder: InvokeMemberBinder, args: unknown[], result: { value: ref<unknown> }): boolean;
+    TryGetIndex(binder: GetIndexBinder, indexes: unknown[], result: unknown): boolean;
+    TryGetMember(binder: GetMemberBinder, result: unknown): boolean;
+    TryInvoke(binder: InvokeBinder, args: unknown[], result: unknown): boolean;
+    TryInvokeMember(binder: InvokeMemberBinder, args: unknown[], result: unknown): boolean;
     TrySetIndex(binder: SetIndexBinder, indexes: unknown[], value: unknown): boolean;
     TrySetMember(binder: SetMemberBinder, value: unknown): boolean;
-    TryUnaryOperation(binder: UnaryOperationBinder, result: { value: ref<unknown> }): boolean;
+    TryUnaryOperation(binder: UnaryOperationBinder, result: unknown): boolean;
 }
 
 
@@ -269,13 +244,13 @@ export const ExpandoObject: {
 
 export interface __ExpandoObject$views {
     As_IDynamicMetaObjectProvider(): IDynamicMetaObjectProvider$instance;
-    As_ICollection_1(): System_Collections_Generic_Internal.ICollection_1$instance<KeyValuePair_2<CLROf<string>, unknown>>;
-    As_IDictionary_2(): System_Collections_Generic_Internal.IDictionary_2$instance<CLROf<string>, unknown>;
-    As_IEnumerable_1(): System_Collections_Generic_Internal.IEnumerable_1$instance<KeyValuePair_2<CLROf<string>, unknown>>;
+    As_ICollection_1(): System_Collections_Generic_Internal.ICollection_1$instance<KeyValuePair_2<System_Internal.String, unknown>>;
+    As_IDictionary_2(): System_Collections_Generic_Internal.IDictionary_2$instance<System_Internal.String, unknown>;
+    As_IEnumerable_1(): System_Collections_Generic_Internal.IEnumerable_1$instance<KeyValuePair_2<System_Internal.String, unknown>>;
     As_IEnumerable(): System_Collections_Internal.IEnumerable$instance;
 }
 
-export interface ExpandoObject$instance extends System_Collections_Generic_Internal.IDictionary_2$instance<CLROf<string>, unknown>, System_ComponentModel_Internal.INotifyPropertyChanged$instance, IDynamicMetaObjectProvider$instance {}
+export interface ExpandoObject$instance extends System_Collections_Generic_Internal.IDictionary_2$instance<System_Internal.String, unknown>, System_ComponentModel_Internal.INotifyPropertyChanged$instance, IDynamicMetaObjectProvider$instance {}
 
 export type ExpandoObject = ExpandoObject$instance & __ExpandoObject$views;
 

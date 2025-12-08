@@ -19446,7 +19446,17 @@
           "parameterCount": 2,
           "declaringClrType": "System.Runtime.InteropServices.ICustomQueryInterface",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "in"
+            },
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         }
       ],
       "properties": [],
@@ -21497,7 +21507,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Runtime.InteropServices.NFloat",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.NFloat::TryParse(System.ReadOnlySpan_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Runtime.InteropServices.NFloat\u0026):System.Boolean",
@@ -21511,7 +21527,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Runtime.InteropServices.NFloat",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.NFloat::TryParse(System.ReadOnlySpan_1[[System.Byte,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Runtime.InteropServices.NFloat\u0026):System.Boolean",
@@ -21525,7 +21547,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Runtime.InteropServices.NFloat",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.NFloat::TryParse(System.String,System.Globalization.NumberStyles,System.IFormatProvider,System.Runtime.InteropServices.NFloat\u0026):System.Boolean",
@@ -21539,7 +21567,13 @@
           "parameterCount": 4,
           "declaringClrType": "System.Runtime.InteropServices.NFloat",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 3,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.NFloat::TryParse(System.ReadOnlySpan_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Globalization.NumberStyles,System.IFormatProvider,System.Runtime.InteropServices.NFloat\u0026):System.Boolean",
@@ -21553,7 +21587,13 @@
           "parameterCount": 4,
           "declaringClrType": "System.Runtime.InteropServices.NFloat",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 3,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.NFloat::CompareTo(System.Object):System.Int32",
@@ -21693,7 +21733,13 @@
           "parameterCount": 4,
           "declaringClrType": "System.Runtime.InteropServices.NFloat",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.NFloat::TryFormat(System.Span_1[[System.Byte,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Int32\u0026,System.ReadOnlySpan_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.IFormatProvider):System.Boolean",
@@ -21707,7 +21753,13 @@
           "parameterCount": 4,
           "declaringClrType": "System.Runtime.InteropServices.NFloat",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.NFloat::IsPow2(System.Runtime.InteropServices.NFloat):System.Boolean",
@@ -22617,7 +22669,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.Runtime.InteropServices.NFloat",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.NFloat::Pow(System.Runtime.InteropServices.NFloat,System.Runtime.InteropServices.NFloat):System.Runtime.InteropServices.NFloat",
@@ -22715,7 +22773,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.Runtime.InteropServices.NFloat",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.NFloat::Acos(System.Runtime.InteropServices.NFloat):System.Runtime.InteropServices.NFloat",
@@ -22967,7 +23031,13 @@
           "parameterCount": 4,
           "declaringClrType": "System.Runtime.InteropServices.NFloat",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 3,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.NFloat::Parse(System.ReadOnlySpan_1[[System.Byte,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.IFormatProvider):System.Runtime.InteropServices.NFloat",
@@ -22995,7 +23065,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.Runtime.InteropServices.NFloat",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Numerics.IBinaryNumber\u00601::IsPow2(TSelf):System.Boolean",
@@ -23135,7 +23211,13 @@
           "parameterCount": 4,
           "declaringClrType": "System.Numerics.INumberBase\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 3,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Numerics.INumberBase\u00601::TryParse(System.ReadOnlySpan_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Globalization.NumberStyles,System.IFormatProvider,TSelf\u0026):System.Boolean",
@@ -23149,7 +23231,13 @@
           "parameterCount": 4,
           "declaringClrType": "System.Numerics.INumberBase\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 3,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.IEquatable\u00601::Equals(T):System.Boolean",
@@ -23191,7 +23279,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.ISpanParsable\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.IParsable\u00601::Parse(System.String,System.IFormatProvider):TSelf",
@@ -23219,7 +23313,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.IParsable\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Numerics.IFloatingPointIeee754\u00601::ScaleB(TSelf,System.Int32):TSelf",
@@ -23303,7 +23403,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Numerics.IFloatingPoint\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Numerics.IFloatingPoint\u00601::WriteExponentBigEndian(System.Byte[]):System.Int32",
@@ -23387,7 +23493,13 @@
           "parameterCount": 4,
           "declaringClrType": "System.ISpanFormattable",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.IFormattable::ToString(System.String,System.IFormatProvider):System.String",
@@ -23471,7 +23583,13 @@
           "parameterCount": 4,
           "declaringClrType": "System.IUtf8SpanFormattable",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.IUtf8SpanParsable\u00601::Parse(System.ReadOnlySpan_1[[System.Byte,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.IFormatProvider):TSelf",
@@ -23499,7 +23617,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.IUtf8SpanParsable\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Numerics.IFloatingPointIeee754\u00601::Atan2(TSelf,TSelf):TSelf",
@@ -26860,7 +26984,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Runtime.InteropServices.WeakGCHandle\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.WeakGCHandle\u00601::SetTarget(T):System.Void",
@@ -31875,7 +32005,21 @@
           "parameterCount": 3,
           "declaringClrType": "System.Runtime.InteropServices.ComWrappers",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            },
+            {
+              "index": 1,
+              "modifier": "out"
+            },
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.ComWrappers::TryGetComInstance(System.Object,System.IntPtr\u0026):System.Boolean",
@@ -31889,7 +32033,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Runtime.InteropServices.ComWrappers",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.ComWrappers::TryGetObject(System.IntPtr,System.Object\u0026):System.Boolean",
@@ -31903,7 +32053,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Runtime.InteropServices.ComWrappers",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.ComWrappers::GetOrCreateComInterfaceForObject(System.Object,System.Runtime.InteropServices.CreateComInterfaceFlags):System.IntPtr",
@@ -40025,7 +40181,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Runtime.InteropServices.SafeBuffer",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.SafeBuffer::ReleasePointer():System.Void",
@@ -40523,7 +40685,13 @@
           "parameterCount": 1,
           "declaringClrType": "System.Runtime.InteropServices.SafeHandle",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.SafeHandle::DangerousRelease():System.Void",
@@ -45020,7 +45188,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.Runtime.InteropServices.CollectionsMarshal",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.CollectionsMarshal::GetValueRefOrAddDefault(AlternateLookup_1,TAlternateKey,System.Boolean\u0026):TValue\u0026",
@@ -45034,7 +45208,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.Runtime.InteropServices.CollectionsMarshal",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.CollectionsMarshal::SetCount(List_1,System.Int32):System.Void",
@@ -46087,7 +46267,17 @@
           "parameterCount": 3,
           "declaringClrType": "System.Runtime.InteropServices.Marshal",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "in"
+            },
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.Marshal::AddRef(System.IntPtr):System.Int32",
@@ -46899,7 +47089,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.Runtime.InteropServices.Marshal",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "in"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.Marshal::ThrowExceptionForHR(System.Int32):System.Void",
@@ -46941,7 +47137,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.Runtime.InteropServices.Marshal",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "in"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.Marshal::SecureStringToBSTR(System.Security.SecureString):System.IntPtr",
@@ -49881,7 +50083,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Runtime.InteropServices.MemoryMarshal",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.MemoryMarshal::CreateReadOnlySpan(T\u0026,System.Int32):ReadOnlySpan_1",
@@ -49895,7 +50103,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Runtime.InteropServices.MemoryMarshal",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "in"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.MemoryMarshal::CreateReadOnlySpanFromNullTerminated(System.Char*):System.ReadOnlySpan_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]",
@@ -49937,7 +50151,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Runtime.InteropServices.MemoryMarshal",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.MemoryMarshal::TryGetMemoryManager(ReadOnlyMemory_1,TManager\u0026):System.Boolean",
@@ -49951,7 +50171,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Runtime.InteropServices.MemoryMarshal",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.MemoryMarshal::TryGetMemoryManager(ReadOnlyMemory_1,TManager\u0026,System.Int32\u0026,System.Int32\u0026):System.Boolean",
@@ -49965,7 +50191,21 @@
           "parameterCount": 4,
           "declaringClrType": "System.Runtime.InteropServices.MemoryMarshal",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            },
+            {
+              "index": 2,
+              "modifier": "out"
+            },
+            {
+              "index": 3,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.MemoryMarshal::ToEnumerable(ReadOnlyMemory_1):IEnumerable_1",
@@ -49993,7 +50233,21 @@
           "parameterCount": 4,
           "declaringClrType": "System.Runtime.InteropServices.MemoryMarshal",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            },
+            {
+              "index": 2,
+              "modifier": "out"
+            },
+            {
+              "index": 3,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.MemoryMarshal::Read(System.ReadOnlySpan_1[[System.Byte,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]):T",
@@ -50021,7 +50275,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Runtime.InteropServices.MemoryMarshal",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.MemoryMarshal::Write(System.Span_1[[System.Byte,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],T\u0026):System.Void",
@@ -50035,7 +50295,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Runtime.InteropServices.MemoryMarshal",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "in"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.MemoryMarshal::TryWrite(System.Span_1[[System.Byte,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],T\u0026):System.Boolean",
@@ -50049,7 +50315,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Runtime.InteropServices.MemoryMarshal",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "in"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.MemoryMarshal::AsRef(System.Span_1[[System.Byte,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]):T\u0026",
@@ -50444,7 +50716,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Runtime.InteropServices.NativeLibrary",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.NativeLibrary::Load(System.String,System.Reflection.Assembly,System.Nullable_1[[System.Runtime.InteropServices.DllImportSearchPath,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]):System.IntPtr",
@@ -50472,7 +50750,13 @@
           "parameterCount": 4,
           "declaringClrType": "System.Runtime.InteropServices.NativeLibrary",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 3,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.NativeLibrary::Free(System.IntPtr):System.Void",
@@ -50514,7 +50798,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.Runtime.InteropServices.NativeLibrary",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.NativeLibrary::SetDllImportResolver(System.Reflection.Assembly,System.Runtime.InteropServices.DllImportResolver):System.Void",
@@ -51528,7 +51818,25 @@
           "parameterCount": 5,
           "declaringClrType": "System.Runtime.InteropServices.SequenceMarshal",
           "declaringAssemblyName": "System.Memory",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            },
+            {
+              "index": 2,
+              "modifier": "out"
+            },
+            {
+              "index": 3,
+              "modifier": "out"
+            },
+            {
+              "index": 4,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Memory:System.Runtime.InteropServices.SequenceMarshal::TryGetArray(ReadOnlySequence_1,ArraySegment_1\u0026):System.Boolean",
@@ -51542,7 +51850,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Runtime.InteropServices.SequenceMarshal",
           "declaringAssemblyName": "System.Memory",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Memory:System.Runtime.InteropServices.SequenceMarshal::TryGetReadOnlyMemory(ReadOnlySequence_1,ReadOnlyMemory_1\u0026):System.Boolean",
@@ -51556,7 +51870,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Runtime.InteropServices.SequenceMarshal",
           "declaringAssemblyName": "System.Memory",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Memory:System.Runtime.InteropServices.SequenceMarshal::TryRead(System.Buffers.SequenceReader_1[[System.Byte,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]\u0026,T\u0026):System.Boolean",
@@ -51570,7 +51890,17 @@
           "parameterCount": 2,
           "declaringClrType": "System.Runtime.InteropServices.SequenceMarshal",
           "declaringAssemblyName": "System.Memory",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            },
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         }
       ],
       "properties": [],

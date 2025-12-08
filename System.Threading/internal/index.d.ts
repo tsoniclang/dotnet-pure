@@ -6,7 +6,7 @@
 import type { sbyte, byte, short, ushort, int, uint, long, ulong, int128, uint128, half, float, double, decimal, nint, nuint, char } from '@tsonic/types';
 
 // Import support types from @tsonic/types
-import type { ptr, ref } from "@tsonic/types";
+import type { ptr } from "@tsonic/types";
 
 // Import types from other namespaces
 import type { SafeWaitHandle } from "../../Microsoft.Win32.SafeHandles/internal/index.js";
@@ -24,31 +24,6 @@ import type { IPrincipal } from "../../System.Security.Principal/internal/index.
 import type { Task, Task_1, ValueTask, ValueTask_1 } from "../../System.Threading.Tasks/internal/index.js";
 import * as System_Internal from "../../System/internal/index.js";
 import type { Action, Action_1, Action_2, AppDomain, ApplicationException, AsyncCallback, Boolean as ClrBoolean, Byte, Delegate, Double, Enum, EventArgs, Exception, Func_1, IAsyncDisposable, IAsyncResult, ICloneable, IComparable, IConvertible, IDisposable, IEquatable_1, IFormatProvider, IFormattable, Int16, Int32, Int64, IntPtr, ISpanFormattable, LocalDataStoreSlot, MarshalByRefObject, MulticastDelegate, Object as ClrObject, ReadOnlySpan_1, SByte, Single, String as ClrString, SystemException, TimeProvider, TimeSpan, Type, TypeCode, UInt16, UInt32, UInt64, UIntPtr, ValueType, Void } from "../../System/internal/index.js";
-
-// CLROf<T> - Maps ergonomic primitives to their CLR types for generic constraints
-// This utility is used ONLY in generic type arguments to satisfy CLR interface constraints
-// Value positions (parameters, return types) use lowercase primitives for ergonomics
-export type CLROf<T> =
-    T extends sbyte ? System_Internal.SByte :
-    T extends short ? System_Internal.Int16 :
-    T extends int ? System_Internal.Int32 :
-    T extends long ? System_Internal.Int64 :
-    T extends int128 ? System_Internal.Int128 :
-    T extends nint ? System_Internal.IntPtr :
-    T extends byte ? System_Internal.Byte :
-    T extends ushort ? System_Internal.UInt16 :
-    T extends uint ? System_Internal.UInt32 :
-    T extends ulong ? System_Internal.UInt64 :
-    T extends uint128 ? System_Internal.UInt128 :
-    T extends nuint ? System_Internal.UIntPtr :
-    T extends half ? System_Internal.Half :
-    T extends float ? System_Internal.Single :
-    T extends double ? System_Internal.Double :
-    T extends decimal ? System_Internal.Decimal :
-    T extends char ? System_Internal.Char :
-    T extends boolean ? System_Internal.Boolean :
-    T extends string ? System_Internal.String :
-    T; // Identity fallback for non-primitive types
 
 export enum ApartmentState {
     STA = 0,
@@ -316,12 +291,12 @@ export interface SpinLock$instance {
     readonly IsHeld: boolean;
     readonly IsHeldByCurrentThread: boolean;
     readonly IsThreadOwnerTrackingEnabled: boolean;
-    Enter(lockTaken: { value: ref<boolean> }): void;
+    Enter(lockTaken: boolean): void;
     Exit(): void;
     Exit(useMemoryBarrier: boolean): void;
-    TryEnter(lockTaken: { value: ref<boolean> }): void;
-    TryEnter(timeout: TimeSpan, lockTaken: { value: ref<boolean> }): void;
-    TryEnter(millisecondsTimeout: int, lockTaken: { value: ref<boolean> }): void;
+    TryEnter(lockTaken: boolean): void;
+    TryEnter(timeout: TimeSpan, lockTaken: boolean): void;
+    TryEnter(millisecondsTimeout: int, lockTaken: boolean): void;
 }
 
 
@@ -343,9 +318,9 @@ export interface SpinWait$instance {
 
 export const SpinWait: {
     new(): SpinWait$instance;
-    SpinUntil(condition: Func_1<CLROf<boolean>>, millisecondsTimeout: int): boolean;
-    SpinUntil(condition: Func_1<CLROf<boolean>>, timeout: TimeSpan): boolean;
-    SpinUntil(condition: Func_1<CLROf<boolean>>): void;
+    SpinUntil(condition: Func_1<System_Internal.Boolean>, millisecondsTimeout: int): boolean;
+    SpinUntil(condition: Func_1<System_Internal.Boolean>, timeout: TimeSpan): boolean;
+    SpinUntil(condition: Func_1<System_Internal.Boolean>): void;
 };
 
 
@@ -563,12 +538,12 @@ export const EventWaitHandle: {
     new(initialState: boolean, mode: EventResetMode): EventWaitHandle$instance;
     new(initialState: boolean, mode: EventResetMode, name: string, options: NamedWaitHandleOptions): EventWaitHandle$instance;
     new(initialState: boolean, mode: EventResetMode, name: string): EventWaitHandle$instance;
-    new(initialState: boolean, mode: EventResetMode, name: string, options: NamedWaitHandleOptions, createdNew: ref<boolean>): EventWaitHandle$instance;
-    new(initialState: boolean, mode: EventResetMode, name: string, createdNew: ref<boolean>): EventWaitHandle$instance;
+    new(initialState: boolean, mode: EventResetMode, name: string, options: NamedWaitHandleOptions, createdNew: boolean): EventWaitHandle$instance;
+    new(initialState: boolean, mode: EventResetMode, name: string, createdNew: boolean): EventWaitHandle$instance;
     OpenExisting(name: string, options: NamedWaitHandleOptions): EventWaitHandle;
     OpenExisting(name: string): EventWaitHandle;
-    TryOpenExisting(name: string, result: { value: ref<EventWaitHandle> }): boolean;
-    TryOpenExisting(name: string, options: NamedWaitHandleOptions, result: { value: ref<EventWaitHandle> }): boolean;
+    TryOpenExisting(name: string, result: EventWaitHandle): boolean;
+    TryOpenExisting(name: string, options: NamedWaitHandleOptions, result: EventWaitHandle): boolean;
 };
 
 
@@ -734,8 +709,8 @@ export interface Mutex$instance extends WaitHandle$instance {
 
 
 export const Mutex: {
-    new(initiallyOwned: boolean, name: string, options: NamedWaitHandleOptions, createdNew: ref<boolean>): Mutex$instance;
-    new(initiallyOwned: boolean, name: string, createdNew: ref<boolean>): Mutex$instance;
+    new(initiallyOwned: boolean, name: string, options: NamedWaitHandleOptions, createdNew: boolean): Mutex$instance;
+    new(initiallyOwned: boolean, name: string, createdNew: boolean): Mutex$instance;
     new(initiallyOwned: boolean, name: string, options: NamedWaitHandleOptions): Mutex$instance;
     new(initiallyOwned: boolean, name: string): Mutex$instance;
     new(name: string, options: NamedWaitHandleOptions): Mutex$instance;
@@ -743,8 +718,8 @@ export const Mutex: {
     new(): Mutex$instance;
     OpenExisting(name: string, options: NamedWaitHandleOptions): Mutex;
     OpenExisting(name: string): Mutex;
-    TryOpenExisting(name: string, result: { value: ref<Mutex> }): boolean;
-    TryOpenExisting(name: string, options: NamedWaitHandleOptions, result: { value: ref<Mutex> }): boolean;
+    TryOpenExisting(name: string, result: Mutex): boolean;
+    TryOpenExisting(name: string, options: NamedWaitHandleOptions, result: Mutex): boolean;
 };
 
 
@@ -782,7 +757,7 @@ export type Overlapped = Overlapped$instance;
 export interface PeriodicTimer$instance {
     Period: TimeSpan;
     Dispose(): void;
-    WaitForNextTickAsync(cancellationToken?: CancellationToken): ValueTask_1<CLROf<boolean>>;
+    WaitForNextTickAsync(cancellationToken?: CancellationToken): ValueTask_1<System_Internal.Boolean>;
 }
 
 
@@ -830,11 +805,11 @@ export interface ReaderWriterLock$instance extends CriticalFinalizerObject {
     AcquireWriterLock(millisecondsTimeout: int): void;
     AcquireWriterLock(timeout: TimeSpan): void;
     AnyWritersSince(seqNum: int): boolean;
-    DowngradeFromWriterLock(lockCookie: { value: ref<LockCookie> }): void;
+    DowngradeFromWriterLock(lockCookie: LockCookie): void;
     ReleaseLock(): LockCookie;
     ReleaseReaderLock(): void;
     ReleaseWriterLock(): void;
-    RestoreLock(lockCookie: { value: ref<LockCookie> }): void;
+    RestoreLock(lockCookie: LockCookie): void;
     UpgradeToWriterLock(millisecondsTimeout: int): LockCookie;
     UpgradeToWriterLock(timeout: TimeSpan): LockCookie;
 }
@@ -913,12 +888,12 @@ export const Semaphore: {
     new(initialCount: int, maximumCount: int): Semaphore$instance;
     new(initialCount: int, maximumCount: int, name: string, options: NamedWaitHandleOptions): Semaphore$instance;
     new(initialCount: int, maximumCount: int, name: string): Semaphore$instance;
-    new(initialCount: int, maximumCount: int, name: string, options: NamedWaitHandleOptions, createdNew: ref<boolean>): Semaphore$instance;
-    new(initialCount: int, maximumCount: int, name: string, createdNew: ref<boolean>): Semaphore$instance;
+    new(initialCount: int, maximumCount: int, name: string, options: NamedWaitHandleOptions, createdNew: boolean): Semaphore$instance;
+    new(initialCount: int, maximumCount: int, name: string, createdNew: boolean): Semaphore$instance;
     OpenExisting(name: string, options: NamedWaitHandleOptions): Semaphore;
     OpenExisting(name: string): Semaphore;
-    TryOpenExisting(name: string, options: NamedWaitHandleOptions, result: { value: ref<Semaphore> }): boolean;
-    TryOpenExisting(name: string, result: { value: ref<Semaphore> }): boolean;
+    TryOpenExisting(name: string, options: NamedWaitHandleOptions, result: Semaphore): boolean;
+    TryOpenExisting(name: string, result: Semaphore): boolean;
 };
 
 
@@ -962,10 +937,10 @@ export interface SemaphoreSlim$instance {
     Wait(millisecondsTimeout: int, cancellationToken: CancellationToken): boolean;
     WaitAsync(): Task;
     WaitAsync(cancellationToken: CancellationToken): Task;
-    WaitAsync(millisecondsTimeout: int): Task_1<CLROf<boolean>>;
-    WaitAsync(timeout: TimeSpan): Task_1<CLROf<boolean>>;
-    WaitAsync(timeout: TimeSpan, cancellationToken: CancellationToken): Task_1<CLROf<boolean>>;
-    WaitAsync(millisecondsTimeout: int, cancellationToken: CancellationToken): Task_1<CLROf<boolean>>;
+    WaitAsync(millisecondsTimeout: int): Task_1<System_Internal.Boolean>;
+    WaitAsync(timeout: TimeSpan): Task_1<System_Internal.Boolean>;
+    WaitAsync(timeout: TimeSpan, cancellationToken: CancellationToken): Task_1<System_Internal.Boolean>;
+    WaitAsync(millisecondsTimeout: int, cancellationToken: CancellationToken): Task_1<System_Internal.Boolean>;
 }
 
 
@@ -1082,32 +1057,32 @@ export const Thread: {
     Sleep(millisecondsTimeout: int): void;
     Sleep(timeout: TimeSpan): void;
     SpinWait(iterations: int): void;
-    VolatileRead(address: { value: ref<byte> }): byte;
-    VolatileRead(address: { value: ref<double> }): double;
-    VolatileRead(address: { value: ref<short> }): short;
-    VolatileRead(address: { value: ref<int> }): int;
-    VolatileRead(address: { value: ref<long> }): long;
-    VolatileRead(address: { value: ref<nint> }): nint;
-    VolatileRead(address: { value: ref<unknown> }): unknown;
-    VolatileRead(address: { value: ref<sbyte> }): sbyte;
-    VolatileRead(address: { value: ref<float> }): float;
-    VolatileRead(address: { value: ref<ushort> }): ushort;
-    VolatileRead(address: { value: ref<uint> }): uint;
-    VolatileRead(address: { value: ref<ulong> }): ulong;
-    VolatileRead(address: { value: ref<nuint> }): nuint;
-    VolatileWrite(address: { value: ref<byte> }, value: byte): void;
-    VolatileWrite(address: { value: ref<double> }, value: double): void;
-    VolatileWrite(address: { value: ref<short> }, value: short): void;
-    VolatileWrite(address: { value: ref<int> }, value: int): void;
-    VolatileWrite(address: { value: ref<long> }, value: long): void;
-    VolatileWrite(address: { value: ref<nint> }, value: nint): void;
-    VolatileWrite(address: { value: ref<unknown> }, value: unknown): void;
-    VolatileWrite(address: { value: ref<sbyte> }, value: sbyte): void;
-    VolatileWrite(address: { value: ref<float> }, value: float): void;
-    VolatileWrite(address: { value: ref<ushort> }, value: ushort): void;
-    VolatileWrite(address: { value: ref<uint> }, value: uint): void;
-    VolatileWrite(address: { value: ref<ulong> }, value: ulong): void;
-    VolatileWrite(address: { value: ref<nuint> }, value: nuint): void;
+    VolatileRead(address: byte): byte;
+    VolatileRead(address: double): double;
+    VolatileRead(address: short): short;
+    VolatileRead(address: int): int;
+    VolatileRead(address: long): long;
+    VolatileRead(address: nint): nint;
+    VolatileRead(address: unknown): unknown;
+    VolatileRead(address: sbyte): sbyte;
+    VolatileRead(address: float): float;
+    VolatileRead(address: ushort): ushort;
+    VolatileRead(address: uint): uint;
+    VolatileRead(address: ulong): ulong;
+    VolatileRead(address: nuint): nuint;
+    VolatileWrite(address: byte, value: byte): void;
+    VolatileWrite(address: double, value: double): void;
+    VolatileWrite(address: short, value: short): void;
+    VolatileWrite(address: int, value: int): void;
+    VolatileWrite(address: long, value: long): void;
+    VolatileWrite(address: nint, value: nint): void;
+    VolatileWrite(address: unknown, value: unknown): void;
+    VolatileWrite(address: sbyte, value: sbyte): void;
+    VolatileWrite(address: float, value: float): void;
+    VolatileWrite(address: ushort, value: ushort): void;
+    VolatileWrite(address: uint, value: uint): void;
+    VolatileWrite(address: ulong, value: ulong): void;
+    VolatileWrite(address: nuint, value: nuint): void;
     Yield(): boolean;
 };
 
@@ -1341,78 +1316,78 @@ export type WaitHandleCannotBeOpenedException = WaitHandleCannotBeOpenedExceptio
 
 
 export abstract class EventWaitHandleAcl$instance {
-    static Create(initialState: boolean, mode: EventResetMode, name: string, createdNew: { value: ref<boolean> }, eventSecurity: EventWaitHandleSecurity): EventWaitHandle;
+    static Create(initialState: boolean, mode: EventResetMode, name: string, createdNew: boolean, eventSecurity: EventWaitHandleSecurity): EventWaitHandle;
     static OpenExisting(name: string, rights: EventWaitHandleRights): EventWaitHandle;
-    static TryOpenExisting(name: string, rights: EventWaitHandleRights, result: { value: ref<EventWaitHandle> }): boolean;
+    static TryOpenExisting(name: string, rights: EventWaitHandleRights, result: EventWaitHandle): boolean;
 }
 
 
 export type EventWaitHandleAcl = EventWaitHandleAcl$instance;
 
 export abstract class Interlocked$instance {
-    static Add(location1: { value: ref<int> }, value: int): int;
-    static Add(location1: { value: ref<long> }, value: long): long;
-    static Add(location1: { value: ref<uint> }, value: uint): uint;
-    static Add(location1: { value: ref<ulong> }, value: ulong): ulong;
-    static And(location1: { value: ref<int> }, value: int): int;
-    static And(location1: { value: ref<long> }, value: long): long;
-    static And(location1: { value: ref<uint> }, value: uint): uint;
-    static And(location1: { value: ref<ulong> }, value: ulong): ulong;
-    static CompareExchange(location1: { value: ref<byte> }, value: byte, comparand: byte): byte;
-    static CompareExchange(location1: { value: ref<double> }, value: double, comparand: double): double;
-    static CompareExchange(location1: { value: ref<short> }, value: short, comparand: short): short;
-    static CompareExchange(location1: { value: ref<int> }, value: int, comparand: int): int;
-    static CompareExchange(location1: { value: ref<long> }, value: long, comparand: long): long;
-    static CompareExchange(location1: { value: ref<nint> }, value: nint, comparand: nint): nint;
-    static CompareExchange(location1: { value: ref<unknown> }, value: unknown, comparand: unknown): unknown;
-    static CompareExchange(location1: { value: ref<sbyte> }, value: sbyte, comparand: sbyte): sbyte;
-    static CompareExchange(location1: { value: ref<float> }, value: float, comparand: float): float;
-    static CompareExchange(location1: { value: ref<ushort> }, value: ushort, comparand: ushort): ushort;
-    static CompareExchange(location1: { value: ref<uint> }, value: uint, comparand: uint): uint;
-    static CompareExchange(location1: { value: ref<ulong> }, value: ulong, comparand: ulong): ulong;
-    static CompareExchange(location1: { value: ref<nuint> }, value: nuint, comparand: nuint): nuint;
-    static CompareExchange<T>(location1: { value: ref<T> }, value: T, comparand: T): T;
-    static Decrement(location: { value: ref<int> }): int;
-    static Decrement(location: { value: ref<long> }): long;
-    static Decrement(location: { value: ref<uint> }): uint;
-    static Decrement(location: { value: ref<ulong> }): ulong;
-    static Exchange(location1: { value: ref<byte> }, value: byte): byte;
-    static Exchange(location1: { value: ref<double> }, value: double): double;
-    static Exchange(location1: { value: ref<short> }, value: short): short;
-    static Exchange(location1: { value: ref<int> }, value: int): int;
-    static Exchange(location1: { value: ref<long> }, value: long): long;
-    static Exchange(location1: { value: ref<nint> }, value: nint): nint;
-    static Exchange(location1: { value: ref<unknown> }, value: unknown): unknown;
-    static Exchange(location1: { value: ref<sbyte> }, value: sbyte): sbyte;
-    static Exchange(location1: { value: ref<float> }, value: float): float;
-    static Exchange(location1: { value: ref<ushort> }, value: ushort): ushort;
-    static Exchange(location1: { value: ref<uint> }, value: uint): uint;
-    static Exchange(location1: { value: ref<ulong> }, value: ulong): ulong;
-    static Exchange(location1: { value: ref<nuint> }, value: nuint): nuint;
-    static Exchange<T>(location1: { value: ref<T> }, value: T): T;
-    static Increment(location: { value: ref<int> }): int;
-    static Increment(location: { value: ref<long> }): long;
-    static Increment(location: { value: ref<uint> }): uint;
-    static Increment(location: { value: ref<ulong> }): ulong;
+    static Add(location1: int, value: int): int;
+    static Add(location1: long, value: long): long;
+    static Add(location1: uint, value: uint): uint;
+    static Add(location1: ulong, value: ulong): ulong;
+    static And(location1: int, value: int): int;
+    static And(location1: long, value: long): long;
+    static And(location1: uint, value: uint): uint;
+    static And(location1: ulong, value: ulong): ulong;
+    static CompareExchange(location1: byte, value: byte, comparand: byte): byte;
+    static CompareExchange(location1: double, value: double, comparand: double): double;
+    static CompareExchange(location1: short, value: short, comparand: short): short;
+    static CompareExchange(location1: int, value: int, comparand: int): int;
+    static CompareExchange(location1: long, value: long, comparand: long): long;
+    static CompareExchange(location1: nint, value: nint, comparand: nint): nint;
+    static CompareExchange(location1: unknown, value: unknown, comparand: unknown): unknown;
+    static CompareExchange(location1: sbyte, value: sbyte, comparand: sbyte): sbyte;
+    static CompareExchange(location1: float, value: float, comparand: float): float;
+    static CompareExchange(location1: ushort, value: ushort, comparand: ushort): ushort;
+    static CompareExchange(location1: uint, value: uint, comparand: uint): uint;
+    static CompareExchange(location1: ulong, value: ulong, comparand: ulong): ulong;
+    static CompareExchange(location1: nuint, value: nuint, comparand: nuint): nuint;
+    static CompareExchange<T>(location1: T, value: T, comparand: T): T;
+    static Decrement(location: int): int;
+    static Decrement(location: long): long;
+    static Decrement(location: uint): uint;
+    static Decrement(location: ulong): ulong;
+    static Exchange(location1: byte, value: byte): byte;
+    static Exchange(location1: double, value: double): double;
+    static Exchange(location1: short, value: short): short;
+    static Exchange(location1: int, value: int): int;
+    static Exchange(location1: long, value: long): long;
+    static Exchange(location1: nint, value: nint): nint;
+    static Exchange(location1: unknown, value: unknown): unknown;
+    static Exchange(location1: sbyte, value: sbyte): sbyte;
+    static Exchange(location1: float, value: float): float;
+    static Exchange(location1: ushort, value: ushort): ushort;
+    static Exchange(location1: uint, value: uint): uint;
+    static Exchange(location1: ulong, value: ulong): ulong;
+    static Exchange(location1: nuint, value: nuint): nuint;
+    static Exchange<T>(location1: T, value: T): T;
+    static Increment(location: int): int;
+    static Increment(location: long): long;
+    static Increment(location: uint): uint;
+    static Increment(location: ulong): ulong;
     static MemoryBarrier(): void;
     static MemoryBarrierProcessWide(): void;
-    static Or(location1: { value: ref<int> }, value: int): int;
-    static Or(location1: { value: ref<long> }, value: long): long;
-    static Or(location1: { value: ref<uint> }, value: uint): uint;
-    static Or(location1: { value: ref<ulong> }, value: ulong): ulong;
-    static Read(location: { value: ref<long> }): long;
-    static Read(location: { value: ref<ulong> }): ulong;
+    static Or(location1: int, value: int): int;
+    static Or(location1: long, value: long): long;
+    static Or(location1: uint, value: uint): uint;
+    static Or(location1: ulong, value: ulong): ulong;
+    static Read(location: long): long;
+    static Read(location: ulong): ulong;
 }
 
 
 export type Interlocked = Interlocked$instance;
 
 export abstract class LazyInitializer$instance {
-    static EnsureInitialized<T>(target: { value: ref<T> }, valueFactory: Func_1<T>): T;
-    static EnsureInitialized<T>(target: { value: ref<T> }, initialized: { value: ref<boolean> }, syncLock: { value: ref<unknown> }, valueFactory: Func_1<T>): T;
-    static EnsureInitialized<T>(target: { value: ref<T> }, initialized: { value: ref<boolean> }, syncLock: { value: ref<unknown> }): T;
-    static EnsureInitialized<T>(target: { value: ref<T> }, syncLock: { value: ref<unknown> }, valueFactory: Func_1<T>): T;
-    static EnsureInitialized<T>(target: { value: ref<T> }): T;
+    static EnsureInitialized<T>(target: T, valueFactory: Func_1<T>): T;
+    static EnsureInitialized<T>(target: T, initialized: boolean, syncLock: unknown, valueFactory: Func_1<T>): T;
+    static EnsureInitialized<T>(target: T, initialized: boolean, syncLock: unknown): T;
+    static EnsureInitialized<T>(target: T, syncLock: unknown, valueFactory: Func_1<T>): T;
+    static EnsureInitialized<T>(target: T): T;
 }
 
 
@@ -1420,16 +1395,16 @@ export type LazyInitializer = LazyInitializer$instance;
 
 export abstract class Monitor$instance {
     static readonly LockContentionCount: long;
-    static Enter(obj: unknown, lockTaken: { value: ref<boolean> }): void;
+    static Enter(obj: unknown, lockTaken: boolean): void;
     static Enter(obj: unknown): void;
     static Exit(obj: unknown): void;
     static IsEntered(obj: unknown): boolean;
     static Pulse(obj: unknown): void;
     static PulseAll(obj: unknown): void;
-    static TryEnter(obj: unknown, lockTaken: { value: ref<boolean> }): void;
-    static TryEnter(obj: unknown, millisecondsTimeout: int, lockTaken: { value: ref<boolean> }): void;
+    static TryEnter(obj: unknown, lockTaken: boolean): void;
+    static TryEnter(obj: unknown, millisecondsTimeout: int, lockTaken: boolean): void;
     static TryEnter(obj: unknown, millisecondsTimeout: int): boolean;
-    static TryEnter(obj: unknown, timeout: TimeSpan, lockTaken: { value: ref<boolean> }): void;
+    static TryEnter(obj: unknown, timeout: TimeSpan, lockTaken: boolean): void;
     static TryEnter(obj: unknown, timeout: TimeSpan): boolean;
     static TryEnter(obj: unknown): boolean;
     static Wait(obj: unknown, millisecondsTimeout: int, exitContext: boolean): boolean;
@@ -1443,18 +1418,18 @@ export abstract class Monitor$instance {
 export type Monitor = Monitor$instance;
 
 export abstract class MutexAcl$instance {
-    static Create(initiallyOwned: boolean, name: string, createdNew: { value: ref<boolean> }, mutexSecurity: MutexSecurity): Mutex;
+    static Create(initiallyOwned: boolean, name: string, createdNew: boolean, mutexSecurity: MutexSecurity): Mutex;
     static OpenExisting(name: string, rights: MutexRights): Mutex;
-    static TryOpenExisting(name: string, rights: MutexRights, result: { value: ref<Mutex> }): boolean;
+    static TryOpenExisting(name: string, rights: MutexRights, result: Mutex): boolean;
 }
 
 
 export type MutexAcl = MutexAcl$instance;
 
 export abstract class SemaphoreAcl$instance {
-    static Create(initialCount: int, maximumCount: int, name: string, createdNew: { value: ref<boolean> }, semaphoreSecurity: SemaphoreSecurity): Semaphore;
+    static Create(initialCount: int, maximumCount: int, name: string, createdNew: boolean, semaphoreSecurity: SemaphoreSecurity): Semaphore;
     static OpenExisting(name: string, rights: SemaphoreRights): Semaphore;
-    static TryOpenExisting(name: string, rights: SemaphoreRights, result: { value: ref<Semaphore> }): boolean;
+    static TryOpenExisting(name: string, rights: SemaphoreRights, result: Semaphore): boolean;
 }
 
 
@@ -1478,9 +1453,9 @@ export abstract class ThreadPool$instance {
     static readonly CompletedWorkItemCount: long;
     static BindHandle(osHandle: nint): boolean;
     static BindHandle(osHandle: SafeHandle): boolean;
-    static GetAvailableThreads(workerThreads: { value: ref<int> }, completionPortThreads: { value: ref<int> }): void;
-    static GetMaxThreads(workerThreads: { value: ref<int> }, completionPortThreads: { value: ref<int> }): void;
-    static GetMinThreads(workerThreads: { value: ref<int> }, completionPortThreads: { value: ref<int> }): void;
+    static GetAvailableThreads(workerThreads: int, completionPortThreads: int): void;
+    static GetMaxThreads(workerThreads: int, completionPortThreads: int): void;
+    static GetMinThreads(workerThreads: int, completionPortThreads: int): void;
     static QueueUserWorkItem<TState>(callBack: Action_1<TState>, state: TState, preferLocal: boolean): boolean;
     static QueueUserWorkItem(callBack: WaitCallback, state: unknown): boolean;
     static QueueUserWorkItem(callBack: WaitCallback): boolean;
@@ -1512,35 +1487,35 @@ export abstract class Timeout$instance {
 export type Timeout = Timeout$instance;
 
 export abstract class Volatile$instance {
-    static Read(location: { value: ref<boolean> }): boolean;
-    static Read(location: { value: ref<byte> }): byte;
-    static Read(location: { value: ref<double> }): double;
-    static Read(location: { value: ref<short> }): short;
-    static Read(location: { value: ref<int> }): int;
-    static Read(location: { value: ref<long> }): long;
-    static Read(location: { value: ref<nint> }): nint;
-    static Read(location: { value: ref<sbyte> }): sbyte;
-    static Read(location: { value: ref<float> }): float;
-    static Read(location: { value: ref<ushort> }): ushort;
-    static Read(location: { value: ref<uint> }): uint;
-    static Read(location: { value: ref<ulong> }): ulong;
-    static Read(location: { value: ref<nuint> }): nuint;
-    static Read<T>(location: { value: ref<T> }): T;
+    static Read(location: boolean): boolean;
+    static Read(location: byte): byte;
+    static Read(location: double): double;
+    static Read(location: short): short;
+    static Read(location: int): int;
+    static Read(location: long): long;
+    static Read(location: nint): nint;
+    static Read(location: sbyte): sbyte;
+    static Read(location: float): float;
+    static Read(location: ushort): ushort;
+    static Read(location: uint): uint;
+    static Read(location: ulong): ulong;
+    static Read(location: nuint): nuint;
+    static Read<T>(location: T): T;
     static ReadBarrier(): void;
-    static Write(location: { value: ref<boolean> }, value: boolean): void;
-    static Write(location: { value: ref<byte> }, value: byte): void;
-    static Write(location: { value: ref<double> }, value: double): void;
-    static Write(location: { value: ref<short> }, value: short): void;
-    static Write(location: { value: ref<int> }, value: int): void;
-    static Write(location: { value: ref<long> }, value: long): void;
-    static Write(location: { value: ref<nint> }, value: nint): void;
-    static Write(location: { value: ref<sbyte> }, value: sbyte): void;
-    static Write(location: { value: ref<float> }, value: float): void;
-    static Write(location: { value: ref<ushort> }, value: ushort): void;
-    static Write(location: { value: ref<uint> }, value: uint): void;
-    static Write(location: { value: ref<ulong> }, value: ulong): void;
-    static Write(location: { value: ref<nuint> }, value: nuint): void;
-    static Write<T>(location: { value: ref<T> }, value: T): void;
+    static Write(location: boolean, value: boolean): void;
+    static Write(location: byte, value: byte): void;
+    static Write(location: double, value: double): void;
+    static Write(location: short, value: short): void;
+    static Write(location: int, value: int): void;
+    static Write(location: long, value: long): void;
+    static Write(location: nint, value: nint): void;
+    static Write(location: sbyte, value: sbyte): void;
+    static Write(location: float, value: float): void;
+    static Write(location: ushort, value: ushort): void;
+    static Write(location: uint, value: uint): void;
+    static Write(location: ulong, value: ulong): void;
+    static Write(location: nuint, value: nuint): void;
+    static Write<T>(location: T, value: T): void;
     static WriteBarrier(): void;
 }
 

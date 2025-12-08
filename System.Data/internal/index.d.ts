@@ -29,31 +29,6 @@ import type { XmlReader, XmlWriter } from "../../System.Xml/internal/index.js";
 import * as System_Internal from "../../System/internal/index.js";
 import type { Array as ClrArray, AsyncCallback, Attribute, Boolean as ClrBoolean, Byte, Char, Converter_2, DateTime, Decimal, Delegate, Double, Enum, EventArgs, EventHandler, Exception, Func_2, Guid, IAsyncDisposable, IAsyncResult, ICloneable, IComparable, IConvertible, IDisposable, IFormatProvider, IFormattable, Int16, Int32, Int64, IntPtr, IServiceProvider, ISpanFormattable, MulticastDelegate, Nullable_1, Object as ClrObject, Single, String as ClrString, SystemException, Type, TypeCode, Void } from "../../System/internal/index.js";
 
-// CLROf<T> - Maps ergonomic primitives to their CLR types for generic constraints
-// This utility is used ONLY in generic type arguments to satisfy CLR interface constraints
-// Value positions (parameters, return types) use lowercase primitives for ergonomics
-export type CLROf<T> =
-    T extends sbyte ? System_Internal.SByte :
-    T extends short ? System_Internal.Int16 :
-    T extends int ? System_Internal.Int32 :
-    T extends long ? System_Internal.Int64 :
-    T extends int128 ? System_Internal.Int128 :
-    T extends nint ? System_Internal.IntPtr :
-    T extends byte ? System_Internal.Byte :
-    T extends ushort ? System_Internal.UInt16 :
-    T extends uint ? System_Internal.UInt32 :
-    T extends ulong ? System_Internal.UInt64 :
-    T extends uint128 ? System_Internal.UInt128 :
-    T extends nuint ? System_Internal.UIntPtr :
-    T extends half ? System_Internal.Half :
-    T extends float ? System_Internal.Single :
-    T extends double ? System_Internal.Double :
-    T extends decimal ? System_Internal.Decimal :
-    T extends char ? System_Internal.Char :
-    T extends boolean ? System_Internal.Boolean :
-    T extends string ? System_Internal.String :
-    T; // Identity fallback for non-primitive types
-
 export enum AcceptRejectRule {
     None = 0,
     Cascade = 1
@@ -1129,13 +1104,13 @@ export interface DataSet$instance extends MarshalByValueComponent {
     WriteXml(writer: XmlWriter, mode: XmlWriteMode): void;
     WriteXml(fileName: string, mode: XmlWriteMode): void;
     WriteXmlSchema(stream: Stream): void;
-    WriteXmlSchema(stream: Stream, multipleTargetConverter: Converter_2<Type, CLROf<string>>): void;
+    WriteXmlSchema(stream: Stream, multipleTargetConverter: Converter_2<Type, System_Internal.String>): void;
     WriteXmlSchema(fileName: string): void;
-    WriteXmlSchema(fileName: string, multipleTargetConverter: Converter_2<Type, CLROf<string>>): void;
+    WriteXmlSchema(fileName: string, multipleTargetConverter: Converter_2<Type, System_Internal.String>): void;
     WriteXmlSchema(writer: TextWriter): void;
-    WriteXmlSchema(writer: TextWriter, multipleTargetConverter: Converter_2<Type, CLROf<string>>): void;
+    WriteXmlSchema(writer: TextWriter, multipleTargetConverter: Converter_2<Type, System_Internal.String>): void;
     WriteXmlSchema(writer: XmlWriter): void;
-    WriteXmlSchema(writer: XmlWriter, multipleTargetConverter: Converter_2<Type, CLROf<string>>): void;
+    WriteXmlSchema(writer: XmlWriter, multipleTargetConverter: Converter_2<Type, System_Internal.String>): void;
 }
 
 
@@ -2112,7 +2087,7 @@ export abstract class DataReaderExtensions$instance {
     static GetTextReader(reader: DbDataReader, name: string): TextReader;
     static GetValue(reader: DbDataReader, name: string): unknown;
     static IsDBNull(reader: DbDataReader, name: string): boolean;
-    static IsDBNullAsync(reader: DbDataReader, name: string, cancellationToken?: CancellationToken): Task_1<CLROf<boolean>>;
+    static IsDBNullAsync(reader: DbDataReader, name: string, cancellationToken?: CancellationToken): Task_1<System_Internal.Boolean>;
 }
 
 
@@ -2163,7 +2138,7 @@ export abstract class EnumerableRowCollectionExtensions$instance {
     static ThenBy<TRow, TKey>(source: OrderedEnumerableRowCollection_1<TRow>, keySelector: Func_2<TRow, TKey>): OrderedEnumerableRowCollection_1<TRow>;
     static ThenByDescending<TRow, TKey>(source: OrderedEnumerableRowCollection_1<TRow>, keySelector: Func_2<TRow, TKey>, comparer: IComparer_1<TKey>): OrderedEnumerableRowCollection_1<TRow>;
     static ThenByDescending<TRow, TKey>(source: OrderedEnumerableRowCollection_1<TRow>, keySelector: Func_2<TRow, TKey>): OrderedEnumerableRowCollection_1<TRow>;
-    static Where<TRow>(source: EnumerableRowCollection_1<TRow>, predicate: Func_2<TRow, CLROf<boolean>>): EnumerableRowCollection_1<TRow>;
+    static Where<TRow>(source: EnumerableRowCollection_1<TRow>, predicate: Func_2<TRow, System_Internal.Boolean>): EnumerableRowCollection_1<TRow>;
 }
 
 
@@ -2177,7 +2152,7 @@ export abstract class TypedTableBaseExtensions$instance {
     static OrderByDescending<TRow extends DataRow, TKey>(source: TypedTableBase_1<TRow>, keySelector: Func_2<TRow, TKey>, comparer: IComparer_1<TKey>): OrderedEnumerableRowCollection_1<TRow>;
     static OrderByDescending<TRow extends DataRow, TKey>(source: TypedTableBase_1<TRow>, keySelector: Func_2<TRow, TKey>): OrderedEnumerableRowCollection_1<TRow>;
     static Select<TRow extends DataRow, S>(source: TypedTableBase_1<TRow>, selector: Func_2<TRow, S>): EnumerableRowCollection_1<S>;
-    static Where<TRow extends DataRow>(source: TypedTableBase_1<TRow>, predicate: Func_2<TRow, CLROf<boolean>>): EnumerableRowCollection_1<TRow>;
+    static Where<TRow extends DataRow>(source: TypedTableBase_1<TRow>, predicate: Func_2<TRow, System_Internal.Boolean>): EnumerableRowCollection_1<TRow>;
 }
 
 

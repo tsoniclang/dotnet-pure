@@ -13,35 +13,10 @@ import type { IIdentity, IPrincipal } from "../../System.Security.Principal/inte
 import * as System_Internal from "../../System/internal/index.js";
 import type { Boolean as ClrBoolean, Func_1, Func_2, Int32, Object as ClrObject, Predicate_1, String as ClrString, StringComparison, Type, Void } from "../../System/internal/index.js";
 
-// CLROf<T> - Maps ergonomic primitives to their CLR types for generic constraints
-// This utility is used ONLY in generic type arguments to satisfy CLR interface constraints
-// Value positions (parameters, return types) use lowercase primitives for ergonomics
-export type CLROf<T> =
-    T extends sbyte ? System_Internal.SByte :
-    T extends short ? System_Internal.Int16 :
-    T extends int ? System_Internal.Int32 :
-    T extends long ? System_Internal.Int64 :
-    T extends int128 ? System_Internal.Int128 :
-    T extends nint ? System_Internal.IntPtr :
-    T extends byte ? System_Internal.Byte :
-    T extends ushort ? System_Internal.UInt16 :
-    T extends uint ? System_Internal.UInt32 :
-    T extends ulong ? System_Internal.UInt64 :
-    T extends uint128 ? System_Internal.UInt128 :
-    T extends nuint ? System_Internal.UIntPtr :
-    T extends half ? System_Internal.Half :
-    T extends float ? System_Internal.Single :
-    T extends double ? System_Internal.Double :
-    T extends decimal ? System_Internal.Decimal :
-    T extends char ? System_Internal.Char :
-    T extends boolean ? System_Internal.Boolean :
-    T extends string ? System_Internal.String :
-    T; // Identity fallback for non-primitive types
-
 export interface Claim$instance {
     readonly Issuer: string;
     readonly OriginalIssuer: string;
-    readonly Properties: IDictionary_2<CLROf<string>, CLROf<string>>;
+    readonly Properties: IDictionary_2<System_Internal.String, System_Internal.String>;
     readonly Subject: ClaimsIdentity;
     readonly Type: string;
     readonly Value: string;

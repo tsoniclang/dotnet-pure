@@ -3975,7 +3975,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Reflection.Metadata:System.Reflection.PortableExecutable.PEHeaders::GetContainingSectionIndex(System.Int32):System.Int32",
@@ -4364,7 +4370,17 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 4,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            },
+            {
+              "index": 3,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Reflection.Metadata:System.Reflection.PortableExecutable.PEReader::ReadEmbeddedPortablePdbDebugDirectoryData(System.Reflection.PortableExecutable.DebugDirectoryEntry):System.Reflection.Metadata.MetadataReaderProvider",

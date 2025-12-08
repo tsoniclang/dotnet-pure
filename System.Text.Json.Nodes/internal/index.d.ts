@@ -6,7 +6,7 @@
 import type { sbyte, byte, short, ushort, int, uint, long, ulong, int128, uint128, half, float, double, decimal, nint, nuint, char } from '@tsonic/types';
 
 // Import support types from @tsonic/types
-import type { ptr, ref } from "@tsonic/types";
+import type { ptr } from "@tsonic/types";
 
 // Import types from other namespaces
 import * as System_Collections_Generic_Internal from "../../System.Collections.Generic/internal/index.js";
@@ -20,31 +20,6 @@ import type { Task_1 } from "../../System.Threading.Tasks/internal/index.js";
 import type { CancellationToken } from "../../System.Threading/internal/index.js";
 import * as System_Internal from "../../System/internal/index.js";
 import type { Boolean as ClrBoolean, Byte, Char, DateTime, DateTimeOffset, Decimal, Double, Func_2, Guid, Int16, Int32, Int64, Nullable_1, Object as ClrObject, ReadOnlySpan_1, SByte, Single, String as ClrString, Type, UInt16, UInt32, UInt64, ValueType, Void } from "../../System/internal/index.js";
-
-// CLROf<T> - Maps ergonomic primitives to their CLR types for generic constraints
-// This utility is used ONLY in generic type arguments to satisfy CLR interface constraints
-// Value positions (parameters, return types) use lowercase primitives for ergonomics
-export type CLROf<T> =
-    T extends sbyte ? System_Internal.SByte :
-    T extends short ? System_Internal.Int16 :
-    T extends int ? System_Internal.Int32 :
-    T extends long ? System_Internal.Int64 :
-    T extends int128 ? System_Internal.Int128 :
-    T extends nint ? System_Internal.IntPtr :
-    T extends byte ? System_Internal.Byte :
-    T extends ushort ? System_Internal.UInt16 :
-    T extends uint ? System_Internal.UInt32 :
-    T extends ulong ? System_Internal.UInt64 :
-    T extends uint128 ? System_Internal.UInt128 :
-    T extends nuint ? System_Internal.UIntPtr :
-    T extends half ? System_Internal.Half :
-    T extends float ? System_Internal.Single :
-    T extends double ? System_Internal.Double :
-    T extends decimal ? System_Internal.Decimal :
-    T extends char ? System_Internal.Char :
-    T extends boolean ? System_Internal.Boolean :
-    T extends string ? System_Internal.String :
-    T; // Identity fallback for non-primitive types
 
 export interface JsonNodeOptions$instance {
     PropertyNameCaseInsensitive: boolean;
@@ -69,7 +44,7 @@ export interface JsonArray$instance extends JsonNode {
     IndexOf(item: JsonNode): int;
     Insert(index: int, item: JsonNode): void;
     Remove(item: JsonNode): boolean;
-    RemoveAll(match: Func_2<JsonNode, CLROf<boolean>>): int;
+    RemoveAll(match: Func_2<JsonNode, System_Internal.Boolean>): int;
     RemoveAt(index: int): void;
     RemoveRange(index: int, count: int): void;
     WriteTo(writer: Utf8JsonWriter, options?: JsonSerializerOptions): void;
@@ -123,9 +98,9 @@ export interface JsonNode$instance {
 export const JsonNode: {
     DeepEquals(node1: JsonNode, node2: JsonNode): boolean;
     Parse(utf8Json: Stream, nodeOptions?: Nullable_1<JsonNodeOptions>, documentOptions?: JsonDocumentOptions): JsonNode;
-    Parse(utf8Json: ReadOnlySpan_1<CLROf<byte>>, nodeOptions?: Nullable_1<JsonNodeOptions>, documentOptions?: JsonDocumentOptions): JsonNode;
+    Parse(utf8Json: ReadOnlySpan_1<System_Internal.Byte>, nodeOptions?: Nullable_1<JsonNodeOptions>, documentOptions?: JsonDocumentOptions): JsonNode;
     Parse(json: string, nodeOptions?: Nullable_1<JsonNodeOptions>, documentOptions?: JsonDocumentOptions): JsonNode;
-    Parse(reader: { value: ref<Utf8JsonReader> }, nodeOptions?: Nullable_1<JsonNodeOptions>): JsonNode;
+    Parse(reader: Utf8JsonReader, nodeOptions?: Nullable_1<JsonNodeOptions>): JsonNode;
     ParseAsync(utf8Json: Stream, nodeOptions?: Nullable_1<JsonNodeOptions>, documentOptions?: JsonDocumentOptions, cancellationToken?: CancellationToken): Task_1<JsonNode>;
 };
 
@@ -135,11 +110,11 @@ export type JsonNode = JsonNode$instance;
 export interface JsonObject$instance extends JsonNode {
     readonly Count: int;
     Add(propertyName: string, value: JsonNode): void;
-    Add(property: KeyValuePair_2<CLROf<string>, JsonNode>): void;
+    Add(property: KeyValuePair_2<System_Internal.String, JsonNode>): void;
     Clear(): void;
     ContainsKey(propertyName: string): boolean;
-    GetAt(index: int): KeyValuePair_2<CLROf<string>, JsonNode>;
-    GetEnumerator(): IEnumerator_1<KeyValuePair_2<CLROf<string>, JsonNode>>;
+    GetAt(index: int): KeyValuePair_2<System_Internal.String, JsonNode>;
+    GetEnumerator(): IEnumerator_1<KeyValuePair_2<System_Internal.String, JsonNode>>;
     IndexOf(propertyName: string): int;
     Insert(index: int, propertyName: string, value: JsonNode): void;
     Remove(propertyName: string): boolean;
@@ -147,25 +122,25 @@ export interface JsonObject$instance extends JsonNode {
     SetAt(index: int, propertyName: string, value: JsonNode): void;
     SetAt(index: int, value: JsonNode): void;
     TryAdd(propertyName: string, value: JsonNode): boolean;
-    TryAdd(propertyName: string, value: JsonNode, index: { value: ref<int> }): boolean;
-    TryGetPropertyValue(propertyName: string, jsonNode: { value: ref<JsonNode> }): boolean;
-    TryGetPropertyValue(propertyName: string, jsonNode: { value: ref<JsonNode> }, index: { value: ref<int> }): boolean;
+    TryAdd(propertyName: string, value: JsonNode, index: int): boolean;
+    TryGetPropertyValue(propertyName: string, jsonNode: JsonNode): boolean;
+    TryGetPropertyValue(propertyName: string, jsonNode: JsonNode, index: int): boolean;
     WriteTo(writer: Utf8JsonWriter, options?: JsonSerializerOptions): void;
 }
 
 
 export const JsonObject: {
     new(options: Nullable_1<JsonNodeOptions>): JsonObject$instance;
-    new(properties: IEnumerable_1<KeyValuePair_2<CLROf<string>, JsonNode>>, options: Nullable_1<JsonNodeOptions>): JsonObject$instance;
+    new(properties: IEnumerable_1<KeyValuePair_2<System_Internal.String, JsonNode>>, options: Nullable_1<JsonNodeOptions>): JsonObject$instance;
     Create(element: JsonElement, options?: Nullable_1<JsonNodeOptions>): JsonObject;
 };
 
 
 export interface __JsonObject$views {
-    As_ICollection_1(): System_Collections_Generic_Internal.ICollection_1$instance<KeyValuePair_2<CLROf<string>, JsonNode>>;
-    As_IDictionary_2(): System_Collections_Generic_Internal.IDictionary_2$instance<CLROf<string>, JsonNode>;
-    As_IEnumerable_1(): System_Collections_Generic_Internal.IEnumerable_1$instance<KeyValuePair_2<CLROf<string>, JsonNode>>;
-    As_IList_1(): System_Collections_Generic_Internal.IList_1$instance<KeyValuePair_2<CLROf<string>, JsonNode>>;
+    As_ICollection_1(): System_Collections_Generic_Internal.ICollection_1$instance<KeyValuePair_2<System_Internal.String, JsonNode>>;
+    As_IDictionary_2(): System_Collections_Generic_Internal.IDictionary_2$instance<System_Internal.String, JsonNode>;
+    As_IEnumerable_1(): System_Collections_Generic_Internal.IEnumerable_1$instance<KeyValuePair_2<System_Internal.String, JsonNode>>;
+    As_IList_1(): System_Collections_Generic_Internal.IList_1$instance<KeyValuePair_2<System_Internal.String, JsonNode>>;
     As_IEnumerable(): System_Collections_Internal.IEnumerable$instance;
 }
 
@@ -173,7 +148,7 @@ export type JsonObject = JsonObject$instance & __JsonObject$views;
 
 
 export interface JsonValue$instance extends JsonNode {
-    TryGetValue<T>(value: { value: ref<T> }): boolean;
+    TryGetValue<T>(value: T): boolean;
 }
 
 
@@ -189,23 +164,23 @@ export const JsonValue: {
     Create(value: short, options?: Nullable_1<JsonNodeOptions>): JsonValue;
     Create(value: int, options?: Nullable_1<JsonNodeOptions>): JsonValue;
     Create(value: long, options?: Nullable_1<JsonNodeOptions>): JsonValue;
-    Create(value: Nullable_1<CLROf<boolean>>, options?: Nullable_1<JsonNodeOptions>): JsonValue;
-    Create(value: Nullable_1<CLROf<byte>>, options?: Nullable_1<JsonNodeOptions>): JsonValue;
-    Create(value: Nullable_1<CLROf<char>>, options?: Nullable_1<JsonNodeOptions>): JsonValue;
+    Create(value: Nullable_1<System_Internal.Boolean>, options?: Nullable_1<JsonNodeOptions>): JsonValue;
+    Create(value: Nullable_1<System_Internal.Byte>, options?: Nullable_1<JsonNodeOptions>): JsonValue;
+    Create(value: Nullable_1<System_Internal.Char>, options?: Nullable_1<JsonNodeOptions>): JsonValue;
     Create(value: Nullable_1<DateTime>, options?: Nullable_1<JsonNodeOptions>): JsonValue;
     Create(value: Nullable_1<DateTimeOffset>, options?: Nullable_1<JsonNodeOptions>): JsonValue;
-    Create(value: Nullable_1<CLROf<decimal>>, options?: Nullable_1<JsonNodeOptions>): JsonValue;
-    Create(value: Nullable_1<CLROf<double>>, options?: Nullable_1<JsonNodeOptions>): JsonValue;
+    Create(value: Nullable_1<System_Internal.Decimal>, options?: Nullable_1<JsonNodeOptions>): JsonValue;
+    Create(value: Nullable_1<System_Internal.Double>, options?: Nullable_1<JsonNodeOptions>): JsonValue;
     Create(value: Nullable_1<Guid>, options?: Nullable_1<JsonNodeOptions>): JsonValue;
-    Create(value: Nullable_1<CLROf<short>>, options?: Nullable_1<JsonNodeOptions>): JsonValue;
-    Create(value: Nullable_1<CLROf<int>>, options?: Nullable_1<JsonNodeOptions>): JsonValue;
-    Create(value: Nullable_1<CLROf<long>>, options?: Nullable_1<JsonNodeOptions>): JsonValue;
-    Create(value: Nullable_1<CLROf<sbyte>>, options?: Nullable_1<JsonNodeOptions>): JsonValue;
-    Create(value: Nullable_1<CLROf<float>>, options?: Nullable_1<JsonNodeOptions>): JsonValue;
+    Create(value: Nullable_1<System_Internal.Int16>, options?: Nullable_1<JsonNodeOptions>): JsonValue;
+    Create(value: Nullable_1<System_Internal.Int32>, options?: Nullable_1<JsonNodeOptions>): JsonValue;
+    Create(value: Nullable_1<System_Internal.Int64>, options?: Nullable_1<JsonNodeOptions>): JsonValue;
+    Create(value: Nullable_1<System_Internal.SByte>, options?: Nullable_1<JsonNodeOptions>): JsonValue;
+    Create(value: Nullable_1<System_Internal.Single>, options?: Nullable_1<JsonNodeOptions>): JsonValue;
     Create(value: Nullable_1<JsonElement>, options?: Nullable_1<JsonNodeOptions>): JsonValue;
-    Create(value: Nullable_1<CLROf<ushort>>, options?: Nullable_1<JsonNodeOptions>): JsonValue;
-    Create(value: Nullable_1<CLROf<uint>>, options?: Nullable_1<JsonNodeOptions>): JsonValue;
-    Create(value: Nullable_1<CLROf<ulong>>, options?: Nullable_1<JsonNodeOptions>): JsonValue;
+    Create(value: Nullable_1<System_Internal.UInt16>, options?: Nullable_1<JsonNodeOptions>): JsonValue;
+    Create(value: Nullable_1<System_Internal.UInt32>, options?: Nullable_1<JsonNodeOptions>): JsonValue;
+    Create(value: Nullable_1<System_Internal.UInt64>, options?: Nullable_1<JsonNodeOptions>): JsonValue;
     Create(value: sbyte, options?: Nullable_1<JsonNodeOptions>): JsonValue;
     Create(value: float, options?: Nullable_1<JsonNodeOptions>): JsonValue;
     Create(value: string, options?: Nullable_1<JsonNodeOptions>): JsonValue;

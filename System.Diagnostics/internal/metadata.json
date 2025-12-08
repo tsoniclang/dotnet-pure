@@ -1367,7 +1367,17 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 4,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            },
+            {
+              "index": 3,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Diagnostics.DiagnosticSource:System.Diagnostics.DistributedContextPropagator\u002BPropagatorGetterCallback::BeginInvoke(System.Object,System.String,System.String\u0026,System.Collections.Generic.IEnumerable_1[[System.String,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]\u0026,System.AsyncCallback,System.Object):System.IAsyncResult",
@@ -1383,7 +1393,17 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 6,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            },
+            {
+              "index": 3,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Diagnostics.DiagnosticSource:System.Diagnostics.DistributedContextPropagator\u002BPropagatorGetterCallback::EndInvoke(System.String\u0026,System.Collections.Generic.IEnumerable_1[[System.String,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]\u0026,System.IAsyncResult):System.Void",
@@ -1399,7 +1419,17 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 3,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            },
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         }
       ],
       "properties": [],
@@ -1509,7 +1539,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 3,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Diagnostics.DiagnosticSource:System.Diagnostics.ExceptionRecorder::BeginInvoke(System.Diagnostics.Activity,System.Exception,System.Diagnostics.TagList\u0026,System.AsyncCallback,System.Object):System.IAsyncResult",
@@ -1525,7 +1561,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 5,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Diagnostics.DiagnosticSource:System.Diagnostics.ExceptionRecorder::EndInvoke(System.Diagnostics.TagList\u0026,System.IAsyncResult):System.Void",
@@ -1541,7 +1583,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            }
+          ]
         }
       ],
       "properties": [],
@@ -1580,7 +1628,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 1,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Diagnostics.DiagnosticSource:System.Diagnostics.SampleActivity\u00601::BeginInvoke(ActivityCreationOptions_1\u0026,System.AsyncCallback,System.Object):System.IAsyncResult",
@@ -1596,7 +1650,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 3,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Diagnostics.DiagnosticSource:System.Diagnostics.SampleActivity\u00601::EndInvoke(ActivityCreationOptions_1\u0026,System.IAsyncResult):System.Diagnostics.ActivitySamplingResult",
@@ -1612,7 +1672,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "ref"
+            }
+          ]
         }
       ],
       "properties": [],
@@ -1763,7 +1829,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 4,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 3,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Diagnostics.DiagnosticSource:System.Diagnostics.ActivityContext::TryParse(System.String,System.String,System.Diagnostics.ActivityContext\u0026):System.Boolean",
@@ -1779,7 +1851,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 3,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Diagnostics.DiagnosticSource:System.Diagnostics.ActivityContext::Parse(System.String,System.String):System.Diagnostics.ActivityContext",
@@ -3041,7 +3119,13 @@
         {
           "normalizedSignature": "constructor|(System.Int32,System.Int32,System.Boolean,System.Boolean\u0026):void|static=false",
           "isStatic": false,
-          "parameterCount": 4
+          "parameterCount": 4,
+          "parameterModifiers": [
+            {
+              "index": 3,
+              "modifier": "out"
+            }
+          ]
         }
       ]
     },
@@ -3224,7 +3308,13 @@
         {
           "normalizedSignature": "constructor|(System.Int32,System.Int32,System.Boolean,System.Boolean\u0026):void|static=false",
           "isStatic": false,
-          "parameterCount": 4
+          "parameterCount": 4,
+          "parameterModifiers": [
+            {
+              "index": 3,
+              "modifier": "out"
+            }
+          ]
         }
       ]
     },
@@ -4023,7 +4113,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 3,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "in"
+            }
+          ]
         },
         {
           "stableId": "System.Diagnostics.DiagnosticSource:System.Diagnostics.Activity::AddLink(System.Diagnostics.ActivityLink):System.Diagnostics.Activity",
@@ -5426,7 +5522,13 @@
           "isSealed": true,
           "arity": 0,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Collections.Generic.IDictionary\u00602::ContainsKey(TKey):System.Boolean",
@@ -5477,7 +5579,13 @@
           "arity": 0,
           "parameterCount": 2,
           "sourceInterface": "System.Collections.Generic.IDictionary\u00602",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Collections.Generic.ICollection\u00601::Add(T):System.Void",
@@ -7707,7 +7815,17 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 4,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            },
+            {
+              "index": 3,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Diagnostics.DiagnosticSource:System.Diagnostics.DistributedContextPropagator::ExtractBaggage(System.Object,System.Diagnostics.DistributedContextPropagator\u002BPropagatorGetterCallback):System.Collections.Generic.IEnumerable_1[[System.Collections.Generic.KeyValuePair_2[[System.String,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e],[System.String,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]",
@@ -15066,7 +15184,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Diagnostics.Debug::Assert(System.Boolean,System.String,System.String):System.Void",
@@ -15098,7 +15222,17 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 3,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "ref"
+            },
+            {
+              "index": 2,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Diagnostics.Debug::Assert(System.Boolean,System.String,System.String,System.Object[]):System.Void",
@@ -15322,7 +15456,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Diagnostics.Debug::WriteIf(System.Boolean,System.Object):System.Void",
@@ -15370,7 +15510,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 3,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Diagnostics.Debug::WriteIf(System.Boolean,System.Object,System.String):System.Void",
@@ -15450,7 +15596,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "ref"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Diagnostics.Debug::WriteLineIf(System.Boolean,System.String,System.String):System.Void",
@@ -15482,7 +15634,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 3,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "ref"
+            }
+          ]
         }
       ],
       "properties": [

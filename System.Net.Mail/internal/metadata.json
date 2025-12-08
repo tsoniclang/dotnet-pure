@@ -3236,7 +3236,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Net.Mail:System.Net.Mail.MailAddress::TryCreate(System.String,System.String,System.Net.Mail.MailAddress\u0026):System.Boolean",
@@ -3252,7 +3258,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 3,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Net.Mail:System.Net.Mail.MailAddress::TryCreate(System.String,System.String,System.Text.Encoding,System.Net.Mail.MailAddress\u0026):System.Boolean",
@@ -3268,7 +3280,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 4,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 3,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Net.Mail:System.Net.Mail.MailAddress::ToString():System.String",

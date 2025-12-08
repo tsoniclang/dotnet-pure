@@ -6,164 +6,139 @@
 import type { sbyte, byte, short, ushort, int, uint, long, ulong, int128, uint128, half, float, double, decimal, nint, nuint, char } from '@tsonic/types';
 
 // Import support types from @tsonic/types
-import type { ptr, ref } from "@tsonic/types";
+import type { ptr } from "@tsonic/types";
 
 // Import types from other namespaces
 import * as System_Internal from "../../System/internal/index.js";
 import type { Boolean as ClrBoolean, Byte, Double, Half, Int128, Int16, Int32, Int64, IntPtr, Object as ClrObject, ReadOnlySpan_1, SByte, Single, Span_1, String as ClrString, Type, UInt128, UInt16, UInt32, UInt64, UIntPtr, Void } from "../../System/internal/index.js";
 
-// CLROf<T> - Maps ergonomic primitives to their CLR types for generic constraints
-// This utility is used ONLY in generic type arguments to satisfy CLR interface constraints
-// Value positions (parameters, return types) use lowercase primitives for ergonomics
-export type CLROf<T> =
-    T extends sbyte ? System_Internal.SByte :
-    T extends short ? System_Internal.Int16 :
-    T extends int ? System_Internal.Int32 :
-    T extends long ? System_Internal.Int64 :
-    T extends int128 ? System_Internal.Int128 :
-    T extends nint ? System_Internal.IntPtr :
-    T extends byte ? System_Internal.Byte :
-    T extends ushort ? System_Internal.UInt16 :
-    T extends uint ? System_Internal.UInt32 :
-    T extends ulong ? System_Internal.UInt64 :
-    T extends uint128 ? System_Internal.UInt128 :
-    T extends nuint ? System_Internal.UIntPtr :
-    T extends half ? System_Internal.Half :
-    T extends float ? System_Internal.Single :
-    T extends double ? System_Internal.Double :
-    T extends decimal ? System_Internal.Decimal :
-    T extends char ? System_Internal.Char :
-    T extends boolean ? System_Internal.Boolean :
-    T extends string ? System_Internal.String :
-    T; // Identity fallback for non-primitive types
-
 export abstract class BinaryPrimitives$instance {
-    static ReadDoubleBigEndian(source: ReadOnlySpan_1<CLROf<byte>>): double;
-    static ReadDoubleLittleEndian(source: ReadOnlySpan_1<CLROf<byte>>): double;
-    static ReadHalfBigEndian(source: ReadOnlySpan_1<CLROf<byte>>): half;
-    static ReadHalfLittleEndian(source: ReadOnlySpan_1<CLROf<byte>>): half;
-    static ReadInt128BigEndian(source: ReadOnlySpan_1<CLROf<byte>>): int128;
-    static ReadInt128LittleEndian(source: ReadOnlySpan_1<CLROf<byte>>): int128;
-    static ReadInt16BigEndian(source: ReadOnlySpan_1<CLROf<byte>>): short;
-    static ReadInt16LittleEndian(source: ReadOnlySpan_1<CLROf<byte>>): short;
-    static ReadInt32BigEndian(source: ReadOnlySpan_1<CLROf<byte>>): int;
-    static ReadInt32LittleEndian(source: ReadOnlySpan_1<CLROf<byte>>): int;
-    static ReadInt64BigEndian(source: ReadOnlySpan_1<CLROf<byte>>): long;
-    static ReadInt64LittleEndian(source: ReadOnlySpan_1<CLROf<byte>>): long;
-    static ReadIntPtrBigEndian(source: ReadOnlySpan_1<CLROf<byte>>): nint;
-    static ReadIntPtrLittleEndian(source: ReadOnlySpan_1<CLROf<byte>>): nint;
-    static ReadSingleBigEndian(source: ReadOnlySpan_1<CLROf<byte>>): float;
-    static ReadSingleLittleEndian(source: ReadOnlySpan_1<CLROf<byte>>): float;
-    static ReadUInt128BigEndian(source: ReadOnlySpan_1<CLROf<byte>>): uint128;
-    static ReadUInt128LittleEndian(source: ReadOnlySpan_1<CLROf<byte>>): uint128;
-    static ReadUInt16BigEndian(source: ReadOnlySpan_1<CLROf<byte>>): ushort;
-    static ReadUInt16LittleEndian(source: ReadOnlySpan_1<CLROf<byte>>): ushort;
-    static ReadUInt32BigEndian(source: ReadOnlySpan_1<CLROf<byte>>): uint;
-    static ReadUInt32LittleEndian(source: ReadOnlySpan_1<CLROf<byte>>): uint;
-    static ReadUInt64BigEndian(source: ReadOnlySpan_1<CLROf<byte>>): ulong;
-    static ReadUInt64LittleEndian(source: ReadOnlySpan_1<CLROf<byte>>): ulong;
-    static ReadUIntPtrBigEndian(source: ReadOnlySpan_1<CLROf<byte>>): nuint;
-    static ReadUIntPtrLittleEndian(source: ReadOnlySpan_1<CLROf<byte>>): nuint;
+    static ReadDoubleBigEndian(source: ReadOnlySpan_1<System_Internal.Byte>): double;
+    static ReadDoubleLittleEndian(source: ReadOnlySpan_1<System_Internal.Byte>): double;
+    static ReadHalfBigEndian(source: ReadOnlySpan_1<System_Internal.Byte>): half;
+    static ReadHalfLittleEndian(source: ReadOnlySpan_1<System_Internal.Byte>): half;
+    static ReadInt128BigEndian(source: ReadOnlySpan_1<System_Internal.Byte>): int128;
+    static ReadInt128LittleEndian(source: ReadOnlySpan_1<System_Internal.Byte>): int128;
+    static ReadInt16BigEndian(source: ReadOnlySpan_1<System_Internal.Byte>): short;
+    static ReadInt16LittleEndian(source: ReadOnlySpan_1<System_Internal.Byte>): short;
+    static ReadInt32BigEndian(source: ReadOnlySpan_1<System_Internal.Byte>): int;
+    static ReadInt32LittleEndian(source: ReadOnlySpan_1<System_Internal.Byte>): int;
+    static ReadInt64BigEndian(source: ReadOnlySpan_1<System_Internal.Byte>): long;
+    static ReadInt64LittleEndian(source: ReadOnlySpan_1<System_Internal.Byte>): long;
+    static ReadIntPtrBigEndian(source: ReadOnlySpan_1<System_Internal.Byte>): nint;
+    static ReadIntPtrLittleEndian(source: ReadOnlySpan_1<System_Internal.Byte>): nint;
+    static ReadSingleBigEndian(source: ReadOnlySpan_1<System_Internal.Byte>): float;
+    static ReadSingleLittleEndian(source: ReadOnlySpan_1<System_Internal.Byte>): float;
+    static ReadUInt128BigEndian(source: ReadOnlySpan_1<System_Internal.Byte>): uint128;
+    static ReadUInt128LittleEndian(source: ReadOnlySpan_1<System_Internal.Byte>): uint128;
+    static ReadUInt16BigEndian(source: ReadOnlySpan_1<System_Internal.Byte>): ushort;
+    static ReadUInt16LittleEndian(source: ReadOnlySpan_1<System_Internal.Byte>): ushort;
+    static ReadUInt32BigEndian(source: ReadOnlySpan_1<System_Internal.Byte>): uint;
+    static ReadUInt32LittleEndian(source: ReadOnlySpan_1<System_Internal.Byte>): uint;
+    static ReadUInt64BigEndian(source: ReadOnlySpan_1<System_Internal.Byte>): ulong;
+    static ReadUInt64LittleEndian(source: ReadOnlySpan_1<System_Internal.Byte>): ulong;
+    static ReadUIntPtrBigEndian(source: ReadOnlySpan_1<System_Internal.Byte>): nuint;
+    static ReadUIntPtrLittleEndian(source: ReadOnlySpan_1<System_Internal.Byte>): nuint;
     static ReverseEndianness(value: byte): byte;
     static ReverseEndianness(value: int128): int128;
     static ReverseEndianness(value: short): short;
     static ReverseEndianness(value: int): int;
     static ReverseEndianness(value: long): long;
     static ReverseEndianness(value: nint): nint;
-    static ReverseEndianness(source: ReadOnlySpan_1<CLROf<int128>>, destination: Span_1<CLROf<int128>>): void;
-    static ReverseEndianness(source: ReadOnlySpan_1<CLROf<short>>, destination: Span_1<CLROf<short>>): void;
-    static ReverseEndianness(source: ReadOnlySpan_1<CLROf<int>>, destination: Span_1<CLROf<int>>): void;
-    static ReverseEndianness(source: ReadOnlySpan_1<CLROf<long>>, destination: Span_1<CLROf<long>>): void;
-    static ReverseEndianness(source: ReadOnlySpan_1<CLROf<nint>>, destination: Span_1<CLROf<nint>>): void;
-    static ReverseEndianness(source: ReadOnlySpan_1<CLROf<uint128>>, destination: Span_1<CLROf<uint128>>): void;
-    static ReverseEndianness(source: ReadOnlySpan_1<CLROf<ushort>>, destination: Span_1<CLROf<ushort>>): void;
-    static ReverseEndianness(source: ReadOnlySpan_1<CLROf<uint>>, destination: Span_1<CLROf<uint>>): void;
-    static ReverseEndianness(source: ReadOnlySpan_1<CLROf<ulong>>, destination: Span_1<CLROf<ulong>>): void;
-    static ReverseEndianness(source: ReadOnlySpan_1<CLROf<nuint>>, destination: Span_1<CLROf<nuint>>): void;
+    static ReverseEndianness(source: ReadOnlySpan_1<System_Internal.Int128>, destination: Span_1<System_Internal.Int128>): void;
+    static ReverseEndianness(source: ReadOnlySpan_1<System_Internal.Int16>, destination: Span_1<System_Internal.Int16>): void;
+    static ReverseEndianness(source: ReadOnlySpan_1<System_Internal.Int32>, destination: Span_1<System_Internal.Int32>): void;
+    static ReverseEndianness(source: ReadOnlySpan_1<System_Internal.Int64>, destination: Span_1<System_Internal.Int64>): void;
+    static ReverseEndianness(source: ReadOnlySpan_1<System_Internal.IntPtr>, destination: Span_1<System_Internal.IntPtr>): void;
+    static ReverseEndianness(source: ReadOnlySpan_1<System_Internal.UInt128>, destination: Span_1<System_Internal.UInt128>): void;
+    static ReverseEndianness(source: ReadOnlySpan_1<System_Internal.UInt16>, destination: Span_1<System_Internal.UInt16>): void;
+    static ReverseEndianness(source: ReadOnlySpan_1<System_Internal.UInt32>, destination: Span_1<System_Internal.UInt32>): void;
+    static ReverseEndianness(source: ReadOnlySpan_1<System_Internal.UInt64>, destination: Span_1<System_Internal.UInt64>): void;
+    static ReverseEndianness(source: ReadOnlySpan_1<System_Internal.UIntPtr>, destination: Span_1<System_Internal.UIntPtr>): void;
     static ReverseEndianness(value: sbyte): sbyte;
     static ReverseEndianness(value: uint128): uint128;
     static ReverseEndianness(value: ushort): ushort;
     static ReverseEndianness(value: uint): uint;
     static ReverseEndianness(value: ulong): ulong;
     static ReverseEndianness(value: nuint): nuint;
-    static TryReadDoubleBigEndian(source: ReadOnlySpan_1<CLROf<byte>>, value: { value: ref<double> }): boolean;
-    static TryReadDoubleLittleEndian(source: ReadOnlySpan_1<CLROf<byte>>, value: { value: ref<double> }): boolean;
-    static TryReadHalfBigEndian(source: ReadOnlySpan_1<CLROf<byte>>, value: { value: ref<half> }): boolean;
-    static TryReadHalfLittleEndian(source: ReadOnlySpan_1<CLROf<byte>>, value: { value: ref<half> }): boolean;
-    static TryReadInt128BigEndian(source: ReadOnlySpan_1<CLROf<byte>>, value: { value: ref<int128> }): boolean;
-    static TryReadInt128LittleEndian(source: ReadOnlySpan_1<CLROf<byte>>, value: { value: ref<int128> }): boolean;
-    static TryReadInt16BigEndian(source: ReadOnlySpan_1<CLROf<byte>>, value: { value: ref<short> }): boolean;
-    static TryReadInt16LittleEndian(source: ReadOnlySpan_1<CLROf<byte>>, value: { value: ref<short> }): boolean;
-    static TryReadInt32BigEndian(source: ReadOnlySpan_1<CLROf<byte>>, value: { value: ref<int> }): boolean;
-    static TryReadInt32LittleEndian(source: ReadOnlySpan_1<CLROf<byte>>, value: { value: ref<int> }): boolean;
-    static TryReadInt64BigEndian(source: ReadOnlySpan_1<CLROf<byte>>, value: { value: ref<long> }): boolean;
-    static TryReadInt64LittleEndian(source: ReadOnlySpan_1<CLROf<byte>>, value: { value: ref<long> }): boolean;
-    static TryReadIntPtrBigEndian(source: ReadOnlySpan_1<CLROf<byte>>, value: { value: ref<nint> }): boolean;
-    static TryReadIntPtrLittleEndian(source: ReadOnlySpan_1<CLROf<byte>>, value: { value: ref<nint> }): boolean;
-    static TryReadSingleBigEndian(source: ReadOnlySpan_1<CLROf<byte>>, value: { value: ref<float> }): boolean;
-    static TryReadSingleLittleEndian(source: ReadOnlySpan_1<CLROf<byte>>, value: { value: ref<float> }): boolean;
-    static TryReadUInt128BigEndian(source: ReadOnlySpan_1<CLROf<byte>>, value: { value: ref<uint128> }): boolean;
-    static TryReadUInt128LittleEndian(source: ReadOnlySpan_1<CLROf<byte>>, value: { value: ref<uint128> }): boolean;
-    static TryReadUInt16BigEndian(source: ReadOnlySpan_1<CLROf<byte>>, value: { value: ref<ushort> }): boolean;
-    static TryReadUInt16LittleEndian(source: ReadOnlySpan_1<CLROf<byte>>, value: { value: ref<ushort> }): boolean;
-    static TryReadUInt32BigEndian(source: ReadOnlySpan_1<CLROf<byte>>, value: { value: ref<uint> }): boolean;
-    static TryReadUInt32LittleEndian(source: ReadOnlySpan_1<CLROf<byte>>, value: { value: ref<uint> }): boolean;
-    static TryReadUInt64BigEndian(source: ReadOnlySpan_1<CLROf<byte>>, value: { value: ref<ulong> }): boolean;
-    static TryReadUInt64LittleEndian(source: ReadOnlySpan_1<CLROf<byte>>, value: { value: ref<ulong> }): boolean;
-    static TryReadUIntPtrBigEndian(source: ReadOnlySpan_1<CLROf<byte>>, value: { value: ref<nuint> }): boolean;
-    static TryReadUIntPtrLittleEndian(source: ReadOnlySpan_1<CLROf<byte>>, value: { value: ref<nuint> }): boolean;
-    static TryWriteDoubleBigEndian(destination: Span_1<CLROf<byte>>, value: double): boolean;
-    static TryWriteDoubleLittleEndian(destination: Span_1<CLROf<byte>>, value: double): boolean;
-    static TryWriteHalfBigEndian(destination: Span_1<CLROf<byte>>, value: half): boolean;
-    static TryWriteHalfLittleEndian(destination: Span_1<CLROf<byte>>, value: half): boolean;
-    static TryWriteInt128BigEndian(destination: Span_1<CLROf<byte>>, value: int128): boolean;
-    static TryWriteInt128LittleEndian(destination: Span_1<CLROf<byte>>, value: int128): boolean;
-    static TryWriteInt16BigEndian(destination: Span_1<CLROf<byte>>, value: short): boolean;
-    static TryWriteInt16LittleEndian(destination: Span_1<CLROf<byte>>, value: short): boolean;
-    static TryWriteInt32BigEndian(destination: Span_1<CLROf<byte>>, value: int): boolean;
-    static TryWriteInt32LittleEndian(destination: Span_1<CLROf<byte>>, value: int): boolean;
-    static TryWriteInt64BigEndian(destination: Span_1<CLROf<byte>>, value: long): boolean;
-    static TryWriteInt64LittleEndian(destination: Span_1<CLROf<byte>>, value: long): boolean;
-    static TryWriteIntPtrBigEndian(destination: Span_1<CLROf<byte>>, value: nint): boolean;
-    static TryWriteIntPtrLittleEndian(destination: Span_1<CLROf<byte>>, value: nint): boolean;
-    static TryWriteSingleBigEndian(destination: Span_1<CLROf<byte>>, value: float): boolean;
-    static TryWriteSingleLittleEndian(destination: Span_1<CLROf<byte>>, value: float): boolean;
-    static TryWriteUInt128BigEndian(destination: Span_1<CLROf<byte>>, value: uint128): boolean;
-    static TryWriteUInt128LittleEndian(destination: Span_1<CLROf<byte>>, value: uint128): boolean;
-    static TryWriteUInt16BigEndian(destination: Span_1<CLROf<byte>>, value: ushort): boolean;
-    static TryWriteUInt16LittleEndian(destination: Span_1<CLROf<byte>>, value: ushort): boolean;
-    static TryWriteUInt32BigEndian(destination: Span_1<CLROf<byte>>, value: uint): boolean;
-    static TryWriteUInt32LittleEndian(destination: Span_1<CLROf<byte>>, value: uint): boolean;
-    static TryWriteUInt64BigEndian(destination: Span_1<CLROf<byte>>, value: ulong): boolean;
-    static TryWriteUInt64LittleEndian(destination: Span_1<CLROf<byte>>, value: ulong): boolean;
-    static TryWriteUIntPtrBigEndian(destination: Span_1<CLROf<byte>>, value: nuint): boolean;
-    static TryWriteUIntPtrLittleEndian(destination: Span_1<CLROf<byte>>, value: nuint): boolean;
-    static WriteDoubleBigEndian(destination: Span_1<CLROf<byte>>, value: double): void;
-    static WriteDoubleLittleEndian(destination: Span_1<CLROf<byte>>, value: double): void;
-    static WriteHalfBigEndian(destination: Span_1<CLROf<byte>>, value: half): void;
-    static WriteHalfLittleEndian(destination: Span_1<CLROf<byte>>, value: half): void;
-    static WriteInt128BigEndian(destination: Span_1<CLROf<byte>>, value: int128): void;
-    static WriteInt128LittleEndian(destination: Span_1<CLROf<byte>>, value: int128): void;
-    static WriteInt16BigEndian(destination: Span_1<CLROf<byte>>, value: short): void;
-    static WriteInt16LittleEndian(destination: Span_1<CLROf<byte>>, value: short): void;
-    static WriteInt32BigEndian(destination: Span_1<CLROf<byte>>, value: int): void;
-    static WriteInt32LittleEndian(destination: Span_1<CLROf<byte>>, value: int): void;
-    static WriteInt64BigEndian(destination: Span_1<CLROf<byte>>, value: long): void;
-    static WriteInt64LittleEndian(destination: Span_1<CLROf<byte>>, value: long): void;
-    static WriteIntPtrBigEndian(destination: Span_1<CLROf<byte>>, value: nint): void;
-    static WriteIntPtrLittleEndian(destination: Span_1<CLROf<byte>>, value: nint): void;
-    static WriteSingleBigEndian(destination: Span_1<CLROf<byte>>, value: float): void;
-    static WriteSingleLittleEndian(destination: Span_1<CLROf<byte>>, value: float): void;
-    static WriteUInt128BigEndian(destination: Span_1<CLROf<byte>>, value: uint128): void;
-    static WriteUInt128LittleEndian(destination: Span_1<CLROf<byte>>, value: uint128): void;
-    static WriteUInt16BigEndian(destination: Span_1<CLROf<byte>>, value: ushort): void;
-    static WriteUInt16LittleEndian(destination: Span_1<CLROf<byte>>, value: ushort): void;
-    static WriteUInt32BigEndian(destination: Span_1<CLROf<byte>>, value: uint): void;
-    static WriteUInt32LittleEndian(destination: Span_1<CLROf<byte>>, value: uint): void;
-    static WriteUInt64BigEndian(destination: Span_1<CLROf<byte>>, value: ulong): void;
-    static WriteUInt64LittleEndian(destination: Span_1<CLROf<byte>>, value: ulong): void;
-    static WriteUIntPtrBigEndian(destination: Span_1<CLROf<byte>>, value: nuint): void;
-    static WriteUIntPtrLittleEndian(destination: Span_1<CLROf<byte>>, value: nuint): void;
+    static TryReadDoubleBigEndian(source: ReadOnlySpan_1<System_Internal.Byte>, value: double): boolean;
+    static TryReadDoubleLittleEndian(source: ReadOnlySpan_1<System_Internal.Byte>, value: double): boolean;
+    static TryReadHalfBigEndian(source: ReadOnlySpan_1<System_Internal.Byte>, value: half): boolean;
+    static TryReadHalfLittleEndian(source: ReadOnlySpan_1<System_Internal.Byte>, value: half): boolean;
+    static TryReadInt128BigEndian(source: ReadOnlySpan_1<System_Internal.Byte>, value: int128): boolean;
+    static TryReadInt128LittleEndian(source: ReadOnlySpan_1<System_Internal.Byte>, value: int128): boolean;
+    static TryReadInt16BigEndian(source: ReadOnlySpan_1<System_Internal.Byte>, value: short): boolean;
+    static TryReadInt16LittleEndian(source: ReadOnlySpan_1<System_Internal.Byte>, value: short): boolean;
+    static TryReadInt32BigEndian(source: ReadOnlySpan_1<System_Internal.Byte>, value: int): boolean;
+    static TryReadInt32LittleEndian(source: ReadOnlySpan_1<System_Internal.Byte>, value: int): boolean;
+    static TryReadInt64BigEndian(source: ReadOnlySpan_1<System_Internal.Byte>, value: long): boolean;
+    static TryReadInt64LittleEndian(source: ReadOnlySpan_1<System_Internal.Byte>, value: long): boolean;
+    static TryReadIntPtrBigEndian(source: ReadOnlySpan_1<System_Internal.Byte>, value: nint): boolean;
+    static TryReadIntPtrLittleEndian(source: ReadOnlySpan_1<System_Internal.Byte>, value: nint): boolean;
+    static TryReadSingleBigEndian(source: ReadOnlySpan_1<System_Internal.Byte>, value: float): boolean;
+    static TryReadSingleLittleEndian(source: ReadOnlySpan_1<System_Internal.Byte>, value: float): boolean;
+    static TryReadUInt128BigEndian(source: ReadOnlySpan_1<System_Internal.Byte>, value: uint128): boolean;
+    static TryReadUInt128LittleEndian(source: ReadOnlySpan_1<System_Internal.Byte>, value: uint128): boolean;
+    static TryReadUInt16BigEndian(source: ReadOnlySpan_1<System_Internal.Byte>, value: ushort): boolean;
+    static TryReadUInt16LittleEndian(source: ReadOnlySpan_1<System_Internal.Byte>, value: ushort): boolean;
+    static TryReadUInt32BigEndian(source: ReadOnlySpan_1<System_Internal.Byte>, value: uint): boolean;
+    static TryReadUInt32LittleEndian(source: ReadOnlySpan_1<System_Internal.Byte>, value: uint): boolean;
+    static TryReadUInt64BigEndian(source: ReadOnlySpan_1<System_Internal.Byte>, value: ulong): boolean;
+    static TryReadUInt64LittleEndian(source: ReadOnlySpan_1<System_Internal.Byte>, value: ulong): boolean;
+    static TryReadUIntPtrBigEndian(source: ReadOnlySpan_1<System_Internal.Byte>, value: nuint): boolean;
+    static TryReadUIntPtrLittleEndian(source: ReadOnlySpan_1<System_Internal.Byte>, value: nuint): boolean;
+    static TryWriteDoubleBigEndian(destination: Span_1<System_Internal.Byte>, value: double): boolean;
+    static TryWriteDoubleLittleEndian(destination: Span_1<System_Internal.Byte>, value: double): boolean;
+    static TryWriteHalfBigEndian(destination: Span_1<System_Internal.Byte>, value: half): boolean;
+    static TryWriteHalfLittleEndian(destination: Span_1<System_Internal.Byte>, value: half): boolean;
+    static TryWriteInt128BigEndian(destination: Span_1<System_Internal.Byte>, value: int128): boolean;
+    static TryWriteInt128LittleEndian(destination: Span_1<System_Internal.Byte>, value: int128): boolean;
+    static TryWriteInt16BigEndian(destination: Span_1<System_Internal.Byte>, value: short): boolean;
+    static TryWriteInt16LittleEndian(destination: Span_1<System_Internal.Byte>, value: short): boolean;
+    static TryWriteInt32BigEndian(destination: Span_1<System_Internal.Byte>, value: int): boolean;
+    static TryWriteInt32LittleEndian(destination: Span_1<System_Internal.Byte>, value: int): boolean;
+    static TryWriteInt64BigEndian(destination: Span_1<System_Internal.Byte>, value: long): boolean;
+    static TryWriteInt64LittleEndian(destination: Span_1<System_Internal.Byte>, value: long): boolean;
+    static TryWriteIntPtrBigEndian(destination: Span_1<System_Internal.Byte>, value: nint): boolean;
+    static TryWriteIntPtrLittleEndian(destination: Span_1<System_Internal.Byte>, value: nint): boolean;
+    static TryWriteSingleBigEndian(destination: Span_1<System_Internal.Byte>, value: float): boolean;
+    static TryWriteSingleLittleEndian(destination: Span_1<System_Internal.Byte>, value: float): boolean;
+    static TryWriteUInt128BigEndian(destination: Span_1<System_Internal.Byte>, value: uint128): boolean;
+    static TryWriteUInt128LittleEndian(destination: Span_1<System_Internal.Byte>, value: uint128): boolean;
+    static TryWriteUInt16BigEndian(destination: Span_1<System_Internal.Byte>, value: ushort): boolean;
+    static TryWriteUInt16LittleEndian(destination: Span_1<System_Internal.Byte>, value: ushort): boolean;
+    static TryWriteUInt32BigEndian(destination: Span_1<System_Internal.Byte>, value: uint): boolean;
+    static TryWriteUInt32LittleEndian(destination: Span_1<System_Internal.Byte>, value: uint): boolean;
+    static TryWriteUInt64BigEndian(destination: Span_1<System_Internal.Byte>, value: ulong): boolean;
+    static TryWriteUInt64LittleEndian(destination: Span_1<System_Internal.Byte>, value: ulong): boolean;
+    static TryWriteUIntPtrBigEndian(destination: Span_1<System_Internal.Byte>, value: nuint): boolean;
+    static TryWriteUIntPtrLittleEndian(destination: Span_1<System_Internal.Byte>, value: nuint): boolean;
+    static WriteDoubleBigEndian(destination: Span_1<System_Internal.Byte>, value: double): void;
+    static WriteDoubleLittleEndian(destination: Span_1<System_Internal.Byte>, value: double): void;
+    static WriteHalfBigEndian(destination: Span_1<System_Internal.Byte>, value: half): void;
+    static WriteHalfLittleEndian(destination: Span_1<System_Internal.Byte>, value: half): void;
+    static WriteInt128BigEndian(destination: Span_1<System_Internal.Byte>, value: int128): void;
+    static WriteInt128LittleEndian(destination: Span_1<System_Internal.Byte>, value: int128): void;
+    static WriteInt16BigEndian(destination: Span_1<System_Internal.Byte>, value: short): void;
+    static WriteInt16LittleEndian(destination: Span_1<System_Internal.Byte>, value: short): void;
+    static WriteInt32BigEndian(destination: Span_1<System_Internal.Byte>, value: int): void;
+    static WriteInt32LittleEndian(destination: Span_1<System_Internal.Byte>, value: int): void;
+    static WriteInt64BigEndian(destination: Span_1<System_Internal.Byte>, value: long): void;
+    static WriteInt64LittleEndian(destination: Span_1<System_Internal.Byte>, value: long): void;
+    static WriteIntPtrBigEndian(destination: Span_1<System_Internal.Byte>, value: nint): void;
+    static WriteIntPtrLittleEndian(destination: Span_1<System_Internal.Byte>, value: nint): void;
+    static WriteSingleBigEndian(destination: Span_1<System_Internal.Byte>, value: float): void;
+    static WriteSingleLittleEndian(destination: Span_1<System_Internal.Byte>, value: float): void;
+    static WriteUInt128BigEndian(destination: Span_1<System_Internal.Byte>, value: uint128): void;
+    static WriteUInt128LittleEndian(destination: Span_1<System_Internal.Byte>, value: uint128): void;
+    static WriteUInt16BigEndian(destination: Span_1<System_Internal.Byte>, value: ushort): void;
+    static WriteUInt16LittleEndian(destination: Span_1<System_Internal.Byte>, value: ushort): void;
+    static WriteUInt32BigEndian(destination: Span_1<System_Internal.Byte>, value: uint): void;
+    static WriteUInt32LittleEndian(destination: Span_1<System_Internal.Byte>, value: uint): void;
+    static WriteUInt64BigEndian(destination: Span_1<System_Internal.Byte>, value: ulong): void;
+    static WriteUInt64LittleEndian(destination: Span_1<System_Internal.Byte>, value: ulong): void;
+    static WriteUIntPtrBigEndian(destination: Span_1<System_Internal.Byte>, value: nuint): void;
+    static WriteUIntPtrLittleEndian(destination: Span_1<System_Internal.Byte>, value: nuint): void;
 }
 
 

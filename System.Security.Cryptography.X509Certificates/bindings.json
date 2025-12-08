@@ -14234,7 +14234,13 @@
           "parameterCount": 5,
           "declaringClrType": "System.Security.Cryptography.X509Certificates.CertificateRequest",
           "declaringAssemblyName": "System.Security.Cryptography",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         }
       ],
       "properties": [
@@ -14919,7 +14925,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Security.Cryptography.X509Certificates.CertificateRevocationListBuilder",
           "declaringAssemblyName": "System.Security.Cryptography",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Security.Cryptography:System.Security.Cryptography.X509Certificates.CertificateRevocationListBuilder::Load(System.ReadOnlySpan_1[[System.Byte,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Numerics.BigInteger\u0026,System.Int32\u0026):System.Security.Cryptography.X509Certificates.CertificateRevocationListBuilder",
@@ -14933,7 +14945,17 @@
           "parameterCount": 3,
           "declaringClrType": "System.Security.Cryptography.X509Certificates.CertificateRevocationListBuilder",
           "declaringAssemblyName": "System.Security.Cryptography",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            },
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Security.Cryptography:System.Security.Cryptography.X509Certificates.CertificateRevocationListBuilder::LoadPem(System.String,System.Numerics.BigInteger\u0026):System.Security.Cryptography.X509Certificates.CertificateRevocationListBuilder",
@@ -14947,7 +14969,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Security.Cryptography.X509Certificates.CertificateRevocationListBuilder",
           "declaringAssemblyName": "System.Security.Cryptography",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Security.Cryptography:System.Security.Cryptography.X509Certificates.CertificateRevocationListBuilder::LoadPem(System.ReadOnlySpan_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Numerics.BigInteger\u0026):System.Security.Cryptography.X509Certificates.CertificateRevocationListBuilder",
@@ -14961,7 +14989,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Security.Cryptography.X509Certificates.CertificateRevocationListBuilder",
           "declaringAssemblyName": "System.Security.Cryptography",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         }
       ],
       "properties": [],
@@ -15932,7 +15966,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Security.Cryptography.X509Certificates.PublicKey",
           "declaringAssemblyName": "System.Security.Cryptography",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Security.Cryptography:System.Security.Cryptography.X509Certificates.PublicKey::ExportSubjectPublicKeyInfo():System.Byte[]",
@@ -15960,7 +16000,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Security.Cryptography.X509Certificates.PublicKey",
           "declaringAssemblyName": "System.Security.Cryptography",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Security.Cryptography:System.Security.Cryptography.X509Certificates.PublicKey::GetRSAPublicKey():System.Security.Cryptography.RSA",
@@ -18908,7 +18954,13 @@
           "parameterCount": 3,
           "declaringClrType": "System.Security.Cryptography.X509Certificates.X509Certificate",
           "declaringAssemblyName": "System.Security.Cryptography",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Security.Cryptography:System.Security.Cryptography.X509Certificates.X509Certificate::GetCertHashString():System.String",
@@ -20623,7 +20675,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Security.Cryptography.X509Certificates.X509Certificate2",
           "declaringAssemblyName": "System.Security.Cryptography",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Security.Cryptography:System.Security.Cryptography.X509Certificates.X509Certificate2::MatchesHostname(System.String,System.Boolean,System.Boolean):System.Boolean",
@@ -22554,7 +22612,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Security.Cryptography.X509Certificates.X509Certificate2Collection",
           "declaringAssemblyName": "System.Security.Cryptography",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Security.Cryptography:System.Security.Cryptography.X509Certificates.X509Certificate2Collection::ExportCertificatePems():System.String",
@@ -22582,7 +22646,13 @@
           "parameterCount": 2,
           "declaringClrType": "System.Security.Cryptography.X509Certificates.X509Certificate2Collection",
           "declaringAssemblyName": "System.Security.Cryptography",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Security.Cryptography:System.Security.Cryptography.X509Certificates.X509Certificate2Collection::FindByThumbprint(System.Security.Cryptography.HashAlgorithmName,System.String):System.Security.Cryptography.X509Certificates.X509Certificate2Collection",

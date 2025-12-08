@@ -199,7 +199,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 1,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         }
       ],
       "properties": [],
@@ -232,7 +238,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 1,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         }
       ],
       "properties": [],
@@ -281,7 +293,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Runtime.InteropServices:System.Runtime.InteropServices.Marshalling.IIUnknownCacheStrategy::TrySetTableInfo(System.RuntimeTypeHandle,System.Runtime.InteropServices.Marshalling.IIUnknownCacheStrategy\u002BTableInfo):System.Boolean",
@@ -520,7 +538,17 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 3,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "in"
+            },
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Runtime.InteropServices:System.Runtime.InteropServices.Marshalling.IIUnknownStrategy::Release(System.Void*):System.Int32",
@@ -2097,7 +2125,17 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            },
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         }
       ],
       "properties": [
@@ -2167,7 +2205,13 @@
           "isSealed": true,
           "arity": 0,
           "parameterCount": 1,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Runtime.InteropServices:System.Runtime.InteropServices.Marshalling.IComExposedDetails::GetComInterfaceEntries(System.Int32\u0026):System.Runtime.InteropServices.ComWrappers\u002BComInterfaceEntry*",
@@ -2184,7 +2228,13 @@
           "arity": 0,
           "parameterCount": 1,
           "sourceInterface": "System.Runtime.InteropServices.Marshalling.IComExposedDetails",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 0,
+              "modifier": "out"
+            }
+          ]
         }
       ],
       "properties": [],
@@ -2872,7 +2922,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.Marshalling.ArrayMarshaller\u00602::GetManagedValuesSource(T[]):ReadOnlySpan_1",
@@ -3328,7 +3384,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.Marshalling.PointerArrayMarshaller\u00602::GetManagedValuesSource(T*[]):System.ReadOnlySpan_1[[System.IntPtr,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]]",
@@ -3473,7 +3535,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.Marshalling.ReadOnlySpanMarshaller\u00602\u002BUnmanagedToManagedOut::GetManagedValuesSource(ReadOnlySpan_1):ReadOnlySpan_1",
@@ -3554,7 +3622,13 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 2,
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.Marshalling.SpanMarshaller\u00602::GetManagedValuesSource(Span_1):ReadOnlySpan_1",

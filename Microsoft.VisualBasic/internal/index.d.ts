@@ -6,38 +6,13 @@
 import type { sbyte, byte, short, ushort, int, uint, long, ulong, int128, uint128, half, float, double, decimal, nint, nuint, char } from '@tsonic/types';
 
 // Import support types from @tsonic/types
-import type { ptr, ref } from "@tsonic/types";
+import type { ptr } from "@tsonic/types";
 
 // Import types from other namespaces
 import * as System_Collections_Internal from "../../System.Collections/internal/index.js";
 import type { ICollection, IEnumerator, IList } from "../../System.Collections/internal/index.js";
 import * as System_Internal from "../../System/internal/index.js";
 import type { Array as ClrArray, Attribute, Boolean as ClrBoolean, Byte, Char, DateTime, Decimal, Double, Enum, Exception, IComparable, IConvertible, IFormatProvider, IFormattable, Int16, Int32, Int64, ISpanFormattable, Object as ClrObject, SByte, Single, String as ClrString, Type, TypeCode, UInt16, UInt32, UInt64, ValueType, Void } from "../../System/internal/index.js";
-
-// CLROf<T> - Maps ergonomic primitives to their CLR types for generic constraints
-// This utility is used ONLY in generic type arguments to satisfy CLR interface constraints
-// Value positions (parameters, return types) use lowercase primitives for ergonomics
-export type CLROf<T> =
-    T extends sbyte ? System_Internal.SByte :
-    T extends short ? System_Internal.Int16 :
-    T extends int ? System_Internal.Int32 :
-    T extends long ? System_Internal.Int64 :
-    T extends int128 ? System_Internal.Int128 :
-    T extends nint ? System_Internal.IntPtr :
-    T extends byte ? System_Internal.Byte :
-    T extends ushort ? System_Internal.UInt16 :
-    T extends uint ? System_Internal.UInt32 :
-    T extends ulong ? System_Internal.UInt64 :
-    T extends uint128 ? System_Internal.UInt128 :
-    T extends nuint ? System_Internal.UIntPtr :
-    T extends half ? System_Internal.Half :
-    T extends float ? System_Internal.Single :
-    T extends double ? System_Internal.Double :
-    T extends decimal ? System_Internal.Decimal :
-    T extends char ? System_Internal.Char :
-    T extends boolean ? System_Internal.Boolean :
-    T extends string ? System_Internal.String :
-    T; // Identity fallback for non-primitive types
 
 export enum AppWinStyle {
     Hide = 0,
@@ -559,20 +534,20 @@ export const FileSystem: {
     FileClose(...FileNumbers: int[]): void;
     FileCopy(Source: string, Destination: string): void;
     FileDateTime(PathName: string): DateTime;
-    FileGet(FileNumber: int, Value: { value: ref<ClrArray> }, RecordNumber?: long, ArrayIsDynamic?: boolean, StringIsFixedLength?: boolean): void;
-    FileGet(FileNumber: int, Value: { value: ref<boolean> }, RecordNumber?: long): void;
-    FileGet(FileNumber: int, Value: { value: ref<byte> }, RecordNumber?: long): void;
-    FileGet(FileNumber: int, Value: { value: ref<char> }, RecordNumber?: long): void;
-    FileGet(FileNumber: int, Value: { value: ref<DateTime> }, RecordNumber?: long): void;
-    FileGet(FileNumber: int, Value: { value: ref<decimal> }, RecordNumber?: long): void;
-    FileGet(FileNumber: int, Value: { value: ref<double> }, RecordNumber?: long): void;
-    FileGet(FileNumber: int, Value: { value: ref<short> }, RecordNumber?: long): void;
-    FileGet(FileNumber: int, Value: { value: ref<int> }, RecordNumber?: long): void;
-    FileGet(FileNumber: int, Value: { value: ref<long> }, RecordNumber?: long): void;
-    FileGet(FileNumber: int, Value: { value: ref<float> }, RecordNumber?: long): void;
-    FileGet(FileNumber: int, Value: { value: ref<string> }, RecordNumber?: long, StringIsFixedLength?: boolean): void;
-    FileGet(FileNumber: int, Value: { value: ref<unknown> }, RecordNumber?: long): void;
-    FileGetObject(FileNumber: int, Value: { value: ref<unknown> }, RecordNumber?: long): void;
+    FileGet(FileNumber: int, Value: ClrArray, RecordNumber?: long, ArrayIsDynamic?: boolean, StringIsFixedLength?: boolean): void;
+    FileGet(FileNumber: int, Value: boolean, RecordNumber?: long): void;
+    FileGet(FileNumber: int, Value: byte, RecordNumber?: long): void;
+    FileGet(FileNumber: int, Value: char, RecordNumber?: long): void;
+    FileGet(FileNumber: int, Value: DateTime, RecordNumber?: long): void;
+    FileGet(FileNumber: int, Value: decimal, RecordNumber?: long): void;
+    FileGet(FileNumber: int, Value: double, RecordNumber?: long): void;
+    FileGet(FileNumber: int, Value: short, RecordNumber?: long): void;
+    FileGet(FileNumber: int, Value: int, RecordNumber?: long): void;
+    FileGet(FileNumber: int, Value: long, RecordNumber?: long): void;
+    FileGet(FileNumber: int, Value: float, RecordNumber?: long): void;
+    FileGet(FileNumber: int, Value: string, RecordNumber?: long, StringIsFixedLength?: boolean): void;
+    FileGet(FileNumber: int, Value: unknown, RecordNumber?: long): void;
+    FileGetObject(FileNumber: int, Value: unknown, RecordNumber?: long): void;
     FileLen(PathName: string): long;
     FileOpen(FileNumber: int, FileName: string, Mode: OpenMode, Access?: OpenAccess, Share?: OpenShare, RecordLength?: int): void;
     FilePut(FileNumber: int, Value: ClrArray, RecordNumber?: long, ArrayIsDynamic?: boolean, StringIsFixedLength?: boolean): void;
@@ -593,18 +568,18 @@ export const FileSystem: {
     FileWidth(FileNumber: int, RecordWidth: int): void;
     FreeFile(): int;
     GetAttr(PathName: string): FileAttribute;
-    Input(FileNumber: int, Value: { value: ref<boolean> }): void;
-    Input(FileNumber: int, Value: { value: ref<byte> }): void;
-    Input(FileNumber: int, Value: { value: ref<char> }): void;
-    Input(FileNumber: int, Value: { value: ref<DateTime> }): void;
-    Input(FileNumber: int, Value: { value: ref<decimal> }): void;
-    Input(FileNumber: int, Value: { value: ref<double> }): void;
-    Input(FileNumber: int, Value: { value: ref<short> }): void;
-    Input(FileNumber: int, Value: { value: ref<int> }): void;
-    Input(FileNumber: int, Value: { value: ref<long> }): void;
-    Input(FileNumber: int, Value: { value: ref<unknown> }): void;
-    Input(FileNumber: int, Value: { value: ref<float> }): void;
-    Input(FileNumber: int, Value: { value: ref<string> }): void;
+    Input(FileNumber: int, Value: boolean): void;
+    Input(FileNumber: int, Value: byte): void;
+    Input(FileNumber: int, Value: char): void;
+    Input(FileNumber: int, Value: DateTime): void;
+    Input(FileNumber: int, Value: decimal): void;
+    Input(FileNumber: int, Value: double): void;
+    Input(FileNumber: int, Value: short): void;
+    Input(FileNumber: int, Value: int): void;
+    Input(FileNumber: int, Value: long): void;
+    Input(FileNumber: int, Value: unknown): void;
+    Input(FileNumber: int, Value: float): void;
+    Input(FileNumber: int, Value: string): void;
     InputString(FileNumber: int, CharCount: int): string;
     Kill(PathName: string): void;
     LineInput(FileNumber: int): string;
@@ -644,10 +619,10 @@ export const Financial: {
     DDB(Cost: double, Salvage: double, Life: double, Period: double, Factor?: double): double;
     FV(Rate: double, NPer: double, Pmt: double, PV?: double, Due?: DueDate): double;
     IPmt(Rate: double, Per: double, NPer: double, PV: double, FV?: double, Due?: DueDate): double;
-    IRR(ValueArray: { value: ref<double[]> }, Guess?: double): double;
-    MIRR(ValueArray: { value: ref<double[]> }, FinanceRate: double, ReinvestRate: double): double;
+    IRR(ValueArray: double[], Guess?: double): double;
+    MIRR(ValueArray: double[], FinanceRate: double, ReinvestRate: double): double;
     NPer(Rate: double, Pmt: double, PV: double, FV?: double, Due?: DueDate): double;
-    NPV(Rate: double, ValueArray: { value: ref<double[]> }): double;
+    NPV(Rate: double, ValueArray: double[]): double;
     Pmt(Rate: double, NPer: double, PV: double, FV?: double, Due?: DueDate): double;
     PPmt(Rate: double, Per: double, NPer: double, PV: double, FV?: double, Due?: DueDate): double;
     PV(Rate: double, NPer: double, Pmt: double, FV?: double, Due?: DueDate): double;

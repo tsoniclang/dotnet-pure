@@ -2159,7 +2159,17 @@
           "parameterCount": 3,
           "declaringClrType": "System.Resources.ResourceReader",
           "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
+          "isExtensionMethod": false,
+          "parameterModifiers": [
+            {
+              "index": 1,
+              "modifier": "out"
+            },
+            {
+              "index": 2,
+              "modifier": "out"
+            }
+          ]
         },
         {
           "stableId": "System.Private.CoreLib:System.Resources.ResourceReader::Close():System.Void",
