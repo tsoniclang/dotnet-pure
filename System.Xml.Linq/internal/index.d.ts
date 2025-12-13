@@ -348,7 +348,7 @@ export interface __XName$views {
     As_ISerializable(): System_Runtime_Serialization_Internal.ISerializable$instance;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: XName): boolean;
+    Equals(other: XName): boolean;
 }
 
 export interface XName$instance extends System_Runtime_Serialization_Internal.ISerializable$instance {}

@@ -82,8 +82,8 @@ export interface __SqlBinary$views {
     As_IXmlSerializable(): System_Xml_Serialization_Internal.IXmlSerializable$instance;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: SqlBinary): boolean;
-    compareTo(obj: unknown): int;
+    Equals(other: SqlBinary): boolean;
+    CompareTo(obj: unknown): int;
 }
 
 export interface SqlBinary$instance extends INullable$instance, System_Xml_Serialization_Internal.IXmlSerializable$instance {}
@@ -145,8 +145,8 @@ export interface __SqlBoolean$views {
     As_IXmlSerializable(): System_Xml_Serialization_Internal.IXmlSerializable$instance;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: SqlBoolean): boolean;
-    compareTo(obj: unknown): int;
+    Equals(other: SqlBoolean): boolean;
+    CompareTo(obj: unknown): int;
 }
 
 export interface SqlBoolean$instance extends INullable$instance, System_Xml_Serialization_Internal.IXmlSerializable$instance {}
@@ -209,8 +209,8 @@ export interface __SqlByte$views {
     As_IXmlSerializable(): System_Xml_Serialization_Internal.IXmlSerializable$instance;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: SqlByte): boolean;
-    compareTo(obj: unknown): int;
+    Equals(other: SqlByte): boolean;
+    CompareTo(obj: unknown): int;
 }
 
 export interface SqlByte$instance extends INullable$instance, System_Xml_Serialization_Internal.IXmlSerializable$instance {}
@@ -266,8 +266,8 @@ export interface __SqlDateTime$views {
     As_IXmlSerializable(): System_Xml_Serialization_Internal.IXmlSerializable$instance;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: SqlDateTime): boolean;
-    compareTo(obj: unknown): int;
+    Equals(other: SqlDateTime): boolean;
+    CompareTo(obj: unknown): int;
 }
 
 export interface SqlDateTime$instance extends INullable$instance, System_Xml_Serialization_Internal.IXmlSerializable$instance {}
@@ -346,8 +346,8 @@ export interface __SqlDecimal$views {
     As_IXmlSerializable(): System_Xml_Serialization_Internal.IXmlSerializable$instance;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: SqlDecimal): boolean;
-    compareTo(obj: unknown): int;
+    Equals(other: SqlDecimal): boolean;
+    CompareTo(obj: unknown): int;
 }
 
 export interface SqlDecimal$instance extends INullable$instance, System_Xml_Serialization_Internal.IXmlSerializable$instance {}
@@ -404,8 +404,8 @@ export interface __SqlDouble$views {
     As_IXmlSerializable(): System_Xml_Serialization_Internal.IXmlSerializable$instance;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: SqlDouble): boolean;
-    compareTo(obj: unknown): int;
+    Equals(other: SqlDouble): boolean;
+    CompareTo(obj: unknown): int;
 }
 
 export interface SqlDouble$instance extends INullable$instance, System_Xml_Serialization_Internal.IXmlSerializable$instance {}
@@ -453,8 +453,8 @@ export interface __SqlGuid$views {
     As_IXmlSerializable(): System_Xml_Serialization_Internal.IXmlSerializable$instance;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: SqlGuid): boolean;
-    compareTo(obj: unknown): int;
+    Equals(other: SqlGuid): boolean;
+    CompareTo(obj: unknown): int;
 }
 
 export interface SqlGuid$instance extends INullable$instance, System_Runtime_Serialization_Internal.ISerializable$instance, System_Xml_Serialization_Internal.IXmlSerializable$instance {}
@@ -517,8 +517,8 @@ export interface __SqlInt16$views {
     As_IXmlSerializable(): System_Xml_Serialization_Internal.IXmlSerializable$instance;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: SqlInt16): boolean;
-    compareTo(obj: unknown): int;
+    Equals(other: SqlInt16): boolean;
+    CompareTo(obj: unknown): int;
 }
 
 export interface SqlInt16$instance extends INullable$instance, System_Xml_Serialization_Internal.IXmlSerializable$instance {}
@@ -581,8 +581,8 @@ export interface __SqlInt32$views {
     As_IXmlSerializable(): System_Xml_Serialization_Internal.IXmlSerializable$instance;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: SqlInt32): boolean;
-    compareTo(obj: unknown): int;
+    Equals(other: SqlInt32): boolean;
+    CompareTo(obj: unknown): int;
 }
 
 export interface SqlInt32$instance extends INullable$instance, System_Xml_Serialization_Internal.IXmlSerializable$instance {}
@@ -645,8 +645,8 @@ export interface __SqlInt64$views {
     As_IXmlSerializable(): System_Xml_Serialization_Internal.IXmlSerializable$instance;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: SqlInt64): boolean;
-    compareTo(obj: unknown): int;
+    Equals(other: SqlInt64): boolean;
+    CompareTo(obj: unknown): int;
 }
 
 export interface SqlInt64$instance extends INullable$instance, System_Xml_Serialization_Internal.IXmlSerializable$instance {}
@@ -712,8 +712,8 @@ export interface __SqlMoney$views {
     As_IXmlSerializable(): System_Xml_Serialization_Internal.IXmlSerializable$instance;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: SqlMoney): boolean;
-    compareTo(obj: unknown): int;
+    Equals(other: SqlMoney): boolean;
+    CompareTo(obj: unknown): int;
 }
 
 export interface SqlMoney$instance extends INullable$instance, System_Xml_Serialization_Internal.IXmlSerializable$instance {}
@@ -771,8 +771,8 @@ export interface __SqlSingle$views {
     As_IXmlSerializable(): System_Xml_Serialization_Internal.IXmlSerializable$instance;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: SqlSingle): boolean;
-    compareTo(obj: unknown): int;
+    Equals(other: SqlSingle): boolean;
+    CompareTo(obj: unknown): int;
 }
 
 export interface SqlSingle$instance extends INullable$instance, System_Xml_Serialization_Internal.IXmlSerializable$instance {}
@@ -845,8 +845,8 @@ export interface __SqlString$views {
     As_IXmlSerializable(): System_Xml_Serialization_Internal.IXmlSerializable$instance;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: SqlString): boolean;
-    compareTo(obj: unknown): int;
+    Equals(other: SqlString): boolean;
+    CompareTo(obj: unknown): int;
 }
 
 export interface SqlString$instance extends INullable$instance, System_Xml_Serialization_Internal.IXmlSerializable$instance {}

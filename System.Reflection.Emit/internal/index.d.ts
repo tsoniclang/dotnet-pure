@@ -146,7 +146,7 @@ export interface __Label$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<Label>;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: Label): boolean;
+    Equals(other: Label): boolean;
 }
 
 export type Label = Label$instance & __Label$views;
@@ -178,7 +178,7 @@ export interface __OpCode$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<OpCode>;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: OpCode): boolean;
+    Equals(other: OpCode): boolean;
 }
 
 export type OpCode = OpCode$instance & __OpCode$views;

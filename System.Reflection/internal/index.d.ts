@@ -442,7 +442,7 @@ export interface __CustomAttributeNamedArgument$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<CustomAttributeNamedArgument>;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: CustomAttributeNamedArgument): boolean;
+    Equals(other: CustomAttributeNamedArgument): boolean;
 }
 
 export type CustomAttributeNamedArgument = CustomAttributeNamedArgument$instance & __CustomAttributeNamedArgument$views;
@@ -468,7 +468,7 @@ export interface __CustomAttributeTypedArgument$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<CustomAttributeTypedArgument>;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: CustomAttributeTypedArgument): boolean;
+    Equals(other: CustomAttributeTypedArgument): boolean;
 }
 
 export type CustomAttributeTypedArgument = CustomAttributeTypedArgument$instance & __CustomAttributeTypedArgument$views;

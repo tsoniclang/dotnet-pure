@@ -253,7 +253,7 @@ export interface __ActivityContext$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<ActivityContext>;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: ActivityContext): boolean;
+    Equals(other: ActivityContext): boolean;
 }
 
 export type ActivityContext = ActivityContext$instance & __ActivityContext$views;
@@ -314,7 +314,7 @@ export interface __ActivityLink$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<ActivityLink>;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: ActivityLink): boolean;
+    Equals(other: ActivityLink): boolean;
 }
 
 export type ActivityLink = ActivityLink$instance & __ActivityLink$views;
@@ -343,7 +343,7 @@ export interface __ActivitySpanId$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<ActivitySpanId>;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: ActivitySpanId): boolean;
+    Equals(other: ActivitySpanId): boolean;
 }
 
 export type ActivitySpanId = ActivitySpanId$instance & __ActivitySpanId$views;
@@ -393,7 +393,7 @@ export interface __ActivityTraceId$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<ActivityTraceId>;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: ActivityTraceId): boolean;
+    Equals(other: ActivityTraceId): boolean;
 }
 
 export type ActivityTraceId = ActivityTraceId$instance & __ActivityTraceId$views;

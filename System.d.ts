@@ -408,3 +408,24 @@ export type WeakReference<
   [T1] extends [__] ? Internal.WeakReference :
   Internal.WeakReference_1<T1>;
 
+
+// Primitive $instance interfaces for global type augmentation (@tsonic/globals)
+export type { SByte$instance } from './System/internal/index.js';
+export type { Int16$instance } from './System/internal/index.js';
+export type { Int32$instance } from './System/internal/index.js';
+export type { Int64$instance } from './System/internal/index.js';
+export type { Int128$instance } from './System/internal/index.js';
+export type { IntPtr$instance } from './System/internal/index.js';
+export type { Byte$instance } from './System/internal/index.js';
+export type { UInt16$instance } from './System/internal/index.js';
+export type { UInt32$instance } from './System/internal/index.js';
+export type { UInt64$instance } from './System/internal/index.js';
+export type { UInt128$instance } from './System/internal/index.js';
+export type { UIntPtr$instance } from './System/internal/index.js';
+export type { Half$instance } from './System/internal/index.js';
+export type { Single$instance } from './System/internal/index.js';
+export type { Double$instance } from './System/internal/index.js';
+export type { Decimal$instance } from './System/internal/index.js';
+export type { Char$instance } from './System/internal/index.js';
+export type { Boolean$instance } from './System/internal/index.js';
+export type { String$instance } from './System/internal/index.js';

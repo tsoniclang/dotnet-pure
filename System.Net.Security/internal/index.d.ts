@@ -451,7 +451,7 @@ export interface __SslApplicationProtocol$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<SslApplicationProtocol>;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: SslApplicationProtocol): boolean;
+    Equals(other: SslApplicationProtocol): boolean;
 }
 
 export type SslApplicationProtocol = SslApplicationProtocol$instance & __SslApplicationProtocol$views;

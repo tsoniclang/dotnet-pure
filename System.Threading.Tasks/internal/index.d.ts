@@ -113,7 +113,7 @@ export interface __ValueTask$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<ValueTask>;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: ValueTask): boolean;
+    Equals(other: ValueTask): boolean;
 }
 
 export type ValueTask = ValueTask$instance & __ValueTask$views;
@@ -147,7 +147,7 @@ export interface __ValueTask_1$views<TResult> {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<ValueTask_1<TResult>>;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: ValueTask_1<TResult>): boolean;
+    Equals(other: ValueTask_1<TResult>): boolean;
 }
 
 export type ValueTask_1<TResult> = ValueTask_1$instance<TResult> & __ValueTask_1$views<TResult>;

@@ -152,7 +152,7 @@ export interface __MemberRelationship$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<MemberRelationship>;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: MemberRelationship): boolean;
+    Equals(other: MemberRelationship): boolean;
 }
 
 export type MemberRelationship = MemberRelationship$instance & __MemberRelationship$views;

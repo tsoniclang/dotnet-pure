@@ -349,7 +349,7 @@ export interface __SecurityIdentifier$views {
     As_IComparable_1(): System_Internal.IComparable_1$instance<SecurityIdentifier>;
 
     // Structural method bridges for numeric interface constraints
-    compareTo(obj: unknown): int;
+    CompareTo(obj: unknown): int;
 }
 
 export interface SecurityIdentifier$instance extends System_Internal.IComparable_1$instance<SecurityIdentifier> {}
