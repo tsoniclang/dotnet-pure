@@ -900,8 +900,8 @@ export interface __Boolean$views {
     As_ISpanParsable_1(): ISpanParsable_1$instance<Boolean>;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: Boolean): boolean;
-    compareTo(obj: unknown): int;
+    Equals(other: Boolean): boolean;
+    CompareTo(obj: unknown): int;
 }
 
 export interface Boolean$instance extends ISpanParsable_1$instance<Boolean> {}
@@ -984,16 +984,16 @@ export interface __Byte$views {
     As_INumberBase_1(): System_Numerics_Internal.INumberBase_1$instance<Byte>;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: Byte): boolean;
-    compareTo(obj: unknown): int;
-    toString(format: string, formatProvider: IFormatProvider): string;
-    tryFormat(destination: Span_1<Char>, charsWritten: int, format: ReadOnlySpan_1<Char>, provider: IFormatProvider): boolean;
-    tryFormat(utf8Destination: Span_1<Byte>, bytesWritten: int, format: ReadOnlySpan_1<Char>, provider: IFormatProvider): boolean;
-    getByteCount(): int;
-    tryWriteBigEndian(destination: Span_1<Byte>, bytesWritten: int): boolean;
-    writeBigEndian(destination: byte[], startIndex: int): int;
-    writeBigEndian(destination: byte[]): int;
-    writeBigEndian(destination: Span_1<Byte>): int;
+    Equals(other: Byte): boolean;
+    CompareTo(obj: unknown): int;
+    ToString(format: string, formatProvider: IFormatProvider): string;
+    TryFormat(destination: Span_1<Char>, charsWritten: int, format: ReadOnlySpan_1<Char>, provider: IFormatProvider): boolean;
+    TryFormat(utf8Destination: Span_1<Byte>, bytesWritten: int, format: ReadOnlySpan_1<Char>, provider: IFormatProvider): boolean;
+    GetByteCount(): int;
+    TryWriteBigEndian(destination: Span_1<Byte>, bytesWritten: int): boolean;
+    WriteBigEndian(destination: byte[], startIndex: int): int;
+    WriteBigEndian(destination: byte[]): int;
+    WriteBigEndian(destination: Span_1<Byte>): int;
 }
 
 export interface Byte$instance extends System_Numerics_Internal.IMinMaxValue_1$instance<Byte> {}
@@ -1094,16 +1094,16 @@ export interface __Char$views {
     As_INumberBase_1(): System_Numerics_Internal.INumberBase_1$instance<Char>;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: Char): boolean;
-    compareTo(obj: unknown): int;
-    toString(format: string, formatProvider: IFormatProvider): string;
-    tryFormat(destination: Span_1<Char>, charsWritten: int, format: ReadOnlySpan_1<Char>, provider: IFormatProvider): boolean;
-    tryFormat(utf8Destination: Span_1<Byte>, bytesWritten: int, format: ReadOnlySpan_1<Char>, provider: IFormatProvider): boolean;
-    getByteCount(): int;
-    tryWriteBigEndian(destination: Span_1<Byte>, bytesWritten: int): boolean;
-    writeBigEndian(destination: byte[], startIndex: int): int;
-    writeBigEndian(destination: byte[]): int;
-    writeBigEndian(destination: Span_1<Byte>): int;
+    Equals(other: Char): boolean;
+    CompareTo(obj: unknown): int;
+    ToString(format: string, formatProvider: IFormatProvider): string;
+    TryFormat(destination: Span_1<Char>, charsWritten: int, format: ReadOnlySpan_1<Char>, provider: IFormatProvider): boolean;
+    TryFormat(utf8Destination: Span_1<Byte>, bytesWritten: int, format: ReadOnlySpan_1<Char>, provider: IFormatProvider): boolean;
+    GetByteCount(): int;
+    TryWriteBigEndian(destination: Span_1<Byte>, bytesWritten: int): boolean;
+    WriteBigEndian(destination: byte[], startIndex: int): int;
+    WriteBigEndian(destination: byte[]): int;
+    WriteBigEndian(destination: Span_1<Byte>): int;
 }
 
 export interface Char$instance extends System_Numerics_Internal.IMinMaxValue_1$instance<Char> {}
@@ -1130,7 +1130,7 @@ export interface __ConsoleKeyInfo$views {
     As_IEquatable_1(): IEquatable_1$instance<ConsoleKeyInfo>;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: ConsoleKeyInfo): boolean;
+    Equals(other: ConsoleKeyInfo): boolean;
 }
 
 export type ConsoleKeyInfo = ConsoleKeyInfo$instance & __ConsoleKeyInfo$views;
@@ -1212,9 +1212,9 @@ export interface __DateOnly$views {
     As_IUtf8SpanFormattable(): IUtf8SpanFormattable$instance;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: DateOnly): boolean;
-    compareTo(obj: unknown): int;
-    tryFormat(utf8Destination: Span_1<Byte>, bytesWritten: int, format: ReadOnlySpan_1<Char>, provider: IFormatProvider): boolean;
+    Equals(other: DateOnly): boolean;
+    CompareTo(obj: unknown): int;
+    TryFormat(utf8Destination: Span_1<Byte>, bytesWritten: int, format: ReadOnlySpan_1<Char>, provider: IFormatProvider): boolean;
 }
 
 export interface DateOnly$instance extends IComparable_1$instance<DateOnly>, ISpanParsable_1$instance<DateOnly> {}
@@ -1351,9 +1351,9 @@ export interface __DateTime$views {
     As_ISerializable(): System_Runtime_Serialization_Internal.ISerializable$instance;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: DateTime): boolean;
-    compareTo(obj: unknown): int;
-    tryFormat(utf8Destination: Span_1<Byte>, bytesWritten: int, format: ReadOnlySpan_1<Char>, provider: IFormatProvider): boolean;
+    Equals(other: DateTime): boolean;
+    CompareTo(obj: unknown): int;
+    TryFormat(utf8Destination: Span_1<Byte>, bytesWritten: int, format: ReadOnlySpan_1<Char>, provider: IFormatProvider): boolean;
 }
 
 export interface DateTime$instance extends IComparable_1$instance<DateTime>, ISpanParsable_1$instance<DateTime>, System_Runtime_Serialization_Internal.ISerializable$instance {}
@@ -1471,9 +1471,9 @@ export interface __DateTimeOffset$views {
     As_ISerializable(): System_Runtime_Serialization_Internal.ISerializable$instance;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: DateTimeOffset): boolean;
-    compareTo(obj: unknown): int;
-    tryFormat(utf8Destination: Span_1<Byte>, bytesWritten: int, format: ReadOnlySpan_1<Char>, provider: IFormatProvider): boolean;
+    Equals(other: DateTimeOffset): boolean;
+    CompareTo(obj: unknown): int;
+    TryFormat(utf8Destination: Span_1<Byte>, bytesWritten: int, format: ReadOnlySpan_1<Char>, provider: IFormatProvider): boolean;
 }
 
 export interface DateTimeOffset$instance extends IComparable_1$instance<DateTimeOffset>, ISpanParsable_1$instance<DateTimeOffset>, System_Runtime_Serialization_Internal.IDeserializationCallback$instance, System_Runtime_Serialization_Internal.ISerializable$instance {}
@@ -1602,17 +1602,17 @@ export interface __Decimal$views {
     As_ISerializable(): System_Runtime_Serialization_Internal.ISerializable$instance;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: Decimal): boolean;
-    compareTo(obj: unknown): int;
-    toString(format: string, formatProvider: IFormatProvider): string;
-    tryFormat(destination: Span_1<Char>, charsWritten: int, format: ReadOnlySpan_1<Char>, provider: IFormatProvider): boolean;
-    tryFormat(utf8Destination: Span_1<Byte>, bytesWritten: int, format: ReadOnlySpan_1<Char>, provider: IFormatProvider): boolean;
-    getExponentByteCount(): int;
-    getExponentShortestBitLength(): int;
-    tryWriteExponentBigEndian(destination: Span_1<Byte>, bytesWritten: int): boolean;
-    writeExponentBigEndian(destination: byte[], startIndex: int): int;
-    writeExponentBigEndian(destination: byte[]): int;
-    writeExponentBigEndian(destination: Span_1<Byte>): int;
+    Equals(other: Decimal): boolean;
+    CompareTo(obj: unknown): int;
+    ToString(format: string, formatProvider: IFormatProvider): string;
+    TryFormat(destination: Span_1<Char>, charsWritten: int, format: ReadOnlySpan_1<Char>, provider: IFormatProvider): boolean;
+    TryFormat(utf8Destination: Span_1<Byte>, bytesWritten: int, format: ReadOnlySpan_1<Char>, provider: IFormatProvider): boolean;
+    GetExponentByteCount(): int;
+    GetExponentShortestBitLength(): int;
+    TryWriteExponentBigEndian(destination: Span_1<Byte>, bytesWritten: int): boolean;
+    WriteExponentBigEndian(destination: byte[], startIndex: int): int;
+    WriteExponentBigEndian(destination: byte[]): int;
+    WriteExponentBigEndian(destination: Span_1<Byte>): int;
 }
 
 export interface Decimal$instance extends System_Numerics_Internal.IMinMaxValue_1$instance<Decimal>, System_Runtime_Serialization_Internal.IDeserializationCallback$instance, System_Runtime_Serialization_Internal.ISerializable$instance {}
@@ -1795,17 +1795,17 @@ export interface __Double$views {
     As_ITrigonometricFunctions_1(): System_Numerics_Internal.ITrigonometricFunctions_1$instance<Double>;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: Double): boolean;
-    compareTo(obj: unknown): int;
-    toString(format: string, formatProvider: IFormatProvider): string;
-    tryFormat(destination: Span_1<Char>, charsWritten: int, format: ReadOnlySpan_1<Char>, provider: IFormatProvider): boolean;
-    tryFormat(utf8Destination: Span_1<Byte>, bytesWritten: int, format: ReadOnlySpan_1<Char>, provider: IFormatProvider): boolean;
-    getExponentByteCount(): int;
-    getExponentShortestBitLength(): int;
-    tryWriteExponentBigEndian(destination: Span_1<Byte>, bytesWritten: int): boolean;
-    writeExponentBigEndian(destination: byte[], startIndex: int): int;
-    writeExponentBigEndian(destination: byte[]): int;
-    writeExponentBigEndian(destination: Span_1<Byte>): int;
+    Equals(other: Double): boolean;
+    CompareTo(obj: unknown): int;
+    ToString(format: string, formatProvider: IFormatProvider): string;
+    TryFormat(destination: Span_1<Char>, charsWritten: int, format: ReadOnlySpan_1<Char>, provider: IFormatProvider): boolean;
+    TryFormat(utf8Destination: Span_1<Byte>, bytesWritten: int, format: ReadOnlySpan_1<Char>, provider: IFormatProvider): boolean;
+    GetExponentByteCount(): int;
+    GetExponentShortestBitLength(): int;
+    TryWriteExponentBigEndian(destination: Span_1<Byte>, bytesWritten: int): boolean;
+    WriteExponentBigEndian(destination: byte[], startIndex: int): int;
+    WriteExponentBigEndian(destination: byte[]): int;
+    WriteExponentBigEndian(destination: Span_1<Byte>): int;
 }
 
 export interface Double$instance extends System_Numerics_Internal.IMinMaxValue_1$instance<Double> {}
@@ -1933,9 +1933,9 @@ export interface __Guid$views {
     As_IUtf8SpanParsable_1(): IUtf8SpanParsable_1$instance<Guid>;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: Guid): boolean;
-    compareTo(obj: unknown): int;
-    tryFormat(utf8Destination: Span_1<Byte>, bytesWritten: int, format: ReadOnlySpan_1<Char>, provider: IFormatProvider): boolean;
+    Equals(other: Guid): boolean;
+    CompareTo(obj: unknown): int;
+    TryFormat(utf8Destination: Span_1<Byte>, bytesWritten: int, format: ReadOnlySpan_1<Char>, provider: IFormatProvider): boolean;
 }
 
 export interface Guid$instance extends IComparable_1$instance<Guid>, ISpanParsable_1$instance<Guid> {}
@@ -2106,17 +2106,17 @@ export interface __Half$views {
     As_ITrigonometricFunctions_1(): System_Numerics_Internal.ITrigonometricFunctions_1$instance<Half>;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: Half): boolean;
-    compareTo(obj: unknown): int;
-    toString(format: string, formatProvider: IFormatProvider): string;
-    tryFormat(destination: Span_1<Char>, charsWritten: int, format: ReadOnlySpan_1<Char>, provider: IFormatProvider): boolean;
-    tryFormat(utf8Destination: Span_1<Byte>, bytesWritten: int, format: ReadOnlySpan_1<Char>, provider: IFormatProvider): boolean;
-    getExponentByteCount(): int;
-    getExponentShortestBitLength(): int;
-    tryWriteExponentBigEndian(destination: Span_1<Byte>, bytesWritten: int): boolean;
-    writeExponentBigEndian(destination: byte[], startIndex: int): int;
-    writeExponentBigEndian(destination: byte[]): int;
-    writeExponentBigEndian(destination: Span_1<Byte>): int;
+    Equals(other: Half): boolean;
+    CompareTo(obj: unknown): int;
+    ToString(format: string, formatProvider: IFormatProvider): string;
+    TryFormat(destination: Span_1<Char>, charsWritten: int, format: ReadOnlySpan_1<Char>, provider: IFormatProvider): boolean;
+    TryFormat(utf8Destination: Span_1<Byte>, bytesWritten: int, format: ReadOnlySpan_1<Char>, provider: IFormatProvider): boolean;
+    GetExponentByteCount(): int;
+    GetExponentShortestBitLength(): int;
+    TryWriteExponentBigEndian(destination: Span_1<Byte>, bytesWritten: int): boolean;
+    WriteExponentBigEndian(destination: byte[], startIndex: int): int;
+    WriteExponentBigEndian(destination: byte[]): int;
+    WriteExponentBigEndian(destination: Span_1<Byte>): int;
 }
 
 export interface Half$instance extends System_Numerics_Internal.IMinMaxValue_1$instance<Half> {}
@@ -2173,7 +2173,7 @@ export interface __Index$views {
     As_IEquatable_1(): IEquatable_1$instance<Index>;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: Index): boolean;
+    Equals(other: Index): boolean;
 }
 
 export type Index = Index$instance & __Index$views;
@@ -2261,16 +2261,16 @@ export interface __Int128$views {
     As_INumberBase_1(): System_Numerics_Internal.INumberBase_1$instance<Int128>;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: Int128): boolean;
-    compareTo(obj: unknown): int;
-    toString(format: string, formatProvider: IFormatProvider): string;
-    tryFormat(destination: Span_1<Char>, charsWritten: int, format: ReadOnlySpan_1<Char>, provider: IFormatProvider): boolean;
-    tryFormat(utf8Destination: Span_1<Byte>, bytesWritten: int, format: ReadOnlySpan_1<Char>, provider: IFormatProvider): boolean;
-    getByteCount(): int;
-    tryWriteBigEndian(destination: Span_1<Byte>, bytesWritten: int): boolean;
-    writeBigEndian(destination: byte[], startIndex: int): int;
-    writeBigEndian(destination: byte[]): int;
-    writeBigEndian(destination: Span_1<Byte>): int;
+    Equals(other: Int128): boolean;
+    CompareTo(obj: unknown): int;
+    ToString(format: string, formatProvider: IFormatProvider): string;
+    TryFormat(destination: Span_1<Char>, charsWritten: int, format: ReadOnlySpan_1<Char>, provider: IFormatProvider): boolean;
+    TryFormat(utf8Destination: Span_1<Byte>, bytesWritten: int, format: ReadOnlySpan_1<Char>, provider: IFormatProvider): boolean;
+    GetByteCount(): int;
+    TryWriteBigEndian(destination: Span_1<Byte>, bytesWritten: int): boolean;
+    WriteBigEndian(destination: byte[], startIndex: int): int;
+    WriteBigEndian(destination: byte[]): int;
+    WriteBigEndian(destination: Span_1<Byte>): int;
 }
 
 export interface Int128$instance extends System_Numerics_Internal.IMinMaxValue_1$instance<Int128> {}
@@ -2359,16 +2359,16 @@ export interface __Int16$views {
     As_INumberBase_1(): System_Numerics_Internal.INumberBase_1$instance<Int16>;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: Int16): boolean;
-    compareTo(obj: unknown): int;
-    toString(format: string, formatProvider: IFormatProvider): string;
-    tryFormat(destination: Span_1<Char>, charsWritten: int, format: ReadOnlySpan_1<Char>, provider: IFormatProvider): boolean;
-    tryFormat(utf8Destination: Span_1<Byte>, bytesWritten: int, format: ReadOnlySpan_1<Char>, provider: IFormatProvider): boolean;
-    getByteCount(): int;
-    tryWriteBigEndian(destination: Span_1<Byte>, bytesWritten: int): boolean;
-    writeBigEndian(destination: byte[], startIndex: int): int;
-    writeBigEndian(destination: byte[]): int;
-    writeBigEndian(destination: Span_1<Byte>): int;
+    Equals(other: Int16): boolean;
+    CompareTo(obj: unknown): int;
+    ToString(format: string, formatProvider: IFormatProvider): string;
+    TryFormat(destination: Span_1<Char>, charsWritten: int, format: ReadOnlySpan_1<Char>, provider: IFormatProvider): boolean;
+    TryFormat(utf8Destination: Span_1<Byte>, bytesWritten: int, format: ReadOnlySpan_1<Char>, provider: IFormatProvider): boolean;
+    GetByteCount(): int;
+    TryWriteBigEndian(destination: Span_1<Byte>, bytesWritten: int): boolean;
+    WriteBigEndian(destination: byte[], startIndex: int): int;
+    WriteBigEndian(destination: byte[]): int;
+    WriteBigEndian(destination: Span_1<Byte>): int;
 }
 
 export interface Int16$instance extends System_Numerics_Internal.IMinMaxValue_1$instance<Int16> {}
@@ -2458,16 +2458,16 @@ export interface __Int32$views {
     As_INumberBase_1(): System_Numerics_Internal.INumberBase_1$instance<Int32>;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: Int32): boolean;
-    compareTo(obj: unknown): int;
-    toString(format: string, formatProvider: IFormatProvider): string;
-    tryFormat(destination: Span_1<Char>, charsWritten: int, format: ReadOnlySpan_1<Char>, provider: IFormatProvider): boolean;
-    tryFormat(utf8Destination: Span_1<Byte>, bytesWritten: int, format: ReadOnlySpan_1<Char>, provider: IFormatProvider): boolean;
-    getByteCount(): int;
-    tryWriteBigEndian(destination: Span_1<Byte>, bytesWritten: int): boolean;
-    writeBigEndian(destination: byte[], startIndex: int): int;
-    writeBigEndian(destination: byte[]): int;
-    writeBigEndian(destination: Span_1<Byte>): int;
+    Equals(other: Int32): boolean;
+    CompareTo(obj: unknown): int;
+    ToString(format: string, formatProvider: IFormatProvider): string;
+    TryFormat(destination: Span_1<Char>, charsWritten: int, format: ReadOnlySpan_1<Char>, provider: IFormatProvider): boolean;
+    TryFormat(utf8Destination: Span_1<Byte>, bytesWritten: int, format: ReadOnlySpan_1<Char>, provider: IFormatProvider): boolean;
+    GetByteCount(): int;
+    TryWriteBigEndian(destination: Span_1<Byte>, bytesWritten: int): boolean;
+    WriteBigEndian(destination: byte[], startIndex: int): int;
+    WriteBigEndian(destination: byte[]): int;
+    WriteBigEndian(destination: Span_1<Byte>): int;
 }
 
 export interface Int32$instance extends System_Numerics_Internal.IMinMaxValue_1$instance<Int32> {}
@@ -2557,16 +2557,16 @@ export interface __Int64$views {
     As_INumberBase_1(): System_Numerics_Internal.INumberBase_1$instance<Int64>;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: Int64): boolean;
-    compareTo(obj: unknown): int;
-    toString(format: string, formatProvider: IFormatProvider): string;
-    tryFormat(destination: Span_1<Char>, charsWritten: int, format: ReadOnlySpan_1<Char>, provider: IFormatProvider): boolean;
-    tryFormat(utf8Destination: Span_1<Byte>, bytesWritten: int, format: ReadOnlySpan_1<Char>, provider: IFormatProvider): boolean;
-    getByteCount(): int;
-    tryWriteBigEndian(destination: Span_1<Byte>, bytesWritten: int): boolean;
-    writeBigEndian(destination: byte[], startIndex: int): int;
-    writeBigEndian(destination: byte[]): int;
-    writeBigEndian(destination: Span_1<Byte>): int;
+    Equals(other: Int64): boolean;
+    CompareTo(obj: unknown): int;
+    ToString(format: string, formatProvider: IFormatProvider): string;
+    TryFormat(destination: Span_1<Char>, charsWritten: int, format: ReadOnlySpan_1<Char>, provider: IFormatProvider): boolean;
+    TryFormat(utf8Destination: Span_1<Byte>, bytesWritten: int, format: ReadOnlySpan_1<Char>, provider: IFormatProvider): boolean;
+    GetByteCount(): int;
+    TryWriteBigEndian(destination: Span_1<Byte>, bytesWritten: int): boolean;
+    WriteBigEndian(destination: byte[], startIndex: int): int;
+    WriteBigEndian(destination: byte[]): int;
+    WriteBigEndian(destination: Span_1<Byte>): int;
 }
 
 export interface Int64$instance extends System_Numerics_Internal.IMinMaxValue_1$instance<Int64> {}
@@ -2664,16 +2664,16 @@ export interface __IntPtr$views {
     As_ISerializable(): System_Runtime_Serialization_Internal.ISerializable$instance;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: IntPtr): boolean;
-    compareTo(obj: unknown): int;
-    toString(format: string, formatProvider: IFormatProvider): string;
-    tryFormat(destination: Span_1<Char>, charsWritten: int, format: ReadOnlySpan_1<Char>, provider: IFormatProvider): boolean;
-    tryFormat(utf8Destination: Span_1<Byte>, bytesWritten: int, format: ReadOnlySpan_1<Char>, provider: IFormatProvider): boolean;
-    getByteCount(): int;
-    tryWriteBigEndian(destination: Span_1<Byte>, bytesWritten: int): boolean;
-    writeBigEndian(destination: byte[], startIndex: int): int;
-    writeBigEndian(destination: byte[]): int;
-    writeBigEndian(destination: Span_1<Byte>): int;
+    Equals(other: IntPtr): boolean;
+    CompareTo(obj: unknown): int;
+    ToString(format: string, formatProvider: IFormatProvider): string;
+    TryFormat(destination: Span_1<Char>, charsWritten: int, format: ReadOnlySpan_1<Char>, provider: IFormatProvider): boolean;
+    TryFormat(utf8Destination: Span_1<Byte>, bytesWritten: int, format: ReadOnlySpan_1<Char>, provider: IFormatProvider): boolean;
+    GetByteCount(): int;
+    TryWriteBigEndian(destination: Span_1<Byte>, bytesWritten: int): boolean;
+    WriteBigEndian(destination: byte[], startIndex: int): int;
+    WriteBigEndian(destination: byte[]): int;
+    WriteBigEndian(destination: Span_1<Byte>): int;
 }
 
 export interface IntPtr$instance extends System_Numerics_Internal.IMinMaxValue_1$instance<IntPtr>, System_Runtime_Serialization_Internal.ISerializable$instance {}
@@ -2709,7 +2709,7 @@ export interface __Memory_1$views<T> {
     As_IEquatable_1(): IEquatable_1$instance<Memory_1<T>>;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: Memory_1<T>): boolean;
+    Equals(other: Memory_1<T>): boolean;
 }
 
 export type Memory_1<T> = Memory_1$instance<T> & __Memory_1$views<T>;
@@ -2787,7 +2787,7 @@ export interface __ModuleHandle$views {
     As_IEquatable_1(): IEquatable_1$instance<ModuleHandle>;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: ModuleHandle): boolean;
+    Equals(other: ModuleHandle): boolean;
 }
 
 export type ModuleHandle = ModuleHandle$instance & __ModuleHandle$views;
@@ -2834,7 +2834,7 @@ export interface __Range$views {
     As_IEquatable_1(): IEquatable_1$instance<Range>;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: Range): boolean;
+    Equals(other: Range): boolean;
 }
 
 export type Range = Range$instance & __Range$views;
@@ -2868,7 +2868,7 @@ export interface __ReadOnlyMemory_1$views<T> {
     As_IEquatable_1(): IEquatable_1$instance<ReadOnlyMemory_1<T>>;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: ReadOnlyMemory_1<T>): boolean;
+    Equals(other: ReadOnlyMemory_1<T>): boolean;
 }
 
 export type ReadOnlyMemory_1<T> = ReadOnlyMemory_1$instance<T> & __ReadOnlyMemory_1$views<T>;
@@ -2956,7 +2956,7 @@ export interface __RuntimeFieldHandle$views {
     As_ISerializable(): System_Runtime_Serialization_Internal.ISerializable$instance;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: RuntimeFieldHandle): boolean;
+    Equals(other: RuntimeFieldHandle): boolean;
 }
 
 export interface RuntimeFieldHandle$instance extends System_Runtime_Serialization_Internal.ISerializable$instance {}
@@ -2986,7 +2986,7 @@ export interface __RuntimeMethodHandle$views {
     As_ISerializable(): System_Runtime_Serialization_Internal.ISerializable$instance;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: RuntimeMethodHandle): boolean;
+    Equals(other: RuntimeMethodHandle): boolean;
 }
 
 export interface RuntimeMethodHandle$instance extends System_Runtime_Serialization_Internal.ISerializable$instance {}
@@ -3016,7 +3016,7 @@ export interface __RuntimeTypeHandle$views {
     As_ISerializable(): System_Runtime_Serialization_Internal.ISerializable$instance;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: RuntimeTypeHandle): boolean;
+    Equals(other: RuntimeTypeHandle): boolean;
 }
 
 export interface RuntimeTypeHandle$instance extends System_Runtime_Serialization_Internal.ISerializable$instance {}
@@ -3105,16 +3105,16 @@ export interface __SByte$views {
     As_INumberBase_1(): System_Numerics_Internal.INumberBase_1$instance<SByte>;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: SByte): boolean;
-    compareTo(obj: unknown): int;
-    toString(format: string, formatProvider: IFormatProvider): string;
-    tryFormat(destination: Span_1<Char>, charsWritten: int, format: ReadOnlySpan_1<Char>, provider: IFormatProvider): boolean;
-    tryFormat(utf8Destination: Span_1<Byte>, bytesWritten: int, format: ReadOnlySpan_1<Char>, provider: IFormatProvider): boolean;
-    getByteCount(): int;
-    tryWriteBigEndian(destination: Span_1<Byte>, bytesWritten: int): boolean;
-    writeBigEndian(destination: byte[], startIndex: int): int;
-    writeBigEndian(destination: byte[]): int;
-    writeBigEndian(destination: Span_1<Byte>): int;
+    Equals(other: SByte): boolean;
+    CompareTo(obj: unknown): int;
+    ToString(format: string, formatProvider: IFormatProvider): string;
+    TryFormat(destination: Span_1<Char>, charsWritten: int, format: ReadOnlySpan_1<Char>, provider: IFormatProvider): boolean;
+    TryFormat(utf8Destination: Span_1<Byte>, bytesWritten: int, format: ReadOnlySpan_1<Char>, provider: IFormatProvider): boolean;
+    GetByteCount(): int;
+    TryWriteBigEndian(destination: Span_1<Byte>, bytesWritten: int): boolean;
+    WriteBigEndian(destination: byte[], startIndex: int): int;
+    WriteBigEndian(destination: byte[]): int;
+    WriteBigEndian(destination: Span_1<Byte>): int;
 }
 
 export interface SByte$instance extends System_Numerics_Internal.IMinMaxValue_1$instance<SByte> {}
@@ -3140,7 +3140,7 @@ export interface __SequencePosition$views {
     As_IEquatable_1(): IEquatable_1$instance<SequencePosition>;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: SequencePosition): boolean;
+    Equals(other: SequencePosition): boolean;
 }
 
 export type SequencePosition = SequencePosition$instance & __SequencePosition$views;
@@ -3307,17 +3307,17 @@ export interface __Single$views {
     As_ITrigonometricFunctions_1(): System_Numerics_Internal.ITrigonometricFunctions_1$instance<Single>;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: Single): boolean;
-    compareTo(obj: unknown): int;
-    toString(format: string, formatProvider: IFormatProvider): string;
-    tryFormat(destination: Span_1<Char>, charsWritten: int, format: ReadOnlySpan_1<Char>, provider: IFormatProvider): boolean;
-    tryFormat(utf8Destination: Span_1<Byte>, bytesWritten: int, format: ReadOnlySpan_1<Char>, provider: IFormatProvider): boolean;
-    getExponentByteCount(): int;
-    getExponentShortestBitLength(): int;
-    tryWriteExponentBigEndian(destination: Span_1<Byte>, bytesWritten: int): boolean;
-    writeExponentBigEndian(destination: byte[], startIndex: int): int;
-    writeExponentBigEndian(destination: byte[]): int;
-    writeExponentBigEndian(destination: Span_1<Byte>): int;
+    Equals(other: Single): boolean;
+    CompareTo(obj: unknown): int;
+    ToString(format: string, formatProvider: IFormatProvider): string;
+    TryFormat(destination: Span_1<Char>, charsWritten: int, format: ReadOnlySpan_1<Char>, provider: IFormatProvider): boolean;
+    TryFormat(utf8Destination: Span_1<Byte>, bytesWritten: int, format: ReadOnlySpan_1<Char>, provider: IFormatProvider): boolean;
+    GetExponentByteCount(): int;
+    GetExponentShortestBitLength(): int;
+    TryWriteExponentBigEndian(destination: Span_1<Byte>, bytesWritten: int): boolean;
+    WriteExponentBigEndian(destination: byte[], startIndex: int): int;
+    WriteExponentBigEndian(destination: byte[]): int;
+    WriteExponentBigEndian(destination: Span_1<Byte>): int;
 }
 
 export interface Single$instance extends System_Numerics_Internal.IMinMaxValue_1$instance<Single> {}
@@ -3462,9 +3462,9 @@ export interface __TimeOnly$views {
     As_IUtf8SpanFormattable(): IUtf8SpanFormattable$instance;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: TimeOnly): boolean;
-    compareTo(obj: unknown): int;
-    tryFormat(utf8Destination: Span_1<Byte>, bytesWritten: int, format: ReadOnlySpan_1<Char>, provider: IFormatProvider): boolean;
+    Equals(other: TimeOnly): boolean;
+    CompareTo(obj: unknown): int;
+    TryFormat(utf8Destination: Span_1<Byte>, bytesWritten: int, format: ReadOnlySpan_1<Char>, provider: IFormatProvider): boolean;
 }
 
 export interface TimeOnly$instance extends IComparable$instance, ISpanParsable_1$instance<TimeOnly> {}
@@ -3594,9 +3594,9 @@ export interface __TimeSpan$views {
     As_IUtf8SpanFormattable(): IUtf8SpanFormattable$instance;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: TimeSpan): boolean;
-    compareTo(obj: unknown): int;
-    tryFormat(utf8Destination: Span_1<Byte>, bytesWritten: int, format: ReadOnlySpan_1<Char>, provider: IFormatProvider): boolean;
+    Equals(other: TimeSpan): boolean;
+    CompareTo(obj: unknown): int;
+    TryFormat(utf8Destination: Span_1<Byte>, bytesWritten: int, format: ReadOnlySpan_1<Char>, provider: IFormatProvider): boolean;
 }
 
 export interface TimeSpan$instance extends IComparable$instance, ISpanParsable_1$instance<TimeSpan> {}
@@ -3630,7 +3630,7 @@ export interface __TimeZoneInfo_TransitionTime$views {
     As_ISerializable(): System_Runtime_Serialization_Internal.ISerializable$instance;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: TimeZoneInfo_TransitionTime): boolean;
+    Equals(other: TimeZoneInfo_TransitionTime): boolean;
 }
 
 export interface TimeZoneInfo_TransitionTime$instance extends System_Runtime_Serialization_Internal.IDeserializationCallback$instance, System_Runtime_Serialization_Internal.ISerializable$instance {}
@@ -3731,16 +3731,16 @@ export interface __UInt128$views {
     As_INumberBase_1(): System_Numerics_Internal.INumberBase_1$instance<UInt128>;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: UInt128): boolean;
-    compareTo(obj: unknown): int;
-    toString(format: string, formatProvider: IFormatProvider): string;
-    tryFormat(destination: Span_1<Char>, charsWritten: int, format: ReadOnlySpan_1<Char>, provider: IFormatProvider): boolean;
-    tryFormat(utf8Destination: Span_1<Byte>, bytesWritten: int, format: ReadOnlySpan_1<Char>, provider: IFormatProvider): boolean;
-    getByteCount(): int;
-    tryWriteBigEndian(destination: Span_1<Byte>, bytesWritten: int): boolean;
-    writeBigEndian(destination: byte[], startIndex: int): int;
-    writeBigEndian(destination: byte[]): int;
-    writeBigEndian(destination: Span_1<Byte>): int;
+    Equals(other: UInt128): boolean;
+    CompareTo(obj: unknown): int;
+    ToString(format: string, formatProvider: IFormatProvider): string;
+    TryFormat(destination: Span_1<Char>, charsWritten: int, format: ReadOnlySpan_1<Char>, provider: IFormatProvider): boolean;
+    TryFormat(utf8Destination: Span_1<Byte>, bytesWritten: int, format: ReadOnlySpan_1<Char>, provider: IFormatProvider): boolean;
+    GetByteCount(): int;
+    TryWriteBigEndian(destination: Span_1<Byte>, bytesWritten: int): boolean;
+    WriteBigEndian(destination: byte[], startIndex: int): int;
+    WriteBigEndian(destination: byte[]): int;
+    WriteBigEndian(destination: Span_1<Byte>): int;
 }
 
 export interface UInt128$instance extends System_Numerics_Internal.IMinMaxValue_1$instance<UInt128> {}
@@ -3823,16 +3823,16 @@ export interface __UInt16$views {
     As_INumberBase_1(): System_Numerics_Internal.INumberBase_1$instance<UInt16>;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: UInt16): boolean;
-    compareTo(obj: unknown): int;
-    toString(format: string, formatProvider: IFormatProvider): string;
-    tryFormat(destination: Span_1<Char>, charsWritten: int, format: ReadOnlySpan_1<Char>, provider: IFormatProvider): boolean;
-    tryFormat(utf8Destination: Span_1<Byte>, bytesWritten: int, format: ReadOnlySpan_1<Char>, provider: IFormatProvider): boolean;
-    getByteCount(): int;
-    tryWriteBigEndian(destination: Span_1<Byte>, bytesWritten: int): boolean;
-    writeBigEndian(destination: byte[], startIndex: int): int;
-    writeBigEndian(destination: byte[]): int;
-    writeBigEndian(destination: Span_1<Byte>): int;
+    Equals(other: UInt16): boolean;
+    CompareTo(obj: unknown): int;
+    ToString(format: string, formatProvider: IFormatProvider): string;
+    TryFormat(destination: Span_1<Char>, charsWritten: int, format: ReadOnlySpan_1<Char>, provider: IFormatProvider): boolean;
+    TryFormat(utf8Destination: Span_1<Byte>, bytesWritten: int, format: ReadOnlySpan_1<Char>, provider: IFormatProvider): boolean;
+    GetByteCount(): int;
+    TryWriteBigEndian(destination: Span_1<Byte>, bytesWritten: int): boolean;
+    WriteBigEndian(destination: byte[], startIndex: int): int;
+    WriteBigEndian(destination: byte[]): int;
+    WriteBigEndian(destination: Span_1<Byte>): int;
 }
 
 export interface UInt16$instance extends System_Numerics_Internal.IMinMaxValue_1$instance<UInt16> {}
@@ -3916,16 +3916,16 @@ export interface __UInt32$views {
     As_INumberBase_1(): System_Numerics_Internal.INumberBase_1$instance<UInt32>;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: UInt32): boolean;
-    compareTo(obj: unknown): int;
-    toString(format: string, formatProvider: IFormatProvider): string;
-    tryFormat(destination: Span_1<Char>, charsWritten: int, format: ReadOnlySpan_1<Char>, provider: IFormatProvider): boolean;
-    tryFormat(utf8Destination: Span_1<Byte>, bytesWritten: int, format: ReadOnlySpan_1<Char>, provider: IFormatProvider): boolean;
-    getByteCount(): int;
-    tryWriteBigEndian(destination: Span_1<Byte>, bytesWritten: int): boolean;
-    writeBigEndian(destination: byte[], startIndex: int): int;
-    writeBigEndian(destination: byte[]): int;
-    writeBigEndian(destination: Span_1<Byte>): int;
+    Equals(other: UInt32): boolean;
+    CompareTo(obj: unknown): int;
+    ToString(format: string, formatProvider: IFormatProvider): string;
+    TryFormat(destination: Span_1<Char>, charsWritten: int, format: ReadOnlySpan_1<Char>, provider: IFormatProvider): boolean;
+    TryFormat(utf8Destination: Span_1<Byte>, bytesWritten: int, format: ReadOnlySpan_1<Char>, provider: IFormatProvider): boolean;
+    GetByteCount(): int;
+    TryWriteBigEndian(destination: Span_1<Byte>, bytesWritten: int): boolean;
+    WriteBigEndian(destination: byte[], startIndex: int): int;
+    WriteBigEndian(destination: byte[]): int;
+    WriteBigEndian(destination: Span_1<Byte>): int;
 }
 
 export interface UInt32$instance extends System_Numerics_Internal.IMinMaxValue_1$instance<UInt32> {}
@@ -4009,16 +4009,16 @@ export interface __UInt64$views {
     As_INumberBase_1(): System_Numerics_Internal.INumberBase_1$instance<UInt64>;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: UInt64): boolean;
-    compareTo(obj: unknown): int;
-    toString(format: string, formatProvider: IFormatProvider): string;
-    tryFormat(destination: Span_1<Char>, charsWritten: int, format: ReadOnlySpan_1<Char>, provider: IFormatProvider): boolean;
-    tryFormat(utf8Destination: Span_1<Byte>, bytesWritten: int, format: ReadOnlySpan_1<Char>, provider: IFormatProvider): boolean;
-    getByteCount(): int;
-    tryWriteBigEndian(destination: Span_1<Byte>, bytesWritten: int): boolean;
-    writeBigEndian(destination: byte[], startIndex: int): int;
-    writeBigEndian(destination: byte[]): int;
-    writeBigEndian(destination: Span_1<Byte>): int;
+    Equals(other: UInt64): boolean;
+    CompareTo(obj: unknown): int;
+    ToString(format: string, formatProvider: IFormatProvider): string;
+    TryFormat(destination: Span_1<Char>, charsWritten: int, format: ReadOnlySpan_1<Char>, provider: IFormatProvider): boolean;
+    TryFormat(utf8Destination: Span_1<Byte>, bytesWritten: int, format: ReadOnlySpan_1<Char>, provider: IFormatProvider): boolean;
+    GetByteCount(): int;
+    TryWriteBigEndian(destination: Span_1<Byte>, bytesWritten: int): boolean;
+    WriteBigEndian(destination: byte[], startIndex: int): int;
+    WriteBigEndian(destination: byte[]): int;
+    WriteBigEndian(destination: Span_1<Byte>): int;
 }
 
 export interface UInt64$instance extends System_Numerics_Internal.IMinMaxValue_1$instance<UInt64> {}
@@ -4110,16 +4110,16 @@ export interface __UIntPtr$views {
     As_ISerializable(): System_Runtime_Serialization_Internal.ISerializable$instance;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: UIntPtr): boolean;
-    compareTo(obj: unknown): int;
-    toString(format: string, formatProvider: IFormatProvider): string;
-    tryFormat(destination: Span_1<Char>, charsWritten: int, format: ReadOnlySpan_1<Char>, provider: IFormatProvider): boolean;
-    tryFormat(utf8Destination: Span_1<Byte>, bytesWritten: int, format: ReadOnlySpan_1<Char>, provider: IFormatProvider): boolean;
-    getByteCount(): int;
-    tryWriteBigEndian(destination: Span_1<Byte>, bytesWritten: int): boolean;
-    writeBigEndian(destination: byte[], startIndex: int): int;
-    writeBigEndian(destination: byte[]): int;
-    writeBigEndian(destination: Span_1<Byte>): int;
+    Equals(other: UIntPtr): boolean;
+    CompareTo(obj: unknown): int;
+    ToString(format: string, formatProvider: IFormatProvider): string;
+    TryFormat(destination: Span_1<Char>, charsWritten: int, format: ReadOnlySpan_1<Char>, provider: IFormatProvider): boolean;
+    TryFormat(utf8Destination: Span_1<Byte>, bytesWritten: int, format: ReadOnlySpan_1<Char>, provider: IFormatProvider): boolean;
+    GetByteCount(): int;
+    TryWriteBigEndian(destination: Span_1<Byte>, bytesWritten: int): boolean;
+    WriteBigEndian(destination: byte[], startIndex: int): int;
+    WriteBigEndian(destination: byte[]): int;
+    WriteBigEndian(destination: Span_1<Byte>): int;
 }
 
 export interface UIntPtr$instance extends System_Numerics_Internal.IMinMaxValue_1$instance<UIntPtr>, System_Runtime_Serialization_Internal.ISerializable$instance {}
@@ -4171,8 +4171,8 @@ export interface __ValueTuple$views {
     As_ITuple(): System_Runtime_CompilerServices_Internal.ITuple$instance;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: ValueTuple): boolean;
-    compareTo(obj: unknown): int;
+    Equals(other: ValueTuple): boolean;
+    CompareTo(obj: unknown): int;
 }
 
 export interface ValueTuple$instance extends IComparable_1$instance<ValueTuple>, System_Runtime_CompilerServices_Internal.ITuple$instance {}
@@ -4204,8 +4204,8 @@ export interface __ValueTuple_1$views<T1> {
     As_ITuple(): System_Runtime_CompilerServices_Internal.ITuple$instance;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: ValueTuple_1<T1>): boolean;
-    compareTo(obj: unknown): int;
+    Equals(other: ValueTuple_1<T1>): boolean;
+    CompareTo(obj: unknown): int;
 }
 
 export interface ValueTuple_1$instance<T1> extends IComparable_1$instance<ValueTuple_1<T1>>, System_Runtime_CompilerServices_Internal.ITuple$instance {}
@@ -4238,8 +4238,8 @@ export interface __ValueTuple_2$views<T1, T2> {
     As_ITuple(): System_Runtime_CompilerServices_Internal.ITuple$instance;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: ValueTuple_2<T1, T2>): boolean;
-    compareTo(obj: unknown): int;
+    Equals(other: ValueTuple_2<T1, T2>): boolean;
+    CompareTo(obj: unknown): int;
 }
 
 export interface ValueTuple_2$instance<T1, T2> extends IComparable_1$instance<ValueTuple_2<T1, T2>>, System_Runtime_CompilerServices_Internal.ITuple$instance {}
@@ -4273,8 +4273,8 @@ export interface __ValueTuple_3$views<T1, T2, T3> {
     As_ITuple(): System_Runtime_CompilerServices_Internal.ITuple$instance;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: ValueTuple_3<T1, T2, T3>): boolean;
-    compareTo(obj: unknown): int;
+    Equals(other: ValueTuple_3<T1, T2, T3>): boolean;
+    CompareTo(obj: unknown): int;
 }
 
 export interface ValueTuple_3$instance<T1, T2, T3> extends IComparable_1$instance<ValueTuple_3<T1, T2, T3>>, System_Runtime_CompilerServices_Internal.ITuple$instance {}
@@ -4309,8 +4309,8 @@ export interface __ValueTuple_4$views<T1, T2, T3, T4> {
     As_ITuple(): System_Runtime_CompilerServices_Internal.ITuple$instance;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: ValueTuple_4<T1, T2, T3, T4>): boolean;
-    compareTo(obj: unknown): int;
+    Equals(other: ValueTuple_4<T1, T2, T3, T4>): boolean;
+    CompareTo(obj: unknown): int;
 }
 
 export interface ValueTuple_4$instance<T1, T2, T3, T4> extends IComparable_1$instance<ValueTuple_4<T1, T2, T3, T4>>, System_Runtime_CompilerServices_Internal.ITuple$instance {}
@@ -4346,8 +4346,8 @@ export interface __ValueTuple_5$views<T1, T2, T3, T4, T5> {
     As_ITuple(): System_Runtime_CompilerServices_Internal.ITuple$instance;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: ValueTuple_5<T1, T2, T3, T4, T5>): boolean;
-    compareTo(obj: unknown): int;
+    Equals(other: ValueTuple_5<T1, T2, T3, T4, T5>): boolean;
+    CompareTo(obj: unknown): int;
 }
 
 export interface ValueTuple_5$instance<T1, T2, T3, T4, T5> extends IComparable_1$instance<ValueTuple_5<T1, T2, T3, T4, T5>>, System_Runtime_CompilerServices_Internal.ITuple$instance {}
@@ -4384,8 +4384,8 @@ export interface __ValueTuple_6$views<T1, T2, T3, T4, T5, T6> {
     As_ITuple(): System_Runtime_CompilerServices_Internal.ITuple$instance;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: ValueTuple_6<T1, T2, T3, T4, T5, T6>): boolean;
-    compareTo(obj: unknown): int;
+    Equals(other: ValueTuple_6<T1, T2, T3, T4, T5, T6>): boolean;
+    CompareTo(obj: unknown): int;
 }
 
 export interface ValueTuple_6$instance<T1, T2, T3, T4, T5, T6> extends IComparable_1$instance<ValueTuple_6<T1, T2, T3, T4, T5, T6>>, System_Runtime_CompilerServices_Internal.ITuple$instance {}
@@ -4423,8 +4423,8 @@ export interface __ValueTuple_7$views<T1, T2, T3, T4, T5, T6, T7> {
     As_ITuple(): System_Runtime_CompilerServices_Internal.ITuple$instance;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: ValueTuple_7<T1, T2, T3, T4, T5, T6, T7>): boolean;
-    compareTo(obj: unknown): int;
+    Equals(other: ValueTuple_7<T1, T2, T3, T4, T5, T6, T7>): boolean;
+    CompareTo(obj: unknown): int;
 }
 
 export interface ValueTuple_7$instance<T1, T2, T3, T4, T5, T6, T7> extends IComparable_1$instance<ValueTuple_7<T1, T2, T3, T4, T5, T6, T7>>, System_Runtime_CompilerServices_Internal.ITuple$instance {}
@@ -4463,8 +4463,8 @@ export interface __ValueTuple_8$views<T1, T2, T3, T4, T5, T6, T7, TRest extends 
     As_ITuple(): System_Runtime_CompilerServices_Internal.ITuple$instance;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: ValueTuple_8<T1, T2, T3, T4, T5, T6, T7, TRest>): boolean;
-    compareTo(obj: unknown): int;
+    Equals(other: ValueTuple_8<T1, T2, T3, T4, T5, T6, T7, TRest>): boolean;
+    CompareTo(obj: unknown): int;
 }
 
 export interface ValueTuple_8$instance<T1, T2, T3, T4, T5, T6, T7, TRest extends unknown> extends IComparable_1$instance<ValueTuple_8<T1, T2, T3, T4, T5, T6, T7, TRest>>, System_Runtime_CompilerServices_Internal.ITuple$instance {}
@@ -5384,7 +5384,7 @@ export interface __Enum$views {
     As_ISpanFormattable(): ISpanFormattable$instance;
 
     // Structural method bridges for numeric interface constraints
-    compareTo(obj: unknown): int;
+    CompareTo(obj: unknown): int;
 }
 
 export interface Enum$instance extends IComparable$instance {}
@@ -6627,8 +6627,8 @@ export interface __String$views {
     As_ISpanParsable_1(): ISpanParsable_1$instance<String>;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: String): boolean;
-    compareTo(obj: unknown): int;
+    Equals(other: String): boolean;
+    CompareTo(obj: unknown): int;
 }
 
 export interface String$instance extends ICloneable$instance, IComparable$instance, ISpanParsable_1$instance<String> {}
@@ -6821,7 +6821,7 @@ export interface __TimeZoneInfo$views {
     As_ISerializable(): System_Runtime_Serialization_Internal.ISerializable$instance;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: TimeZoneInfo): boolean;
+    Equals(other: TimeZoneInfo): boolean;
 }
 
 export interface TimeZoneInfo$instance extends System_Runtime_Serialization_Internal.IDeserializationCallback$instance, System_Runtime_Serialization_Internal.ISerializable$instance {}
@@ -6855,7 +6855,7 @@ export interface __TimeZoneInfo_AdjustmentRule$views {
     As_ISerializable(): System_Runtime_Serialization_Internal.ISerializable$instance;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: TimeZoneInfo_AdjustmentRule): boolean;
+    Equals(other: TimeZoneInfo_AdjustmentRule): boolean;
 }
 
 export interface TimeZoneInfo_AdjustmentRule$instance extends System_Runtime_Serialization_Internal.IDeserializationCallback$instance, System_Runtime_Serialization_Internal.ISerializable$instance {}
@@ -6902,7 +6902,7 @@ export interface __Tuple_1$views<T1> {
     As_ITuple(): System_Runtime_CompilerServices_Internal.ITuple$instance;
 
     // Structural method bridges for numeric interface constraints
-    compareTo(obj: unknown): int;
+    CompareTo(obj: unknown): int;
 }
 
 export interface Tuple_1$instance<T1> extends System_Collections_Internal.IStructuralComparable$instance, System_Runtime_CompilerServices_Internal.ITuple$instance {}
@@ -6931,7 +6931,7 @@ export interface __Tuple_2$views<T1, T2> {
     As_ITuple(): System_Runtime_CompilerServices_Internal.ITuple$instance;
 
     // Structural method bridges for numeric interface constraints
-    compareTo(obj: unknown): int;
+    CompareTo(obj: unknown): int;
 }
 
 export interface Tuple_2$instance<T1, T2> extends System_Collections_Internal.IStructuralComparable$instance, System_Runtime_CompilerServices_Internal.ITuple$instance {}
@@ -6961,7 +6961,7 @@ export interface __Tuple_3$views<T1, T2, T3> {
     As_ITuple(): System_Runtime_CompilerServices_Internal.ITuple$instance;
 
     // Structural method bridges for numeric interface constraints
-    compareTo(obj: unknown): int;
+    CompareTo(obj: unknown): int;
 }
 
 export interface Tuple_3$instance<T1, T2, T3> extends System_Collections_Internal.IStructuralComparable$instance, System_Runtime_CompilerServices_Internal.ITuple$instance {}
@@ -6992,7 +6992,7 @@ export interface __Tuple_4$views<T1, T2, T3, T4> {
     As_ITuple(): System_Runtime_CompilerServices_Internal.ITuple$instance;
 
     // Structural method bridges for numeric interface constraints
-    compareTo(obj: unknown): int;
+    CompareTo(obj: unknown): int;
 }
 
 export interface Tuple_4$instance<T1, T2, T3, T4> extends System_Collections_Internal.IStructuralComparable$instance, System_Runtime_CompilerServices_Internal.ITuple$instance {}
@@ -7024,7 +7024,7 @@ export interface __Tuple_5$views<T1, T2, T3, T4, T5> {
     As_ITuple(): System_Runtime_CompilerServices_Internal.ITuple$instance;
 
     // Structural method bridges for numeric interface constraints
-    compareTo(obj: unknown): int;
+    CompareTo(obj: unknown): int;
 }
 
 export interface Tuple_5$instance<T1, T2, T3, T4, T5> extends System_Collections_Internal.IStructuralComparable$instance, System_Runtime_CompilerServices_Internal.ITuple$instance {}
@@ -7057,7 +7057,7 @@ export interface __Tuple_6$views<T1, T2, T3, T4, T5, T6> {
     As_ITuple(): System_Runtime_CompilerServices_Internal.ITuple$instance;
 
     // Structural method bridges for numeric interface constraints
-    compareTo(obj: unknown): int;
+    CompareTo(obj: unknown): int;
 }
 
 export interface Tuple_6$instance<T1, T2, T3, T4, T5, T6> extends System_Collections_Internal.IStructuralComparable$instance, System_Runtime_CompilerServices_Internal.ITuple$instance {}
@@ -7091,7 +7091,7 @@ export interface __Tuple_7$views<T1, T2, T3, T4, T5, T6, T7> {
     As_ITuple(): System_Runtime_CompilerServices_Internal.ITuple$instance;
 
     // Structural method bridges for numeric interface constraints
-    compareTo(obj: unknown): int;
+    CompareTo(obj: unknown): int;
 }
 
 export interface Tuple_7$instance<T1, T2, T3, T4, T5, T6, T7> extends System_Collections_Internal.IStructuralComparable$instance, System_Runtime_CompilerServices_Internal.ITuple$instance {}
@@ -7126,7 +7126,7 @@ export interface __Tuple_8$views<T1, T2, T3, T4, T5, T6, T7, TRest> {
     As_ITuple(): System_Runtime_CompilerServices_Internal.ITuple$instance;
 
     // Structural method bridges for numeric interface constraints
-    compareTo(obj: unknown): int;
+    CompareTo(obj: unknown): int;
 }
 
 export interface Tuple_8$instance<T1, T2, T3, T4, T5, T6, T7, TRest> extends System_Collections_Internal.IStructuralComparable$instance, System_Runtime_CompilerServices_Internal.ITuple$instance {}
@@ -7560,7 +7560,7 @@ export interface __Uri$views {
     As_ISerializable(): System_Runtime_Serialization_Internal.ISerializable$instance;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: Uri): boolean;
+    Equals(other: Uri): boolean;
 }
 
 export interface Uri$instance extends System_Runtime_Serialization_Internal.ISerializable$instance {}
@@ -7710,9 +7710,9 @@ export interface __Version$views {
     As_IUtf8SpanParsable_1(): IUtf8SpanParsable_1$instance<Version>;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: Version): boolean;
-    compareTo(obj: unknown): int;
-    tryFormat(utf8Destination: Span_1<Byte>, bytesWritten: int, format: ReadOnlySpan_1<Char>, provider: IFormatProvider): boolean;
+    Equals(other: Version): boolean;
+    CompareTo(obj: unknown): int;
+    TryFormat(utf8Destination: Span_1<Byte>, bytesWritten: int, format: ReadOnlySpan_1<Char>, provider: IFormatProvider): boolean;
 }
 
 export interface Version$instance extends ICloneable$instance, IComparable$instance, IUtf8SpanParsable_1$instance<Version> {}

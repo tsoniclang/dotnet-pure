@@ -148,7 +148,7 @@ export interface __TransactionOptions$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<TransactionOptions>;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: TransactionOptions): boolean;
+    Equals(other: TransactionOptions): boolean;
 }
 
 export type TransactionOptions = TransactionOptions$instance & __TransactionOptions$views;

@@ -193,7 +193,7 @@ export interface __ImmutableArray_1$views<T> {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<ImmutableArray_1<T>>;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: ImmutableArray_1<T>): boolean;
+    Equals(other: ImmutableArray_1<T>): boolean;
 }
 
 export interface ImmutableArray_1$instance<T> extends System_Collections_Internal.IStructuralComparable$instance {}

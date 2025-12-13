@@ -414,7 +414,7 @@ export interface __ArrayWithOffset$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<ArrayWithOffset>;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: ArrayWithOffset): boolean;
+    Equals(other: ArrayWithOffset): boolean;
 }
 
 export type ArrayWithOffset = ArrayWithOffset$instance & __ArrayWithOffset$views;
@@ -439,7 +439,7 @@ export interface __CLong$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<CLong>;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: CLong): boolean;
+    Equals(other: CLong): boolean;
 }
 
 export type CLong = CLong$instance & __CLong$views;
@@ -490,7 +490,7 @@ export interface __CULong$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<CULong>;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: CULong): boolean;
+    Equals(other: CULong): boolean;
 }
 
 export type CULong = CULong$instance & __CULong$views;
@@ -520,7 +520,7 @@ export interface __GCHandle$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<GCHandle>;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: GCHandle): boolean;
+    Equals(other: GCHandle): boolean;
 }
 
 export type GCHandle = GCHandle$instance & __GCHandle$views;
@@ -548,7 +548,7 @@ export interface __GCHandle_1$views<T> {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<GCHandle_1<T>>;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: GCHandle_1<T>): boolean;
+    Equals(other: GCHandle_1<T>): boolean;
 }
 
 export interface GCHandle_1$instance<T> extends System_Internal.IDisposable$instance {}
@@ -731,17 +731,17 @@ export interface __NFloat$views {
     As_ITrigonometricFunctions_1(): System_Numerics_Internal.ITrigonometricFunctions_1$instance<NFloat>;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: NFloat): boolean;
-    compareTo(obj: unknown): int;
-    toString(format: string, formatProvider: import("../../System/internal/index").IFormatProvider): string;
-    tryFormat(destination: import("../../System/internal/index").Span_1<import("../../System/internal/index").Char>, charsWritten: int, format: import("../../System/internal/index").ReadOnlySpan_1<import("../../System/internal/index").Char>, provider: import("../../System/internal/index").IFormatProvider): boolean;
-    tryFormat(utf8Destination: import("../../System/internal/index").Span_1<import("../../System/internal/index").Byte>, bytesWritten: int, format: import("../../System/internal/index").ReadOnlySpan_1<import("../../System/internal/index").Char>, provider: import("../../System/internal/index").IFormatProvider): boolean;
-    getExponentByteCount(): int;
-    getExponentShortestBitLength(): int;
-    tryWriteExponentBigEndian(destination: import("../../System/internal/index").Span_1<import("../../System/internal/index").Byte>, bytesWritten: int): boolean;
-    writeExponentBigEndian(destination: byte[], startIndex: int): int;
-    writeExponentBigEndian(destination: byte[]): int;
-    writeExponentBigEndian(destination: import("../../System/internal/index").Span_1<import("../../System/internal/index").Byte>): int;
+    Equals(other: NFloat): boolean;
+    CompareTo(obj: unknown): int;
+    ToString(format: string, formatProvider: import("../../System/internal/index").IFormatProvider): string;
+    TryFormat(destination: import("../../System/internal/index").Span_1<import("../../System/internal/index").Char>, charsWritten: int, format: import("../../System/internal/index").ReadOnlySpan_1<import("../../System/internal/index").Char>, provider: import("../../System/internal/index").IFormatProvider): boolean;
+    TryFormat(utf8Destination: import("../../System/internal/index").Span_1<import("../../System/internal/index").Byte>, bytesWritten: int, format: import("../../System/internal/index").ReadOnlySpan_1<import("../../System/internal/index").Char>, provider: import("../../System/internal/index").IFormatProvider): boolean;
+    GetExponentByteCount(): int;
+    GetExponentShortestBitLength(): int;
+    TryWriteExponentBigEndian(destination: import("../../System/internal/index").Span_1<import("../../System/internal/index").Byte>, bytesWritten: int): boolean;
+    WriteExponentBigEndian(destination: byte[], startIndex: int): int;
+    WriteExponentBigEndian(destination: byte[]): int;
+    WriteExponentBigEndian(destination: import("../../System/internal/index").Span_1<import("../../System/internal/index").Byte>): int;
 }
 
 export interface NFloat$instance extends System_Numerics_Internal.IMinMaxValue_1$instance<NFloat> {}
@@ -771,7 +771,7 @@ export interface __OSPlatform$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<OSPlatform>;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: OSPlatform): boolean;
+    Equals(other: OSPlatform): boolean;
 }
 
 export type OSPlatform = OSPlatform$instance & __OSPlatform$views;
@@ -800,7 +800,7 @@ export interface __PinnedGCHandle_1$views<T> {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<PinnedGCHandle_1<T>>;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: PinnedGCHandle_1<T>): boolean;
+    Equals(other: PinnedGCHandle_1<T>): boolean;
 }
 
 export interface PinnedGCHandle_1$instance<T> extends System_Internal.IDisposable$instance {}
@@ -831,7 +831,7 @@ export interface __WeakGCHandle_1$views<T> {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<WeakGCHandle_1<T>>;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: WeakGCHandle_1<T>): boolean;
+    Equals(other: WeakGCHandle_1<T>): boolean;
 }
 
 export interface WeakGCHandle_1$instance<T> extends System_Internal.IDisposable$instance {}

@@ -421,16 +421,16 @@ export interface __BigInteger$views {
     As_INumberBase_1(): INumberBase_1$instance<BigInteger>;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: BigInteger): boolean;
-    compareTo(obj: unknown): int;
-    toString(format: string, formatProvider: import("../../System/internal/index").IFormatProvider): string;
-    tryFormat(destination: import("../../System/internal/index").Span_1<import("../../System/internal/index").Char>, charsWritten: int, format: import("../../System/internal/index").ReadOnlySpan_1<import("../../System/internal/index").Char>, provider: import("../../System/internal/index").IFormatProvider): boolean;
-    tryFormat(utf8Destination: import("../../System/internal/index").Span_1<import("../../System/internal/index").Byte>, bytesWritten: int, format: import("../../System/internal/index").ReadOnlySpan_1<import("../../System/internal/index").Char>, provider: import("../../System/internal/index").IFormatProvider): boolean;
-    getByteCount(): int;
-    tryWriteBigEndian(destination: import("../../System/internal/index").Span_1<import("../../System/internal/index").Byte>, bytesWritten: int): boolean;
-    writeBigEndian(destination: byte[], startIndex: int): int;
-    writeBigEndian(destination: byte[]): int;
-    writeBigEndian(destination: import("../../System/internal/index").Span_1<import("../../System/internal/index").Byte>): int;
+    Equals(other: BigInteger): boolean;
+    CompareTo(obj: unknown): int;
+    ToString(format: string, formatProvider: import("../../System/internal/index").IFormatProvider): string;
+    TryFormat(destination: import("../../System/internal/index").Span_1<import("../../System/internal/index").Char>, charsWritten: int, format: import("../../System/internal/index").ReadOnlySpan_1<import("../../System/internal/index").Char>, provider: import("../../System/internal/index").IFormatProvider): boolean;
+    TryFormat(utf8Destination: import("../../System/internal/index").Span_1<import("../../System/internal/index").Byte>, bytesWritten: int, format: import("../../System/internal/index").ReadOnlySpan_1<import("../../System/internal/index").Char>, provider: import("../../System/internal/index").IFormatProvider): boolean;
+    GetByteCount(): int;
+    TryWriteBigEndian(destination: import("../../System/internal/index").Span_1<import("../../System/internal/index").Byte>, bytesWritten: int): boolean;
+    WriteBigEndian(destination: byte[], startIndex: int): int;
+    WriteBigEndian(destination: byte[]): int;
+    WriteBigEndian(destination: import("../../System/internal/index").Span_1<import("../../System/internal/index").Byte>): int;
 }
 
 export type BigInteger = BigInteger$instance & __BigInteger$views;
@@ -535,10 +535,10 @@ export interface __Complex$views {
     As_INumberBase_1(): INumberBase_1$instance<Complex>;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: Complex): boolean;
-    toString(format: string, formatProvider: import("../../System/internal/index").IFormatProvider): string;
-    tryFormat(destination: import("../../System/internal/index").Span_1<import("../../System/internal/index").Char>, charsWritten: int, format: import("../../System/internal/index").ReadOnlySpan_1<import("../../System/internal/index").Char>, provider: import("../../System/internal/index").IFormatProvider): boolean;
-    tryFormat(utf8Destination: import("../../System/internal/index").Span_1<import("../../System/internal/index").Byte>, bytesWritten: int, format: import("../../System/internal/index").ReadOnlySpan_1<import("../../System/internal/index").Char>, provider: import("../../System/internal/index").IFormatProvider): boolean;
+    Equals(other: Complex): boolean;
+    ToString(format: string, formatProvider: import("../../System/internal/index").IFormatProvider): string;
+    TryFormat(destination: import("../../System/internal/index").Span_1<import("../../System/internal/index").Char>, charsWritten: int, format: import("../../System/internal/index").ReadOnlySpan_1<import("../../System/internal/index").Char>, provider: import("../../System/internal/index").IFormatProvider): boolean;
+    TryFormat(utf8Destination: import("../../System/internal/index").Span_1<import("../../System/internal/index").Byte>, bytesWritten: int, format: import("../../System/internal/index").ReadOnlySpan_1<import("../../System/internal/index").Char>, provider: import("../../System/internal/index").IFormatProvider): boolean;
 }
 
 export type Complex = Complex$instance & __Complex$views;
@@ -605,7 +605,7 @@ export interface __Matrix3x2$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<Matrix3x2>;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: Matrix3x2): boolean;
+    Equals(other: Matrix3x2): boolean;
 }
 
 export type Matrix3x2 = Matrix3x2$instance & __Matrix3x2$views;
@@ -716,7 +716,7 @@ export interface __Matrix4x4$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<Matrix4x4>;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: Matrix4x4): boolean;
+    Equals(other: Matrix4x4): boolean;
 }
 
 export type Matrix4x4 = Matrix4x4$instance & __Matrix4x4$views;
@@ -753,7 +753,7 @@ export interface __Plane$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<Plane>;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: Plane): boolean;
+    Equals(other: Plane): boolean;
 }
 
 export type Plane = Plane$instance & __Plane$views;
@@ -805,7 +805,7 @@ export interface __Quaternion$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<Quaternion>;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: Quaternion): boolean;
+    Equals(other: Quaternion): boolean;
 }
 
 export type Quaternion = Quaternion$instance & __Quaternion$views;
@@ -832,7 +832,7 @@ export interface __TotalOrderIeee754Comparer_1$views<T extends IFloatingPointIee
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<TotalOrderIeee754Comparer_1<T>>;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: TotalOrderIeee754Comparer_1<T>): boolean;
+    Equals(other: TotalOrderIeee754Comparer_1<T>): boolean;
 }
 
 export interface TotalOrderIeee754Comparer_1$instance<T extends IFloatingPointIeee754_1<T>> extends System_Collections_Generic_Internal.IComparer_1$instance<T> {}
@@ -878,7 +878,7 @@ export interface __Vector_1$views<T> {
     As_IFormattable(): System_Internal.IFormattable$instance;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: Vector_1<T>): boolean;
+    Equals(other: Vector_1<T>): boolean;
 }
 
 export interface Vector_1$instance<T> extends IAdditionOperators_3$instance<Vector_1<T>, Vector_1<T>, Vector_1<T>>, IBitwiseOperators_3$instance<Vector_1<T>, Vector_1<T>, Vector_1<T>>, IDivisionOperators_3$instance<Vector_1<T>, Vector_1<T>, Vector_1<T>>, IEqualityOperators_3$instance<Vector_1<T>, Vector_1<T>, System_Internal.Boolean>, IMultiplyOperators_3$instance<Vector_1<T>, Vector_1<T>, Vector_1<T>>, IShiftOperators_3$instance<Vector_1<T>, System_Internal.Int32, Vector_1<T>>, ISubtractionOperators_3$instance<Vector_1<T>, Vector_1<T>, Vector_1<T>>, IUnaryNegationOperators_2$instance<Vector_1<T>, Vector_1<T>>, IUnaryPlusOperators_2$instance<Vector_1<T>, Vector_1<T>> {}
@@ -1038,7 +1038,7 @@ export interface __Vector2$views {
     As_IFormattable(): System_Internal.IFormattable$instance;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: Vector2): boolean;
+    Equals(other: Vector2): boolean;
 }
 
 export type Vector2 = Vector2$instance & __Vector2$views;
@@ -1198,7 +1198,7 @@ export interface __Vector3$views {
     As_IFormattable(): System_Internal.IFormattable$instance;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: Vector3): boolean;
+    Equals(other: Vector3): boolean;
 }
 
 export type Vector3 = Vector3$instance & __Vector3$views;
@@ -1364,7 +1364,7 @@ export interface __Vector4$views {
     As_IFormattable(): System_Internal.IFormattable$instance;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: Vector4): boolean;
+    Equals(other: Vector4): boolean;
 }
 
 export type Vector4 = Vector4$instance & __Vector4$views;

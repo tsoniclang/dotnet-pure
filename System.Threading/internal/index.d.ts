@@ -138,7 +138,7 @@ export interface __AsyncFlowControl$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<AsyncFlowControl>;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: AsyncFlowControl): boolean;
+    Equals(other: AsyncFlowControl): boolean;
 }
 
 export interface AsyncFlowControl$instance extends System_Internal.IDisposable$instance {}
@@ -188,7 +188,7 @@ export interface __CancellationToken$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<CancellationToken>;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: CancellationToken): boolean;
+    Equals(other: CancellationToken): boolean;
 }
 
 export type CancellationToken = CancellationToken$instance & __CancellationToken$views;
@@ -216,7 +216,7 @@ export interface __CancellationTokenRegistration$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<CancellationTokenRegistration>;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: CancellationTokenRegistration): boolean;
+    Equals(other: CancellationTokenRegistration): boolean;
 }
 
 export interface CancellationTokenRegistration$instance extends System_Internal.IAsyncDisposable$instance, System_Internal.IDisposable$instance {}
@@ -252,7 +252,7 @@ export interface __LockCookie$views {
     As_IEquatable_1(): System_Internal.IEquatable_1$instance<LockCookie>;
 
     // Structural method bridges for numeric interface constraints
-    equals(other: LockCookie): boolean;
+    Equals(other: LockCookie): boolean;
 }
 
 export type LockCookie = LockCookie$instance & __LockCookie$views;
