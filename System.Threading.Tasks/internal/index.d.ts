@@ -2,8 +2,8 @@
 // Namespace: System.Threading.Tasks
 // Assembly: System.Private.CoreLib, System.Threading.Tasks.Parallel
 
-// Branded primitive types are sourced from @tsonic/types
-import type { sbyte, byte, short, ushort, int, uint, long, ulong, int128, uint128, half, float, double, decimal, nint, nuint, char } from '@tsonic/types';
+// Primitive type aliases from @tsonic/core
+import type { sbyte, byte, short, ushort, int, uint, long, ulong, int128, uint128, half, float, double, decimal, nint, nuint, char } from '@tsonic/core/types.js';
 
 // Import types from other namespaces
 import type { OrderablePartitioner_1, Partitioner_1 } from "../../System.Collections.Concurrent/internal/index.js";

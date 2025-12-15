@@ -2,8 +2,8 @@
 // Namespace: System.Net.ServerSentEvents
 // Assembly: System.Net.ServerSentEvents
 
-// Branded primitive types are sourced from @tsonic/types
-import type { sbyte, byte, short, ushort, int, uint, long, ulong, int128, uint128, half, float, double, decimal, nint, nuint, char } from '@tsonic/types';
+// Primitive type aliases from @tsonic/core
+import type { sbyte, byte, short, ushort, int, uint, long, ulong, int128, uint128, half, float, double, decimal, nint, nuint, char } from '@tsonic/core/types.js';
 
 // Import types from other namespaces
 import type { IBufferWriter_1 } from "../../System.Buffers/internal/index.js";

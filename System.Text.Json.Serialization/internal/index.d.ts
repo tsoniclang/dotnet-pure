@@ -2,11 +2,11 @@
 // Namespace: System.Text.Json.Serialization
 // Assembly: System.Text.Json
 
-// Branded primitive types are sourced from @tsonic/types
-import type { sbyte, byte, short, ushort, int, uint, long, ulong, int128, uint128, half, float, double, decimal, nint, nuint, char } from '@tsonic/types';
+// Primitive type aliases from @tsonic/core
+import type { sbyte, byte, short, ushort, int, uint, long, ulong, int128, uint128, half, float, double, decimal, nint, nuint, char } from '@tsonic/core/types.js';
 
-// Import support types from @tsonic/types
-import type { ptr } from "@tsonic/types";
+// Import support types from @tsonic/core
+import type { ptr } from "@tsonic/core/types.js";
 
 // Import types from other namespaces
 import * as System_Text_Json_Serialization_Metadata_Internal from "../../System.Text.Json.Serialization.Metadata/internal/index.js";

@@ -2,8 +2,8 @@
 // Namespace: Microsoft.VisualBasic.FileIO
 // Assembly: Microsoft.VisualBasic.Core
 
-// Branded primitive types are sourced from @tsonic/types
-import type { sbyte, byte, short, ushort, int, uint, long, ulong, int128, uint128, half, float, double, decimal, nint, nuint, char } from '@tsonic/types';
+// Primitive type aliases from @tsonic/core
+import type { sbyte, byte, short, ushort, int, uint, long, ulong, int128, uint128, half, float, double, decimal, nint, nuint, char } from '@tsonic/core/types.js';
 
 // Import types from other namespaces
 import type { ReadOnlyCollection_1 } from "../../System.Collections.ObjectModel/internal/index.js";

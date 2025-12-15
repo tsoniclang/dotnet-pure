@@ -2,8 +2,8 @@
 // Namespace: System.Formats.Tar
 // Assembly: System.Formats.Tar
 
-// Branded primitive types are sourced from @tsonic/types
-import type { sbyte, byte, short, ushort, int, uint, long, ulong, int128, uint128, half, float, double, decimal, nint, nuint, char } from '@tsonic/types';
+// Primitive type aliases from @tsonic/core
+import type { sbyte, byte, short, ushort, int, uint, long, ulong, int128, uint128, half, float, double, decimal, nint, nuint, char } from '@tsonic/core/types.js';
 
 // Import types from other namespaces
 import type { IEnumerable_1, IReadOnlyDictionary_2, KeyValuePair_2 } from "../../System.Collections.Generic/internal/index.js";

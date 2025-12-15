@@ -53,14 +53,14 @@ import * as System_Xml_Linq from "../../System.Xml.Linq/internal/index.js";
 import * as System_Xml_Schema from "../../System.Xml.Schema/internal/index.js";
 import * as System_Xml_XPath from "../../System.Xml.XPath/internal/index.js";
 
-// Import branded primitive types
-import type { sbyte, byte, short, ushort, int, uint, long, ulong, int128, uint128, half, float, double, decimal, nint, nuint, char } from '@tsonic/types';
+// Import primitive type aliases
+import type { sbyte, byte, short, ushort, int, uint, long, ulong, int128, uint128, half, float, double, decimal, nint, nuint, char } from '@tsonic/core/types.js';
 
 // Import CLR type aliases for generic type arguments
 import * as System_Internal from "../../System/internal/index.js";
 
 // Import unsafe type markers
-import type { ptr } from '@tsonic/types';
+import type { ptr } from '@tsonic/core/types.js';
 
 export interface __Ext_String {
   AsSpan(): System.ReadOnlySpan_1<System_Internal.Char>;
