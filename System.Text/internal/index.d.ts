@@ -2,11 +2,11 @@
 // Namespace: System.Text
 // Assembly: System.Memory, System.Private.CoreLib, System.Text.Encoding.CodePages
 
-// Branded primitive types are sourced from @tsonic/types
-import type { sbyte, byte, short, ushort, int, uint, long, ulong, int128, uint128, half, float, double, decimal, nint, nuint, char } from '@tsonic/types';
+// Primitive type aliases from @tsonic/core
+import type { sbyte, byte, short, ushort, int, uint, long, ulong, int128, uint128, half, float, double, decimal, nint, nuint, char } from '@tsonic/core/types.js';
 
-// Import support types from @tsonic/types
-import type { ptr } from "@tsonic/types";
+// Import support types from @tsonic/core
+import type { ptr } from "@tsonic/core/types.js";
 
 // Import types from other namespaces
 import type { IBufferWriter_1, OperationStatus, ReadOnlySequence_1 } from "../../System.Buffers/internal/index.js";
