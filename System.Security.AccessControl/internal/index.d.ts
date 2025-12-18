@@ -269,10 +269,10 @@ export interface AccessRule_1$instance<T extends unknown> extends AccessRule {
 
 
 export const AccessRule_1: {
-    new<T extends unknown>(identity: IdentityReference, rights: T, type_: AccessControlType): AccessRule_1$instance<T>;
-    new<T extends unknown>(identity: IdentityReference, rights: T, inheritanceFlags: InheritanceFlags, propagationFlags: PropagationFlags, type_: AccessControlType): AccessRule_1$instance<T>;
-    new<T extends unknown>(identity: string, rights: T, type_: AccessControlType): AccessRule_1$instance<T>;
-    new<T extends unknown>(identity: string, rights: T, inheritanceFlags: InheritanceFlags, propagationFlags: PropagationFlags, type_: AccessControlType): AccessRule_1$instance<T>;
+    new<T extends unknown>(identity: IdentityReference, rights: T, type_: AccessControlType): AccessRule_1<T>;
+    new<T extends unknown>(identity: IdentityReference, rights: T, inheritanceFlags: InheritanceFlags, propagationFlags: PropagationFlags, type_: AccessControlType): AccessRule_1<T>;
+    new<T extends unknown>(identity: string, rights: T, type_: AccessControlType): AccessRule_1<T>;
+    new<T extends unknown>(identity: string, rights: T, inheritanceFlags: InheritanceFlags, propagationFlags: PropagationFlags, type_: AccessControlType): AccessRule_1<T>;
 };
 
 
@@ -286,7 +286,7 @@ export interface AceEnumerator$instance {
 
 
 export const AceEnumerator: {
-    new(): AceEnumerator$instance;
+    new(): AceEnumerator;
 };
 
 
@@ -314,10 +314,10 @@ export interface AuditRule_1$instance<T extends unknown> extends AuditRule {
 
 
 export const AuditRule_1: {
-    new<T extends unknown>(identity: IdentityReference, rights: T, flags: AuditFlags): AuditRule_1$instance<T>;
-    new<T extends unknown>(identity: IdentityReference, rights: T, inheritanceFlags: InheritanceFlags, propagationFlags: PropagationFlags, flags: AuditFlags): AuditRule_1$instance<T>;
-    new<T extends unknown>(identity: string, rights: T, flags: AuditFlags): AuditRule_1$instance<T>;
-    new<T extends unknown>(identity: string, rights: T, inheritanceFlags: InheritanceFlags, propagationFlags: PropagationFlags, flags: AuditFlags): AuditRule_1$instance<T>;
+    new<T extends unknown>(identity: IdentityReference, rights: T, flags: AuditFlags): AuditRule_1<T>;
+    new<T extends unknown>(identity: IdentityReference, rights: T, inheritanceFlags: InheritanceFlags, propagationFlags: PropagationFlags, flags: AuditFlags): AuditRule_1<T>;
+    new<T extends unknown>(identity: string, rights: T, flags: AuditFlags): AuditRule_1<T>;
+    new<T extends unknown>(identity: string, rights: T, inheritanceFlags: InheritanceFlags, propagationFlags: PropagationFlags, flags: AuditFlags): AuditRule_1<T>;
 };
 
 
@@ -346,7 +346,7 @@ export interface AuthorizationRuleCollection$instance extends ReadOnlyCollection
 
 
 export const AuthorizationRuleCollection: {
-    new(): AuthorizationRuleCollection$instance;
+    new(): AuthorizationRuleCollection;
 };
 
 
@@ -367,7 +367,7 @@ export interface CommonAce$instance extends QualifiedAce {
 
 
 export const CommonAce: {
-    new(flags: AceFlags, qualifier: AceQualifier, accessMask: int, sid: SecurityIdentifier, isCallback: boolean, opaque: byte[]): CommonAce$instance;
+    new(flags: AceFlags, qualifier: AceQualifier, accessMask: int, sid: SecurityIdentifier, isCallback: boolean, opaque: byte[]): CommonAce;
     MaxOpaqueLength(isCallback: boolean): int;
 };
 
@@ -436,10 +436,10 @@ export interface CommonSecurityDescriptor$instance extends GenericSecurityDescri
 
 
 export const CommonSecurityDescriptor: {
-    new(isContainer: boolean, isDS: boolean, binaryForm: byte[], offset: int): CommonSecurityDescriptor$instance;
-    new(isContainer: boolean, isDS: boolean, flags: ControlFlags, owner: SecurityIdentifier, group: SecurityIdentifier, systemAcl: SystemAcl, discretionaryAcl: DiscretionaryAcl): CommonSecurityDescriptor$instance;
-    new(isContainer: boolean, isDS: boolean, rawSecurityDescriptor: RawSecurityDescriptor): CommonSecurityDescriptor$instance;
-    new(isContainer: boolean, isDS: boolean, sddlForm: string): CommonSecurityDescriptor$instance;
+    new(isContainer: boolean, isDS: boolean, binaryForm: byte[], offset: int): CommonSecurityDescriptor;
+    new(isContainer: boolean, isDS: boolean, flags: ControlFlags, owner: SecurityIdentifier, group: SecurityIdentifier, systemAcl: SystemAcl, discretionaryAcl: DiscretionaryAcl): CommonSecurityDescriptor;
+    new(isContainer: boolean, isDS: boolean, rawSecurityDescriptor: RawSecurityDescriptor): CommonSecurityDescriptor;
+    new(isContainer: boolean, isDS: boolean, sddlForm: string): CommonSecurityDescriptor;
 };
 
 
@@ -453,7 +453,7 @@ export interface CompoundAce$instance extends KnownAce {
 
 
 export const CompoundAce: {
-    new(flags: AceFlags, accessMask: int, compoundAceType: CompoundAceType, sid: SecurityIdentifier): CompoundAce$instance;
+    new(flags: AceFlags, accessMask: int, compoundAceType: CompoundAceType, sid: SecurityIdentifier): CompoundAce;
 };
 
 
@@ -469,7 +469,7 @@ export interface CustomAce$instance extends GenericAce {
 
 
 export const CustomAce: {
-    new(type_: AceType, flags: AceFlags, opaque: byte[]): CustomAce$instance;
+    new(type_: AceType, flags: AceFlags, opaque: byte[]): CustomAce;
     readonly MaxOpaqueLength: int;
 };
 
@@ -497,8 +497,8 @@ export interface DirectorySecurity$instance extends FileSystemSecurity {
 
 
 export const DirectorySecurity: {
-    new(): DirectorySecurity$instance;
-    new(name: string, includeSections: AccessControlSections): DirectorySecurity$instance;
+    new(): DirectorySecurity;
+    new(name: string, includeSections: AccessControlSections): DirectorySecurity;
 };
 
 
@@ -525,9 +525,9 @@ export interface DiscretionaryAcl$instance extends CommonAcl$instance {
 
 
 export const DiscretionaryAcl: {
-    new(isContainer: boolean, isDS: boolean, revision: byte, capacity: int): DiscretionaryAcl$instance;
-    new(isContainer: boolean, isDS: boolean, capacity: int): DiscretionaryAcl$instance;
-    new(isContainer: boolean, isDS: boolean, rawAcl: RawAcl): DiscretionaryAcl$instance;
+    new(isContainer: boolean, isDS: boolean, revision: byte, capacity: int): DiscretionaryAcl;
+    new(isContainer: boolean, isDS: boolean, capacity: int): DiscretionaryAcl;
+    new(isContainer: boolean, isDS: boolean, rawAcl: RawAcl): DiscretionaryAcl;
 };
 
 
@@ -545,8 +545,8 @@ export interface EventWaitHandleAccessRule$instance extends AccessRule {
 
 
 export const EventWaitHandleAccessRule: {
-    new(identity: IdentityReference, eventRights: EventWaitHandleRights, type_: AccessControlType): EventWaitHandleAccessRule$instance;
-    new(identity: string, eventRights: EventWaitHandleRights, type_: AccessControlType): EventWaitHandleAccessRule$instance;
+    new(identity: IdentityReference, eventRights: EventWaitHandleRights, type_: AccessControlType): EventWaitHandleAccessRule;
+    new(identity: string, eventRights: EventWaitHandleRights, type_: AccessControlType): EventWaitHandleAccessRule;
 };
 
 
@@ -558,7 +558,7 @@ export interface EventWaitHandleAuditRule$instance extends AuditRule {
 
 
 export const EventWaitHandleAuditRule: {
-    new(identity: IdentityReference, eventRights: EventWaitHandleRights, flags: AuditFlags): EventWaitHandleAuditRule$instance;
+    new(identity: IdentityReference, eventRights: EventWaitHandleRights, flags: AuditFlags): EventWaitHandleAuditRule;
 };
 
 
@@ -585,7 +585,7 @@ export interface EventWaitHandleSecurity$instance extends NativeObjectSecurity {
 
 
 export const EventWaitHandleSecurity: {
-    new(): EventWaitHandleSecurity$instance;
+    new(): EventWaitHandleSecurity;
 };
 
 
@@ -596,8 +596,8 @@ export interface FileSecurity$instance extends FileSystemSecurity {
 
 
 export const FileSecurity: {
-    new(): FileSecurity$instance;
-    new(fileName: string, includeSections: AccessControlSections): FileSecurity$instance;
+    new(): FileSecurity;
+    new(fileName: string, includeSections: AccessControlSections): FileSecurity;
 };
 
 
@@ -609,10 +609,10 @@ export interface FileSystemAccessRule$instance extends AccessRule {
 
 
 export const FileSystemAccessRule: {
-    new(identity: IdentityReference, fileSystemRights: FileSystemRights, type_: AccessControlType): FileSystemAccessRule$instance;
-    new(identity: IdentityReference, fileSystemRights: FileSystemRights, inheritanceFlags: InheritanceFlags, propagationFlags: PropagationFlags, type_: AccessControlType): FileSystemAccessRule$instance;
-    new(identity: string, fileSystemRights: FileSystemRights, type_: AccessControlType): FileSystemAccessRule$instance;
-    new(identity: string, fileSystemRights: FileSystemRights, inheritanceFlags: InheritanceFlags, propagationFlags: PropagationFlags, type_: AccessControlType): FileSystemAccessRule$instance;
+    new(identity: IdentityReference, fileSystemRights: FileSystemRights, type_: AccessControlType): FileSystemAccessRule;
+    new(identity: IdentityReference, fileSystemRights: FileSystemRights, inheritanceFlags: InheritanceFlags, propagationFlags: PropagationFlags, type_: AccessControlType): FileSystemAccessRule;
+    new(identity: string, fileSystemRights: FileSystemRights, type_: AccessControlType): FileSystemAccessRule;
+    new(identity: string, fileSystemRights: FileSystemRights, inheritanceFlags: InheritanceFlags, propagationFlags: PropagationFlags, type_: AccessControlType): FileSystemAccessRule;
 };
 
 
@@ -624,10 +624,10 @@ export interface FileSystemAuditRule$instance extends AuditRule {
 
 
 export const FileSystemAuditRule: {
-    new(identity: IdentityReference, fileSystemRights: FileSystemRights, flags: AuditFlags): FileSystemAuditRule$instance;
-    new(identity: IdentityReference, fileSystemRights: FileSystemRights, inheritanceFlags: InheritanceFlags, propagationFlags: PropagationFlags, flags: AuditFlags): FileSystemAuditRule$instance;
-    new(identity: string, fileSystemRights: FileSystemRights, flags: AuditFlags): FileSystemAuditRule$instance;
-    new(identity: string, fileSystemRights: FileSystemRights, inheritanceFlags: InheritanceFlags, propagationFlags: PropagationFlags, flags: AuditFlags): FileSystemAuditRule$instance;
+    new(identity: IdentityReference, fileSystemRights: FileSystemRights, flags: AuditFlags): FileSystemAuditRule;
+    new(identity: IdentityReference, fileSystemRights: FileSystemRights, inheritanceFlags: InheritanceFlags, propagationFlags: PropagationFlags, flags: AuditFlags): FileSystemAuditRule;
+    new(identity: string, fileSystemRights: FileSystemRights, flags: AuditFlags): FileSystemAuditRule;
+    new(identity: string, fileSystemRights: FileSystemRights, inheritanceFlags: InheritanceFlags, propagationFlags: PropagationFlags, flags: AuditFlags): FileSystemAuditRule;
 };
 
 
@@ -745,8 +745,8 @@ export interface MutexAccessRule$instance extends AccessRule {
 
 
 export const MutexAccessRule: {
-    new(identity: IdentityReference, eventRights: MutexRights, type_: AccessControlType): MutexAccessRule$instance;
-    new(identity: string, eventRights: MutexRights, type_: AccessControlType): MutexAccessRule$instance;
+    new(identity: IdentityReference, eventRights: MutexRights, type_: AccessControlType): MutexAccessRule;
+    new(identity: string, eventRights: MutexRights, type_: AccessControlType): MutexAccessRule;
 };
 
 
@@ -758,7 +758,7 @@ export interface MutexAuditRule$instance extends AuditRule {
 
 
 export const MutexAuditRule: {
-    new(identity: IdentityReference, eventRights: MutexRights, flags: AuditFlags): MutexAuditRule$instance;
+    new(identity: IdentityReference, eventRights: MutexRights, flags: AuditFlags): MutexAuditRule;
 };
 
 
@@ -785,8 +785,8 @@ export interface MutexSecurity$instance extends NativeObjectSecurity {
 
 
 export const MutexSecurity: {
-    new(): MutexSecurity$instance;
-    new(name: string, includeSections: AccessControlSections): MutexSecurity$instance;
+    new(): MutexSecurity;
+    new(name: string, includeSections: AccessControlSections): MutexSecurity;
 };
 
 
@@ -825,7 +825,7 @@ export interface ObjectAce$instance extends QualifiedAce {
 
 
 export const ObjectAce: {
-    new(aceFlags: AceFlags, qualifier: AceQualifier, accessMask: int, sid: SecurityIdentifier, flags: ObjectAceFlags, type_: Guid, inheritedType: Guid, isCallback: boolean, opaque: byte[]): ObjectAce$instance;
+    new(aceFlags: AceFlags, qualifier: AceQualifier, accessMask: int, sid: SecurityIdentifier, flags: ObjectAceFlags, type_: Guid, inheritedType: Guid, isCallback: boolean, opaque: byte[]): ObjectAce;
     MaxOpaqueLength(isCallback: boolean): int;
 };
 
@@ -914,9 +914,9 @@ export interface PrivilegeNotHeldException$instance extends UnauthorizedAccessEx
 
 
 export const PrivilegeNotHeldException: {
-    new(): PrivilegeNotHeldException$instance;
-    new(privilege: string): PrivilegeNotHeldException$instance;
-    new(privilege: string, inner: Exception): PrivilegeNotHeldException$instance;
+    new(): PrivilegeNotHeldException;
+    new(privilege: string): PrivilegeNotHeldException;
+    new(privilege: string, inner: Exception): PrivilegeNotHeldException;
 };
 
 
@@ -958,8 +958,8 @@ export interface RawAcl$instance extends GenericAcl$instance {
 
 
 export const RawAcl: {
-    new(revision: byte, capacity: int): RawAcl$instance;
-    new(binaryForm: byte[], offset: int): RawAcl$instance;
+    new(revision: byte, capacity: int): RawAcl;
+    new(binaryForm: byte[], offset: int): RawAcl;
 };
 
 
@@ -983,9 +983,9 @@ export interface RawSecurityDescriptor$instance extends GenericSecurityDescripto
 
 
 export const RawSecurityDescriptor: {
-    new(binaryForm: byte[], offset: int): RawSecurityDescriptor$instance;
-    new(flags: ControlFlags, owner: SecurityIdentifier, group: SecurityIdentifier, systemAcl: RawAcl, discretionaryAcl: RawAcl): RawSecurityDescriptor$instance;
-    new(sddlForm: string): RawSecurityDescriptor$instance;
+    new(binaryForm: byte[], offset: int): RawSecurityDescriptor;
+    new(flags: ControlFlags, owner: SecurityIdentifier, group: SecurityIdentifier, systemAcl: RawAcl, discretionaryAcl: RawAcl): RawSecurityDescriptor;
+    new(sddlForm: string): RawSecurityDescriptor;
 };
 
 
@@ -997,10 +997,10 @@ export interface RegistryAccessRule$instance extends AccessRule {
 
 
 export const RegistryAccessRule: {
-    new(identity: IdentityReference, registryRights: RegistryRights, type_: AccessControlType): RegistryAccessRule$instance;
-    new(identity: IdentityReference, registryRights: RegistryRights, inheritanceFlags: InheritanceFlags, propagationFlags: PropagationFlags, type_: AccessControlType): RegistryAccessRule$instance;
-    new(identity: string, registryRights: RegistryRights, type_: AccessControlType): RegistryAccessRule$instance;
-    new(identity: string, registryRights: RegistryRights, inheritanceFlags: InheritanceFlags, propagationFlags: PropagationFlags, type_: AccessControlType): RegistryAccessRule$instance;
+    new(identity: IdentityReference, registryRights: RegistryRights, type_: AccessControlType): RegistryAccessRule;
+    new(identity: IdentityReference, registryRights: RegistryRights, inheritanceFlags: InheritanceFlags, propagationFlags: PropagationFlags, type_: AccessControlType): RegistryAccessRule;
+    new(identity: string, registryRights: RegistryRights, type_: AccessControlType): RegistryAccessRule;
+    new(identity: string, registryRights: RegistryRights, inheritanceFlags: InheritanceFlags, propagationFlags: PropagationFlags, type_: AccessControlType): RegistryAccessRule;
 };
 
 
@@ -1012,8 +1012,8 @@ export interface RegistryAuditRule$instance extends AuditRule {
 
 
 export const RegistryAuditRule: {
-    new(identity: IdentityReference, registryRights: RegistryRights, inheritanceFlags: InheritanceFlags, propagationFlags: PropagationFlags, flags: AuditFlags): RegistryAuditRule$instance;
-    new(identity: string, registryRights: RegistryRights, inheritanceFlags: InheritanceFlags, propagationFlags: PropagationFlags, flags: AuditFlags): RegistryAuditRule$instance;
+    new(identity: IdentityReference, registryRights: RegistryRights, inheritanceFlags: InheritanceFlags, propagationFlags: PropagationFlags, flags: AuditFlags): RegistryAuditRule;
+    new(identity: string, registryRights: RegistryRights, inheritanceFlags: InheritanceFlags, propagationFlags: PropagationFlags, flags: AuditFlags): RegistryAuditRule;
 };
 
 
@@ -1040,7 +1040,7 @@ export interface RegistrySecurity$instance extends NativeObjectSecurity {
 
 
 export const RegistrySecurity: {
-    new(): RegistrySecurity$instance;
+    new(): RegistrySecurity;
 };
 
 
@@ -1052,8 +1052,8 @@ export interface SemaphoreAccessRule$instance extends AccessRule {
 
 
 export const SemaphoreAccessRule: {
-    new(identity: IdentityReference, eventRights: SemaphoreRights, type_: AccessControlType): SemaphoreAccessRule$instance;
-    new(identity: string, eventRights: SemaphoreRights, type_: AccessControlType): SemaphoreAccessRule$instance;
+    new(identity: IdentityReference, eventRights: SemaphoreRights, type_: AccessControlType): SemaphoreAccessRule;
+    new(identity: string, eventRights: SemaphoreRights, type_: AccessControlType): SemaphoreAccessRule;
 };
 
 
@@ -1065,7 +1065,7 @@ export interface SemaphoreAuditRule$instance extends AuditRule {
 
 
 export const SemaphoreAuditRule: {
-    new(identity: IdentityReference, eventRights: SemaphoreRights, flags: AuditFlags): SemaphoreAuditRule$instance;
+    new(identity: IdentityReference, eventRights: SemaphoreRights, flags: AuditFlags): SemaphoreAuditRule;
 };
 
 
@@ -1092,8 +1092,8 @@ export interface SemaphoreSecurity$instance extends NativeObjectSecurity {
 
 
 export const SemaphoreSecurity: {
-    new(): SemaphoreSecurity$instance;
-    new(name: string, includeSections: AccessControlSections): SemaphoreSecurity$instance;
+    new(): SemaphoreSecurity;
+    new(name: string, includeSections: AccessControlSections): SemaphoreSecurity;
 };
 
 
@@ -1120,9 +1120,9 @@ export interface SystemAcl$instance extends CommonAcl$instance {
 
 
 export const SystemAcl: {
-    new(isContainer: boolean, isDS: boolean, revision: byte, capacity: int): SystemAcl$instance;
-    new(isContainer: boolean, isDS: boolean, capacity: int): SystemAcl$instance;
-    new(isContainer: boolean, isDS: boolean, rawAcl: RawAcl): SystemAcl$instance;
+    new(isContainer: boolean, isDS: boolean, revision: byte, capacity: int): SystemAcl;
+    new(isContainer: boolean, isDS: boolean, capacity: int): SystemAcl;
+    new(isContainer: boolean, isDS: boolean, rawAcl: RawAcl): SystemAcl;
 };
 
 

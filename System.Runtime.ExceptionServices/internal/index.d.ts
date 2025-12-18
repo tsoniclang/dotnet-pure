@@ -16,7 +16,7 @@ export interface ExceptionDispatchInfo$instance {
 
 
 export const ExceptionDispatchInfo: {
-    new(): ExceptionDispatchInfo$instance;
+    new(): ExceptionDispatchInfo;
     Capture(source: Exception): ExceptionDispatchInfo;
     SetCurrentStackTrace(source: Exception): Exception;
     SetRemoteStackTrace(source: Exception, stackTrace: string): Exception;
@@ -32,7 +32,7 @@ export interface FirstChanceExceptionEventArgs$instance extends EventArgs {
 
 
 export const FirstChanceExceptionEventArgs: {
-    new(exception: Exception): FirstChanceExceptionEventArgs$instance;
+    new(exception: Exception): FirstChanceExceptionEventArgs;
 };
 
 
@@ -43,7 +43,7 @@ export interface HandleProcessCorruptedStateExceptionsAttribute$instance extends
 
 
 export const HandleProcessCorruptedStateExceptionsAttribute: {
-    new(): HandleProcessCorruptedStateExceptionsAttribute$instance;
+    new(): HandleProcessCorruptedStateExceptionsAttribute;
 };
 
 

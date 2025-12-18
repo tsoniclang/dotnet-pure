@@ -80,9 +80,9 @@ export interface TextEncoderSettings$instance {
 
 
 export const TextEncoderSettings: {
-    new(): TextEncoderSettings$instance;
-    new(other: TextEncoderSettings): TextEncoderSettings$instance;
-    new(allowedRanges: UnicodeRange[]): TextEncoderSettings$instance;
+    new(): TextEncoderSettings;
+    new(other: TextEncoderSettings): TextEncoderSettings;
+    new(allowedRanges: UnicodeRange[]): TextEncoderSettings;
 };
 
 

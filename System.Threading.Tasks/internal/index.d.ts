@@ -76,7 +76,7 @@ export interface ParallelLoopResult$instance {
 
 
 export const ParallelLoopResult: {
-    new(): ParallelLoopResult$instance;
+    new(): ParallelLoopResult;
 };
 
 
@@ -98,8 +98,8 @@ export interface ValueTask$instance {
 
 
 export const ValueTask: {
-    new(task: Task): ValueTask$instance;
-    new(source: IValueTaskSource, token: short): ValueTask$instance;
+    new(task: Task): ValueTask;
+    new(source: IValueTaskSource, token: short): ValueTask;
     readonly CompletedTask: ValueTask;
     FromCanceled(cancellationToken: CancellationToken): ValueTask;
     FromCanceled<TResult>(cancellationToken: CancellationToken): ValueTask_1<TResult>;
@@ -137,9 +137,9 @@ export interface ValueTask_1$instance<TResult> {
 
 
 export const ValueTask_1: {
-    new<TResult>(result: TResult): ValueTask_1$instance<TResult>;
-    new<TResult>(task: Task_1<TResult>): ValueTask_1$instance<TResult>;
-    new<TResult>(source: IValueTaskSource_1<TResult>, token: short): ValueTask_1$instance<TResult>;
+    new<TResult>(result: TResult): ValueTask_1<TResult>;
+    new<TResult>(task: Task_1<TResult>): ValueTask_1<TResult>;
+    new<TResult>(source: IValueTaskSource_1<TResult>, token: short): ValueTask_1<TResult>;
 };
 
 
@@ -162,10 +162,10 @@ export interface ConcurrentExclusiveSchedulerPair$instance {
 
 
 export const ConcurrentExclusiveSchedulerPair: {
-    new(): ConcurrentExclusiveSchedulerPair$instance;
-    new(taskScheduler: TaskScheduler): ConcurrentExclusiveSchedulerPair$instance;
-    new(taskScheduler: TaskScheduler, maxConcurrencyLevel: int): ConcurrentExclusiveSchedulerPair$instance;
-    new(taskScheduler: TaskScheduler, maxConcurrencyLevel: int, maxItemsPerTask: int): ConcurrentExclusiveSchedulerPair$instance;
+    new(): ConcurrentExclusiveSchedulerPair;
+    new(taskScheduler: TaskScheduler): ConcurrentExclusiveSchedulerPair;
+    new(taskScheduler: TaskScheduler, maxConcurrencyLevel: int): ConcurrentExclusiveSchedulerPair;
+    new(taskScheduler: TaskScheduler, maxConcurrencyLevel: int, maxItemsPerTask: int): ConcurrentExclusiveSchedulerPair;
 };
 
 
@@ -182,7 +182,7 @@ export interface ParallelLoopState$instance {
 
 
 export const ParallelLoopState: {
-    new(): ParallelLoopState$instance;
+    new(): ParallelLoopState;
 };
 
 
@@ -196,7 +196,7 @@ export interface ParallelOptions$instance {
 
 
 export const ParallelOptions: {
-    new(): ParallelOptions$instance;
+    new(): ParallelOptions;
 };
 
 
@@ -255,14 +255,14 @@ export interface Task$instance {
 
 
 export const Task: {
-    new(action: Action): Task$instance;
-    new(action: Action, cancellationToken: CancellationToken): Task$instance;
-    new(action: Action, creationOptions: TaskCreationOptions): Task$instance;
-    new(action: Action, cancellationToken: CancellationToken, creationOptions: TaskCreationOptions): Task$instance;
-    new(action: Action_1<unknown>, state: unknown): Task$instance;
-    new(action: Action_1<unknown>, state: unknown, cancellationToken: CancellationToken): Task$instance;
-    new(action: Action_1<unknown>, state: unknown, creationOptions: TaskCreationOptions): Task$instance;
-    new(action: Action_1<unknown>, state: unknown, cancellationToken: CancellationToken, creationOptions: TaskCreationOptions): Task$instance;
+    new(action: Action): Task;
+    new(action: Action, cancellationToken: CancellationToken): Task;
+    new(action: Action, creationOptions: TaskCreationOptions): Task;
+    new(action: Action, cancellationToken: CancellationToken, creationOptions: TaskCreationOptions): Task;
+    new(action: Action_1<unknown>, state: unknown): Task;
+    new(action: Action_1<unknown>, state: unknown, cancellationToken: CancellationToken): Task;
+    new(action: Action_1<unknown>, state: unknown, creationOptions: TaskCreationOptions): Task;
+    new(action: Action_1<unknown>, state: unknown, cancellationToken: CancellationToken, creationOptions: TaskCreationOptions): Task;
     readonly CurrentId: Nullable_1<System_Internal.Int32>;
     readonly Factory: TaskFactory;
     readonly CompletedTask: Task;
@@ -387,14 +387,14 @@ export interface Task_1$instance<TResult> extends Task$instance {
 
 
 export const Task_1: {
-    new<TResult>(function_: Func_1<TResult>): Task_1$instance<TResult>;
-    new<TResult>(function_: Func_1<TResult>, cancellationToken: CancellationToken): Task_1$instance<TResult>;
-    new<TResult>(function_: Func_1<TResult>, creationOptions: TaskCreationOptions): Task_1$instance<TResult>;
-    new<TResult>(function_: Func_1<TResult>, cancellationToken: CancellationToken, creationOptions: TaskCreationOptions): Task_1$instance<TResult>;
-    new<TResult>(function_: Func_2<unknown, TResult>, state: unknown): Task_1$instance<TResult>;
-    new<TResult>(function_: Func_2<unknown, TResult>, state: unknown, cancellationToken: CancellationToken): Task_1$instance<TResult>;
-    new<TResult>(function_: Func_2<unknown, TResult>, state: unknown, creationOptions: TaskCreationOptions): Task_1$instance<TResult>;
-    new<TResult>(function_: Func_2<unknown, TResult>, state: unknown, cancellationToken: CancellationToken, creationOptions: TaskCreationOptions): Task_1$instance<TResult>;
+    new<TResult>(function_: Func_1<TResult>): Task_1<TResult>;
+    new<TResult>(function_: Func_1<TResult>, cancellationToken: CancellationToken): Task_1<TResult>;
+    new<TResult>(function_: Func_1<TResult>, creationOptions: TaskCreationOptions): Task_1<TResult>;
+    new<TResult>(function_: Func_1<TResult>, cancellationToken: CancellationToken, creationOptions: TaskCreationOptions): Task_1<TResult>;
+    new<TResult>(function_: Func_2<unknown, TResult>, state: unknown): Task_1<TResult>;
+    new<TResult>(function_: Func_2<unknown, TResult>, state: unknown, cancellationToken: CancellationToken): Task_1<TResult>;
+    new<TResult>(function_: Func_2<unknown, TResult>, state: unknown, creationOptions: TaskCreationOptions): Task_1<TResult>;
+    new<TResult>(function_: Func_2<unknown, TResult>, state: unknown, cancellationToken: CancellationToken, creationOptions: TaskCreationOptions): Task_1<TResult>;
 };
 
 
@@ -415,11 +415,11 @@ export interface TaskCanceledException$instance extends OperationCanceledExcepti
 
 
 export const TaskCanceledException: {
-    new(): TaskCanceledException$instance;
-    new(message: string): TaskCanceledException$instance;
-    new(message: string, innerException: Exception): TaskCanceledException$instance;
-    new(message: string, innerException: Exception, token: CancellationToken): TaskCanceledException$instance;
-    new(task: Task): TaskCanceledException$instance;
+    new(): TaskCanceledException;
+    new(message: string): TaskCanceledException;
+    new(message: string, innerException: Exception): TaskCanceledException;
+    new(message: string, innerException: Exception, token: CancellationToken): TaskCanceledException;
+    new(task: Task): TaskCanceledException;
 };
 
 
@@ -448,10 +448,10 @@ export interface TaskCompletionSource$instance {
 
 
 export const TaskCompletionSource: {
-    new(): TaskCompletionSource$instance;
-    new(creationOptions: TaskCreationOptions): TaskCompletionSource$instance;
-    new(state: unknown): TaskCompletionSource$instance;
-    new(state: unknown, creationOptions: TaskCreationOptions): TaskCompletionSource$instance;
+    new(): TaskCompletionSource;
+    new(creationOptions: TaskCreationOptions): TaskCompletionSource;
+    new(state: unknown): TaskCompletionSource;
+    new(state: unknown, creationOptions: TaskCreationOptions): TaskCompletionSource;
 };
 
 
@@ -475,10 +475,10 @@ export interface TaskCompletionSource_1$instance<TResult> {
 
 
 export const TaskCompletionSource_1: {
-    new<TResult>(): TaskCompletionSource_1$instance<TResult>;
-    new<TResult>(creationOptions: TaskCreationOptions): TaskCompletionSource_1$instance<TResult>;
-    new<TResult>(state: unknown): TaskCompletionSource_1$instance<TResult>;
-    new<TResult>(state: unknown, creationOptions: TaskCreationOptions): TaskCompletionSource_1$instance<TResult>;
+    new<TResult>(): TaskCompletionSource_1<TResult>;
+    new<TResult>(creationOptions: TaskCreationOptions): TaskCompletionSource_1<TResult>;
+    new<TResult>(state: unknown): TaskCompletionSource_1<TResult>;
+    new<TResult>(state: unknown, creationOptions: TaskCreationOptions): TaskCompletionSource_1<TResult>;
 };
 
 
@@ -563,11 +563,11 @@ export interface TaskFactory$instance {
 
 
 export const TaskFactory: {
-    new(): TaskFactory$instance;
-    new(cancellationToken: CancellationToken): TaskFactory$instance;
-    new(scheduler: TaskScheduler): TaskFactory$instance;
-    new(creationOptions: TaskCreationOptions, continuationOptions: TaskContinuationOptions): TaskFactory$instance;
-    new(cancellationToken: CancellationToken, creationOptions: TaskCreationOptions, continuationOptions: TaskContinuationOptions, scheduler: TaskScheduler): TaskFactory$instance;
+    new(): TaskFactory;
+    new(cancellationToken: CancellationToken): TaskFactory;
+    new(scheduler: TaskScheduler): TaskFactory;
+    new(creationOptions: TaskCreationOptions, continuationOptions: TaskContinuationOptions): TaskFactory;
+    new(cancellationToken: CancellationToken, creationOptions: TaskCreationOptions, continuationOptions: TaskContinuationOptions, scheduler: TaskScheduler): TaskFactory;
 };
 
 
@@ -617,11 +617,11 @@ export interface TaskFactory_1$instance<TResult> {
 
 
 export const TaskFactory_1: {
-    new<TResult>(): TaskFactory_1$instance<TResult>;
-    new<TResult>(cancellationToken: CancellationToken): TaskFactory_1$instance<TResult>;
-    new<TResult>(scheduler: TaskScheduler): TaskFactory_1$instance<TResult>;
-    new<TResult>(creationOptions: TaskCreationOptions, continuationOptions: TaskContinuationOptions): TaskFactory_1$instance<TResult>;
-    new<TResult>(cancellationToken: CancellationToken, creationOptions: TaskCreationOptions, continuationOptions: TaskContinuationOptions, scheduler: TaskScheduler): TaskFactory_1$instance<TResult>;
+    new<TResult>(): TaskFactory_1<TResult>;
+    new<TResult>(cancellationToken: CancellationToken): TaskFactory_1<TResult>;
+    new<TResult>(scheduler: TaskScheduler): TaskFactory_1<TResult>;
+    new<TResult>(creationOptions: TaskCreationOptions, continuationOptions: TaskContinuationOptions): TaskFactory_1<TResult>;
+    new<TResult>(cancellationToken: CancellationToken, creationOptions: TaskCreationOptions, continuationOptions: TaskContinuationOptions, scheduler: TaskScheduler): TaskFactory_1<TResult>;
 };
 
 
@@ -648,10 +648,10 @@ export interface TaskSchedulerException$instance extends Exception {
 
 
 export const TaskSchedulerException: {
-    new(): TaskSchedulerException$instance;
-    new(message: string): TaskSchedulerException$instance;
-    new(innerException: Exception): TaskSchedulerException$instance;
-    new(message: string, innerException: Exception): TaskSchedulerException$instance;
+    new(): TaskSchedulerException;
+    new(message: string): TaskSchedulerException;
+    new(innerException: Exception): TaskSchedulerException;
+    new(message: string, innerException: Exception): TaskSchedulerException;
 };
 
 
@@ -670,7 +670,7 @@ export interface UnobservedTaskExceptionEventArgs$instance extends EventArgs {
 
 
 export const UnobservedTaskExceptionEventArgs: {
-    new(exception: AggregateException): UnobservedTaskExceptionEventArgs$instance;
+    new(exception: AggregateException): UnobservedTaskExceptionEventArgs;
 };
 
 

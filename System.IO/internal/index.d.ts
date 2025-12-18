@@ -184,7 +184,7 @@ export interface WaitForChangedResult$instance {
 
 
 export const WaitForChangedResult: {
-    new(): WaitForChangedResult$instance;
+    new(): WaitForChangedResult;
 };
 
 
@@ -224,9 +224,9 @@ export interface BinaryReader$instance {
 
 
 export const BinaryReader: {
-    new(input: Stream): BinaryReader$instance;
-    new(input: Stream, encoding: Encoding): BinaryReader$instance;
-    new(input: Stream, encoding: Encoding, leaveOpen: boolean): BinaryReader$instance;
+    new(input: Stream): BinaryReader;
+    new(input: Stream, encoding: Encoding): BinaryReader;
+    new(input: Stream, encoding: Encoding, leaveOpen: boolean): BinaryReader;
 };
 
 
@@ -273,9 +273,9 @@ export interface BinaryWriter$instance {
 
 
 export const BinaryWriter: {
-    new(output: Stream): BinaryWriter$instance;
-    new(output: Stream, encoding: Encoding): BinaryWriter$instance;
-    new(output: Stream, encoding: Encoding, leaveOpen: boolean): BinaryWriter$instance;
+    new(output: Stream): BinaryWriter;
+    new(output: Stream, encoding: Encoding): BinaryWriter;
+    new(output: Stream, encoding: Encoding, leaveOpen: boolean): BinaryWriter;
     readonly Null: BinaryWriter;
 };
 
@@ -336,8 +336,8 @@ export interface BufferedStream$instance extends Stream$instance {
 
 
 export const BufferedStream: {
-    new(stream: Stream): BufferedStream$instance;
-    new(stream: Stream, bufferSize: int): BufferedStream$instance;
+    new(stream: Stream): BufferedStream;
+    new(stream: Stream, bufferSize: int): BufferedStream;
 };
 
 
@@ -387,7 +387,7 @@ export interface DirectoryInfo$instance extends FileSystemInfo$instance {
 
 
 export const DirectoryInfo: {
-    new(path: string): DirectoryInfo$instance;
+    new(path: string): DirectoryInfo;
 };
 
 
@@ -404,9 +404,9 @@ export interface DirectoryNotFoundException$instance extends IOException$instanc
 
 
 export const DirectoryNotFoundException: {
-    new(): DirectoryNotFoundException$instance;
-    new(message: string): DirectoryNotFoundException$instance;
-    new(message: string, innerException: Exception): DirectoryNotFoundException$instance;
+    new(): DirectoryNotFoundException;
+    new(message: string): DirectoryNotFoundException;
+    new(message: string, innerException: Exception): DirectoryNotFoundException;
 };
 
 
@@ -432,7 +432,7 @@ export interface DriveInfo$instance {
 
 
 export const DriveInfo: {
-    new(driveName: string): DriveInfo$instance;
+    new(driveName: string): DriveInfo;
     GetDrives(): DriveInfo[];
 };
 
@@ -452,9 +452,9 @@ export interface DriveNotFoundException$instance extends IOException$instance {
 
 
 export const DriveNotFoundException: {
-    new(): DriveNotFoundException$instance;
-    new(message: string): DriveNotFoundException$instance;
-    new(message: string, innerException: Exception): DriveNotFoundException$instance;
+    new(): DriveNotFoundException;
+    new(message: string): DriveNotFoundException;
+    new(message: string, innerException: Exception): DriveNotFoundException;
 };
 
 
@@ -471,9 +471,9 @@ export interface EndOfStreamException$instance extends IOException$instance {
 
 
 export const EndOfStreamException: {
-    new(): EndOfStreamException$instance;
-    new(message: string): EndOfStreamException$instance;
-    new(message: string, innerException: Exception): EndOfStreamException$instance;
+    new(): EndOfStreamException;
+    new(message: string): EndOfStreamException;
+    new(message: string, innerException: Exception): EndOfStreamException;
 };
 
 
@@ -497,7 +497,7 @@ export interface EnumerationOptions$instance {
 
 
 export const EnumerationOptions: {
-    new(): EnumerationOptions$instance;
+    new(): EnumerationOptions;
 };
 
 
@@ -509,7 +509,7 @@ export interface ErrorEventArgs$instance extends EventArgs {
 
 
 export const ErrorEventArgs: {
-    new(exception: Exception): ErrorEventArgs$instance;
+    new(exception: Exception): ErrorEventArgs;
 };
 
 
@@ -546,7 +546,7 @@ export interface FileInfo$instance extends FileSystemInfo$instance {
 
 
 export const FileInfo: {
-    new(fileName: string): FileInfo$instance;
+    new(fileName: string): FileInfo;
 };
 
 
@@ -567,11 +567,11 @@ export interface FileLoadException$instance extends IOException$instance {
 
 
 export const FileLoadException: {
-    new(): FileLoadException$instance;
-    new(message: string): FileLoadException$instance;
-    new(message: string, inner: Exception): FileLoadException$instance;
-    new(message: string, fileName: string): FileLoadException$instance;
-    new(message: string, fileName: string, inner: Exception): FileLoadException$instance;
+    new(): FileLoadException;
+    new(message: string): FileLoadException;
+    new(message: string, inner: Exception): FileLoadException;
+    new(message: string, fileName: string): FileLoadException;
+    new(message: string, fileName: string, inner: Exception): FileLoadException;
 };
 
 
@@ -592,11 +592,11 @@ export interface FileNotFoundException$instance extends IOException$instance {
 
 
 export const FileNotFoundException: {
-    new(): FileNotFoundException$instance;
-    new(message: string): FileNotFoundException$instance;
-    new(message: string, innerException: Exception): FileNotFoundException$instance;
-    new(message: string, fileName: string): FileNotFoundException$instance;
-    new(message: string, fileName: string, innerException: Exception): FileNotFoundException$instance;
+    new(): FileNotFoundException;
+    new(message: string): FileNotFoundException;
+    new(message: string, innerException: Exception): FileNotFoundException;
+    new(message: string, fileName: string): FileNotFoundException;
+    new(message: string, fileName: string, innerException: Exception): FileNotFoundException;
 };
 
 
@@ -657,20 +657,20 @@ export interface FileStream$instance extends Stream$instance {
 
 
 export const FileStream: {
-    new(handle: nint, access: FileAccess): FileStream$instance;
-    new(handle: nint, access: FileAccess, ownsHandle: boolean): FileStream$instance;
-    new(handle: nint, access: FileAccess, ownsHandle: boolean, bufferSize: int): FileStream$instance;
-    new(handle: nint, access: FileAccess, ownsHandle: boolean, bufferSize: int, isAsync: boolean): FileStream$instance;
-    new(handle: SafeFileHandle, access: FileAccess): FileStream$instance;
-    new(handle: SafeFileHandle, access: FileAccess, bufferSize: int): FileStream$instance;
-    new(handle: SafeFileHandle, access: FileAccess, bufferSize: int, isAsync: boolean): FileStream$instance;
-    new(path: string, mode: FileMode): FileStream$instance;
-    new(path: string, mode: FileMode, access: FileAccess): FileStream$instance;
-    new(path: string, mode: FileMode, access: FileAccess, share: FileShare): FileStream$instance;
-    new(path: string, mode: FileMode, access: FileAccess, share: FileShare, bufferSize: int): FileStream$instance;
-    new(path: string, mode: FileMode, access: FileAccess, share: FileShare, bufferSize: int, useAsync: boolean): FileStream$instance;
-    new(path: string, mode: FileMode, access: FileAccess, share: FileShare, bufferSize: int, options: FileOptions): FileStream$instance;
-    new(path: string, options: FileStreamOptions): FileStream$instance;
+    new(handle: nint, access: FileAccess): FileStream;
+    new(handle: nint, access: FileAccess, ownsHandle: boolean): FileStream;
+    new(handle: nint, access: FileAccess, ownsHandle: boolean, bufferSize: int): FileStream;
+    new(handle: nint, access: FileAccess, ownsHandle: boolean, bufferSize: int, isAsync: boolean): FileStream;
+    new(handle: SafeFileHandle, access: FileAccess): FileStream;
+    new(handle: SafeFileHandle, access: FileAccess, bufferSize: int): FileStream;
+    new(handle: SafeFileHandle, access: FileAccess, bufferSize: int, isAsync: boolean): FileStream;
+    new(path: string, mode: FileMode): FileStream;
+    new(path: string, mode: FileMode, access: FileAccess): FileStream;
+    new(path: string, mode: FileMode, access: FileAccess, share: FileShare): FileStream;
+    new(path: string, mode: FileMode, access: FileAccess, share: FileShare, bufferSize: int): FileStream;
+    new(path: string, mode: FileMode, access: FileAccess, share: FileShare, bufferSize: int, useAsync: boolean): FileStream;
+    new(path: string, mode: FileMode, access: FileAccess, share: FileShare, bufferSize: int, options: FileOptions): FileStream;
+    new(path: string, options: FileStreamOptions): FileStream;
 };
 
 
@@ -694,7 +694,7 @@ export interface FileStreamOptions$instance {
 
 
 export const FileStreamOptions: {
-    new(): FileStreamOptions$instance;
+    new(): FileStreamOptions;
 };
 
 
@@ -708,7 +708,7 @@ export interface FileSystemEventArgs$instance extends EventArgs {
 
 
 export const FileSystemEventArgs: {
-    new(changeType: WatcherChangeTypes, directory: string, name: string): FileSystemEventArgs$instance;
+    new(changeType: WatcherChangeTypes, directory: string, name: string): FileSystemEventArgs;
 };
 
 
@@ -770,9 +770,9 @@ export interface FileSystemWatcher$instance extends Component {
 
 
 export const FileSystemWatcher: {
-    new(): FileSystemWatcher$instance;
-    new(path: string): FileSystemWatcher$instance;
-    new(path: string, filter: string): FileSystemWatcher$instance;
+    new(): FileSystemWatcher;
+    new(path: string): FileSystemWatcher;
+    new(path: string, filter: string): FileSystemWatcher;
 };
 
 
@@ -793,9 +793,9 @@ export interface InternalBufferOverflowException$instance extends SystemExceptio
 
 
 export const InternalBufferOverflowException: {
-    new(): InternalBufferOverflowException$instance;
-    new(message: string): InternalBufferOverflowException$instance;
-    new(message: string, inner: Exception): InternalBufferOverflowException$instance;
+    new(): InternalBufferOverflowException;
+    new(message: string): InternalBufferOverflowException;
+    new(message: string, inner: Exception): InternalBufferOverflowException;
 };
 
 
@@ -812,9 +812,9 @@ export interface InvalidDataException$instance extends SystemException {
 
 
 export const InvalidDataException: {
-    new(): InvalidDataException$instance;
-    new(message: string): InvalidDataException$instance;
-    new(message: string, innerException: Exception): InvalidDataException$instance;
+    new(): InvalidDataException;
+    new(message: string): InvalidDataException;
+    new(message: string, innerException: Exception): InvalidDataException;
 };
 
 
@@ -831,10 +831,10 @@ export interface IOException$instance extends SystemException {
 
 
 export const IOException: {
-    new(): IOException$instance;
-    new(message: string): IOException$instance;
-    new(message: string, hresult: int): IOException$instance;
-    new(message: string, innerException: Exception): IOException$instance;
+    new(): IOException;
+    new(message: string): IOException;
+    new(message: string, hresult: int): IOException;
+    new(message: string, innerException: Exception): IOException;
 };
 
 
@@ -890,13 +890,13 @@ export interface MemoryStream$instance extends Stream$instance {
 
 
 export const MemoryStream: {
-    new(): MemoryStream$instance;
-    new(capacity: int): MemoryStream$instance;
-    new(buffer: byte[]): MemoryStream$instance;
-    new(buffer: byte[], writable: boolean): MemoryStream$instance;
-    new(buffer: byte[], index: int, count: int): MemoryStream$instance;
-    new(buffer: byte[], index: int, count: int, writable: boolean): MemoryStream$instance;
-    new(buffer: byte[], index: int, count: int, writable: boolean, publiclyVisible: boolean): MemoryStream$instance;
+    new(): MemoryStream;
+    new(capacity: int): MemoryStream;
+    new(buffer: byte[]): MemoryStream;
+    new(buffer: byte[], writable: boolean): MemoryStream;
+    new(buffer: byte[], index: int, count: int): MemoryStream;
+    new(buffer: byte[], index: int, count: int, writable: boolean): MemoryStream;
+    new(buffer: byte[], index: int, count: int, writable: boolean, publiclyVisible: boolean): MemoryStream;
 };
 
 
@@ -914,9 +914,9 @@ export interface PathTooLongException$instance extends IOException$instance {
 
 
 export const PathTooLongException: {
-    new(): PathTooLongException$instance;
-    new(message: string): PathTooLongException$instance;
-    new(message: string, innerException: Exception): PathTooLongException$instance;
+    new(): PathTooLongException;
+    new(message: string): PathTooLongException;
+    new(message: string, innerException: Exception): PathTooLongException;
 };
 
 
@@ -934,7 +934,7 @@ export interface RenamedEventArgs$instance extends FileSystemEventArgs {
 
 
 export const RenamedEventArgs: {
-    new(changeType: WatcherChangeTypes, directory: string, name: string, oldName: string): RenamedEventArgs$instance;
+    new(changeType: WatcherChangeTypes, directory: string, name: string, oldName: string): RenamedEventArgs;
 };
 
 
@@ -1041,19 +1041,19 @@ export interface StreamReader$instance extends TextReader$instance {
 
 
 export const StreamReader: {
-    new(stream: Stream): StreamReader$instance;
-    new(stream: Stream, detectEncodingFromByteOrderMarks: boolean): StreamReader$instance;
-    new(stream: Stream, encoding: Encoding): StreamReader$instance;
-    new(stream: Stream, encoding: Encoding, detectEncodingFromByteOrderMarks: boolean): StreamReader$instance;
-    new(stream: Stream, encoding: Encoding, detectEncodingFromByteOrderMarks: boolean, bufferSize: int): StreamReader$instance;
-    new(stream: Stream, encoding: Encoding, detectEncodingFromByteOrderMarks: boolean, bufferSize: int, leaveOpen: boolean): StreamReader$instance;
-    new(path: string): StreamReader$instance;
-    new(path: string, detectEncodingFromByteOrderMarks: boolean): StreamReader$instance;
-    new(path: string, encoding: Encoding): StreamReader$instance;
-    new(path: string, encoding: Encoding, detectEncodingFromByteOrderMarks: boolean): StreamReader$instance;
-    new(path: string, encoding: Encoding, detectEncodingFromByteOrderMarks: boolean, bufferSize: int): StreamReader$instance;
-    new(path: string, options: FileStreamOptions): StreamReader$instance;
-    new(path: string, encoding: Encoding, detectEncodingFromByteOrderMarks: boolean, options: FileStreamOptions): StreamReader$instance;
+    new(stream: Stream): StreamReader;
+    new(stream: Stream, detectEncodingFromByteOrderMarks: boolean): StreamReader;
+    new(stream: Stream, encoding: Encoding): StreamReader;
+    new(stream: Stream, encoding: Encoding, detectEncodingFromByteOrderMarks: boolean): StreamReader;
+    new(stream: Stream, encoding: Encoding, detectEncodingFromByteOrderMarks: boolean, bufferSize: int): StreamReader;
+    new(stream: Stream, encoding: Encoding, detectEncodingFromByteOrderMarks: boolean, bufferSize: int, leaveOpen: boolean): StreamReader;
+    new(path: string): StreamReader;
+    new(path: string, detectEncodingFromByteOrderMarks: boolean): StreamReader;
+    new(path: string, encoding: Encoding): StreamReader;
+    new(path: string, encoding: Encoding, detectEncodingFromByteOrderMarks: boolean): StreamReader;
+    new(path: string, encoding: Encoding, detectEncodingFromByteOrderMarks: boolean, bufferSize: int): StreamReader;
+    new(path: string, options: FileStreamOptions): StreamReader;
+    new(path: string, encoding: Encoding, detectEncodingFromByteOrderMarks: boolean, options: FileStreamOptions): StreamReader;
 };
 
 
@@ -1138,16 +1138,16 @@ export interface StreamWriter$instance extends TextWriter$instance {
 
 
 export const StreamWriter: {
-    new(stream: Stream): StreamWriter$instance;
-    new(stream: Stream, encoding: Encoding): StreamWriter$instance;
-    new(stream: Stream, encoding: Encoding, bufferSize: int): StreamWriter$instance;
-    new(stream: Stream, encoding: Encoding, bufferSize: int, leaveOpen: boolean): StreamWriter$instance;
-    new(path: string): StreamWriter$instance;
-    new(path: string, append: boolean): StreamWriter$instance;
-    new(path: string, append: boolean, encoding: Encoding): StreamWriter$instance;
-    new(path: string, append: boolean, encoding: Encoding, bufferSize: int): StreamWriter$instance;
-    new(path: string, options: FileStreamOptions): StreamWriter$instance;
-    new(path: string, encoding: Encoding, options: FileStreamOptions): StreamWriter$instance;
+    new(stream: Stream): StreamWriter;
+    new(stream: Stream, encoding: Encoding): StreamWriter;
+    new(stream: Stream, encoding: Encoding, bufferSize: int): StreamWriter;
+    new(stream: Stream, encoding: Encoding, bufferSize: int, leaveOpen: boolean): StreamWriter;
+    new(path: string): StreamWriter;
+    new(path: string, append: boolean): StreamWriter;
+    new(path: string, append: boolean, encoding: Encoding): StreamWriter;
+    new(path: string, append: boolean, encoding: Encoding, bufferSize: int): StreamWriter;
+    new(path: string, options: FileStreamOptions): StreamWriter;
+    new(path: string, encoding: Encoding, options: FileStreamOptions): StreamWriter;
 };
 
 
@@ -1192,7 +1192,7 @@ export interface StringReader$instance extends TextReader$instance {
 
 
 export const StringReader: {
-    new(s: string): StringReader$instance;
+    new(s: string): StringReader;
 };
 
 
@@ -1274,10 +1274,10 @@ export interface StringWriter$instance extends TextWriter$instance {
 
 
 export const StringWriter: {
-    new(): StringWriter$instance;
-    new(formatProvider: IFormatProvider): StringWriter$instance;
-    new(sb: StringBuilder): StringWriter$instance;
-    new(sb: StringBuilder, formatProvider: IFormatProvider): StringWriter$instance;
+    new(): StringWriter;
+    new(formatProvider: IFormatProvider): StringWriter;
+    new(sb: StringBuilder): StringWriter;
+    new(sb: StringBuilder, formatProvider: IFormatProvider): StringWriter;
 };
 
 
@@ -1449,8 +1449,8 @@ export interface UnmanagedMemoryAccessor$instance {
 
 
 export const UnmanagedMemoryAccessor: {
-    new(buffer: SafeBuffer, offset: long, capacity: long): UnmanagedMemoryAccessor$instance;
-    new(buffer: SafeBuffer, offset: long, capacity: long, access: FileAccess): UnmanagedMemoryAccessor$instance;
+    new(buffer: SafeBuffer, offset: long, capacity: long): UnmanagedMemoryAccessor;
+    new(buffer: SafeBuffer, offset: long, capacity: long, access: FileAccess): UnmanagedMemoryAccessor;
 };
 
 
@@ -1499,10 +1499,10 @@ export interface UnmanagedMemoryStream$instance extends Stream$instance {
 
 
 export const UnmanagedMemoryStream: {
-    new(buffer: SafeBuffer, offset: long, length: long): UnmanagedMemoryStream$instance;
-    new(buffer: SafeBuffer, offset: long, length: long, access: FileAccess): UnmanagedMemoryStream$instance;
-    new(pointer: ptr<byte>, length: long): UnmanagedMemoryStream$instance;
-    new(pointer: ptr<byte>, length: long, capacity: long, access: FileAccess): UnmanagedMemoryStream$instance;
+    new(buffer: SafeBuffer, offset: long, length: long): UnmanagedMemoryStream;
+    new(buffer: SafeBuffer, offset: long, length: long, access: FileAccess): UnmanagedMemoryStream;
+    new(pointer: ptr<byte>, length: long): UnmanagedMemoryStream;
+    new(pointer: ptr<byte>, length: long, capacity: long, access: FileAccess): UnmanagedMemoryStream;
 };
 
 

@@ -160,7 +160,7 @@ export interface DeserializationToken$instance {
 
 
 export const DeserializationToken: {
-    new(): DeserializationToken$instance;
+    new(): DeserializationToken;
 };
 
 
@@ -181,7 +181,7 @@ export interface SerializationEntry$instance {
 
 
 export const SerializationEntry: {
-    new(): SerializationEntry$instance;
+    new(): SerializationEntry;
 };
 
 
@@ -196,8 +196,8 @@ export interface StreamingContext$instance {
 
 
 export const StreamingContext: {
-    new(state: StreamingContextStates): StreamingContext$instance;
-    new(state: StreamingContextStates, additional: unknown): StreamingContext$instance;
+    new(state: StreamingContextStates): StreamingContext;
+    new(state: StreamingContextStates, additional: unknown): StreamingContext;
 };
 
 
@@ -220,7 +220,7 @@ export interface CollectionDataContractAttribute$instance extends Attribute {
 
 
 export const CollectionDataContractAttribute: {
-    new(): CollectionDataContractAttribute$instance;
+    new(): CollectionDataContractAttribute;
 };
 
 
@@ -233,7 +233,7 @@ export interface ContractNamespaceAttribute$instance extends Attribute {
 
 
 export const ContractNamespaceAttribute: {
-    new(contractNamespace: string): ContractNamespaceAttribute$instance;
+    new(contractNamespace: string): ContractNamespaceAttribute;
 };
 
 
@@ -250,7 +250,7 @@ export interface DataContractAttribute$instance extends Attribute {
 
 
 export const DataContractAttribute: {
-    new(): DataContractAttribute$instance;
+    new(): DataContractAttribute;
 };
 
 
@@ -297,13 +297,13 @@ export interface DataContractSerializer$instance extends XmlObjectSerializer {
 
 
 export const DataContractSerializer: {
-    new(type_: Type): DataContractSerializer$instance;
-    new(type_: Type, knownTypes: IEnumerable_1<Type>): DataContractSerializer$instance;
-    new(type_: Type, rootName: string, rootNamespace: string): DataContractSerializer$instance;
-    new(type_: Type, rootName: string, rootNamespace: string, knownTypes: IEnumerable_1<Type>): DataContractSerializer$instance;
-    new(type_: Type, rootName: XmlDictionaryString, rootNamespace: XmlDictionaryString): DataContractSerializer$instance;
-    new(type_: Type, rootName: XmlDictionaryString, rootNamespace: XmlDictionaryString, knownTypes: IEnumerable_1<Type>): DataContractSerializer$instance;
-    new(type_: Type, settings: DataContractSerializerSettings): DataContractSerializer$instance;
+    new(type_: Type): DataContractSerializer;
+    new(type_: Type, knownTypes: IEnumerable_1<Type>): DataContractSerializer;
+    new(type_: Type, rootName: string, rootNamespace: string): DataContractSerializer;
+    new(type_: Type, rootName: string, rootNamespace: string, knownTypes: IEnumerable_1<Type>): DataContractSerializer;
+    new(type_: Type, rootName: XmlDictionaryString, rootNamespace: XmlDictionaryString): DataContractSerializer;
+    new(type_: Type, rootName: XmlDictionaryString, rootNamespace: XmlDictionaryString, knownTypes: IEnumerable_1<Type>): DataContractSerializer;
+    new(type_: Type, settings: DataContractSerializerSettings): DataContractSerializer;
 };
 
 
@@ -322,7 +322,7 @@ export interface DataContractSerializerSettings$instance {
 
 
 export const DataContractSerializerSettings: {
-    new(): DataContractSerializerSettings$instance;
+    new(): DataContractSerializerSettings;
 };
 
 
@@ -338,7 +338,7 @@ export interface DataMemberAttribute$instance extends Attribute {
 
 
 export const DataMemberAttribute: {
-    new(): DataMemberAttribute$instance;
+    new(): DataMemberAttribute;
 };
 
 
@@ -352,8 +352,8 @@ export interface DateTimeFormat$instance {
 
 
 export const DateTimeFormat: {
-    new(formatString: string): DateTimeFormat$instance;
-    new(formatString: string, formatProvider: IFormatProvider): DateTimeFormat$instance;
+    new(formatString: string): DateTimeFormat;
+    new(formatString: string, formatProvider: IFormatProvider): DateTimeFormat;
 };
 
 
@@ -366,7 +366,7 @@ export interface EnumMemberAttribute$instance extends Attribute {
 
 
 export const EnumMemberAttribute: {
-    new(): EnumMemberAttribute$instance;
+    new(): EnumMemberAttribute;
 };
 
 
@@ -379,7 +379,7 @@ export interface ExportOptions$instance {
 
 
 export const ExportOptions: {
-    new(): ExportOptions$instance;
+    new(): ExportOptions;
 };
 
 
@@ -390,7 +390,7 @@ export interface ExtensionDataObject$instance {
 
 
 export const ExtensionDataObject: {
-    new(): ExtensionDataObject$instance;
+    new(): ExtensionDataObject;
 };
 
 
@@ -440,7 +440,7 @@ export interface FormatterConverter$instance {
 
 
 export const FormatterConverter: {
-    new(): FormatterConverter$instance;
+    new(): FormatterConverter;
 };
 
 
@@ -456,7 +456,7 @@ export interface IgnoreDataMemberAttribute$instance extends Attribute {
 
 
 export const IgnoreDataMemberAttribute: {
-    new(): IgnoreDataMemberAttribute$instance;
+    new(): IgnoreDataMemberAttribute;
 };
 
 
@@ -468,9 +468,9 @@ export interface InvalidDataContractException$instance extends Exception {
 
 
 export const InvalidDataContractException: {
-    new(): InvalidDataContractException$instance;
-    new(message: string): InvalidDataContractException$instance;
-    new(message: string, innerException: Exception): InvalidDataContractException$instance;
+    new(): InvalidDataContractException;
+    new(message: string): InvalidDataContractException;
+    new(message: string, innerException: Exception): InvalidDataContractException;
 };
 
 
@@ -488,8 +488,8 @@ export interface KnownTypeAttribute$instance extends Attribute {
 
 
 export const KnownTypeAttribute: {
-    new(type_: Type): KnownTypeAttribute$instance;
-    new(methodName: string): KnownTypeAttribute$instance;
+    new(type_: Type): KnownTypeAttribute;
+    new(methodName: string): KnownTypeAttribute;
 };
 
 
@@ -502,7 +502,7 @@ export interface ObjectIDGenerator$instance {
 
 
 export const ObjectIDGenerator: {
-    new(): ObjectIDGenerator$instance;
+    new(): ObjectIDGenerator;
 };
 
 
@@ -525,7 +525,7 @@ export interface ObjectManager$instance {
 
 
 export const ObjectManager: {
-    new(selector: ISurrogateSelector, context: StreamingContext): ObjectManager$instance;
+    new(selector: ISurrogateSelector, context: StreamingContext): ObjectManager;
 };
 
 
@@ -536,7 +536,7 @@ export interface OnDeserializedAttribute$instance extends Attribute {
 
 
 export const OnDeserializedAttribute: {
-    new(): OnDeserializedAttribute$instance;
+    new(): OnDeserializedAttribute;
 };
 
 
@@ -547,7 +547,7 @@ export interface OnDeserializingAttribute$instance extends Attribute {
 
 
 export const OnDeserializingAttribute: {
-    new(): OnDeserializingAttribute$instance;
+    new(): OnDeserializingAttribute;
 };
 
 
@@ -558,7 +558,7 @@ export interface OnSerializedAttribute$instance extends Attribute {
 
 
 export const OnSerializedAttribute: {
-    new(): OnSerializedAttribute$instance;
+    new(): OnSerializedAttribute;
 };
 
 
@@ -569,7 +569,7 @@ export interface OnSerializingAttribute$instance extends Attribute {
 
 
 export const OnSerializingAttribute: {
-    new(): OnSerializingAttribute$instance;
+    new(): OnSerializingAttribute;
 };
 
 
@@ -581,7 +581,7 @@ export interface OptionalFieldAttribute$instance extends Attribute {
 
 
 export const OptionalFieldAttribute: {
-    new(): OptionalFieldAttribute$instance;
+    new(): OptionalFieldAttribute;
 };
 
 
@@ -594,7 +594,7 @@ export interface SafeSerializationEventArgs$instance extends EventArgs {
 
 
 export const SafeSerializationEventArgs: {
-    new(): SafeSerializationEventArgs$instance;
+    new(): SafeSerializationEventArgs;
 };
 
 
@@ -618,9 +618,9 @@ export interface SerializationException$instance extends SystemException {
 
 
 export const SerializationException: {
-    new(): SerializationException$instance;
-    new(message: string): SerializationException$instance;
-    new(message: string, innerException: Exception): SerializationException$instance;
+    new(): SerializationException;
+    new(message: string): SerializationException;
+    new(message: string, innerException: Exception): SerializationException;
 };
 
 
@@ -676,8 +676,8 @@ export interface SerializationInfo$instance {
 
 
 export const SerializationInfo: {
-    new(type_: Type, converter: IFormatterConverter): SerializationInfo$instance;
-    new(type_: Type, converter: IFormatterConverter, requireSameTokenInPartialTrust: boolean): SerializationInfo$instance;
+    new(type_: Type, converter: IFormatterConverter): SerializationInfo;
+    new(type_: Type, converter: IFormatterConverter, requireSameTokenInPartialTrust: boolean): SerializationInfo;
     StartDeserialization(): DeserializationToken;
 };
 
@@ -695,7 +695,7 @@ export interface SerializationInfoEnumerator$instance {
 
 
 export const SerializationInfoEnumerator: {
-    new(): SerializationInfoEnumerator$instance;
+    new(): SerializationInfoEnumerator;
 };
 
 
@@ -713,7 +713,7 @@ export interface SerializationObjectManager$instance {
 
 
 export const SerializationObjectManager: {
-    new(context: StreamingContext): SerializationObjectManager$instance;
+    new(context: StreamingContext): SerializationObjectManager;
 };
 
 
@@ -729,7 +729,7 @@ export interface SurrogateSelector$instance {
 
 
 export const SurrogateSelector: {
-    new(): SurrogateSelector$instance;
+    new(): SurrogateSelector;
 };
 
 
@@ -747,7 +747,7 @@ export interface TypeLoadExceptionHolder$instance {
 
 
 export const TypeLoadExceptionHolder: {
-    new(): TypeLoadExceptionHolder$instance;
+    new(): TypeLoadExceptionHolder;
 };
 
 
@@ -795,8 +795,8 @@ export interface XsdDataContractExporter$instance {
 
 
 export const XsdDataContractExporter: {
-    new(): XsdDataContractExporter$instance;
-    new(schemas: XmlSchemaSet): XsdDataContractExporter$instance;
+    new(): XsdDataContractExporter;
+    new(schemas: XmlSchemaSet): XsdDataContractExporter;
 };
 
 

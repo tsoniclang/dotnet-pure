@@ -27,7 +27,7 @@ export interface JsonNodeOptions$instance {
 
 
 export const JsonNodeOptions: {
-    new(): JsonNodeOptions$instance;
+    new(): JsonNodeOptions;
 };
 
 
@@ -52,11 +52,11 @@ export interface JsonArray$instance extends JsonNode {
 
 
 export const JsonArray: {
-    new(options: Nullable_1<JsonNodeOptions>): JsonArray$instance;
-    new(options: JsonNodeOptions, items: JsonNode[]): JsonArray$instance;
-    new(options: JsonNodeOptions, items: ReadOnlySpan_1<JsonNode>): JsonArray$instance;
-    new(items: JsonNode[]): JsonArray$instance;
-    new(items: ReadOnlySpan_1<JsonNode>): JsonArray$instance;
+    new(options: Nullable_1<JsonNodeOptions>): JsonArray;
+    new(options: JsonNodeOptions, items: JsonNode[]): JsonArray;
+    new(options: JsonNodeOptions, items: ReadOnlySpan_1<JsonNode>): JsonArray;
+    new(items: JsonNode[]): JsonArray;
+    new(items: ReadOnlySpan_1<JsonNode>): JsonArray;
     Create(element: JsonElement, options?: Nullable_1<JsonNodeOptions>): JsonArray;
 };
 
@@ -130,8 +130,8 @@ export interface JsonObject$instance extends JsonNode {
 
 
 export const JsonObject: {
-    new(options: Nullable_1<JsonNodeOptions>): JsonObject$instance;
-    new(properties: IEnumerable_1<KeyValuePair_2<System_Internal.String, JsonNode>>, options: Nullable_1<JsonNodeOptions>): JsonObject$instance;
+    new(options: Nullable_1<JsonNodeOptions>): JsonObject;
+    new(properties: IEnumerable_1<KeyValuePair_2<System_Internal.String, JsonNode>>, options: Nullable_1<JsonNodeOptions>): JsonObject;
     Create(element: JsonElement, options?: Nullable_1<JsonNodeOptions>): JsonObject;
 };
 

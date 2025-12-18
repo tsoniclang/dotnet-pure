@@ -202,7 +202,7 @@ export interface GatewayIPAddressInformationCollection$instance {
 
 
 export const GatewayIPAddressInformationCollection: {
-    new(): GatewayIPAddressInformationCollection$instance;
+    new(): GatewayIPAddressInformationCollection;
 };
 
 
@@ -307,7 +307,7 @@ export interface IPAddressCollection$instance {
 
 
 export const IPAddressCollection: {
-    new(): IPAddressCollection$instance;
+    new(): IPAddressCollection;
 };
 
 
@@ -347,7 +347,7 @@ export interface IPAddressInformationCollection$instance {
 
 
 export const IPAddressInformationCollection: {
-    new(): IPAddressInformationCollection$instance;
+    new(): IPAddressInformationCollection;
 };
 
 
@@ -549,7 +549,7 @@ export interface MulticastIPAddressInformationCollection$instance {
 
 
 export const MulticastIPAddressInformationCollection: {
-    new(): MulticastIPAddressInformationCollection$instance;
+    new(): MulticastIPAddressInformationCollection;
 };
 
 
@@ -568,7 +568,7 @@ export interface NetworkAvailabilityEventArgs$instance extends EventArgs {
 
 
 export const NetworkAvailabilityEventArgs: {
-    new(): NetworkAvailabilityEventArgs$instance;
+    new(): NetworkAvailabilityEventArgs;
 };
 
 
@@ -579,7 +579,7 @@ export interface NetworkChange$instance {
 
 
 export const NetworkChange: {
-    new(): NetworkChange$instance;
+    new(): NetworkChange;
     RegisterNetworkChange(nc: NetworkChange): void;
 };
 
@@ -593,8 +593,8 @@ export interface NetworkInformationException$instance extends Win32Exception {
 
 
 export const NetworkInformationException: {
-    new(): NetworkInformationException$instance;
-    new(errorCode: int): NetworkInformationException$instance;
+    new(): NetworkInformationException;
+    new(errorCode: int): NetworkInformationException;
 };
 
 
@@ -641,7 +641,7 @@ export interface PhysicalAddress$instance {
 
 
 export const PhysicalAddress: {
-    new(address: byte[]): PhysicalAddress$instance;
+    new(address: byte[]): PhysicalAddress;
     readonly None: PhysicalAddress;
     Parse(address: ReadOnlySpan_1<System_Internal.Char>): PhysicalAddress;
     Parse(address: string): PhysicalAddress;
@@ -687,7 +687,7 @@ export interface Ping$instance extends Component {
 
 
 export const Ping: {
-    new(): Ping$instance;
+    new(): Ping;
 };
 
 
@@ -707,7 +707,7 @@ export interface PingCompletedEventArgs$instance extends AsyncCompletedEventArgs
 
 
 export const PingCompletedEventArgs: {
-    new(): PingCompletedEventArgs$instance;
+    new(): PingCompletedEventArgs;
 };
 
 
@@ -719,8 +719,8 @@ export interface PingException$instance extends InvalidOperationException {
 
 
 export const PingException: {
-    new(message: string): PingException$instance;
-    new(message: string, innerException: Exception): PingException$instance;
+    new(message: string): PingException;
+    new(message: string, innerException: Exception): PingException;
 };
 
 
@@ -738,8 +738,8 @@ export interface PingOptions$instance {
 
 
 export const PingOptions: {
-    new(): PingOptions$instance;
-    new(ttl: int, dontFragment: boolean): PingOptions$instance;
+    new(): PingOptions;
+    new(ttl: int, dontFragment: boolean): PingOptions;
 };
 
 
@@ -755,7 +755,7 @@ export interface PingReply$instance {
 
 
 export const PingReply: {
-    new(): PingReply$instance;
+    new(): PingReply;
 };
 
 
@@ -845,7 +845,7 @@ export interface UnicastIPAddressInformationCollection$instance {
 
 
 export const UnicastIPAddressInformationCollection: {
-    new(): UnicastIPAddressInformationCollection$instance;
+    new(): UnicastIPAddressInformationCollection;
 };
 
 

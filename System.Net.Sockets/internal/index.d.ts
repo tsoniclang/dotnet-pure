@@ -369,7 +369,7 @@ export interface IPPacketInformation$instance {
 
 
 export const IPPacketInformation: {
-    new(): IPPacketInformation$instance;
+    new(): IPPacketInformation;
 };
 
 
@@ -390,7 +390,7 @@ export interface SocketInformation$instance {
 
 
 export const SocketInformation: {
-    new(): SocketInformation$instance;
+    new(): SocketInformation;
 };
 
 
@@ -403,7 +403,7 @@ export interface SocketReceiveFromResult$instance {
 
 
 export const SocketReceiveFromResult: {
-    new(): SocketReceiveFromResult$instance;
+    new(): SocketReceiveFromResult;
 };
 
 
@@ -418,7 +418,7 @@ export interface SocketReceiveMessageFromResult$instance {
 
 
 export const SocketReceiveMessageFromResult: {
-    new(): SocketReceiveMessageFromResult$instance;
+    new(): SocketReceiveMessageFromResult;
 };
 
 
@@ -434,7 +434,7 @@ export interface UdpReceiveResult$instance {
 
 
 export const UdpReceiveResult: {
-    new(buffer: byte[], remoteEndPoint: IPEndPoint): UdpReceiveResult$instance;
+    new(buffer: byte[], remoteEndPoint: IPEndPoint): UdpReceiveResult;
 };
 
 
@@ -455,8 +455,8 @@ export interface IPv6MulticastOption$instance {
 
 
 export const IPv6MulticastOption: {
-    new(group: IPAddress, ifindex: long): IPv6MulticastOption$instance;
-    new(group: IPAddress): IPv6MulticastOption$instance;
+    new(group: IPAddress, ifindex: long): IPv6MulticastOption;
+    new(group: IPAddress): IPv6MulticastOption;
 };
 
 
@@ -471,7 +471,7 @@ export interface LingerOption$instance {
 
 
 export const LingerOption: {
-    new(enable: boolean, seconds: int): LingerOption$instance;
+    new(enable: boolean, seconds: int): LingerOption;
 };
 
 
@@ -485,9 +485,9 @@ export interface MulticastOption$instance {
 
 
 export const MulticastOption: {
-    new(group: IPAddress, mcint: IPAddress): MulticastOption$instance;
-    new(group: IPAddress, interfaceIndex: int): MulticastOption$instance;
-    new(group: IPAddress): MulticastOption$instance;
+    new(group: IPAddress, mcint: IPAddress): MulticastOption;
+    new(group: IPAddress, interfaceIndex: int): MulticastOption;
+    new(group: IPAddress): MulticastOption;
 };
 
 
@@ -538,10 +538,10 @@ export interface NetworkStream$instance extends Stream {
 
 
 export const NetworkStream: {
-    new(socket: Socket): NetworkStream$instance;
-    new(socket: Socket, ownsSocket: boolean): NetworkStream$instance;
-    new(socket: Socket, access: FileAccess): NetworkStream$instance;
-    new(socket: Socket, access: FileAccess, ownsSocket: boolean): NetworkStream$instance;
+    new(socket: Socket): NetworkStream;
+    new(socket: Socket, ownsSocket: boolean): NetworkStream;
+    new(socket: Socket, access: FileAccess): NetworkStream;
+    new(socket: Socket, access: FileAccess, ownsSocket: boolean): NetworkStream;
 };
 
 
@@ -560,8 +560,8 @@ export interface SafeSocketHandle$instance extends SafeHandleMinusOneIsInvalid {
 
 
 export const SafeSocketHandle: {
-    new(): SafeSocketHandle$instance;
-    new(preexistingHandle: nint, ownsHandle: boolean): SafeSocketHandle$instance;
+    new(): SafeSocketHandle;
+    new(preexistingHandle: nint, ownsHandle: boolean): SafeSocketHandle;
 };
 
 
@@ -585,19 +585,19 @@ export interface SendPacketsElement$instance {
 
 
 export const SendPacketsElement: {
-    new(filepath: string): SendPacketsElement$instance;
-    new(filepath: string, offset: int, count: int): SendPacketsElement$instance;
-    new(filepath: string, offset: int, count: int, endOfPacket: boolean): SendPacketsElement$instance;
-    new(filepath: string, offset: long, count: int): SendPacketsElement$instance;
-    new(filepath: string, offset: long, count: int, endOfPacket: boolean): SendPacketsElement$instance;
-    new(fileStream: FileStream): SendPacketsElement$instance;
-    new(fileStream: FileStream, offset: long, count: int): SendPacketsElement$instance;
-    new(fileStream: FileStream, offset: long, count: int, endOfPacket: boolean): SendPacketsElement$instance;
-    new(buffer: byte[]): SendPacketsElement$instance;
-    new(buffer: byte[], offset: int, count: int): SendPacketsElement$instance;
-    new(buffer: byte[], offset: int, count: int, endOfPacket: boolean): SendPacketsElement$instance;
-    new(buffer: ReadOnlyMemory_1<System_Internal.Byte>): SendPacketsElement$instance;
-    new(buffer: ReadOnlyMemory_1<System_Internal.Byte>, endOfPacket: boolean): SendPacketsElement$instance;
+    new(filepath: string): SendPacketsElement;
+    new(filepath: string, offset: int, count: int): SendPacketsElement;
+    new(filepath: string, offset: int, count: int, endOfPacket: boolean): SendPacketsElement;
+    new(filepath: string, offset: long, count: int): SendPacketsElement;
+    new(filepath: string, offset: long, count: int, endOfPacket: boolean): SendPacketsElement;
+    new(fileStream: FileStream): SendPacketsElement;
+    new(fileStream: FileStream, offset: long, count: int): SendPacketsElement;
+    new(fileStream: FileStream, offset: long, count: int, endOfPacket: boolean): SendPacketsElement;
+    new(buffer: byte[]): SendPacketsElement;
+    new(buffer: byte[], offset: int, count: int): SendPacketsElement;
+    new(buffer: byte[], offset: int, count: int, endOfPacket: boolean): SendPacketsElement;
+    new(buffer: ReadOnlyMemory_1<System_Internal.Byte>): SendPacketsElement;
+    new(buffer: ReadOnlyMemory_1<System_Internal.Byte>, endOfPacket: boolean): SendPacketsElement;
 };
 
 
@@ -785,10 +785,10 @@ export interface Socket$instance {
 
 
 export const Socket: {
-    new(socketType: SocketType, protocolType: ProtocolType): Socket$instance;
-    new(addressFamily: AddressFamily, socketType: SocketType, protocolType: ProtocolType): Socket$instance;
-    new(handle: SafeSocketHandle): Socket$instance;
-    new(socketInformation: SocketInformation): Socket$instance;
+    new(socketType: SocketType, protocolType: ProtocolType): Socket;
+    new(addressFamily: AddressFamily, socketType: SocketType, protocolType: ProtocolType): Socket;
+    new(handle: SafeSocketHandle): Socket;
+    new(socketInformation: SocketInformation): Socket;
     readonly SupportsIPv4: boolean;
     readonly SupportsIPv6: boolean;
     readonly OSSupportsIPv4: boolean;
@@ -838,8 +838,8 @@ export interface SocketAsyncEventArgs$instance extends EventArgs {
 
 
 export const SocketAsyncEventArgs: {
-    new(): SocketAsyncEventArgs$instance;
-    new(unsafeSuppressExecutionContextFlow: boolean): SocketAsyncEventArgs$instance;
+    new(): SocketAsyncEventArgs;
+    new(unsafeSuppressExecutionContextFlow: boolean): SocketAsyncEventArgs;
 };
 
 
@@ -861,9 +861,9 @@ export interface SocketException$instance extends Win32Exception {
 
 
 export const SocketException: {
-    new(errorCode: int): SocketException$instance;
-    new(errorCode: int, message: string): SocketException$instance;
-    new(): SocketException$instance;
+    new(errorCode: int): SocketException;
+    new(errorCode: int, message: string): SocketException;
+    new(): SocketException;
 };
 
 
@@ -908,10 +908,10 @@ export interface TcpClient$instance {
 
 
 export const TcpClient: {
-    new(): TcpClient$instance;
-    new(family: AddressFamily): TcpClient$instance;
-    new(localEP: IPEndPoint): TcpClient$instance;
-    new(hostname: string, port: int): TcpClient$instance;
+    new(): TcpClient;
+    new(family: AddressFamily): TcpClient;
+    new(localEP: IPEndPoint): TcpClient;
+    new(hostname: string, port: int): TcpClient;
 };
 
 
@@ -948,9 +948,9 @@ export interface TcpListener$instance {
 
 
 export const TcpListener: {
-    new(localEP: IPEndPoint): TcpListener$instance;
-    new(localaddr: IPAddress, port: int): TcpListener$instance;
-    new(port: int): TcpListener$instance;
+    new(localEP: IPEndPoint): TcpListener;
+    new(localaddr: IPAddress, port: int): TcpListener;
+    new(port: int): TcpListener;
     Create(port: int): TcpListener;
 };
 
@@ -1009,12 +1009,12 @@ export interface UdpClient$instance {
 
 
 export const UdpClient: {
-    new(): UdpClient$instance;
-    new(family: AddressFamily): UdpClient$instance;
-    new(port: int): UdpClient$instance;
-    new(port: int, family: AddressFamily): UdpClient$instance;
-    new(localEP: IPEndPoint): UdpClient$instance;
-    new(hostname: string, port: int): UdpClient$instance;
+    new(): UdpClient;
+    new(family: AddressFamily): UdpClient;
+    new(port: int): UdpClient;
+    new(port: int, family: AddressFamily): UdpClient;
+    new(localEP: IPEndPoint): UdpClient;
+    new(hostname: string, port: int): UdpClient;
 };
 
 
@@ -1038,7 +1038,7 @@ export interface UnixDomainSocketEndPoint$instance extends EndPoint {
 
 
 export const UnixDomainSocketEndPoint: {
-    new(path: string): UnixDomainSocketEndPoint$instance;
+    new(path: string): UnixDomainSocketEndPoint;
 };
 
 

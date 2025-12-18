@@ -65,10 +65,10 @@ export interface ExtendedProtectionPolicy$instance {
 
 
 export const ExtendedProtectionPolicy: {
-    new(policyEnforcement: PolicyEnforcement, protectionScenario: ProtectionScenario, customServiceNames: ServiceNameCollection): ExtendedProtectionPolicy$instance;
-    new(policyEnforcement: PolicyEnforcement, protectionScenario: ProtectionScenario, customServiceNames: ICollection): ExtendedProtectionPolicy$instance;
-    new(policyEnforcement: PolicyEnforcement, customChannelBinding: ChannelBinding): ExtendedProtectionPolicy$instance;
-    new(policyEnforcement: PolicyEnforcement): ExtendedProtectionPolicy$instance;
+    new(policyEnforcement: PolicyEnforcement, protectionScenario: ProtectionScenario, customServiceNames: ServiceNameCollection): ExtendedProtectionPolicy;
+    new(policyEnforcement: PolicyEnforcement, protectionScenario: ProtectionScenario, customServiceNames: ICollection): ExtendedProtectionPolicy;
+    new(policyEnforcement: PolicyEnforcement, customChannelBinding: ChannelBinding): ExtendedProtectionPolicy;
+    new(policyEnforcement: PolicyEnforcement): ExtendedProtectionPolicy;
     readonly OSSupportsExtendedProtection: boolean;
 };
 
@@ -91,7 +91,7 @@ export interface ExtendedProtectionPolicyTypeConverter$instance extends TypeConv
 
 
 export const ExtendedProtectionPolicyTypeConverter: {
-    new(): ExtendedProtectionPolicyTypeConverter$instance;
+    new(): ExtendedProtectionPolicyTypeConverter;
 };
 
 
@@ -107,7 +107,7 @@ export interface ServiceNameCollection$instance extends ReadOnlyCollectionBase {
 
 
 export const ServiceNameCollection: {
-    new(items: ICollection): ServiceNameCollection$instance;
+    new(items: ICollection): ServiceNameCollection;
 };
 
 

@@ -185,7 +185,7 @@ export interface ValidationEventArgs$instance extends EventArgs {
 
 
 export const ValidationEventArgs: {
-    new(): ValidationEventArgs$instance;
+    new(): ValidationEventArgs;
 };
 
 
@@ -210,7 +210,7 @@ export interface XmlAtomicValue$instance extends XPathItem {
 
 
 export const XmlAtomicValue: {
-    new(): XmlAtomicValue$instance;
+    new(): XmlAtomicValue;
 };
 
 
@@ -251,7 +251,7 @@ export interface XmlSchema$instance extends XmlSchemaObject {
 
 
 export const XmlSchema: {
-    new(): XmlSchema$instance;
+    new(): XmlSchema;
     readonly Namespace: string;
     readonly InstanceNamespace: string;
     Read(stream: Stream, validationEventHandler: ValidationEventHandler): XmlSchema;
@@ -268,7 +268,7 @@ export interface XmlSchemaAll$instance extends XmlSchemaGroupBase {
 
 
 export const XmlSchemaAll: {
-    new(): XmlSchemaAll$instance;
+    new(): XmlSchemaAll;
 };
 
 
@@ -282,7 +282,7 @@ export interface XmlSchemaAnnotated$instance extends XmlSchemaObject {
 
 
 export const XmlSchemaAnnotated: {
-    new(): XmlSchemaAnnotated$instance;
+    new(): XmlSchemaAnnotated;
 };
 
 
@@ -296,7 +296,7 @@ export interface XmlSchemaAnnotation$instance extends XmlSchemaObject {
 
 
 export const XmlSchemaAnnotation: {
-    new(): XmlSchemaAnnotation$instance;
+    new(): XmlSchemaAnnotation;
 };
 
 
@@ -309,7 +309,7 @@ export interface XmlSchemaAny$instance extends XmlSchemaParticle {
 
 
 export const XmlSchemaAny: {
-    new(): XmlSchemaAny$instance;
+    new(): XmlSchemaAny;
 };
 
 
@@ -322,7 +322,7 @@ export interface XmlSchemaAnyAttribute$instance extends XmlSchemaAnnotated {
 
 
 export const XmlSchemaAnyAttribute: {
-    new(): XmlSchemaAnyAttribute$instance;
+    new(): XmlSchemaAnyAttribute;
 };
 
 
@@ -335,7 +335,7 @@ export interface XmlSchemaAppInfo$instance extends XmlSchemaObject {
 
 
 export const XmlSchemaAppInfo: {
-    new(): XmlSchemaAppInfo$instance;
+    new(): XmlSchemaAppInfo;
 };
 
 
@@ -357,7 +357,7 @@ export interface XmlSchemaAttribute$instance extends XmlSchemaAnnotated {
 
 
 export const XmlSchemaAttribute: {
-    new(): XmlSchemaAttribute$instance;
+    new(): XmlSchemaAttribute;
 };
 
 
@@ -373,7 +373,7 @@ export interface XmlSchemaAttributeGroup$instance extends XmlSchemaAnnotated {
 
 
 export const XmlSchemaAttributeGroup: {
-    new(): XmlSchemaAttributeGroup$instance;
+    new(): XmlSchemaAttributeGroup;
 };
 
 
@@ -385,7 +385,7 @@ export interface XmlSchemaAttributeGroupRef$instance extends XmlSchemaAnnotated 
 
 
 export const XmlSchemaAttributeGroupRef: {
-    new(): XmlSchemaAttributeGroupRef$instance;
+    new(): XmlSchemaAttributeGroupRef;
 };
 
 
@@ -397,7 +397,7 @@ export interface XmlSchemaChoice$instance extends XmlSchemaGroupBase {
 
 
 export const XmlSchemaChoice: {
-    new(): XmlSchemaChoice$instance;
+    new(): XmlSchemaChoice;
 };
 
 
@@ -421,8 +421,8 @@ export interface XmlSchemaCollection$instance {
 
 
 export const XmlSchemaCollection: {
-    new(): XmlSchemaCollection$instance;
-    new(nametable: XmlNameTable): XmlSchemaCollection$instance;
+    new(): XmlSchemaCollection;
+    new(nametable: XmlNameTable): XmlSchemaCollection;
 };
 
 
@@ -442,7 +442,7 @@ export interface XmlSchemaCollectionEnumerator$instance {
 
 
 export const XmlSchemaCollectionEnumerator: {
-    new(): XmlSchemaCollectionEnumerator$instance;
+    new(): XmlSchemaCollectionEnumerator;
 };
 
 
@@ -459,7 +459,7 @@ export interface XmlSchemaCompilationSettings$instance {
 
 
 export const XmlSchemaCompilationSettings: {
-    new(): XmlSchemaCompilationSettings$instance;
+    new(): XmlSchemaCompilationSettings;
 };
 
 
@@ -472,7 +472,7 @@ export interface XmlSchemaComplexContent$instance extends XmlSchemaContentModel 
 
 
 export const XmlSchemaComplexContent: {
-    new(): XmlSchemaComplexContent$instance;
+    new(): XmlSchemaComplexContent;
 };
 
 
@@ -487,7 +487,7 @@ export interface XmlSchemaComplexContentExtension$instance extends XmlSchemaCont
 
 
 export const XmlSchemaComplexContentExtension: {
-    new(): XmlSchemaComplexContentExtension$instance;
+    new(): XmlSchemaComplexContentExtension;
 };
 
 
@@ -502,7 +502,7 @@ export interface XmlSchemaComplexContentRestriction$instance extends XmlSchemaCo
 
 
 export const XmlSchemaComplexContentRestriction: {
-    new(): XmlSchemaComplexContentRestriction$instance;
+    new(): XmlSchemaComplexContentRestriction;
 };
 
 
@@ -525,7 +525,7 @@ export interface XmlSchemaComplexType$instance extends XmlSchemaType {
 
 
 export const XmlSchemaComplexType: {
-    new(): XmlSchemaComplexType$instance;
+    new(): XmlSchemaComplexType;
 };
 
 
@@ -578,7 +578,7 @@ export interface XmlSchemaDocumentation$instance extends XmlSchemaObject {
 
 
 export const XmlSchemaDocumentation: {
-    new(): XmlSchemaDocumentation$instance;
+    new(): XmlSchemaDocumentation;
 };
 
 
@@ -607,7 +607,7 @@ export interface XmlSchemaElement$instance extends XmlSchemaParticle {
 
 
 export const XmlSchemaElement: {
-    new(): XmlSchemaElement$instance;
+    new(): XmlSchemaElement;
 };
 
 
@@ -618,7 +618,7 @@ export interface XmlSchemaEnumerationFacet$instance extends XmlSchemaFacet {
 
 
 export const XmlSchemaEnumerationFacet: {
-    new(): XmlSchemaEnumerationFacet$instance;
+    new(): XmlSchemaEnumerationFacet;
 };
 
 
@@ -635,10 +635,10 @@ export interface XmlSchemaException$instance extends SystemException {
 
 
 export const XmlSchemaException: {
-    new(): XmlSchemaException$instance;
-    new(message: string): XmlSchemaException$instance;
-    new(message: string, innerException: Exception): XmlSchemaException$instance;
-    new(message: string, innerException: Exception, lineNumber: int, linePosition: int): XmlSchemaException$instance;
+    new(): XmlSchemaException;
+    new(message: string): XmlSchemaException;
+    new(message: string, innerException: Exception): XmlSchemaException;
+    new(message: string, innerException: Exception, lineNumber: int, linePosition: int): XmlSchemaException;
 };
 
 
@@ -680,7 +680,7 @@ export interface XmlSchemaFractionDigitsFacet$instance extends XmlSchemaNumericF
 
 
 export const XmlSchemaFractionDigitsFacet: {
-    new(): XmlSchemaFractionDigitsFacet$instance;
+    new(): XmlSchemaFractionDigitsFacet;
 };
 
 
@@ -694,7 +694,7 @@ export interface XmlSchemaGroup$instance extends XmlSchemaAnnotated {
 
 
 export const XmlSchemaGroup: {
-    new(): XmlSchemaGroup$instance;
+    new(): XmlSchemaGroup;
 };
 
 
@@ -718,7 +718,7 @@ export interface XmlSchemaGroupRef$instance extends XmlSchemaParticle {
 
 
 export const XmlSchemaGroupRef: {
-    new(): XmlSchemaGroupRef$instance;
+    new(): XmlSchemaGroupRef;
 };
 
 
@@ -733,7 +733,7 @@ export interface XmlSchemaIdentityConstraint$instance extends XmlSchemaAnnotated
 
 
 export const XmlSchemaIdentityConstraint: {
-    new(): XmlSchemaIdentityConstraint$instance;
+    new(): XmlSchemaIdentityConstraint;
 };
 
 
@@ -746,7 +746,7 @@ export interface XmlSchemaImport$instance extends XmlSchemaExternal {
 
 
 export const XmlSchemaImport: {
-    new(): XmlSchemaImport$instance;
+    new(): XmlSchemaImport;
 };
 
 
@@ -758,7 +758,7 @@ export interface XmlSchemaInclude$instance extends XmlSchemaExternal {
 
 
 export const XmlSchemaInclude: {
-    new(): XmlSchemaInclude$instance;
+    new(): XmlSchemaInclude;
 };
 
 
@@ -773,7 +773,7 @@ export interface XmlSchemaInference$instance {
 
 
 export const XmlSchemaInference: {
-    new(): XmlSchemaInference$instance;
+    new(): XmlSchemaInference;
 };
 
 
@@ -785,10 +785,10 @@ export interface XmlSchemaInferenceException$instance extends XmlSchemaException
 
 
 export const XmlSchemaInferenceException: {
-    new(): XmlSchemaInferenceException$instance;
-    new(message: string): XmlSchemaInferenceException$instance;
-    new(message: string, innerException: Exception): XmlSchemaInferenceException$instance;
-    new(message: string, innerException: Exception, lineNumber: int, linePosition: int): XmlSchemaInferenceException$instance;
+    new(): XmlSchemaInferenceException;
+    new(message: string): XmlSchemaInferenceException;
+    new(message: string, innerException: Exception): XmlSchemaInferenceException;
+    new(message: string, innerException: Exception, lineNumber: int, linePosition: int): XmlSchemaInferenceException;
 };
 
 
@@ -812,7 +812,7 @@ export interface XmlSchemaInfo$instance {
 
 
 export const XmlSchemaInfo: {
-    new(): XmlSchemaInfo$instance;
+    new(): XmlSchemaInfo;
 };
 
 
@@ -828,7 +828,7 @@ export interface XmlSchemaKey$instance extends XmlSchemaIdentityConstraint {
 
 
 export const XmlSchemaKey: {
-    new(): XmlSchemaKey$instance;
+    new(): XmlSchemaKey;
 };
 
 
@@ -840,7 +840,7 @@ export interface XmlSchemaKeyref$instance extends XmlSchemaIdentityConstraint {
 
 
 export const XmlSchemaKeyref: {
-    new(): XmlSchemaKeyref$instance;
+    new(): XmlSchemaKeyref;
 };
 
 
@@ -851,7 +851,7 @@ export interface XmlSchemaLengthFacet$instance extends XmlSchemaNumericFacet {
 
 
 export const XmlSchemaLengthFacet: {
-    new(): XmlSchemaLengthFacet$instance;
+    new(): XmlSchemaLengthFacet;
 };
 
 
@@ -862,7 +862,7 @@ export interface XmlSchemaMaxExclusiveFacet$instance extends XmlSchemaFacet {
 
 
 export const XmlSchemaMaxExclusiveFacet: {
-    new(): XmlSchemaMaxExclusiveFacet$instance;
+    new(): XmlSchemaMaxExclusiveFacet;
 };
 
 
@@ -873,7 +873,7 @@ export interface XmlSchemaMaxInclusiveFacet$instance extends XmlSchemaFacet {
 
 
 export const XmlSchemaMaxInclusiveFacet: {
-    new(): XmlSchemaMaxInclusiveFacet$instance;
+    new(): XmlSchemaMaxInclusiveFacet;
 };
 
 
@@ -884,7 +884,7 @@ export interface XmlSchemaMaxLengthFacet$instance extends XmlSchemaNumericFacet 
 
 
 export const XmlSchemaMaxLengthFacet: {
-    new(): XmlSchemaMaxLengthFacet$instance;
+    new(): XmlSchemaMaxLengthFacet;
 };
 
 
@@ -895,7 +895,7 @@ export interface XmlSchemaMinExclusiveFacet$instance extends XmlSchemaFacet {
 
 
 export const XmlSchemaMinExclusiveFacet: {
-    new(): XmlSchemaMinExclusiveFacet$instance;
+    new(): XmlSchemaMinExclusiveFacet;
 };
 
 
@@ -906,7 +906,7 @@ export interface XmlSchemaMinInclusiveFacet$instance extends XmlSchemaFacet {
 
 
 export const XmlSchemaMinInclusiveFacet: {
-    new(): XmlSchemaMinInclusiveFacet$instance;
+    new(): XmlSchemaMinInclusiveFacet;
 };
 
 
@@ -917,7 +917,7 @@ export interface XmlSchemaMinLengthFacet$instance extends XmlSchemaNumericFacet 
 
 
 export const XmlSchemaMinLengthFacet: {
-    new(): XmlSchemaMinLengthFacet$instance;
+    new(): XmlSchemaMinLengthFacet;
 };
 
 
@@ -931,7 +931,7 @@ export interface XmlSchemaNotation$instance extends XmlSchemaAnnotated {
 
 
 export const XmlSchemaNotation: {
-    new(): XmlSchemaNotation$instance;
+    new(): XmlSchemaNotation;
 };
 
 
@@ -977,8 +977,8 @@ export interface XmlSchemaObjectCollection$instance extends CollectionBase {
 
 
 export const XmlSchemaObjectCollection: {
-    new(): XmlSchemaObjectCollection$instance;
-    new(parent: XmlSchemaObject): XmlSchemaObjectCollection$instance;
+    new(): XmlSchemaObjectCollection;
+    new(parent: XmlSchemaObject): XmlSchemaObjectCollection;
 };
 
 
@@ -999,7 +999,7 @@ export interface XmlSchemaObjectEnumerator$instance {
 
 
 export const XmlSchemaObjectEnumerator: {
-    new(): XmlSchemaObjectEnumerator$instance;
+    new(): XmlSchemaObjectEnumerator;
 };
 
 
@@ -1021,7 +1021,7 @@ export interface XmlSchemaObjectTable$instance {
 
 
 export const XmlSchemaObjectTable: {
-    new(): XmlSchemaObjectTable$instance;
+    new(): XmlSchemaObjectTable;
 };
 
 
@@ -1046,7 +1046,7 @@ export interface XmlSchemaPatternFacet$instance extends XmlSchemaFacet {
 
 
 export const XmlSchemaPatternFacet: {
-    new(): XmlSchemaPatternFacet$instance;
+    new(): XmlSchemaPatternFacet;
 };
 
 
@@ -1061,7 +1061,7 @@ export interface XmlSchemaRedefine$instance extends XmlSchemaExternal {
 
 
 export const XmlSchemaRedefine: {
-    new(): XmlSchemaRedefine$instance;
+    new(): XmlSchemaRedefine;
 };
 
 
@@ -1073,7 +1073,7 @@ export interface XmlSchemaSequence$instance extends XmlSchemaGroupBase {
 
 
 export const XmlSchemaSequence: {
-    new(): XmlSchemaSequence$instance;
+    new(): XmlSchemaSequence;
 };
 
 
@@ -1105,8 +1105,8 @@ export interface XmlSchemaSet$instance {
 
 
 export const XmlSchemaSet: {
-    new(): XmlSchemaSet$instance;
-    new(nameTable: XmlNameTable): XmlSchemaSet$instance;
+    new(): XmlSchemaSet;
+    new(nameTable: XmlNameTable): XmlSchemaSet;
 };
 
 
@@ -1118,7 +1118,7 @@ export interface XmlSchemaSimpleContent$instance extends XmlSchemaContentModel {
 
 
 export const XmlSchemaSimpleContent: {
-    new(): XmlSchemaSimpleContent$instance;
+    new(): XmlSchemaSimpleContent;
 };
 
 
@@ -1132,7 +1132,7 @@ export interface XmlSchemaSimpleContentExtension$instance extends XmlSchemaConte
 
 
 export const XmlSchemaSimpleContentExtension: {
-    new(): XmlSchemaSimpleContentExtension$instance;
+    new(): XmlSchemaSimpleContentExtension;
 };
 
 
@@ -1148,7 +1148,7 @@ export interface XmlSchemaSimpleContentRestriction$instance extends XmlSchemaCon
 
 
 export const XmlSchemaSimpleContentRestriction: {
-    new(): XmlSchemaSimpleContentRestriction$instance;
+    new(): XmlSchemaSimpleContentRestriction;
 };
 
 
@@ -1160,7 +1160,7 @@ export interface XmlSchemaSimpleType$instance extends XmlSchemaType {
 
 
 export const XmlSchemaSimpleType: {
-    new(): XmlSchemaSimpleType$instance;
+    new(): XmlSchemaSimpleType;
 };
 
 
@@ -1184,7 +1184,7 @@ export interface XmlSchemaSimpleTypeList$instance extends XmlSchemaSimpleTypeCon
 
 
 export const XmlSchemaSimpleTypeList: {
-    new(): XmlSchemaSimpleTypeList$instance;
+    new(): XmlSchemaSimpleTypeList;
 };
 
 
@@ -1198,7 +1198,7 @@ export interface XmlSchemaSimpleTypeRestriction$instance extends XmlSchemaSimple
 
 
 export const XmlSchemaSimpleTypeRestriction: {
-    new(): XmlSchemaSimpleTypeRestriction$instance;
+    new(): XmlSchemaSimpleTypeRestriction;
 };
 
 
@@ -1212,7 +1212,7 @@ export interface XmlSchemaSimpleTypeUnion$instance extends XmlSchemaSimpleTypeCo
 
 
 export const XmlSchemaSimpleTypeUnion: {
-    new(): XmlSchemaSimpleTypeUnion$instance;
+    new(): XmlSchemaSimpleTypeUnion;
 };
 
 
@@ -1223,7 +1223,7 @@ export interface XmlSchemaTotalDigitsFacet$instance extends XmlSchemaNumericFace
 
 
 export const XmlSchemaTotalDigitsFacet: {
-    new(): XmlSchemaTotalDigitsFacet$instance;
+    new(): XmlSchemaTotalDigitsFacet;
 };
 
 
@@ -1244,7 +1244,7 @@ export interface XmlSchemaType$instance extends XmlSchemaAnnotated {
 
 
 export const XmlSchemaType: {
-    new(): XmlSchemaType$instance;
+    new(): XmlSchemaType;
     GetBuiltInComplexType(typeCode: XmlTypeCode): XmlSchemaComplexType;
     GetBuiltInComplexType(qualifiedName: XmlQualifiedName): XmlSchemaComplexType;
     GetBuiltInSimpleType(typeCode: XmlTypeCode): XmlSchemaSimpleType;
@@ -1260,7 +1260,7 @@ export interface XmlSchemaUnique$instance extends XmlSchemaIdentityConstraint {
 
 
 export const XmlSchemaUnique: {
-    new(): XmlSchemaUnique$instance;
+    new(): XmlSchemaUnique;
 };
 
 
@@ -1273,10 +1273,10 @@ export interface XmlSchemaValidationException$instance extends XmlSchemaExceptio
 
 
 export const XmlSchemaValidationException: {
-    new(): XmlSchemaValidationException$instance;
-    new(message: string): XmlSchemaValidationException$instance;
-    new(message: string, innerException: Exception): XmlSchemaValidationException$instance;
-    new(message: string, innerException: Exception, lineNumber: int, linePosition: int): XmlSchemaValidationException$instance;
+    new(): XmlSchemaValidationException;
+    new(message: string): XmlSchemaValidationException;
+    new(message: string, innerException: Exception): XmlSchemaValidationException;
+    new(message: string, innerException: Exception, lineNumber: int, linePosition: int): XmlSchemaValidationException;
 };
 
 
@@ -1315,7 +1315,7 @@ export interface XmlSchemaValidator$instance {
 
 
 export const XmlSchemaValidator: {
-    new(nameTable: XmlNameTable, schemas: XmlSchemaSet, namespaceResolver: IXmlNamespaceResolver, validationFlags: XmlSchemaValidationFlags): XmlSchemaValidator$instance;
+    new(nameTable: XmlNameTable, schemas: XmlSchemaSet, namespaceResolver: IXmlNamespaceResolver, validationFlags: XmlSchemaValidationFlags): XmlSchemaValidator;
 };
 
 
@@ -1326,7 +1326,7 @@ export interface XmlSchemaWhiteSpaceFacet$instance extends XmlSchemaFacet {
 
 
 export const XmlSchemaWhiteSpaceFacet: {
-    new(): XmlSchemaWhiteSpaceFacet$instance;
+    new(): XmlSchemaWhiteSpaceFacet;
 };
 
 
@@ -1338,7 +1338,7 @@ export interface XmlSchemaXPath$instance extends XmlSchemaAnnotated {
 
 
 export const XmlSchemaXPath: {
-    new(): XmlSchemaXPath$instance;
+    new(): XmlSchemaXPath;
 };
 
 

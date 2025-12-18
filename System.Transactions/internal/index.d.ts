@@ -140,7 +140,7 @@ export interface TransactionOptions$instance {
 
 
 export const TransactionOptions: {
-    new(): TransactionOptions$instance;
+    new(): TransactionOptions;
 };
 
 
@@ -164,9 +164,9 @@ export interface CommittableTransaction$instance extends Transaction$instance {
 
 
 export const CommittableTransaction: {
-    new(): CommittableTransaction$instance;
-    new(timeout: TimeSpan): CommittableTransaction$instance;
-    new(options: TransactionOptions): CommittableTransaction$instance;
+    new(): CommittableTransaction;
+    new(timeout: TimeSpan): CommittableTransaction;
+    new(options: TransactionOptions): CommittableTransaction;
 };
 
 
@@ -189,7 +189,7 @@ export interface DependentTransaction$instance extends Transaction$instance {
 
 
 export const DependentTransaction: {
-    new(): DependentTransaction$instance;
+    new(): DependentTransaction;
 };
 
 
@@ -209,7 +209,7 @@ export interface Enlistment$instance {
 
 
 export const Enlistment: {
-    new(): Enlistment$instance;
+    new(): Enlistment;
 };
 
 
@@ -224,7 +224,7 @@ export interface PreparingEnlistment$instance extends Enlistment {
 
 
 export const PreparingEnlistment: {
-    new(): PreparingEnlistment$instance;
+    new(): PreparingEnlistment;
 };
 
 
@@ -240,7 +240,7 @@ export interface SinglePhaseEnlistment$instance extends Enlistment {
 
 
 export const SinglePhaseEnlistment: {
-    new(): SinglePhaseEnlistment$instance;
+    new(): SinglePhaseEnlistment;
 };
 
 
@@ -253,7 +253,7 @@ export interface SubordinateTransaction$instance extends Transaction$instance {
 
 
 export const SubordinateTransaction: {
-    new(isoLevel: IsolationLevel, superior: ISimpleTransactionSuperior): SubordinateTransaction$instance;
+    new(isoLevel: IsolationLevel, superior: ISimpleTransactionSuperior): SubordinateTransaction;
 };
 
 
@@ -291,7 +291,7 @@ export interface Transaction$instance {
 
 
 export const Transaction: {
-    new(): Transaction$instance;
+    new(): Transaction;
     Current: Transaction;
 };
 
@@ -312,9 +312,9 @@ export interface TransactionAbortedException$instance extends TransactionExcepti
 
 
 export const TransactionAbortedException: {
-    new(): TransactionAbortedException$instance;
-    new(message: string): TransactionAbortedException$instance;
-    new(message: string, innerException: Exception): TransactionAbortedException$instance;
+    new(): TransactionAbortedException;
+    new(message: string): TransactionAbortedException;
+    new(message: string, innerException: Exception): TransactionAbortedException;
 };
 
 
@@ -331,7 +331,7 @@ export interface TransactionEventArgs$instance extends EventArgs {
 
 
 export const TransactionEventArgs: {
-    new(): TransactionEventArgs$instance;
+    new(): TransactionEventArgs;
 };
 
 
@@ -343,9 +343,9 @@ export interface TransactionException$instance extends SystemException {
 
 
 export const TransactionException: {
-    new(): TransactionException$instance;
-    new(message: string): TransactionException$instance;
-    new(message: string, innerException: Exception): TransactionException$instance;
+    new(): TransactionException;
+    new(message: string): TransactionException;
+    new(message: string, innerException: Exception): TransactionException;
 };
 
 
@@ -362,9 +362,9 @@ export interface TransactionInDoubtException$instance extends TransactionExcepti
 
 
 export const TransactionInDoubtException: {
-    new(): TransactionInDoubtException$instance;
-    new(message: string): TransactionInDoubtException$instance;
-    new(message: string, innerException: Exception): TransactionInDoubtException$instance;
+    new(): TransactionInDoubtException;
+    new(message: string): TransactionInDoubtException;
+    new(message: string, innerException: Exception): TransactionInDoubtException;
 };
 
 
@@ -384,7 +384,7 @@ export interface TransactionInformation$instance {
 
 
 export const TransactionInformation: {
-    new(): TransactionInformation$instance;
+    new(): TransactionInformation;
 };
 
 
@@ -396,9 +396,9 @@ export interface TransactionManagerCommunicationException$instance extends Trans
 
 
 export const TransactionManagerCommunicationException: {
-    new(): TransactionManagerCommunicationException$instance;
-    new(message: string): TransactionManagerCommunicationException$instance;
-    new(message: string, innerException: Exception): TransactionManagerCommunicationException$instance;
+    new(): TransactionManagerCommunicationException;
+    new(message: string): TransactionManagerCommunicationException;
+    new(message: string, innerException: Exception): TransactionManagerCommunicationException;
 };
 
 
@@ -415,9 +415,9 @@ export interface TransactionPromotionException$instance extends TransactionExcep
 
 
 export const TransactionPromotionException: {
-    new(): TransactionPromotionException$instance;
-    new(message: string): TransactionPromotionException$instance;
-    new(message: string, innerException: Exception): TransactionPromotionException$instance;
+    new(): TransactionPromotionException;
+    new(message: string): TransactionPromotionException;
+    new(message: string, innerException: Exception): TransactionPromotionException;
 };
 
 
@@ -435,20 +435,20 @@ export interface TransactionScope$instance {
 
 
 export const TransactionScope: {
-    new(): TransactionScope$instance;
-    new(scopeOption: TransactionScopeOption): TransactionScope$instance;
-    new(asyncFlowOption: TransactionScopeAsyncFlowOption): TransactionScope$instance;
-    new(scopeOption: TransactionScopeOption, asyncFlowOption: TransactionScopeAsyncFlowOption): TransactionScope$instance;
-    new(scopeOption: TransactionScopeOption, scopeTimeout: TimeSpan): TransactionScope$instance;
-    new(scopeOption: TransactionScopeOption, scopeTimeout: TimeSpan, asyncFlowOption: TransactionScopeAsyncFlowOption): TransactionScope$instance;
-    new(scopeOption: TransactionScopeOption, transactionOptions: TransactionOptions): TransactionScope$instance;
-    new(scopeOption: TransactionScopeOption, transactionOptions: TransactionOptions, asyncFlowOption: TransactionScopeAsyncFlowOption): TransactionScope$instance;
-    new(scopeOption: TransactionScopeOption, transactionOptions: TransactionOptions, interopOption: EnterpriseServicesInteropOption): TransactionScope$instance;
-    new(transactionToUse: Transaction): TransactionScope$instance;
-    new(transactionToUse: Transaction, asyncFlowOption: TransactionScopeAsyncFlowOption): TransactionScope$instance;
-    new(transactionToUse: Transaction, scopeTimeout: TimeSpan): TransactionScope$instance;
-    new(transactionToUse: Transaction, scopeTimeout: TimeSpan, asyncFlowOption: TransactionScopeAsyncFlowOption): TransactionScope$instance;
-    new(transactionToUse: Transaction, scopeTimeout: TimeSpan, interopOption: EnterpriseServicesInteropOption): TransactionScope$instance;
+    new(): TransactionScope;
+    new(scopeOption: TransactionScopeOption): TransactionScope;
+    new(asyncFlowOption: TransactionScopeAsyncFlowOption): TransactionScope;
+    new(scopeOption: TransactionScopeOption, asyncFlowOption: TransactionScopeAsyncFlowOption): TransactionScope;
+    new(scopeOption: TransactionScopeOption, scopeTimeout: TimeSpan): TransactionScope;
+    new(scopeOption: TransactionScopeOption, scopeTimeout: TimeSpan, asyncFlowOption: TransactionScopeAsyncFlowOption): TransactionScope;
+    new(scopeOption: TransactionScopeOption, transactionOptions: TransactionOptions): TransactionScope;
+    new(scopeOption: TransactionScopeOption, transactionOptions: TransactionOptions, asyncFlowOption: TransactionScopeAsyncFlowOption): TransactionScope;
+    new(scopeOption: TransactionScopeOption, transactionOptions: TransactionOptions, interopOption: EnterpriseServicesInteropOption): TransactionScope;
+    new(transactionToUse: Transaction): TransactionScope;
+    new(transactionToUse: Transaction, asyncFlowOption: TransactionScopeAsyncFlowOption): TransactionScope;
+    new(transactionToUse: Transaction, scopeTimeout: TimeSpan): TransactionScope;
+    new(transactionToUse: Transaction, scopeTimeout: TimeSpan, asyncFlowOption: TransactionScopeAsyncFlowOption): TransactionScope;
+    new(transactionToUse: Transaction, scopeTimeout: TimeSpan, interopOption: EnterpriseServicesInteropOption): TransactionScope;
 };
 
 

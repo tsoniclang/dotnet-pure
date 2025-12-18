@@ -79,7 +79,7 @@ export interface JsonDocumentOptions$instance {
 
 
 export const JsonDocumentOptions: {
-    new(): JsonDocumentOptions$instance;
+    new(): JsonDocumentOptions;
 };
 
 
@@ -141,7 +141,7 @@ export interface JsonElement$instance {
 
 
 export const JsonElement: {
-    new(): JsonElement$instance;
+    new(): JsonElement;
     DeepEquals(element1: JsonElement, element2: JsonElement): boolean;
     Parse(utf8Json: ReadOnlySpan_1<System_Internal.Byte>, options?: JsonDocumentOptions): JsonElement;
     Parse(json: ReadOnlySpan_1<System_Internal.Char>, options?: JsonDocumentOptions): JsonElement;
@@ -163,7 +163,7 @@ export interface JsonElement_ArrayEnumerator$instance extends IDisposable {
 
 
 export const JsonElement_ArrayEnumerator: {
-    new(): JsonElement_ArrayEnumerator$instance;
+    new(): JsonElement_ArrayEnumerator;
 };
 
 
@@ -187,7 +187,7 @@ export interface JsonElement_ObjectEnumerator$instance extends IDisposable {
 
 
 export const JsonElement_ObjectEnumerator: {
-    new(): JsonElement_ObjectEnumerator$instance;
+    new(): JsonElement_ObjectEnumerator;
 };
 
 
@@ -212,7 +212,7 @@ export interface JsonEncodedText$instance {
 
 
 export const JsonEncodedText: {
-    new(): JsonEncodedText$instance;
+    new(): JsonEncodedText;
     Encode(utf8Value: ReadOnlySpan_1<System_Internal.Byte>, encoder?: JavaScriptEncoder): JsonEncodedText;
     Encode(value: ReadOnlySpan_1<System_Internal.Char>, encoder?: JavaScriptEncoder): JsonEncodedText;
     Encode(value: string, encoder?: JavaScriptEncoder): JsonEncodedText;
@@ -241,7 +241,7 @@ export interface JsonProperty$instance {
 
 
 export const JsonProperty: {
-    new(): JsonProperty$instance;
+    new(): JsonProperty;
 };
 
 
@@ -256,7 +256,7 @@ export interface JsonReaderOptions$instance {
 
 
 export const JsonReaderOptions: {
-    new(): JsonReaderOptions$instance;
+    new(): JsonReaderOptions;
 };
 
 
@@ -268,7 +268,7 @@ export interface JsonReaderState$instance {
 
 
 export const JsonReaderState: {
-    new(options: JsonReaderOptions): JsonReaderState$instance;
+    new(options: JsonReaderOptions): JsonReaderState;
 };
 
 
@@ -286,7 +286,7 @@ export interface JsonWriterOptions$instance {
 
 
 export const JsonWriterOptions: {
-    new(): JsonWriterOptions$instance;
+    new(): JsonWriterOptions;
 };
 
 
@@ -349,10 +349,10 @@ export interface Utf8JsonReader$instance {
 
 
 export const Utf8JsonReader: {
-    new(jsonData: ReadOnlySpan_1<System_Internal.Byte>, isFinalBlock: boolean, state: JsonReaderState): Utf8JsonReader$instance;
-    new(jsonData: ReadOnlySpan_1<System_Internal.Byte>, options: JsonReaderOptions): Utf8JsonReader$instance;
-    new(jsonData: ReadOnlySequence_1<System_Internal.Byte>, isFinalBlock: boolean, state: JsonReaderState): Utf8JsonReader$instance;
-    new(jsonData: ReadOnlySequence_1<System_Internal.Byte>, options: JsonReaderOptions): Utf8JsonReader$instance;
+    new(jsonData: ReadOnlySpan_1<System_Internal.Byte>, isFinalBlock: boolean, state: JsonReaderState): Utf8JsonReader;
+    new(jsonData: ReadOnlySpan_1<System_Internal.Byte>, options: JsonReaderOptions): Utf8JsonReader;
+    new(jsonData: ReadOnlySequence_1<System_Internal.Byte>, isFinalBlock: boolean, state: JsonReaderState): Utf8JsonReader;
+    new(jsonData: ReadOnlySequence_1<System_Internal.Byte>, options: JsonReaderOptions): Utf8JsonReader;
 };
 
 
@@ -366,7 +366,7 @@ export interface JsonDocument$instance {
 
 
 export const JsonDocument: {
-    new(): JsonDocument$instance;
+    new(): JsonDocument;
     Parse(utf8Json: ReadOnlySequence_1<System_Internal.Byte>, options?: JsonDocumentOptions): JsonDocument;
     Parse(utf8Json: Stream, options?: JsonDocumentOptions): JsonDocument;
     Parse(utf8Json: ReadOnlyMemory_1<System_Internal.Byte>, options?: JsonDocumentOptions): JsonDocument;
@@ -397,11 +397,11 @@ export interface JsonException$instance extends Exception {
 
 
 export const JsonException: {
-    new(message: string, path: string, lineNumber: Nullable_1<System_Internal.Int64>, bytePositionInLine: Nullable_1<System_Internal.Int64>, innerException: Exception): JsonException$instance;
-    new(message: string, path: string, lineNumber: Nullable_1<System_Internal.Int64>, bytePositionInLine: Nullable_1<System_Internal.Int64>): JsonException$instance;
-    new(message: string, innerException: Exception): JsonException$instance;
-    new(message: string): JsonException$instance;
-    new(): JsonException$instance;
+    new(message: string, path: string, lineNumber: Nullable_1<System_Internal.Int64>, bytePositionInLine: Nullable_1<System_Internal.Int64>, innerException: Exception): JsonException;
+    new(message: string, path: string, lineNumber: Nullable_1<System_Internal.Int64>, bytePositionInLine: Nullable_1<System_Internal.Int64>): JsonException;
+    new(message: string, innerException: Exception): JsonException;
+    new(message: string): JsonException;
+    new(): JsonException;
 };
 
 
@@ -469,9 +469,9 @@ export interface JsonSerializerOptions$instance {
 
 
 export const JsonSerializerOptions: {
-    new(): JsonSerializerOptions$instance;
-    new(options: JsonSerializerOptions): JsonSerializerOptions$instance;
-    new(defaults: JsonSerializerDefaults): JsonSerializerOptions$instance;
+    new(): JsonSerializerOptions;
+    new(options: JsonSerializerOptions): JsonSerializerOptions;
+    new(defaults: JsonSerializerDefaults): JsonSerializerOptions;
     readonly Default: JsonSerializerOptions;
     readonly Web: JsonSerializerOptions;
     readonly Strict: JsonSerializerOptions;
@@ -607,8 +607,8 @@ export interface Utf8JsonWriter$instance {
 
 
 export const Utf8JsonWriter: {
-    new(bufferWriter: IBufferWriter_1<System_Internal.Byte>, options: JsonWriterOptions): Utf8JsonWriter$instance;
-    new(utf8Json: Stream, options: JsonWriterOptions): Utf8JsonWriter$instance;
+    new(bufferWriter: IBufferWriter_1<System_Internal.Byte>, options: JsonWriterOptions): Utf8JsonWriter;
+    new(utf8Json: Stream, options: JsonWriterOptions): Utf8JsonWriter;
 };
 
 

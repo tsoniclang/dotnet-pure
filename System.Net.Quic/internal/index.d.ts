@@ -58,7 +58,7 @@ export interface QuicStreamCapacityChangedArgs$instance {
 
 
 export const QuicStreamCapacityChangedArgs: {
-    new(): QuicStreamCapacityChangedArgs$instance;
+    new(): QuicStreamCapacityChangedArgs;
 };
 
 
@@ -72,7 +72,7 @@ export interface QuicClientConnectionOptions$instance extends QuicConnectionOpti
 
 
 export const QuicClientConnectionOptions: {
-    new(): QuicClientConnectionOptions$instance;
+    new(): QuicClientConnectionOptions;
 };
 
 
@@ -95,7 +95,7 @@ export interface QuicConnection$instance {
 
 
 export const QuicConnection: {
-    new(): QuicConnection$instance;
+    new(): QuicConnection;
     readonly IsSupported: boolean;
     ConnectAsync(options: QuicClientConnectionOptions, cancellationToken?: CancellationToken): ValueTask_1<QuicConnection>;
 };
@@ -138,7 +138,7 @@ export interface QuicException$instance extends IOException {
 
 
 export const QuicException: {
-    new(error: QuicError, applicationErrorCode: Nullable_1<System_Internal.Int64>, message: string): QuicException$instance;
+    new(error: QuicError, applicationErrorCode: Nullable_1<System_Internal.Int64>, message: string): QuicException;
 };
 
 
@@ -158,7 +158,7 @@ export interface QuicListener$instance {
 
 
 export const QuicListener: {
-    new(): QuicListener$instance;
+    new(): QuicListener;
     readonly IsSupported: boolean;
     ListenAsync(options: QuicListenerOptions, cancellationToken?: CancellationToken): ValueTask_1<QuicListener>;
 };
@@ -182,7 +182,7 @@ export interface QuicListenerOptions$instance {
 
 
 export const QuicListenerOptions: {
-    new(): QuicListenerOptions$instance;
+    new(): QuicListenerOptions;
 };
 
 
@@ -197,7 +197,7 @@ export interface QuicReceiveWindowSizes$instance {
 
 
 export const QuicReceiveWindowSizes: {
-    new(): QuicReceiveWindowSizes$instance;
+    new(): QuicReceiveWindowSizes;
 };
 
 
@@ -209,7 +209,7 @@ export interface QuicServerConnectionOptions$instance extends QuicConnectionOpti
 
 
 export const QuicServerConnectionOptions: {
-    new(): QuicServerConnectionOptions$instance;
+    new(): QuicServerConnectionOptions;
 };
 
 
@@ -263,7 +263,7 @@ export interface QuicStream$instance extends Stream {
 
 
 export const QuicStream: {
-    new(): QuicStream$instance;
+    new(): QuicStream;
 };
 
 

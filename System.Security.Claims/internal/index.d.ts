@@ -29,13 +29,13 @@ export interface Claim$instance {
 
 
 export const Claim: {
-    new(reader: BinaryReader): Claim$instance;
-    new(reader: BinaryReader, subject: ClaimsIdentity): Claim$instance;
-    new(type_: string, value: string): Claim$instance;
-    new(type_: string, value: string, valueType: string): Claim$instance;
-    new(type_: string, value: string, valueType: string, issuer: string): Claim$instance;
-    new(type_: string, value: string, valueType: string, issuer: string, originalIssuer: string): Claim$instance;
-    new(type_: string, value: string, valueType: string, issuer: string, originalIssuer: string, subject: ClaimsIdentity): Claim$instance;
+    new(reader: BinaryReader): Claim;
+    new(reader: BinaryReader, subject: ClaimsIdentity): Claim;
+    new(type_: string, value: string): Claim;
+    new(type_: string, value: string, valueType: string): Claim;
+    new(type_: string, value: string, valueType: string, issuer: string): Claim;
+    new(type_: string, value: string, valueType: string, issuer: string, originalIssuer: string): Claim;
+    new(type_: string, value: string, valueType: string, issuer: string, originalIssuer: string, subject: ClaimsIdentity): Claim;
 };
 
 
@@ -67,18 +67,18 @@ export interface ClaimsIdentity$instance {
 
 
 export const ClaimsIdentity: {
-    new(): ClaimsIdentity$instance;
-    new(identity: IIdentity): ClaimsIdentity$instance;
-    new(claims: IEnumerable_1<Claim>): ClaimsIdentity$instance;
-    new(authenticationType: string): ClaimsIdentity$instance;
-    new(claims: IEnumerable_1<Claim>, authenticationType: string): ClaimsIdentity$instance;
-    new(identity: IIdentity, claims: IEnumerable_1<Claim>): ClaimsIdentity$instance;
-    new(authenticationType: string, nameType: string, roleType: string): ClaimsIdentity$instance;
-    new(claims: IEnumerable_1<Claim>, authenticationType: string, nameType: string, roleType: string): ClaimsIdentity$instance;
-    new(identity: IIdentity, claims: IEnumerable_1<Claim>, authenticationType: string, nameType: string, roleType: string): ClaimsIdentity$instance;
-    new(reader: BinaryReader): ClaimsIdentity$instance;
-    new(reader: BinaryReader, stringComparison: StringComparison): ClaimsIdentity$instance;
-    new(identity: IIdentity, claims: IEnumerable_1<Claim>, authenticationType: string, nameType: string, roleType: string, stringComparison: StringComparison): ClaimsIdentity$instance;
+    new(): ClaimsIdentity;
+    new(identity: IIdentity): ClaimsIdentity;
+    new(claims: IEnumerable_1<Claim>): ClaimsIdentity;
+    new(authenticationType: string): ClaimsIdentity;
+    new(claims: IEnumerable_1<Claim>, authenticationType: string): ClaimsIdentity;
+    new(identity: IIdentity, claims: IEnumerable_1<Claim>): ClaimsIdentity;
+    new(authenticationType: string, nameType: string, roleType: string): ClaimsIdentity;
+    new(claims: IEnumerable_1<Claim>, authenticationType: string, nameType: string, roleType: string): ClaimsIdentity;
+    new(identity: IIdentity, claims: IEnumerable_1<Claim>, authenticationType: string, nameType: string, roleType: string): ClaimsIdentity;
+    new(reader: BinaryReader): ClaimsIdentity;
+    new(reader: BinaryReader, stringComparison: StringComparison): ClaimsIdentity;
+    new(identity: IIdentity, claims: IEnumerable_1<Claim>, authenticationType: string, nameType: string, roleType: string, stringComparison: StringComparison): ClaimsIdentity;
     readonly DefaultIssuer: string;
     readonly DefaultNameClaimType: string;
     readonly DefaultRoleClaimType: string;
@@ -113,11 +113,11 @@ export interface ClaimsPrincipal$instance {
 
 
 export const ClaimsPrincipal: {
-    new(): ClaimsPrincipal$instance;
-    new(identities: IEnumerable_1<ClaimsIdentity>): ClaimsPrincipal$instance;
-    new(identity: IIdentity): ClaimsPrincipal$instance;
-    new(principal: IPrincipal): ClaimsPrincipal$instance;
-    new(reader: BinaryReader): ClaimsPrincipal$instance;
+    new(): ClaimsPrincipal;
+    new(identities: IEnumerable_1<ClaimsIdentity>): ClaimsPrincipal;
+    new(identity: IIdentity): ClaimsPrincipal;
+    new(principal: IPrincipal): ClaimsPrincipal;
+    new(reader: BinaryReader): ClaimsPrincipal;
     PrimaryIdentitySelector: Func_2<IEnumerable_1<ClaimsIdentity>, ClaimsIdentity>;
     ClaimsPrincipalSelector: Func_1<ClaimsPrincipal>;
     readonly Current: ClaimsPrincipal;

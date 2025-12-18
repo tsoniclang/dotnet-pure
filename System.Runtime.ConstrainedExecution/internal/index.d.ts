@@ -39,7 +39,7 @@ export interface PrePrepareMethodAttribute$instance extends Attribute {
 
 
 export const PrePrepareMethodAttribute: {
-    new(): PrePrepareMethodAttribute$instance;
+    new(): PrePrepareMethodAttribute;
 };
 
 
@@ -52,7 +52,7 @@ export interface ReliabilityContractAttribute$instance extends Attribute {
 
 
 export const ReliabilityContractAttribute: {
-    new(consistencyGuarantee: Consistency, cer: Cer): ReliabilityContractAttribute$instance;
+    new(consistencyGuarantee: Consistency, cer: Cer): ReliabilityContractAttribute;
 };
 
 

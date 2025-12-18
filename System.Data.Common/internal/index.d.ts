@@ -90,7 +90,7 @@ export interface DataAdapter$instance extends Component {
 
 
 export const DataAdapter: {
-    new(): DataAdapter$instance;
+    new(): DataAdapter;
 };
 
 
@@ -114,8 +114,8 @@ export interface DataColumnMapping$instance extends MarshalByRefObject {
 
 
 export const DataColumnMapping: {
-    new(): DataColumnMapping$instance;
-    new(sourceColumn: string, dataSetColumn: string): DataColumnMapping$instance;
+    new(): DataColumnMapping;
+    new(sourceColumn: string, dataSetColumn: string): DataColumnMapping;
     GetDataColumnBySchemaAction(sourceColumn: string, dataSetColumn: string, dataTable: DataTable, dataType: Type, schemaAction: MissingSchemaAction): DataColumn;
 };
 
@@ -160,7 +160,7 @@ export interface DataColumnMappingCollection$instance extends MarshalByRefObject
 
 
 export const DataColumnMappingCollection: {
-    new(): DataColumnMappingCollection$instance;
+    new(): DataColumnMappingCollection;
     GetColumnMappingBySchemaAction(columnMappings: DataColumnMappingCollection, sourceColumn: string, mappingAction: MissingMappingAction): DataColumnMapping;
     GetDataColumn(columnMappings: DataColumnMappingCollection, sourceColumn: string, dataType: Type, dataTable: DataTable, mappingAction: MissingMappingAction, schemaAction: MissingSchemaAction): DataColumn;
 };
@@ -188,9 +188,9 @@ export interface DataTableMapping$instance extends MarshalByRefObject {
 
 
 export const DataTableMapping: {
-    new(): DataTableMapping$instance;
-    new(sourceTable: string, dataSetTable: string): DataTableMapping$instance;
-    new(sourceTable: string, dataSetTable: string, columnMappings: DataColumnMapping[]): DataTableMapping$instance;
+    new(): DataTableMapping;
+    new(sourceTable: string, dataSetTable: string): DataTableMapping;
+    new(sourceTable: string, dataSetTable: string, columnMappings: DataColumnMapping[]): DataTableMapping;
 };
 
 
@@ -234,7 +234,7 @@ export interface DataTableMappingCollection$instance extends MarshalByRefObject 
 
 
 export const DataTableMappingCollection: {
-    new(): DataTableMappingCollection$instance;
+    new(): DataTableMappingCollection;
     GetTableMappingBySchemaAction(tableMappings: DataTableMappingCollection, sourceTable: string, dataSetTable: string, mappingAction: MissingMappingAction): DataTableMapping;
 };
 
@@ -516,8 +516,8 @@ export interface DbConnectionStringBuilder$instance {
 
 
 export const DbConnectionStringBuilder: {
-    new(): DbConnectionStringBuilder$instance;
-    new(useOdbcRules: boolean): DbConnectionStringBuilder$instance;
+    new(): DbConnectionStringBuilder;
+    new(useOdbcRules: boolean): DbConnectionStringBuilder;
     AppendKeyValuePair(builder: StringBuilder, keyword: string, value: string, useOdbcRules: boolean): void;
     AppendKeyValuePair(builder: StringBuilder, keyword: string, value: string): void;
 };
@@ -733,10 +733,10 @@ export interface DbEnumerator$instance {
 
 
 export const DbEnumerator: {
-    new(reader: IDataReader): DbEnumerator$instance;
-    new(reader: IDataReader, closeReader: boolean): DbEnumerator$instance;
-    new(reader: DbDataReader): DbEnumerator$instance;
-    new(reader: DbDataReader, closeReader: boolean): DbEnumerator$instance;
+    new(reader: IDataReader): DbEnumerator;
+    new(reader: IDataReader, closeReader: boolean): DbEnumerator;
+    new(reader: DbDataReader): DbEnumerator;
+    new(reader: DbDataReader, closeReader: boolean): DbEnumerator;
 };
 
 
@@ -866,7 +866,7 @@ export interface DbProviderSpecificTypePropertyAttribute$instance extends Attrib
 
 
 export const DbProviderSpecificTypePropertyAttribute: {
-    new(isProviderSpecificTypeProperty: boolean): DbProviderSpecificTypePropertyAttribute$instance;
+    new(isProviderSpecificTypeProperty: boolean): DbProviderSpecificTypePropertyAttribute;
 };
 
 
@@ -921,7 +921,7 @@ export interface RowUpdatedEventArgs$instance extends EventArgs {
 
 
 export const RowUpdatedEventArgs: {
-    new(dataRow: DataRow, command: IDbCommand, statementType: StatementType, tableMapping: DataTableMapping): RowUpdatedEventArgs$instance;
+    new(dataRow: DataRow, command: IDbCommand, statementType: StatementType, tableMapping: DataTableMapping): RowUpdatedEventArgs;
 };
 
 
@@ -938,7 +938,7 @@ export interface RowUpdatingEventArgs$instance extends EventArgs {
 
 
 export const RowUpdatingEventArgs: {
-    new(dataRow: DataRow, command: IDbCommand, statementType: StatementType, tableMapping: DataTableMapping): RowUpdatingEventArgs$instance;
+    new(dataRow: DataRow, command: IDbCommand, statementType: StatementType, tableMapping: DataTableMapping): RowUpdatingEventArgs;
 };
 
 

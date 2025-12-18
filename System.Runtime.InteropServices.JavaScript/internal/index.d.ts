@@ -132,7 +132,7 @@ export interface JSMarshalerArgument$instance {
 
 
 export const JSMarshalerArgument: {
-    new(): JSMarshalerArgument$instance;
+    new(): JSMarshalerArgument;
 };
 
 
@@ -144,7 +144,7 @@ export interface JSException$instance extends Exception {
 
 
 export const JSException: {
-    new(msg: string): JSException$instance;
+    new(msg: string): JSException;
 };
 
 
@@ -160,7 +160,7 @@ export interface JSExportAttribute$instance extends Attribute {
 
 
 export const JSExportAttribute: {
-    new(): JSExportAttribute$instance;
+    new(): JSExportAttribute;
 };
 
 
@@ -171,7 +171,7 @@ export interface JSFunctionBinding$instance {
 
 
 export const JSFunctionBinding: {
-    new(): JSFunctionBinding$instance;
+    new(): JSFunctionBinding;
     BindJSFunction(functionName: string, moduleName: string, signatures: ReadOnlySpan_1<JSMarshalerType>): JSFunctionBinding;
     BindManagedFunction(fullyQualifiedName: string, signatureHash: int, signatures: ReadOnlySpan_1<JSMarshalerType>): JSFunctionBinding;
     InvokeJS(signature: JSFunctionBinding, arguments: Span_1<JSMarshalerArgument>): void;
@@ -187,8 +187,8 @@ export interface JSImportAttribute$instance extends Attribute {
 
 
 export const JSImportAttribute: {
-    new(functionName: string): JSImportAttribute$instance;
-    new(functionName: string, moduleName: string): JSImportAttribute$instance;
+    new(functionName: string): JSImportAttribute;
+    new(functionName: string, moduleName: string): JSImportAttribute;
 };
 
 
@@ -199,7 +199,7 @@ export interface JSMarshalAsAttribute_1$instance<T extends JSType> extends Attri
 
 
 export const JSMarshalAsAttribute_1: {
-    new<T extends JSType>(): JSMarshalAsAttribute_1$instance<T>;
+    new<T extends JSType>(): JSMarshalAsAttribute_1<T>;
 };
 
 
@@ -210,7 +210,7 @@ export interface JSMarshalerType$instance {
 
 
 export const JSMarshalerType: {
-    new(): JSMarshalerType$instance;
+    new(): JSMarshalerType;
     readonly Void: JSMarshalerType;
     readonly Discard: JSMarshalerType;
     readonly Boolean: JSMarshalerType;
@@ -269,7 +269,7 @@ export interface JSObject$instance {
 
 
 export const JSObject: {
-    new(): JSObject$instance;
+    new(): JSObject;
 };
 
 
@@ -297,7 +297,7 @@ export interface JSType_Any$instance extends JSType {
 
 
 export const JSType_Any: {
-    new(): JSType_Any$instance;
+    new(): JSType_Any;
 };
 
 
@@ -308,7 +308,7 @@ export interface JSType_Array_1$instance<T extends JSType> extends JSType {
 
 
 export const JSType_Array_1: {
-    new<T extends JSType>(): JSType_Array_1$instance<T>;
+    new<T extends JSType>(): JSType_Array_1<T>;
 };
 
 
@@ -319,7 +319,7 @@ export interface JSType_BigInt$instance extends JSType {
 
 
 export const JSType_BigInt: {
-    new(): JSType_BigInt$instance;
+    new(): JSType_BigInt;
 };
 
 
@@ -330,7 +330,7 @@ export interface JSType_Boolean$instance extends JSType {
 
 
 export const JSType_Boolean: {
-    new(): JSType_Boolean$instance;
+    new(): JSType_Boolean;
 };
 
 
@@ -341,7 +341,7 @@ export interface JSType_Date$instance extends JSType {
 
 
 export const JSType_Date: {
-    new(): JSType_Date$instance;
+    new(): JSType_Date;
 };
 
 
@@ -352,7 +352,7 @@ export interface JSType_Discard$instance extends JSType {
 
 
 export const JSType_Discard: {
-    new(): JSType_Discard$instance;
+    new(): JSType_Discard;
 };
 
 
@@ -363,7 +363,7 @@ export interface JSType_Error$instance extends JSType {
 
 
 export const JSType_Error: {
-    new(): JSType_Error$instance;
+    new(): JSType_Error;
 };
 
 
@@ -374,7 +374,7 @@ export interface JSType_Function$instance extends JSType {
 
 
 export const JSType_Function: {
-    new(): JSType_Function$instance;
+    new(): JSType_Function;
 };
 
 
@@ -385,7 +385,7 @@ export interface JSType_Function_1$instance<T extends JSType> extends JSType {
 
 
 export const JSType_Function_1: {
-    new<T extends JSType>(): JSType_Function_1$instance<T>;
+    new<T extends JSType>(): JSType_Function_1<T>;
 };
 
 
@@ -396,7 +396,7 @@ export interface JSType_Function_2$instance<T1 extends JSType, T2 extends JSType
 
 
 export const JSType_Function_2: {
-    new<T1 extends JSType, T2 extends JSType>(): JSType_Function_2$instance<T1, T2>;
+    new<T1 extends JSType, T2 extends JSType>(): JSType_Function_2<T1, T2>;
 };
 
 
@@ -407,7 +407,7 @@ export interface JSType_Function_3$instance<T1 extends JSType, T2 extends JSType
 
 
 export const JSType_Function_3: {
-    new<T1 extends JSType, T2 extends JSType, T3 extends JSType>(): JSType_Function_3$instance<T1, T2, T3>;
+    new<T1 extends JSType, T2 extends JSType, T3 extends JSType>(): JSType_Function_3<T1, T2, T3>;
 };
 
 
@@ -418,7 +418,7 @@ export interface JSType_Function_4$instance<T1 extends JSType, T2 extends JSType
 
 
 export const JSType_Function_4: {
-    new<T1 extends JSType, T2 extends JSType, T3 extends JSType, T4 extends JSType>(): JSType_Function_4$instance<T1, T2, T3, T4>;
+    new<T1 extends JSType, T2 extends JSType, T3 extends JSType, T4 extends JSType>(): JSType_Function_4<T1, T2, T3, T4>;
 };
 
 
@@ -429,7 +429,7 @@ export interface JSType_MemoryView$instance extends JSType {
 
 
 export const JSType_MemoryView: {
-    new(): JSType_MemoryView$instance;
+    new(): JSType_MemoryView;
 };
 
 
@@ -440,7 +440,7 @@ export interface JSType_Number$instance extends JSType {
 
 
 export const JSType_Number: {
-    new(): JSType_Number$instance;
+    new(): JSType_Number;
 };
 
 
@@ -451,7 +451,7 @@ export interface JSType_Object$instance extends JSType {
 
 
 export const JSType_Object: {
-    new(): JSType_Object$instance;
+    new(): JSType_Object;
 };
 
 
@@ -462,7 +462,7 @@ export interface JSType_Promise_1$instance<T extends JSType> extends JSType {
 
 
 export const JSType_Promise_1: {
-    new<T extends JSType>(): JSType_Promise_1$instance<T>;
+    new<T extends JSType>(): JSType_Promise_1<T>;
 };
 
 
@@ -473,7 +473,7 @@ export interface JSType_String$instance extends JSType {
 
 
 export const JSType_String: {
-    new(): JSType_String$instance;
+    new(): JSType_String;
 };
 
 
@@ -484,7 +484,7 @@ export interface JSType_Void$instance extends JSType {
 
 
 export const JSType_Void: {
-    new(): JSType_Void$instance;
+    new(): JSType_Void;
 };
 
 

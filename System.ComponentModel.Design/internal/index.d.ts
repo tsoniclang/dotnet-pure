@@ -352,7 +352,7 @@ export interface ActiveDesignerEventArgs$instance extends EventArgs {
 
 
 export const ActiveDesignerEventArgs: {
-    new(oldDesigner: IDesignerHost, newDesigner: IDesignerHost): ActiveDesignerEventArgs$instance;
+    new(oldDesigner: IDesignerHost, newDesigner: IDesignerHost): ActiveDesignerEventArgs;
 };
 
 
@@ -364,10 +364,10 @@ export interface CheckoutException$instance extends ExternalException {
 
 
 export const CheckoutException: {
-    new(): CheckoutException$instance;
-    new(message: string): CheckoutException$instance;
-    new(message: string, errorCode: int): CheckoutException$instance;
-    new(message: string, innerException: Exception): CheckoutException$instance;
+    new(): CheckoutException;
+    new(message: string): CheckoutException;
+    new(message: string, errorCode: int): CheckoutException;
+    new(message: string, innerException: Exception): CheckoutException;
     readonly Canceled: CheckoutException;
 };
 
@@ -389,7 +389,7 @@ export interface CommandID$instance {
 
 
 export const CommandID: {
-    new(menuGroup: Guid, commandID: int): CommandID$instance;
+    new(menuGroup: Guid, commandID: int): CommandID;
 };
 
 
@@ -404,7 +404,7 @@ export interface ComponentChangedEventArgs$instance extends EventArgs {
 
 
 export const ComponentChangedEventArgs: {
-    new(component: unknown, member: MemberDescriptor, oldValue: unknown, newValue: unknown): ComponentChangedEventArgs$instance;
+    new(component: unknown, member: MemberDescriptor, oldValue: unknown, newValue: unknown): ComponentChangedEventArgs;
 };
 
 
@@ -417,7 +417,7 @@ export interface ComponentChangingEventArgs$instance extends EventArgs {
 
 
 export const ComponentChangingEventArgs: {
-    new(component: unknown, member: MemberDescriptor): ComponentChangingEventArgs$instance;
+    new(component: unknown, member: MemberDescriptor): ComponentChangingEventArgs;
 };
 
 
@@ -429,7 +429,7 @@ export interface ComponentEventArgs$instance extends EventArgs {
 
 
 export const ComponentEventArgs: {
-    new(component: IComponent): ComponentEventArgs$instance;
+    new(component: IComponent): ComponentEventArgs;
 };
 
 
@@ -443,7 +443,7 @@ export interface ComponentRenameEventArgs$instance extends EventArgs {
 
 
 export const ComponentRenameEventArgs: {
-    new(component: unknown, oldName: string, newName: string): ComponentRenameEventArgs$instance;
+    new(component: unknown, oldName: string, newName: string): ComponentRenameEventArgs;
 };
 
 
@@ -457,8 +457,8 @@ export interface DesignerCollection$instance {
 
 
 export const DesignerCollection: {
-    new(designers: IDesignerHost[]): DesignerCollection$instance;
-    new(designers: IList): DesignerCollection$instance;
+    new(designers: IDesignerHost[]): DesignerCollection;
+    new(designers: IList): DesignerCollection;
 };
 
 
@@ -476,7 +476,7 @@ export interface DesignerEventArgs$instance extends EventArgs {
 
 
 export const DesignerEventArgs: {
-    new(host: IDesignerHost): DesignerEventArgs$instance;
+    new(host: IDesignerHost): DesignerEventArgs;
 };
 
 
@@ -515,7 +515,7 @@ export interface DesignerOptionService_DesignerOptionCollection$instance {
 
 
 export const DesignerOptionService_DesignerOptionCollection: {
-    new(): DesignerOptionService_DesignerOptionCollection$instance;
+    new(): DesignerOptionService_DesignerOptionCollection;
 };
 
 
@@ -557,8 +557,8 @@ export interface DesignerTransactionCloseEventArgs$instance extends EventArgs {
 
 
 export const DesignerTransactionCloseEventArgs: {
-    new(commit: boolean): DesignerTransactionCloseEventArgs$instance;
-    new(commit: boolean, lastTransaction: boolean): DesignerTransactionCloseEventArgs$instance;
+    new(commit: boolean): DesignerTransactionCloseEventArgs;
+    new(commit: boolean, lastTransaction: boolean): DesignerTransactionCloseEventArgs;
 };
 
 
@@ -572,8 +572,8 @@ export interface DesignerVerb$instance extends MenuCommand {
 
 
 export const DesignerVerb: {
-    new(text: string, handler: EventHandler): DesignerVerb$instance;
-    new(text: string, handler: EventHandler, startCommandID: CommandID): DesignerVerb$instance;
+    new(text: string, handler: EventHandler): DesignerVerb;
+    new(text: string, handler: EventHandler, startCommandID: CommandID): DesignerVerb;
 };
 
 
@@ -596,8 +596,8 @@ export interface DesignerVerbCollection$instance extends CollectionBase {
 
 
 export const DesignerVerbCollection: {
-    new(): DesignerVerbCollection$instance;
-    new(value: DesignerVerb[]): DesignerVerbCollection$instance;
+    new(): DesignerVerbCollection;
+    new(value: DesignerVerb[]): DesignerVerbCollection;
 };
 
 
@@ -619,7 +619,7 @@ export interface DesigntimeLicenseContext$instance extends LicenseContext {
 
 
 export const DesigntimeLicenseContext: {
-    new(): DesigntimeLicenseContext$instance;
+    new(): DesigntimeLicenseContext;
 };
 
 
@@ -635,7 +635,7 @@ export interface DesigntimeLicenseContextSerializer$instance {
 
 
 export const DesigntimeLicenseContextSerializer: {
-    new(): DesigntimeLicenseContextSerializer$instance;
+    new(): DesigntimeLicenseContextSerializer;
     Serialize(o: Stream, cryptoKey: string, context: DesigntimeLicenseContext): void;
 };
 
@@ -651,9 +651,9 @@ export interface HelpKeywordAttribute$instance extends Attribute {
 
 
 export const HelpKeywordAttribute: {
-    new(): HelpKeywordAttribute$instance;
-    new(keyword: string): HelpKeywordAttribute$instance;
-    new(t: Type): HelpKeywordAttribute$instance;
+    new(): HelpKeywordAttribute;
+    new(keyword: string): HelpKeywordAttribute;
+    new(t: Type): HelpKeywordAttribute;
     readonly Default: HelpKeywordAttribute;
 };
 
@@ -675,7 +675,7 @@ export interface MenuCommand$instance {
 
 
 export const MenuCommand: {
-    new(handler: EventHandler, command: CommandID): MenuCommand$instance;
+    new(handler: EventHandler, command: CommandID): MenuCommand;
 };
 
 
@@ -694,8 +694,8 @@ export interface ServiceContainer$instance {
 
 
 export const ServiceContainer: {
-    new(): ServiceContainer$instance;
-    new(parentProvider: IServiceProvider): ServiceContainer$instance;
+    new(): ServiceContainer;
+    new(parentProvider: IServiceProvider): ServiceContainer;
 };
 
 
@@ -715,7 +715,7 @@ export interface StandardCommands$instance {
 
 
 export const StandardCommands: {
-    new(): StandardCommands$instance;
+    new(): StandardCommands;
     readonly AlignBottom: CommandID;
     readonly AlignHorizontalCenters: CommandID;
     readonly AlignLeft: CommandID;
@@ -781,7 +781,7 @@ export interface StandardToolWindows$instance {
 
 
 export const StandardToolWindows: {
-    new(): StandardToolWindows$instance;
+    new(): StandardToolWindows;
     readonly ObjectBrowser: Guid;
     readonly OutputWindow: Guid;
     readonly ProjectExplorer: Guid;

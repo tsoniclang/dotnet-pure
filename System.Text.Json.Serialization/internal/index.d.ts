@@ -125,7 +125,7 @@ export interface JsonConstructorAttribute$instance extends JsonAttribute {
 
 
 export const JsonConstructorAttribute: {
-    new(): JsonConstructorAttribute$instance;
+    new(): JsonConstructorAttribute;
 };
 
 
@@ -167,7 +167,7 @@ export interface JsonConverterAttribute$instance extends JsonAttribute {
 
 
 export const JsonConverterAttribute: {
-    new(converterType: Type): JsonConverterAttribute$instance;
+    new(converterType: Type): JsonConverterAttribute;
 };
 
 
@@ -192,9 +192,9 @@ export interface JsonDerivedTypeAttribute$instance extends JsonAttribute {
 
 
 export const JsonDerivedTypeAttribute: {
-    new(derivedType: Type): JsonDerivedTypeAttribute$instance;
-    new(derivedType: Type, typeDiscriminator: string): JsonDerivedTypeAttribute$instance;
-    new(derivedType: Type, typeDiscriminator: int): JsonDerivedTypeAttribute$instance;
+    new(derivedType: Type): JsonDerivedTypeAttribute;
+    new(derivedType: Type, typeDiscriminator: string): JsonDerivedTypeAttribute;
+    new(derivedType: Type, typeDiscriminator: int): JsonDerivedTypeAttribute;
 };
 
 
@@ -205,7 +205,7 @@ export interface JsonExtensionDataAttribute$instance extends JsonAttribute {
 
 
 export const JsonExtensionDataAttribute: {
-    new(): JsonExtensionDataAttribute$instance;
+    new(): JsonExtensionDataAttribute;
 };
 
 
@@ -217,7 +217,7 @@ export interface JsonIgnoreAttribute$instance extends JsonAttribute {
 
 
 export const JsonIgnoreAttribute: {
-    new(): JsonIgnoreAttribute$instance;
+    new(): JsonIgnoreAttribute;
 };
 
 
@@ -228,7 +228,7 @@ export interface JsonIncludeAttribute$instance extends JsonAttribute {
 
 
 export const JsonIncludeAttribute: {
-    new(): JsonIncludeAttribute$instance;
+    new(): JsonIncludeAttribute;
 };
 
 
@@ -241,7 +241,7 @@ export interface JsonNumberEnumConverter_1$instance<TEnum extends number> extend
 
 
 export const JsonNumberEnumConverter_1: {
-    new<TEnum extends number>(): JsonNumberEnumConverter_1$instance<TEnum>;
+    new<TEnum extends number>(): JsonNumberEnumConverter_1<TEnum>;
 };
 
 
@@ -253,7 +253,7 @@ export interface JsonNumberHandlingAttribute$instance extends JsonAttribute {
 
 
 export const JsonNumberHandlingAttribute: {
-    new(handling: JsonNumberHandling): JsonNumberHandlingAttribute$instance;
+    new(handling: JsonNumberHandling): JsonNumberHandlingAttribute;
 };
 
 
@@ -265,7 +265,7 @@ export interface JsonObjectCreationHandlingAttribute$instance extends JsonAttrib
 
 
 export const JsonObjectCreationHandlingAttribute: {
-    new(handling: JsonObjectCreationHandling): JsonObjectCreationHandlingAttribute$instance;
+    new(handling: JsonObjectCreationHandling): JsonObjectCreationHandlingAttribute;
 };
 
 
@@ -279,7 +279,7 @@ export interface JsonPolymorphicAttribute$instance extends JsonAttribute {
 
 
 export const JsonPolymorphicAttribute: {
-    new(): JsonPolymorphicAttribute$instance;
+    new(): JsonPolymorphicAttribute;
 };
 
 
@@ -291,7 +291,7 @@ export interface JsonPropertyNameAttribute$instance extends JsonAttribute {
 
 
 export const JsonPropertyNameAttribute: {
-    new(name: string): JsonPropertyNameAttribute$instance;
+    new(name: string): JsonPropertyNameAttribute;
 };
 
 
@@ -303,7 +303,7 @@ export interface JsonPropertyOrderAttribute$instance extends JsonAttribute {
 
 
 export const JsonPropertyOrderAttribute: {
-    new(order: int): JsonPropertyOrderAttribute$instance;
+    new(order: int): JsonPropertyOrderAttribute;
 };
 
 
@@ -314,7 +314,7 @@ export interface JsonRequiredAttribute$instance extends JsonAttribute {
 
 
 export const JsonRequiredAttribute: {
-    new(): JsonRequiredAttribute$instance;
+    new(): JsonRequiredAttribute;
 };
 
 
@@ -327,7 +327,7 @@ export interface JsonSerializableAttribute$instance extends JsonAttribute {
 
 
 export const JsonSerializableAttribute: {
-    new(type_: Type): JsonSerializableAttribute$instance;
+    new(type_: Type): JsonSerializableAttribute;
 };
 
 
@@ -382,8 +382,8 @@ export interface JsonSourceGenerationOptionsAttribute$instance extends JsonAttri
 
 
 export const JsonSourceGenerationOptionsAttribute: {
-    new(): JsonSourceGenerationOptionsAttribute$instance;
-    new(defaults: JsonSerializerDefaults): JsonSourceGenerationOptionsAttribute$instance;
+    new(): JsonSourceGenerationOptionsAttribute;
+    new(defaults: JsonSerializerDefaults): JsonSourceGenerationOptionsAttribute;
 };
 
 
@@ -396,8 +396,8 @@ export interface JsonStringEnumConverter$instance extends JsonConverterFactory {
 
 
 export const JsonStringEnumConverter: {
-    new(): JsonStringEnumConverter$instance;
-    new(namingPolicy: JsonNamingPolicy, allowIntegerValues: boolean): JsonStringEnumConverter$instance;
+    new(): JsonStringEnumConverter;
+    new(namingPolicy: JsonNamingPolicy, allowIntegerValues: boolean): JsonStringEnumConverter;
 };
 
 
@@ -410,8 +410,8 @@ export interface JsonStringEnumConverter_1$instance<TEnum extends number> extend
 
 
 export const JsonStringEnumConverter_1: {
-    new<TEnum extends number>(): JsonStringEnumConverter_1$instance<TEnum>;
-    new<TEnum extends number>(namingPolicy: JsonNamingPolicy, allowIntegerValues: boolean): JsonStringEnumConverter_1$instance<TEnum>;
+    new<TEnum extends number>(): JsonStringEnumConverter_1<TEnum>;
+    new<TEnum extends number>(namingPolicy: JsonNamingPolicy, allowIntegerValues: boolean): JsonStringEnumConverter_1<TEnum>;
 };
 
 
@@ -423,7 +423,7 @@ export interface JsonStringEnumMemberNameAttribute$instance extends Attribute {
 
 
 export const JsonStringEnumMemberNameAttribute: {
-    new(name: string): JsonStringEnumMemberNameAttribute$instance;
+    new(name: string): JsonStringEnumMemberNameAttribute;
 };
 
 
@@ -435,7 +435,7 @@ export interface JsonUnmappedMemberHandlingAttribute$instance extends JsonAttrib
 
 
 export const JsonUnmappedMemberHandlingAttribute: {
-    new(unmappedMemberHandling: JsonUnmappedMemberHandling): JsonUnmappedMemberHandlingAttribute$instance;
+    new(unmappedMemberHandling: JsonUnmappedMemberHandling): JsonUnmappedMemberHandlingAttribute;
 };
 
 
@@ -460,7 +460,7 @@ export interface ReferenceHandler_1$instance<T extends ReferenceResolver> extend
 
 
 export const ReferenceHandler_1: {
-    new<T extends ReferenceResolver>(): ReferenceHandler_1$instance<T>;
+    new<T extends ReferenceResolver>(): ReferenceHandler_1<T>;
 };
 
 

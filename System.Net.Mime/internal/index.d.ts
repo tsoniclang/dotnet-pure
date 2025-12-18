@@ -35,8 +35,8 @@ export interface ContentDisposition$instance {
 
 
 export const ContentDisposition: {
-    new(): ContentDisposition$instance;
-    new(disposition: string): ContentDisposition$instance;
+    new(): ContentDisposition;
+    new(disposition: string): ContentDisposition;
 };
 
 
@@ -55,8 +55,8 @@ export interface ContentType$instance {
 
 
 export const ContentType: {
-    new(): ContentType$instance;
-    new(contentType: string): ContentType$instance;
+    new(): ContentType;
+    new(contentType: string): ContentType;
 };
 
 

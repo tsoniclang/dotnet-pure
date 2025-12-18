@@ -406,7 +406,7 @@ export interface ArrayWithOffset$instance {
 
 
 export const ArrayWithOffset: {
-    new(array: unknown, offset: int): ArrayWithOffset$instance;
+    new(array: unknown, offset: int): ArrayWithOffset;
 };
 
 
@@ -430,8 +430,8 @@ export interface CLong$instance {
 
 
 export const CLong: {
-    new(value: int): CLong$instance;
-    new(value: nint): CLong$instance;
+    new(value: int): CLong;
+    new(value: nint): CLong;
 };
 
 
@@ -451,7 +451,7 @@ export interface ComWrappers_ComInterfaceDispatch$instance {
 
 
 export const ComWrappers_ComInterfaceDispatch: {
-    new(): ComWrappers_ComInterfaceDispatch$instance;
+    new(): ComWrappers_ComInterfaceDispatch;
     GetInstance<T>(dispatchPtr: ptr<ComWrappers_ComInterfaceDispatch>): T;
 };
 
@@ -465,7 +465,7 @@ export interface ComWrappers_ComInterfaceEntry$instance {
 
 
 export const ComWrappers_ComInterfaceEntry: {
-    new(): ComWrappers_ComInterfaceEntry$instance;
+    new(): ComWrappers_ComInterfaceEntry;
 };
 
 
@@ -481,8 +481,8 @@ export interface CULong$instance {
 
 
 export const CULong: {
-    new(value: uint): CULong$instance;
-    new(value: nuint): CULong$instance;
+    new(value: uint): CULong;
+    new(value: nuint): CULong;
 };
 
 
@@ -508,7 +508,7 @@ export interface GCHandle$instance {
 
 
 export const GCHandle: {
-    new(): GCHandle$instance;
+    new(): GCHandle;
     Alloc(value: unknown, type_: GCHandleType): GCHandle;
     Alloc(value: unknown): GCHandle;
     FromIntPtr(value: nint): GCHandle;
@@ -537,7 +537,7 @@ export interface GCHandle_1$instance<T> {
 
 
 export const GCHandle_1: {
-    new<T>(target: T): GCHandle_1$instance<T>;
+    new<T>(target: T): GCHandle_1<T>;
     FromIntPtr<T>(value: nint): GCHandle_1<T>;
     ToIntPtr<T>(value: GCHandle_1<T>): nint;
 };
@@ -563,7 +563,7 @@ export interface HandleRef$instance {
 
 
 export const HandleRef: {
-    new(wrapper: unknown, handle: nint): HandleRef$instance;
+    new(wrapper: unknown, handle: nint): HandleRef;
     ToIntPtr(value: HandleRef): nint;
 };
 
@@ -587,8 +587,8 @@ export interface NFloat$instance extends IBitwiseOperators_3<NFloat, NFloat, NFl
 
 
 export const NFloat: {
-    new(value: float): NFloat$instance;
-    new(value: double): NFloat$instance;
+    new(value: float): NFloat;
+    new(value: double): NFloat;
     readonly Epsilon: NFloat;
     readonly MaxValue: NFloat;
     readonly MinValue: NFloat;
@@ -758,7 +758,7 @@ export interface OSPlatform$instance {
 
 
 export const OSPlatform: {
-    new(): OSPlatform$instance;
+    new(): OSPlatform;
     readonly FreeBSD: OSPlatform;
     readonly Linux: OSPlatform;
     readonly OSX: OSPlatform;
@@ -789,7 +789,7 @@ export interface PinnedGCHandle_1$instance<T> {
 
 
 export const PinnedGCHandle_1: {
-    new<T>(target: T): PinnedGCHandle_1$instance<T>;
+    new<T>(target: T): PinnedGCHandle_1<T>;
     FromIntPtr<T>(value: nint): PinnedGCHandle_1<T>;
     ToIntPtr<T>(value: PinnedGCHandle_1<T>): nint;
 };
@@ -820,7 +820,7 @@ export interface WeakGCHandle_1$instance<T> {
 
 
 export const WeakGCHandle_1: {
-    new<T>(target: T, trackResurrection: boolean): WeakGCHandle_1$instance<T>;
+    new<T>(target: T, trackResurrection: boolean): WeakGCHandle_1<T>;
     FromIntPtr<T>(value: nint): WeakGCHandle_1<T>;
     ToIntPtr<T>(value: WeakGCHandle_1<T>): nint;
 };
@@ -844,7 +844,7 @@ export interface AllowReversePInvokeCallsAttribute$instance extends Attribute {
 
 
 export const AllowReversePInvokeCallsAttribute: {
-    new(): AllowReversePInvokeCallsAttribute$instance;
+    new(): AllowReversePInvokeCallsAttribute;
 };
 
 
@@ -856,7 +856,7 @@ export interface AutomationProxyAttribute$instance extends Attribute {
 
 
 export const AutomationProxyAttribute: {
-    new(val: boolean): AutomationProxyAttribute$instance;
+    new(val: boolean): AutomationProxyAttribute;
 };
 
 
@@ -869,7 +869,7 @@ export interface BestFitMappingAttribute$instance extends Attribute {
 
 
 export const BestFitMappingAttribute: {
-    new(BestFitMapping: boolean): BestFitMappingAttribute$instance;
+    new(BestFitMapping: boolean): BestFitMappingAttribute;
 };
 
 
@@ -881,8 +881,8 @@ export interface BStrWrapper$instance {
 
 
 export const BStrWrapper: {
-    new(value: string): BStrWrapper$instance;
-    new(value: unknown): BStrWrapper$instance;
+    new(value: string): BStrWrapper;
+    new(value: unknown): BStrWrapper;
 };
 
 
@@ -894,8 +894,8 @@ export interface ClassInterfaceAttribute$instance extends Attribute {
 
 
 export const ClassInterfaceAttribute: {
-    new(classInterfaceType: ClassInterfaceType): ClassInterfaceAttribute$instance;
-    new(classInterfaceType: short): ClassInterfaceAttribute$instance;
+    new(classInterfaceType: ClassInterfaceType): ClassInterfaceAttribute;
+    new(classInterfaceType: short): ClassInterfaceAttribute;
 };
 
 
@@ -907,7 +907,7 @@ export interface CoClassAttribute$instance extends Attribute {
 
 
 export const CoClassAttribute: {
-    new(coClass: Type): CoClassAttribute$instance;
+    new(coClass: Type): CoClassAttribute;
 };
 
 
@@ -919,7 +919,7 @@ export interface ComAliasNameAttribute$instance extends Attribute {
 
 
 export const ComAliasNameAttribute: {
-    new(alias: string): ComAliasNameAttribute$instance;
+    new(alias: string): ComAliasNameAttribute;
 };
 
 
@@ -951,7 +951,7 @@ export interface ComAwareEventInfo$instance extends EventInfo {
 
 
 export const ComAwareEventInfo: {
-    new(type_: Type, eventName: string): ComAwareEventInfo$instance;
+    new(type_: Type, eventName: string): ComAwareEventInfo;
 };
 
 
@@ -971,7 +971,7 @@ export interface ComCompatibleVersionAttribute$instance extends Attribute {
 
 
 export const ComCompatibleVersionAttribute: {
-    new(major: int, minor: int, build: int, revision: int): ComCompatibleVersionAttribute$instance;
+    new(major: int, minor: int, build: int, revision: int): ComCompatibleVersionAttribute;
 };
 
 
@@ -982,7 +982,7 @@ export interface ComConversionLossAttribute$instance extends Attribute {
 
 
 export const ComConversionLossAttribute: {
-    new(): ComConversionLossAttribute$instance;
+    new(): ComConversionLossAttribute;
 };
 
 
@@ -994,7 +994,7 @@ export interface ComDefaultInterfaceAttribute$instance extends Attribute {
 
 
 export const ComDefaultInterfaceAttribute: {
-    new(defaultInterface: Type): ComDefaultInterfaceAttribute$instance;
+    new(defaultInterface: Type): ComDefaultInterfaceAttribute;
 };
 
 
@@ -1007,7 +1007,7 @@ export interface ComEventInterfaceAttribute$instance extends Attribute {
 
 
 export const ComEventInterfaceAttribute: {
-    new(SourceInterface: Type, EventProvider: Type): ComEventInterfaceAttribute$instance;
+    new(SourceInterface: Type, EventProvider: Type): ComEventInterfaceAttribute;
 };
 
 
@@ -1020,10 +1020,10 @@ export interface COMException$instance extends ExternalException$instance {
 
 
 export const COMException: {
-    new(): COMException$instance;
-    new(message: string): COMException$instance;
-    new(message: string, inner: Exception): COMException$instance;
-    new(message: string, errorCode: int): COMException$instance;
+    new(): COMException;
+    new(message: string): COMException;
+    new(message: string, inner: Exception): COMException;
+    new(message: string, errorCode: int): COMException;
 };
 
 
@@ -1039,7 +1039,7 @@ export interface ComImportAttribute$instance extends Attribute {
 
 
 export const ComImportAttribute: {
-    new(): ComImportAttribute$instance;
+    new(): ComImportAttribute;
 };
 
 
@@ -1050,7 +1050,7 @@ export interface ComRegisterFunctionAttribute$instance extends Attribute {
 
 
 export const ComRegisterFunctionAttribute: {
-    new(): ComRegisterFunctionAttribute$instance;
+    new(): ComRegisterFunctionAttribute;
 };
 
 
@@ -1062,11 +1062,11 @@ export interface ComSourceInterfacesAttribute$instance extends Attribute {
 
 
 export const ComSourceInterfacesAttribute: {
-    new(sourceInterfaces: string): ComSourceInterfacesAttribute$instance;
-    new(sourceInterface: Type): ComSourceInterfacesAttribute$instance;
-    new(sourceInterface1: Type, sourceInterface2: Type): ComSourceInterfacesAttribute$instance;
-    new(sourceInterface1: Type, sourceInterface2: Type, sourceInterface3: Type): ComSourceInterfacesAttribute$instance;
-    new(sourceInterface1: Type, sourceInterface2: Type, sourceInterface3: Type, sourceInterface4: Type): ComSourceInterfacesAttribute$instance;
+    new(sourceInterfaces: string): ComSourceInterfacesAttribute;
+    new(sourceInterface: Type): ComSourceInterfacesAttribute;
+    new(sourceInterface1: Type, sourceInterface2: Type): ComSourceInterfacesAttribute;
+    new(sourceInterface1: Type, sourceInterface2: Type, sourceInterface3: Type): ComSourceInterfacesAttribute;
+    new(sourceInterface1: Type, sourceInterface2: Type, sourceInterface3: Type, sourceInterface4: Type): ComSourceInterfacesAttribute;
 };
 
 
@@ -1077,7 +1077,7 @@ export interface ComUnregisterFunctionAttribute$instance extends Attribute {
 
 
 export const ComUnregisterFunctionAttribute: {
-    new(): ComUnregisterFunctionAttribute$instance;
+    new(): ComUnregisterFunctionAttribute;
 };
 
 
@@ -1089,7 +1089,7 @@ export interface ComVisibleAttribute$instance extends Attribute {
 
 
 export const ComVisibleAttribute: {
-    new(visibility: boolean): ComVisibleAttribute$instance;
+    new(visibility: boolean): ComVisibleAttribute;
 };
 
 
@@ -1143,8 +1143,8 @@ export interface CurrencyWrapper$instance {
 
 
 export const CurrencyWrapper: {
-    new(obj: decimal): CurrencyWrapper$instance;
-    new(obj: unknown): CurrencyWrapper$instance;
+    new(obj: decimal): CurrencyWrapper;
+    new(obj: unknown): CurrencyWrapper;
 };
 
 
@@ -1156,7 +1156,7 @@ export interface DefaultCharSetAttribute$instance extends Attribute {
 
 
 export const DefaultCharSetAttribute: {
-    new(charSet: CharSet): DefaultCharSetAttribute$instance;
+    new(charSet: CharSet): DefaultCharSetAttribute;
 };
 
 
@@ -1168,7 +1168,7 @@ export interface DefaultDllImportSearchPathsAttribute$instance extends Attribute
 
 
 export const DefaultDllImportSearchPathsAttribute: {
-    new(paths: DllImportSearchPath): DefaultDllImportSearchPathsAttribute$instance;
+    new(paths: DllImportSearchPath): DefaultDllImportSearchPathsAttribute;
 };
 
 
@@ -1180,7 +1180,7 @@ export interface DefaultParameterValueAttribute$instance extends Attribute {
 
 
 export const DefaultParameterValueAttribute: {
-    new(value: unknown): DefaultParameterValueAttribute$instance;
+    new(value: unknown): DefaultParameterValueAttribute;
 };
 
 
@@ -1192,7 +1192,7 @@ export interface DispatchWrapper$instance {
 
 
 export const DispatchWrapper: {
-    new(obj: unknown): DispatchWrapper$instance;
+    new(obj: unknown): DispatchWrapper;
 };
 
 
@@ -1204,7 +1204,7 @@ export interface DispIdAttribute$instance extends Attribute {
 
 
 export const DispIdAttribute: {
-    new(dispId: int): DispIdAttribute$instance;
+    new(dispId: int): DispIdAttribute;
 };
 
 
@@ -1224,7 +1224,7 @@ export interface DllImportAttribute$instance extends Attribute {
 
 
 export const DllImportAttribute: {
-    new(dllName: string): DllImportAttribute$instance;
+    new(dllName: string): DllImportAttribute;
 };
 
 
@@ -1235,7 +1235,7 @@ export interface DynamicInterfaceCastableImplementationAttribute$instance extend
 
 
 export const DynamicInterfaceCastableImplementationAttribute: {
-    new(): DynamicInterfaceCastableImplementationAttribute$instance;
+    new(): DynamicInterfaceCastableImplementationAttribute;
 };
 
 
@@ -1247,9 +1247,9 @@ export interface ErrorWrapper$instance {
 
 
 export const ErrorWrapper: {
-    new(errorCode: int): ErrorWrapper$instance;
-    new(errorCode: unknown): ErrorWrapper$instance;
-    new(e: Exception): ErrorWrapper$instance;
+    new(errorCode: int): ErrorWrapper;
+    new(errorCode: unknown): ErrorWrapper;
+    new(e: Exception): ErrorWrapper;
 };
 
 
@@ -1263,10 +1263,10 @@ export interface ExternalException$instance extends SystemException {
 
 
 export const ExternalException: {
-    new(): ExternalException$instance;
-    new(message: string): ExternalException$instance;
-    new(message: string, inner: Exception): ExternalException$instance;
-    new(message: string, errorCode: int): ExternalException$instance;
+    new(): ExternalException;
+    new(message: string): ExternalException;
+    new(message: string, inner: Exception): ExternalException;
+    new(message: string, errorCode: int): ExternalException;
 };
 
 
@@ -1283,7 +1283,7 @@ export interface FieldOffsetAttribute$instance extends Attribute {
 
 
 export const FieldOffsetAttribute: {
-    new(offset: int): FieldOffsetAttribute$instance;
+    new(offset: int): FieldOffsetAttribute;
 };
 
 
@@ -1295,7 +1295,7 @@ export interface GuidAttribute$instance extends Attribute {
 
 
 export const GuidAttribute: {
-    new(guid: string): GuidAttribute$instance;
+    new(guid: string): GuidAttribute;
 };
 
 
@@ -1312,8 +1312,8 @@ export interface HandleCollector$instance {
 
 
 export const HandleCollector: {
-    new(name: string, initialThreshold: int): HandleCollector$instance;
-    new(name: string, initialThreshold: int, maximumThreshold: int): HandleCollector$instance;
+    new(name: string, initialThreshold: int): HandleCollector;
+    new(name: string, initialThreshold: int, maximumThreshold: int): HandleCollector;
 };
 
 
@@ -1325,7 +1325,7 @@ export interface ImportedFromTypeLibAttribute$instance extends Attribute {
 
 
 export const ImportedFromTypeLibAttribute: {
-    new(tlbFile: string): ImportedFromTypeLibAttribute$instance;
+    new(tlbFile: string): ImportedFromTypeLibAttribute;
 };
 
 
@@ -1336,7 +1336,7 @@ export interface InAttribute$instance extends Attribute {
 
 
 export const InAttribute: {
-    new(): InAttribute$instance;
+    new(): InAttribute;
 };
 
 
@@ -1348,8 +1348,8 @@ export interface InterfaceTypeAttribute$instance extends Attribute {
 
 
 export const InterfaceTypeAttribute: {
-    new(interfaceType: ComInterfaceType): InterfaceTypeAttribute$instance;
-    new(interfaceType: short): InterfaceTypeAttribute$instance;
+    new(interfaceType: ComInterfaceType): InterfaceTypeAttribute;
+    new(interfaceType: short): InterfaceTypeAttribute;
 };
 
 
@@ -1361,9 +1361,9 @@ export interface InvalidComObjectException$instance extends SystemException {
 
 
 export const InvalidComObjectException: {
-    new(): InvalidComObjectException$instance;
-    new(message: string): InvalidComObjectException$instance;
-    new(message: string, inner: Exception): InvalidComObjectException$instance;
+    new(): InvalidComObjectException;
+    new(message: string): InvalidComObjectException;
+    new(message: string, inner: Exception): InvalidComObjectException;
 };
 
 
@@ -1380,9 +1380,9 @@ export interface InvalidOleVariantTypeException$instance extends SystemException
 
 
 export const InvalidOleVariantTypeException: {
-    new(): InvalidOleVariantTypeException$instance;
-    new(message: string): InvalidOleVariantTypeException$instance;
-    new(message: string, inner: Exception): InvalidOleVariantTypeException$instance;
+    new(): InvalidOleVariantTypeException;
+    new(message: string): InvalidOleVariantTypeException;
+    new(message: string, inner: Exception): InvalidOleVariantTypeException;
 };
 
 
@@ -1399,7 +1399,7 @@ export interface LCIDConversionAttribute$instance extends Attribute {
 
 
 export const LCIDConversionAttribute: {
-    new(lcid: int): LCIDConversionAttribute$instance;
+    new(lcid: int): LCIDConversionAttribute;
 };
 
 
@@ -1415,7 +1415,7 @@ export interface LibraryImportAttribute$instance extends Attribute {
 
 
 export const LibraryImportAttribute: {
-    new(libraryName: string): LibraryImportAttribute$instance;
+    new(libraryName: string): LibraryImportAttribute;
 };
 
 
@@ -1428,7 +1428,7 @@ export interface ManagedToNativeComInteropStubAttribute$instance extends Attribu
 
 
 export const ManagedToNativeComInteropStubAttribute: {
-    new(classType: Type, methodName: string): ManagedToNativeComInteropStubAttribute$instance;
+    new(classType: Type, methodName: string): ManagedToNativeComInteropStubAttribute;
 };
 
 
@@ -1449,8 +1449,8 @@ export interface MarshalAsAttribute$instance extends Attribute {
 
 
 export const MarshalAsAttribute: {
-    new(unmanagedType: UnmanagedType): MarshalAsAttribute$instance;
-    new(unmanagedType: short): MarshalAsAttribute$instance;
+    new(unmanagedType: UnmanagedType): MarshalAsAttribute;
+    new(unmanagedType: short): MarshalAsAttribute;
 };
 
 
@@ -1462,9 +1462,9 @@ export interface MarshalDirectiveException$instance extends SystemException {
 
 
 export const MarshalDirectiveException: {
-    new(): MarshalDirectiveException$instance;
-    new(message: string): MarshalDirectiveException$instance;
-    new(message: string, inner: Exception): MarshalDirectiveException$instance;
+    new(): MarshalDirectiveException;
+    new(message: string): MarshalDirectiveException;
+    new(message: string, inner: Exception): MarshalDirectiveException;
 };
 
 
@@ -1480,7 +1480,7 @@ export interface OptionalAttribute$instance extends Attribute {
 
 
 export const OptionalAttribute: {
-    new(): OptionalAttribute$instance;
+    new(): OptionalAttribute;
 };
 
 
@@ -1491,7 +1491,7 @@ export interface OutAttribute$instance extends Attribute {
 
 
 export const OutAttribute: {
-    new(): OutAttribute$instance;
+    new(): OutAttribute;
 };
 
 
@@ -1504,7 +1504,7 @@ export interface PosixSignalContext$instance {
 
 
 export const PosixSignalContext: {
-    new(signal: PosixSignal): PosixSignalContext$instance;
+    new(signal: PosixSignal): PosixSignalContext;
 };
 
 
@@ -1516,7 +1516,7 @@ export interface PosixSignalRegistration$instance {
 
 
 export const PosixSignalRegistration: {
-    new(): PosixSignalRegistration$instance;
+    new(): PosixSignalRegistration;
     Create(signal: PosixSignal, handler: Action_1<PosixSignalContext>): PosixSignalRegistration;
 };
 
@@ -1535,7 +1535,7 @@ export interface PreserveSigAttribute$instance extends Attribute {
 
 
 export const PreserveSigAttribute: {
-    new(): PreserveSigAttribute$instance;
+    new(): PreserveSigAttribute;
 };
 
 
@@ -1548,7 +1548,7 @@ export interface PrimaryInteropAssemblyAttribute$instance extends Attribute {
 
 
 export const PrimaryInteropAssemblyAttribute: {
-    new(major: int, minor: int): PrimaryInteropAssemblyAttribute$instance;
+    new(major: int, minor: int): PrimaryInteropAssemblyAttribute;
 };
 
 
@@ -1560,7 +1560,7 @@ export interface ProgIdAttribute$instance extends Attribute {
 
 
 export const ProgIdAttribute: {
-    new(progId: string): ProgIdAttribute$instance;
+    new(progId: string): ProgIdAttribute;
 };
 
 
@@ -1572,9 +1572,9 @@ export interface SafeArrayRankMismatchException$instance extends SystemException
 
 
 export const SafeArrayRankMismatchException: {
-    new(): SafeArrayRankMismatchException$instance;
-    new(message: string): SafeArrayRankMismatchException$instance;
-    new(message: string, inner: Exception): SafeArrayRankMismatchException$instance;
+    new(): SafeArrayRankMismatchException;
+    new(message: string): SafeArrayRankMismatchException;
+    new(message: string, inner: Exception): SafeArrayRankMismatchException;
 };
 
 
@@ -1591,9 +1591,9 @@ export interface SafeArrayTypeMismatchException$instance extends SystemException
 
 
 export const SafeArrayTypeMismatchException: {
-    new(): SafeArrayTypeMismatchException$instance;
-    new(message: string): SafeArrayTypeMismatchException$instance;
-    new(message: string, inner: Exception): SafeArrayTypeMismatchException$instance;
+    new(): SafeArrayTypeMismatchException;
+    new(message: string): SafeArrayTypeMismatchException;
+    new(message: string, inner: Exception): SafeArrayTypeMismatchException;
 };
 
 
@@ -1664,9 +1664,9 @@ export interface SEHException$instance extends ExternalException$instance {
 
 
 export const SEHException: {
-    new(): SEHException$instance;
-    new(message: string): SEHException$instance;
-    new(message: string, inner: Exception): SEHException$instance;
+    new(): SEHException;
+    new(message: string): SEHException;
+    new(message: string, inner: Exception): SEHException;
 };
 
 
@@ -1682,7 +1682,7 @@ export interface StandardOleMarshalObject$instance extends MarshalByRefObject {
 
 
 export const StandardOleMarshalObject: {
-    new(): StandardOleMarshalObject$instance;
+    new(): StandardOleMarshalObject;
 };
 
 
@@ -1697,8 +1697,8 @@ export interface StructLayoutAttribute$instance extends Attribute {
 
 
 export const StructLayoutAttribute: {
-    new(layoutKind: LayoutKind): StructLayoutAttribute$instance;
-    new(layoutKind: short): StructLayoutAttribute$instance;
+    new(layoutKind: LayoutKind): StructLayoutAttribute;
+    new(layoutKind: short): StructLayoutAttribute;
 };
 
 
@@ -1709,7 +1709,7 @@ export interface SuppressGCTransitionAttribute$instance extends Attribute {
 
 
 export const SuppressGCTransitionAttribute: {
-    new(): SuppressGCTransitionAttribute$instance;
+    new(): SuppressGCTransitionAttribute;
 };
 
 
@@ -1722,8 +1722,8 @@ export interface TypeIdentifierAttribute$instance extends Attribute {
 
 
 export const TypeIdentifierAttribute: {
-    new(): TypeIdentifierAttribute$instance;
-    new(scope: string, identifier: string): TypeIdentifierAttribute$instance;
+    new(): TypeIdentifierAttribute;
+    new(scope: string, identifier: string): TypeIdentifierAttribute;
 };
 
 
@@ -1735,8 +1735,8 @@ export interface TypeLibFuncAttribute$instance extends Attribute {
 
 
 export const TypeLibFuncAttribute: {
-    new(flags: TypeLibFuncFlags): TypeLibFuncAttribute$instance;
-    new(flags: short): TypeLibFuncAttribute$instance;
+    new(flags: TypeLibFuncFlags): TypeLibFuncAttribute;
+    new(flags: short): TypeLibFuncAttribute;
 };
 
 
@@ -1748,7 +1748,7 @@ export interface TypeLibImportClassAttribute$instance extends Attribute {
 
 
 export const TypeLibImportClassAttribute: {
-    new(importClass: Type): TypeLibImportClassAttribute$instance;
+    new(importClass: Type): TypeLibImportClassAttribute;
 };
 
 
@@ -1760,8 +1760,8 @@ export interface TypeLibTypeAttribute$instance extends Attribute {
 
 
 export const TypeLibTypeAttribute: {
-    new(flags: TypeLibTypeFlags): TypeLibTypeAttribute$instance;
-    new(flags: short): TypeLibTypeAttribute$instance;
+    new(flags: TypeLibTypeFlags): TypeLibTypeAttribute;
+    new(flags: short): TypeLibTypeAttribute;
 };
 
 
@@ -1773,8 +1773,8 @@ export interface TypeLibVarAttribute$instance extends Attribute {
 
 
 export const TypeLibVarAttribute: {
-    new(flags: TypeLibVarFlags): TypeLibVarAttribute$instance;
-    new(flags: short): TypeLibVarAttribute$instance;
+    new(flags: TypeLibVarFlags): TypeLibVarAttribute;
+    new(flags: short): TypeLibVarAttribute;
 };
 
 
@@ -1787,7 +1787,7 @@ export interface TypeLibVersionAttribute$instance extends Attribute {
 
 
 export const TypeLibVersionAttribute: {
-    new(major: int, minor: int): TypeLibVersionAttribute$instance;
+    new(major: int, minor: int): TypeLibVersionAttribute;
 };
 
 
@@ -1798,7 +1798,7 @@ export interface TypeMapAssemblyTargetAttribute_1$instance<TTypeMapGroup> extend
 
 
 export const TypeMapAssemblyTargetAttribute_1: {
-    new<TTypeMapGroup>(assemblyName: string): TypeMapAssemblyTargetAttribute_1$instance<TTypeMapGroup>;
+    new<TTypeMapGroup>(assemblyName: string): TypeMapAssemblyTargetAttribute_1<TTypeMapGroup>;
 };
 
 
@@ -1809,7 +1809,7 @@ export interface TypeMapAssociationAttribute_1$instance<TTypeMapGroup> extends A
 
 
 export const TypeMapAssociationAttribute_1: {
-    new<TTypeMapGroup>(source: Type, proxy: Type): TypeMapAssociationAttribute_1$instance<TTypeMapGroup>;
+    new<TTypeMapGroup>(source: Type, proxy: Type): TypeMapAssociationAttribute_1<TTypeMapGroup>;
 };
 
 
@@ -1820,8 +1820,8 @@ export interface TypeMapAttribute_1$instance<TTypeMapGroup> extends Attribute {
 
 
 export const TypeMapAttribute_1: {
-    new<TTypeMapGroup>(value: string, target: Type): TypeMapAttribute_1$instance<TTypeMapGroup>;
-    new<TTypeMapGroup>(value: string, target: Type, trimTarget: Type): TypeMapAttribute_1$instance<TTypeMapGroup>;
+    new<TTypeMapGroup>(value: string, target: Type): TypeMapAttribute_1<TTypeMapGroup>;
+    new<TTypeMapGroup>(value: string, target: Type, trimTarget: Type): TypeMapAttribute_1<TTypeMapGroup>;
 };
 
 
@@ -1833,7 +1833,7 @@ export interface UnknownWrapper$instance {
 
 
 export const UnknownWrapper: {
-    new(obj: unknown): UnknownWrapper$instance;
+    new(obj: unknown): UnknownWrapper;
 };
 
 
@@ -1845,7 +1845,7 @@ export interface UnmanagedCallConvAttribute$instance extends Attribute {
 
 
 export const UnmanagedCallConvAttribute: {
-    new(): UnmanagedCallConvAttribute$instance;
+    new(): UnmanagedCallConvAttribute;
 };
 
 
@@ -1858,7 +1858,7 @@ export interface UnmanagedCallersOnlyAttribute$instance extends Attribute {
 
 
 export const UnmanagedCallersOnlyAttribute: {
-    new(): UnmanagedCallersOnlyAttribute$instance;
+    new(): UnmanagedCallersOnlyAttribute;
 };
 
 
@@ -1874,7 +1874,7 @@ export interface UnmanagedFunctionPointerAttribute$instance extends Attribute {
 
 
 export const UnmanagedFunctionPointerAttribute: {
-    new(callingConvention: CallingConvention): UnmanagedFunctionPointerAttribute$instance;
+    new(callingConvention: CallingConvention): UnmanagedFunctionPointerAttribute;
 };
 
 
@@ -1886,7 +1886,7 @@ export interface VariantWrapper$instance {
 
 
 export const VariantWrapper: {
-    new(obj: unknown): VariantWrapper$instance;
+    new(obj: unknown): VariantWrapper;
 };
 
 
@@ -1897,7 +1897,7 @@ export interface WasmImportLinkageAttribute$instance extends Attribute {
 
 
 export const WasmImportLinkageAttribute: {
-    new(): WasmImportLinkageAttribute$instance;
+    new(): WasmImportLinkageAttribute;
 };
 
 

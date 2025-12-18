@@ -210,7 +210,7 @@ export interface Activity_Enumerator_1$instance<T> {
 
 
 export const Activity_Enumerator_1: {
-    new<T>(): Activity_Enumerator_1$instance<T>;
+    new<T>(): Activity_Enumerator_1<T>;
 };
 
 
@@ -223,7 +223,7 @@ export interface ActivityChangedEventArgs$instance {
 
 
 export const ActivityChangedEventArgs: {
-    new(): ActivityChangedEventArgs$instance;
+    new(): ActivityChangedEventArgs;
 };
 
 
@@ -242,7 +242,7 @@ export interface ActivityContext$instance {
 
 
 export const ActivityContext: {
-    new(traceId: ActivityTraceId, spanId: ActivitySpanId, traceFlags: ActivityTraceFlags, traceState: string, isRemote: boolean): ActivityContext$instance;
+    new(traceId: ActivityTraceId, spanId: ActivitySpanId, traceFlags: ActivityTraceFlags, traceState: string, isRemote: boolean): ActivityContext;
     Parse(traceParent: string, traceState: string): ActivityContext;
     TryParse(traceParent: string, traceState: string, isRemote: boolean, context: ActivityContext): boolean;
     TryParse(traceParent: string, traceState: string, context: ActivityContext): boolean;
@@ -273,7 +273,7 @@ export interface ActivityCreationOptions_1$instance<T> {
 
 
 export const ActivityCreationOptions_1: {
-    new<T>(): ActivityCreationOptions_1$instance<T>;
+    new<T>(): ActivityCreationOptions_1<T>;
 };
 
 
@@ -288,8 +288,8 @@ export interface ActivityEvent$instance {
 
 
 export const ActivityEvent: {
-    new(name: string): ActivityEvent$instance;
-    new(name: string, timestamp: DateTimeOffset, tags: ActivityTagsCollection): ActivityEvent$instance;
+    new(name: string): ActivityEvent;
+    new(name: string, timestamp: DateTimeOffset, tags: ActivityTagsCollection): ActivityEvent;
 };
 
 
@@ -306,7 +306,7 @@ export interface ActivityLink$instance {
 
 
 export const ActivityLink: {
-    new(context: ActivityContext, tags: ActivityTagsCollection): ActivityLink$instance;
+    new(context: ActivityContext, tags: ActivityTagsCollection): ActivityLink;
 };
 
 
@@ -331,7 +331,7 @@ export interface ActivitySpanId$instance {
 
 
 export const ActivitySpanId: {
-    new(): ActivitySpanId$instance;
+    new(): ActivitySpanId;
     CreateFromBytes(idData: ReadOnlySpan_1<System_Internal.Byte>): ActivitySpanId;
     CreateFromString(idData: ReadOnlySpan_1<System_Internal.Char>): ActivitySpanId;
     CreateFromUtf8String(idData: ReadOnlySpan_1<System_Internal.Byte>): ActivitySpanId;
@@ -358,7 +358,7 @@ export interface ActivityTagsCollection_Enumerator$instance extends IDisposable 
 
 
 export const ActivityTagsCollection_Enumerator: {
-    new(): ActivityTagsCollection_Enumerator$instance;
+    new(): ActivityTagsCollection_Enumerator;
 };
 
 
@@ -381,7 +381,7 @@ export interface ActivityTraceId$instance {
 
 
 export const ActivityTraceId: {
-    new(): ActivityTraceId$instance;
+    new(): ActivityTraceId;
     CreateFromBytes(idData: ReadOnlySpan_1<System_Internal.Byte>): ActivityTraceId;
     CreateFromString(idData: ReadOnlySpan_1<System_Internal.Char>): ActivityTraceId;
     CreateFromUtf8String(idData: ReadOnlySpan_1<System_Internal.Byte>): ActivityTraceId;
@@ -414,7 +414,7 @@ export interface Debug_AssertInterpolatedStringHandler$instance {
 
 
 export const Debug_AssertInterpolatedStringHandler: {
-    new(literalLength: int, formattedCount: int, condition: boolean, shouldAppend: boolean): Debug_AssertInterpolatedStringHandler$instance;
+    new(literalLength: int, formattedCount: int, condition: boolean, shouldAppend: boolean): Debug_AssertInterpolatedStringHandler;
 };
 
 
@@ -435,7 +435,7 @@ export interface Debug_WriteIfInterpolatedStringHandler$instance {
 
 
 export const Debug_WriteIfInterpolatedStringHandler: {
-    new(literalLength: int, formattedCount: int, condition: boolean, shouldAppend: boolean): Debug_WriteIfInterpolatedStringHandler$instance;
+    new(literalLength: int, formattedCount: int, condition: boolean, shouldAppend: boolean): Debug_WriteIfInterpolatedStringHandler;
 };
 
 
@@ -460,7 +460,7 @@ export interface TagList$instance {
 
 
 export const TagList: {
-    new(tagList: ReadOnlySpan_1<KeyValuePair_2<System_Internal.String, unknown>>): TagList$instance;
+    new(tagList: ReadOnlySpan_1<KeyValuePair_2<System_Internal.String, unknown>>): TagList;
 };
 
 
@@ -484,7 +484,7 @@ export interface TagList_Enumerator$instance extends IDisposable {
 
 
 export const TagList_Enumerator: {
-    new(): TagList_Enumerator$instance;
+    new(): TagList_Enumerator;
 };
 
 
@@ -553,7 +553,7 @@ export interface Activity$instance {
 
 
 export const Activity: {
-    new(operationName: string): Activity$instance;
+    new(operationName: string): Activity;
     ForceDefaultIdFormat: boolean;
     Current: Activity;
     TraceIdGenerator: Func_1<ActivityTraceId>;
@@ -582,7 +582,7 @@ export interface ActivityListener$instance {
 
 
 export const ActivityListener: {
-    new(): ActivityListener$instance;
+    new(): ActivityListener;
 };
 
 
@@ -613,10 +613,10 @@ export interface ActivitySource$instance {
 
 
 export const ActivitySource: {
-    new(name: string): ActivitySource$instance;
-    new(name: string, version: string): ActivitySource$instance;
-    new(name: string, version: string, tags: IEnumerable_1<KeyValuePair_2<System_Internal.String, unknown>>): ActivitySource$instance;
-    new(options: ActivitySourceOptions): ActivitySource$instance;
+    new(name: string): ActivitySource;
+    new(name: string, version: string): ActivitySource;
+    new(name: string, version: string, tags: IEnumerable_1<KeyValuePair_2<System_Internal.String, unknown>>): ActivitySource;
+    new(options: ActivitySourceOptions): ActivitySource;
     AddActivityListener(listener: ActivityListener): void;
 };
 
@@ -639,7 +639,7 @@ export interface ActivitySourceOptions$instance {
 
 
 export const ActivitySourceOptions: {
-    new(name: string): ActivitySourceOptions$instance;
+    new(name: string): ActivitySourceOptions;
 };
 
 
@@ -665,8 +665,8 @@ export interface ActivityTagsCollection$instance {
 
 
 export const ActivityTagsCollection: {
-    new(): ActivityTagsCollection$instance;
-    new(list: IEnumerable_1<KeyValuePair_2<System_Internal.String, unknown>>): ActivityTagsCollection$instance;
+    new(): ActivityTagsCollection;
+    new(list: IEnumerable_1<KeyValuePair_2<System_Internal.String, unknown>>): ActivityTagsCollection;
 };
 
 
@@ -686,8 +686,8 @@ export interface BooleanSwitch$instance extends Switch {
 
 
 export const BooleanSwitch: {
-    new(displayName: string, description: string): BooleanSwitch$instance;
-    new(displayName: string, description: string, defaultSwitchValue: string): BooleanSwitch$instance;
+    new(displayName: string, description: string): BooleanSwitch;
+    new(displayName: string, description: string, defaultSwitchValue: string): BooleanSwitch;
 };
 
 
@@ -699,7 +699,7 @@ export interface ConditionalAttribute$instance extends Attribute {
 
 
 export const ConditionalAttribute: {
-    new(conditionString: string): ConditionalAttribute$instance;
+    new(conditionString: string): ConditionalAttribute;
 };
 
 
@@ -712,8 +712,8 @@ export interface ConsoleTraceListener$instance extends TextWriterTraceListener$i
 
 
 export const ConsoleTraceListener: {
-    new(): ConsoleTraceListener$instance;
-    new(useErrorStream: boolean): ConsoleTraceListener$instance;
+    new(): ConsoleTraceListener;
+    new(useErrorStream: boolean): ConsoleTraceListener;
 };
 
 
@@ -734,7 +734,7 @@ export interface CorrelationManager$instance {
 
 
 export const CorrelationManager: {
-    new(): CorrelationManager$instance;
+    new(): CorrelationManager;
 };
 
 
@@ -746,7 +746,7 @@ export interface DataReceivedEventArgs$instance extends EventArgs {
 
 
 export const DataReceivedEventArgs: {
-    new(): DataReceivedEventArgs$instance;
+    new(): DataReceivedEventArgs;
 };
 
 
@@ -760,8 +760,8 @@ export interface DebuggableAttribute$instance extends Attribute {
 
 
 export const DebuggableAttribute: {
-    new(isJITTrackingEnabled: boolean, isJITOptimizerDisabled: boolean): DebuggableAttribute$instance;
-    new(modes: DebuggableAttribute_DebuggingModes): DebuggableAttribute$instance;
+    new(isJITTrackingEnabled: boolean, isJITOptimizerDisabled: boolean): DebuggableAttribute;
+    new(modes: DebuggableAttribute_DebuggingModes): DebuggableAttribute;
 };
 
 
@@ -773,7 +773,7 @@ export interface DebuggerBrowsableAttribute$instance extends Attribute {
 
 
 export const DebuggerBrowsableAttribute: {
-    new(state: DebuggerBrowsableState): DebuggerBrowsableAttribute$instance;
+    new(state: DebuggerBrowsableState): DebuggerBrowsableAttribute;
 };
 
 
@@ -784,7 +784,7 @@ export interface DebuggerDisableUserUnhandledExceptionsAttribute$instance extend
 
 
 export const DebuggerDisableUserUnhandledExceptionsAttribute: {
-    new(): DebuggerDisableUserUnhandledExceptionsAttribute$instance;
+    new(): DebuggerDisableUserUnhandledExceptionsAttribute;
 };
 
 
@@ -800,7 +800,7 @@ export interface DebuggerDisplayAttribute$instance extends Attribute {
 
 
 export const DebuggerDisplayAttribute: {
-    new(value: string): DebuggerDisplayAttribute$instance;
+    new(value: string): DebuggerDisplayAttribute;
 };
 
 
@@ -811,7 +811,7 @@ export interface DebuggerHiddenAttribute$instance extends Attribute {
 
 
 export const DebuggerHiddenAttribute: {
-    new(): DebuggerHiddenAttribute$instance;
+    new(): DebuggerHiddenAttribute;
 };
 
 
@@ -822,7 +822,7 @@ export interface DebuggerNonUserCodeAttribute$instance extends Attribute {
 
 
 export const DebuggerNonUserCodeAttribute: {
-    new(): DebuggerNonUserCodeAttribute$instance;
+    new(): DebuggerNonUserCodeAttribute;
 };
 
 
@@ -833,7 +833,7 @@ export interface DebuggerStepperBoundaryAttribute$instance extends Attribute {
 
 
 export const DebuggerStepperBoundaryAttribute: {
-    new(): DebuggerStepperBoundaryAttribute$instance;
+    new(): DebuggerStepperBoundaryAttribute;
 };
 
 
@@ -844,7 +844,7 @@ export interface DebuggerStepThroughAttribute$instance extends Attribute {
 
 
 export const DebuggerStepThroughAttribute: {
-    new(): DebuggerStepThroughAttribute$instance;
+    new(): DebuggerStepThroughAttribute;
 };
 
 
@@ -858,8 +858,8 @@ export interface DebuggerTypeProxyAttribute$instance extends Attribute {
 
 
 export const DebuggerTypeProxyAttribute: {
-    new(type_: Type): DebuggerTypeProxyAttribute$instance;
-    new(typeName: string): DebuggerTypeProxyAttribute$instance;
+    new(type_: Type): DebuggerTypeProxyAttribute;
+    new(typeName: string): DebuggerTypeProxyAttribute;
 };
 
 
@@ -875,12 +875,12 @@ export interface DebuggerVisualizerAttribute$instance extends Attribute {
 
 
 export const DebuggerVisualizerAttribute: {
-    new(visualizerTypeName: string): DebuggerVisualizerAttribute$instance;
-    new(visualizerTypeName: string, visualizerObjectSourceTypeName: string): DebuggerVisualizerAttribute$instance;
-    new(visualizerTypeName: string, visualizerObjectSource: Type): DebuggerVisualizerAttribute$instance;
-    new(visualizer: Type): DebuggerVisualizerAttribute$instance;
-    new(visualizer: Type, visualizerObjectSource: Type): DebuggerVisualizerAttribute$instance;
-    new(visualizer: Type, visualizerObjectSourceTypeName: string): DebuggerVisualizerAttribute$instance;
+    new(visualizerTypeName: string): DebuggerVisualizerAttribute;
+    new(visualizerTypeName: string, visualizerObjectSourceTypeName: string): DebuggerVisualizerAttribute;
+    new(visualizerTypeName: string, visualizerObjectSource: Type): DebuggerVisualizerAttribute;
+    new(visualizer: Type): DebuggerVisualizerAttribute;
+    new(visualizer: Type, visualizerObjectSource: Type): DebuggerVisualizerAttribute;
+    new(visualizer: Type, visualizerObjectSourceTypeName: string): DebuggerVisualizerAttribute;
 };
 
 
@@ -896,7 +896,7 @@ export interface DebugProvider$instance {
 
 
 export const DebugProvider: {
-    new(): DebugProvider$instance;
+    new(): DebugProvider;
     FailCore(stackTrace: string, message: string, detailMessage: string, errorSource: string): void;
     WriteCore(message: string): void;
 };
@@ -922,7 +922,7 @@ export interface DefaultTraceListener$instance extends TraceListener$instance {
 
 
 export const DefaultTraceListener: {
-    new(): DefaultTraceListener$instance;
+    new(): DefaultTraceListener;
 };
 
 
@@ -945,12 +945,12 @@ export interface DelimitedListTraceListener$instance extends TextWriterTraceList
 
 
 export const DelimitedListTraceListener: {
-    new(stream: Stream): DelimitedListTraceListener$instance;
-    new(stream: Stream, name: string): DelimitedListTraceListener$instance;
-    new(writer: TextWriter): DelimitedListTraceListener$instance;
-    new(writer: TextWriter, name: string): DelimitedListTraceListener$instance;
-    new(fileName: string): DelimitedListTraceListener$instance;
-    new(fileName: string, name: string): DelimitedListTraceListener$instance;
+    new(stream: Stream): DelimitedListTraceListener;
+    new(stream: Stream, name: string): DelimitedListTraceListener;
+    new(writer: TextWriter): DelimitedListTraceListener;
+    new(writer: TextWriter, name: string): DelimitedListTraceListener;
+    new(fileName: string): DelimitedListTraceListener;
+    new(fileName: string, name: string): DelimitedListTraceListener;
 };
 
 
@@ -979,7 +979,7 @@ export interface DiagnosticListener$instance extends DiagnosticSource {
 
 
 export const DiagnosticListener: {
-    new(name: string): DiagnosticListener$instance;
+    new(name: string): DiagnosticListener;
     readonly AllListeners: IObservable_1<DiagnosticListener>;
 };
 
@@ -1002,7 +1002,7 @@ export interface DiagnosticMethodInfo$instance {
 
 
 export const DiagnosticMethodInfo: {
-    new(): DiagnosticMethodInfo$instance;
+    new(): DiagnosticMethodInfo;
     Create(delegate: Function): DiagnosticMethodInfo;
     Create(frame: StackFrame): DiagnosticMethodInfo;
 };
@@ -1057,7 +1057,7 @@ export interface EventTypeFilter$instance extends TraceFilter {
 
 
 export const EventTypeFilter: {
-    new(level: SourceLevels): EventTypeFilter$instance;
+    new(level: SourceLevels): EventTypeFilter;
 };
 
 
@@ -1096,7 +1096,7 @@ export interface FileVersionInfo$instance {
 
 
 export const FileVersionInfo: {
-    new(): FileVersionInfo$instance;
+    new(): FileVersionInfo;
     GetVersionInfo(fileName: string): FileVersionInfo;
 };
 
@@ -1109,7 +1109,7 @@ export interface InitializingSwitchEventArgs$instance extends EventArgs {
 
 
 export const InitializingSwitchEventArgs: {
-    new(switch_: Switch): InitializingSwitchEventArgs$instance;
+    new(switch_: Switch): InitializingSwitchEventArgs;
 };
 
 
@@ -1122,7 +1122,7 @@ export interface InitializingTraceSourceEventArgs$instance extends EventArgs {
 
 
 export const InitializingTraceSourceEventArgs: {
-    new(traceSource: TraceSource): InitializingTraceSourceEventArgs$instance;
+    new(traceSource: TraceSource): InitializingTraceSourceEventArgs;
 };
 
 
@@ -1134,7 +1134,7 @@ export interface MonitoringDescriptionAttribute$instance extends DescriptionAttr
 
 
 export const MonitoringDescriptionAttribute: {
-    new(description: string): MonitoringDescriptionAttribute$instance;
+    new(description: string): MonitoringDescriptionAttribute;
 };
 
 
@@ -1214,7 +1214,7 @@ export interface Process$instance extends Component {
 
 
 export const Process: {
-    new(): Process$instance;
+    new(): Process;
     EnterDebugMode(): void;
     GetCurrentProcess(): Process;
     GetProcessById(processId: int, machineName: string): Process;
@@ -1256,7 +1256,7 @@ export interface ProcessModule$instance extends Component {
 
 
 export const ProcessModule: {
-    new(): ProcessModule$instance;
+    new(): ProcessModule;
 };
 
 
@@ -1280,7 +1280,7 @@ export interface ProcessModuleCollection$instance extends ReadOnlyCollectionBase
 
 
 export const ProcessModuleCollection: {
-    new(processModules: ProcessModule[]): ProcessModuleCollection$instance;
+    new(processModules: ProcessModule[]): ProcessModuleCollection;
 };
 
 
@@ -1325,10 +1325,10 @@ export interface ProcessStartInfo$instance {
 
 
 export const ProcessStartInfo: {
-    new(): ProcessStartInfo$instance;
-    new(fileName: string): ProcessStartInfo$instance;
-    new(fileName: string, arguments: string): ProcessStartInfo$instance;
-    new(fileName: string, arguments: IEnumerable_1<System_Internal.String>): ProcessStartInfo$instance;
+    new(): ProcessStartInfo;
+    new(fileName: string): ProcessStartInfo;
+    new(fileName: string, arguments: string): ProcessStartInfo;
+    new(fileName: string, arguments: IEnumerable_1<System_Internal.String>): ProcessStartInfo;
 };
 
 
@@ -1355,7 +1355,7 @@ export interface ProcessThread$instance extends Component {
 
 
 export const ProcessThread: {
-    new(): ProcessThread$instance;
+    new(): ProcessThread;
 };
 
 
@@ -1382,7 +1382,7 @@ export interface ProcessThreadCollection$instance extends ReadOnlyCollectionBase
 
 
 export const ProcessThreadCollection: {
-    new(processThreads: ProcessThread[]): ProcessThreadCollection$instance;
+    new(processThreads: ProcessThread[]): ProcessThreadCollection;
 };
 
 
@@ -1403,7 +1403,7 @@ export interface SourceFilter$instance extends TraceFilter {
 
 
 export const SourceFilter: {
-    new(source: string): SourceFilter$instance;
+    new(source: string): SourceFilter;
 };
 
 
@@ -1416,8 +1416,8 @@ export interface SourceSwitch$instance extends Switch {
 
 
 export const SourceSwitch: {
-    new(name: string): SourceSwitch$instance;
-    new(displayName: string, defaultSwitchValue: string): SourceSwitch$instance;
+    new(name: string): SourceSwitch;
+    new(displayName: string, defaultSwitchValue: string): SourceSwitch;
 };
 
 
@@ -1435,12 +1435,12 @@ export interface StackFrame$instance {
 
 
 export const StackFrame: {
-    new(): StackFrame$instance;
-    new(needFileInfo: boolean): StackFrame$instance;
-    new(skipFrames: int): StackFrame$instance;
-    new(skipFrames: int, needFileInfo: boolean): StackFrame$instance;
-    new(fileName: string, lineNumber: int): StackFrame$instance;
-    new(fileName: string, lineNumber: int, colNumber: int): StackFrame$instance;
+    new(): StackFrame;
+    new(needFileInfo: boolean): StackFrame;
+    new(skipFrames: int): StackFrame;
+    new(skipFrames: int, needFileInfo: boolean): StackFrame;
+    new(fileName: string, lineNumber: int): StackFrame;
+    new(fileName: string, lineNumber: int, colNumber: int): StackFrame;
     readonly OFFSET_UNKNOWN: int;
 };
 
@@ -1456,16 +1456,16 @@ export interface StackTrace$instance {
 
 
 export const StackTrace: {
-    new(): StackTrace$instance;
-    new(fNeedFileInfo: boolean): StackTrace$instance;
-    new(skipFrames: int): StackTrace$instance;
-    new(skipFrames: int, fNeedFileInfo: boolean): StackTrace$instance;
-    new(e: Exception): StackTrace$instance;
-    new(e: Exception, fNeedFileInfo: boolean): StackTrace$instance;
-    new(e: Exception, skipFrames: int): StackTrace$instance;
-    new(e: Exception, skipFrames: int, fNeedFileInfo: boolean): StackTrace$instance;
-    new(frame: StackFrame): StackTrace$instance;
-    new(frames: IEnumerable_1<StackFrame>): StackTrace$instance;
+    new(): StackTrace;
+    new(fNeedFileInfo: boolean): StackTrace;
+    new(skipFrames: int): StackTrace;
+    new(skipFrames: int, fNeedFileInfo: boolean): StackTrace;
+    new(e: Exception): StackTrace;
+    new(e: Exception, fNeedFileInfo: boolean): StackTrace;
+    new(e: Exception, skipFrames: int): StackTrace;
+    new(e: Exception, skipFrames: int, fNeedFileInfo: boolean): StackTrace;
+    new(frame: StackFrame): StackTrace;
+    new(frames: IEnumerable_1<StackFrame>): StackTrace;
     readonly METHODS_TO_SKIP: int;
 };
 
@@ -1477,7 +1477,7 @@ export interface StackTraceHiddenAttribute$instance extends Attribute {
 
 
 export const StackTraceHiddenAttribute: {
-    new(): StackTraceHiddenAttribute$instance;
+    new(): StackTraceHiddenAttribute;
 };
 
 
@@ -1497,7 +1497,7 @@ export interface Stopwatch$instance {
 
 
 export const Stopwatch: {
-    new(): Stopwatch$instance;
+    new(): Stopwatch;
     readonly Frequency: long;
     readonly IsHighResolution: boolean;
     GetElapsedTime(startingTimestamp: long, endingTimestamp: long): TimeSpan;
@@ -1533,7 +1533,7 @@ export interface SwitchAttribute$instance extends Attribute {
 
 
 export const SwitchAttribute: {
-    new(switchName: string, switchType: Type): SwitchAttribute$instance;
+    new(switchName: string, switchType: Type): SwitchAttribute;
     GetAll(assembly: Assembly): SwitchAttribute[];
 };
 
@@ -1546,7 +1546,7 @@ export interface SwitchLevelAttribute$instance extends Attribute {
 
 
 export const SwitchLevelAttribute: {
-    new(switchLevelType: Type): SwitchLevelAttribute$instance;
+    new(switchLevelType: Type): SwitchLevelAttribute;
 };
 
 
@@ -1569,13 +1569,13 @@ export interface TextWriterTraceListener$instance extends TraceListener$instance
 
 
 export const TextWriterTraceListener: {
-    new(): TextWriterTraceListener$instance;
-    new(stream: Stream): TextWriterTraceListener$instance;
-    new(stream: Stream, name: string): TextWriterTraceListener$instance;
-    new(writer: TextWriter): TextWriterTraceListener$instance;
-    new(writer: TextWriter, name: string): TextWriterTraceListener$instance;
-    new(fileName: string): TextWriterTraceListener$instance;
-    new(fileName: string, name: string): TextWriterTraceListener$instance;
+    new(): TextWriterTraceListener;
+    new(stream: Stream): TextWriterTraceListener;
+    new(stream: Stream, name: string): TextWriterTraceListener;
+    new(writer: TextWriter): TextWriterTraceListener;
+    new(writer: TextWriter, name: string): TextWriterTraceListener;
+    new(fileName: string): TextWriterTraceListener;
+    new(fileName: string, name: string): TextWriterTraceListener;
 };
 
 
@@ -1591,7 +1591,7 @@ export interface Trace$instance {
 
 
 export const Trace: {
-    new(): Trace$instance;
+    new(): Trace;
     readonly CorrelationManager: CorrelationManager;
     readonly Listeners: TraceListenerCollection;
     AutoFlush: boolean;
@@ -1646,7 +1646,7 @@ export interface TraceEventCache$instance {
 
 
 export const TraceEventCache: {
-    new(): TraceEventCache$instance;
+    new(): TraceEventCache;
 };
 
 
@@ -1727,7 +1727,7 @@ export interface TraceListenerCollection$instance {
 
 
 export const TraceListenerCollection: {
-    new(): TraceListenerCollection$instance;
+    new(): TraceListenerCollection;
 };
 
 
@@ -1760,8 +1760,8 @@ export interface TraceSource$instance {
 
 
 export const TraceSource: {
-    new(name: string): TraceSource$instance;
-    new(name: string, defaultLevel: SourceLevels): TraceSource$instance;
+    new(name: string): TraceSource;
+    new(name: string, defaultLevel: SourceLevels): TraceSource;
 };
 
 
@@ -1777,8 +1777,8 @@ export interface TraceSwitch$instance extends Switch {
 
 
 export const TraceSwitch: {
-    new(displayName: string, description: string): TraceSwitch$instance;
-    new(displayName: string, description: string, defaultSwitchValue: string): TraceSwitch$instance;
+    new(displayName: string, description: string): TraceSwitch;
+    new(displayName: string, description: string, defaultSwitchValue: string): TraceSwitch;
 };
 
 
@@ -1790,9 +1790,9 @@ export interface UnreachableException$instance extends Exception {
 
 
 export const UnreachableException: {
-    new(): UnreachableException$instance;
-    new(message: string): UnreachableException$instance;
-    new(message: string, innerException: Exception): UnreachableException$instance;
+    new(): UnreachableException;
+    new(message: string): UnreachableException;
+    new(message: string, innerException: Exception): UnreachableException;
 };
 
 
@@ -1826,12 +1826,12 @@ export interface XmlWriterTraceListener$instance extends TextWriterTraceListener
 
 
 export const XmlWriterTraceListener: {
-    new(stream: Stream): XmlWriterTraceListener$instance;
-    new(stream: Stream, name: string): XmlWriterTraceListener$instance;
-    new(writer: TextWriter): XmlWriterTraceListener$instance;
-    new(writer: TextWriter, name: string): XmlWriterTraceListener$instance;
-    new(filename: string): XmlWriterTraceListener$instance;
-    new(filename: string, name: string): XmlWriterTraceListener$instance;
+    new(stream: Stream): XmlWriterTraceListener;
+    new(stream: Stream, name: string): XmlWriterTraceListener;
+    new(writer: TextWriter): XmlWriterTraceListener;
+    new(writer: TextWriter, name: string): XmlWriterTraceListener;
+    new(filename: string): XmlWriterTraceListener;
+    new(filename: string, name: string): XmlWriterTraceListener;
 };
 
 

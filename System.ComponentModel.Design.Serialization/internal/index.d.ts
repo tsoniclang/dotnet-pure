@@ -143,7 +143,7 @@ export interface MemberRelationship$instance {
 
 
 export const MemberRelationship: {
-    new(owner: unknown, member: MemberDescriptor): MemberRelationship$instance;
+    new(owner: unknown, member: MemberDescriptor): MemberRelationship;
     readonly Empty: MemberRelationship;
 };
 
@@ -190,7 +190,7 @@ export interface ContextStack$instance {
 
 
 export const ContextStack: {
-    new(): ContextStack$instance;
+    new(): ContextStack;
 };
 
 
@@ -202,8 +202,8 @@ export interface DefaultSerializationProviderAttribute$instance extends Attribut
 
 
 export const DefaultSerializationProviderAttribute: {
-    new(providerType: Type): DefaultSerializationProviderAttribute$instance;
-    new(providerTypeName: string): DefaultSerializationProviderAttribute$instance;
+    new(providerType: Type): DefaultSerializationProviderAttribute;
+    new(providerTypeName: string): DefaultSerializationProviderAttribute;
 };
 
 
@@ -231,9 +231,9 @@ export interface DesignerSerializerAttribute$instance extends Attribute {
 
 
 export const DesignerSerializerAttribute: {
-    new(serializerType: Type, baseSerializerType: Type): DesignerSerializerAttribute$instance;
-    new(serializerTypeName: string, baseSerializerType: Type): DesignerSerializerAttribute$instance;
-    new(serializerTypeName: string, baseSerializerTypeName: string): DesignerSerializerAttribute$instance;
+    new(serializerType: Type, baseSerializerType: Type): DesignerSerializerAttribute;
+    new(serializerTypeName: string, baseSerializerType: Type): DesignerSerializerAttribute;
+    new(serializerTypeName: string, baseSerializerTypeName: string): DesignerSerializerAttribute;
 };
 
 
@@ -248,8 +248,8 @@ export interface InstanceDescriptor$instance {
 
 
 export const InstanceDescriptor: {
-    new(member: MemberInfo, arguments: ICollection): InstanceDescriptor$instance;
-    new(member: MemberInfo, arguments: ICollection, isComplete: boolean): InstanceDescriptor$instance;
+    new(member: MemberInfo, arguments: ICollection): InstanceDescriptor;
+    new(member: MemberInfo, arguments: ICollection, isComplete: boolean): InstanceDescriptor;
 };
 
 
@@ -277,7 +277,7 @@ export interface ResolveNameEventArgs$instance extends EventArgs {
 
 
 export const ResolveNameEventArgs: {
-    new(name: string): ResolveNameEventArgs$instance;
+    new(name: string): ResolveNameEventArgs;
 };
 
 
@@ -292,9 +292,9 @@ export interface RootDesignerSerializerAttribute$instance extends Attribute {
 
 
 export const RootDesignerSerializerAttribute: {
-    new(serializerType: Type, baseSerializerType: Type, reloadable: boolean): RootDesignerSerializerAttribute$instance;
-    new(serializerTypeName: string, baseSerializerType: Type, reloadable: boolean): RootDesignerSerializerAttribute$instance;
-    new(serializerTypeName: string, baseSerializerTypeName: string, reloadable: boolean): RootDesignerSerializerAttribute$instance;
+    new(serializerType: Type, baseSerializerType: Type, reloadable: boolean): RootDesignerSerializerAttribute;
+    new(serializerTypeName: string, baseSerializerType: Type, reloadable: boolean): RootDesignerSerializerAttribute;
+    new(serializerTypeName: string, baseSerializerTypeName: string, reloadable: boolean): RootDesignerSerializerAttribute;
 };
 
 

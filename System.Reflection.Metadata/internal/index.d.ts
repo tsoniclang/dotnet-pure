@@ -575,7 +575,7 @@ export interface ArrayShape$instance {
 
 
 export const ArrayShape: {
-    new(rank: int, sizes: ImmutableArray_1<System_Internal.Int32>, lowerBounds: ImmutableArray_1<System_Internal.Int32>): ArrayShape$instance;
+    new(rank: int, sizes: ImmutableArray_1<System_Internal.Int32>, lowerBounds: ImmutableArray_1<System_Internal.Int32>): ArrayShape;
 };
 
 
@@ -596,7 +596,7 @@ export interface AssemblyDefinition$instance {
 
 
 export const AssemblyDefinition: {
-    new(): AssemblyDefinition$instance;
+    new(): AssemblyDefinition;
 };
 
 
@@ -611,7 +611,7 @@ export interface AssemblyDefinitionHandle$instance {
 
 
 export const AssemblyDefinitionHandle: {
-    new(): AssemblyDefinitionHandle$instance;
+    new(): AssemblyDefinitionHandle;
 };
 
 
@@ -634,7 +634,7 @@ export interface AssemblyFile$instance {
 
 
 export const AssemblyFile: {
-    new(): AssemblyFile$instance;
+    new(): AssemblyFile;
 };
 
 
@@ -649,7 +649,7 @@ export interface AssemblyFileHandle$instance {
 
 
 export const AssemblyFileHandle: {
-    new(): AssemblyFileHandle$instance;
+    new(): AssemblyFileHandle;
 };
 
 
@@ -670,7 +670,7 @@ export interface AssemblyFileHandleCollection$instance {
 
 
 export const AssemblyFileHandleCollection: {
-    new(): AssemblyFileHandleCollection$instance;
+    new(): AssemblyFileHandleCollection;
 };
 
 
@@ -691,7 +691,7 @@ export interface AssemblyFileHandleCollection_Enumerator$instance {
 
 
 export const AssemblyFileHandleCollection_Enumerator: {
-    new(): AssemblyFileHandleCollection_Enumerator$instance;
+    new(): AssemblyFileHandleCollection_Enumerator;
 };
 
 
@@ -717,7 +717,7 @@ export interface AssemblyReference$instance {
 
 
 export const AssemblyReference: {
-    new(): AssemblyReference$instance;
+    new(): AssemblyReference;
 };
 
 
@@ -732,7 +732,7 @@ export interface AssemblyReferenceHandle$instance {
 
 
 export const AssemblyReferenceHandle: {
-    new(): AssemblyReferenceHandle$instance;
+    new(): AssemblyReferenceHandle;
 };
 
 
@@ -753,7 +753,7 @@ export interface AssemblyReferenceHandleCollection$instance {
 
 
 export const AssemblyReferenceHandleCollection: {
-    new(): AssemblyReferenceHandleCollection$instance;
+    new(): AssemblyReferenceHandleCollection;
 };
 
 
@@ -774,7 +774,7 @@ export interface AssemblyReferenceHandleCollection_Enumerator$instance {
 
 
 export const AssemblyReferenceHandleCollection_Enumerator: {
-    new(): AssemblyReferenceHandleCollection_Enumerator$instance;
+    new(): AssemblyReferenceHandleCollection_Enumerator;
 };
 
 
@@ -794,7 +794,7 @@ export interface Blob$instance {
 
 
 export const Blob: {
-    new(): Blob$instance;
+    new(): Blob;
 };
 
 
@@ -809,7 +809,7 @@ export interface BlobBuilder_Blobs$instance {
 
 
 export const BlobBuilder_Blobs: {
-    new(): BlobBuilder_Blobs$instance;
+    new(): BlobBuilder_Blobs;
 };
 
 
@@ -835,9 +835,9 @@ export interface BlobContentId$instance {
 
 
 export const BlobContentId: {
-    new(guid: Guid, stamp: uint): BlobContentId$instance;
-    new(id: ImmutableArray_1<System_Internal.Byte>): BlobContentId$instance;
-    new(id: byte[]): BlobContentId$instance;
+    new(guid: Guid, stamp: uint): BlobContentId;
+    new(id: ImmutableArray_1<System_Internal.Byte>): BlobContentId;
+    new(id: byte[]): BlobContentId;
     FromHash(hashCode: byte[]): BlobContentId;
     FromHash(hashCode: ImmutableArray_1<System_Internal.Byte>): BlobContentId;
     GetTimeBasedProvider(): Func_2<IEnumerable_1<Blob>, BlobContentId>;
@@ -863,7 +863,7 @@ export interface BlobHandle$instance {
 
 
 export const BlobHandle: {
-    new(): BlobHandle$instance;
+    new(): BlobHandle;
 };
 
 
@@ -920,7 +920,7 @@ export interface BlobReader$instance {
 
 
 export const BlobReader: {
-    new(buffer: ptr<byte>, length: int): BlobReader$instance;
+    new(buffer: ptr<byte>, length: int): BlobReader;
 };
 
 
@@ -978,10 +978,10 @@ export interface BlobWriter$instance {
 
 
 export const BlobWriter: {
-    new(size: int): BlobWriter$instance;
-    new(buffer: byte[]): BlobWriter$instance;
-    new(blob: Blob): BlobWriter$instance;
-    new(buffer: byte[], start: int, count: int): BlobWriter$instance;
+    new(size: int): BlobWriter;
+    new(buffer: byte[]): BlobWriter;
+    new(blob: Blob): BlobWriter;
+    new(buffer: byte[], start: int, count: int): BlobWriter;
 };
 
 
@@ -995,7 +995,7 @@ export interface Constant$instance {
 
 
 export const Constant: {
-    new(): Constant$instance;
+    new(): Constant;
 };
 
 
@@ -1010,7 +1010,7 @@ export interface ConstantHandle$instance {
 
 
 export const ConstantHandle: {
-    new(): ConstantHandle$instance;
+    new(): ConstantHandle;
 };
 
 
@@ -1033,7 +1033,7 @@ export interface CustomAttribute$instance {
 
 
 export const CustomAttribute: {
-    new(): CustomAttribute$instance;
+    new(): CustomAttribute;
 };
 
 
@@ -1048,7 +1048,7 @@ export interface CustomAttributeHandle$instance {
 
 
 export const CustomAttributeHandle: {
-    new(): CustomAttributeHandle$instance;
+    new(): CustomAttributeHandle;
 };
 
 
@@ -1069,7 +1069,7 @@ export interface CustomAttributeHandleCollection$instance {
 
 
 export const CustomAttributeHandleCollection: {
-    new(): CustomAttributeHandleCollection$instance;
+    new(): CustomAttributeHandleCollection;
 };
 
 
@@ -1090,7 +1090,7 @@ export interface CustomAttributeHandleCollection_Enumerator$instance {
 
 
 export const CustomAttributeHandleCollection_Enumerator: {
-    new(): CustomAttributeHandleCollection_Enumerator$instance;
+    new(): CustomAttributeHandleCollection_Enumerator;
 };
 
 
@@ -1111,7 +1111,7 @@ export interface CustomAttributeNamedArgument_1$instance<TType> {
 
 
 export const CustomAttributeNamedArgument_1: {
-    new<TType>(name: string, kind: CustomAttributeNamedArgumentKind, type_: TType, value: unknown): CustomAttributeNamedArgument_1$instance<TType>;
+    new<TType>(name: string, kind: CustomAttributeNamedArgumentKind, type_: TType, value: unknown): CustomAttributeNamedArgument_1<TType>;
 };
 
 
@@ -1124,7 +1124,7 @@ export interface CustomAttributeTypedArgument_1$instance<TType> {
 
 
 export const CustomAttributeTypedArgument_1: {
-    new<TType>(type_: TType, value: unknown): CustomAttributeTypedArgument_1$instance<TType>;
+    new<TType>(type_: TType, value: unknown): CustomAttributeTypedArgument_1<TType>;
 };
 
 
@@ -1137,7 +1137,7 @@ export interface CustomAttributeValue_1$instance<TType> {
 
 
 export const CustomAttributeValue_1: {
-    new<TType>(fixedArguments: ImmutableArray_1<CustomAttributeTypedArgument_1<TType>>, namedArguments: ImmutableArray_1<CustomAttributeNamedArgument_1<TType>>): CustomAttributeValue_1$instance<TType>;
+    new<TType>(fixedArguments: ImmutableArray_1<CustomAttributeTypedArgument_1<TType>>, namedArguments: ImmutableArray_1<CustomAttributeNamedArgument_1<TType>>): CustomAttributeValue_1<TType>;
 };
 
 
@@ -1151,7 +1151,7 @@ export interface CustomDebugInformation$instance {
 
 
 export const CustomDebugInformation: {
-    new(): CustomDebugInformation$instance;
+    new(): CustomDebugInformation;
 };
 
 
@@ -1166,7 +1166,7 @@ export interface CustomDebugInformationHandle$instance {
 
 
 export const CustomDebugInformationHandle: {
-    new(): CustomDebugInformationHandle$instance;
+    new(): CustomDebugInformationHandle;
 };
 
 
@@ -1187,7 +1187,7 @@ export interface CustomDebugInformationHandleCollection$instance {
 
 
 export const CustomDebugInformationHandleCollection: {
-    new(): CustomDebugInformationHandleCollection$instance;
+    new(): CustomDebugInformationHandleCollection;
 };
 
 
@@ -1208,7 +1208,7 @@ export interface CustomDebugInformationHandleCollection_Enumerator$instance {
 
 
 export const CustomDebugInformationHandleCollection_Enumerator: {
-    new(): CustomDebugInformationHandleCollection_Enumerator$instance;
+    new(): CustomDebugInformationHandleCollection_Enumerator;
 };
 
 
@@ -1228,7 +1228,7 @@ export interface DeclarativeSecurityAttribute$instance {
 
 
 export const DeclarativeSecurityAttribute: {
-    new(): DeclarativeSecurityAttribute$instance;
+    new(): DeclarativeSecurityAttribute;
 };
 
 
@@ -1243,7 +1243,7 @@ export interface DeclarativeSecurityAttributeHandle$instance {
 
 
 export const DeclarativeSecurityAttributeHandle: {
-    new(): DeclarativeSecurityAttributeHandle$instance;
+    new(): DeclarativeSecurityAttributeHandle;
 };
 
 
@@ -1264,7 +1264,7 @@ export interface DeclarativeSecurityAttributeHandleCollection$instance {
 
 
 export const DeclarativeSecurityAttributeHandleCollection: {
-    new(): DeclarativeSecurityAttributeHandleCollection$instance;
+    new(): DeclarativeSecurityAttributeHandleCollection;
 };
 
 
@@ -1285,7 +1285,7 @@ export interface DeclarativeSecurityAttributeHandleCollection_Enumerator$instanc
 
 
 export const DeclarativeSecurityAttributeHandleCollection_Enumerator: {
-    new(): DeclarativeSecurityAttributeHandleCollection_Enumerator$instance;
+    new(): DeclarativeSecurityAttributeHandleCollection_Enumerator;
 };
 
 
@@ -1306,7 +1306,7 @@ export interface Document$instance {
 
 
 export const Document: {
-    new(): Document$instance;
+    new(): Document;
 };
 
 
@@ -1321,7 +1321,7 @@ export interface DocumentHandle$instance {
 
 
 export const DocumentHandle: {
-    new(): DocumentHandle$instance;
+    new(): DocumentHandle;
 };
 
 
@@ -1342,7 +1342,7 @@ export interface DocumentHandleCollection$instance {
 
 
 export const DocumentHandleCollection: {
-    new(): DocumentHandleCollection$instance;
+    new(): DocumentHandleCollection;
 };
 
 
@@ -1363,7 +1363,7 @@ export interface DocumentHandleCollection_Enumerator$instance {
 
 
 export const DocumentHandleCollection_Enumerator: {
-    new(): DocumentHandleCollection_Enumerator$instance;
+    new(): DocumentHandleCollection_Enumerator;
 };
 
 
@@ -1384,7 +1384,7 @@ export interface DocumentNameBlobHandle$instance {
 
 
 export const DocumentNameBlobHandle: {
-    new(): DocumentNameBlobHandle$instance;
+    new(): DocumentNameBlobHandle;
 };
 
 
@@ -1408,7 +1408,7 @@ export interface EntityHandle$instance {
 
 
 export const EntityHandle: {
-    new(): EntityHandle$instance;
+    new(): EntityHandle;
     readonly ModuleDefinition: ModuleDefinitionHandle;
     readonly AssemblyDefinition: AssemblyDefinitionHandle;
 };
@@ -1433,7 +1433,7 @@ export interface EventAccessors$instance {
 
 
 export const EventAccessors: {
-    new(): EventAccessors$instance;
+    new(): EventAccessors;
 };
 
 
@@ -1450,7 +1450,7 @@ export interface EventDefinition$instance {
 
 
 export const EventDefinition: {
-    new(): EventDefinition$instance;
+    new(): EventDefinition;
 };
 
 
@@ -1465,7 +1465,7 @@ export interface EventDefinitionHandle$instance {
 
 
 export const EventDefinitionHandle: {
-    new(): EventDefinitionHandle$instance;
+    new(): EventDefinitionHandle;
 };
 
 
@@ -1486,7 +1486,7 @@ export interface EventDefinitionHandleCollection$instance {
 
 
 export const EventDefinitionHandleCollection: {
-    new(): EventDefinitionHandleCollection$instance;
+    new(): EventDefinitionHandleCollection;
 };
 
 
@@ -1507,7 +1507,7 @@ export interface EventDefinitionHandleCollection_Enumerator$instance {
 
 
 export const EventDefinitionHandleCollection_Enumerator: {
-    new(): EventDefinitionHandleCollection_Enumerator$instance;
+    new(): EventDefinitionHandleCollection_Enumerator;
 };
 
 
@@ -1531,7 +1531,7 @@ export interface ExceptionRegion$instance {
 
 
 export const ExceptionRegion: {
-    new(): ExceptionRegion$instance;
+    new(): ExceptionRegion;
 };
 
 
@@ -1549,7 +1549,7 @@ export interface ExportedType$instance {
 
 
 export const ExportedType: {
-    new(): ExportedType$instance;
+    new(): ExportedType;
 };
 
 
@@ -1564,7 +1564,7 @@ export interface ExportedTypeHandle$instance {
 
 
 export const ExportedTypeHandle: {
-    new(): ExportedTypeHandle$instance;
+    new(): ExportedTypeHandle;
 };
 
 
@@ -1585,7 +1585,7 @@ export interface ExportedTypeHandleCollection$instance {
 
 
 export const ExportedTypeHandleCollection: {
-    new(): ExportedTypeHandleCollection$instance;
+    new(): ExportedTypeHandleCollection;
 };
 
 
@@ -1606,7 +1606,7 @@ export interface ExportedTypeHandleCollection_Enumerator$instance {
 
 
 export const ExportedTypeHandleCollection_Enumerator: {
-    new(): ExportedTypeHandleCollection_Enumerator$instance;
+    new(): ExportedTypeHandleCollection_Enumerator;
 };
 
 
@@ -1633,7 +1633,7 @@ export interface FieldDefinition$instance {
 
 
 export const FieldDefinition: {
-    new(): FieldDefinition$instance;
+    new(): FieldDefinition;
 };
 
 
@@ -1648,7 +1648,7 @@ export interface FieldDefinitionHandle$instance {
 
 
 export const FieldDefinitionHandle: {
-    new(): FieldDefinitionHandle$instance;
+    new(): FieldDefinitionHandle;
 };
 
 
@@ -1669,7 +1669,7 @@ export interface FieldDefinitionHandleCollection$instance {
 
 
 export const FieldDefinitionHandleCollection: {
-    new(): FieldDefinitionHandleCollection$instance;
+    new(): FieldDefinitionHandleCollection;
 };
 
 
@@ -1690,7 +1690,7 @@ export interface FieldDefinitionHandleCollection_Enumerator$instance {
 
 
 export const FieldDefinitionHandleCollection_Enumerator: {
-    new(): FieldDefinitionHandleCollection_Enumerator$instance;
+    new(): FieldDefinitionHandleCollection_Enumerator;
 };
 
 
@@ -1713,7 +1713,7 @@ export interface GenericParameter$instance {
 
 
 export const GenericParameter: {
-    new(): GenericParameter$instance;
+    new(): GenericParameter;
 };
 
 
@@ -1727,7 +1727,7 @@ export interface GenericParameterConstraint$instance {
 
 
 export const GenericParameterConstraint: {
-    new(): GenericParameterConstraint$instance;
+    new(): GenericParameterConstraint;
 };
 
 
@@ -1742,7 +1742,7 @@ export interface GenericParameterConstraintHandle$instance {
 
 
 export const GenericParameterConstraintHandle: {
-    new(): GenericParameterConstraintHandle$instance;
+    new(): GenericParameterConstraintHandle;
 };
 
 
@@ -1764,7 +1764,7 @@ export interface GenericParameterConstraintHandleCollection$instance {
 
 
 export const GenericParameterConstraintHandleCollection: {
-    new(): GenericParameterConstraintHandleCollection$instance;
+    new(): GenericParameterConstraintHandleCollection;
 };
 
 
@@ -1785,7 +1785,7 @@ export interface GenericParameterConstraintHandleCollection_Enumerator$instance 
 
 
 export const GenericParameterConstraintHandleCollection_Enumerator: {
-    new(): GenericParameterConstraintHandleCollection_Enumerator$instance;
+    new(): GenericParameterConstraintHandleCollection_Enumerator;
 };
 
 
@@ -1806,7 +1806,7 @@ export interface GenericParameterHandle$instance {
 
 
 export const GenericParameterHandle: {
-    new(): GenericParameterHandle$instance;
+    new(): GenericParameterHandle;
 };
 
 
@@ -1828,7 +1828,7 @@ export interface GenericParameterHandleCollection$instance {
 
 
 export const GenericParameterHandleCollection: {
-    new(): GenericParameterHandleCollection$instance;
+    new(): GenericParameterHandleCollection;
 };
 
 
@@ -1849,7 +1849,7 @@ export interface GenericParameterHandleCollection_Enumerator$instance {
 
 
 export const GenericParameterHandleCollection_Enumerator: {
-    new(): GenericParameterHandleCollection_Enumerator$instance;
+    new(): GenericParameterHandleCollection_Enumerator;
 };
 
 
@@ -1870,7 +1870,7 @@ export interface GuidHandle$instance {
 
 
 export const GuidHandle: {
-    new(): GuidHandle$instance;
+    new(): GuidHandle;
 };
 
 
@@ -1894,7 +1894,7 @@ export interface Handle$instance {
 
 
 export const Handle: {
-    new(): Handle$instance;
+    new(): Handle;
     readonly ModuleDefinition: ModuleDefinitionHandle;
     readonly AssemblyDefinition: AssemblyDefinitionHandle;
 };
@@ -1920,7 +1920,7 @@ export interface ImportDefinition$instance {
 
 
 export const ImportDefinition: {
-    new(): ImportDefinition$instance;
+    new(): ImportDefinition;
 };
 
 
@@ -1932,7 +1932,7 @@ export interface ImportDefinitionCollection$instance {
 
 
 export const ImportDefinitionCollection: {
-    new(): ImportDefinitionCollection$instance;
+    new(): ImportDefinitionCollection;
 };
 
 
@@ -1952,7 +1952,7 @@ export interface ImportDefinitionCollection_Enumerator$instance {
 
 
 export const ImportDefinitionCollection_Enumerator: {
-    new(): ImportDefinitionCollection_Enumerator$instance;
+    new(): ImportDefinitionCollection_Enumerator;
 };
 
 
@@ -1973,7 +1973,7 @@ export interface ImportScope$instance {
 
 
 export const ImportScope: {
-    new(): ImportScope$instance;
+    new(): ImportScope;
 };
 
 
@@ -1986,7 +1986,7 @@ export interface ImportScopeCollection$instance {
 
 
 export const ImportScopeCollection: {
-    new(): ImportScopeCollection$instance;
+    new(): ImportScopeCollection;
 };
 
 
@@ -2007,7 +2007,7 @@ export interface ImportScopeCollection_Enumerator$instance {
 
 
 export const ImportScopeCollection_Enumerator: {
-    new(): ImportScopeCollection_Enumerator$instance;
+    new(): ImportScopeCollection_Enumerator;
 };
 
 
@@ -2028,7 +2028,7 @@ export interface ImportScopeHandle$instance {
 
 
 export const ImportScopeHandle: {
-    new(): ImportScopeHandle$instance;
+    new(): ImportScopeHandle;
 };
 
 
@@ -2049,7 +2049,7 @@ export interface InterfaceImplementation$instance {
 
 
 export const InterfaceImplementation: {
-    new(): InterfaceImplementation$instance;
+    new(): InterfaceImplementation;
 };
 
 
@@ -2064,7 +2064,7 @@ export interface InterfaceImplementationHandle$instance {
 
 
 export const InterfaceImplementationHandle: {
-    new(): InterfaceImplementationHandle$instance;
+    new(): InterfaceImplementationHandle;
 };
 
 
@@ -2085,7 +2085,7 @@ export interface InterfaceImplementationHandleCollection$instance {
 
 
 export const InterfaceImplementationHandleCollection: {
-    new(): InterfaceImplementationHandleCollection$instance;
+    new(): InterfaceImplementationHandleCollection;
 };
 
 
@@ -2106,7 +2106,7 @@ export interface InterfaceImplementationHandleCollection_Enumerator$instance {
 
 
 export const InterfaceImplementationHandleCollection_Enumerator: {
-    new(): InterfaceImplementationHandleCollection_Enumerator$instance;
+    new(): InterfaceImplementationHandleCollection_Enumerator;
 };
 
 
@@ -2125,7 +2125,7 @@ export interface LocalConstant$instance {
 
 
 export const LocalConstant: {
-    new(): LocalConstant$instance;
+    new(): LocalConstant;
 };
 
 
@@ -2140,7 +2140,7 @@ export interface LocalConstantHandle$instance {
 
 
 export const LocalConstantHandle: {
-    new(): LocalConstantHandle$instance;
+    new(): LocalConstantHandle;
 };
 
 
@@ -2161,7 +2161,7 @@ export interface LocalConstantHandleCollection$instance {
 
 
 export const LocalConstantHandleCollection: {
-    new(): LocalConstantHandleCollection$instance;
+    new(): LocalConstantHandleCollection;
 };
 
 
@@ -2182,7 +2182,7 @@ export interface LocalConstantHandleCollection_Enumerator$instance {
 
 
 export const LocalConstantHandleCollection_Enumerator: {
-    new(): LocalConstantHandleCollection_Enumerator$instance;
+    new(): LocalConstantHandleCollection_Enumerator;
 };
 
 
@@ -2207,7 +2207,7 @@ export interface LocalScope$instance {
 
 
 export const LocalScope: {
-    new(): LocalScope$instance;
+    new(): LocalScope;
 };
 
 
@@ -2222,7 +2222,7 @@ export interface LocalScopeHandle$instance {
 
 
 export const LocalScopeHandle: {
-    new(): LocalScopeHandle$instance;
+    new(): LocalScopeHandle;
 };
 
 
@@ -2243,7 +2243,7 @@ export interface LocalScopeHandleCollection$instance {
 
 
 export const LocalScopeHandleCollection: {
-    new(): LocalScopeHandleCollection$instance;
+    new(): LocalScopeHandleCollection;
 };
 
 
@@ -2264,7 +2264,7 @@ export interface LocalScopeHandleCollection_ChildrenEnumerator$instance {
 
 
 export const LocalScopeHandleCollection_ChildrenEnumerator: {
-    new(): LocalScopeHandleCollection_ChildrenEnumerator$instance;
+    new(): LocalScopeHandleCollection_ChildrenEnumerator;
 };
 
 
@@ -2284,7 +2284,7 @@ export interface LocalScopeHandleCollection_Enumerator$instance {
 
 
 export const LocalScopeHandleCollection_Enumerator: {
-    new(): LocalScopeHandleCollection_Enumerator$instance;
+    new(): LocalScopeHandleCollection_Enumerator;
 };
 
 
@@ -2304,7 +2304,7 @@ export interface LocalVariable$instance {
 
 
 export const LocalVariable: {
-    new(): LocalVariable$instance;
+    new(): LocalVariable;
 };
 
 
@@ -2319,7 +2319,7 @@ export interface LocalVariableHandle$instance {
 
 
 export const LocalVariableHandle: {
-    new(): LocalVariableHandle$instance;
+    new(): LocalVariableHandle;
 };
 
 
@@ -2340,7 +2340,7 @@ export interface LocalVariableHandleCollection$instance {
 
 
 export const LocalVariableHandleCollection: {
-    new(): LocalVariableHandleCollection$instance;
+    new(): LocalVariableHandleCollection;
 };
 
 
@@ -2361,7 +2361,7 @@ export interface LocalVariableHandleCollection_Enumerator$instance {
 
 
 export const LocalVariableHandleCollection_Enumerator: {
-    new(): LocalVariableHandleCollection_Enumerator$instance;
+    new(): LocalVariableHandleCollection_Enumerator;
 };
 
 
@@ -2383,7 +2383,7 @@ export interface ManifestResource$instance {
 
 
 export const ManifestResource: {
-    new(): ManifestResource$instance;
+    new(): ManifestResource;
 };
 
 
@@ -2398,7 +2398,7 @@ export interface ManifestResourceHandle$instance {
 
 
 export const ManifestResourceHandle: {
-    new(): ManifestResourceHandle$instance;
+    new(): ManifestResourceHandle;
 };
 
 
@@ -2419,7 +2419,7 @@ export interface ManifestResourceHandleCollection$instance {
 
 
 export const ManifestResourceHandleCollection: {
-    new(): ManifestResourceHandleCollection$instance;
+    new(): ManifestResourceHandleCollection;
 };
 
 
@@ -2440,7 +2440,7 @@ export interface ManifestResourceHandleCollection_Enumerator$instance {
 
 
 export const ManifestResourceHandleCollection_Enumerator: {
-    new(): ManifestResourceHandleCollection_Enumerator$instance;
+    new(): ManifestResourceHandleCollection_Enumerator;
 };
 
 
@@ -2464,7 +2464,7 @@ export interface MemberReference$instance {
 
 
 export const MemberReference: {
-    new(): MemberReference$instance;
+    new(): MemberReference;
 };
 
 
@@ -2479,7 +2479,7 @@ export interface MemberReferenceHandle$instance {
 
 
 export const MemberReferenceHandle: {
-    new(): MemberReferenceHandle$instance;
+    new(): MemberReferenceHandle;
 };
 
 
@@ -2500,7 +2500,7 @@ export interface MemberReferenceHandleCollection$instance {
 
 
 export const MemberReferenceHandleCollection: {
-    new(): MemberReferenceHandleCollection$instance;
+    new(): MemberReferenceHandleCollection;
 };
 
 
@@ -2521,7 +2521,7 @@ export interface MemberReferenceHandleCollection_Enumerator$instance {
 
 
 export const MemberReferenceHandleCollection_Enumerator: {
-    new(): MemberReferenceHandleCollection_Enumerator$instance;
+    new(): MemberReferenceHandleCollection_Enumerator;
 };
 
 
@@ -2546,7 +2546,7 @@ export interface MetadataStringComparer$instance {
 
 
 export const MetadataStringComparer: {
-    new(): MetadataStringComparer$instance;
+    new(): MetadataStringComparer;
 };
 
 
@@ -2562,7 +2562,7 @@ export interface MethodDebugInformation$instance {
 
 
 export const MethodDebugInformation: {
-    new(): MethodDebugInformation$instance;
+    new(): MethodDebugInformation;
 };
 
 
@@ -2578,7 +2578,7 @@ export interface MethodDebugInformationHandle$instance {
 
 
 export const MethodDebugInformationHandle: {
-    new(): MethodDebugInformationHandle$instance;
+    new(): MethodDebugInformationHandle;
 };
 
 
@@ -2599,7 +2599,7 @@ export interface MethodDebugInformationHandleCollection$instance {
 
 
 export const MethodDebugInformationHandleCollection: {
-    new(): MethodDebugInformationHandleCollection$instance;
+    new(): MethodDebugInformationHandleCollection;
 };
 
 
@@ -2620,7 +2620,7 @@ export interface MethodDebugInformationHandleCollection_Enumerator$instance {
 
 
 export const MethodDebugInformationHandleCollection_Enumerator: {
-    new(): MethodDebugInformationHandleCollection_Enumerator$instance;
+    new(): MethodDebugInformationHandleCollection_Enumerator;
 };
 
 
@@ -2649,7 +2649,7 @@ export interface MethodDefinition$instance {
 
 
 export const MethodDefinition: {
-    new(): MethodDefinition$instance;
+    new(): MethodDefinition;
 };
 
 
@@ -2665,7 +2665,7 @@ export interface MethodDefinitionHandle$instance {
 
 
 export const MethodDefinitionHandle: {
-    new(): MethodDefinitionHandle$instance;
+    new(): MethodDefinitionHandle;
 };
 
 
@@ -2686,7 +2686,7 @@ export interface MethodDefinitionHandleCollection$instance {
 
 
 export const MethodDefinitionHandleCollection: {
-    new(): MethodDefinitionHandleCollection$instance;
+    new(): MethodDefinitionHandleCollection;
 };
 
 
@@ -2707,7 +2707,7 @@ export interface MethodDefinitionHandleCollection_Enumerator$instance {
 
 
 export const MethodDefinitionHandleCollection_Enumerator: {
-    new(): MethodDefinitionHandleCollection_Enumerator$instance;
+    new(): MethodDefinitionHandleCollection_Enumerator;
 };
 
 
@@ -2728,7 +2728,7 @@ export interface MethodImplementation$instance {
 
 
 export const MethodImplementation: {
-    new(): MethodImplementation$instance;
+    new(): MethodImplementation;
 };
 
 
@@ -2743,7 +2743,7 @@ export interface MethodImplementationHandle$instance {
 
 
 export const MethodImplementationHandle: {
-    new(): MethodImplementationHandle$instance;
+    new(): MethodImplementationHandle;
 };
 
 
@@ -2764,7 +2764,7 @@ export interface MethodImplementationHandleCollection$instance {
 
 
 export const MethodImplementationHandleCollection: {
-    new(): MethodImplementationHandleCollection$instance;
+    new(): MethodImplementationHandleCollection;
 };
 
 
@@ -2785,7 +2785,7 @@ export interface MethodImplementationHandleCollection_Enumerator$instance {
 
 
 export const MethodImplementationHandleCollection_Enumerator: {
-    new(): MethodImplementationHandleCollection_Enumerator$instance;
+    new(): MethodImplementationHandleCollection_Enumerator;
 };
 
 
@@ -2805,7 +2805,7 @@ export interface MethodImport$instance {
 
 
 export const MethodImport: {
-    new(): MethodImport$instance;
+    new(): MethodImport;
 };
 
 
@@ -2821,7 +2821,7 @@ export interface MethodSignature_1$instance<TType> {
 
 
 export const MethodSignature_1: {
-    new<TType>(header: SignatureHeader, returnType: TType, requiredParameterCount: int, genericParameterCount: int, parameterTypes: ImmutableArray_1<TType>): MethodSignature_1$instance<TType>;
+    new<TType>(header: SignatureHeader, returnType: TType, requiredParameterCount: int, genericParameterCount: int, parameterTypes: ImmutableArray_1<TType>): MethodSignature_1<TType>;
 };
 
 
@@ -2836,7 +2836,7 @@ export interface MethodSpecification$instance {
 
 
 export const MethodSpecification: {
-    new(): MethodSpecification$instance;
+    new(): MethodSpecification;
 };
 
 
@@ -2851,7 +2851,7 @@ export interface MethodSpecificationHandle$instance {
 
 
 export const MethodSpecificationHandle: {
-    new(): MethodSpecificationHandle$instance;
+    new(): MethodSpecificationHandle;
 };
 
 
@@ -2876,7 +2876,7 @@ export interface ModuleDefinition$instance {
 
 
 export const ModuleDefinition: {
-    new(): ModuleDefinition$instance;
+    new(): ModuleDefinition;
 };
 
 
@@ -2891,7 +2891,7 @@ export interface ModuleDefinitionHandle$instance {
 
 
 export const ModuleDefinitionHandle: {
-    new(): ModuleDefinitionHandle$instance;
+    new(): ModuleDefinitionHandle;
 };
 
 
@@ -2912,7 +2912,7 @@ export interface ModuleReference$instance {
 
 
 export const ModuleReference: {
-    new(): ModuleReference$instance;
+    new(): ModuleReference;
 };
 
 
@@ -2927,7 +2927,7 @@ export interface ModuleReferenceHandle$instance {
 
 
 export const ModuleReferenceHandle: {
-    new(): ModuleReferenceHandle$instance;
+    new(): ModuleReferenceHandle;
 };
 
 
@@ -2951,7 +2951,7 @@ export interface NamespaceDefinition$instance {
 
 
 export const NamespaceDefinition: {
-    new(): NamespaceDefinition$instance;
+    new(): NamespaceDefinition;
 };
 
 
@@ -2966,7 +2966,7 @@ export interface NamespaceDefinitionHandle$instance {
 
 
 export const NamespaceDefinitionHandle: {
-    new(): NamespaceDefinitionHandle$instance;
+    new(): NamespaceDefinitionHandle;
 };
 
 
@@ -2991,7 +2991,7 @@ export interface Parameter$instance {
 
 
 export const Parameter: {
-    new(): Parameter$instance;
+    new(): Parameter;
 };
 
 
@@ -3006,7 +3006,7 @@ export interface ParameterHandle$instance {
 
 
 export const ParameterHandle: {
-    new(): ParameterHandle$instance;
+    new(): ParameterHandle;
 };
 
 
@@ -3027,7 +3027,7 @@ export interface ParameterHandleCollection$instance {
 
 
 export const ParameterHandleCollection: {
-    new(): ParameterHandleCollection$instance;
+    new(): ParameterHandleCollection;
 };
 
 
@@ -3048,7 +3048,7 @@ export interface ParameterHandleCollection_Enumerator$instance {
 
 
 export const ParameterHandleCollection_Enumerator: {
-    new(): ParameterHandleCollection_Enumerator$instance;
+    new(): ParameterHandleCollection_Enumerator;
 };
 
 
@@ -3068,7 +3068,7 @@ export interface PropertyAccessors$instance {
 
 
 export const PropertyAccessors: {
-    new(): PropertyAccessors$instance;
+    new(): PropertyAccessors;
 };
 
 
@@ -3087,7 +3087,7 @@ export interface PropertyDefinition$instance {
 
 
 export const PropertyDefinition: {
-    new(): PropertyDefinition$instance;
+    new(): PropertyDefinition;
 };
 
 
@@ -3102,7 +3102,7 @@ export interface PropertyDefinitionHandle$instance {
 
 
 export const PropertyDefinitionHandle: {
-    new(): PropertyDefinitionHandle$instance;
+    new(): PropertyDefinitionHandle;
 };
 
 
@@ -3123,7 +3123,7 @@ export interface PropertyDefinitionHandleCollection$instance {
 
 
 export const PropertyDefinitionHandleCollection: {
-    new(): PropertyDefinitionHandleCollection$instance;
+    new(): PropertyDefinitionHandleCollection;
 };
 
 
@@ -3144,7 +3144,7 @@ export interface PropertyDefinitionHandleCollection_Enumerator$instance {
 
 
 export const PropertyDefinitionHandleCollection_Enumerator: {
-    new(): PropertyDefinitionHandleCollection_Enumerator$instance;
+    new(): PropertyDefinitionHandleCollection_Enumerator;
 };
 
 
@@ -3164,7 +3164,7 @@ export interface ReservedBlob_1$instance<THandle extends unknown> {
 
 
 export const ReservedBlob_1: {
-    new<THandle extends unknown>(): ReservedBlob_1$instance<THandle>;
+    new<THandle extends unknown>(): ReservedBlob_1<THandle>;
 };
 
 
@@ -3185,7 +3185,7 @@ export interface SequencePoint$instance {
 
 
 export const SequencePoint: {
-    new(): SequencePoint$instance;
+    new(): SequencePoint;
     readonly HiddenLine: int;
 };
 
@@ -3206,7 +3206,7 @@ export interface SequencePointCollection$instance {
 
 
 export const SequencePointCollection: {
-    new(): SequencePointCollection$instance;
+    new(): SequencePointCollection;
 };
 
 
@@ -3226,7 +3226,7 @@ export interface SequencePointCollection_Enumerator$instance {
 
 
 export const SequencePointCollection_Enumerator: {
-    new(): SequencePointCollection_Enumerator$instance;
+    new(): SequencePointCollection_Enumerator;
 };
 
 
@@ -3255,8 +3255,8 @@ export interface SignatureHeader$instance {
 
 
 export const SignatureHeader: {
-    new(rawValue: byte): SignatureHeader$instance;
-    new(kind: SignatureKind, convention: SignatureCallingConvention, attributes: SignatureAttributes): SignatureHeader$instance;
+    new(rawValue: byte): SignatureHeader;
+    new(kind: SignatureKind, convention: SignatureCallingConvention, attributes: SignatureAttributes): SignatureHeader;
     readonly CallingConventionOrKindMask: byte;
 };
 
@@ -3281,7 +3281,7 @@ export interface StandaloneSignature$instance {
 
 
 export const StandaloneSignature: {
-    new(): StandaloneSignature$instance;
+    new(): StandaloneSignature;
 };
 
 
@@ -3296,7 +3296,7 @@ export interface StandaloneSignatureHandle$instance {
 
 
 export const StandaloneSignatureHandle: {
-    new(): StandaloneSignatureHandle$instance;
+    new(): StandaloneSignatureHandle;
 };
 
 
@@ -3319,7 +3319,7 @@ export interface StringHandle$instance {
 
 
 export const StringHandle: {
-    new(): StringHandle$instance;
+    new(): StringHandle;
 };
 
 
@@ -3356,7 +3356,7 @@ export interface TypeDefinition$instance {
 
 
 export const TypeDefinition: {
-    new(): TypeDefinition$instance;
+    new(): TypeDefinition;
 };
 
 
@@ -3371,7 +3371,7 @@ export interface TypeDefinitionHandle$instance {
 
 
 export const TypeDefinitionHandle: {
-    new(): TypeDefinitionHandle$instance;
+    new(): TypeDefinitionHandle;
 };
 
 
@@ -3392,7 +3392,7 @@ export interface TypeDefinitionHandleCollection$instance {
 
 
 export const TypeDefinitionHandleCollection: {
-    new(): TypeDefinitionHandleCollection$instance;
+    new(): TypeDefinitionHandleCollection;
 };
 
 
@@ -3413,7 +3413,7 @@ export interface TypeDefinitionHandleCollection_Enumerator$instance {
 
 
 export const TypeDefinitionHandleCollection_Enumerator: {
-    new(): TypeDefinitionHandleCollection_Enumerator$instance;
+    new(): TypeDefinitionHandleCollection_Enumerator;
 };
 
 
@@ -3433,7 +3433,7 @@ export interface TypeLayout$instance {
 
 
 export const TypeLayout: {
-    new(size: int, packingSize: int): TypeLayout$instance;
+    new(size: int, packingSize: int): TypeLayout;
 };
 
 
@@ -3447,7 +3447,7 @@ export interface TypeReference$instance {
 
 
 export const TypeReference: {
-    new(): TypeReference$instance;
+    new(): TypeReference;
 };
 
 
@@ -3462,7 +3462,7 @@ export interface TypeReferenceHandle$instance {
 
 
 export const TypeReferenceHandle: {
-    new(): TypeReferenceHandle$instance;
+    new(): TypeReferenceHandle;
 };
 
 
@@ -3483,7 +3483,7 @@ export interface TypeReferenceHandleCollection$instance {
 
 
 export const TypeReferenceHandleCollection: {
-    new(): TypeReferenceHandleCollection$instance;
+    new(): TypeReferenceHandleCollection;
 };
 
 
@@ -3504,7 +3504,7 @@ export interface TypeReferenceHandleCollection_Enumerator$instance {
 
 
 export const TypeReferenceHandleCollection_Enumerator: {
-    new(): TypeReferenceHandleCollection_Enumerator$instance;
+    new(): TypeReferenceHandleCollection_Enumerator;
 };
 
 
@@ -3524,7 +3524,7 @@ export interface TypeSpecification$instance {
 
 
 export const TypeSpecification: {
-    new(): TypeSpecification$instance;
+    new(): TypeSpecification;
 };
 
 
@@ -3539,7 +3539,7 @@ export interface TypeSpecificationHandle$instance {
 
 
 export const TypeSpecificationHandle: {
-    new(): TypeSpecificationHandle$instance;
+    new(): TypeSpecificationHandle;
 };
 
 
@@ -3562,7 +3562,7 @@ export interface UserStringHandle$instance {
 
 
 export const UserStringHandle: {
-    new(): UserStringHandle$instance;
+    new(): UserStringHandle;
 };
 
 
@@ -3588,7 +3588,7 @@ export interface AssemblyNameInfo$instance {
 
 
 export const AssemblyNameInfo: {
-    new(name: string, version: Version, cultureName: string, flags: AssemblyNameFlags, publicKeyOrToken: ImmutableArray_1<System_Internal.Byte>): AssemblyNameInfo$instance;
+    new(name: string, version: Version, cultureName: string, flags: AssemblyNameFlags, publicKeyOrToken: ImmutableArray_1<System_Internal.Byte>): AssemblyNameInfo;
     Parse(assemblyName: ReadOnlySpan_1<System_Internal.Char>): AssemblyNameInfo;
     TryParse(assemblyName: ReadOnlySpan_1<System_Internal.Char>, result: AssemblyNameInfo): boolean;
 };
@@ -3651,7 +3651,7 @@ export interface BlobBuilder$instance {
 
 
 export const BlobBuilder: {
-    new(capacity: int): BlobBuilder$instance;
+    new(capacity: int): BlobBuilder;
 };
 
 
@@ -3665,7 +3665,7 @@ export interface DebugMetadataHeader$instance {
 
 
 export const DebugMetadataHeader: {
-    new(): DebugMetadataHeader$instance;
+    new(): DebugMetadataHeader;
 };
 
 
@@ -3682,7 +3682,7 @@ export interface HandleComparer$instance {
 
 
 export const HandleComparer: {
-    new(): HandleComparer$instance;
+    new(): HandleComparer;
     readonly Default: HandleComparer;
 };
 
@@ -3703,9 +3703,9 @@ export interface ImageFormatLimitationException$instance extends Exception {
 
 
 export const ImageFormatLimitationException: {
-    new(): ImageFormatLimitationException$instance;
-    new(message: string): ImageFormatLimitationException$instance;
-    new(message: string, innerException: Exception): ImageFormatLimitationException$instance;
+    new(): ImageFormatLimitationException;
+    new(message: string): ImageFormatLimitationException;
+    new(message: string, innerException: Exception): ImageFormatLimitationException;
 };
 
 
@@ -3798,9 +3798,9 @@ export interface MetadataReader$instance {
 
 
 export const MetadataReader: {
-    new(metadata: ptr<byte>, length: int): MetadataReader$instance;
-    new(metadata: ptr<byte>, length: int, options: MetadataReaderOptions): MetadataReader$instance;
-    new(metadata: ptr<byte>, length: int, options: MetadataReaderOptions, utf8Decoder: MetadataStringDecoder): MetadataReader$instance;
+    new(metadata: ptr<byte>, length: int): MetadataReader;
+    new(metadata: ptr<byte>, length: int, options: MetadataReaderOptions): MetadataReader;
+    new(metadata: ptr<byte>, length: int, options: MetadataReaderOptions, utf8Decoder: MetadataStringDecoder): MetadataReader;
     GetAssemblyName(assemblyFile: string): AssemblyName;
 };
 
@@ -3814,7 +3814,7 @@ export interface MetadataReaderProvider$instance {
 
 
 export const MetadataReaderProvider: {
-    new(): MetadataReaderProvider$instance;
+    new(): MetadataReaderProvider;
     FromMetadataImage(start: ptr<byte>, size: int): MetadataReaderProvider;
     FromMetadataImage(image: ImmutableArray_1<System_Internal.Byte>): MetadataReaderProvider;
     FromMetadataStream(stream: Stream, options?: MetadataStreamOptions, size?: int): MetadataReaderProvider;
@@ -3840,7 +3840,7 @@ export interface MetadataStringDecoder$instance {
 
 
 export const MetadataStringDecoder: {
-    new(encoding: Encoding): MetadataStringDecoder$instance;
+    new(encoding: Encoding): MetadataStringDecoder;
     readonly DefaultUTF8: MetadataStringDecoder;
 };
 
@@ -3853,7 +3853,7 @@ export interface MetadataUpdateHandlerAttribute$instance extends Attribute {
 
 
 export const MetadataUpdateHandlerAttribute: {
-    new(handlerType: Type): MetadataUpdateHandlerAttribute$instance;
+    new(handlerType: Type): MetadataUpdateHandlerAttribute;
 };
 
 
@@ -3872,7 +3872,7 @@ export interface MethodBodyBlock$instance {
 
 
 export const MethodBodyBlock: {
-    new(): MethodBodyBlock$instance;
+    new(): MethodBodyBlock;
     Create(reader: BlobReader): MethodBodyBlock;
 };
 
@@ -3909,7 +3909,7 @@ export interface TypeName$instance {
 
 
 export const TypeName: {
-    new(): TypeName$instance;
+    new(): TypeName;
     Parse(typeName: ReadOnlySpan_1<System_Internal.Char>, options?: TypeNameParseOptions): TypeName;
     TryParse(typeName: ReadOnlySpan_1<System_Internal.Char>, result: TypeName, options?: TypeNameParseOptions): boolean;
     Unescape(name: string): string;
@@ -3924,7 +3924,7 @@ export interface TypeNameParseOptions$instance {
 
 
 export const TypeNameParseOptions: {
-    new(): TypeNameParseOptions$instance;
+    new(): TypeNameParseOptions;
 };
 
 

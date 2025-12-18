@@ -494,8 +494,8 @@ export interface AddingNewEventArgs$instance extends EventArgs {
 
 
 export const AddingNewEventArgs: {
-    new(): AddingNewEventArgs$instance;
-    new(newObject: unknown): AddingNewEventArgs$instance;
+    new(): AddingNewEventArgs;
+    new(newObject: unknown): AddingNewEventArgs;
 };
 
 
@@ -509,17 +509,17 @@ export interface AmbientValueAttribute$instance extends Attribute {
 
 
 export const AmbientValueAttribute: {
-    new(type_: Type, value: string): AmbientValueAttribute$instance;
-    new(value: char): AmbientValueAttribute$instance;
-    new(value: byte): AmbientValueAttribute$instance;
-    new(value: short): AmbientValueAttribute$instance;
-    new(value: int): AmbientValueAttribute$instance;
-    new(value: long): AmbientValueAttribute$instance;
-    new(value: float): AmbientValueAttribute$instance;
-    new(value: double): AmbientValueAttribute$instance;
-    new(value: boolean): AmbientValueAttribute$instance;
-    new(value: string): AmbientValueAttribute$instance;
-    new(value: unknown): AmbientValueAttribute$instance;
+    new(type_: Type, value: string): AmbientValueAttribute;
+    new(value: char): AmbientValueAttribute;
+    new(value: byte): AmbientValueAttribute;
+    new(value: short): AmbientValueAttribute;
+    new(value: int): AmbientValueAttribute;
+    new(value: long): AmbientValueAttribute;
+    new(value: float): AmbientValueAttribute;
+    new(value: double): AmbientValueAttribute;
+    new(value: boolean): AmbientValueAttribute;
+    new(value: string): AmbientValueAttribute;
+    new(value: unknown): AmbientValueAttribute;
 };
 
 
@@ -537,7 +537,7 @@ export interface ArrayConverter$instance extends CollectionConverter {
 
 
 export const ArrayConverter: {
-    new(): ArrayConverter$instance;
+    new(): ArrayConverter;
 };
 
 
@@ -551,7 +551,7 @@ export interface AsyncCompletedEventArgs$instance extends EventArgs {
 
 
 export const AsyncCompletedEventArgs: {
-    new(error: Exception, cancelled: boolean, userState: unknown): AsyncCompletedEventArgs$instance;
+    new(error: Exception, cancelled: boolean, userState: unknown): AsyncCompletedEventArgs;
 };
 
 
@@ -567,7 +567,7 @@ export interface AsyncOperation$instance {
 
 
 export const AsyncOperation: {
-    new(): AsyncOperation$instance;
+    new(): AsyncOperation;
 };
 
 
@@ -587,7 +587,7 @@ export interface AttributeCollection$instance {
 
 
 export const AttributeCollection: {
-    new(attributes: Attribute[]): AttributeCollection$instance;
+    new(attributes: Attribute[]): AttributeCollection;
     readonly Empty: AttributeCollection;
     FromExisting(existing: AttributeCollection, ...newAttributes: Attribute[]): AttributeCollection;
 };
@@ -608,9 +608,9 @@ export interface AttributeProviderAttribute$instance extends Attribute {
 
 
 export const AttributeProviderAttribute: {
-    new(typeName: string): AttributeProviderAttribute$instance;
-    new(typeName: string, propertyName: string): AttributeProviderAttribute$instance;
-    new(type_: Type): AttributeProviderAttribute$instance;
+    new(typeName: string): AttributeProviderAttribute;
+    new(typeName: string, propertyName: string): AttributeProviderAttribute;
+    new(type_: Type): AttributeProviderAttribute;
 };
 
 
@@ -631,7 +631,7 @@ export interface BackgroundWorker$instance extends Component$instance {
 
 
 export const BackgroundWorker: {
-    new(): BackgroundWorker$instance;
+    new(): BackgroundWorker;
 };
 
 
@@ -673,10 +673,10 @@ export interface BindableAttribute$instance extends Attribute {
 
 
 export const BindableAttribute: {
-    new(bindable: boolean): BindableAttribute$instance;
-    new(bindable: boolean, direction: BindingDirection): BindableAttribute$instance;
-    new(flags: BindableSupport): BindableAttribute$instance;
-    new(flags: BindableSupport, direction: BindingDirection): BindableAttribute$instance;
+    new(bindable: boolean): BindableAttribute;
+    new(bindable: boolean, direction: BindingDirection): BindableAttribute;
+    new(flags: BindableSupport): BindableAttribute;
+    new(flags: BindableSupport, direction: BindingDirection): BindableAttribute;
     readonly Yes: BindableAttribute;
     readonly No: BindableAttribute;
     readonly Default: BindableAttribute;
@@ -714,8 +714,8 @@ export interface BindingList_1$instance<T> extends Collection_1<T> {
 
 
 export const BindingList_1: {
-    new<T>(): BindingList_1$instance<T>;
-    new<T>(list: IList_1<T>): BindingList_1$instance<T>;
+    new<T>(): BindingList_1<T>;
+    new<T>(list: IList_1<T>): BindingList_1<T>;
 };
 
 
@@ -752,7 +752,7 @@ export interface BooleanConverter$instance extends TypeConverter {
 
 
 export const BooleanConverter: {
-    new(): BooleanConverter$instance;
+    new(): BooleanConverter;
 };
 
 
@@ -767,7 +767,7 @@ export interface BrowsableAttribute$instance extends Attribute {
 
 
 export const BrowsableAttribute: {
-    new(browsable: boolean): BrowsableAttribute$instance;
+    new(browsable: boolean): BrowsableAttribute;
     readonly Yes: BrowsableAttribute;
     readonly No: BrowsableAttribute;
     readonly Default: BrowsableAttribute;
@@ -781,7 +781,7 @@ export interface ByteConverter$instance extends BaseNumberConverter {
 
 
 export const ByteConverter: {
-    new(): ByteConverter$instance;
+    new(): ByteConverter;
 };
 
 
@@ -793,8 +793,8 @@ export interface CancelEventArgs$instance extends EventArgs {
 
 
 export const CancelEventArgs: {
-    new(): CancelEventArgs$instance;
-    new(cancel: boolean): CancelEventArgs$instance;
+    new(): CancelEventArgs;
+    new(cancel: boolean): CancelEventArgs;
 };
 
 
@@ -809,8 +809,8 @@ export interface CategoryAttribute$instance extends Attribute {
 
 
 export const CategoryAttribute: {
-    new(): CategoryAttribute$instance;
-    new(category: string): CategoryAttribute$instance;
+    new(): CategoryAttribute;
+    new(category: string): CategoryAttribute;
     readonly Action: CategoryAttribute;
     readonly Appearance: CategoryAttribute;
     readonly Asynchronous: CategoryAttribute;
@@ -841,7 +841,7 @@ export interface CharConverter$instance extends TypeConverter {
 
 
 export const CharConverter: {
-    new(): CharConverter$instance;
+    new(): CharConverter;
 };
 
 
@@ -854,7 +854,7 @@ export interface CollectionChangeEventArgs$instance extends EventArgs {
 
 
 export const CollectionChangeEventArgs: {
-    new(action: CollectionChangeAction, element: unknown): CollectionChangeEventArgs$instance;
+    new(action: CollectionChangeAction, element: unknown): CollectionChangeEventArgs;
 };
 
 
@@ -870,7 +870,7 @@ export interface CollectionConverter$instance extends TypeConverter {
 
 
 export const CollectionConverter: {
-    new(): CollectionConverter$instance;
+    new(): CollectionConverter;
 };
 
 
@@ -885,9 +885,9 @@ export interface ComplexBindingPropertiesAttribute$instance extends Attribute {
 
 
 export const ComplexBindingPropertiesAttribute: {
-    new(): ComplexBindingPropertiesAttribute$instance;
-    new(dataSource: string): ComplexBindingPropertiesAttribute$instance;
-    new(dataSource: string, dataMember: string): ComplexBindingPropertiesAttribute$instance;
+    new(): ComplexBindingPropertiesAttribute;
+    new(dataSource: string): ComplexBindingPropertiesAttribute;
+    new(dataSource: string, dataMember: string): ComplexBindingPropertiesAttribute;
     readonly Default: ComplexBindingPropertiesAttribute;
 };
 
@@ -903,7 +903,7 @@ export interface Component$instance extends MarshalByRefObject {
 
 
 export const Component: {
-    new(): Component$instance;
+    new(): Component;
 };
 
 
@@ -924,7 +924,7 @@ export interface ComponentCollection$instance extends ReadOnlyCollectionBase {
 
 
 export const ComponentCollection: {
-    new(components: IComponent[]): ComponentCollection$instance;
+    new(components: IComponent[]): ComponentCollection;
 };
 
 
@@ -948,7 +948,7 @@ export interface ComponentConverter$instance extends ReferenceConverter {
 
 
 export const ComponentConverter: {
-    new(type_: Type): ComponentConverter$instance;
+    new(type_: Type): ComponentConverter;
 };
 
 
@@ -974,8 +974,8 @@ export interface ComponentResourceManager$instance extends ResourceManager {
 
 
 export const ComponentResourceManager: {
-    new(): ComponentResourceManager$instance;
-    new(t: Type): ComponentResourceManager$instance;
+    new(): ComponentResourceManager;
+    new(t: Type): ComponentResourceManager;
 };
 
 
@@ -991,7 +991,7 @@ export interface Container$instance {
 
 
 export const Container: {
-    new(): Container$instance;
+    new(): Container;
 };
 
 
@@ -1033,7 +1033,7 @@ export interface CultureInfoConverter$instance extends TypeConverter {
 
 
 export const CultureInfoConverter: {
-    new(): CultureInfoConverter$instance;
+    new(): CultureInfoConverter;
 };
 
 
@@ -1078,7 +1078,7 @@ export interface DataErrorsChangedEventArgs$instance extends EventArgs {
 
 
 export const DataErrorsChangedEventArgs: {
-    new(propertyName: string): DataErrorsChangedEventArgs$instance;
+    new(propertyName: string): DataErrorsChangedEventArgs;
 };
 
 
@@ -1093,8 +1093,8 @@ export interface DataObjectAttribute$instance extends Attribute {
 
 
 export const DataObjectAttribute: {
-    new(): DataObjectAttribute$instance;
-    new(isDataObject: boolean): DataObjectAttribute$instance;
+    new(): DataObjectAttribute;
+    new(isDataObject: boolean): DataObjectAttribute;
     readonly DataObject: DataObjectAttribute;
     readonly NonDataObject: DataObjectAttribute;
     readonly Default: DataObjectAttribute;
@@ -1114,10 +1114,10 @@ export interface DataObjectFieldAttribute$instance extends Attribute {
 
 
 export const DataObjectFieldAttribute: {
-    new(primaryKey: boolean): DataObjectFieldAttribute$instance;
-    new(primaryKey: boolean, isIdentity: boolean): DataObjectFieldAttribute$instance;
-    new(primaryKey: boolean, isIdentity: boolean, isNullable: boolean): DataObjectFieldAttribute$instance;
-    new(primaryKey: boolean, isIdentity: boolean, isNullable: boolean, length: int): DataObjectFieldAttribute$instance;
+    new(primaryKey: boolean): DataObjectFieldAttribute;
+    new(primaryKey: boolean, isIdentity: boolean): DataObjectFieldAttribute;
+    new(primaryKey: boolean, isIdentity: boolean, isNullable: boolean): DataObjectFieldAttribute;
+    new(primaryKey: boolean, isIdentity: boolean, isNullable: boolean, length: int): DataObjectFieldAttribute;
 };
 
 
@@ -1133,8 +1133,8 @@ export interface DataObjectMethodAttribute$instance extends Attribute {
 
 
 export const DataObjectMethodAttribute: {
-    new(methodType: DataObjectMethodType): DataObjectMethodAttribute$instance;
-    new(methodType: DataObjectMethodType, isDefault: boolean): DataObjectMethodAttribute$instance;
+    new(methodType: DataObjectMethodType): DataObjectMethodAttribute;
+    new(methodType: DataObjectMethodType, isDefault: boolean): DataObjectMethodAttribute;
 };
 
 
@@ -1153,7 +1153,7 @@ export interface DateOnlyConverter$instance extends TypeConverter {
 
 
 export const DateOnlyConverter: {
-    new(): DateOnlyConverter$instance;
+    new(): DateOnlyConverter;
 };
 
 
@@ -1172,7 +1172,7 @@ export interface DateTimeConverter$instance extends TypeConverter {
 
 
 export const DateTimeConverter: {
-    new(): DateTimeConverter$instance;
+    new(): DateTimeConverter;
 };
 
 
@@ -1191,7 +1191,7 @@ export interface DateTimeOffsetConverter$instance extends TypeConverter {
 
 
 export const DateTimeOffsetConverter: {
-    new(): DateTimeOffsetConverter$instance;
+    new(): DateTimeOffsetConverter;
 };
 
 
@@ -1206,7 +1206,7 @@ export interface DecimalConverter$instance extends BaseNumberConverter {
 
 
 export const DecimalConverter: {
-    new(): DecimalConverter$instance;
+    new(): DecimalConverter;
 };
 
 
@@ -1220,8 +1220,8 @@ export interface DefaultBindingPropertyAttribute$instance extends Attribute {
 
 
 export const DefaultBindingPropertyAttribute: {
-    new(): DefaultBindingPropertyAttribute$instance;
-    new(name: string): DefaultBindingPropertyAttribute$instance;
+    new(): DefaultBindingPropertyAttribute;
+    new(name: string): DefaultBindingPropertyAttribute;
     readonly Default: DefaultBindingPropertyAttribute;
 };
 
@@ -1236,7 +1236,7 @@ export interface DefaultEventAttribute$instance extends Attribute {
 
 
 export const DefaultEventAttribute: {
-    new(name: string): DefaultEventAttribute$instance;
+    new(name: string): DefaultEventAttribute;
     readonly Default: DefaultEventAttribute;
 };
 
@@ -1251,7 +1251,7 @@ export interface DefaultPropertyAttribute$instance extends Attribute {
 
 
 export const DefaultPropertyAttribute: {
-    new(name: string): DefaultPropertyAttribute$instance;
+    new(name: string): DefaultPropertyAttribute;
     readonly Default: DefaultPropertyAttribute;
 };
 
@@ -1266,21 +1266,21 @@ export interface DefaultValueAttribute$instance extends Attribute {
 
 
 export const DefaultValueAttribute: {
-    new(type_: Type, value: string): DefaultValueAttribute$instance;
-    new(value: char): DefaultValueAttribute$instance;
-    new(value: byte): DefaultValueAttribute$instance;
-    new(value: short): DefaultValueAttribute$instance;
-    new(value: int): DefaultValueAttribute$instance;
-    new(value: long): DefaultValueAttribute$instance;
-    new(value: float): DefaultValueAttribute$instance;
-    new(value: double): DefaultValueAttribute$instance;
-    new(value: boolean): DefaultValueAttribute$instance;
-    new(value: string): DefaultValueAttribute$instance;
-    new(value: unknown): DefaultValueAttribute$instance;
-    new(value: sbyte): DefaultValueAttribute$instance;
-    new(value: ushort): DefaultValueAttribute$instance;
-    new(value: uint): DefaultValueAttribute$instance;
-    new(value: ulong): DefaultValueAttribute$instance;
+    new(type_: Type, value: string): DefaultValueAttribute;
+    new(value: char): DefaultValueAttribute;
+    new(value: byte): DefaultValueAttribute;
+    new(value: short): DefaultValueAttribute;
+    new(value: int): DefaultValueAttribute;
+    new(value: long): DefaultValueAttribute;
+    new(value: float): DefaultValueAttribute;
+    new(value: double): DefaultValueAttribute;
+    new(value: boolean): DefaultValueAttribute;
+    new(value: string): DefaultValueAttribute;
+    new(value: unknown): DefaultValueAttribute;
+    new(value: sbyte): DefaultValueAttribute;
+    new(value: ushort): DefaultValueAttribute;
+    new(value: uint): DefaultValueAttribute;
+    new(value: ulong): DefaultValueAttribute;
 };
 
 
@@ -1295,8 +1295,8 @@ export interface DescriptionAttribute$instance extends Attribute {
 
 
 export const DescriptionAttribute: {
-    new(): DescriptionAttribute$instance;
-    new(description: string): DescriptionAttribute$instance;
+    new(): DescriptionAttribute;
+    new(description: string): DescriptionAttribute;
     readonly Default: DescriptionAttribute;
 };
 
@@ -1313,11 +1313,11 @@ export interface DesignerAttribute$instance extends Attribute {
 
 
 export const DesignerAttribute: {
-    new(designerTypeName: string): DesignerAttribute$instance;
-    new(designerType: Type): DesignerAttribute$instance;
-    new(designerTypeName: string, designerBaseTypeName: string): DesignerAttribute$instance;
-    new(designerTypeName: string, designerBaseType: Type): DesignerAttribute$instance;
-    new(designerType: Type, designerBaseType: Type): DesignerAttribute$instance;
+    new(designerTypeName: string): DesignerAttribute;
+    new(designerType: Type): DesignerAttribute;
+    new(designerTypeName: string, designerBaseTypeName: string): DesignerAttribute;
+    new(designerTypeName: string, designerBaseType: Type): DesignerAttribute;
+    new(designerType: Type, designerBaseType: Type): DesignerAttribute;
 };
 
 
@@ -1333,8 +1333,8 @@ export interface DesignerCategoryAttribute$instance extends Attribute {
 
 
 export const DesignerCategoryAttribute: {
-    new(): DesignerCategoryAttribute$instance;
-    new(category: string): DesignerCategoryAttribute$instance;
+    new(): DesignerCategoryAttribute;
+    new(category: string): DesignerCategoryAttribute;
     readonly Component: DesignerCategoryAttribute;
     readonly Default: DesignerCategoryAttribute;
     readonly Form: DesignerCategoryAttribute;
@@ -1353,7 +1353,7 @@ export interface DesignerSerializationVisibilityAttribute$instance extends Attri
 
 
 export const DesignerSerializationVisibilityAttribute: {
-    new(visibility: DesignerSerializationVisibility): DesignerSerializationVisibilityAttribute$instance;
+    new(visibility: DesignerSerializationVisibility): DesignerSerializationVisibilityAttribute;
     readonly Content: DesignerSerializationVisibilityAttribute;
     readonly Hidden: DesignerSerializationVisibilityAttribute;
     readonly Visible: DesignerSerializationVisibilityAttribute;
@@ -1372,7 +1372,7 @@ export interface DesignOnlyAttribute$instance extends Attribute {
 
 
 export const DesignOnlyAttribute: {
-    new(isDesignOnly: boolean): DesignOnlyAttribute$instance;
+    new(isDesignOnly: boolean): DesignOnlyAttribute;
     readonly Yes: DesignOnlyAttribute;
     readonly No: DesignOnlyAttribute;
     readonly Default: DesignOnlyAttribute;
@@ -1390,8 +1390,8 @@ export interface DesignTimeVisibleAttribute$instance extends Attribute {
 
 
 export const DesignTimeVisibleAttribute: {
-    new(visible: boolean): DesignTimeVisibleAttribute$instance;
-    new(): DesignTimeVisibleAttribute$instance;
+    new(visible: boolean): DesignTimeVisibleAttribute;
+    new(): DesignTimeVisibleAttribute;
     readonly Yes: DesignTimeVisibleAttribute;
     readonly No: DesignTimeVisibleAttribute;
     readonly Default: DesignTimeVisibleAttribute;
@@ -1409,8 +1409,8 @@ export interface DisplayNameAttribute$instance extends Attribute {
 
 
 export const DisplayNameAttribute: {
-    new(): DisplayNameAttribute$instance;
-    new(displayName: string): DisplayNameAttribute$instance;
+    new(): DisplayNameAttribute;
+    new(displayName: string): DisplayNameAttribute;
     readonly Default: DisplayNameAttribute;
 };
 
@@ -1422,7 +1422,7 @@ export interface DoubleConverter$instance extends BaseNumberConverter {
 
 
 export const DoubleConverter: {
-    new(): DoubleConverter$instance;
+    new(): DoubleConverter;
 };
 
 
@@ -1435,7 +1435,7 @@ export interface DoWorkEventArgs$instance extends CancelEventArgs {
 
 
 export const DoWorkEventArgs: {
-    new(argument: unknown): DoWorkEventArgs$instance;
+    new(argument: unknown): DoWorkEventArgs;
 };
 
 
@@ -1451,10 +1451,10 @@ export interface EditorAttribute$instance extends Attribute {
 
 
 export const EditorAttribute: {
-    new(): EditorAttribute$instance;
-    new(typeName: string, baseTypeName: string): EditorAttribute$instance;
-    new(typeName: string, baseType: Type): EditorAttribute$instance;
-    new(type_: Type, baseType: Type): EditorAttribute$instance;
+    new(): EditorAttribute;
+    new(typeName: string, baseTypeName: string): EditorAttribute;
+    new(typeName: string, baseType: Type): EditorAttribute;
+    new(type_: Type, baseType: Type): EditorAttribute;
 };
 
 
@@ -1468,8 +1468,8 @@ export interface EditorBrowsableAttribute$instance extends Attribute {
 
 
 export const EditorBrowsableAttribute: {
-    new(state: EditorBrowsableState): EditorBrowsableAttribute$instance;
-    new(): EditorBrowsableAttribute$instance;
+    new(state: EditorBrowsableState): EditorBrowsableAttribute;
+    new(): EditorBrowsableAttribute;
 };
 
 
@@ -1496,7 +1496,7 @@ export interface EnumConverter$instance extends TypeConverter {
 
 
 export const EnumConverter: {
-    new(type_: Type): EnumConverter$instance;
+    new(type_: Type): EnumConverter;
 };
 
 
@@ -1538,8 +1538,8 @@ export interface EventDescriptorCollection$instance {
 
 
 export const EventDescriptorCollection: {
-    new(events: EventDescriptor[]): EventDescriptorCollection$instance;
-    new(events: EventDescriptor[], readOnly: boolean): EventDescriptorCollection$instance;
+    new(events: EventDescriptor[]): EventDescriptorCollection;
+    new(events: EventDescriptor[], readOnly: boolean): EventDescriptorCollection;
     readonly Empty: EventDescriptorCollection;
 };
 
@@ -1563,7 +1563,7 @@ export interface EventHandlerList$instance {
 
 
 export const EventHandlerList: {
-    new(): EventHandlerList$instance;
+    new(): EventHandlerList;
 };
 
 
@@ -1586,7 +1586,7 @@ export interface ExpandableObjectConverter$instance extends TypeConverter {
 
 
 export const ExpandableObjectConverter: {
-    new(): ExpandableObjectConverter$instance;
+    new(): ExpandableObjectConverter;
 };
 
 
@@ -1603,7 +1603,7 @@ export interface ExtenderProvidedPropertyAttribute$instance extends Attribute {
 
 
 export const ExtenderProvidedPropertyAttribute: {
-    new(): ExtenderProvidedPropertyAttribute$instance;
+    new(): ExtenderProvidedPropertyAttribute;
 };
 
 
@@ -1622,7 +1622,7 @@ export interface GuidConverter$instance extends TypeConverter {
 
 
 export const GuidConverter: {
-    new(): GuidConverter$instance;
+    new(): GuidConverter;
 };
 
 
@@ -1633,7 +1633,7 @@ export interface HalfConverter$instance extends BaseNumberConverter {
 
 
 export const HalfConverter: {
-    new(): HalfConverter$instance;
+    new(): HalfConverter;
 };
 
 
@@ -1645,8 +1645,8 @@ export interface HandledEventArgs$instance extends EventArgs {
 
 
 export const HandledEventArgs: {
-    new(): HandledEventArgs$instance;
-    new(defaultHandledValue: boolean): HandledEventArgs$instance;
+    new(): HandledEventArgs;
+    new(defaultHandledValue: boolean): HandledEventArgs;
 };
 
 
@@ -1661,7 +1661,7 @@ export interface ImmutableObjectAttribute$instance extends Attribute {
 
 
 export const ImmutableObjectAttribute: {
-    new(immutable: boolean): ImmutableObjectAttribute$instance;
+    new(immutable: boolean): ImmutableObjectAttribute;
     readonly Yes: ImmutableObjectAttribute;
     readonly No: ImmutableObjectAttribute;
     readonly Default: ImmutableObjectAttribute;
@@ -1680,8 +1680,8 @@ export interface InheritanceAttribute$instance extends Attribute {
 
 
 export const InheritanceAttribute: {
-    new(): InheritanceAttribute$instance;
-    new(inheritanceLevel: InheritanceLevel): InheritanceAttribute$instance;
+    new(): InheritanceAttribute;
+    new(inheritanceLevel: InheritanceLevel): InheritanceAttribute;
     readonly Inherited: InheritanceAttribute;
     readonly InheritedReadOnly: InheritanceAttribute;
     readonly NotInherited: InheritanceAttribute;
@@ -1697,7 +1697,7 @@ export interface InitializationEventAttribute$instance extends Attribute {
 
 
 export const InitializationEventAttribute: {
-    new(eventName: string): InitializationEventAttribute$instance;
+    new(eventName: string): InitializationEventAttribute;
 };
 
 
@@ -1711,8 +1711,8 @@ export interface InstallerTypeAttribute$instance extends Attribute {
 
 
 export const InstallerTypeAttribute: {
-    new(installerType: Type): InstallerTypeAttribute$instance;
-    new(typeName: string): InstallerTypeAttribute$instance;
+    new(installerType: Type): InstallerTypeAttribute;
+    new(typeName: string): InstallerTypeAttribute;
 };
 
 
@@ -1735,7 +1735,7 @@ export interface Int128Converter$instance extends BaseNumberConverter {
 
 
 export const Int128Converter: {
-    new(): Int128Converter$instance;
+    new(): Int128Converter;
 };
 
 
@@ -1746,7 +1746,7 @@ export interface Int16Converter$instance extends BaseNumberConverter {
 
 
 export const Int16Converter: {
-    new(): Int16Converter$instance;
+    new(): Int16Converter;
 };
 
 
@@ -1757,7 +1757,7 @@ export interface Int32Converter$instance extends BaseNumberConverter {
 
 
 export const Int32Converter: {
-    new(): Int32Converter$instance;
+    new(): Int32Converter;
 };
 
 
@@ -1768,7 +1768,7 @@ export interface Int64Converter$instance extends BaseNumberConverter {
 
 
 export const Int64Converter: {
-    new(): Int64Converter$instance;
+    new(): Int64Converter;
 };
 
 
@@ -1780,9 +1780,9 @@ export interface InvalidAsynchronousStateException$instance extends ArgumentExce
 
 
 export const InvalidAsynchronousStateException: {
-    new(): InvalidAsynchronousStateException$instance;
-    new(message: string): InvalidAsynchronousStateException$instance;
-    new(message: string, innerException: Exception): InvalidAsynchronousStateException$instance;
+    new(): InvalidAsynchronousStateException;
+    new(message: string): InvalidAsynchronousStateException;
+    new(message: string, innerException: Exception): InvalidAsynchronousStateException;
 };
 
 
@@ -1799,10 +1799,10 @@ export interface InvalidEnumArgumentException$instance extends ArgumentException
 
 
 export const InvalidEnumArgumentException: {
-    new(): InvalidEnumArgumentException$instance;
-    new(message: string): InvalidEnumArgumentException$instance;
-    new(message: string, innerException: Exception): InvalidEnumArgumentException$instance;
-    new(argumentName: string, invalidValue: int, enumClass: Type): InvalidEnumArgumentException$instance;
+    new(): InvalidEnumArgumentException;
+    new(message: string): InvalidEnumArgumentException;
+    new(message: string, innerException: Exception): InvalidEnumArgumentException;
+    new(argumentName: string, invalidValue: int, enumClass: Type): InvalidEnumArgumentException;
 };
 
 
@@ -1841,7 +1841,7 @@ export interface LicenseContext$instance {
 
 
 export const LicenseContext: {
-    new(): LicenseContext$instance;
+    new(): LicenseContext;
 };
 
 
@@ -1861,10 +1861,10 @@ export interface LicenseException$instance extends SystemException {
 
 
 export const LicenseException: {
-    new(type_: Type): LicenseException$instance;
-    new(type_: Type, instance: unknown): LicenseException$instance;
-    new(type_: Type, instance: unknown, message: string): LicenseException$instance;
-    new(type_: Type, instance: unknown, message: string, innerException: Exception): LicenseException$instance;
+    new(type_: Type): LicenseException;
+    new(type_: Type, instance: unknown): LicenseException;
+    new(type_: Type, instance: unknown, message: string): LicenseException;
+    new(type_: Type, instance: unknown, message: string, innerException: Exception): LicenseException;
 };
 
 
@@ -1880,7 +1880,7 @@ export interface LicenseManager$instance {
 
 
 export const LicenseManager: {
-    new(): LicenseManager$instance;
+    new(): LicenseManager;
     CurrentContext: LicenseContext;
     readonly UsageMode: LicenseUsageMode;
     CreateWithContext(type_: Type, creationContext: LicenseContext, args: unknown[]): unknown;
@@ -1917,9 +1917,9 @@ export interface LicenseProviderAttribute$instance extends Attribute {
 
 
 export const LicenseProviderAttribute: {
-    new(): LicenseProviderAttribute$instance;
-    new(typeName: string): LicenseProviderAttribute$instance;
-    new(type_: Type): LicenseProviderAttribute$instance;
+    new(): LicenseProviderAttribute;
+    new(typeName: string): LicenseProviderAttribute;
+    new(type_: Type): LicenseProviderAttribute;
     readonly Default: LicenseProviderAttribute;
 };
 
@@ -1932,7 +1932,7 @@ export interface LicFileLicenseProvider$instance extends LicenseProvider {
 
 
 export const LicFileLicenseProvider: {
-    new(): LicFileLicenseProvider$instance;
+    new(): LicFileLicenseProvider;
 };
 
 
@@ -1947,8 +1947,8 @@ export interface ListBindableAttribute$instance extends Attribute {
 
 
 export const ListBindableAttribute: {
-    new(listBindable: boolean): ListBindableAttribute$instance;
-    new(flags: BindableSupport): ListBindableAttribute$instance;
+    new(listBindable: boolean): ListBindableAttribute;
+    new(flags: BindableSupport): ListBindableAttribute;
     readonly Yes: ListBindableAttribute;
     readonly No: ListBindableAttribute;
     readonly Default: ListBindableAttribute;
@@ -1966,10 +1966,10 @@ export interface ListChangedEventArgs$instance extends EventArgs {
 
 
 export const ListChangedEventArgs: {
-    new(listChangedType: ListChangedType, newIndex: int): ListChangedEventArgs$instance;
-    new(listChangedType: ListChangedType, newIndex: int, propDesc: PropertyDescriptor): ListChangedEventArgs$instance;
-    new(listChangedType: ListChangedType, propDesc: PropertyDescriptor): ListChangedEventArgs$instance;
-    new(listChangedType: ListChangedType, newIndex: int, oldIndex: int): ListChangedEventArgs$instance;
+    new(listChangedType: ListChangedType, newIndex: int): ListChangedEventArgs;
+    new(listChangedType: ListChangedType, newIndex: int, propDesc: PropertyDescriptor): ListChangedEventArgs;
+    new(listChangedType: ListChangedType, propDesc: PropertyDescriptor): ListChangedEventArgs;
+    new(listChangedType: ListChangedType, newIndex: int, oldIndex: int): ListChangedEventArgs;
 };
 
 
@@ -1982,7 +1982,7 @@ export interface ListSortDescription$instance {
 
 
 export const ListSortDescription: {
-    new(property: PropertyDescriptor, direction: ListSortDirection): ListSortDescription$instance;
+    new(property: PropertyDescriptor, direction: ListSortDirection): ListSortDescription;
 };
 
 
@@ -1998,8 +1998,8 @@ export interface ListSortDescriptionCollection$instance {
 
 
 export const ListSortDescriptionCollection: {
-    new(): ListSortDescriptionCollection$instance;
-    new(sorts: ListSortDescription[]): ListSortDescriptionCollection$instance;
+    new(): ListSortDescriptionCollection;
+    new(sorts: ListSortDescription[]): ListSortDescriptionCollection;
 };
 
 
@@ -2021,7 +2021,7 @@ export interface LocalizableAttribute$instance extends Attribute {
 
 
 export const LocalizableAttribute: {
-    new(isLocalizable: boolean): LocalizableAttribute$instance;
+    new(isLocalizable: boolean): LocalizableAttribute;
     readonly Yes: LocalizableAttribute;
     readonly No: LocalizableAttribute;
     readonly Default: LocalizableAttribute;
@@ -2041,8 +2041,8 @@ export interface LookupBindingPropertiesAttribute$instance extends Attribute {
 
 
 export const LookupBindingPropertiesAttribute: {
-    new(): LookupBindingPropertiesAttribute$instance;
-    new(dataSource: string, displayMember: string, valueMember: string, lookupMember: string): LookupBindingPropertiesAttribute$instance;
+    new(): LookupBindingPropertiesAttribute;
+    new(dataSource: string, displayMember: string, valueMember: string, lookupMember: string): LookupBindingPropertiesAttribute;
     readonly Default: LookupBindingPropertiesAttribute;
 };
 
@@ -2060,7 +2060,7 @@ export interface MarshalByValueComponent$instance {
 
 
 export const MarshalByValueComponent: {
-    new(): MarshalByValueComponent$instance;
+    new(): MarshalByValueComponent;
 };
 
 
@@ -2147,13 +2147,13 @@ export interface MaskedTextProvider$instance {
 
 
 export const MaskedTextProvider: {
-    new(mask: string): MaskedTextProvider$instance;
-    new(mask: string, restrictToAscii: boolean): MaskedTextProvider$instance;
-    new(mask: string, culture: CultureInfo): MaskedTextProvider$instance;
-    new(mask: string, culture: CultureInfo, restrictToAscii: boolean): MaskedTextProvider$instance;
-    new(mask: string, passwordChar: char, allowPromptAsInput: boolean): MaskedTextProvider$instance;
-    new(mask: string, culture: CultureInfo, passwordChar: char, allowPromptAsInput: boolean): MaskedTextProvider$instance;
-    new(mask: string, culture: CultureInfo, allowPromptAsInput: boolean, promptChar: char, passwordChar: char, restrictToAscii: boolean): MaskedTextProvider$instance;
+    new(mask: string): MaskedTextProvider;
+    new(mask: string, restrictToAscii: boolean): MaskedTextProvider;
+    new(mask: string, culture: CultureInfo): MaskedTextProvider;
+    new(mask: string, culture: CultureInfo, restrictToAscii: boolean): MaskedTextProvider;
+    new(mask: string, passwordChar: char, allowPromptAsInput: boolean): MaskedTextProvider;
+    new(mask: string, culture: CultureInfo, passwordChar: char, allowPromptAsInput: boolean): MaskedTextProvider;
+    new(mask: string, culture: CultureInfo, allowPromptAsInput: boolean, promptChar: char, passwordChar: char, restrictToAscii: boolean): MaskedTextProvider;
     readonly DefaultPasswordChar: char;
     readonly InvalidIndex: int;
     GetOperationResultFromHint(hint: MaskedTextResultHint): boolean;
@@ -2200,7 +2200,7 @@ export interface MergablePropertyAttribute$instance extends Attribute {
 
 
 export const MergablePropertyAttribute: {
-    new(allowMerge: boolean): MergablePropertyAttribute$instance;
+    new(allowMerge: boolean): MergablePropertyAttribute;
     readonly Yes: MergablePropertyAttribute;
     readonly No: MergablePropertyAttribute;
     readonly Default: MergablePropertyAttribute;
@@ -2221,7 +2221,7 @@ export interface MultilineStringConverter$instance extends TypeConverter {
 
 
 export const MultilineStringConverter: {
-    new(): MultilineStringConverter$instance;
+    new(): MultilineStringConverter;
 };
 
 
@@ -2236,7 +2236,7 @@ export interface NestedContainer$instance extends Container$instance {
 
 
 export const NestedContainer: {
-    new(owner: IComponent): NestedContainer$instance;
+    new(owner: IComponent): NestedContainer;
 };
 
 
@@ -2258,7 +2258,7 @@ export interface NotifyParentPropertyAttribute$instance extends Attribute {
 
 
 export const NotifyParentPropertyAttribute: {
-    new(notifyParent: boolean): NotifyParentPropertyAttribute$instance;
+    new(notifyParent: boolean): NotifyParentPropertyAttribute;
     readonly Yes: NotifyParentPropertyAttribute;
     readonly No: NotifyParentPropertyAttribute;
     readonly Default: NotifyParentPropertyAttribute;
@@ -2300,7 +2300,7 @@ export interface NullableConverter$instance extends TypeConverter {
 
 
 export const NullableConverter: {
-    new(type_: Type): NullableConverter$instance;
+    new(type_: Type): NullableConverter;
 };
 
 
@@ -2315,8 +2315,8 @@ export interface ParenthesizePropertyNameAttribute$instance extends Attribute {
 
 
 export const ParenthesizePropertyNameAttribute: {
-    new(): ParenthesizePropertyNameAttribute$instance;
-    new(needParenthesis: boolean): ParenthesizePropertyNameAttribute$instance;
+    new(): ParenthesizePropertyNameAttribute;
+    new(needParenthesis: boolean): ParenthesizePropertyNameAttribute;
     readonly Default: ParenthesizePropertyNameAttribute;
 };
 
@@ -2332,8 +2332,8 @@ export interface PasswordPropertyTextAttribute$instance extends Attribute {
 
 
 export const PasswordPropertyTextAttribute: {
-    new(): PasswordPropertyTextAttribute$instance;
-    new(password: boolean): PasswordPropertyTextAttribute$instance;
+    new(): PasswordPropertyTextAttribute;
+    new(password: boolean): PasswordPropertyTextAttribute;
     readonly Yes: PasswordPropertyTextAttribute;
     readonly No: PasswordPropertyTextAttribute;
     readonly Default: PasswordPropertyTextAttribute;
@@ -2349,7 +2349,7 @@ export interface ProgressChangedEventArgs$instance extends EventArgs {
 
 
 export const ProgressChangedEventArgs: {
-    new(progressPercentage: int, userState: unknown): ProgressChangedEventArgs$instance;
+    new(progressPercentage: int, userState: unknown): ProgressChangedEventArgs;
 };
 
 
@@ -2361,7 +2361,7 @@ export interface PropertyChangedEventArgs$instance extends EventArgs {
 
 
 export const PropertyChangedEventArgs: {
-    new(propertyName: string): PropertyChangedEventArgs$instance;
+    new(propertyName: string): PropertyChangedEventArgs;
 };
 
 
@@ -2373,7 +2373,7 @@ export interface PropertyChangingEventArgs$instance extends EventArgs {
 
 
 export const PropertyChangingEventArgs: {
-    new(propertyName: string): PropertyChangingEventArgs$instance;
+    new(propertyName: string): PropertyChangingEventArgs;
 };
 
 
@@ -2433,8 +2433,8 @@ export interface PropertyDescriptorCollection$instance {
 
 
 export const PropertyDescriptorCollection: {
-    new(properties: PropertyDescriptor[]): PropertyDescriptorCollection$instance;
-    new(properties: PropertyDescriptor[], readOnly: boolean): PropertyDescriptorCollection$instance;
+    new(properties: PropertyDescriptor[]): PropertyDescriptorCollection;
+    new(properties: PropertyDescriptor[], readOnly: boolean): PropertyDescriptorCollection;
     readonly Empty: PropertyDescriptorCollection;
 };
 
@@ -2459,11 +2459,11 @@ export interface PropertyTabAttribute$instance extends Attribute {
 
 
 export const PropertyTabAttribute: {
-    new(): PropertyTabAttribute$instance;
-    new(tabClass: Type): PropertyTabAttribute$instance;
-    new(tabClassName: string): PropertyTabAttribute$instance;
-    new(tabClass: Type, tabScope: PropertyTabScope): PropertyTabAttribute$instance;
-    new(tabClassName: string, tabScope: PropertyTabScope): PropertyTabAttribute$instance;
+    new(): PropertyTabAttribute;
+    new(tabClass: Type): PropertyTabAttribute;
+    new(tabClassName: string): PropertyTabAttribute;
+    new(tabClass: Type, tabScope: PropertyTabScope): PropertyTabAttribute;
+    new(tabClassName: string, tabScope: PropertyTabScope): PropertyTabAttribute;
 };
 
 
@@ -2479,8 +2479,8 @@ export interface ProvidePropertyAttribute$instance extends Attribute {
 
 
 export const ProvidePropertyAttribute: {
-    new(propertyName: string, receiverType: Type): ProvidePropertyAttribute$instance;
-    new(propertyName: string, receiverTypeName: string): ProvidePropertyAttribute$instance;
+    new(propertyName: string, receiverType: Type): ProvidePropertyAttribute;
+    new(propertyName: string, receiverTypeName: string): ProvidePropertyAttribute;
 };
 
 
@@ -2495,7 +2495,7 @@ export interface ReadOnlyAttribute$instance extends Attribute {
 
 
 export const ReadOnlyAttribute: {
-    new(isReadOnly: boolean): ReadOnlyAttribute$instance;
+    new(isReadOnly: boolean): ReadOnlyAttribute;
     readonly Yes: ReadOnlyAttribute;
     readonly No: ReadOnlyAttribute;
     readonly Default: ReadOnlyAttribute;
@@ -2513,7 +2513,7 @@ export interface RecommendedAsConfigurableAttribute$instance extends Attribute {
 
 
 export const RecommendedAsConfigurableAttribute: {
-    new(recommendedAsConfigurable: boolean): RecommendedAsConfigurableAttribute$instance;
+    new(recommendedAsConfigurable: boolean): RecommendedAsConfigurableAttribute;
     readonly No: RecommendedAsConfigurableAttribute;
     readonly Yes: RecommendedAsConfigurableAttribute;
     readonly Default: RecommendedAsConfigurableAttribute;
@@ -2539,7 +2539,7 @@ export interface ReferenceConverter$instance extends TypeConverter {
 
 
 export const ReferenceConverter: {
-    new(type_: Type): ReferenceConverter$instance;
+    new(type_: Type): ReferenceConverter;
 };
 
 
@@ -2552,8 +2552,8 @@ export interface RefreshEventArgs$instance extends EventArgs {
 
 
 export const RefreshEventArgs: {
-    new(componentChanged: unknown): RefreshEventArgs$instance;
-    new(typeChanged: Type): RefreshEventArgs$instance;
+    new(componentChanged: unknown): RefreshEventArgs;
+    new(typeChanged: Type): RefreshEventArgs;
 };
 
 
@@ -2568,7 +2568,7 @@ export interface RefreshPropertiesAttribute$instance extends Attribute {
 
 
 export const RefreshPropertiesAttribute: {
-    new(refresh: RefreshProperties): RefreshPropertiesAttribute$instance;
+    new(refresh: RefreshProperties): RefreshPropertiesAttribute;
     readonly All: RefreshPropertiesAttribute;
     readonly Repaint: RefreshPropertiesAttribute;
     readonly Default: RefreshPropertiesAttribute;
@@ -2586,7 +2586,7 @@ export interface RunInstallerAttribute$instance extends Attribute {
 
 
 export const RunInstallerAttribute: {
-    new(runInstaller: boolean): RunInstallerAttribute$instance;
+    new(runInstaller: boolean): RunInstallerAttribute;
     readonly Yes: RunInstallerAttribute;
     readonly No: RunInstallerAttribute;
     readonly Default: RunInstallerAttribute;
@@ -2602,7 +2602,7 @@ export interface RunWorkerCompletedEventArgs$instance extends AsyncCompletedEven
 
 
 export const RunWorkerCompletedEventArgs: {
-    new(result: unknown, error: Exception, cancelled: boolean): RunWorkerCompletedEventArgs$instance;
+    new(result: unknown, error: Exception, cancelled: boolean): RunWorkerCompletedEventArgs;
 };
 
 
@@ -2613,7 +2613,7 @@ export interface SByteConverter$instance extends BaseNumberConverter {
 
 
 export const SByteConverter: {
-    new(): SByteConverter$instance;
+    new(): SByteConverter;
 };
 
 
@@ -2627,7 +2627,7 @@ export interface SettingsBindableAttribute$instance extends Attribute {
 
 
 export const SettingsBindableAttribute: {
-    new(bindable: boolean): SettingsBindableAttribute$instance;
+    new(bindable: boolean): SettingsBindableAttribute;
     readonly Yes: SettingsBindableAttribute;
     readonly No: SettingsBindableAttribute;
 };
@@ -2640,7 +2640,7 @@ export interface SingleConverter$instance extends BaseNumberConverter {
 
 
 export const SingleConverter: {
-    new(): SingleConverter$instance;
+    new(): SingleConverter;
 };
 
 
@@ -2655,7 +2655,7 @@ export interface StringConverter$instance extends TypeConverter {
 
 
 export const StringConverter: {
-    new(): StringConverter$instance;
+    new(): StringConverter;
 };
 
 
@@ -2674,7 +2674,7 @@ export interface TimeOnlyConverter$instance extends TypeConverter {
 
 
 export const TimeOnlyConverter: {
-    new(): TimeOnlyConverter$instance;
+    new(): TimeOnlyConverter;
 };
 
 
@@ -2693,7 +2693,7 @@ export interface TimeSpanConverter$instance extends TypeConverter {
 
 
 export const TimeSpanConverter: {
-    new(): TimeSpanConverter$instance;
+    new(): TimeSpanConverter;
 };
 
 
@@ -2709,9 +2709,9 @@ export interface ToolboxItemAttribute$instance extends Attribute {
 
 
 export const ToolboxItemAttribute: {
-    new(defaultType: boolean): ToolboxItemAttribute$instance;
-    new(toolboxItemTypeName: string): ToolboxItemAttribute$instance;
-    new(toolboxItemType: Type): ToolboxItemAttribute$instance;
+    new(defaultType: boolean): ToolboxItemAttribute;
+    new(toolboxItemTypeName: string): ToolboxItemAttribute;
+    new(toolboxItemType: Type): ToolboxItemAttribute;
     readonly Default: ToolboxItemAttribute;
     readonly None: ToolboxItemAttribute;
 };
@@ -2731,8 +2731,8 @@ export interface ToolboxItemFilterAttribute$instance extends Attribute {
 
 
 export const ToolboxItemFilterAttribute: {
-    new(filterString: string): ToolboxItemFilterAttribute$instance;
-    new(filterString: string, filterType: ToolboxItemFilterType): ToolboxItemFilterAttribute$instance;
+    new(filterString: string): ToolboxItemFilterAttribute;
+    new(filterString: string, filterType: ToolboxItemFilterType): ToolboxItemFilterAttribute;
 };
 
 
@@ -2778,7 +2778,7 @@ export interface TypeConverter$instance {
 
 
 export const TypeConverter: {
-    new(): TypeConverter$instance;
+    new(): TypeConverter;
 };
 
 
@@ -2793,7 +2793,7 @@ export interface TypeConverter_StandardValuesCollection$instance {
 
 
 export const TypeConverter_StandardValuesCollection: {
-    new(values: ICollection): TypeConverter_StandardValuesCollection$instance;
+    new(values: ICollection): TypeConverter_StandardValuesCollection;
 };
 
 
@@ -2813,9 +2813,9 @@ export interface TypeConverterAttribute$instance extends Attribute {
 
 
 export const TypeConverterAttribute: {
-    new(): TypeConverterAttribute$instance;
-    new(type_: Type): TypeConverterAttribute$instance;
-    new(typeName: string): TypeConverterAttribute$instance;
+    new(): TypeConverterAttribute;
+    new(type_: Type): TypeConverterAttribute;
+    new(typeName: string): TypeConverterAttribute;
     readonly Default: TypeConverterAttribute;
 };
 
@@ -2857,8 +2857,8 @@ export interface TypeDescriptionProviderAttribute$instance extends Attribute {
 
 
 export const TypeDescriptionProviderAttribute: {
-    new(typeName: string): TypeDescriptionProviderAttribute$instance;
-    new(type_: Type): TypeDescriptionProviderAttribute$instance;
+    new(typeName: string): TypeDescriptionProviderAttribute;
+    new(type_: Type): TypeDescriptionProviderAttribute;
 };
 
 
@@ -2869,7 +2869,7 @@ export interface TypeDescriptor$instance {
 
 
 export const TypeDescriptor: {
-    new(): TypeDescriptor$instance;
+    new(): TypeDescriptor;
     readonly InterfaceType: Type;
     readonly ComObjectType: Type;
     ComNativeDescriptorHandler: IComNativeDescriptorHandler;
@@ -2976,7 +2976,7 @@ export interface UInt128Converter$instance extends BaseNumberConverter {
 
 
 export const UInt128Converter: {
-    new(): UInt128Converter$instance;
+    new(): UInt128Converter;
 };
 
 
@@ -2987,7 +2987,7 @@ export interface UInt16Converter$instance extends BaseNumberConverter {
 
 
 export const UInt16Converter: {
-    new(): UInt16Converter$instance;
+    new(): UInt16Converter;
 };
 
 
@@ -2998,7 +2998,7 @@ export interface UInt32Converter$instance extends BaseNumberConverter {
 
 
 export const UInt32Converter: {
-    new(): UInt32Converter$instance;
+    new(): UInt32Converter;
 };
 
 
@@ -3009,7 +3009,7 @@ export interface UInt64Converter$instance extends BaseNumberConverter {
 
 
 export const UInt64Converter: {
-    new(): UInt64Converter$instance;
+    new(): UInt64Converter;
 };
 
 
@@ -3030,7 +3030,7 @@ export interface VersionConverter$instance extends TypeConverter {
 
 
 export const VersionConverter: {
-    new(): VersionConverter$instance;
+    new(): VersionConverter;
 };
 
 
@@ -3044,11 +3044,11 @@ export interface WarningException$instance extends SystemException {
 
 
 export const WarningException: {
-    new(): WarningException$instance;
-    new(message: string): WarningException$instance;
-    new(message: string, helpUrl: string): WarningException$instance;
-    new(message: string, innerException: Exception): WarningException$instance;
-    new(message: string, helpUrl: string, helpTopic: string): WarningException$instance;
+    new(): WarningException;
+    new(message: string): WarningException;
+    new(message: string, helpUrl: string): WarningException;
+    new(message: string, innerException: Exception): WarningException;
+    new(message: string, helpUrl: string, helpTopic: string): WarningException;
 };
 
 
@@ -3067,11 +3067,11 @@ export interface Win32Exception$instance extends ExternalException {
 
 
 export const Win32Exception: {
-    new(): Win32Exception$instance;
-    new(error: int): Win32Exception$instance;
-    new(error: int, message: string): Win32Exception$instance;
-    new(message: string): Win32Exception$instance;
-    new(message: string, innerException: Exception): Win32Exception$instance;
+    new(): Win32Exception;
+    new(error: int): Win32Exception;
+    new(error: int, message: string): Win32Exception;
+    new(message: string): Win32Exception;
+    new(message: string, innerException: Exception): Win32Exception;
 };
 
 

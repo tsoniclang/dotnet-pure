@@ -46,7 +46,7 @@ export interface CSharpArgumentInfo$instance {
 
 
 export const CSharpArgumentInfo: {
-    new(): CSharpArgumentInfo$instance;
+    new(): CSharpArgumentInfo;
     Create(flags: CSharpArgumentInfoFlags, name: string): CSharpArgumentInfo;
 };
 
@@ -59,9 +59,9 @@ export interface RuntimeBinderException$instance extends Exception {
 
 
 export const RuntimeBinderException: {
-    new(): RuntimeBinderException$instance;
-    new(message: string): RuntimeBinderException$instance;
-    new(message: string, innerException: Exception): RuntimeBinderException$instance;
+    new(): RuntimeBinderException;
+    new(message: string): RuntimeBinderException;
+    new(message: string, innerException: Exception): RuntimeBinderException;
 };
 
 
@@ -78,9 +78,9 @@ export interface RuntimeBinderInternalCompilerException$instance extends Excepti
 
 
 export const RuntimeBinderInternalCompilerException: {
-    new(): RuntimeBinderInternalCompilerException$instance;
-    new(message: string): RuntimeBinderInternalCompilerException$instance;
-    new(message: string, innerException: Exception): RuntimeBinderInternalCompilerException$instance;
+    new(): RuntimeBinderInternalCompilerException;
+    new(message: string): RuntimeBinderInternalCompilerException;
+    new(message: string, innerException: Exception): RuntimeBinderInternalCompilerException;
 };
 
 

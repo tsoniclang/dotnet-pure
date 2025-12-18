@@ -201,7 +201,7 @@ export interface CodeViewDebugDirectoryData$instance {
 
 
 export const CodeViewDebugDirectoryData: {
-    new(): CodeViewDebugDirectoryData$instance;
+    new(): CodeViewDebugDirectoryData;
 };
 
 
@@ -220,7 +220,7 @@ export interface DebugDirectoryEntry$instance {
 
 
 export const DebugDirectoryEntry: {
-    new(stamp: uint, majorVersion: ushort, minorVersion: ushort, type_: DebugDirectoryEntryType, dataSize: int, dataRelativeVirtualAddress: int, dataPointer: int): DebugDirectoryEntry$instance;
+    new(stamp: uint, majorVersion: ushort, minorVersion: ushort, type_: DebugDirectoryEntryType, dataSize: int, dataRelativeVirtualAddress: int, dataPointer: int): DebugDirectoryEntry;
 };
 
 
@@ -233,7 +233,7 @@ export interface DirectoryEntry$instance {
 
 
 export const DirectoryEntry: {
-    new(relativeVirtualAddress: int, size: int): DirectoryEntry$instance;
+    new(relativeVirtualAddress: int, size: int): DirectoryEntry;
 };
 
 
@@ -246,7 +246,7 @@ export interface PdbChecksumDebugDirectoryData$instance {
 
 
 export const PdbChecksumDebugDirectoryData: {
-    new(): PdbChecksumDebugDirectoryData$instance;
+    new(): PdbChecksumDebugDirectoryData;
 };
 
 
@@ -263,7 +263,7 @@ export interface PEMemoryBlock$instance {
 
 
 export const PEMemoryBlock: {
-    new(): PEMemoryBlock$instance;
+    new(): PEMemoryBlock;
 };
 
 
@@ -284,7 +284,7 @@ export interface SectionHeader$instance {
 
 
 export const SectionHeader: {
-    new(): SectionHeader$instance;
+    new(): SectionHeader;
 };
 
 
@@ -297,7 +297,7 @@ export interface SectionLocation$instance {
 
 
 export const SectionLocation: {
-    new(relativeVirtualAddress: int, pointerToRawData: int): SectionLocation$instance;
+    new(relativeVirtualAddress: int, pointerToRawData: int): SectionLocation;
 };
 
 
@@ -315,7 +315,7 @@ export interface CoffHeader$instance {
 
 
 export const CoffHeader: {
-    new(): CoffHeader$instance;
+    new(): CoffHeader;
 };
 
 
@@ -337,7 +337,7 @@ export interface CorHeader$instance {
 
 
 export const CorHeader: {
-    new(): CorHeader$instance;
+    new(): CorHeader;
 };
 
 
@@ -355,7 +355,7 @@ export interface DebugDirectoryBuilder$instance {
 
 
 export const DebugDirectoryBuilder: {
-    new(): DebugDirectoryBuilder$instance;
+    new(): DebugDirectoryBuilder;
 };
 
 
@@ -367,7 +367,7 @@ export interface ManagedPEBuilder$instance extends PEBuilder {
 
 
 export const ManagedPEBuilder: {
-    new(header: PEHeaderBuilder, metadataRootBuilder: MetadataRootBuilder, ilStream: BlobBuilder, mappedFieldData: BlobBuilder, managedResources: BlobBuilder, nativeResources: ResourceSectionBuilder, debugDirectoryBuilder: DebugDirectoryBuilder, strongNameSignatureSize: int, entryPoint: MethodDefinitionHandle, flags: CorFlags, deterministicIdProvider: Func_2<IEnumerable_1<Blob>, BlobContentId>): ManagedPEBuilder$instance;
+    new(header: PEHeaderBuilder, metadataRootBuilder: MetadataRootBuilder, ilStream: BlobBuilder, mappedFieldData: BlobBuilder, managedResources: BlobBuilder, nativeResources: ResourceSectionBuilder, debugDirectoryBuilder: DebugDirectoryBuilder, strongNameSignatureSize: int, entryPoint: MethodDefinitionHandle, flags: CorFlags, deterministicIdProvider: Func_2<IEnumerable_1<Blob>, BlobContentId>): ManagedPEBuilder;
     readonly ManagedResourcesDataAlignment: int;
     readonly MappedFieldDataAlignment: int;
 };
@@ -409,7 +409,7 @@ export interface PEDirectoriesBuilder$instance {
 
 
 export const PEDirectoriesBuilder: {
-    new(): PEDirectoriesBuilder$instance;
+    new(): PEDirectoriesBuilder;
 };
 
 
@@ -463,7 +463,7 @@ export interface PEHeader$instance {
 
 
 export const PEHeader: {
-    new(): PEHeader$instance;
+    new(): PEHeader;
 };
 
 
@@ -493,7 +493,7 @@ export interface PEHeaderBuilder$instance {
 
 
 export const PEHeaderBuilder: {
-    new(machine: Machine, sectionAlignment: int, fileAlignment: int, imageBase: ulong, majorLinkerVersion: byte, minorLinkerVersion: byte, majorOperatingSystemVersion: ushort, minorOperatingSystemVersion: ushort, majorImageVersion: ushort, minorImageVersion: ushort, majorSubsystemVersion: ushort, minorSubsystemVersion: ushort, subsystem: Subsystem, dllCharacteristics: DllCharacteristics, imageCharacteristics: Characteristics, sizeOfStackReserve: ulong, sizeOfStackCommit: ulong, sizeOfHeapReserve: ulong, sizeOfHeapCommit: ulong): PEHeaderBuilder$instance;
+    new(machine: Machine, sectionAlignment: int, fileAlignment: int, imageBase: ulong, majorLinkerVersion: byte, minorLinkerVersion: byte, majorOperatingSystemVersion: ushort, minorOperatingSystemVersion: ushort, majorImageVersion: ushort, minorImageVersion: ushort, majorSubsystemVersion: ushort, minorSubsystemVersion: ushort, subsystem: Subsystem, dllCharacteristics: DllCharacteristics, imageCharacteristics: Characteristics, sizeOfStackReserve: ulong, sizeOfStackCommit: ulong, sizeOfHeapReserve: ulong, sizeOfHeapCommit: ulong): PEHeaderBuilder;
     CreateExecutableHeader(): PEHeaderBuilder;
     CreateLibraryHeader(): PEHeaderBuilder;
 };
@@ -521,9 +521,9 @@ export interface PEHeaders$instance {
 
 
 export const PEHeaders: {
-    new(peStream: Stream): PEHeaders$instance;
-    new(peStream: Stream, size: int): PEHeaders$instance;
-    new(peStream: Stream, size: int, isLoadedImage: boolean): PEHeaders$instance;
+    new(peStream: Stream): PEHeaders;
+    new(peStream: Stream, size: int): PEHeaders;
+    new(peStream: Stream, size: int, isLoadedImage: boolean): PEHeaders;
 };
 
 
@@ -548,12 +548,12 @@ export interface PEReader$instance {
 
 
 export const PEReader: {
-    new(peImage: ptr<byte>, size: int): PEReader$instance;
-    new(peImage: ptr<byte>, size: int, isLoadedImage: boolean): PEReader$instance;
-    new(peStream: Stream): PEReader$instance;
-    new(peStream: Stream, options: PEStreamOptions): PEReader$instance;
-    new(peStream: Stream, options: PEStreamOptions, size: int): PEReader$instance;
-    new(peImage: ImmutableArray_1<System_Internal.Byte>): PEReader$instance;
+    new(peImage: ptr<byte>, size: int): PEReader;
+    new(peImage: ptr<byte>, size: int, isLoadedImage: boolean): PEReader;
+    new(peStream: Stream): PEReader;
+    new(peStream: Stream, options: PEStreamOptions): PEReader;
+    new(peStream: Stream, options: PEStreamOptions, size: int): PEReader;
+    new(peImage: ImmutableArray_1<System_Internal.Byte>): PEReader;
 };
 
 

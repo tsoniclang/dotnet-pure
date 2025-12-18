@@ -24,7 +24,7 @@ export interface Vector128_1$instance<T> extends IAdditionOperators_3<Vector128_
 
 
 export const Vector128_1: {
-    new<T>(): Vector128_1$instance<T>;
+    new<T>(): Vector128_1<T>;
     readonly AllBitsSet: unknown;
     readonly Count: int;
     readonly Indices: unknown;
@@ -56,7 +56,7 @@ export interface Vector256_1$instance<T> extends IAdditionOperators_3<Vector256_
 
 
 export const Vector256_1: {
-    new<T>(): Vector256_1$instance<T>;
+    new<T>(): Vector256_1<T>;
     readonly AllBitsSet: unknown;
     readonly Count: int;
     readonly Indices: unknown;
@@ -88,7 +88,7 @@ export interface Vector512_1$instance<T> extends IAdditionOperators_3<Vector512_
 
 
 export const Vector512_1: {
-    new<T>(): Vector512_1$instance<T>;
+    new<T>(): Vector512_1<T>;
     readonly AllBitsSet: unknown;
     readonly Count: int;
     readonly Indices: unknown;
@@ -120,7 +120,7 @@ export interface Vector64_1$instance<T> extends IAdditionOperators_3<Vector64_1<
 
 
 export const Vector64_1: {
-    new<T>(): Vector64_1$instance<T>;
+    new<T>(): Vector64_1<T>;
     readonly AllBitsSet: unknown;
     readonly Count: int;
     readonly Indices: unknown;

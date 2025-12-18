@@ -216,7 +216,7 @@ export interface Color$instance {
 
 
 export const Color: {
-    new(): Color$instance;
+    new(): Color;
     readonly Empty: Color;
     readonly Transparent: Color;
     readonly AliceBlue: Color;
@@ -393,9 +393,9 @@ export interface Point$instance {
 
 
 export const Point: {
-    new(x: int, y: int): Point$instance;
-    new(sz: Size): Point$instance;
-    new(dw: int): Point$instance;
+    new(x: int, y: int): Point;
+    new(sz: Size): Point;
+    new(dw: int): Point;
     readonly Empty: Point;
     Add(pt: Point, sz: Size): Point;
     Ceiling(value: PointF): Point;
@@ -428,8 +428,8 @@ export interface PointF$instance {
 
 
 export const PointF: {
-    new(x: float, y: float): PointF$instance;
-    new(vector: Vector2): PointF$instance;
+    new(x: float, y: float): PointF;
+    new(vector: Vector2): PointF;
     readonly Empty: PointF;
     Add(pt: PointF, sz: Size): PointF;
     Add(pt: PointF, sz: SizeF): PointF;
@@ -477,8 +477,8 @@ export interface Rectangle$instance {
 
 
 export const Rectangle: {
-    new(x: int, y: int, width: int, height: int): Rectangle$instance;
-    new(location: Point, size: Size): Rectangle$instance;
+    new(x: int, y: int, width: int, height: int): Rectangle;
+    new(location: Point, size: Size): Rectangle;
     readonly Empty: Rectangle;
     Ceiling(value: RectangleF): Rectangle;
     FromLTRB(left: int, top: int, right: int, bottom: int): Rectangle;
@@ -530,9 +530,9 @@ export interface RectangleF$instance {
 
 
 export const RectangleF: {
-    new(x: float, y: float, width: float, height: float): RectangleF$instance;
-    new(location: PointF, size: SizeF): RectangleF$instance;
-    new(vector: Vector4): RectangleF$instance;
+    new(x: float, y: float, width: float, height: float): RectangleF;
+    new(location: PointF, size: SizeF): RectangleF;
+    new(vector: Vector4): RectangleF;
     readonly Empty: RectangleF;
     FromLTRB(left: float, top: float, right: float, bottom: float): RectangleF;
     Inflate(rect: RectangleF, x: float, y: float): RectangleF;
@@ -563,8 +563,8 @@ export interface Size$instance {
 
 
 export const Size: {
-    new(pt: Point): Size$instance;
-    new(width: int, height: int): Size$instance;
+    new(pt: Point): Size;
+    new(width: int, height: int): Size;
     readonly Empty: Size;
     Add(sz1: Size, sz2: Size): Size;
     Ceiling(value: SizeF): Size;
@@ -599,10 +599,10 @@ export interface SizeF$instance {
 
 
 export const SizeF: {
-    new(size: SizeF): SizeF$instance;
-    new(pt: PointF): SizeF$instance;
-    new(vector: Vector2): SizeF$instance;
-    new(width: float, height: float): SizeF$instance;
+    new(size: SizeF): SizeF;
+    new(pt: PointF): SizeF;
+    new(vector: Vector2): SizeF;
+    new(width: float, height: float): SizeF;
     readonly Empty: SizeF;
     Add(sz1: SizeF, sz2: SizeF): SizeF;
     Subtract(sz1: SizeF, sz2: SizeF): SizeF;
@@ -636,7 +636,7 @@ export interface ColorConverter$instance extends TypeConverter {
 
 
 export const ColorConverter: {
-    new(): ColorConverter$instance;
+    new(): ColorConverter;
 };
 
 
@@ -664,7 +664,7 @@ export interface PointConverter$instance extends TypeConverter {
 
 
 export const PointConverter: {
-    new(): PointConverter$instance;
+    new(): PointConverter;
 };
 
 
@@ -692,7 +692,7 @@ export interface RectangleConverter$instance extends TypeConverter {
 
 
 export const RectangleConverter: {
-    new(): RectangleConverter$instance;
+    new(): RectangleConverter;
 };
 
 
@@ -720,7 +720,7 @@ export interface SizeConverter$instance extends TypeConverter {
 
 
 export const SizeConverter: {
-    new(): SizeConverter$instance;
+    new(): SizeConverter;
 };
 
 
@@ -748,7 +748,7 @@ export interface SizeFConverter$instance extends TypeConverter {
 
 
 export const SizeFConverter: {
-    new(): SizeFConverter$instance;
+    new(): SizeFConverter;
 };
 
 

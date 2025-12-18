@@ -803,8 +803,8 @@ export interface ArgIterator$instance {
 
 
 export const ArgIterator: {
-    new(arglist: RuntimeArgumentHandle): ArgIterator$instance;
-    new(arglist: RuntimeArgumentHandle, ptr: ptr<void>): ArgIterator$instance;
+    new(arglist: RuntimeArgumentHandle): ArgIterator;
+    new(arglist: RuntimeArgumentHandle, ptr: ptr<void>): ArgIterator;
 };
 
 
@@ -829,8 +829,8 @@ export interface ArraySegment_1$instance<T> {
 
 
 export const ArraySegment_1: {
-    new<T>(array: T[]): ArraySegment_1$instance<T>;
-    new<T>(array: T[], offset: int, count: int): ArraySegment_1$instance<T>;
+    new<T>(array: T[]): ArraySegment_1<T>;
+    new<T>(array: T[], offset: int, count: int): ArraySegment_1<T>;
     readonly Empty: unknown;
 };
 
@@ -855,7 +855,7 @@ export interface ArraySegment_1_Enumerator$instance<T> extends IDisposable {
 
 
 export const ArraySegment_1_Enumerator: {
-    new<T>(): ArraySegment_1_Enumerator$instance<T>;
+    new<T>(): ArraySegment_1_Enumerator<T>;
 };
 
 
@@ -881,7 +881,7 @@ export interface Boolean$instance {
 
 
 export const Boolean: {
-    new(): Boolean$instance;
+    new(): Boolean;
     readonly TrueString: string;
     readonly FalseString: string;
     Parse(value: ReadOnlySpan_1<Char>): boolean;
@@ -926,7 +926,7 @@ export interface Byte$instance extends IBitwiseOperators_3<Byte, Byte, Byte>, IC
 
 
 export const Byte: {
-    new(): Byte$instance;
+    new(): Byte;
     readonly MaxValue: byte;
     readonly MinValue: byte;
     Clamp(value: byte, min: byte, max: byte): byte;
@@ -1014,7 +1014,7 @@ export interface Char$instance extends IBitwiseOperators_3<Char, Char, Char>, IC
 
 
 export const Char: {
-    new(): Char$instance;
+    new(): Char;
     readonly MaxValue: char;
     readonly MinValue: char;
     ConvertFromUtf32(utf32: int): string;
@@ -1122,7 +1122,7 @@ export interface ConsoleKeyInfo$instance {
 
 
 export const ConsoleKeyInfo: {
-    new(keyChar: char, key: ConsoleKey, shift: boolean, alt: boolean, control: boolean): ConsoleKeyInfo$instance;
+    new(keyChar: char, key: ConsoleKey, shift: boolean, alt: boolean, control: boolean): ConsoleKeyInfo;
 };
 
 
@@ -1166,8 +1166,8 @@ export interface DateOnly$instance {
 
 
 export const DateOnly: {
-    new(year: int, month: int, day: int): DateOnly$instance;
-    new(year: int, month: int, day: int, calendar: Calendar): DateOnly$instance;
+    new(year: int, month: int, day: int): DateOnly;
+    new(year: int, month: int, day: int, calendar: Calendar): DateOnly;
     readonly MinValue: DateOnly;
     readonly MaxValue: DateOnly;
     FromDateTime(dateTime: DateTime): DateOnly;
@@ -1283,23 +1283,23 @@ export interface DateTime$instance {
 
 
 export const DateTime: {
-    new(ticks: long): DateTime$instance;
-    new(ticks: long, kind: DateTimeKind): DateTime$instance;
-    new(date: DateOnly, time: TimeOnly): DateTime$instance;
-    new(date: DateOnly, time: TimeOnly, kind: DateTimeKind): DateTime$instance;
-    new(year: int, month: int, day: int): DateTime$instance;
-    new(year: int, month: int, day: int, calendar: Calendar): DateTime$instance;
-    new(year: int, month: int, day: int, hour: int, minute: int, second: int, millisecond: int, calendar: Calendar, kind: DateTimeKind): DateTime$instance;
-    new(year: int, month: int, day: int, hour: int, minute: int, second: int): DateTime$instance;
-    new(year: int, month: int, day: int, hour: int, minute: int, second: int, kind: DateTimeKind): DateTime$instance;
-    new(year: int, month: int, day: int, hour: int, minute: int, second: int, calendar: Calendar): DateTime$instance;
-    new(year: int, month: int, day: int, hour: int, minute: int, second: int, millisecond: int): DateTime$instance;
-    new(year: int, month: int, day: int, hour: int, minute: int, second: int, millisecond: int, kind: DateTimeKind): DateTime$instance;
-    new(year: int, month: int, day: int, hour: int, minute: int, second: int, millisecond: int, calendar: Calendar): DateTime$instance;
-    new(year: int, month: int, day: int, hour: int, minute: int, second: int, millisecond: int, microsecond: int): DateTime$instance;
-    new(year: int, month: int, day: int, hour: int, minute: int, second: int, millisecond: int, microsecond: int, kind: DateTimeKind): DateTime$instance;
-    new(year: int, month: int, day: int, hour: int, minute: int, second: int, millisecond: int, microsecond: int, calendar: Calendar): DateTime$instance;
-    new(year: int, month: int, day: int, hour: int, minute: int, second: int, millisecond: int, microsecond: int, calendar: Calendar, kind: DateTimeKind): DateTime$instance;
+    new(ticks: long): DateTime;
+    new(ticks: long, kind: DateTimeKind): DateTime;
+    new(date: DateOnly, time: TimeOnly): DateTime;
+    new(date: DateOnly, time: TimeOnly, kind: DateTimeKind): DateTime;
+    new(year: int, month: int, day: int): DateTime;
+    new(year: int, month: int, day: int, calendar: Calendar): DateTime;
+    new(year: int, month: int, day: int, hour: int, minute: int, second: int, millisecond: int, calendar: Calendar, kind: DateTimeKind): DateTime;
+    new(year: int, month: int, day: int, hour: int, minute: int, second: int): DateTime;
+    new(year: int, month: int, day: int, hour: int, minute: int, second: int, kind: DateTimeKind): DateTime;
+    new(year: int, month: int, day: int, hour: int, minute: int, second: int, calendar: Calendar): DateTime;
+    new(year: int, month: int, day: int, hour: int, minute: int, second: int, millisecond: int): DateTime;
+    new(year: int, month: int, day: int, hour: int, minute: int, second: int, millisecond: int, kind: DateTimeKind): DateTime;
+    new(year: int, month: int, day: int, hour: int, minute: int, second: int, millisecond: int, calendar: Calendar): DateTime;
+    new(year: int, month: int, day: int, hour: int, minute: int, second: int, millisecond: int, microsecond: int): DateTime;
+    new(year: int, month: int, day: int, hour: int, minute: int, second: int, millisecond: int, microsecond: int, kind: DateTimeKind): DateTime;
+    new(year: int, month: int, day: int, hour: int, minute: int, second: int, millisecond: int, microsecond: int, calendar: Calendar): DateTime;
+    new(year: int, month: int, day: int, hour: int, minute: int, second: int, millisecond: int, microsecond: int, calendar: Calendar, kind: DateTimeKind): DateTime;
     readonly MinValue: DateTime;
     readonly MaxValue: DateTime;
     readonly UnixEpoch: DateTime;
@@ -1416,15 +1416,15 @@ export interface DateTimeOffset$instance {
 
 
 export const DateTimeOffset: {
-    new(ticks: long, offset: TimeSpan): DateTimeOffset$instance;
-    new(dateTime: DateTime): DateTimeOffset$instance;
-    new(dateTime: DateTime, offset: TimeSpan): DateTimeOffset$instance;
-    new(date: DateOnly, time: TimeOnly, offset: TimeSpan): DateTimeOffset$instance;
-    new(year: int, month: int, day: int, hour: int, minute: int, second: int, offset: TimeSpan): DateTimeOffset$instance;
-    new(year: int, month: int, day: int, hour: int, minute: int, second: int, millisecond: int, offset: TimeSpan): DateTimeOffset$instance;
-    new(year: int, month: int, day: int, hour: int, minute: int, second: int, millisecond: int, calendar: Calendar, offset: TimeSpan): DateTimeOffset$instance;
-    new(year: int, month: int, day: int, hour: int, minute: int, second: int, millisecond: int, microsecond: int, offset: TimeSpan): DateTimeOffset$instance;
-    new(year: int, month: int, day: int, hour: int, minute: int, second: int, millisecond: int, microsecond: int, calendar: Calendar, offset: TimeSpan): DateTimeOffset$instance;
+    new(ticks: long, offset: TimeSpan): DateTimeOffset;
+    new(dateTime: DateTime): DateTimeOffset;
+    new(dateTime: DateTime, offset: TimeSpan): DateTimeOffset;
+    new(date: DateOnly, time: TimeOnly, offset: TimeSpan): DateTimeOffset;
+    new(year: int, month: int, day: int, hour: int, minute: int, second: int, offset: TimeSpan): DateTimeOffset;
+    new(year: int, month: int, day: int, hour: int, minute: int, second: int, millisecond: int, offset: TimeSpan): DateTimeOffset;
+    new(year: int, month: int, day: int, hour: int, minute: int, second: int, millisecond: int, calendar: Calendar, offset: TimeSpan): DateTimeOffset;
+    new(year: int, month: int, day: int, hour: int, minute: int, second: int, millisecond: int, microsecond: int, offset: TimeSpan): DateTimeOffset;
+    new(year: int, month: int, day: int, hour: int, minute: int, second: int, millisecond: int, microsecond: int, calendar: Calendar, offset: TimeSpan): DateTimeOffset;
     readonly MinValue: DateTimeOffset;
     readonly MaxValue: DateTimeOffset;
     readonly UnixEpoch: DateTimeOffset;
@@ -1499,15 +1499,15 @@ export interface Decimal$instance extends IAdditionOperators_3<Decimal, Decimal,
 
 
 export const Decimal: {
-    new(value: int): Decimal$instance;
-    new(value: uint): Decimal$instance;
-    new(value: long): Decimal$instance;
-    new(value: ulong): Decimal$instance;
-    new(value: float): Decimal$instance;
-    new(value: double): Decimal$instance;
-    new(bits: int[]): Decimal$instance;
-    new(bits: ReadOnlySpan_1<Int32>): Decimal$instance;
-    new(lo: int, mid: int, hi: int, isNegative: boolean, scale: byte): Decimal$instance;
+    new(value: int): Decimal;
+    new(value: uint): Decimal;
+    new(value: long): Decimal;
+    new(value: ulong): Decimal;
+    new(value: float): Decimal;
+    new(value: double): Decimal;
+    new(bits: int[]): Decimal;
+    new(bits: ReadOnlySpan_1<Int32>): Decimal;
+    new(lo: int, mid: int, hi: int, isNegative: boolean, scale: byte): Decimal;
     readonly Zero: decimal;
     readonly One: decimal;
     readonly MinusOne: decimal;
@@ -1628,7 +1628,7 @@ export interface Delegate_InvocationListEnumerator_1$instance<TDelegate extends 
 
 
 export const Delegate_InvocationListEnumerator_1: {
-    new<TDelegate extends Function>(): Delegate_InvocationListEnumerator_1$instance<TDelegate>;
+    new<TDelegate extends Function>(): Delegate_InvocationListEnumerator_1<TDelegate>;
 };
 
 
@@ -1651,7 +1651,7 @@ export interface Double$instance extends IBitwiseOperators_3<Double, Double, Dou
 
 
 export const Double: {
-    new(): Double$instance;
+    new(): Double;
     readonly MinValue: double;
     readonly MaxValue: double;
     readonly Epsilon: double;
@@ -1821,7 +1821,7 @@ export interface Environment_ProcessCpuUsage$instance {
 
 
 export const Environment_ProcessCpuUsage: {
-    new(): Environment_ProcessCpuUsage$instance;
+    new(): Environment_ProcessCpuUsage;
 };
 
 
@@ -1836,7 +1836,7 @@ export interface GCGenerationInfo$instance {
 
 
 export const GCGenerationInfo: {
-    new(): GCGenerationInfo$instance;
+    new(): GCGenerationInfo;
 };
 
 
@@ -1863,7 +1863,7 @@ export interface GCMemoryInfo$instance {
 
 
 export const GCMemoryInfo: {
-    new(): GCMemoryInfo$instance;
+    new(): GCMemoryInfo;
 };
 
 
@@ -1890,13 +1890,13 @@ export interface Guid$instance {
 
 
 export const Guid: {
-    new(b: byte[]): Guid$instance;
-    new(b: ReadOnlySpan_1<Byte>): Guid$instance;
-    new(b: ReadOnlySpan_1<Byte>, bigEndian: boolean): Guid$instance;
-    new(a: uint, b: ushort, c: ushort, d: byte, e: byte, f: byte, g: byte, h: byte, i: byte, j: byte, k: byte): Guid$instance;
-    new(a: int, b: short, c: short, d: byte[]): Guid$instance;
-    new(a: int, b: short, c: short, d: byte, e: byte, f: byte, g: byte, h: byte, i: byte, j: byte, k: byte): Guid$instance;
-    new(g: string): Guid$instance;
+    new(b: byte[]): Guid;
+    new(b: ReadOnlySpan_1<Byte>): Guid;
+    new(b: ReadOnlySpan_1<Byte>, bigEndian: boolean): Guid;
+    new(a: uint, b: ushort, c: ushort, d: byte, e: byte, f: byte, g: byte, h: byte, i: byte, j: byte, k: byte): Guid;
+    new(a: int, b: short, c: short, d: byte[]): Guid;
+    new(a: int, b: short, c: short, d: byte, e: byte, f: byte, g: byte, h: byte, i: byte, j: byte, k: byte): Guid;
+    new(g: string): Guid;
     readonly Empty: Guid;
     readonly AllBitsSet: Guid;
     CreateVersion7(): Guid;
@@ -1959,7 +1959,7 @@ export interface Half$instance extends IBitwiseOperators_3<Half, Half, Half>, IC
 
 
 export const Half: {
-    new(): Half$instance;
+    new(): Half;
     readonly Epsilon: half;
     readonly PositiveInfinity: half;
     readonly NegativeInfinity: half;
@@ -2135,7 +2135,7 @@ export interface HashCode$instance {
 
 
 export const HashCode: {
-    new(): HashCode$instance;
+    new(): HashCode;
     Combine<T1, T2, T3, T4, T5, T6, T7, T8>(value1: T1, value2: T2, value3: T3, value4: T4, value5: T5, value6: T6, value7: T7, value8: T8): int;
     Combine<T1, T2, T3, T4, T5, T6, T7>(value1: T1, value2: T2, value3: T3, value4: T4, value5: T5, value6: T6, value7: T7): int;
     Combine<T1, T2, T3, T4, T5, T6>(value1: T1, value2: T2, value3: T3, value4: T4, value5: T5, value6: T6): int;
@@ -2161,7 +2161,7 @@ export interface Index$instance {
 
 
 export const Index: {
-    new(value: int, fromEnd: boolean): Index$instance;
+    new(value: int, fromEnd: boolean): Index;
     readonly Start: Index;
     readonly End: Index;
     FromEnd(value: int): Index;
@@ -2195,7 +2195,7 @@ export interface Int128$instance extends IBitwiseOperators_3<Int128, Int128, Int
 
 
 export const Int128: {
-    new(upper: ulong, lower: ulong): Int128$instance;
+    new(upper: ulong, lower: ulong): Int128;
     readonly MinValue: int128;
     readonly MaxValue: int128;
     readonly One: int128;
@@ -2295,7 +2295,7 @@ export interface Int16$instance extends IBitwiseOperators_3<Int16, Int16, Int16>
 
 
 export const Int16: {
-    new(): Int16$instance;
+    new(): Int16;
     readonly MaxValue: short;
     readonly MinValue: short;
     Abs(value: short): short;
@@ -2393,7 +2393,7 @@ export interface Int32$instance extends IBitwiseOperators_3<Int32, Int32, Int32>
 
 
 export const Int32: {
-    new(): Int32$instance;
+    new(): Int32;
     readonly MaxValue: int;
     readonly MinValue: int;
     Abs(value: int): int;
@@ -2492,7 +2492,7 @@ export interface Int64$instance extends IBitwiseOperators_3<Int64, Int64, Int64>
 
 
 export const Int64: {
-    new(): Int64$instance;
+    new(): Int64;
     readonly MaxValue: long;
     readonly MinValue: long;
     Abs(value: long): long;
@@ -2593,9 +2593,9 @@ export interface IntPtr$instance extends IBitwiseOperators_3<IntPtr, IntPtr, Int
 
 
 export const IntPtr: {
-    new(value: int): IntPtr$instance;
-    new(value: long): IntPtr$instance;
-    new(value: ptr<void>): IntPtr$instance;
+    new(value: int): IntPtr;
+    new(value: long): IntPtr;
+    new(value: ptr<void>): IntPtr;
     readonly Zero: nint;
     readonly Size: int;
     readonly MaxValue: nint;
@@ -2699,8 +2699,8 @@ export interface Memory_1$instance<T> {
 
 
 export const Memory_1: {
-    new<T>(array: T[]): Memory_1$instance<T>;
-    new<T>(array: T[], start: int, length: int): Memory_1$instance<T>;
+    new<T>(array: T[]): Memory_1<T>;
+    new<T>(array: T[], start: int, length: int): Memory_1<T>;
     readonly Empty: unknown;
 };
 
@@ -2725,7 +2725,7 @@ export interface MemoryExtensions_SpanSplitEnumerator_1$instance<T extends (IEqu
 
 
 export const MemoryExtensions_SpanSplitEnumerator_1: {
-    new<T extends (IEquatable_1<T> | number | string | boolean)>(): MemoryExtensions_SpanSplitEnumerator_1$instance<T>;
+    new<T extends (IEquatable_1<T> | number | string | boolean)>(): MemoryExtensions_SpanSplitEnumerator_1<T>;
 };
 
 
@@ -2753,8 +2753,8 @@ export interface MemoryExtensions_TryWriteInterpolatedStringHandler$instance {
 
 
 export const MemoryExtensions_TryWriteInterpolatedStringHandler: {
-    new(literalLength: int, formattedCount: int, destination: Span_1<Char>, shouldAppend: boolean): MemoryExtensions_TryWriteInterpolatedStringHandler$instance;
-    new(literalLength: int, formattedCount: int, destination: Span_1<Char>, provider: IFormatProvider, shouldAppend: boolean): MemoryExtensions_TryWriteInterpolatedStringHandler$instance;
+    new(literalLength: int, formattedCount: int, destination: Span_1<Char>, shouldAppend: boolean): MemoryExtensions_TryWriteInterpolatedStringHandler;
+    new(literalLength: int, formattedCount: int, destination: Span_1<Char>, provider: IFormatProvider, shouldAppend: boolean): MemoryExtensions_TryWriteInterpolatedStringHandler;
 };
 
 
@@ -2778,7 +2778,7 @@ export interface ModuleHandle$instance {
 
 
 export const ModuleHandle: {
-    new(): ModuleHandle$instance;
+    new(): ModuleHandle;
     readonly EmptyHandle: ModuleHandle;
 };
 
@@ -2805,7 +2805,7 @@ export interface Nullable_1$instance<T extends unknown> {
 
 
 export const Nullable_1: {
-    new<T extends unknown>(value: T): Nullable_1$instance<T>;
+    new<T extends unknown>(value: T): Nullable_1<T>;
 };
 
 
@@ -2823,7 +2823,7 @@ export interface Range$instance {
 
 
 export const Range: {
-    new(start: Index, end: Index): Range$instance;
+    new(start: Index, end: Index): Range;
     readonly All: Range;
     EndAt(end: Index): Range;
     StartAt(start: Index): Range;
@@ -2858,8 +2858,8 @@ export interface ReadOnlyMemory_1$instance<T> {
 
 
 export const ReadOnlyMemory_1: {
-    new<T>(array: T[]): ReadOnlyMemory_1$instance<T>;
-    new<T>(array: T[], start: int, length: int): ReadOnlyMemory_1$instance<T>;
+    new<T>(array: T[]): ReadOnlyMemory_1<T>;
+    new<T>(array: T[], start: int, length: int): ReadOnlyMemory_1<T>;
     readonly Empty: unknown;
 };
 
@@ -2892,10 +2892,10 @@ export interface ReadOnlySpan_1$instance<T> {
 
 
 export const ReadOnlySpan_1: {
-    new<T>(array: T[]): ReadOnlySpan_1$instance<T>;
-    new<T>(array: T[], start: int, length: int): ReadOnlySpan_1$instance<T>;
-    new<T>(pointer: ptr<void>, length: int): ReadOnlySpan_1$instance<T>;
-    new<T>(reference: T): ReadOnlySpan_1$instance<T>;
+    new<T>(array: T[]): ReadOnlySpan_1<T>;
+    new<T>(array: T[], start: int, length: int): ReadOnlySpan_1<T>;
+    new<T>(pointer: ptr<void>, length: int): ReadOnlySpan_1<T>;
+    new<T>(reference: T): ReadOnlySpan_1<T>;
     readonly Empty: unknown;
     CastUp<T, TDerived extends T>(items: ReadOnlySpan_1<TDerived>): ReadOnlySpan_1<T>;
 };
@@ -2911,7 +2911,7 @@ export interface ReadOnlySpan_1_Enumerator$instance<T> {
 
 
 export const ReadOnlySpan_1_Enumerator: {
-    new<T>(): ReadOnlySpan_1_Enumerator$instance<T>;
+    new<T>(): ReadOnlySpan_1_Enumerator<T>;
 };
 
 
@@ -2929,7 +2929,7 @@ export interface RuntimeArgumentHandle$instance {
 
 
 export const RuntimeArgumentHandle: {
-    new(): RuntimeArgumentHandle$instance;
+    new(): RuntimeArgumentHandle;
 };
 
 
@@ -2945,7 +2945,7 @@ export interface RuntimeFieldHandle$instance {
 
 
 export const RuntimeFieldHandle: {
-    new(): RuntimeFieldHandle$instance;
+    new(): RuntimeFieldHandle;
     FromIntPtr(value: nint): RuntimeFieldHandle;
     ToIntPtr(value: RuntimeFieldHandle): nint;
 };
@@ -2975,7 +2975,7 @@ export interface RuntimeMethodHandle$instance {
 
 
 export const RuntimeMethodHandle: {
-    new(): RuntimeMethodHandle$instance;
+    new(): RuntimeMethodHandle;
     FromIntPtr(value: nint): RuntimeMethodHandle;
     ToIntPtr(value: RuntimeMethodHandle): nint;
 };
@@ -3005,7 +3005,7 @@ export interface RuntimeTypeHandle$instance {
 
 
 export const RuntimeTypeHandle: {
-    new(): RuntimeTypeHandle$instance;
+    new(): RuntimeTypeHandle;
     FromIntPtr(value: nint): RuntimeTypeHandle;
     ToIntPtr(value: RuntimeTypeHandle): nint;
 };
@@ -3041,7 +3041,7 @@ export interface SByte$instance extends IBitwiseOperators_3<SByte, SByte, SByte>
 
 
 export const SByte: {
-    new(): SByte$instance;
+    new(): SByte;
     readonly MaxValue: sbyte;
     readonly MinValue: sbyte;
     Abs(value: sbyte): sbyte;
@@ -3132,7 +3132,7 @@ export interface SequencePosition$instance {
 
 
 export const SequencePosition: {
-    new(object_: unknown, integer: int): SequencePosition$instance;
+    new(object_: unknown, integer: int): SequencePosition;
 };
 
 
@@ -3163,7 +3163,7 @@ export interface Single$instance extends IBitwiseOperators_3<Single, Single, Sin
 
 
 export const Single: {
-    new(): Single$instance;
+    new(): Single;
     readonly MinValue: float;
     readonly MaxValue: float;
     readonly Epsilon: float;
@@ -3345,10 +3345,10 @@ export interface Span_1$instance<T> {
 
 
 export const Span_1: {
-    new<T>(array: T[]): Span_1$instance<T>;
-    new<T>(array: T[], start: int, length: int): Span_1$instance<T>;
-    new<T>(pointer: ptr<void>, length: int): Span_1$instance<T>;
-    new<T>(reference: T): Span_1$instance<T>;
+    new<T>(array: T[]): Span_1<T>;
+    new<T>(array: T[], start: int, length: int): Span_1<T>;
+    new<T>(pointer: ptr<void>, length: int): Span_1<T>;
+    new<T>(reference: T): Span_1<T>;
     readonly Empty: unknown;
 };
 
@@ -3363,7 +3363,7 @@ export interface Span_1_Enumerator$instance<T> {
 
 
 export const Span_1_Enumerator: {
-    new<T>(): Span_1_Enumerator$instance<T>;
+    new<T>(): Span_1_Enumerator<T>;
 };
 
 
@@ -3413,11 +3413,11 @@ export interface TimeOnly$instance {
 
 
 export const TimeOnly: {
-    new(hour: int, minute: int): TimeOnly$instance;
-    new(hour: int, minute: int, second: int): TimeOnly$instance;
-    new(hour: int, minute: int, second: int, millisecond: int): TimeOnly$instance;
-    new(hour: int, minute: int, second: int, millisecond: int, microsecond: int): TimeOnly$instance;
-    new(ticks: long): TimeOnly$instance;
+    new(hour: int, minute: int): TimeOnly;
+    new(hour: int, minute: int, second: int): TimeOnly;
+    new(hour: int, minute: int, second: int, millisecond: int): TimeOnly;
+    new(hour: int, minute: int, second: int, millisecond: int, microsecond: int): TimeOnly;
+    new(ticks: long): TimeOnly;
     readonly MinValue: TimeOnly;
     readonly MaxValue: TimeOnly;
     FromDateTime(dateTime: DateTime): TimeOnly;
@@ -3509,11 +3509,11 @@ export interface TimeSpan$instance {
 
 
 export const TimeSpan: {
-    new(ticks: long): TimeSpan$instance;
-    new(hours: int, minutes: int, seconds: int): TimeSpan$instance;
-    new(days: int, hours: int, minutes: int, seconds: int): TimeSpan$instance;
-    new(days: int, hours: int, minutes: int, seconds: int, milliseconds: int): TimeSpan$instance;
-    new(days: int, hours: int, minutes: int, seconds: int, milliseconds: int, microseconds: int): TimeSpan$instance;
+    new(ticks: long): TimeSpan;
+    new(hours: int, minutes: int, seconds: int): TimeSpan;
+    new(days: int, hours: int, minutes: int, seconds: int): TimeSpan;
+    new(days: int, hours: int, minutes: int, seconds: int, milliseconds: int): TimeSpan;
+    new(days: int, hours: int, minutes: int, seconds: int, milliseconds: int, microseconds: int): TimeSpan;
     readonly Zero: TimeSpan;
     readonly MaxValue: TimeSpan;
     readonly MinValue: TimeSpan;
@@ -3618,7 +3618,7 @@ export interface TimeZoneInfo_TransitionTime$instance {
 
 
 export const TimeZoneInfo_TransitionTime: {
-    new(): TimeZoneInfo_TransitionTime$instance;
+    new(): TimeZoneInfo_TransitionTime;
     CreateFixedDateRule(timeOfDay: DateTime, month: int, day: int): TimeZoneInfo_TransitionTime;
     CreateFloatingDateRule(timeOfDay: DateTime, month: int, week: int, dayOfWeek: DayOfWeek): TimeZoneInfo_TransitionTime;
 };
@@ -3645,7 +3645,7 @@ export interface TypedReference$instance {
 
 
 export const TypedReference: {
-    new(): TypedReference$instance;
+    new(): TypedReference;
     GetTargetType(value: TypedReference): Type;
     MakeTypedReference(target: unknown, flds: FieldInfo[]): TypedReference;
     SetTypedReference(target: TypedReference, value: unknown): void;
@@ -3672,7 +3672,7 @@ export interface UInt128$instance extends IBitwiseOperators_3<UInt128, UInt128, 
 
 
 export const UInt128: {
-    new(upper: ulong, lower: ulong): UInt128$instance;
+    new(upper: ulong, lower: ulong): UInt128;
     readonly MinValue: uint128;
     readonly MaxValue: uint128;
     readonly One: uint128;
@@ -3765,7 +3765,7 @@ export interface UInt16$instance extends IBitwiseOperators_3<UInt16, UInt16, UIn
 
 
 export const UInt16: {
-    new(): UInt16$instance;
+    new(): UInt16;
     readonly MaxValue: ushort;
     readonly MinValue: ushort;
     Clamp(value: ushort, min: ushort, max: ushort): ushort;
@@ -3857,7 +3857,7 @@ export interface UInt32$instance extends IBitwiseOperators_3<UInt32, UInt32, UIn
 
 
 export const UInt32: {
-    new(): UInt32$instance;
+    new(): UInt32;
     readonly MaxValue: uint;
     readonly MinValue: uint;
     BigMul(left: uint, right: uint): ulong;
@@ -3950,7 +3950,7 @@ export interface UInt64$instance extends IBitwiseOperators_3<UInt64, UInt64, UIn
 
 
 export const UInt64: {
-    new(): UInt64$instance;
+    new(): UInt64;
     readonly MaxValue: ulong;
     readonly MinValue: ulong;
     BigMul(left: ulong, right: ulong): uint128;
@@ -4045,9 +4045,9 @@ export interface UIntPtr$instance extends IBitwiseOperators_3<UIntPtr, UIntPtr, 
 
 
 export const UIntPtr: {
-    new(value: uint): UIntPtr$instance;
-    new(value: ulong): UIntPtr$instance;
-    new(value: ptr<void>): UIntPtr$instance;
+    new(value: uint): UIntPtr;
+    new(value: ulong): UIntPtr;
+    new(value: ptr<void>): UIntPtr;
     readonly Zero: nuint;
     readonly Size: int;
     readonly MaxValue: nuint;
@@ -4133,7 +4133,7 @@ export interface UriCreationOptions$instance {
 
 
 export const UriCreationOptions: {
-    new(): UriCreationOptions$instance;
+    new(): UriCreationOptions;
 };
 
 
@@ -4149,7 +4149,7 @@ export interface ValueTuple$instance {
 
 
 export const ValueTuple: {
-    new(): ValueTuple$instance;
+    new(): ValueTuple;
     Create(): ValueTuple;
     Create<T1, T2, T3, T4, T5, T6, T7, T8>(item1: T1, item2: T2, item3: T3, item4: T4, item5: T5, item6: T6, item7: T7, item8: T8): ValueTuple_8<T1, T2, T3, T4, T5, T6, T7, ValueTuple_1<T8>>;
     Create<T1, T2, T3, T4, T5, T6, T7>(item1: T1, item2: T2, item3: T3, item4: T4, item5: T5, item6: T6, item7: T7): ValueTuple_7<T1, T2, T3, T4, T5, T6, T7>;
@@ -4191,7 +4191,7 @@ export interface ValueTuple_1$instance<T1> {
 
 
 export const ValueTuple_1: {
-    new<T1>(item1: T1): ValueTuple_1$instance<T1>;
+    new<T1>(item1: T1): ValueTuple_1<T1>;
 };
 
 
@@ -4225,7 +4225,7 @@ export interface ValueTuple_2$instance<T1, T2> {
 
 
 export const ValueTuple_2: {
-    new<T1, T2>(item1: T1, item2: T2): ValueTuple_2$instance<T1, T2>;
+    new<T1, T2>(item1: T1, item2: T2): ValueTuple_2<T1, T2>;
 };
 
 
@@ -4260,7 +4260,7 @@ export interface ValueTuple_3$instance<T1, T2, T3> {
 
 
 export const ValueTuple_3: {
-    new<T1, T2, T3>(item1: T1, item2: T2, item3: T3): ValueTuple_3$instance<T1, T2, T3>;
+    new<T1, T2, T3>(item1: T1, item2: T2, item3: T3): ValueTuple_3<T1, T2, T3>;
 };
 
 
@@ -4296,7 +4296,7 @@ export interface ValueTuple_4$instance<T1, T2, T3, T4> {
 
 
 export const ValueTuple_4: {
-    new<T1, T2, T3, T4>(item1: T1, item2: T2, item3: T3, item4: T4): ValueTuple_4$instance<T1, T2, T3, T4>;
+    new<T1, T2, T3, T4>(item1: T1, item2: T2, item3: T3, item4: T4): ValueTuple_4<T1, T2, T3, T4>;
 };
 
 
@@ -4333,7 +4333,7 @@ export interface ValueTuple_5$instance<T1, T2, T3, T4, T5> {
 
 
 export const ValueTuple_5: {
-    new<T1, T2, T3, T4, T5>(item1: T1, item2: T2, item3: T3, item4: T4, item5: T5): ValueTuple_5$instance<T1, T2, T3, T4, T5>;
+    new<T1, T2, T3, T4, T5>(item1: T1, item2: T2, item3: T3, item4: T4, item5: T5): ValueTuple_5<T1, T2, T3, T4, T5>;
 };
 
 
@@ -4371,7 +4371,7 @@ export interface ValueTuple_6$instance<T1, T2, T3, T4, T5, T6> {
 
 
 export const ValueTuple_6: {
-    new<T1, T2, T3, T4, T5, T6>(item1: T1, item2: T2, item3: T3, item4: T4, item5: T5, item6: T6): ValueTuple_6$instance<T1, T2, T3, T4, T5, T6>;
+    new<T1, T2, T3, T4, T5, T6>(item1: T1, item2: T2, item3: T3, item4: T4, item5: T5, item6: T6): ValueTuple_6<T1, T2, T3, T4, T5, T6>;
 };
 
 
@@ -4410,7 +4410,7 @@ export interface ValueTuple_7$instance<T1, T2, T3, T4, T5, T6, T7> {
 
 
 export const ValueTuple_7: {
-    new<T1, T2, T3, T4, T5, T6, T7>(item1: T1, item2: T2, item3: T3, item4: T4, item5: T5, item6: T6, item7: T7): ValueTuple_7$instance<T1, T2, T3, T4, T5, T6, T7>;
+    new<T1, T2, T3, T4, T5, T6, T7>(item1: T1, item2: T2, item3: T3, item4: T4, item5: T5, item6: T6, item7: T7): ValueTuple_7<T1, T2, T3, T4, T5, T6, T7>;
 };
 
 
@@ -4450,7 +4450,7 @@ export interface ValueTuple_8$instance<T1, T2, T3, T4, T5, T6, T7, TRest extends
 
 
 export const ValueTuple_8: {
-    new<T1, T2, T3, T4, T5, T6, T7, TRest extends unknown>(item1: T1, item2: T2, item3: T3, item4: T4, item5: T5, item6: T6, item7: T7, rest: TRest): ValueTuple_8$instance<T1, T2, T3, T4, T5, T6, T7, TRest>;
+    new<T1, T2, T3, T4, T5, T6, T7, TRest extends unknown>(item1: T1, item2: T2, item3: T3, item4: T4, item5: T5, item6: T6, item7: T7, rest: TRest): ValueTuple_8<T1, T2, T3, T4, T5, T6, T7, TRest>;
 };
 
 
@@ -4477,7 +4477,7 @@ export interface Void$instance {
 
 
 export const Void: {
-    new(): Void$instance;
+    new(): Void;
 };
 
 
@@ -4489,9 +4489,9 @@ export interface AccessViolationException$instance extends SystemException$insta
 
 
 export const AccessViolationException: {
-    new(): AccessViolationException$instance;
-    new(message: string): AccessViolationException$instance;
-    new(message: string, innerException: Exception): AccessViolationException$instance;
+    new(): AccessViolationException;
+    new(message: string): AccessViolationException;
+    new(message: string, innerException: Exception): AccessViolationException;
 };
 
 
@@ -4514,13 +4514,13 @@ export interface AggregateException$instance extends Exception$instance {
 
 
 export const AggregateException: {
-    new(): AggregateException$instance;
-    new(message: string): AggregateException$instance;
-    new(message: string, innerException: Exception): AggregateException$instance;
-    new(innerExceptions: IEnumerable_1<Exception>): AggregateException$instance;
-    new(innerExceptions: Exception[]): AggregateException$instance;
-    new(message: string, innerExceptions: IEnumerable_1<Exception>): AggregateException$instance;
-    new(message: string, innerExceptions: Exception[]): AggregateException$instance;
+    new(): AggregateException;
+    new(message: string): AggregateException;
+    new(message: string, innerException: Exception): AggregateException;
+    new(innerExceptions: IEnumerable_1<Exception>): AggregateException;
+    new(innerExceptions: Exception[]): AggregateException;
+    new(message: string, innerExceptions: IEnumerable_1<Exception>): AggregateException;
+    new(message: string, innerExceptions: Exception[]): AggregateException;
 };
 
 
@@ -4589,7 +4589,7 @@ export interface AppDomain$instance extends MarshalByRefObject {
 
 
 export const AppDomain: {
-    new(): AppDomain$instance;
+    new(): AppDomain;
     readonly CurrentDomain: AppDomain;
     MonitoringIsEnabled: boolean;
     readonly MonitoringSurvivedProcessMemorySize: long;
@@ -4608,7 +4608,7 @@ export interface AppDomainSetup$instance {
 
 
 export const AppDomainSetup: {
-    new(): AppDomainSetup$instance;
+    new(): AppDomainSetup;
 };
 
 
@@ -4620,9 +4620,9 @@ export interface AppDomainUnloadedException$instance extends SystemException$ins
 
 
 export const AppDomainUnloadedException: {
-    new(): AppDomainUnloadedException$instance;
-    new(message: string): AppDomainUnloadedException$instance;
-    new(message: string, innerException: Exception): AppDomainUnloadedException$instance;
+    new(): AppDomainUnloadedException;
+    new(message: string): AppDomainUnloadedException;
+    new(message: string, innerException: Exception): AppDomainUnloadedException;
 };
 
 
@@ -4639,9 +4639,9 @@ export interface ApplicationException$instance extends Exception$instance {
 
 
 export const ApplicationException: {
-    new(): ApplicationException$instance;
-    new(message: string): ApplicationException$instance;
-    new(message: string, innerException: Exception): ApplicationException$instance;
+    new(): ApplicationException;
+    new(message: string): ApplicationException;
+    new(message: string, innerException: Exception): ApplicationException;
 };
 
 
@@ -4666,7 +4666,7 @@ export interface ApplicationId$instance {
 
 
 export const ApplicationId: {
-    new(publicKeyToken: byte[], name: string, version: Version, processorArchitecture: string, culture: string): ApplicationId$instance;
+    new(publicKeyToken: byte[], name: string, version: Version, processorArchitecture: string, culture: string): ApplicationId;
 };
 
 
@@ -4680,11 +4680,11 @@ export interface ArgumentException$instance extends SystemException$instance {
 
 
 export const ArgumentException: {
-    new(): ArgumentException$instance;
-    new(message: string): ArgumentException$instance;
-    new(message: string, innerException: Exception): ArgumentException$instance;
-    new(message: string, paramName: string, innerException: Exception): ArgumentException$instance;
-    new(message: string, paramName: string): ArgumentException$instance;
+    new(): ArgumentException;
+    new(message: string): ArgumentException;
+    new(message: string, innerException: Exception): ArgumentException;
+    new(message: string, paramName: string, innerException: Exception): ArgumentException;
+    new(message: string, paramName: string): ArgumentException;
     ThrowIfNullOrEmpty(argument: string, paramName?: string): void;
     ThrowIfNullOrWhiteSpace(argument: string, paramName?: string): void;
 };
@@ -4703,10 +4703,10 @@ export interface ArgumentNullException$instance extends ArgumentException$instan
 
 
 export const ArgumentNullException: {
-    new(): ArgumentNullException$instance;
-    new(paramName: string): ArgumentNullException$instance;
-    new(message: string, innerException: Exception): ArgumentNullException$instance;
-    new(paramName: string, message: string): ArgumentNullException$instance;
+    new(): ArgumentNullException;
+    new(paramName: string): ArgumentNullException;
+    new(message: string, innerException: Exception): ArgumentNullException;
+    new(paramName: string, message: string): ArgumentNullException;
     ThrowIfNull(argument: unknown, paramName?: string): void;
     ThrowIfNull(argument: ptr<void>, paramName?: string): void;
 };
@@ -4727,11 +4727,11 @@ export interface ArgumentOutOfRangeException$instance extends ArgumentException$
 
 
 export const ArgumentOutOfRangeException: {
-    new(): ArgumentOutOfRangeException$instance;
-    new(paramName: string): ArgumentOutOfRangeException$instance;
-    new(paramName: string, message: string): ArgumentOutOfRangeException$instance;
-    new(message: string, innerException: Exception): ArgumentOutOfRangeException$instance;
-    new(paramName: string, actualValue: unknown, message: string): ArgumentOutOfRangeException$instance;
+    new(): ArgumentOutOfRangeException;
+    new(paramName: string): ArgumentOutOfRangeException;
+    new(paramName: string, message: string): ArgumentOutOfRangeException;
+    new(message: string, innerException: Exception): ArgumentOutOfRangeException;
+    new(paramName: string, actualValue: unknown, message: string): ArgumentOutOfRangeException;
     ThrowIfEqual<T>(value: T, other: T, paramName?: string): void;
     ThrowIfGreaterThan<T extends IComparable_1<T>>(value: T, other: T, paramName?: string): void;
     ThrowIfGreaterThanOrEqual<T extends IComparable_1<T>>(value: T, other: T, paramName?: string): void;
@@ -4757,9 +4757,9 @@ export interface ArithmeticException$instance extends SystemException$instance {
 
 
 export const ArithmeticException: {
-    new(): ArithmeticException$instance;
-    new(message: string): ArithmeticException$instance;
-    new(message: string, innerException: Exception): ArithmeticException$instance;
+    new(): ArithmeticException;
+    new(message: string): ArithmeticException;
+    new(message: string, innerException: Exception): ArithmeticException;
 };
 
 
@@ -4906,9 +4906,9 @@ export interface ArrayTypeMismatchException$instance extends SystemException$ins
 
 
 export const ArrayTypeMismatchException: {
-    new(): ArrayTypeMismatchException$instance;
-    new(message: string): ArrayTypeMismatchException$instance;
-    new(message: string, innerException: Exception): ArrayTypeMismatchException$instance;
+    new(): ArrayTypeMismatchException;
+    new(message: string): ArrayTypeMismatchException;
+    new(message: string, innerException: Exception): ArrayTypeMismatchException;
 };
 
 
@@ -4925,7 +4925,7 @@ export interface AssemblyLoadEventArgs$instance extends EventArgs {
 
 
 export const AssemblyLoadEventArgs: {
-    new(loadedAssembly: Assembly): AssemblyLoadEventArgs$instance;
+    new(loadedAssembly: Assembly): AssemblyLoadEventArgs;
 };
 
 
@@ -4986,7 +4986,7 @@ export interface AttributeUsageAttribute$instance extends Attribute {
 
 
 export const AttributeUsageAttribute: {
-    new(validOn: AttributeTargets): AttributeUsageAttribute$instance;
+    new(validOn: AttributeTargets): AttributeUsageAttribute;
 };
 
 
@@ -5002,11 +5002,11 @@ export interface BadImageFormatException$instance extends SystemException$instan
 
 
 export const BadImageFormatException: {
-    new(): BadImageFormatException$instance;
-    new(message: string): BadImageFormatException$instance;
-    new(message: string, inner: Exception): BadImageFormatException$instance;
-    new(message: string, fileName: string): BadImageFormatException$instance;
-    new(message: string, fileName: string, inner: Exception): BadImageFormatException$instance;
+    new(): BadImageFormatException;
+    new(message: string): BadImageFormatException;
+    new(message: string, inner: Exception): BadImageFormatException;
+    new(message: string, fileName: string): BadImageFormatException;
+    new(message: string, fileName: string, inner: Exception): BadImageFormatException;
 };
 
 
@@ -5023,9 +5023,9 @@ export interface CannotUnloadAppDomainException$instance extends SystemException
 
 
 export const CannotUnloadAppDomainException: {
-    new(): CannotUnloadAppDomainException$instance;
-    new(message: string): CannotUnloadAppDomainException$instance;
-    new(message: string, innerException: Exception): CannotUnloadAppDomainException$instance;
+    new(): CannotUnloadAppDomainException;
+    new(message: string): CannotUnloadAppDomainException;
+    new(message: string, innerException: Exception): CannotUnloadAppDomainException;
 };
 
 
@@ -5046,7 +5046,7 @@ export interface CharEnumerator$instance extends IDisposable {
 
 
 export const CharEnumerator: {
-    new(): CharEnumerator$instance;
+    new(): CharEnumerator;
 };
 
 
@@ -5067,7 +5067,7 @@ export interface CLSCompliantAttribute$instance extends Attribute {
 
 
 export const CLSCompliantAttribute: {
-    new(isCompliant: boolean): CLSCompliantAttribute$instance;
+    new(isCompliant: boolean): CLSCompliantAttribute;
 };
 
 
@@ -5080,7 +5080,7 @@ export interface ConsoleCancelEventArgs$instance extends EventArgs {
 
 
 export const ConsoleCancelEventArgs: {
-    new(): ConsoleCancelEventArgs$instance;
+    new(): ConsoleCancelEventArgs;
 };
 
 
@@ -5102,9 +5102,9 @@ export interface ContextMarshalException$instance extends SystemException$instan
 
 
 export const ContextMarshalException: {
-    new(): ContextMarshalException$instance;
-    new(message: string): ContextMarshalException$instance;
-    new(message: string, inner: Exception): ContextMarshalException$instance;
+    new(): ContextMarshalException;
+    new(message: string): ContextMarshalException;
+    new(message: string, inner: Exception): ContextMarshalException;
 };
 
 
@@ -5120,7 +5120,7 @@ export interface ContextStaticAttribute$instance extends Attribute {
 
 
 export const ContextStaticAttribute: {
-    new(): ContextStaticAttribute$instance;
+    new(): ContextStaticAttribute;
 };
 
 
@@ -5141,7 +5141,7 @@ export interface CultureAwareComparer$instance extends StringComparer$instance {
 
 
 export const CultureAwareComparer: {
-    new(): CultureAwareComparer$instance;
+    new(): CultureAwareComparer;
 };
 
 
@@ -5165,9 +5165,9 @@ export interface DataMisalignedException$instance extends SystemException$instan
 
 
 export const DataMisalignedException: {
-    new(): DataMisalignedException$instance;
-    new(message: string): DataMisalignedException$instance;
-    new(message: string, innerException: Exception): DataMisalignedException$instance;
+    new(): DataMisalignedException;
+    new(message: string): DataMisalignedException;
+    new(message: string, innerException: Exception): DataMisalignedException;
 };
 
 
@@ -5187,7 +5187,7 @@ export interface DBNull$instance {
 
 
 export const DBNull: {
-    new(): DBNull$instance;
+    new(): DBNull;
     readonly Value: DBNull;
 };
 
@@ -5251,9 +5251,9 @@ export interface DivideByZeroException$instance extends ArithmeticException$inst
 
 
 export const DivideByZeroException: {
-    new(): DivideByZeroException$instance;
-    new(message: string): DivideByZeroException$instance;
-    new(message: string, innerException: Exception): DivideByZeroException$instance;
+    new(): DivideByZeroException;
+    new(message: string): DivideByZeroException;
+    new(message: string, innerException: Exception): DivideByZeroException;
 };
 
 
@@ -5270,9 +5270,9 @@ export interface DllNotFoundException$instance extends TypeLoadException$instanc
 
 
 export const DllNotFoundException: {
-    new(): DllNotFoundException$instance;
-    new(message: string): DllNotFoundException$instance;
-    new(message: string, inner: Exception): DllNotFoundException$instance;
+    new(): DllNotFoundException;
+    new(message: string): DllNotFoundException;
+    new(message: string, inner: Exception): DllNotFoundException;
 };
 
 
@@ -5289,10 +5289,10 @@ export interface DuplicateWaitObjectException$instance extends ArgumentException
 
 
 export const DuplicateWaitObjectException: {
-    new(): DuplicateWaitObjectException$instance;
-    new(parameterName: string): DuplicateWaitObjectException$instance;
-    new(parameterName: string, message: string): DuplicateWaitObjectException$instance;
-    new(message: string, innerException: Exception): DuplicateWaitObjectException$instance;
+    new(): DuplicateWaitObjectException;
+    new(parameterName: string): DuplicateWaitObjectException;
+    new(parameterName: string, message: string): DuplicateWaitObjectException;
+    new(message: string, innerException: Exception): DuplicateWaitObjectException;
 };
 
 
@@ -5309,9 +5309,9 @@ export interface EntryPointNotFoundException$instance extends TypeLoadException$
 
 
 export const EntryPointNotFoundException: {
-    new(): EntryPointNotFoundException$instance;
-    new(message: string): EntryPointNotFoundException$instance;
-    new(message: string, inner: Exception): EntryPointNotFoundException$instance;
+    new(): EntryPointNotFoundException;
+    new(message: string): EntryPointNotFoundException;
+    new(message: string, inner: Exception): EntryPointNotFoundException;
 };
 
 
@@ -5397,7 +5397,7 @@ export interface EventArgs$instance {
 
 
 export const EventArgs: {
-    new(): EventArgs$instance;
+    new(): EventArgs;
     readonly Empty: EventArgs;
 };
 
@@ -5421,9 +5421,9 @@ export interface Exception$instance {
 
 
 export const Exception: {
-    new(): Exception$instance;
-    new(message: string): Exception$instance;
-    new(message: string, innerException: Exception): Exception$instance;
+    new(): Exception;
+    new(message: string): Exception;
+    new(message: string, innerException: Exception): Exception;
 };
 
 
@@ -5442,9 +5442,9 @@ export interface ExecutionEngineException$instance extends SystemException$insta
 
 
 export const ExecutionEngineException: {
-    new(): ExecutionEngineException$instance;
-    new(message: string): ExecutionEngineException$instance;
-    new(message: string, innerException: Exception): ExecutionEngineException$instance;
+    new(): ExecutionEngineException;
+    new(message: string): ExecutionEngineException;
+    new(message: string, innerException: Exception): ExecutionEngineException;
 };
 
 
@@ -5461,9 +5461,9 @@ export interface FieldAccessException$instance extends MemberAccessException$ins
 
 
 export const FieldAccessException: {
-    new(): FieldAccessException$instance;
-    new(message: string): FieldAccessException$instance;
-    new(message: string, inner: Exception): FieldAccessException$instance;
+    new(): FieldAccessException;
+    new(message: string): FieldAccessException;
+    new(message: string, inner: Exception): FieldAccessException;
 };
 
 
@@ -5479,7 +5479,7 @@ export interface FileStyleUriParser$instance extends UriParser {
 
 
 export const FileStyleUriParser: {
-    new(): FileStyleUriParser$instance;
+    new(): FileStyleUriParser;
 };
 
 
@@ -5490,7 +5490,7 @@ export interface FlagsAttribute$instance extends Attribute {
 
 
 export const FlagsAttribute: {
-    new(): FlagsAttribute$instance;
+    new(): FlagsAttribute;
 };
 
 
@@ -5502,9 +5502,9 @@ export interface FormatException$instance extends SystemException$instance {
 
 
 export const FormatException: {
-    new(): FormatException$instance;
-    new(message: string): FormatException$instance;
-    new(message: string, innerException: Exception): FormatException$instance;
+    new(): FormatException;
+    new(message: string): FormatException;
+    new(message: string, innerException: Exception): FormatException;
 };
 
 
@@ -5543,7 +5543,7 @@ export interface FtpStyleUriParser$instance extends UriParser {
 
 
 export const FtpStyleUriParser: {
-    new(): FtpStyleUriParser$instance;
+    new(): FtpStyleUriParser;
 };
 
 
@@ -5554,7 +5554,7 @@ export interface GenericUriParser$instance extends UriParser {
 
 
 export const GenericUriParser: {
-    new(options: GenericUriParserOptions): GenericUriParser$instance;
+    new(options: GenericUriParserOptions): GenericUriParser;
 };
 
 
@@ -5565,7 +5565,7 @@ export interface GopherStyleUriParser$instance extends UriParser {
 
 
 export const GopherStyleUriParser: {
-    new(): GopherStyleUriParser$instance;
+    new(): GopherStyleUriParser;
 };
 
 
@@ -5576,7 +5576,7 @@ export interface HttpStyleUriParser$instance extends UriParser {
 
 
 export const HttpStyleUriParser: {
-    new(): HttpStyleUriParser$instance;
+    new(): HttpStyleUriParser;
 };
 
 
@@ -5588,9 +5588,9 @@ export interface IndexOutOfRangeException$instance extends SystemException$insta
 
 
 export const IndexOutOfRangeException: {
-    new(): IndexOutOfRangeException$instance;
-    new(message: string): IndexOutOfRangeException$instance;
-    new(message: string, innerException: Exception): IndexOutOfRangeException$instance;
+    new(): IndexOutOfRangeException;
+    new(message: string): IndexOutOfRangeException;
+    new(message: string, innerException: Exception): IndexOutOfRangeException;
 };
 
 
@@ -5607,9 +5607,9 @@ export interface InsufficientExecutionStackException$instance extends SystemExce
 
 
 export const InsufficientExecutionStackException: {
-    new(): InsufficientExecutionStackException$instance;
-    new(message: string): InsufficientExecutionStackException$instance;
-    new(message: string, innerException: Exception): InsufficientExecutionStackException$instance;
+    new(): InsufficientExecutionStackException;
+    new(message: string): InsufficientExecutionStackException;
+    new(message: string, innerException: Exception): InsufficientExecutionStackException;
 };
 
 
@@ -5626,9 +5626,9 @@ export interface InsufficientMemoryException$instance extends OutOfMemoryExcepti
 
 
 export const InsufficientMemoryException: {
-    new(): InsufficientMemoryException$instance;
-    new(message: string): InsufficientMemoryException$instance;
-    new(message: string, innerException: Exception): InsufficientMemoryException$instance;
+    new(): InsufficientMemoryException;
+    new(message: string): InsufficientMemoryException;
+    new(message: string, innerException: Exception): InsufficientMemoryException;
 };
 
 
@@ -5645,10 +5645,10 @@ export interface InvalidCastException$instance extends SystemException$instance 
 
 
 export const InvalidCastException: {
-    new(): InvalidCastException$instance;
-    new(message: string): InvalidCastException$instance;
-    new(message: string, innerException: Exception): InvalidCastException$instance;
-    new(message: string, errorCode: int): InvalidCastException$instance;
+    new(): InvalidCastException;
+    new(message: string): InvalidCastException;
+    new(message: string, innerException: Exception): InvalidCastException;
+    new(message: string, errorCode: int): InvalidCastException;
 };
 
 
@@ -5665,9 +5665,9 @@ export interface InvalidOperationException$instance extends SystemException$inst
 
 
 export const InvalidOperationException: {
-    new(): InvalidOperationException$instance;
-    new(message: string): InvalidOperationException$instance;
-    new(message: string, innerException: Exception): InvalidOperationException$instance;
+    new(): InvalidOperationException;
+    new(message: string): InvalidOperationException;
+    new(message: string, innerException: Exception): InvalidOperationException;
 };
 
 
@@ -5684,9 +5684,9 @@ export interface InvalidProgramException$instance extends SystemException$instan
 
 
 export const InvalidProgramException: {
-    new(): InvalidProgramException$instance;
-    new(message: string): InvalidProgramException$instance;
-    new(message: string, inner: Exception): InvalidProgramException$instance;
+    new(): InvalidProgramException;
+    new(message: string): InvalidProgramException;
+    new(message: string, inner: Exception): InvalidProgramException;
 };
 
 
@@ -5703,9 +5703,9 @@ export interface InvalidTimeZoneException$instance extends Exception$instance {
 
 
 export const InvalidTimeZoneException: {
-    new(): InvalidTimeZoneException$instance;
-    new(message: string): InvalidTimeZoneException$instance;
-    new(message: string, innerException: Exception): InvalidTimeZoneException$instance;
+    new(): InvalidTimeZoneException;
+    new(message: string): InvalidTimeZoneException;
+    new(message: string, innerException: Exception): InvalidTimeZoneException;
 };
 
 
@@ -5724,13 +5724,13 @@ export interface Lazy_1$instance<T> {
 
 
 export const Lazy_1: {
-    new<T>(): Lazy_1$instance<T>;
-    new<T>(value: T): Lazy_1$instance<T>;
-    new<T>(valueFactory: Func_1<T>): Lazy_1$instance<T>;
-    new<T>(isThreadSafe: boolean): Lazy_1$instance<T>;
-    new<T>(mode: LazyThreadSafetyMode): Lazy_1$instance<T>;
-    new<T>(valueFactory: Func_1<T>, isThreadSafe: boolean): Lazy_1$instance<T>;
-    new<T>(valueFactory: Func_1<T>, mode: LazyThreadSafetyMode): Lazy_1$instance<T>;
+    new<T>(): Lazy_1<T>;
+    new<T>(value: T): Lazy_1<T>;
+    new<T>(valueFactory: Func_1<T>): Lazy_1<T>;
+    new<T>(isThreadSafe: boolean): Lazy_1<T>;
+    new<T>(mode: LazyThreadSafetyMode): Lazy_1<T>;
+    new<T>(valueFactory: Func_1<T>, isThreadSafe: boolean): Lazy_1<T>;
+    new<T>(valueFactory: Func_1<T>, mode: LazyThreadSafetyMode): Lazy_1<T>;
 };
 
 
@@ -5742,12 +5742,12 @@ export interface Lazy_2$instance<T, TMetadata> extends Lazy_1<T> {
 
 
 export const Lazy_2: {
-    new<T, TMetadata>(valueFactory: Func_1<T>, metadata: TMetadata): Lazy_2$instance<T, TMetadata>;
-    new<T, TMetadata>(metadata: TMetadata): Lazy_2$instance<T, TMetadata>;
-    new<T, TMetadata>(metadata: TMetadata, isThreadSafe: boolean): Lazy_2$instance<T, TMetadata>;
-    new<T, TMetadata>(valueFactory: Func_1<T>, metadata: TMetadata, isThreadSafe: boolean): Lazy_2$instance<T, TMetadata>;
-    new<T, TMetadata>(metadata: TMetadata, mode: LazyThreadSafetyMode): Lazy_2$instance<T, TMetadata>;
-    new<T, TMetadata>(valueFactory: Func_1<T>, metadata: TMetadata, mode: LazyThreadSafetyMode): Lazy_2$instance<T, TMetadata>;
+    new<T, TMetadata>(valueFactory: Func_1<T>, metadata: TMetadata): Lazy_2<T, TMetadata>;
+    new<T, TMetadata>(metadata: TMetadata): Lazy_2<T, TMetadata>;
+    new<T, TMetadata>(metadata: TMetadata, isThreadSafe: boolean): Lazy_2<T, TMetadata>;
+    new<T, TMetadata>(valueFactory: Func_1<T>, metadata: TMetadata, isThreadSafe: boolean): Lazy_2<T, TMetadata>;
+    new<T, TMetadata>(metadata: TMetadata, mode: LazyThreadSafetyMode): Lazy_2<T, TMetadata>;
+    new<T, TMetadata>(valueFactory: Func_1<T>, metadata: TMetadata, mode: LazyThreadSafetyMode): Lazy_2<T, TMetadata>;
 };
 
 
@@ -5758,7 +5758,7 @@ export interface LdapStyleUriParser$instance extends UriParser {
 
 
 export const LdapStyleUriParser: {
-    new(): LdapStyleUriParser$instance;
+    new(): LdapStyleUriParser;
 };
 
 
@@ -5770,8 +5770,8 @@ export interface LoaderOptimizationAttribute$instance extends Attribute {
 
 
 export const LoaderOptimizationAttribute: {
-    new(value: byte): LoaderOptimizationAttribute$instance;
-    new(value: LoaderOptimization): LoaderOptimizationAttribute$instance;
+    new(value: byte): LoaderOptimizationAttribute;
+    new(value: LoaderOptimization): LoaderOptimizationAttribute;
 };
 
 
@@ -5782,7 +5782,7 @@ export interface LocalDataStoreSlot$instance {
 
 
 export const LocalDataStoreSlot: {
-    new(): LocalDataStoreSlot$instance;
+    new(): LocalDataStoreSlot;
 };
 
 
@@ -5806,9 +5806,9 @@ export interface MemberAccessException$instance extends SystemException$instance
 
 
 export const MemberAccessException: {
-    new(): MemberAccessException$instance;
-    new(message: string): MemberAccessException$instance;
-    new(message: string, inner: Exception): MemberAccessException$instance;
+    new(): MemberAccessException;
+    new(message: string): MemberAccessException;
+    new(message: string, inner: Exception): MemberAccessException;
 };
 
 
@@ -5825,9 +5825,9 @@ export interface MethodAccessException$instance extends MemberAccessException$in
 
 
 export const MethodAccessException: {
-    new(): MethodAccessException$instance;
-    new(message: string): MethodAccessException$instance;
-    new(message: string, inner: Exception): MethodAccessException$instance;
+    new(): MethodAccessException;
+    new(message: string): MethodAccessException;
+    new(message: string, inner: Exception): MethodAccessException;
 };
 
 
@@ -5845,10 +5845,10 @@ export interface MissingFieldException$instance extends MissingMemberException$i
 
 
 export const MissingFieldException: {
-    new(): MissingFieldException$instance;
-    new(message: string): MissingFieldException$instance;
-    new(message: string, inner: Exception): MissingFieldException$instance;
-    new(className: string, fieldName: string): MissingFieldException$instance;
+    new(): MissingFieldException;
+    new(message: string): MissingFieldException;
+    new(message: string, inner: Exception): MissingFieldException;
+    new(className: string, fieldName: string): MissingFieldException;
 };
 
 
@@ -5866,10 +5866,10 @@ export interface MissingMemberException$instance extends MemberAccessException$i
 
 
 export const MissingMemberException: {
-    new(): MissingMemberException$instance;
-    new(message: string): MissingMemberException$instance;
-    new(message: string, inner: Exception): MissingMemberException$instance;
-    new(className: string, memberName: string): MissingMemberException$instance;
+    new(): MissingMemberException;
+    new(message: string): MissingMemberException;
+    new(message: string, inner: Exception): MissingMemberException;
+    new(className: string, memberName: string): MissingMemberException;
 };
 
 
@@ -5887,10 +5887,10 @@ export interface MissingMethodException$instance extends MissingMemberException$
 
 
 export const MissingMethodException: {
-    new(): MissingMethodException$instance;
-    new(message: string): MissingMethodException$instance;
-    new(message: string, inner: Exception): MissingMethodException$instance;
-    new(className: string, methodName: string): MissingMethodException$instance;
+    new(): MissingMethodException;
+    new(message: string): MissingMethodException;
+    new(message: string, inner: Exception): MissingMethodException;
+    new(className: string, methodName: string): MissingMethodException;
 };
 
 
@@ -5906,7 +5906,7 @@ export interface MTAThreadAttribute$instance extends Attribute {
 
 
 export const MTAThreadAttribute: {
-    new(): MTAThreadAttribute$instance;
+    new(): MTAThreadAttribute;
 };
 
 
@@ -5939,9 +5939,9 @@ export interface MulticastNotSupportedException$instance extends SystemException
 
 
 export const MulticastNotSupportedException: {
-    new(): MulticastNotSupportedException$instance;
-    new(message: string): MulticastNotSupportedException$instance;
-    new(message: string, inner: Exception): MulticastNotSupportedException$instance;
+    new(): MulticastNotSupportedException;
+    new(message: string): MulticastNotSupportedException;
+    new(message: string, inner: Exception): MulticastNotSupportedException;
 };
 
 
@@ -5957,7 +5957,7 @@ export interface NetPipeStyleUriParser$instance extends UriParser {
 
 
 export const NetPipeStyleUriParser: {
-    new(): NetPipeStyleUriParser$instance;
+    new(): NetPipeStyleUriParser;
 };
 
 
@@ -5968,7 +5968,7 @@ export interface NetTcpStyleUriParser$instance extends UriParser {
 
 
 export const NetTcpStyleUriParser: {
-    new(): NetTcpStyleUriParser$instance;
+    new(): NetTcpStyleUriParser;
 };
 
 
@@ -5979,7 +5979,7 @@ export interface NewsStyleUriParser$instance extends UriParser {
 
 
 export const NewsStyleUriParser: {
-    new(): NewsStyleUriParser$instance;
+    new(): NewsStyleUriParser;
 };
 
 
@@ -5990,7 +5990,7 @@ export interface NonSerializedAttribute$instance extends Attribute {
 
 
 export const NonSerializedAttribute: {
-    new(): NonSerializedAttribute$instance;
+    new(): NonSerializedAttribute;
 };
 
 
@@ -6003,12 +6003,12 @@ export interface NotFiniteNumberException$instance extends ArithmeticException$i
 
 
 export const NotFiniteNumberException: {
-    new(): NotFiniteNumberException$instance;
-    new(offendingNumber: double): NotFiniteNumberException$instance;
-    new(message: string): NotFiniteNumberException$instance;
-    new(message: string, offendingNumber: double): NotFiniteNumberException$instance;
-    new(message: string, innerException: Exception): NotFiniteNumberException$instance;
-    new(message: string, offendingNumber: double, innerException: Exception): NotFiniteNumberException$instance;
+    new(): NotFiniteNumberException;
+    new(offendingNumber: double): NotFiniteNumberException;
+    new(message: string): NotFiniteNumberException;
+    new(message: string, offendingNumber: double): NotFiniteNumberException;
+    new(message: string, innerException: Exception): NotFiniteNumberException;
+    new(message: string, offendingNumber: double, innerException: Exception): NotFiniteNumberException;
 };
 
 
@@ -6025,9 +6025,9 @@ export interface NotImplementedException$instance extends SystemException$instan
 
 
 export const NotImplementedException: {
-    new(): NotImplementedException$instance;
-    new(message: string): NotImplementedException$instance;
-    new(message: string, inner: Exception): NotImplementedException$instance;
+    new(): NotImplementedException;
+    new(message: string): NotImplementedException;
+    new(message: string, inner: Exception): NotImplementedException;
 };
 
 
@@ -6044,9 +6044,9 @@ export interface NotSupportedException$instance extends SystemException$instance
 
 
 export const NotSupportedException: {
-    new(): NotSupportedException$instance;
-    new(message: string): NotSupportedException$instance;
-    new(message: string, innerException: Exception): NotSupportedException$instance;
+    new(): NotSupportedException;
+    new(message: string): NotSupportedException;
+    new(message: string, innerException: Exception): NotSupportedException;
 };
 
 
@@ -6063,9 +6063,9 @@ export interface NullReferenceException$instance extends SystemException$instanc
 
 
 export const NullReferenceException: {
-    new(): NullReferenceException$instance;
-    new(message: string): NullReferenceException$instance;
-    new(message: string, innerException: Exception): NullReferenceException$instance;
+    new(): NullReferenceException;
+    new(message: string): NullReferenceException;
+    new(message: string, innerException: Exception): NullReferenceException;
 };
 
 
@@ -6085,7 +6085,7 @@ export interface Object$instance {
 
 
 export const Object: {
-    new(): Object$instance;
+    new(): Object;
     Equals(objA: unknown, objB: unknown): boolean;
     ReferenceEquals(objA: unknown, objB: unknown): boolean;
 };
@@ -6101,9 +6101,9 @@ export interface ObjectDisposedException$instance extends InvalidOperationExcept
 
 
 export const ObjectDisposedException: {
-    new(objectName: string): ObjectDisposedException$instance;
-    new(objectName: string, message: string): ObjectDisposedException$instance;
-    new(message: string, innerException: Exception): ObjectDisposedException$instance;
+    new(objectName: string): ObjectDisposedException;
+    new(objectName: string, message: string): ObjectDisposedException;
+    new(message: string, innerException: Exception): ObjectDisposedException;
     ThrowIf(condition: boolean, instance: unknown): void;
     ThrowIf(condition: boolean, type_: Type): void;
 };
@@ -6125,9 +6125,9 @@ export interface ObsoleteAttribute$instance extends Attribute {
 
 
 export const ObsoleteAttribute: {
-    new(): ObsoleteAttribute$instance;
-    new(message: string): ObsoleteAttribute$instance;
-    new(message: string, error: boolean): ObsoleteAttribute$instance;
+    new(): ObsoleteAttribute;
+    new(message: string): ObsoleteAttribute;
+    new(message: string, error: boolean): ObsoleteAttribute;
 };
 
 
@@ -6145,7 +6145,7 @@ export interface OperatingSystem$instance {
 
 
 export const OperatingSystem: {
-    new(platform: PlatformID, version: Version): OperatingSystem$instance;
+    new(platform: PlatformID, version: Version): OperatingSystem;
     IsAndroid(): boolean;
     IsAndroidVersionAtLeast(major: int, minor?: int, build?: int, revision?: int): boolean;
     IsBrowser(): boolean;
@@ -6187,12 +6187,12 @@ export interface OperationCanceledException$instance extends SystemException$ins
 
 
 export const OperationCanceledException: {
-    new(): OperationCanceledException$instance;
-    new(message: string): OperationCanceledException$instance;
-    new(message: string, innerException: Exception): OperationCanceledException$instance;
-    new(token: CancellationToken): OperationCanceledException$instance;
-    new(message: string, token: CancellationToken): OperationCanceledException$instance;
-    new(message: string, innerException: Exception, token: CancellationToken): OperationCanceledException$instance;
+    new(): OperationCanceledException;
+    new(message: string): OperationCanceledException;
+    new(message: string, innerException: Exception): OperationCanceledException;
+    new(token: CancellationToken): OperationCanceledException;
+    new(message: string, token: CancellationToken): OperationCanceledException;
+    new(message: string, innerException: Exception, token: CancellationToken): OperationCanceledException;
 };
 
 
@@ -6217,7 +6217,7 @@ export interface OrdinalComparer$instance extends StringComparer$instance {
 
 
 export const OrdinalComparer: {
-    new(): OrdinalComparer$instance;
+    new(): OrdinalComparer;
 };
 
 
@@ -6238,9 +6238,9 @@ export interface OutOfMemoryException$instance extends SystemException$instance 
 
 
 export const OutOfMemoryException: {
-    new(): OutOfMemoryException$instance;
-    new(message: string): OutOfMemoryException$instance;
-    new(message: string, innerException: Exception): OutOfMemoryException$instance;
+    new(): OutOfMemoryException;
+    new(message: string): OutOfMemoryException;
+    new(message: string, innerException: Exception): OutOfMemoryException;
 };
 
 
@@ -6257,9 +6257,9 @@ export interface OverflowException$instance extends ArithmeticException$instance
 
 
 export const OverflowException: {
-    new(): OverflowException$instance;
-    new(message: string): OverflowException$instance;
-    new(message: string, innerException: Exception): OverflowException$instance;
+    new(): OverflowException;
+    new(message: string): OverflowException;
+    new(message: string, innerException: Exception): OverflowException;
 };
 
 
@@ -6275,7 +6275,7 @@ export interface ParamArrayAttribute$instance extends Attribute {
 
 
 export const ParamArrayAttribute: {
-    new(): ParamArrayAttribute$instance;
+    new(): ParamArrayAttribute;
 };
 
 
@@ -6287,9 +6287,9 @@ export interface PlatformNotSupportedException$instance extends NotSupportedExce
 
 
 export const PlatformNotSupportedException: {
-    new(): PlatformNotSupportedException$instance;
-    new(message: string): PlatformNotSupportedException$instance;
-    new(message: string, inner: Exception): PlatformNotSupportedException$instance;
+    new(): PlatformNotSupportedException;
+    new(message: string): PlatformNotSupportedException;
+    new(message: string, inner: Exception): PlatformNotSupportedException;
 };
 
 
@@ -6305,8 +6305,8 @@ export interface Progress_1$instance<T> {
 
 
 export const Progress_1: {
-    new<T>(): Progress_1$instance<T>;
-    new<T>(handler: Action_1<T>): Progress_1$instance<T>;
+    new<T>(): Progress_1<T>;
+    new<T>(handler: Action_1<T>): Progress_1<T>;
 };
 
 
@@ -6342,8 +6342,8 @@ export interface Random$instance {
 
 
 export const Random: {
-    new(): Random$instance;
-    new(Seed: int): Random$instance;
+    new(): Random;
+    new(Seed: int): Random;
     readonly Shared: Random;
 };
 
@@ -6356,9 +6356,9 @@ export interface RankException$instance extends SystemException$instance {
 
 
 export const RankException: {
-    new(): RankException$instance;
-    new(message: string): RankException$instance;
-    new(message: string, innerException: Exception): RankException$instance;
+    new(): RankException;
+    new(message: string): RankException;
+    new(message: string, innerException: Exception): RankException;
 };
 
 
@@ -6376,8 +6376,8 @@ export interface ResolveEventArgs$instance extends EventArgs {
 
 
 export const ResolveEventArgs: {
-    new(name: string): ResolveEventArgs$instance;
-    new(name: string, requestingAssembly: Assembly): ResolveEventArgs$instance;
+    new(name: string): ResolveEventArgs;
+    new(name: string, requestingAssembly: Assembly): ResolveEventArgs;
 };
 
 
@@ -6388,7 +6388,7 @@ export interface SerializableAttribute$instance extends Attribute {
 
 
 export const SerializableAttribute: {
-    new(): SerializableAttribute$instance;
+    new(): SerializableAttribute;
 };
 
 
@@ -6400,9 +6400,9 @@ export interface StackOverflowException$instance extends SystemException$instanc
 
 
 export const StackOverflowException: {
-    new(): StackOverflowException$instance;
-    new(message: string): StackOverflowException$instance;
-    new(message: string, innerException: Exception): StackOverflowException$instance;
+    new(): StackOverflowException;
+    new(message: string): StackOverflowException;
+    new(message: string, innerException: Exception): StackOverflowException;
 };
 
 
@@ -6418,7 +6418,7 @@ export interface STAThreadAttribute$instance extends Attribute {
 
 
 export const STAThreadAttribute: {
-    new(): STAThreadAttribute$instance;
+    new(): STAThreadAttribute;
 };
 
 
@@ -6535,15 +6535,15 @@ export interface String$instance {
 
 
 export const String: {
-    new(value: char[]): String$instance;
-    new(value: char[], startIndex: int, length: int): String$instance;
-    new(value: ptr<char>): String$instance;
-    new(value: ptr<char>, startIndex: int, length: int): String$instance;
-    new(value: ptr<sbyte>): String$instance;
-    new(value: ptr<sbyte>, startIndex: int, length: int): String$instance;
-    new(value: ptr<sbyte>, startIndex: int, length: int, enc: Encoding): String$instance;
-    new(c: char, count: int): String$instance;
-    new(value: ReadOnlySpan_1<Char>): String$instance;
+    new(value: char[]): String;
+    new(value: char[], startIndex: int, length: int): String;
+    new(value: ptr<char>): String;
+    new(value: ptr<char>, startIndex: int, length: int): String;
+    new(value: ptr<sbyte>): String;
+    new(value: ptr<sbyte>, startIndex: int, length: int): String;
+    new(value: ptr<sbyte>, startIndex: int, length: int, enc: Encoding): String;
+    new(c: char, count: int): String;
+    new(value: ReadOnlySpan_1<Char>): String;
     readonly Empty: string;
     Compare(strA: string, indexA: int, strB: string, indexB: int, length: int, ignoreCase: boolean, culture: CultureInfo): int;
     Compare(strA: string, indexA: int, strB: string, indexB: int, length: int, ignoreCase: boolean): int;
@@ -6679,9 +6679,9 @@ export interface SystemException$instance extends Exception$instance {
 
 
 export const SystemException: {
-    new(): SystemException$instance;
-    new(message: string): SystemException$instance;
-    new(message: string, innerException: Exception): SystemException$instance;
+    new(): SystemException;
+    new(message: string): SystemException;
+    new(message: string, innerException: Exception): SystemException;
 };
 
 
@@ -6697,7 +6697,7 @@ export interface ThreadStaticAttribute$instance extends Attribute {
 
 
 export const ThreadStaticAttribute: {
-    new(): ThreadStaticAttribute$instance;
+    new(): ThreadStaticAttribute;
 };
 
 
@@ -6709,9 +6709,9 @@ export interface TimeoutException$instance extends SystemException$instance {
 
 
 export const TimeoutException: {
-    new(): TimeoutException$instance;
-    new(message: string): TimeoutException$instance;
-    new(message: string, innerException: Exception): TimeoutException$instance;
+    new(): TimeoutException;
+    new(message: string): TimeoutException;
+    new(message: string, innerException: Exception): TimeoutException;
 };
 
 
@@ -6788,7 +6788,7 @@ export interface TimeZoneInfo$instance {
 
 
 export const TimeZoneInfo: {
-    new(): TimeZoneInfo$instance;
+    new(): TimeZoneInfo;
     readonly Local: TimeZoneInfo;
     readonly Utc: TimeZoneInfo;
     ClearCachedData(): void;
@@ -6843,7 +6843,7 @@ export interface TimeZoneInfo_AdjustmentRule$instance {
 
 
 export const TimeZoneInfo_AdjustmentRule: {
-    new(): TimeZoneInfo_AdjustmentRule$instance;
+    new(): TimeZoneInfo_AdjustmentRule;
     CreateAdjustmentRule(dateStart: DateTime, dateEnd: DateTime, daylightDelta: TimeSpan, daylightTransitionStart: TimeZoneInfo_TransitionTime, daylightTransitionEnd: TimeZoneInfo_TransitionTime, baseUtcOffsetDelta: TimeSpan): TimeZoneInfo_AdjustmentRule;
     CreateAdjustmentRule(dateStart: DateTime, dateEnd: DateTime, daylightDelta: TimeSpan, daylightTransitionStart: TimeZoneInfo_TransitionTime, daylightTransitionEnd: TimeZoneInfo_TransitionTime): TimeZoneInfo_AdjustmentRule;
 };
@@ -6869,9 +6869,9 @@ export interface TimeZoneNotFoundException$instance extends Exception$instance {
 
 
 export const TimeZoneNotFoundException: {
-    new(): TimeZoneNotFoundException$instance;
-    new(message: string): TimeZoneNotFoundException$instance;
-    new(message: string, innerException: Exception): TimeZoneNotFoundException$instance;
+    new(): TimeZoneNotFoundException;
+    new(message: string): TimeZoneNotFoundException;
+    new(message: string, innerException: Exception): TimeZoneNotFoundException;
 };
 
 
@@ -6891,7 +6891,7 @@ export interface Tuple_1$instance<T1> {
 
 
 export const Tuple_1: {
-    new<T1>(item1: T1): Tuple_1$instance<T1>;
+    new<T1>(item1: T1): Tuple_1<T1>;
 };
 
 
@@ -6920,7 +6920,7 @@ export interface Tuple_2$instance<T1, T2> {
 
 
 export const Tuple_2: {
-    new<T1, T2>(item1: T1, item2: T2): Tuple_2$instance<T1, T2>;
+    new<T1, T2>(item1: T1, item2: T2): Tuple_2<T1, T2>;
 };
 
 
@@ -6950,7 +6950,7 @@ export interface Tuple_3$instance<T1, T2, T3> {
 
 
 export const Tuple_3: {
-    new<T1, T2, T3>(item1: T1, item2: T2, item3: T3): Tuple_3$instance<T1, T2, T3>;
+    new<T1, T2, T3>(item1: T1, item2: T2, item3: T3): Tuple_3<T1, T2, T3>;
 };
 
 
@@ -6981,7 +6981,7 @@ export interface Tuple_4$instance<T1, T2, T3, T4> {
 
 
 export const Tuple_4: {
-    new<T1, T2, T3, T4>(item1: T1, item2: T2, item3: T3, item4: T4): Tuple_4$instance<T1, T2, T3, T4>;
+    new<T1, T2, T3, T4>(item1: T1, item2: T2, item3: T3, item4: T4): Tuple_4<T1, T2, T3, T4>;
 };
 
 
@@ -7013,7 +7013,7 @@ export interface Tuple_5$instance<T1, T2, T3, T4, T5> {
 
 
 export const Tuple_5: {
-    new<T1, T2, T3, T4, T5>(item1: T1, item2: T2, item3: T3, item4: T4, item5: T5): Tuple_5$instance<T1, T2, T3, T4, T5>;
+    new<T1, T2, T3, T4, T5>(item1: T1, item2: T2, item3: T3, item4: T4, item5: T5): Tuple_5<T1, T2, T3, T4, T5>;
 };
 
 
@@ -7046,7 +7046,7 @@ export interface Tuple_6$instance<T1, T2, T3, T4, T5, T6> {
 
 
 export const Tuple_6: {
-    new<T1, T2, T3, T4, T5, T6>(item1: T1, item2: T2, item3: T3, item4: T4, item5: T5, item6: T6): Tuple_6$instance<T1, T2, T3, T4, T5, T6>;
+    new<T1, T2, T3, T4, T5, T6>(item1: T1, item2: T2, item3: T3, item4: T4, item5: T5, item6: T6): Tuple_6<T1, T2, T3, T4, T5, T6>;
 };
 
 
@@ -7080,7 +7080,7 @@ export interface Tuple_7$instance<T1, T2, T3, T4, T5, T6, T7> {
 
 
 export const Tuple_7: {
-    new<T1, T2, T3, T4, T5, T6, T7>(item1: T1, item2: T2, item3: T3, item4: T4, item5: T5, item6: T6, item7: T7): Tuple_7$instance<T1, T2, T3, T4, T5, T6, T7>;
+    new<T1, T2, T3, T4, T5, T6, T7>(item1: T1, item2: T2, item3: T3, item4: T4, item5: T5, item6: T6, item7: T7): Tuple_7<T1, T2, T3, T4, T5, T6, T7>;
 };
 
 
@@ -7115,7 +7115,7 @@ export interface Tuple_8$instance<T1, T2, T3, T4, T5, T6, T7, TRest> {
 
 
 export const Tuple_8: {
-    new<T1, T2, T3, T4, T5, T6, T7, TRest>(item1: T1, item2: T2, item3: T3, item4: T4, item5: T5, item6: T6, item7: T7, rest: TRest): Tuple_8$instance<T1, T2, T3, T4, T5, T6, T7, TRest>;
+    new<T1, T2, T3, T4, T5, T6, T7, TRest>(item1: T1, item2: T2, item3: T3, item4: T4, item5: T5, item6: T6, item7: T7, rest: TRest): Tuple_8<T1, T2, T3, T4, T5, T6, T7, TRest>;
 };
 
 
@@ -7344,9 +7344,9 @@ export interface TypeAccessException$instance extends TypeLoadException$instance
 
 
 export const TypeAccessException: {
-    new(): TypeAccessException$instance;
-    new(message: string): TypeAccessException$instance;
-    new(message: string, inner: Exception): TypeAccessException$instance;
+    new(): TypeAccessException;
+    new(message: string): TypeAccessException;
+    new(message: string, inner: Exception): TypeAccessException;
 };
 
 
@@ -7364,7 +7364,7 @@ export interface TypeInitializationException$instance extends SystemException$in
 
 
 export const TypeInitializationException: {
-    new(fullTypeName: string, innerException: Exception): TypeInitializationException$instance;
+    new(fullTypeName: string, innerException: Exception): TypeInitializationException;
 };
 
 
@@ -7383,9 +7383,9 @@ export interface TypeLoadException$instance extends SystemException$instance {
 
 
 export const TypeLoadException: {
-    new(): TypeLoadException$instance;
-    new(message: string): TypeLoadException$instance;
-    new(message: string, inner: Exception): TypeLoadException$instance;
+    new(): TypeLoadException;
+    new(message: string): TypeLoadException;
+    new(message: string, inner: Exception): TypeLoadException;
 };
 
 
@@ -7402,9 +7402,9 @@ export interface TypeUnloadedException$instance extends SystemException$instance
 
 
 export const TypeUnloadedException: {
-    new(): TypeUnloadedException$instance;
-    new(message: string): TypeUnloadedException$instance;
-    new(message: string, innerException: Exception): TypeUnloadedException$instance;
+    new(): TypeUnloadedException;
+    new(message: string): TypeUnloadedException;
+    new(message: string, innerException: Exception): TypeUnloadedException;
 };
 
 
@@ -7421,9 +7421,9 @@ export interface UnauthorizedAccessException$instance extends SystemException$in
 
 
 export const UnauthorizedAccessException: {
-    new(): UnauthorizedAccessException$instance;
-    new(message: string): UnauthorizedAccessException$instance;
-    new(message: string, inner: Exception): UnauthorizedAccessException$instance;
+    new(): UnauthorizedAccessException;
+    new(message: string): UnauthorizedAccessException;
+    new(message: string, inner: Exception): UnauthorizedAccessException;
 };
 
 
@@ -7441,7 +7441,7 @@ export interface UnhandledExceptionEventArgs$instance extends EventArgs {
 
 
 export const UnhandledExceptionEventArgs: {
-    new(exception: unknown, isTerminating: boolean): UnhandledExceptionEventArgs$instance;
+    new(exception: unknown, isTerminating: boolean): UnhandledExceptionEventArgs;
 };
 
 
@@ -7454,7 +7454,7 @@ export interface UnitySerializationHolder$instance {
 
 
 export const UnitySerializationHolder: {
-    new(info: SerializationInfo, context: StreamingContext): UnitySerializationHolder$instance;
+    new(info: SerializationInfo, context: StreamingContext): UnitySerializationHolder;
 };
 
 
@@ -7506,13 +7506,13 @@ export interface Uri$instance {
 
 
 export const Uri: {
-    new(uriString: string): Uri$instance;
-    new(uriString: string, dontEscape: boolean): Uri$instance;
-    new(baseUri: Uri, relativeUri: string, dontEscape: boolean): Uri$instance;
-    new(uriString: string, uriKind: UriKind): Uri$instance;
-    new(uriString: string, creationOptions: UriCreationOptions): Uri$instance;
-    new(baseUri: Uri, relativeUri: string): Uri$instance;
-    new(baseUri: Uri, relativeUri: Uri): Uri$instance;
+    new(uriString: string): Uri;
+    new(uriString: string, dontEscape: boolean): Uri;
+    new(baseUri: Uri, relativeUri: string, dontEscape: boolean): Uri;
+    new(uriString: string, uriKind: UriKind): Uri;
+    new(uriString: string, creationOptions: UriCreationOptions): Uri;
+    new(baseUri: Uri, relativeUri: string): Uri;
+    new(baseUri: Uri, relativeUri: Uri): Uri;
     readonly UriSchemeFile: string;
     readonly UriSchemeFtp: string;
     readonly UriSchemeSftp: string;
@@ -7585,13 +7585,13 @@ export interface UriBuilder$instance {
 
 
 export const UriBuilder: {
-    new(): UriBuilder$instance;
-    new(uri: string): UriBuilder$instance;
-    new(uri: Uri): UriBuilder$instance;
-    new(schemeName: string, hostName: string): UriBuilder$instance;
-    new(scheme: string, host: string, portNumber: int): UriBuilder$instance;
-    new(scheme: string, host: string, port: int, pathValue: string): UriBuilder$instance;
-    new(scheme: string, host: string, port: int, path: string, extraValue: string): UriBuilder$instance;
+    new(): UriBuilder;
+    new(uri: string): UriBuilder;
+    new(uri: Uri): UriBuilder;
+    new(schemeName: string, hostName: string): UriBuilder;
+    new(scheme: string, host: string, portNumber: int): UriBuilder;
+    new(scheme: string, host: string, port: int, pathValue: string): UriBuilder;
+    new(scheme: string, host: string, port: int, path: string, extraValue: string): UriBuilder;
 };
 
 
@@ -7603,9 +7603,9 @@ export interface UriFormatException$instance extends FormatException$instance {
 
 
 export const UriFormatException: {
-    new(): UriFormatException$instance;
-    new(textString: string): UriFormatException$instance;
-    new(textString: string, e: Exception): UriFormatException$instance;
+    new(): UriFormatException;
+    new(textString: string): UriFormatException;
+    new(textString: string, e: Exception): UriFormatException;
 };
 
 
@@ -7643,7 +7643,7 @@ export interface UriTypeConverter$instance extends TypeConverter {
 
 
 export const UriTypeConverter: {
-    new(): UriTypeConverter$instance;
+    new(): UriTypeConverter;
 };
 
 
@@ -7685,11 +7685,11 @@ export interface Version$instance {
 
 
 export const Version: {
-    new(major: int, minor: int, build: int, revision: int): Version$instance;
-    new(major: int, minor: int, build: int): Version$instance;
-    new(major: int, minor: int): Version$instance;
-    new(version: string): Version$instance;
-    new(): Version$instance;
+    new(major: int, minor: int, build: int, revision: int): Version;
+    new(major: int, minor: int, build: int): Version;
+    new(major: int, minor: int): Version;
+    new(version: string): Version;
+    new(): Version;
     Parse(utf8Text: ReadOnlySpan_1<Byte>): Version;
     Parse(input: ReadOnlySpan_1<Char>): Version;
     Parse(input: string): Version;
@@ -7729,8 +7729,8 @@ export interface WeakReference$instance {
 
 
 export const WeakReference: {
-    new(target: unknown): WeakReference$instance;
-    new(target: unknown, trackResurrection: boolean): WeakReference$instance;
+    new(target: unknown): WeakReference;
+    new(target: unknown, trackResurrection: boolean): WeakReference;
 };
 
 
@@ -7751,8 +7751,8 @@ export interface WeakReference_1$instance<T> {
 
 
 export const WeakReference_1: {
-    new<T>(target: T): WeakReference_1$instance<T>;
-    new<T>(target: T, trackResurrection: boolean): WeakReference_1$instance<T>;
+    new<T>(target: T): WeakReference_1<T>;
+    new<T>(target: T, trackResurrection: boolean): WeakReference_1<T>;
 };
 
 

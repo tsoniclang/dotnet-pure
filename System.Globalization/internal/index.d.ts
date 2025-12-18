@@ -225,7 +225,7 @@ export interface ChineseLunisolarCalendar$instance extends EastAsianLunisolarCal
 
 
 export const ChineseLunisolarCalendar: {
-    new(): ChineseLunisolarCalendar$instance;
+    new(): ChineseLunisolarCalendar;
     readonly ChineseEra: int;
 };
 
@@ -299,7 +299,7 @@ export interface CompareInfo$instance {
 
 
 export const CompareInfo: {
-    new(): CompareInfo$instance;
+    new(): CompareInfo;
     GetCompareInfo(culture: int, assembly: Assembly): CompareInfo;
     GetCompareInfo(culture: int): CompareInfo;
     GetCompareInfo(name: string, assembly: Assembly): CompareInfo;
@@ -353,10 +353,10 @@ export interface CultureInfo$instance {
 
 
 export const CultureInfo: {
-    new(name: string): CultureInfo$instance;
-    new(name: string, useUserOverride: boolean): CultureInfo$instance;
-    new(culture: int): CultureInfo$instance;
-    new(culture: int, useUserOverride: boolean): CultureInfo$instance;
+    new(name: string): CultureInfo;
+    new(name: string, useUserOverride: boolean): CultureInfo;
+    new(culture: int): CultureInfo;
+    new(culture: int, useUserOverride: boolean): CultureInfo;
     CurrentCulture: CultureInfo;
     CurrentUICulture: CultureInfo;
     readonly InstalledUICulture: CultureInfo;
@@ -393,14 +393,14 @@ export interface CultureNotFoundException$instance extends ArgumentException {
 
 
 export const CultureNotFoundException: {
-    new(): CultureNotFoundException$instance;
-    new(message: string): CultureNotFoundException$instance;
-    new(paramName: string, message: string): CultureNotFoundException$instance;
-    new(message: string, innerException: Exception): CultureNotFoundException$instance;
-    new(paramName: string, invalidCultureName: string, message: string): CultureNotFoundException$instance;
-    new(message: string, invalidCultureName: string, innerException: Exception): CultureNotFoundException$instance;
-    new(message: string, invalidCultureId: int, innerException: Exception): CultureNotFoundException$instance;
-    new(paramName: string, invalidCultureId: int, message: string): CultureNotFoundException$instance;
+    new(): CultureNotFoundException;
+    new(message: string): CultureNotFoundException;
+    new(paramName: string, message: string): CultureNotFoundException;
+    new(message: string, innerException: Exception): CultureNotFoundException;
+    new(paramName: string, invalidCultureName: string, message: string): CultureNotFoundException;
+    new(message: string, invalidCultureName: string, innerException: Exception): CultureNotFoundException;
+    new(message: string, invalidCultureId: int, innerException: Exception): CultureNotFoundException;
+    new(paramName: string, invalidCultureId: int, message: string): CultureNotFoundException;
 };
 
 
@@ -455,7 +455,7 @@ export interface DateTimeFormatInfo$instance {
 
 
 export const DateTimeFormatInfo: {
-    new(): DateTimeFormatInfo$instance;
+    new(): DateTimeFormatInfo;
     readonly InvariantInfo: DateTimeFormatInfo;
     readonly CurrentInfo: DateTimeFormatInfo;
     GetInstance(provider: IFormatProvider): DateTimeFormatInfo;
@@ -481,7 +481,7 @@ export interface DaylightTime$instance {
 
 
 export const DaylightTime: {
-    new(start: DateTime, end: DateTime, delta: TimeSpan): DaylightTime$instance;
+    new(start: DateTime, end: DateTime, delta: TimeSpan): DaylightTime;
 };
 
 
@@ -569,8 +569,8 @@ export interface GregorianCalendar$instance extends Calendar$instance {
 
 
 export const GregorianCalendar: {
-    new(): GregorianCalendar$instance;
-    new(type_: GregorianCalendarTypes): GregorianCalendar$instance;
+    new(): GregorianCalendar;
+    new(type_: GregorianCalendarTypes): GregorianCalendar;
     readonly ADEra: int;
 };
 
@@ -618,7 +618,7 @@ export interface HebrewCalendar$instance extends Calendar$instance {
 
 
 export const HebrewCalendar: {
-    new(): HebrewCalendar$instance;
+    new(): HebrewCalendar;
     readonly HebrewEra: int;
 };
 
@@ -667,7 +667,7 @@ export interface HijriCalendar$instance extends Calendar$instance {
 
 
 export const HijriCalendar: {
-    new(): HijriCalendar$instance;
+    new(): HijriCalendar;
     readonly HijriEra: int;
 };
 
@@ -694,7 +694,7 @@ export interface IdnMapping$instance {
 
 
 export const IdnMapping: {
-    new(): IdnMapping$instance;
+    new(): IdnMapping;
 };
 
 
@@ -737,7 +737,7 @@ export interface JapaneseCalendar$instance extends Calendar$instance {
 
 
 export const JapaneseCalendar: {
-    new(): JapaneseCalendar$instance;
+    new(): JapaneseCalendar;
 };
 
 
@@ -758,7 +758,7 @@ export interface JapaneseLunisolarCalendar$instance extends EastAsianLunisolarCa
 
 
 export const JapaneseLunisolarCalendar: {
-    new(): JapaneseLunisolarCalendar$instance;
+    new(): JapaneseLunisolarCalendar;
     readonly JapaneseEra: int;
 };
 
@@ -806,7 +806,7 @@ export interface JulianCalendar$instance extends Calendar$instance {
 
 
 export const JulianCalendar: {
-    new(): JulianCalendar$instance;
+    new(): JulianCalendar;
     readonly JulianEra: int;
 };
 
@@ -855,7 +855,7 @@ export interface KoreanCalendar$instance extends Calendar$instance {
 
 
 export const KoreanCalendar: {
-    new(): KoreanCalendar$instance;
+    new(): KoreanCalendar;
     readonly KoreanEra: int;
 };
 
@@ -877,7 +877,7 @@ export interface KoreanLunisolarCalendar$instance extends EastAsianLunisolarCale
 
 
 export const KoreanLunisolarCalendar: {
-    new(): KoreanLunisolarCalendar$instance;
+    new(): KoreanLunisolarCalendar;
     readonly GregorianEra: int;
 };
 
@@ -924,7 +924,7 @@ export interface NumberFormatInfo$instance {
 
 
 export const NumberFormatInfo: {
-    new(): NumberFormatInfo$instance;
+    new(): NumberFormatInfo;
     readonly InvariantInfo: NumberFormatInfo;
     readonly CurrentInfo: NumberFormatInfo;
     GetInstance(formatProvider: IFormatProvider): NumberFormatInfo;
@@ -978,7 +978,7 @@ export interface PersianCalendar$instance extends Calendar$instance {
 
 
 export const PersianCalendar: {
-    new(): PersianCalendar$instance;
+    new(): PersianCalendar;
     readonly PersianEra: int;
 };
 
@@ -1011,8 +1011,8 @@ export interface RegionInfo$instance {
 
 
 export const RegionInfo: {
-    new(name: string): RegionInfo$instance;
-    new(culture: int): RegionInfo$instance;
+    new(name: string): RegionInfo;
+    new(culture: int): RegionInfo;
     readonly CurrentRegion: RegionInfo;
 };
 
@@ -1029,7 +1029,7 @@ export interface SortKey$instance {
 
 
 export const SortKey: {
-    new(): SortKey$instance;
+    new(): SortKey;
     Compare(sortkey1: SortKey, sortkey2: SortKey): int;
 };
 
@@ -1046,7 +1046,7 @@ export interface SortVersion$instance {
 
 
 export const SortVersion: {
-    new(fullVersion: int, sortId: Guid): SortVersion$instance;
+    new(fullVersion: int, sortId: Guid): SortVersion;
 };
 
 
@@ -1071,8 +1071,8 @@ export interface StringInfo$instance {
 
 
 export const StringInfo: {
-    new(): StringInfo$instance;
-    new(value: string): StringInfo$instance;
+    new(): StringInfo;
+    new(value: string): StringInfo;
     GetNextTextElement(str: string, index: int): string;
     GetNextTextElement(str: string): string;
     GetNextTextElementLength(str: ReadOnlySpan_1<System_Internal.Char>): int;
@@ -1123,7 +1123,7 @@ export interface TaiwanCalendar$instance extends Calendar$instance {
 
 
 export const TaiwanCalendar: {
-    new(): TaiwanCalendar$instance;
+    new(): TaiwanCalendar;
 };
 
 
@@ -1144,7 +1144,7 @@ export interface TaiwanLunisolarCalendar$instance extends EastAsianLunisolarCale
 
 
 export const TaiwanLunisolarCalendar: {
-    new(): TaiwanLunisolarCalendar$instance;
+    new(): TaiwanLunisolarCalendar;
 };
 
 
@@ -1165,7 +1165,7 @@ export interface TextElementEnumerator$instance {
 
 
 export const TextElementEnumerator: {
-    new(): TextElementEnumerator$instance;
+    new(): TextElementEnumerator;
 };
 
 
@@ -1201,7 +1201,7 @@ export interface TextInfo$instance {
 
 
 export const TextInfo: {
-    new(): TextInfo$instance;
+    new(): TextInfo;
     ReadOnly(textInfo: TextInfo): TextInfo;
 };
 
@@ -1253,7 +1253,7 @@ export interface ThaiBuddhistCalendar$instance extends Calendar$instance {
 
 
 export const ThaiBuddhistCalendar: {
-    new(): ThaiBuddhistCalendar$instance;
+    new(): ThaiBuddhistCalendar;
     readonly ThaiBuddhistEra: int;
 };
 
@@ -1301,7 +1301,7 @@ export interface UmAlQuraCalendar$instance extends Calendar$instance {
 
 
 export const UmAlQuraCalendar: {
-    new(): UmAlQuraCalendar$instance;
+    new(): UmAlQuraCalendar;
     readonly UmAlQuraEra: int;
 };
 

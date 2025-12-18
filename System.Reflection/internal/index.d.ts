@@ -433,8 +433,8 @@ export interface CustomAttributeNamedArgument$instance {
 
 
 export const CustomAttributeNamedArgument: {
-    new(memberInfo: MemberInfo, value: unknown): CustomAttributeNamedArgument$instance;
-    new(memberInfo: MemberInfo, typedArgument: CustomAttributeTypedArgument): CustomAttributeNamedArgument$instance;
+    new(memberInfo: MemberInfo, value: unknown): CustomAttributeNamedArgument;
+    new(memberInfo: MemberInfo, typedArgument: CustomAttributeTypedArgument): CustomAttributeNamedArgument;
 };
 
 
@@ -459,8 +459,8 @@ export interface CustomAttributeTypedArgument$instance {
 
 
 export const CustomAttributeTypedArgument: {
-    new(argumentType: Type, value: unknown): CustomAttributeTypedArgument$instance;
-    new(value: unknown): CustomAttributeTypedArgument$instance;
+    new(argumentType: Type, value: unknown): CustomAttributeTypedArgument;
+    new(value: unknown): CustomAttributeTypedArgument;
 };
 
 
@@ -483,7 +483,7 @@ export interface InterfaceMapping$instance {
 
 
 export const InterfaceMapping: {
-    new(): InterfaceMapping$instance;
+    new(): InterfaceMapping;
 };
 
 
@@ -495,7 +495,7 @@ export interface ParameterModifier$instance {
 
 
 export const ParameterModifier: {
-    new(parameterCount: int): ParameterModifier$instance;
+    new(parameterCount: int): ParameterModifier;
 };
 
 
@@ -507,9 +507,9 @@ export interface AmbiguousMatchException$instance extends SystemException {
 
 
 export const AmbiguousMatchException: {
-    new(): AmbiguousMatchException$instance;
-    new(message: string): AmbiguousMatchException$instance;
-    new(message: string, inner: Exception): AmbiguousMatchException$instance;
+    new(): AmbiguousMatchException;
+    new(message: string): AmbiguousMatchException;
+    new(message: string, inner: Exception): AmbiguousMatchException;
 };
 
 
@@ -616,8 +616,8 @@ export interface AssemblyAlgorithmIdAttribute$instance extends Attribute {
 
 
 export const AssemblyAlgorithmIdAttribute: {
-    new(algorithmId: AssemblyHashAlgorithm_Assemblies): AssemblyAlgorithmIdAttribute$instance;
-    new(algorithmId: uint): AssemblyAlgorithmIdAttribute$instance;
+    new(algorithmId: AssemblyHashAlgorithm_Assemblies): AssemblyAlgorithmIdAttribute;
+    new(algorithmId: uint): AssemblyAlgorithmIdAttribute;
 };
 
 
@@ -629,7 +629,7 @@ export interface AssemblyCompanyAttribute$instance extends Attribute {
 
 
 export const AssemblyCompanyAttribute: {
-    new(company: string): AssemblyCompanyAttribute$instance;
+    new(company: string): AssemblyCompanyAttribute;
 };
 
 
@@ -641,7 +641,7 @@ export interface AssemblyConfigurationAttribute$instance extends Attribute {
 
 
 export const AssemblyConfigurationAttribute: {
-    new(configuration: string): AssemblyConfigurationAttribute$instance;
+    new(configuration: string): AssemblyConfigurationAttribute;
 };
 
 
@@ -653,7 +653,7 @@ export interface AssemblyCopyrightAttribute$instance extends Attribute {
 
 
 export const AssemblyCopyrightAttribute: {
-    new(copyright: string): AssemblyCopyrightAttribute$instance;
+    new(copyright: string): AssemblyCopyrightAttribute;
 };
 
 
@@ -665,7 +665,7 @@ export interface AssemblyCultureAttribute$instance extends Attribute {
 
 
 export const AssemblyCultureAttribute: {
-    new(culture: string): AssemblyCultureAttribute$instance;
+    new(culture: string): AssemblyCultureAttribute;
 };
 
 
@@ -677,7 +677,7 @@ export interface AssemblyDefaultAliasAttribute$instance extends Attribute {
 
 
 export const AssemblyDefaultAliasAttribute: {
-    new(defaultAlias: string): AssemblyDefaultAliasAttribute$instance;
+    new(defaultAlias: string): AssemblyDefaultAliasAttribute;
 };
 
 
@@ -689,7 +689,7 @@ export interface AssemblyDelaySignAttribute$instance extends Attribute {
 
 
 export const AssemblyDelaySignAttribute: {
-    new(delaySign: boolean): AssemblyDelaySignAttribute$instance;
+    new(delaySign: boolean): AssemblyDelaySignAttribute;
 };
 
 
@@ -701,7 +701,7 @@ export interface AssemblyDescriptionAttribute$instance extends Attribute {
 
 
 export const AssemblyDescriptionAttribute: {
-    new(description: string): AssemblyDescriptionAttribute$instance;
+    new(description: string): AssemblyDescriptionAttribute;
 };
 
 
@@ -713,7 +713,7 @@ export interface AssemblyFileVersionAttribute$instance extends Attribute {
 
 
 export const AssemblyFileVersionAttribute: {
-    new(version: string): AssemblyFileVersionAttribute$instance;
+    new(version: string): AssemblyFileVersionAttribute;
 };
 
 
@@ -726,9 +726,9 @@ export interface AssemblyFlagsAttribute$instance extends Attribute {
 
 
 export const AssemblyFlagsAttribute: {
-    new(flags: uint): AssemblyFlagsAttribute$instance;
-    new(assemblyFlags: int): AssemblyFlagsAttribute$instance;
-    new(assemblyFlags: AssemblyNameFlags): AssemblyFlagsAttribute$instance;
+    new(flags: uint): AssemblyFlagsAttribute;
+    new(assemblyFlags: int): AssemblyFlagsAttribute;
+    new(assemblyFlags: AssemblyNameFlags): AssemblyFlagsAttribute;
 };
 
 
@@ -740,7 +740,7 @@ export interface AssemblyInformationalVersionAttribute$instance extends Attribut
 
 
 export const AssemblyInformationalVersionAttribute: {
-    new(informationalVersion: string): AssemblyInformationalVersionAttribute$instance;
+    new(informationalVersion: string): AssemblyInformationalVersionAttribute;
 };
 
 
@@ -752,7 +752,7 @@ export interface AssemblyKeyFileAttribute$instance extends Attribute {
 
 
 export const AssemblyKeyFileAttribute: {
-    new(keyFile: string): AssemblyKeyFileAttribute$instance;
+    new(keyFile: string): AssemblyKeyFileAttribute;
 };
 
 
@@ -764,7 +764,7 @@ export interface AssemblyKeyNameAttribute$instance extends Attribute {
 
 
 export const AssemblyKeyNameAttribute: {
-    new(keyName: string): AssemblyKeyNameAttribute$instance;
+    new(keyName: string): AssemblyKeyNameAttribute;
 };
 
 
@@ -777,7 +777,7 @@ export interface AssemblyMetadataAttribute$instance extends Attribute {
 
 
 export const AssemblyMetadataAttribute: {
-    new(key: string, value: string): AssemblyMetadataAttribute$instance;
+    new(key: string, value: string): AssemblyMetadataAttribute;
 };
 
 
@@ -809,8 +809,8 @@ export interface AssemblyName$instance {
 
 
 export const AssemblyName: {
-    new(assemblyName: string): AssemblyName$instance;
-    new(): AssemblyName$instance;
+    new(assemblyName: string): AssemblyName;
+    new(): AssemblyName;
     GetAssemblyName(assemblyFile: string): AssemblyName;
     ReferenceMatchesDefinition(reference: AssemblyName, definition: AssemblyName): boolean;
 };
@@ -833,7 +833,7 @@ export interface AssemblyNameProxy$instance extends MarshalByRefObject {
 
 
 export const AssemblyNameProxy: {
-    new(): AssemblyNameProxy$instance;
+    new(): AssemblyNameProxy;
 };
 
 
@@ -845,7 +845,7 @@ export interface AssemblyProductAttribute$instance extends Attribute {
 
 
 export const AssemblyProductAttribute: {
-    new(product: string): AssemblyProductAttribute$instance;
+    new(product: string): AssemblyProductAttribute;
 };
 
 
@@ -858,7 +858,7 @@ export interface AssemblySignatureKeyAttribute$instance extends Attribute {
 
 
 export const AssemblySignatureKeyAttribute: {
-    new(publicKey: string, countersignature: string): AssemblySignatureKeyAttribute$instance;
+    new(publicKey: string, countersignature: string): AssemblySignatureKeyAttribute;
 };
 
 
@@ -870,7 +870,7 @@ export interface AssemblyTitleAttribute$instance extends Attribute {
 
 
 export const AssemblyTitleAttribute: {
-    new(title: string): AssemblyTitleAttribute$instance;
+    new(title: string): AssemblyTitleAttribute;
 };
 
 
@@ -882,7 +882,7 @@ export interface AssemblyTrademarkAttribute$instance extends Attribute {
 
 
 export const AssemblyTrademarkAttribute: {
-    new(trademark: string): AssemblyTrademarkAttribute$instance;
+    new(trademark: string): AssemblyTrademarkAttribute;
 };
 
 
@@ -894,7 +894,7 @@ export interface AssemblyVersionAttribute$instance extends Attribute {
 
 
 export const AssemblyVersionAttribute: {
-    new(version: string): AssemblyVersionAttribute$instance;
+    new(version: string): AssemblyVersionAttribute;
 };
 
 
@@ -952,7 +952,7 @@ export interface ConstructorInvoker$instance {
 
 
 export const ConstructorInvoker: {
-    new(): ConstructorInvoker$instance;
+    new(): ConstructorInvoker;
     Create(constructor_: ConstructorInfo): ConstructorInvoker;
 };
 
@@ -969,7 +969,7 @@ export interface CustomAttributeData$instance {
 
 
 export const CustomAttributeData: {
-    new(): CustomAttributeData$instance;
+    new(): CustomAttributeData;
     GetCustomAttributes(target: Assembly): IList_1<CustomAttributeData>;
     GetCustomAttributes(target: MemberInfo): IList_1<CustomAttributeData>;
     GetCustomAttributes(target: Module): IList_1<CustomAttributeData>;
@@ -985,9 +985,9 @@ export interface CustomAttributeFormatException$instance extends FormatException
 
 
 export const CustomAttributeFormatException: {
-    new(): CustomAttributeFormatException$instance;
-    new(message: string): CustomAttributeFormatException$instance;
-    new(message: string, inner: Exception): CustomAttributeFormatException$instance;
+    new(): CustomAttributeFormatException;
+    new(message: string): CustomAttributeFormatException;
+    new(message: string, inner: Exception): CustomAttributeFormatException;
 };
 
 
@@ -1004,7 +1004,7 @@ export interface DefaultMemberAttribute$instance extends Attribute {
 
 
 export const DefaultMemberAttribute: {
-    new(memberName: string): DefaultMemberAttribute$instance;
+    new(memberName: string): DefaultMemberAttribute;
 };
 
 
@@ -1073,7 +1073,7 @@ export interface ExceptionHandlingClause$instance {
 
 
 export const ExceptionHandlingClause: {
-    new(): ExceptionHandlingClause$instance;
+    new(): ExceptionHandlingClause;
 };
 
 
@@ -1135,9 +1135,9 @@ export interface InvalidFilterCriteriaException$instance extends ApplicationExce
 
 
 export const InvalidFilterCriteriaException: {
-    new(): InvalidFilterCriteriaException$instance;
-    new(message: string): InvalidFilterCriteriaException$instance;
-    new(message: string, inner: Exception): InvalidFilterCriteriaException$instance;
+    new(): InvalidFilterCriteriaException;
+    new(message: string): InvalidFilterCriteriaException;
+    new(message: string, inner: Exception): InvalidFilterCriteriaException;
 };
 
 
@@ -1157,7 +1157,7 @@ export interface LocalVariableInfo$instance {
 
 
 export const LocalVariableInfo: {
-    new(): LocalVariableInfo$instance;
+    new(): LocalVariableInfo;
 };
 
 
@@ -1171,7 +1171,7 @@ export interface ManifestResourceInfo$instance {
 
 
 export const ManifestResourceInfo: {
-    new(containingAssembly: Assembly, containingFileName: string, resourceLocation: ResourceLocation): ManifestResourceInfo$instance;
+    new(containingAssembly: Assembly, containingFileName: string, resourceLocation: ResourceLocation): ManifestResourceInfo;
 };
 
 
@@ -1273,7 +1273,7 @@ export interface MethodBody$instance {
 
 
 export const MethodBody: {
-    new(): MethodBody$instance;
+    new(): MethodBody;
 };
 
 
@@ -1322,7 +1322,7 @@ export interface MethodInvoker$instance {
 
 
 export const MethodInvoker: {
-    new(): MethodInvoker$instance;
+    new(): MethodInvoker;
     Create(method: MethodBase): MethodInvoker;
 };
 
@@ -1334,7 +1334,7 @@ export interface Missing$instance {
 
 
 export const Missing: {
-    new(): Missing$instance;
+    new(): Missing;
     readonly Value: Missing;
 };
 
@@ -1421,7 +1421,7 @@ export interface NullabilityInfo$instance {
 
 
 export const NullabilityInfo: {
-    new(): NullabilityInfo$instance;
+    new(): NullabilityInfo;
 };
 
 
@@ -1436,7 +1436,7 @@ export interface NullabilityInfoContext$instance {
 
 
 export const NullabilityInfoContext: {
-    new(): NullabilityInfoContext$instance;
+    new(): NullabilityInfoContext;
 };
 
 
@@ -1449,7 +1449,7 @@ export interface ObfuscateAssemblyAttribute$instance extends Attribute {
 
 
 export const ObfuscateAssemblyAttribute: {
-    new(assemblyIsPrivate: boolean): ObfuscateAssemblyAttribute$instance;
+    new(assemblyIsPrivate: boolean): ObfuscateAssemblyAttribute;
 };
 
 
@@ -1464,7 +1464,7 @@ export interface ObfuscationAttribute$instance extends Attribute {
 
 
 export const ObfuscationAttribute: {
-    new(): ObfuscationAttribute$instance;
+    new(): ObfuscationAttribute;
 };
 
 
@@ -1499,7 +1499,7 @@ export interface ParameterInfo$instance {
 
 
 export const ParameterInfo: {
-    new(): ParameterInfo$instance;
+    new(): ParameterInfo;
 };
 
 
@@ -1520,7 +1520,7 @@ export interface Pointer$instance {
 
 
 export const Pointer: {
-    new(): Pointer$instance;
+    new(): Pointer;
     Box(ptr: ptr<void>, type_: Type): unknown;
     Unbox(ptr: unknown): ptr<void>;
 };
@@ -1604,8 +1604,8 @@ export interface ReflectionTypeLoadException$instance extends SystemException {
 
 
 export const ReflectionTypeLoadException: {
-    new(classes: Type[], exceptions: Exception[]): ReflectionTypeLoadException$instance;
-    new(classes: Type[], exceptions: Exception[], message: string): ReflectionTypeLoadException$instance;
+    new(classes: Type[], exceptions: Exception[]): ReflectionTypeLoadException;
+    new(classes: Type[], exceptions: Exception[], message: string): ReflectionTypeLoadException;
 };
 
 
@@ -1622,9 +1622,9 @@ export interface StrongNameKeyPair$instance {
 
 
 export const StrongNameKeyPair: {
-    new(keyPairFile: FileStream): StrongNameKeyPair$instance;
-    new(keyPairArray: byte[]): StrongNameKeyPair$instance;
-    new(keyPairContainer: string): StrongNameKeyPair$instance;
+    new(keyPairFile: FileStream): StrongNameKeyPair;
+    new(keyPairArray: byte[]): StrongNameKeyPair;
+    new(keyPairContainer: string): StrongNameKeyPair;
 };
 
 
@@ -1644,9 +1644,9 @@ export interface TargetException$instance extends ApplicationException {
 
 
 export const TargetException: {
-    new(): TargetException$instance;
-    new(message: string): TargetException$instance;
-    new(message: string, inner: Exception): TargetException$instance;
+    new(): TargetException;
+    new(message: string): TargetException;
+    new(message: string, inner: Exception): TargetException;
 };
 
 
@@ -1663,8 +1663,8 @@ export interface TargetInvocationException$instance extends ApplicationException
 
 
 export const TargetInvocationException: {
-    new(inner: Exception): TargetInvocationException$instance;
-    new(message: string, inner: Exception): TargetInvocationException$instance;
+    new(inner: Exception): TargetInvocationException;
+    new(message: string, inner: Exception): TargetInvocationException;
 };
 
 
@@ -1681,9 +1681,9 @@ export interface TargetParameterCountException$instance extends ApplicationExcep
 
 
 export const TargetParameterCountException: {
-    new(): TargetParameterCountException$instance;
-    new(message: string): TargetParameterCountException$instance;
-    new(message: string, inner: Exception): TargetParameterCountException$instance;
+    new(): TargetParameterCountException;
+    new(message: string): TargetParameterCountException;
+    new(message: string, inner: Exception): TargetParameterCountException;
 };
 
 
@@ -1781,7 +1781,7 @@ export interface TypeDelegator$instance extends TypeInfo$instance {
 
 
 export const TypeDelegator: {
-    new(delegatingType: Type): TypeDelegator$instance;
+    new(delegatingType: Type): TypeDelegator;
 };
 
 

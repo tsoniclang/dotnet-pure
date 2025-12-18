@@ -26,7 +26,7 @@ export interface FrozenDictionary_2_AlternateLookup_1$instance<TKey, TValue, TAl
 
 
 export const FrozenDictionary_2_AlternateLookup_1: {
-    new<TKey, TValue, TAlternateKey>(): FrozenDictionary_2_AlternateLookup_1$instance<TKey, TValue, TAlternateKey>;
+    new<TKey, TValue, TAlternateKey>(): FrozenDictionary_2_AlternateLookup_1<TKey, TValue, TAlternateKey>;
 };
 
 
@@ -40,7 +40,7 @@ export interface FrozenDictionary_2_Enumerator$instance<TKey, TValue> {
 
 
 export const FrozenDictionary_2_Enumerator: {
-    new<TKey, TValue>(): FrozenDictionary_2_Enumerator$instance<TKey, TValue>;
+    new<TKey, TValue>(): FrozenDictionary_2_Enumerator<TKey, TValue>;
 };
 
 
@@ -60,7 +60,7 @@ export interface FrozenSet_1_AlternateLookup_1$instance<T, TAlternate> {
 
 
 export const FrozenSet_1_AlternateLookup_1: {
-    new<T, TAlternate>(): FrozenSet_1_AlternateLookup_1$instance<T, TAlternate>;
+    new<T, TAlternate>(): FrozenSet_1_AlternateLookup_1<T, TAlternate>;
 };
 
 
@@ -74,7 +74,7 @@ export interface FrozenSet_1_Enumerator$instance<T> {
 
 
 export const FrozenSet_1_Enumerator: {
-    new<T>(): FrozenSet_1_Enumerator$instance<T>;
+    new<T>(): FrozenSet_1_Enumerator<T>;
 };
 
 

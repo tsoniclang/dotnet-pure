@@ -32,7 +32,7 @@ export interface ContractAbbreviatorAttribute$instance extends Attribute {
 
 
 export const ContractAbbreviatorAttribute: {
-    new(): ContractAbbreviatorAttribute$instance;
+    new(): ContractAbbreviatorAttribute;
 };
 
 
@@ -43,7 +43,7 @@ export interface ContractArgumentValidatorAttribute$instance extends Attribute {
 
 
 export const ContractArgumentValidatorAttribute: {
-    new(): ContractArgumentValidatorAttribute$instance;
+    new(): ContractArgumentValidatorAttribute;
 };
 
 
@@ -55,7 +55,7 @@ export interface ContractClassAttribute$instance extends Attribute {
 
 
 export const ContractClassAttribute: {
-    new(typeContainingContracts: Type): ContractClassAttribute$instance;
+    new(typeContainingContracts: Type): ContractClassAttribute;
 };
 
 
@@ -67,7 +67,7 @@ export interface ContractClassForAttribute$instance extends Attribute {
 
 
 export const ContractClassForAttribute: {
-    new(typeContractsAreFor: Type): ContractClassForAttribute$instance;
+    new(typeContractsAreFor: Type): ContractClassForAttribute;
 };
 
 
@@ -83,7 +83,7 @@ export interface ContractException$instance extends Exception {
 
 
 export const ContractException: {
-    new(kind: ContractFailureKind, failure: string, userMessage: string, condition: string, innerException: Exception): ContractException$instance;
+    new(kind: ContractFailureKind, failure: string, userMessage: string, condition: string, innerException: Exception): ContractException;
 };
 
 
@@ -107,7 +107,7 @@ export interface ContractFailedEventArgs$instance extends EventArgs {
 
 
 export const ContractFailedEventArgs: {
-    new(failureKind: ContractFailureKind, message: string, condition: string, originalException: Exception): ContractFailedEventArgs$instance;
+    new(failureKind: ContractFailureKind, message: string, condition: string, originalException: Exception): ContractFailedEventArgs;
 };
 
 
@@ -118,7 +118,7 @@ export interface ContractInvariantMethodAttribute$instance extends Attribute {
 
 
 export const ContractInvariantMethodAttribute: {
-    new(): ContractInvariantMethodAttribute$instance;
+    new(): ContractInvariantMethodAttribute;
 };
 
 
@@ -133,8 +133,8 @@ export interface ContractOptionAttribute$instance extends Attribute {
 
 
 export const ContractOptionAttribute: {
-    new(category: string, setting: string, enabled: boolean): ContractOptionAttribute$instance;
-    new(category: string, setting: string, value: string): ContractOptionAttribute$instance;
+    new(category: string, setting: string, enabled: boolean): ContractOptionAttribute;
+    new(category: string, setting: string, value: string): ContractOptionAttribute;
 };
 
 
@@ -146,7 +146,7 @@ export interface ContractPublicPropertyNameAttribute$instance extends Attribute 
 
 
 export const ContractPublicPropertyNameAttribute: {
-    new(name: string): ContractPublicPropertyNameAttribute$instance;
+    new(name: string): ContractPublicPropertyNameAttribute;
 };
 
 
@@ -157,7 +157,7 @@ export interface ContractReferenceAssemblyAttribute$instance extends Attribute {
 
 
 export const ContractReferenceAssemblyAttribute: {
-    new(): ContractReferenceAssemblyAttribute$instance;
+    new(): ContractReferenceAssemblyAttribute;
 };
 
 
@@ -168,7 +168,7 @@ export interface ContractRuntimeIgnoredAttribute$instance extends Attribute {
 
 
 export const ContractRuntimeIgnoredAttribute: {
-    new(): ContractRuntimeIgnoredAttribute$instance;
+    new(): ContractRuntimeIgnoredAttribute;
 };
 
 
@@ -180,7 +180,7 @@ export interface ContractVerificationAttribute$instance extends Attribute {
 
 
 export const ContractVerificationAttribute: {
-    new(value: boolean): ContractVerificationAttribute$instance;
+    new(value: boolean): ContractVerificationAttribute;
 };
 
 
@@ -191,7 +191,7 @@ export interface PureAttribute$instance extends Attribute {
 
 
 export const PureAttribute: {
-    new(): PureAttribute$instance;
+    new(): PureAttribute;
 };
 
 

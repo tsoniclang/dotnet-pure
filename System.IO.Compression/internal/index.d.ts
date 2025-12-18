@@ -60,7 +60,7 @@ export interface BrotliDecoder$instance {
 
 
 export const BrotliDecoder: {
-    new(): BrotliDecoder$instance;
+    new(): BrotliDecoder;
     TryDecompress(source: ReadOnlySpan_1<System_Internal.Byte>, destination: Span_1<System_Internal.Byte>, bytesWritten: int): boolean;
 };
 
@@ -82,7 +82,7 @@ export interface BrotliEncoder$instance {
 
 
 export const BrotliEncoder: {
-    new(quality: int, window: int): BrotliEncoder$instance;
+    new(quality: int, window: int): BrotliEncoder;
     GetMaxCompressedLength(inputSize: int): int;
     TryCompress(source: ReadOnlySpan_1<System_Internal.Byte>, destination: Span_1<System_Internal.Byte>, bytesWritten: int, quality: int, window: int): boolean;
     TryCompress(source: ReadOnlySpan_1<System_Internal.Byte>, destination: Span_1<System_Internal.Byte>, bytesWritten: int): boolean;
@@ -104,7 +104,7 @@ export interface BrotliCompressionOptions$instance {
 
 
 export const BrotliCompressionOptions: {
-    new(): BrotliCompressionOptions$instance;
+    new(): BrotliCompressionOptions;
 };
 
 
@@ -149,11 +149,11 @@ export interface BrotliStream$instance extends Stream {
 
 
 export const BrotliStream: {
-    new(stream: Stream, compressionLevel: CompressionLevel): BrotliStream$instance;
-    new(stream: Stream, compressionLevel: CompressionLevel, leaveOpen: boolean): BrotliStream$instance;
-    new(stream: Stream, compressionOptions: BrotliCompressionOptions, leaveOpen: boolean): BrotliStream$instance;
-    new(stream: Stream, mode: CompressionMode): BrotliStream$instance;
-    new(stream: Stream, mode: CompressionMode, leaveOpen: boolean): BrotliStream$instance;
+    new(stream: Stream, compressionLevel: CompressionLevel): BrotliStream;
+    new(stream: Stream, compressionLevel: CompressionLevel, leaveOpen: boolean): BrotliStream;
+    new(stream: Stream, compressionOptions: BrotliCompressionOptions, leaveOpen: boolean): BrotliStream;
+    new(stream: Stream, mode: CompressionMode): BrotliStream;
+    new(stream: Stream, mode: CompressionMode, leaveOpen: boolean): BrotliStream;
 };
 
 
@@ -210,11 +210,11 @@ export interface DeflateStream$instance extends Stream {
 
 
 export const DeflateStream: {
-    new(stream: Stream, mode: CompressionMode): DeflateStream$instance;
-    new(stream: Stream, mode: CompressionMode, leaveOpen: boolean): DeflateStream$instance;
-    new(stream: Stream, compressionLevel: CompressionLevel): DeflateStream$instance;
-    new(stream: Stream, compressionLevel: CompressionLevel, leaveOpen: boolean): DeflateStream$instance;
-    new(stream: Stream, compressionOptions: ZLibCompressionOptions, leaveOpen: boolean): DeflateStream$instance;
+    new(stream: Stream, mode: CompressionMode): DeflateStream;
+    new(stream: Stream, mode: CompressionMode, leaveOpen: boolean): DeflateStream;
+    new(stream: Stream, compressionLevel: CompressionLevel): DeflateStream;
+    new(stream: Stream, compressionLevel: CompressionLevel, leaveOpen: boolean): DeflateStream;
+    new(stream: Stream, compressionOptions: ZLibCompressionOptions, leaveOpen: boolean): DeflateStream;
 };
 
 
@@ -271,11 +271,11 @@ export interface GZipStream$instance extends Stream {
 
 
 export const GZipStream: {
-    new(stream: Stream, mode: CompressionMode): GZipStream$instance;
-    new(stream: Stream, mode: CompressionMode, leaveOpen: boolean): GZipStream$instance;
-    new(stream: Stream, compressionLevel: CompressionLevel): GZipStream$instance;
-    new(stream: Stream, compressionLevel: CompressionLevel, leaveOpen: boolean): GZipStream$instance;
-    new(stream: Stream, compressionOptions: ZLibCompressionOptions, leaveOpen: boolean): GZipStream$instance;
+    new(stream: Stream, mode: CompressionMode): GZipStream;
+    new(stream: Stream, mode: CompressionMode, leaveOpen: boolean): GZipStream;
+    new(stream: Stream, compressionLevel: CompressionLevel): GZipStream;
+    new(stream: Stream, compressionLevel: CompressionLevel, leaveOpen: boolean): GZipStream;
+    new(stream: Stream, compressionOptions: ZLibCompressionOptions, leaveOpen: boolean): GZipStream;
 };
 
 
@@ -300,10 +300,10 @@ export interface ZipArchive$instance {
 
 
 export const ZipArchive: {
-    new(stream: Stream): ZipArchive$instance;
-    new(stream: Stream, mode: ZipArchiveMode): ZipArchive$instance;
-    new(stream: Stream, mode: ZipArchiveMode, leaveOpen: boolean): ZipArchive$instance;
-    new(stream: Stream, mode: ZipArchiveMode, leaveOpen: boolean, entryNameEncoding: Encoding): ZipArchive$instance;
+    new(stream: Stream): ZipArchive;
+    new(stream: Stream, mode: ZipArchiveMode): ZipArchive;
+    new(stream: Stream, mode: ZipArchiveMode, leaveOpen: boolean): ZipArchive;
+    new(stream: Stream, mode: ZipArchiveMode, leaveOpen: boolean, entryNameEncoding: Encoding): ZipArchive;
     CreateAsync(stream: Stream, mode: ZipArchiveMode, leaveOpen: boolean, entryNameEncoding: Encoding, cancellationToken?: CancellationToken): Task_1<ZipArchive>;
 };
 
@@ -337,7 +337,7 @@ export interface ZipArchiveEntry$instance {
 
 
 export const ZipArchiveEntry: {
-    new(): ZipArchiveEntry$instance;
+    new(): ZipArchiveEntry;
 };
 
 
@@ -350,7 +350,7 @@ export interface ZLibCompressionOptions$instance {
 
 
 export const ZLibCompressionOptions: {
-    new(): ZLibCompressionOptions$instance;
+    new(): ZLibCompressionOptions;
 };
 
 
@@ -362,9 +362,9 @@ export interface ZLibException$instance extends IOException {
 
 
 export const ZLibException: {
-    new(message: string, zlibErrorContext: string, zlibErrorCode: int, zlibErrorMessage: string): ZLibException$instance;
-    new(): ZLibException$instance;
-    new(message: string, innerException: Exception): ZLibException$instance;
+    new(message: string, zlibErrorContext: string, zlibErrorCode: int, zlibErrorMessage: string): ZLibException;
+    new(): ZLibException;
+    new(message: string, innerException: Exception): ZLibException;
 };
 
 
@@ -420,11 +420,11 @@ export interface ZLibStream$instance extends Stream {
 
 
 export const ZLibStream: {
-    new(stream: Stream, mode: CompressionMode): ZLibStream$instance;
-    new(stream: Stream, mode: CompressionMode, leaveOpen: boolean): ZLibStream$instance;
-    new(stream: Stream, compressionLevel: CompressionLevel): ZLibStream$instance;
-    new(stream: Stream, compressionLevel: CompressionLevel, leaveOpen: boolean): ZLibStream$instance;
-    new(stream: Stream, compressionOptions: ZLibCompressionOptions, leaveOpen: boolean): ZLibStream$instance;
+    new(stream: Stream, mode: CompressionMode): ZLibStream;
+    new(stream: Stream, mode: CompressionMode, leaveOpen: boolean): ZLibStream;
+    new(stream: Stream, compressionLevel: CompressionLevel): ZLibStream;
+    new(stream: Stream, compressionLevel: CompressionLevel, leaveOpen: boolean): ZLibStream;
+    new(stream: Stream, compressionOptions: ZLibCompressionOptions, leaveOpen: boolean): ZLibStream;
 };
 
 

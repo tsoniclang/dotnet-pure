@@ -67,8 +67,8 @@ export interface XAttribute$instance extends XObject$instance {
 
 
 export const XAttribute: {
-    new(name: XName, value: unknown): XAttribute$instance;
-    new(other: XAttribute): XAttribute$instance;
+    new(name: XName, value: unknown): XAttribute;
+    new(other: XAttribute): XAttribute;
     readonly EmptySequence: IEnumerable_1<XAttribute>;
 };
 
@@ -91,8 +91,8 @@ export interface XCData$instance extends XText$instance {
 
 
 export const XCData: {
-    new(value: string): XCData$instance;
-    new(other: XCData): XCData$instance;
+    new(value: string): XCData;
+    new(other: XCData): XCData;
 };
 
 
@@ -113,8 +113,8 @@ export interface XComment$instance extends XNode$instance {
 
 
 export const XComment: {
-    new(value: string): XComment$instance;
-    new(other: XComment): XComment$instance;
+    new(value: string): XComment;
+    new(other: XComment): XComment;
 };
 
 
@@ -167,8 +167,8 @@ export interface XDeclaration$instance {
 
 
 export const XDeclaration: {
-    new(version: string, encoding: string, standalone: string): XDeclaration$instance;
-    new(other: XDeclaration): XDeclaration$instance;
+    new(version: string, encoding: string, standalone: string): XDeclaration;
+    new(other: XDeclaration): XDeclaration;
 };
 
 
@@ -196,10 +196,10 @@ export interface XDocument$instance extends XContainer$instance {
 
 
 export const XDocument: {
-    new(): XDocument$instance;
-    new(content: unknown[]): XDocument$instance;
-    new(declaration: XDeclaration, content: unknown[]): XDocument$instance;
-    new(other: XDocument): XDocument$instance;
+    new(): XDocument;
+    new(content: unknown[]): XDocument;
+    new(declaration: XDeclaration, content: unknown[]): XDocument;
+    new(other: XDocument): XDocument;
     Load(stream: Stream, options: LoadOptions): XDocument;
     Load(stream: Stream): XDocument;
     Load(textReader: TextReader, options: LoadOptions): XDocument;
@@ -236,8 +236,8 @@ export interface XDocumentType$instance extends XNode$instance {
 
 
 export const XDocumentType: {
-    new(name: string, publicId: string, systemId: string, internalSubset: string): XDocumentType$instance;
-    new(other: XDocumentType): XDocumentType$instance;
+    new(name: string, publicId: string, systemId: string, internalSubset: string): XDocumentType;
+    new(other: XDocumentType): XDocumentType;
 };
 
 
@@ -294,11 +294,11 @@ export interface XElement$instance extends XContainer$instance {
 
 
 export const XElement: {
-    new(name: XName): XElement$instance;
-    new(name: XName, content: unknown): XElement$instance;
-    new(name: XName, content: unknown[]): XElement$instance;
-    new(other: XElement): XElement$instance;
-    new(other: XStreamingElement): XElement$instance;
+    new(name: XName): XElement;
+    new(name: XName, content: unknown): XElement;
+    new(name: XName, content: unknown[]): XElement;
+    new(other: XElement): XElement;
+    new(other: XStreamingElement): XElement;
     readonly EmptySequence: IEnumerable_1<XElement>;
     Load(stream: Stream, options: LoadOptions): XElement;
     Load(stream: Stream): XElement;
@@ -337,7 +337,7 @@ export interface XName$instance {
 
 
 export const XName: {
-    new(): XName$instance;
+    new(): XName;
     Get(localName: string, namespaceName: string): XName;
     Get(expandedName: string): XName;
 };
@@ -366,7 +366,7 @@ export interface XNamespace$instance {
 
 
 export const XNamespace: {
-    new(): XNamespace$instance;
+    new(): XNamespace;
     readonly None: XNamespace;
     readonly Xml: XNamespace;
     readonly Xmlns: XNamespace;
@@ -431,7 +431,7 @@ export interface XNodeDocumentOrderComparer$instance {
 
 
 export const XNodeDocumentOrderComparer: {
-    new(): XNodeDocumentOrderComparer$instance;
+    new(): XNodeDocumentOrderComparer;
 };
 
 
@@ -452,7 +452,7 @@ export interface XNodeEqualityComparer$instance {
 
 
 export const XNodeEqualityComparer: {
-    new(): XNodeEqualityComparer$instance;
+    new(): XNodeEqualityComparer;
 };
 
 
@@ -498,7 +498,7 @@ export interface XObjectChangeEventArgs$instance extends EventArgs {
 
 
 export const XObjectChangeEventArgs: {
-    new(objectChange: XObjectChange): XObjectChangeEventArgs$instance;
+    new(objectChange: XObjectChange): XObjectChangeEventArgs;
     readonly Add: XObjectChangeEventArgs;
     readonly Remove: XObjectChangeEventArgs;
     readonly Name: XObjectChangeEventArgs;
@@ -519,8 +519,8 @@ export interface XProcessingInstruction$instance extends XNode$instance {
 
 
 export const XProcessingInstruction: {
-    new(target: string, data: string): XProcessingInstruction$instance;
-    new(other: XProcessingInstruction): XProcessingInstruction$instance;
+    new(target: string, data: string): XProcessingInstruction;
+    new(other: XProcessingInstruction): XProcessingInstruction;
 };
 
 
@@ -549,9 +549,9 @@ export interface XStreamingElement$instance {
 
 
 export const XStreamingElement: {
-    new(name: XName): XStreamingElement$instance;
-    new(name: XName, content: unknown): XStreamingElement$instance;
-    new(name: XName, content: unknown[]): XStreamingElement$instance;
+    new(name: XName): XStreamingElement;
+    new(name: XName, content: unknown): XStreamingElement;
+    new(name: XName, content: unknown[]): XStreamingElement;
 };
 
 
@@ -567,8 +567,8 @@ export interface XText$instance extends XNode$instance {
 
 
 export const XText: {
-    new(value: string): XText$instance;
-    new(other: XText): XText$instance;
+    new(value: string): XText;
+    new(other: XText): XText;
 };
 
 

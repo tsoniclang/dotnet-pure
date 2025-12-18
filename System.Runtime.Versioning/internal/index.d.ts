@@ -34,7 +34,7 @@ export interface ComponentGuaranteesAttribute$instance extends Attribute {
 
 
 export const ComponentGuaranteesAttribute: {
-    new(guarantees: ComponentGuaranteesOptions): ComponentGuaranteesAttribute$instance;
+    new(guarantees: ComponentGuaranteesOptions): ComponentGuaranteesAttribute;
 };
 
 
@@ -53,9 +53,9 @@ export interface FrameworkName$instance {
 
 
 export const FrameworkName: {
-    new(identifier: string, version: Version): FrameworkName$instance;
-    new(identifier: string, version: Version, profile: string): FrameworkName$instance;
-    new(frameworkName: string): FrameworkName$instance;
+    new(identifier: string, version: Version): FrameworkName;
+    new(identifier: string, version: Version, profile: string): FrameworkName;
+    new(frameworkName: string): FrameworkName;
 };
 
 
@@ -76,8 +76,8 @@ export interface ObsoletedOSPlatformAttribute$instance extends OSPlatformAttribu
 
 
 export const ObsoletedOSPlatformAttribute: {
-    new(platformName: string): ObsoletedOSPlatformAttribute$instance;
-    new(platformName: string, message: string): ObsoletedOSPlatformAttribute$instance;
+    new(platformName: string): ObsoletedOSPlatformAttribute;
+    new(platformName: string, message: string): ObsoletedOSPlatformAttribute;
 };
 
 
@@ -101,8 +101,8 @@ export interface RequiresPreviewFeaturesAttribute$instance extends Attribute {
 
 
 export const RequiresPreviewFeaturesAttribute: {
-    new(): RequiresPreviewFeaturesAttribute$instance;
-    new(message: string): RequiresPreviewFeaturesAttribute$instance;
+    new(): RequiresPreviewFeaturesAttribute;
+    new(message: string): RequiresPreviewFeaturesAttribute;
 };
 
 
@@ -115,8 +115,8 @@ export interface ResourceConsumptionAttribute$instance extends Attribute {
 
 
 export const ResourceConsumptionAttribute: {
-    new(resourceScope: ResourceScope): ResourceConsumptionAttribute$instance;
-    new(resourceScope: ResourceScope, consumptionScope: ResourceScope): ResourceConsumptionAttribute$instance;
+    new(resourceScope: ResourceScope): ResourceConsumptionAttribute;
+    new(resourceScope: ResourceScope, consumptionScope: ResourceScope): ResourceConsumptionAttribute;
 };
 
 
@@ -128,7 +128,7 @@ export interface ResourceExposureAttribute$instance extends Attribute {
 
 
 export const ResourceExposureAttribute: {
-    new(exposureLevel: ResourceScope): ResourceExposureAttribute$instance;
+    new(exposureLevel: ResourceScope): ResourceExposureAttribute;
 };
 
 
@@ -139,7 +139,7 @@ export interface SupportedOSPlatformAttribute$instance extends OSPlatformAttribu
 
 
 export const SupportedOSPlatformAttribute: {
-    new(platformName: string): SupportedOSPlatformAttribute$instance;
+    new(platformName: string): SupportedOSPlatformAttribute;
 };
 
 
@@ -150,7 +150,7 @@ export interface SupportedOSPlatformGuardAttribute$instance extends OSPlatformAt
 
 
 export const SupportedOSPlatformGuardAttribute: {
-    new(platformName: string): SupportedOSPlatformGuardAttribute$instance;
+    new(platformName: string): SupportedOSPlatformGuardAttribute;
 };
 
 
@@ -163,7 +163,7 @@ export interface TargetFrameworkAttribute$instance extends Attribute {
 
 
 export const TargetFrameworkAttribute: {
-    new(frameworkName: string): TargetFrameworkAttribute$instance;
+    new(frameworkName: string): TargetFrameworkAttribute;
 };
 
 
@@ -174,7 +174,7 @@ export interface TargetPlatformAttribute$instance extends OSPlatformAttribute {
 
 
 export const TargetPlatformAttribute: {
-    new(platformName: string): TargetPlatformAttribute$instance;
+    new(platformName: string): TargetPlatformAttribute;
 };
 
 
@@ -186,8 +186,8 @@ export interface UnsupportedOSPlatformAttribute$instance extends OSPlatformAttri
 
 
 export const UnsupportedOSPlatformAttribute: {
-    new(platformName: string): UnsupportedOSPlatformAttribute$instance;
-    new(platformName: string, message: string): UnsupportedOSPlatformAttribute$instance;
+    new(platformName: string): UnsupportedOSPlatformAttribute;
+    new(platformName: string, message: string): UnsupportedOSPlatformAttribute;
 };
 
 
@@ -198,7 +198,7 @@ export interface UnsupportedOSPlatformGuardAttribute$instance extends OSPlatform
 
 
 export const UnsupportedOSPlatformGuardAttribute: {
-    new(platformName: string): UnsupportedOSPlatformGuardAttribute$instance;
+    new(platformName: string): UnsupportedOSPlatformGuardAttribute;
 };
 
 

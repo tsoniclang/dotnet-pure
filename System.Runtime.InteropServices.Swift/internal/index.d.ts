@@ -18,7 +18,7 @@ export interface SwiftError$instance {
 
 
 export const SwiftError: {
-    new(value: ptr<void>): SwiftError$instance;
+    new(value: ptr<void>): SwiftError;
 };
 
 
@@ -30,7 +30,7 @@ export interface SwiftIndirectResult$instance {
 
 
 export const SwiftIndirectResult: {
-    new(value: ptr<void>): SwiftIndirectResult$instance;
+    new(value: ptr<void>): SwiftIndirectResult;
 };
 
 
@@ -42,7 +42,7 @@ export interface SwiftSelf$instance {
 
 
 export const SwiftSelf: {
-    new(value: ptr<void>): SwiftSelf$instance;
+    new(value: ptr<void>): SwiftSelf;
 };
 
 
@@ -54,7 +54,7 @@ export interface SwiftSelf_1$instance<T extends unknown> {
 
 
 export const SwiftSelf_1: {
-    new<T extends unknown>(value: T): SwiftSelf_1$instance<T>;
+    new<T extends unknown>(value: T): SwiftSelf_1<T>;
 };
 
 

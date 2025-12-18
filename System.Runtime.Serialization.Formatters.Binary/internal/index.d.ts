@@ -26,8 +26,8 @@ export interface BinaryFormatter$instance {
 
 
 export const BinaryFormatter: {
-    new(): BinaryFormatter$instance;
-    new(selector: ISurrogateSelector, context: StreamingContext): BinaryFormatter$instance;
+    new(): BinaryFormatter;
+    new(selector: ISurrogateSelector, context: StreamingContext): BinaryFormatter;
 };
 
 

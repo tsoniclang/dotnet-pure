@@ -88,7 +88,7 @@ export interface XmlDeserializationEvents$instance {
 
 
 export const XmlDeserializationEvents: {
-    new(): XmlDeserializationEvents$instance;
+    new(): XmlDeserializationEvents;
 };
 
 
@@ -99,7 +99,7 @@ export interface CodeIdentifier$instance {
 
 
 export const CodeIdentifier: {
-    new(): CodeIdentifier$instance;
+    new(): CodeIdentifier;
     MakeCamel(identifier: string): string;
     MakePascal(identifier: string): string;
     MakeValid(identifier: string): string;
@@ -124,8 +124,8 @@ export interface CodeIdentifiers$instance {
 
 
 export const CodeIdentifiers: {
-    new(): CodeIdentifiers$instance;
-    new(caseSensitive: boolean): CodeIdentifiers$instance;
+    new(): CodeIdentifiers;
+    new(caseSensitive: boolean): CodeIdentifiers;
 };
 
 
@@ -139,7 +139,7 @@ export interface ImportContext$instance {
 
 
 export const ImportContext: {
-    new(identifiers: CodeIdentifiers, shareTypes: boolean): ImportContext$instance;
+    new(identifiers: CodeIdentifiers, shareTypes: boolean): ImportContext;
 };
 
 
@@ -163,8 +163,8 @@ export interface SoapAttributeAttribute$instance extends Attribute {
 
 
 export const SoapAttributeAttribute: {
-    new(): SoapAttributeAttribute$instance;
-    new(attributeName: string): SoapAttributeAttribute$instance;
+    new(): SoapAttributeAttribute;
+    new(attributeName: string): SoapAttributeAttribute;
 };
 
 
@@ -179,7 +179,7 @@ export interface SoapAttributeOverrides$instance {
 
 
 export const SoapAttributeOverrides: {
-    new(): SoapAttributeOverrides$instance;
+    new(): SoapAttributeOverrides;
 };
 
 
@@ -196,8 +196,8 @@ export interface SoapAttributes$instance {
 
 
 export const SoapAttributes: {
-    new(): SoapAttributes$instance;
-    new(provider: ICustomAttributeProvider): SoapAttributes$instance;
+    new(): SoapAttributes;
+    new(provider: ICustomAttributeProvider): SoapAttributes;
 };
 
 
@@ -211,8 +211,8 @@ export interface SoapElementAttribute$instance extends Attribute {
 
 
 export const SoapElementAttribute: {
-    new(): SoapElementAttribute$instance;
-    new(elementName: string): SoapElementAttribute$instance;
+    new(): SoapElementAttribute;
+    new(elementName: string): SoapElementAttribute;
 };
 
 
@@ -224,8 +224,8 @@ export interface SoapEnumAttribute$instance extends Attribute {
 
 
 export const SoapEnumAttribute: {
-    new(): SoapEnumAttribute$instance;
-    new(name: string): SoapEnumAttribute$instance;
+    new(): SoapEnumAttribute;
+    new(name: string): SoapEnumAttribute;
 };
 
 
@@ -236,7 +236,7 @@ export interface SoapIgnoreAttribute$instance extends Attribute {
 
 
 export const SoapIgnoreAttribute: {
-    new(): SoapIgnoreAttribute$instance;
+    new(): SoapIgnoreAttribute;
 };
 
 
@@ -248,7 +248,7 @@ export interface SoapIncludeAttribute$instance extends Attribute {
 
 
 export const SoapIncludeAttribute: {
-    new(type_: Type): SoapIncludeAttribute$instance;
+    new(type_: Type): SoapIncludeAttribute;
 };
 
 
@@ -267,10 +267,10 @@ export interface SoapReflectionImporter$instance {
 
 
 export const SoapReflectionImporter: {
-    new(): SoapReflectionImporter$instance;
-    new(defaultNamespace: string): SoapReflectionImporter$instance;
-    new(attributeOverrides: SoapAttributeOverrides): SoapReflectionImporter$instance;
-    new(attributeOverrides: SoapAttributeOverrides, defaultNamespace: string): SoapReflectionImporter$instance;
+    new(): SoapReflectionImporter;
+    new(defaultNamespace: string): SoapReflectionImporter;
+    new(attributeOverrides: SoapAttributeOverrides): SoapReflectionImporter;
+    new(attributeOverrides: SoapAttributeOverrides, defaultNamespace: string): SoapReflectionImporter;
 };
 
 
@@ -283,7 +283,7 @@ export interface SoapSchemaMember$instance {
 
 
 export const SoapSchemaMember: {
-    new(): SoapSchemaMember$instance;
+    new(): SoapSchemaMember;
 };
 
 
@@ -297,9 +297,9 @@ export interface SoapTypeAttribute$instance extends Attribute {
 
 
 export const SoapTypeAttribute: {
-    new(): SoapTypeAttribute$instance;
-    new(typeName: string): SoapTypeAttribute$instance;
-    new(typeName: string, ns: string): SoapTypeAttribute$instance;
+    new(): SoapTypeAttribute;
+    new(typeName: string): SoapTypeAttribute;
+    new(typeName: string, ns: string): SoapTypeAttribute;
 };
 
 
@@ -312,7 +312,7 @@ export interface UnreferencedObjectEventArgs$instance extends EventArgs {
 
 
 export const UnreferencedObjectEventArgs: {
-    new(o: unknown, id: string): UnreferencedObjectEventArgs$instance;
+    new(o: unknown, id: string): UnreferencedObjectEventArgs;
 };
 
 
@@ -323,7 +323,7 @@ export interface XmlAnyAttributeAttribute$instance extends Attribute {
 
 
 export const XmlAnyAttributeAttribute: {
-    new(): XmlAnyAttributeAttribute$instance;
+    new(): XmlAnyAttributeAttribute;
 };
 
 
@@ -337,9 +337,9 @@ export interface XmlAnyElementAttribute$instance extends Attribute {
 
 
 export const XmlAnyElementAttribute: {
-    new(): XmlAnyElementAttribute$instance;
-    new(name: string): XmlAnyElementAttribute$instance;
-    new(name: string, ns: string): XmlAnyElementAttribute$instance;
+    new(): XmlAnyElementAttribute;
+    new(name: string): XmlAnyElementAttribute;
+    new(name: string, ns: string): XmlAnyElementAttribute;
 };
 
 
@@ -360,7 +360,7 @@ export interface XmlAnyElementAttributes$instance extends CollectionBase {
 
 
 export const XmlAnyElementAttributes: {
-    new(): XmlAnyElementAttributes$instance;
+    new(): XmlAnyElementAttributes;
 };
 
 
@@ -383,8 +383,8 @@ export interface XmlArrayAttribute$instance extends Attribute {
 
 
 export const XmlArrayAttribute: {
-    new(): XmlArrayAttribute$instance;
-    new(elementName: string): XmlArrayAttribute$instance;
+    new(): XmlArrayAttribute;
+    new(elementName: string): XmlArrayAttribute;
 };
 
 
@@ -402,10 +402,10 @@ export interface XmlArrayItemAttribute$instance extends Attribute {
 
 
 export const XmlArrayItemAttribute: {
-    new(): XmlArrayItemAttribute$instance;
-    new(elementName: string): XmlArrayItemAttribute$instance;
-    new(type_: Type): XmlArrayItemAttribute$instance;
-    new(elementName: string, type_: Type): XmlArrayItemAttribute$instance;
+    new(): XmlArrayItemAttribute;
+    new(elementName: string): XmlArrayItemAttribute;
+    new(type_: Type): XmlArrayItemAttribute;
+    new(elementName: string, type_: Type): XmlArrayItemAttribute;
 };
 
 
@@ -426,7 +426,7 @@ export interface XmlArrayItemAttributes$instance extends CollectionBase {
 
 
 export const XmlArrayItemAttributes: {
-    new(): XmlArrayItemAttributes$instance;
+    new(): XmlArrayItemAttributes;
 };
 
 
@@ -449,10 +449,10 @@ export interface XmlAttributeAttribute$instance extends Attribute {
 
 
 export const XmlAttributeAttribute: {
-    new(): XmlAttributeAttribute$instance;
-    new(attributeName: string): XmlAttributeAttribute$instance;
-    new(type_: Type): XmlAttributeAttribute$instance;
-    new(attributeName: string, type_: Type): XmlAttributeAttribute$instance;
+    new(): XmlAttributeAttribute;
+    new(attributeName: string): XmlAttributeAttribute;
+    new(type_: Type): XmlAttributeAttribute;
+    new(attributeName: string, type_: Type): XmlAttributeAttribute;
 };
 
 
@@ -468,7 +468,7 @@ export interface XmlAttributeEventArgs$instance extends EventArgs {
 
 
 export const XmlAttributeEventArgs: {
-    new(): XmlAttributeEventArgs$instance;
+    new(): XmlAttributeEventArgs;
 };
 
 
@@ -483,7 +483,7 @@ export interface XmlAttributeOverrides$instance {
 
 
 export const XmlAttributeOverrides: {
-    new(): XmlAttributeOverrides$instance;
+    new(): XmlAttributeOverrides;
 };
 
 
@@ -508,8 +508,8 @@ export interface XmlAttributes$instance {
 
 
 export const XmlAttributes: {
-    new(): XmlAttributes$instance;
-    new(provider: ICustomAttributeProvider): XmlAttributes$instance;
+    new(): XmlAttributes;
+    new(provider: ICustomAttributeProvider): XmlAttributes;
 };
 
 
@@ -521,8 +521,8 @@ export interface XmlChoiceIdentifierAttribute$instance extends Attribute {
 
 
 export const XmlChoiceIdentifierAttribute: {
-    new(): XmlChoiceIdentifierAttribute$instance;
-    new(name: string): XmlChoiceIdentifierAttribute$instance;
+    new(): XmlChoiceIdentifierAttribute;
+    new(name: string): XmlChoiceIdentifierAttribute;
 };
 
 
@@ -540,10 +540,10 @@ export interface XmlElementAttribute$instance extends Attribute {
 
 
 export const XmlElementAttribute: {
-    new(): XmlElementAttribute$instance;
-    new(elementName: string): XmlElementAttribute$instance;
-    new(type_: Type): XmlElementAttribute$instance;
-    new(elementName: string, type_: Type): XmlElementAttribute$instance;
+    new(): XmlElementAttribute;
+    new(elementName: string): XmlElementAttribute;
+    new(type_: Type): XmlElementAttribute;
+    new(elementName: string, type_: Type): XmlElementAttribute;
 };
 
 
@@ -564,7 +564,7 @@ export interface XmlElementAttributes$instance extends CollectionBase {
 
 
 export const XmlElementAttributes: {
-    new(): XmlElementAttributes$instance;
+    new(): XmlElementAttributes;
 };
 
 
@@ -587,7 +587,7 @@ export interface XmlElementEventArgs$instance extends EventArgs {
 
 
 export const XmlElementEventArgs: {
-    new(): XmlElementEventArgs$instance;
+    new(): XmlElementEventArgs;
 };
 
 
@@ -599,8 +599,8 @@ export interface XmlEnumAttribute$instance extends Attribute {
 
 
 export const XmlEnumAttribute: {
-    new(): XmlEnumAttribute$instance;
-    new(name: string): XmlEnumAttribute$instance;
+    new(): XmlEnumAttribute;
+    new(name: string): XmlEnumAttribute;
 };
 
 
@@ -611,7 +611,7 @@ export interface XmlIgnoreAttribute$instance extends Attribute {
 
 
 export const XmlIgnoreAttribute: {
-    new(): XmlIgnoreAttribute$instance;
+    new(): XmlIgnoreAttribute;
 };
 
 
@@ -623,7 +623,7 @@ export interface XmlIncludeAttribute$instance extends Attribute {
 
 
 export const XmlIncludeAttribute: {
-    new(type_: Type): XmlIncludeAttribute$instance;
+    new(type_: Type): XmlIncludeAttribute;
 };
 
 
@@ -657,7 +657,7 @@ export interface XmlMemberMapping$instance {
 
 
 export const XmlMemberMapping: {
-    new(): XmlMemberMapping$instance;
+    new(): XmlMemberMapping;
 };
 
 
@@ -672,7 +672,7 @@ export interface XmlMembersMapping$instance extends XmlMapping {
 
 
 export const XmlMembersMapping: {
-    new(): XmlMembersMapping$instance;
+    new(): XmlMembersMapping;
 };
 
 
@@ -683,7 +683,7 @@ export interface XmlNamespaceDeclarationsAttribute$instance extends Attribute {
 
 
 export const XmlNamespaceDeclarationsAttribute: {
-    new(): XmlNamespaceDeclarationsAttribute$instance;
+    new(): XmlNamespaceDeclarationsAttribute;
 };
 
 
@@ -702,7 +702,7 @@ export interface XmlNodeEventArgs$instance extends EventArgs {
 
 
 export const XmlNodeEventArgs: {
-    new(): XmlNodeEventArgs$instance;
+    new(): XmlNodeEventArgs;
 };
 
 
@@ -723,10 +723,10 @@ export interface XmlReflectionImporter$instance {
 
 
 export const XmlReflectionImporter: {
-    new(): XmlReflectionImporter$instance;
-    new(defaultNamespace: string): XmlReflectionImporter$instance;
-    new(attributeOverrides: XmlAttributeOverrides): XmlReflectionImporter$instance;
-    new(attributeOverrides: XmlAttributeOverrides, defaultNamespace: string): XmlReflectionImporter$instance;
+    new(): XmlReflectionImporter;
+    new(defaultNamespace: string): XmlReflectionImporter;
+    new(attributeOverrides: XmlAttributeOverrides): XmlReflectionImporter;
+    new(attributeOverrides: XmlAttributeOverrides, defaultNamespace: string): XmlReflectionImporter;
 };
 
 
@@ -743,7 +743,7 @@ export interface XmlReflectionMember$instance {
 
 
 export const XmlReflectionMember: {
-    new(): XmlReflectionMember$instance;
+    new(): XmlReflectionMember;
 };
 
 
@@ -758,8 +758,8 @@ export interface XmlRootAttribute$instance extends Attribute {
 
 
 export const XmlRootAttribute: {
-    new(): XmlRootAttribute$instance;
-    new(elementName: string): XmlRootAttribute$instance;
+    new(): XmlRootAttribute;
+    new(elementName: string): XmlRootAttribute;
 };
 
 
@@ -774,7 +774,7 @@ export interface XmlSchemaEnumerator$instance extends IDisposable {
 
 
 export const XmlSchemaEnumerator: {
-    new(list: XmlSchemas): XmlSchemaEnumerator$instance;
+    new(list: XmlSchemas): XmlSchemaEnumerator;
 };
 
 
@@ -797,7 +797,7 @@ export interface XmlSchemaExporter$instance {
 
 
 export const XmlSchemaExporter: {
-    new(schemas: XmlSchemas): XmlSchemaExporter$instance;
+    new(schemas: XmlSchemas): XmlSchemaExporter;
 };
 
 
@@ -819,8 +819,8 @@ export interface XmlSchemaImporter$instance extends SchemaImporter {
 
 
 export const XmlSchemaImporter: {
-    new(schemas: XmlSchemas): XmlSchemaImporter$instance;
-    new(schemas: XmlSchemas, typeIdentifiers: CodeIdentifiers): XmlSchemaImporter$instance;
+    new(schemas: XmlSchemas): XmlSchemaImporter;
+    new(schemas: XmlSchemas, typeIdentifiers: CodeIdentifiers): XmlSchemaImporter;
 };
 
 
@@ -833,7 +833,7 @@ export interface XmlSchemaProviderAttribute$instance extends Attribute {
 
 
 export const XmlSchemaProviderAttribute: {
-    new(methodName: string): XmlSchemaProviderAttribute$instance;
+    new(methodName: string): XmlSchemaProviderAttribute;
 };
 
 
@@ -863,7 +863,7 @@ export interface XmlSchemas$instance extends CollectionBase {
 
 
 export const XmlSchemas: {
-    new(): XmlSchemas$instance;
+    new(): XmlSchemas;
     IsDataSet(schema: XmlSchema): boolean;
 };
 
@@ -928,14 +928,14 @@ export interface XmlSerializer$instance {
 
 
 export const XmlSerializer: {
-    new(type_: Type, overrides: XmlAttributeOverrides, extraTypes: Type[], root: XmlRootAttribute, defaultNamespace: string): XmlSerializer$instance;
-    new(type_: Type, root: XmlRootAttribute): XmlSerializer$instance;
-    new(type_: Type, extraTypes: Type[]): XmlSerializer$instance;
-    new(type_: Type, overrides: XmlAttributeOverrides): XmlSerializer$instance;
-    new(xmlTypeMapping: XmlTypeMapping): XmlSerializer$instance;
-    new(type_: Type): XmlSerializer$instance;
-    new(type_: Type, defaultNamespace: string): XmlSerializer$instance;
-    new(type_: Type, overrides: XmlAttributeOverrides, extraTypes: Type[], root: XmlRootAttribute, defaultNamespace: string, location: string): XmlSerializer$instance;
+    new(type_: Type, overrides: XmlAttributeOverrides, extraTypes: Type[], root: XmlRootAttribute, defaultNamespace: string): XmlSerializer;
+    new(type_: Type, root: XmlRootAttribute): XmlSerializer;
+    new(type_: Type, extraTypes: Type[]): XmlSerializer;
+    new(type_: Type, overrides: XmlAttributeOverrides): XmlSerializer;
+    new(xmlTypeMapping: XmlTypeMapping): XmlSerializer;
+    new(type_: Type): XmlSerializer;
+    new(type_: Type, defaultNamespace: string): XmlSerializer;
+    new(type_: Type, overrides: XmlAttributeOverrides, extraTypes: Type[], root: XmlRootAttribute, defaultNamespace: string, location: string): XmlSerializer;
     FromMappings(mappings: XmlMapping[], type_: Type): XmlSerializer[];
     FromMappings(mappings: XmlMapping[]): XmlSerializer[];
     FromTypes(types: Type[]): XmlSerializer[];
@@ -953,9 +953,9 @@ export interface XmlSerializerAssemblyAttribute$instance extends Attribute {
 
 
 export const XmlSerializerAssemblyAttribute: {
-    new(): XmlSerializerAssemblyAttribute$instance;
-    new(assemblyName: string): XmlSerializerAssemblyAttribute$instance;
-    new(assemblyName: string, codeBase: string): XmlSerializerAssemblyAttribute$instance;
+    new(): XmlSerializerAssemblyAttribute;
+    new(assemblyName: string): XmlSerializerAssemblyAttribute;
+    new(assemblyName: string, codeBase: string): XmlSerializerAssemblyAttribute;
 };
 
 
@@ -974,7 +974,7 @@ export interface XmlSerializerFactory$instance {
 
 
 export const XmlSerializerFactory: {
-    new(): XmlSerializerFactory$instance;
+    new(): XmlSerializerFactory;
 };
 
 
@@ -1005,9 +1005,9 @@ export interface XmlSerializerNamespaces$instance {
 
 
 export const XmlSerializerNamespaces: {
-    new(): XmlSerializerNamespaces$instance;
-    new(namespaces: XmlSerializerNamespaces): XmlSerializerNamespaces$instance;
-    new(namespaces: XmlQualifiedName[]): XmlSerializerNamespaces$instance;
+    new(): XmlSerializerNamespaces;
+    new(namespaces: XmlSerializerNamespaces): XmlSerializerNamespaces;
+    new(namespaces: XmlQualifiedName[]): XmlSerializerNamespaces;
 };
 
 
@@ -1022,8 +1022,8 @@ export interface XmlSerializerVersionAttribute$instance extends Attribute {
 
 
 export const XmlSerializerVersionAttribute: {
-    new(): XmlSerializerVersionAttribute$instance;
-    new(type_: Type): XmlSerializerVersionAttribute$instance;
+    new(): XmlSerializerVersionAttribute;
+    new(type_: Type): XmlSerializerVersionAttribute;
 };
 
 
@@ -1036,8 +1036,8 @@ export interface XmlTextAttribute$instance extends Attribute {
 
 
 export const XmlTextAttribute: {
-    new(): XmlTextAttribute$instance;
-    new(type_: Type): XmlTextAttribute$instance;
+    new(): XmlTextAttribute;
+    new(type_: Type): XmlTextAttribute;
 };
 
 
@@ -1052,8 +1052,8 @@ export interface XmlTypeAttribute$instance extends Attribute {
 
 
 export const XmlTypeAttribute: {
-    new(): XmlTypeAttribute$instance;
-    new(typeName: string): XmlTypeAttribute$instance;
+    new(): XmlTypeAttribute;
+    new(typeName: string): XmlTypeAttribute;
 };
 
 
@@ -1068,7 +1068,7 @@ export interface XmlTypeMapping$instance extends XmlMapping {
 
 
 export const XmlTypeMapping: {
-    new(): XmlTypeMapping$instance;
+    new(): XmlTypeMapping;
 };
 
 

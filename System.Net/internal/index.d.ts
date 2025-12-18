@@ -407,7 +407,7 @@ export interface IPNetwork$instance {
 
 
 export const IPNetwork: {
-    new(baseAddress: IPAddress, prefixLength: int): IPNetwork$instance;
+    new(baseAddress: IPAddress, prefixLength: int): IPNetwork;
     Parse(utf8Text: ReadOnlySpan_1<System_Internal.Byte>): IPNetwork;
     Parse(s: ReadOnlySpan_1<System_Internal.Char>): IPNetwork;
     Parse(s: string): IPNetwork;
@@ -441,7 +441,7 @@ export interface AuthenticationManager$instance {
 
 
 export const AuthenticationManager: {
-    new(): AuthenticationManager$instance;
+    new(): AuthenticationManager;
     CredentialPolicy: ICredentialPolicy;
     readonly CustomTargetNameDictionary: StringDictionary;
     readonly RegisteredModules: IEnumerator;
@@ -465,9 +465,9 @@ export interface Authorization$instance {
 
 
 export const Authorization: {
-    new(token: string): Authorization$instance;
-    new(token: string, finished: boolean): Authorization$instance;
-    new(token: string, finished: boolean, connectionGroupId: string): Authorization$instance;
+    new(token: string): Authorization;
+    new(token: string, finished: boolean): Authorization;
+    new(token: string, finished: boolean, connectionGroupId: string): Authorization;
 };
 
 
@@ -495,10 +495,10 @@ export interface Cookie$instance {
 
 
 export const Cookie: {
-    new(): Cookie$instance;
-    new(name: string, value: string): Cookie$instance;
-    new(name: string, value: string, path: string): Cookie$instance;
-    new(name: string, value: string, path: string, domain: string): Cookie$instance;
+    new(): Cookie;
+    new(name: string, value: string): Cookie;
+    new(name: string, value: string, path: string): Cookie;
+    new(name: string, value: string, path: string, domain: string): Cookie;
 };
 
 
@@ -523,7 +523,7 @@ export interface CookieCollection$instance {
 
 
 export const CookieCollection: {
-    new(): CookieCollection$instance;
+    new(): CookieCollection;
 };
 
 
@@ -555,9 +555,9 @@ export interface CookieContainer$instance {
 
 
 export const CookieContainer: {
-    new(): CookieContainer$instance;
-    new(capacity: int): CookieContainer$instance;
-    new(capacity: int, perDomainCapacity: int, maxCookieSize: int): CookieContainer$instance;
+    new(): CookieContainer;
+    new(capacity: int): CookieContainer;
+    new(capacity: int, perDomainCapacity: int, maxCookieSize: int): CookieContainer;
     readonly DefaultCookieLimit: int;
     readonly DefaultPerDomainCookieLimit: int;
     readonly DefaultCookieLengthLimit: int;
@@ -572,9 +572,9 @@ export interface CookieException$instance extends FormatException {
 
 
 export const CookieException: {
-    new(): CookieException$instance;
-    new(message: string): CookieException$instance;
-    new(message: string, innerException: Exception): CookieException$instance;
+    new(): CookieException;
+    new(message: string): CookieException;
+    new(message: string, innerException: Exception): CookieException;
 };
 
 
@@ -597,7 +597,7 @@ export interface CredentialCache$instance {
 
 
 export const CredentialCache: {
-    new(): CredentialCache$instance;
+    new(): CredentialCache;
     readonly DefaultCredentials: ICredentials;
     readonly DefaultNetworkCredentials: NetworkCredential;
 };
@@ -625,8 +625,8 @@ export interface DnsEndPoint$instance extends EndPoint {
 
 
 export const DnsEndPoint: {
-    new(host: string, port: int): DnsEndPoint$instance;
-    new(host: string, port: int, addressFamily: AddressFamily): DnsEndPoint$instance;
+    new(host: string, port: int): DnsEndPoint;
+    new(host: string, port: int, addressFamily: AddressFamily): DnsEndPoint;
 };
 
 
@@ -638,7 +638,7 @@ export interface DownloadDataCompletedEventArgs$instance extends AsyncCompletedE
 
 
 export const DownloadDataCompletedEventArgs: {
-    new(): DownloadDataCompletedEventArgs$instance;
+    new(): DownloadDataCompletedEventArgs;
 };
 
 
@@ -651,7 +651,7 @@ export interface DownloadProgressChangedEventArgs$instance extends ProgressChang
 
 
 export const DownloadProgressChangedEventArgs: {
-    new(): DownloadProgressChangedEventArgs$instance;
+    new(): DownloadProgressChangedEventArgs;
 };
 
 
@@ -663,7 +663,7 @@ export interface DownloadStringCompletedEventArgs$instance extends AsyncComplete
 
 
 export const DownloadStringCompletedEventArgs: {
-    new(): DownloadStringCompletedEventArgs$instance;
+    new(): DownloadStringCompletedEventArgs;
 };
 
 
@@ -710,7 +710,7 @@ export interface FileWebRequest$instance extends WebRequest$instance {
 
 
 export const FileWebRequest: {
-    new(): FileWebRequest$instance;
+    new(): FileWebRequest;
 };
 
 
@@ -737,7 +737,7 @@ export interface FileWebResponse$instance extends WebResponse$instance {
 
 
 export const FileWebResponse: {
-    new(): FileWebResponse$instance;
+    new(): FileWebResponse;
 };
 
 
@@ -785,7 +785,7 @@ export interface FtpWebRequest$instance extends WebRequest$instance {
 
 
 export const FtpWebRequest: {
-    new(): FtpWebRequest$instance;
+    new(): FtpWebRequest;
     DefaultCachePolicy: RequestCachePolicy;
 };
 
@@ -818,7 +818,7 @@ export interface FtpWebResponse$instance extends WebResponse$instance {
 
 
 export const FtpWebResponse: {
-    new(): FtpWebResponse$instance;
+    new(): FtpWebResponse;
 };
 
 
@@ -837,7 +837,7 @@ export interface GlobalProxySelection$instance {
 
 
 export const GlobalProxySelection: {
-    new(): GlobalProxySelection$instance;
+    new(): GlobalProxySelection;
     Select: IWebProxy;
     GetEmptyWebProxy(): IWebProxy;
 };
@@ -869,7 +869,7 @@ export interface HttpListener$instance {
 
 
 export const HttpListener: {
-    new(): HttpListener$instance;
+    new(): HttpListener;
     readonly IsSupported: boolean;
 };
 
@@ -889,7 +889,7 @@ export interface HttpListenerBasicIdentity$instance extends GenericIdentity {
 
 
 export const HttpListenerBasicIdentity: {
-    new(username: string, password: string): HttpListenerBasicIdentity$instance;
+    new(username: string, password: string): HttpListenerBasicIdentity;
 };
 
 
@@ -914,7 +914,7 @@ export interface HttpListenerContext$instance {
 
 
 export const HttpListenerContext: {
-    new(): HttpListenerContext$instance;
+    new(): HttpListenerContext;
 };
 
 
@@ -927,9 +927,9 @@ export interface HttpListenerException$instance extends Win32Exception {
 
 
 export const HttpListenerException: {
-    new(): HttpListenerException$instance;
-    new(errorCode: int): HttpListenerException$instance;
-    new(errorCode: int, message: string): HttpListenerException$instance;
+    new(): HttpListenerException;
+    new(errorCode: int): HttpListenerException;
+    new(errorCode: int, message: string): HttpListenerException;
 };
 
 
@@ -955,7 +955,7 @@ export interface HttpListenerPrefixCollection$instance {
 
 
 export const HttpListenerPrefixCollection: {
-    new(): HttpListenerPrefixCollection$instance;
+    new(): HttpListenerPrefixCollection;
 };
 
 
@@ -1006,7 +1006,7 @@ export interface HttpListenerRequest$instance {
 
 
 export const HttpListenerRequest: {
-    new(): HttpListenerRequest$instance;
+    new(): HttpListenerRequest;
 };
 
 
@@ -1038,7 +1038,7 @@ export interface HttpListenerResponse$instance {
 
 
 export const HttpListenerResponse: {
-    new(): HttpListenerResponse$instance;
+    new(): HttpListenerResponse;
 };
 
 
@@ -1062,7 +1062,7 @@ export interface HttpListenerTimeoutManager$instance {
 
 
 export const HttpListenerTimeoutManager: {
-    new(): HttpListenerTimeoutManager$instance;
+    new(): HttpListenerTimeoutManager;
 };
 
 
@@ -1131,7 +1131,7 @@ export interface HttpWebRequest$instance extends WebRequest$instance {
 
 
 export const HttpWebRequest: {
-    new(): HttpWebRequest$instance;
+    new(): HttpWebRequest;
     DefaultMaximumResponseHeadersLength: int;
     DefaultMaximumErrorResponseLength: int;
     DefaultCachePolicy: RequestCachePolicy;
@@ -1172,7 +1172,7 @@ export interface HttpWebResponse$instance extends WebResponse$instance {
 
 
 export const HttpWebResponse: {
-    new(): HttpWebResponse$instance;
+    new(): HttpWebResponse;
 };
 
 
@@ -1209,11 +1209,11 @@ export interface IPAddress$instance {
 
 
 export const IPAddress: {
-    new(newAddress: long): IPAddress$instance;
-    new(address: byte[], scopeid: long): IPAddress$instance;
-    new(address: ReadOnlySpan_1<System_Internal.Byte>, scopeid: long): IPAddress$instance;
-    new(address: byte[]): IPAddress$instance;
-    new(address: ReadOnlySpan_1<System_Internal.Byte>): IPAddress$instance;
+    new(newAddress: long): IPAddress;
+    new(address: byte[], scopeid: long): IPAddress;
+    new(address: ReadOnlySpan_1<System_Internal.Byte>, scopeid: long): IPAddress;
+    new(address: byte[]): IPAddress;
+    new(address: ReadOnlySpan_1<System_Internal.Byte>): IPAddress;
     readonly Any: IPAddress;
     readonly Loopback: IPAddress;
     readonly Broadcast: IPAddress;
@@ -1269,8 +1269,8 @@ export interface IPEndPoint$instance extends EndPoint {
 
 
 export const IPEndPoint: {
-    new(address: long, port: int): IPEndPoint$instance;
-    new(address: IPAddress, port: int): IPEndPoint$instance;
+    new(address: long, port: int): IPEndPoint;
+    new(address: IPAddress, port: int): IPEndPoint;
     readonly MinPort: int;
     readonly MaxPort: int;
     Parse(s: ReadOnlySpan_1<System_Internal.Char>): IPEndPoint;
@@ -1290,7 +1290,7 @@ export interface IPHostEntry$instance {
 
 
 export const IPHostEntry: {
-    new(): IPHostEntry$instance;
+    new(): IPHostEntry;
 };
 
 
@@ -1307,11 +1307,11 @@ export interface NetworkCredential$instance {
 
 
 export const NetworkCredential: {
-    new(): NetworkCredential$instance;
-    new(userName: string, password: string): NetworkCredential$instance;
-    new(userName: string, password: string, domain: string): NetworkCredential$instance;
-    new(userName: string, password: SecureString): NetworkCredential$instance;
-    new(userName: string, password: SecureString, domain: string): NetworkCredential$instance;
+    new(): NetworkCredential;
+    new(userName: string, password: string): NetworkCredential;
+    new(userName: string, password: string, domain: string): NetworkCredential;
+    new(userName: string, password: SecureString): NetworkCredential;
+    new(userName: string, password: SecureString, domain: string): NetworkCredential;
 };
 
 
@@ -1329,7 +1329,7 @@ export interface OpenReadCompletedEventArgs$instance extends AsyncCompletedEvent
 
 
 export const OpenReadCompletedEventArgs: {
-    new(): OpenReadCompletedEventArgs$instance;
+    new(): OpenReadCompletedEventArgs;
 };
 
 
@@ -1341,7 +1341,7 @@ export interface OpenWriteCompletedEventArgs$instance extends AsyncCompletedEven
 
 
 export const OpenWriteCompletedEventArgs: {
-    new(): OpenWriteCompletedEventArgs$instance;
+    new(): OpenWriteCompletedEventArgs;
 };
 
 
@@ -1352,7 +1352,7 @@ export interface PathList$instance {
 
 
 export const PathList: {
-    new(): PathList$instance;
+    new(): PathList;
 };
 
 
@@ -1364,8 +1364,8 @@ export interface ProtocolViolationException$instance extends InvalidOperationExc
 
 
 export const ProtocolViolationException: {
-    new(): ProtocolViolationException$instance;
-    new(message: string): ProtocolViolationException$instance;
+    new(): ProtocolViolationException;
+    new(message: string): ProtocolViolationException;
 };
 
 
@@ -1398,7 +1398,7 @@ export interface ServicePoint$instance {
 
 
 export const ServicePoint: {
-    new(): ServicePoint$instance;
+    new(): ServicePoint;
 };
 
 
@@ -1409,7 +1409,7 @@ export interface ServicePointManager$instance {
 
 
 export const ServicePointManager: {
-    new(): ServicePointManager$instance;
+    new(): ServicePointManager;
     readonly DefaultNonPersistentConnectionLimit: int;
     readonly DefaultPersistentConnectionLimit: int;
     SecurityProtocol: SecurityProtocolType;
@@ -1446,8 +1446,8 @@ export interface SocketAddress$instance {
 
 
 export const SocketAddress: {
-    new(family: AddressFamily): SocketAddress$instance;
-    new(family: AddressFamily, size: int): SocketAddress$instance;
+    new(family: AddressFamily): SocketAddress;
+    new(family: AddressFamily, size: int): SocketAddress;
     GetMaximumAddressSize(addressFamily: AddressFamily): int;
 };
 
@@ -1479,7 +1479,7 @@ export interface UploadDataCompletedEventArgs$instance extends AsyncCompletedEve
 
 
 export const UploadDataCompletedEventArgs: {
-    new(): UploadDataCompletedEventArgs$instance;
+    new(): UploadDataCompletedEventArgs;
 };
 
 
@@ -1491,7 +1491,7 @@ export interface UploadFileCompletedEventArgs$instance extends AsyncCompletedEve
 
 
 export const UploadFileCompletedEventArgs: {
-    new(): UploadFileCompletedEventArgs$instance;
+    new(): UploadFileCompletedEventArgs;
 };
 
 
@@ -1506,7 +1506,7 @@ export interface UploadProgressChangedEventArgs$instance extends ProgressChanged
 
 
 export const UploadProgressChangedEventArgs: {
-    new(): UploadProgressChangedEventArgs$instance;
+    new(): UploadProgressChangedEventArgs;
 };
 
 
@@ -1518,7 +1518,7 @@ export interface UploadStringCompletedEventArgs$instance extends AsyncCompletedE
 
 
 export const UploadStringCompletedEventArgs: {
-    new(): UploadStringCompletedEventArgs$instance;
+    new(): UploadStringCompletedEventArgs;
 };
 
 
@@ -1530,7 +1530,7 @@ export interface UploadValuesCompletedEventArgs$instance extends AsyncCompletedE
 
 
 export const UploadValuesCompletedEventArgs: {
-    new(): UploadValuesCompletedEventArgs$instance;
+    new(): UploadValuesCompletedEventArgs;
 };
 
 
@@ -1634,7 +1634,7 @@ export interface WebClient$instance extends Component {
 
 
 export const WebClient: {
-    new(): WebClient$instance;
+    new(): WebClient;
 };
 
 
@@ -1656,11 +1656,11 @@ export interface WebException$instance extends InvalidOperationException {
 
 
 export const WebException: {
-    new(): WebException$instance;
-    new(message: string): WebException$instance;
-    new(message: string, innerException: Exception): WebException$instance;
-    new(message: string, status: WebExceptionStatus): WebException$instance;
-    new(message: string, innerException: Exception, status: WebExceptionStatus, response: WebResponse): WebException$instance;
+    new(): WebException;
+    new(message: string): WebException;
+    new(message: string, innerException: Exception): WebException;
+    new(message: string, status: WebExceptionStatus): WebException;
+    new(message: string, innerException: Exception, status: WebExceptionStatus, response: WebResponse): WebException;
 };
 
 
@@ -1698,7 +1698,7 @@ export interface WebHeaderCollection$instance extends NameValueCollection {
 
 
 export const WebHeaderCollection: {
-    new(): WebHeaderCollection$instance;
+    new(): WebHeaderCollection;
     IsRestricted(headerName: string, response: boolean): boolean;
     IsRestricted(headerName: string): boolean;
 };
@@ -1727,16 +1727,16 @@ export interface WebProxy$instance {
 
 
 export const WebProxy: {
-    new(): WebProxy$instance;
-    new(Address: Uri): WebProxy$instance;
-    new(Address: Uri, BypassOnLocal: boolean): WebProxy$instance;
-    new(Address: Uri, BypassOnLocal: boolean, BypassList: string[]): WebProxy$instance;
-    new(Address: Uri, BypassOnLocal: boolean, BypassList: string[], Credentials: ICredentials): WebProxy$instance;
-    new(Host: string, Port: int): WebProxy$instance;
-    new(Address: string): WebProxy$instance;
-    new(Address: string, BypassOnLocal: boolean): WebProxy$instance;
-    new(Address: string, BypassOnLocal: boolean, BypassList: string[]): WebProxy$instance;
-    new(Address: string, BypassOnLocal: boolean, BypassList: string[], Credentials: ICredentials): WebProxy$instance;
+    new(): WebProxy;
+    new(Address: Uri): WebProxy;
+    new(Address: Uri, BypassOnLocal: boolean): WebProxy;
+    new(Address: Uri, BypassOnLocal: boolean, BypassList: string[]): WebProxy;
+    new(Address: Uri, BypassOnLocal: boolean, BypassList: string[], Credentials: ICredentials): WebProxy;
+    new(Host: string, Port: int): WebProxy;
+    new(Address: string): WebProxy;
+    new(Address: string, BypassOnLocal: boolean): WebProxy;
+    new(Address: string, BypassOnLocal: boolean, BypassList: string[]): WebProxy;
+    new(Address: string, BypassOnLocal: boolean, BypassList: string[], Credentials: ICredentials): WebProxy;
     GetDefaultProxy(): WebProxy;
 };
 
@@ -1834,7 +1834,7 @@ export interface WriteStreamClosedEventArgs$instance extends EventArgs {
 
 
 export const WriteStreamClosedEventArgs: {
-    new(): WriteStreamClosedEventArgs$instance;
+    new(): WriteStreamClosedEventArgs;
 };
 
 

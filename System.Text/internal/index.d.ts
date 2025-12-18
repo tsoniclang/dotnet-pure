@@ -50,10 +50,10 @@ export interface Rune$instance {
 
 
 export const Rune: {
-    new(ch: char): Rune$instance;
-    new(highSurrogate: char, lowSurrogate: char): Rune$instance;
-    new(value: int): Rune$instance;
-    new(value: uint): Rune$instance;
+    new(ch: char): Rune;
+    new(highSurrogate: char, lowSurrogate: char): Rune;
+    new(value: int): Rune;
+    new(value: uint): Rune;
     readonly ReplacementChar: Rune;
     DecodeFromUtf16(source: ReadOnlySpan_1<System_Internal.Char>, result: Rune, charsConsumed: int): OperationStatus;
     DecodeFromUtf8(source: ReadOnlySpan_1<System_Internal.Byte>, result: Rune, bytesConsumed: int): OperationStatus;
@@ -116,7 +116,7 @@ export interface SpanLineEnumerator$instance {
 
 
 export const SpanLineEnumerator: {
-    new(): SpanLineEnumerator$instance;
+    new(): SpanLineEnumerator;
 };
 
 
@@ -138,7 +138,7 @@ export interface SpanRuneEnumerator$instance {
 
 
 export const SpanRuneEnumerator: {
-    new(): SpanRuneEnumerator$instance;
+    new(): SpanRuneEnumerator;
 };
 
 
@@ -166,8 +166,8 @@ export interface StringBuilder_AppendInterpolatedStringHandler$instance {
 
 
 export const StringBuilder_AppendInterpolatedStringHandler: {
-    new(literalLength: int, formattedCount: int, stringBuilder: StringBuilder): StringBuilder_AppendInterpolatedStringHandler$instance;
-    new(literalLength: int, formattedCount: int, stringBuilder: StringBuilder, provider: IFormatProvider): StringBuilder_AppendInterpolatedStringHandler$instance;
+    new(literalLength: int, formattedCount: int, stringBuilder: StringBuilder): StringBuilder_AppendInterpolatedStringHandler;
+    new(literalLength: int, formattedCount: int, stringBuilder: StringBuilder, provider: IFormatProvider): StringBuilder_AppendInterpolatedStringHandler;
 };
 
 
@@ -181,7 +181,7 @@ export interface StringBuilder_ChunkEnumerator$instance {
 
 
 export const StringBuilder_ChunkEnumerator: {
-    new(): StringBuilder_ChunkEnumerator$instance;
+    new(): StringBuilder_ChunkEnumerator;
 };
 
 
@@ -196,7 +196,7 @@ export interface StringRuneEnumerator$instance {
 
 
 export const StringRuneEnumerator: {
-    new(): StringRuneEnumerator$instance;
+    new(): StringRuneEnumerator;
 };
 
 
@@ -257,7 +257,7 @@ export interface ASCIIEncoding$instance extends Encoding$instance {
 
 
 export const ASCIIEncoding: {
-    new(): ASCIIEncoding$instance;
+    new(): ASCIIEncoding;
 };
 
 
@@ -279,7 +279,7 @@ export interface CodePagesEncodingProvider$instance extends EncodingProvider {
 
 
 export const CodePagesEncodingProvider: {
-    new(): CodePagesEncodingProvider$instance;
+    new(): CodePagesEncodingProvider;
     readonly Instance: EncodingProvider;
 };
 
@@ -293,7 +293,7 @@ export interface CompositeFormat$instance {
 
 
 export const CompositeFormat: {
-    new(): CompositeFormat$instance;
+    new(): CompositeFormat;
     Parse(format: string): CompositeFormat;
 };
 
@@ -333,7 +333,7 @@ export interface DecoderExceptionFallback$instance extends DecoderFallback {
 
 
 export const DecoderExceptionFallback: {
-    new(): DecoderExceptionFallback$instance;
+    new(): DecoderExceptionFallback;
 };
 
 
@@ -348,7 +348,7 @@ export interface DecoderExceptionFallbackBuffer$instance extends DecoderFallback
 
 
 export const DecoderExceptionFallbackBuffer: {
-    new(): DecoderExceptionFallbackBuffer$instance;
+    new(): DecoderExceptionFallbackBuffer;
 };
 
 
@@ -391,10 +391,10 @@ export interface DecoderFallbackException$instance extends ArgumentException {
 
 
 export const DecoderFallbackException: {
-    new(): DecoderFallbackException$instance;
-    new(message: string): DecoderFallbackException$instance;
-    new(message: string, innerException: Exception): DecoderFallbackException$instance;
-    new(message: string, bytesUnknown: byte[], index: int): DecoderFallbackException$instance;
+    new(): DecoderFallbackException;
+    new(message: string): DecoderFallbackException;
+    new(message: string, innerException: Exception): DecoderFallbackException;
+    new(message: string, bytesUnknown: byte[], index: int): DecoderFallbackException;
 };
 
 
@@ -415,8 +415,8 @@ export interface DecoderReplacementFallback$instance extends DecoderFallback {
 
 
 export const DecoderReplacementFallback: {
-    new(): DecoderReplacementFallback$instance;
-    new(replacement: string): DecoderReplacementFallback$instance;
+    new(): DecoderReplacementFallback;
+    new(replacement: string): DecoderReplacementFallback;
 };
 
 
@@ -432,7 +432,7 @@ export interface DecoderReplacementFallbackBuffer$instance extends DecoderFallba
 
 
 export const DecoderReplacementFallbackBuffer: {
-    new(fallback: DecoderReplacementFallback): DecoderReplacementFallbackBuffer$instance;
+    new(fallback: DecoderReplacementFallback): DecoderReplacementFallbackBuffer;
 };
 
 
@@ -469,7 +469,7 @@ export interface EncoderExceptionFallback$instance extends EncoderFallback {
 
 
 export const EncoderExceptionFallback: {
-    new(): EncoderExceptionFallback$instance;
+    new(): EncoderExceptionFallback;
 };
 
 
@@ -485,7 +485,7 @@ export interface EncoderExceptionFallbackBuffer$instance extends EncoderFallback
 
 
 export const EncoderExceptionFallbackBuffer: {
-    new(): EncoderExceptionFallbackBuffer$instance;
+    new(): EncoderExceptionFallbackBuffer;
 };
 
 
@@ -532,9 +532,9 @@ export interface EncoderFallbackException$instance extends ArgumentException {
 
 
 export const EncoderFallbackException: {
-    new(): EncoderFallbackException$instance;
-    new(message: string): EncoderFallbackException$instance;
-    new(message: string, innerException: Exception): EncoderFallbackException$instance;
+    new(): EncoderFallbackException;
+    new(message: string): EncoderFallbackException;
+    new(message: string, innerException: Exception): EncoderFallbackException;
 };
 
 
@@ -555,8 +555,8 @@ export interface EncoderReplacementFallback$instance extends EncoderFallback {
 
 
 export const EncoderReplacementFallback: {
-    new(): EncoderReplacementFallback$instance;
-    new(replacement: string): EncoderReplacementFallback$instance;
+    new(): EncoderReplacementFallback;
+    new(replacement: string): EncoderReplacementFallback;
 };
 
 
@@ -573,7 +573,7 @@ export interface EncoderReplacementFallbackBuffer$instance extends EncoderFallba
 
 
 export const EncoderReplacementFallbackBuffer: {
-    new(fallback: EncoderReplacementFallback): EncoderReplacementFallbackBuffer$instance;
+    new(fallback: EncoderReplacementFallback): EncoderReplacementFallbackBuffer;
 };
 
 
@@ -678,7 +678,7 @@ export interface EncodingInfo$instance {
 
 
 export const EncodingInfo: {
-    new(provider: EncodingProvider, codePage: int, name: string, displayName: string): EncodingInfo$instance;
+    new(provider: EncodingProvider, codePage: int, name: string, displayName: string): EncodingInfo;
 };
 
 
@@ -694,7 +694,7 @@ export interface EncodingProvider$instance {
 
 
 export const EncodingProvider: {
-    new(): EncodingProvider$instance;
+    new(): EncodingProvider;
 };
 
 
@@ -799,12 +799,12 @@ export interface StringBuilder$instance {
 
 
 export const StringBuilder: {
-    new(): StringBuilder$instance;
-    new(capacity: int): StringBuilder$instance;
-    new(value: string): StringBuilder$instance;
-    new(value: string, capacity: int): StringBuilder$instance;
-    new(value: string, startIndex: int, length: int, capacity: int): StringBuilder$instance;
-    new(capacity: int, maxCapacity: int): StringBuilder$instance;
+    new(): StringBuilder;
+    new(capacity: int): StringBuilder;
+    new(value: string): StringBuilder;
+    new(value: string, capacity: int): StringBuilder;
+    new(value: string, startIndex: int, length: int, capacity: int): StringBuilder;
+    new(capacity: int, maxCapacity: int): StringBuilder;
 };
 
 
@@ -858,9 +858,9 @@ export interface UnicodeEncoding$instance extends Encoding$instance {
 
 
 export const UnicodeEncoding: {
-    new(): UnicodeEncoding$instance;
-    new(bigEndian: boolean, byteOrderMark: boolean): UnicodeEncoding$instance;
-    new(bigEndian: boolean, byteOrderMark: boolean, throwOnInvalidBytes: boolean): UnicodeEncoding$instance;
+    new(): UnicodeEncoding;
+    new(bigEndian: boolean, byteOrderMark: boolean): UnicodeEncoding;
+    new(bigEndian: boolean, byteOrderMark: boolean, throwOnInvalidBytes: boolean): UnicodeEncoding;
     readonly CharSize: int;
 };
 
@@ -913,9 +913,9 @@ export interface UTF32Encoding$instance extends Encoding$instance {
 
 
 export const UTF32Encoding: {
-    new(): UTF32Encoding$instance;
-    new(bigEndian: boolean, byteOrderMark: boolean): UTF32Encoding$instance;
-    new(bigEndian: boolean, byteOrderMark: boolean, throwOnInvalidCharacters: boolean): UTF32Encoding$instance;
+    new(): UTF32Encoding;
+    new(bigEndian: boolean, byteOrderMark: boolean): UTF32Encoding;
+    new(bigEndian: boolean, byteOrderMark: boolean, throwOnInvalidCharacters: boolean): UTF32Encoding;
 };
 
 
@@ -965,8 +965,8 @@ export interface UTF7Encoding$instance extends Encoding$instance {
 
 
 export const UTF7Encoding: {
-    new(): UTF7Encoding$instance;
-    new(allowOptionals: boolean): UTF7Encoding$instance;
+    new(): UTF7Encoding;
+    new(allowOptionals: boolean): UTF7Encoding;
 };
 
 
@@ -1026,9 +1026,9 @@ export interface UTF8Encoding$instance extends Encoding$instance {
 
 
 export const UTF8Encoding: {
-    new(): UTF8Encoding$instance;
-    new(encoderShouldEmitUTF8Identifier: boolean): UTF8Encoding$instance;
-    new(encoderShouldEmitUTF8Identifier: boolean, throwOnInvalidBytes: boolean): UTF8Encoding$instance;
+    new(): UTF8Encoding;
+    new(encoderShouldEmitUTF8Identifier: boolean): UTF8Encoding;
+    new(encoderShouldEmitUTF8Identifier: boolean, throwOnInvalidBytes: boolean): UTF8Encoding;
 };
 
 

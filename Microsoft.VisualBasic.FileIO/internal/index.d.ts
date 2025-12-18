@@ -57,7 +57,7 @@ export interface FileSystem$instance {
 
 
 export const FileSystem: {
-    new(): FileSystem$instance;
+    new(): FileSystem;
     readonly Drives: ReadOnlyCollection_1<DriveInfo>;
     CurrentDirectory: string;
     CombinePath(baseDirectory: string, relativePath: string): string;
@@ -126,11 +126,11 @@ export interface MalformedLineException$instance extends Exception {
 
 
 export const MalformedLineException: {
-    new(): MalformedLineException$instance;
-    new(message: string, lineNumber: long): MalformedLineException$instance;
-    new(message: string): MalformedLineException$instance;
-    new(message: string, lineNumber: long, innerException: Exception): MalformedLineException$instance;
-    new(message: string, innerException: Exception): MalformedLineException$instance;
+    new(): MalformedLineException;
+    new(message: string, lineNumber: long): MalformedLineException;
+    new(message: string): MalformedLineException;
+    new(message: string, lineNumber: long, innerException: Exception): MalformedLineException;
+    new(message: string, innerException: Exception): MalformedLineException;
 };
 
 
@@ -146,7 +146,7 @@ export interface SpecialDirectories$instance {
 
 
 export const SpecialDirectories: {
-    new(): SpecialDirectories$instance;
+    new(): SpecialDirectories;
     readonly MyDocuments: string;
     readonly MyMusic: string;
     readonly MyPictures: string;
@@ -184,14 +184,14 @@ export interface TextFieldParser$instance {
 
 
 export const TextFieldParser: {
-    new(path: string): TextFieldParser$instance;
-    new(path: string, defaultEncoding: Encoding): TextFieldParser$instance;
-    new(path: string, defaultEncoding: Encoding, detectEncoding: boolean): TextFieldParser$instance;
-    new(stream: Stream): TextFieldParser$instance;
-    new(stream: Stream, defaultEncoding: Encoding): TextFieldParser$instance;
-    new(stream: Stream, defaultEncoding: Encoding, detectEncoding: boolean): TextFieldParser$instance;
-    new(stream: Stream, defaultEncoding: Encoding, detectEncoding: boolean, leaveOpen: boolean): TextFieldParser$instance;
-    new(reader: TextReader): TextFieldParser$instance;
+    new(path: string): TextFieldParser;
+    new(path: string, defaultEncoding: Encoding): TextFieldParser;
+    new(path: string, defaultEncoding: Encoding, detectEncoding: boolean): TextFieldParser;
+    new(stream: Stream): TextFieldParser;
+    new(stream: Stream, defaultEncoding: Encoding): TextFieldParser;
+    new(stream: Stream, defaultEncoding: Encoding, detectEncoding: boolean): TextFieldParser;
+    new(stream: Stream, defaultEncoding: Encoding, detectEncoding: boolean, leaveOpen: boolean): TextFieldParser;
+    new(reader: TextReader): TextFieldParser;
 };
 
 

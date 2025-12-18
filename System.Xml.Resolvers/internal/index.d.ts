@@ -40,11 +40,11 @@ export interface XmlPreloadedResolver$instance extends XmlResolver {
 
 
 export const XmlPreloadedResolver: {
-    new(): XmlPreloadedResolver$instance;
-    new(preloadedDtds: XmlKnownDtds): XmlPreloadedResolver$instance;
-    new(fallbackResolver: XmlResolver): XmlPreloadedResolver$instance;
-    new(fallbackResolver: XmlResolver, preloadedDtds: XmlKnownDtds): XmlPreloadedResolver$instance;
-    new(fallbackResolver: XmlResolver, preloadedDtds: XmlKnownDtds, uriComparer: IEqualityComparer_1<Uri>): XmlPreloadedResolver$instance;
+    new(): XmlPreloadedResolver;
+    new(preloadedDtds: XmlKnownDtds): XmlPreloadedResolver;
+    new(fallbackResolver: XmlResolver): XmlPreloadedResolver;
+    new(fallbackResolver: XmlResolver, preloadedDtds: XmlKnownDtds): XmlPreloadedResolver;
+    new(fallbackResolver: XmlResolver, preloadedDtds: XmlKnownDtds, uriComparer: IEqualityComparer_1<Uri>): XmlPreloadedResolver;
 };
 
 

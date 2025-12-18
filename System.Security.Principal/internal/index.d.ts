@@ -202,8 +202,8 @@ export interface GenericIdentity$instance extends ClaimsIdentity {
 
 
 export const GenericIdentity: {
-    new(name: string): GenericIdentity$instance;
-    new(name: string, type_: string): GenericIdentity$instance;
+    new(name: string): GenericIdentity;
+    new(name: string, type_: string): GenericIdentity;
 };
 
 
@@ -223,7 +223,7 @@ export interface GenericPrincipal$instance extends ClaimsPrincipal {
 
 
 export const GenericPrincipal: {
-    new(identity: IIdentity, roles: string[]): GenericPrincipal$instance;
+    new(identity: IIdentity, roles: string[]): GenericPrincipal;
 };
 
 
@@ -241,9 +241,9 @@ export interface IdentityNotMappedException$instance extends SystemException {
 
 
 export const IdentityNotMappedException: {
-    new(): IdentityNotMappedException$instance;
-    new(message: string): IdentityNotMappedException$instance;
-    new(message: string, inner: Exception): IdentityNotMappedException$instance;
+    new(): IdentityNotMappedException;
+    new(message: string): IdentityNotMappedException;
+    new(message: string, inner: Exception): IdentityNotMappedException;
 };
 
 
@@ -285,8 +285,8 @@ export interface IdentityReferenceCollection$instance {
 
 
 export const IdentityReferenceCollection: {
-    new(): IdentityReferenceCollection$instance;
-    new(capacity: int): IdentityReferenceCollection$instance;
+    new(): IdentityReferenceCollection;
+    new(capacity: int): IdentityReferenceCollection;
 };
 
 
@@ -310,8 +310,8 @@ export interface NTAccount$instance extends IdentityReference {
 
 
 export const NTAccount: {
-    new(name: string): NTAccount$instance;
-    new(domainName: string, accountName: string): NTAccount$instance;
+    new(name: string): NTAccount;
+    new(domainName: string, accountName: string): NTAccount;
 };
 
 
@@ -336,10 +336,10 @@ export interface SecurityIdentifier$instance extends IdentityReference {
 
 
 export const SecurityIdentifier: {
-    new(binaryForm: byte[], offset: int): SecurityIdentifier$instance;
-    new(binaryForm: nint): SecurityIdentifier$instance;
-    new(sidType: WellKnownSidType, domainSid: SecurityIdentifier): SecurityIdentifier$instance;
-    new(sddlForm: string): SecurityIdentifier$instance;
+    new(binaryForm: byte[], offset: int): SecurityIdentifier;
+    new(binaryForm: nint): SecurityIdentifier;
+    new(sidType: WellKnownSidType, domainSid: SecurityIdentifier): SecurityIdentifier;
+    new(sddlForm: string): SecurityIdentifier;
     readonly MaxBinaryLength: int;
     readonly MinBinaryLength: int;
 };
@@ -379,12 +379,12 @@ export interface WindowsIdentity$instance extends ClaimsIdentity {
 
 
 export const WindowsIdentity: {
-    new(userToken: nint): WindowsIdentity$instance;
-    new(userToken: nint, type_: string): WindowsIdentity$instance;
-    new(userToken: nint, type_: string, acctType: WindowsAccountType): WindowsIdentity$instance;
-    new(userToken: nint, type_: string, acctType: WindowsAccountType, isAuthenticated: boolean): WindowsIdentity$instance;
-    new(info: SerializationInfo, context: StreamingContext): WindowsIdentity$instance;
-    new(sUserPrincipalName: string): WindowsIdentity$instance;
+    new(userToken: nint): WindowsIdentity;
+    new(userToken: nint, type_: string): WindowsIdentity;
+    new(userToken: nint, type_: string, acctType: WindowsAccountType): WindowsIdentity;
+    new(userToken: nint, type_: string, acctType: WindowsAccountType, isAuthenticated: boolean): WindowsIdentity;
+    new(info: SerializationInfo, context: StreamingContext): WindowsIdentity;
+    new(sUserPrincipalName: string): WindowsIdentity;
     readonly DefaultIssuer: string;
     GetAnonymous(): WindowsIdentity;
     GetCurrent(): WindowsIdentity;
@@ -420,7 +420,7 @@ export interface WindowsPrincipal$instance extends ClaimsPrincipal {
 
 
 export const WindowsPrincipal: {
-    new(ntIdentity: WindowsIdentity): WindowsPrincipal$instance;
+    new(ntIdentity: WindowsIdentity): WindowsPrincipal;
 };
 
 

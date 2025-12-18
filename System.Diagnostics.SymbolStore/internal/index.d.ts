@@ -162,7 +162,7 @@ export interface SymbolToken$instance {
 
 
 export const SymbolToken: {
-    new(val: int): SymbolToken$instance;
+    new(val: int): SymbolToken;
 };
 
 
@@ -181,7 +181,7 @@ export interface SymDocumentType$instance {
 
 
 export const SymDocumentType: {
-    new(): SymDocumentType$instance;
+    new(): SymDocumentType;
     readonly Text: Guid;
 };
 
@@ -193,7 +193,7 @@ export interface SymLanguageType$instance {
 
 
 export const SymLanguageType: {
-    new(): SymLanguageType$instance;
+    new(): SymLanguageType;
     readonly C: Guid;
     readonly CPlusPlus: Guid;
     readonly CSharp: Guid;
@@ -215,7 +215,7 @@ export interface SymLanguageVendor$instance {
 
 
 export const SymLanguageVendor: {
-    new(): SymLanguageVendor$instance;
+    new(): SymLanguageVendor;
     readonly Microsoft: Guid;
 };
 

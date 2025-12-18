@@ -99,12 +99,12 @@ export interface AlternateView$instance extends AttachmentBase$instance {
 
 
 export const AlternateView: {
-    new(fileName: string): AlternateView$instance;
-    new(fileName: string, mediaType: string): AlternateView$instance;
-    new(fileName: string, contentType: ContentType): AlternateView$instance;
-    new(contentStream: Stream): AlternateView$instance;
-    new(contentStream: Stream, mediaType: string): AlternateView$instance;
-    new(contentStream: Stream, contentType: ContentType): AlternateView$instance;
+    new(fileName: string): AlternateView;
+    new(fileName: string, mediaType: string): AlternateView;
+    new(fileName: string, contentType: ContentType): AlternateView;
+    new(contentStream: Stream): AlternateView;
+    new(contentStream: Stream, mediaType: string): AlternateView;
+    new(contentStream: Stream, contentType: ContentType): AlternateView;
     CreateAlternateViewFromString(content: string, contentType: ContentType): AlternateView;
     CreateAlternateViewFromString(content: string, contentEncoding: Encoding, mediaType: string): AlternateView;
     CreateAlternateViewFromString(content: string): AlternateView;
@@ -139,7 +139,7 @@ export interface AlternateViewCollection$instance extends Collection_1<Alternate
 
 
 export const AlternateViewCollection: {
-    new(): AlternateViewCollection$instance;
+    new(): AlternateViewCollection;
 };
 
 
@@ -168,12 +168,12 @@ export interface Attachment$instance extends AttachmentBase$instance {
 
 
 export const Attachment: {
-    new(fileName: string): Attachment$instance;
-    new(fileName: string, mediaType: string): Attachment$instance;
-    new(fileName: string, contentType: ContentType): Attachment$instance;
-    new(contentStream: Stream, name: string): Attachment$instance;
-    new(contentStream: Stream, name: string, mediaType: string): Attachment$instance;
-    new(contentStream: Stream, contentType: ContentType): Attachment$instance;
+    new(fileName: string): Attachment;
+    new(fileName: string, mediaType: string): Attachment;
+    new(fileName: string, contentType: ContentType): Attachment;
+    new(contentStream: Stream, name: string): Attachment;
+    new(contentStream: Stream, name: string, mediaType: string): Attachment;
+    new(contentStream: Stream, contentType: ContentType): Attachment;
     CreateAttachmentFromString(content: string, contentType: ContentType): Attachment;
     CreateAttachmentFromString(content: string, name: string, contentEncoding: Encoding, mediaType: string): Attachment;
     CreateAttachmentFromString(content: string, name: string): Attachment;
@@ -230,7 +230,7 @@ export interface AttachmentCollection$instance extends Collection_1<Attachment> 
 
 
 export const AttachmentCollection: {
-    new(): AttachmentCollection$instance;
+    new(): AttachmentCollection;
 };
 
 
@@ -257,12 +257,12 @@ export interface LinkedResource$instance extends AttachmentBase$instance {
 
 
 export const LinkedResource: {
-    new(fileName: string): LinkedResource$instance;
-    new(fileName: string, mediaType: string): LinkedResource$instance;
-    new(fileName: string, contentType: ContentType): LinkedResource$instance;
-    new(contentStream: Stream): LinkedResource$instance;
-    new(contentStream: Stream, mediaType: string): LinkedResource$instance;
-    new(contentStream: Stream, contentType: ContentType): LinkedResource$instance;
+    new(fileName: string): LinkedResource;
+    new(fileName: string, mediaType: string): LinkedResource;
+    new(fileName: string, contentType: ContentType): LinkedResource;
+    new(contentStream: Stream): LinkedResource;
+    new(contentStream: Stream, mediaType: string): LinkedResource;
+    new(contentStream: Stream, contentType: ContentType): LinkedResource;
     CreateLinkedResourceFromString(content: string, contentType: ContentType): LinkedResource;
     CreateLinkedResourceFromString(content: string, contentEncoding: Encoding, mediaType: string): LinkedResource;
     CreateLinkedResourceFromString(content: string): LinkedResource;
@@ -297,7 +297,7 @@ export interface LinkedResourceCollection$instance extends Collection_1<LinkedRe
 
 
 export const LinkedResourceCollection: {
-    new(): LinkedResourceCollection$instance;
+    new(): LinkedResourceCollection;
 };
 
 
@@ -329,9 +329,9 @@ export interface MailAddress$instance {
 
 
 export const MailAddress: {
-    new(address: string): MailAddress$instance;
-    new(address: string, displayName: string): MailAddress$instance;
-    new(address: string, displayName: string, displayNameEncoding: Encoding): MailAddress$instance;
+    new(address: string): MailAddress;
+    new(address: string, displayName: string): MailAddress;
+    new(address: string, displayName: string, displayNameEncoding: Encoding): MailAddress;
     TryCreate(address: string, result: MailAddress): boolean;
     TryCreate(address: string, displayName: string, result: MailAddress): boolean;
     TryCreate(address: string, displayName: string, displayNameEncoding: Encoding, result: MailAddress): boolean;
@@ -361,7 +361,7 @@ export interface MailAddressCollection$instance extends Collection_1<MailAddress
 
 
 export const MailAddressCollection: {
-    new(): MailAddressCollection$instance;
+    new(): MailAddressCollection;
 };
 
 
@@ -403,10 +403,10 @@ export interface MailMessage$instance {
 
 
 export const MailMessage: {
-    new(): MailMessage$instance;
-    new(from_: string, to: string): MailMessage$instance;
-    new(from_: string, to: string, subject: string, body: string): MailMessage$instance;
-    new(from_: MailAddress, to: MailAddress): MailMessage$instance;
+    new(): MailMessage;
+    new(from_: string, to: string): MailMessage;
+    new(from_: string, to: string, subject: string, body: string): MailMessage;
+    new(from_: MailAddress, to: MailAddress): MailMessage;
 };
 
 
@@ -446,9 +446,9 @@ export interface SmtpClient$instance {
 
 
 export const SmtpClient: {
-    new(): SmtpClient$instance;
-    new(host: string): SmtpClient$instance;
-    new(host: string, port: int): SmtpClient$instance;
+    new(): SmtpClient;
+    new(host: string): SmtpClient;
+    new(host: string, port: int): SmtpClient;
 };
 
 
@@ -468,11 +468,11 @@ export interface SmtpException$instance extends Exception {
 
 
 export const SmtpException: {
-    new(statusCode: SmtpStatusCode): SmtpException$instance;
-    new(statusCode: SmtpStatusCode, message: string): SmtpException$instance;
-    new(): SmtpException$instance;
-    new(message: string): SmtpException$instance;
-    new(message: string, innerException: Exception): SmtpException$instance;
+    new(statusCode: SmtpStatusCode): SmtpException;
+    new(statusCode: SmtpStatusCode, message: string): SmtpException;
+    new(): SmtpException;
+    new(message: string): SmtpException;
+    new(message: string, innerException: Exception): SmtpException;
 };
 
 
@@ -490,12 +490,12 @@ export interface SmtpFailedRecipientException$instance extends SmtpException$ins
 
 
 export const SmtpFailedRecipientException: {
-    new(): SmtpFailedRecipientException$instance;
-    new(message: string): SmtpFailedRecipientException$instance;
-    new(message: string, innerException: Exception): SmtpFailedRecipientException$instance;
-    new(statusCode: SmtpStatusCode, failedRecipient: string): SmtpFailedRecipientException$instance;
-    new(statusCode: SmtpStatusCode, failedRecipient: string, serverResponse: string): SmtpFailedRecipientException$instance;
-    new(message: string, failedRecipient: string, innerException: Exception): SmtpFailedRecipientException$instance;
+    new(): SmtpFailedRecipientException;
+    new(message: string): SmtpFailedRecipientException;
+    new(message: string, innerException: Exception): SmtpFailedRecipientException;
+    new(statusCode: SmtpStatusCode, failedRecipient: string): SmtpFailedRecipientException;
+    new(statusCode: SmtpStatusCode, failedRecipient: string, serverResponse: string): SmtpFailedRecipientException;
+    new(message: string, failedRecipient: string, innerException: Exception): SmtpFailedRecipientException;
 };
 
 
@@ -513,10 +513,10 @@ export interface SmtpFailedRecipientsException$instance extends SmtpFailedRecipi
 
 
 export const SmtpFailedRecipientsException: {
-    new(): SmtpFailedRecipientsException$instance;
-    new(message: string): SmtpFailedRecipientsException$instance;
-    new(message: string, innerException: Exception): SmtpFailedRecipientsException$instance;
-    new(message: string, innerExceptions: SmtpFailedRecipientException[]): SmtpFailedRecipientsException$instance;
+    new(): SmtpFailedRecipientsException;
+    new(message: string): SmtpFailedRecipientsException;
+    new(message: string, innerException: Exception): SmtpFailedRecipientsException;
+    new(message: string, innerExceptions: SmtpFailedRecipientException[]): SmtpFailedRecipientsException;
 };
 
 

@@ -47,7 +47,7 @@ export interface FileSystemEntry$instance {
 
 
 export const FileSystemEntry: {
-    new(): FileSystemEntry$instance;
+    new(): FileSystemEntry;
 };
 
 
@@ -61,7 +61,7 @@ export interface FileSystemEnumerable_1$instance<TResult> {
 
 
 export const FileSystemEnumerable_1: {
-    new<TResult>(directory: string, transform: FileSystemEnumerable_1_FindTransform<TResult>, options: EnumerationOptions): FileSystemEnumerable_1$instance<TResult>;
+    new<TResult>(directory: string, transform: FileSystemEnumerable_1_FindTransform<TResult>, options: EnumerationOptions): FileSystemEnumerable_1<TResult>;
 };
 
 
@@ -82,7 +82,7 @@ export interface FileSystemEnumerator_1$instance<TResult> extends CriticalFinali
 
 
 export const FileSystemEnumerator_1: {
-    new<TResult>(directory: string, options: EnumerationOptions): FileSystemEnumerator_1$instance<TResult>;
+    new<TResult>(directory: string, options: EnumerationOptions): FileSystemEnumerator_1<TResult>;
 };
 
 

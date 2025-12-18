@@ -46,7 +46,7 @@ export interface AncestorDocOrderIterator$instance {
 
 
 export const AncestorDocOrderIterator: {
-    new(): AncestorDocOrderIterator$instance;
+    new(): AncestorDocOrderIterator;
 };
 
 
@@ -60,7 +60,7 @@ export interface AncestorIterator$instance {
 
 
 export const AncestorIterator: {
-    new(): AncestorIterator$instance;
+    new(): AncestorIterator;
 };
 
 
@@ -74,7 +74,7 @@ export interface AttributeContentIterator$instance {
 
 
 export const AttributeContentIterator: {
-    new(): AttributeContentIterator$instance;
+    new(): AttributeContentIterator;
 };
 
 
@@ -88,7 +88,7 @@ export interface AttributeIterator$instance {
 
 
 export const AttributeIterator: {
-    new(): AttributeIterator$instance;
+    new(): AttributeIterator;
 };
 
 
@@ -102,7 +102,7 @@ export interface ContentIterator$instance {
 
 
 export const ContentIterator: {
-    new(): ContentIterator$instance;
+    new(): ContentIterator;
 };
 
 
@@ -116,7 +116,7 @@ export interface ContentMergeIterator$instance {
 
 
 export const ContentMergeIterator: {
-    new(): ContentMergeIterator$instance;
+    new(): ContentMergeIterator;
 };
 
 
@@ -137,7 +137,7 @@ export interface DecimalAggregator$instance {
 
 
 export const DecimalAggregator: {
-    new(): DecimalAggregator$instance;
+    new(): DecimalAggregator;
 };
 
 
@@ -151,7 +151,7 @@ export interface DescendantIterator$instance {
 
 
 export const DescendantIterator: {
-    new(): DescendantIterator$instance;
+    new(): DescendantIterator;
 };
 
 
@@ -165,7 +165,7 @@ export interface DescendantMergeIterator$instance {
 
 
 export const DescendantMergeIterator: {
-    new(): DescendantMergeIterator$instance;
+    new(): DescendantMergeIterator;
 };
 
 
@@ -179,7 +179,7 @@ export interface DifferenceIterator$instance {
 
 
 export const DifferenceIterator: {
-    new(): DifferenceIterator$instance;
+    new(): DifferenceIterator;
 };
 
 
@@ -193,7 +193,7 @@ export interface DodSequenceMerge$instance {
 
 
 export const DodSequenceMerge: {
-    new(): DodSequenceMerge$instance;
+    new(): DodSequenceMerge;
 };
 
 
@@ -214,7 +214,7 @@ export interface DoubleAggregator$instance {
 
 
 export const DoubleAggregator: {
-    new(): DoubleAggregator$instance;
+    new(): DoubleAggregator;
 };
 
 
@@ -228,7 +228,7 @@ export interface ElementContentIterator$instance {
 
 
 export const ElementContentIterator: {
-    new(): ElementContentIterator$instance;
+    new(): ElementContentIterator;
 };
 
 
@@ -242,7 +242,7 @@ export interface FollowingSiblingIterator$instance {
 
 
 export const FollowingSiblingIterator: {
-    new(): FollowingSiblingIterator$instance;
+    new(): FollowingSiblingIterator;
 };
 
 
@@ -256,7 +256,7 @@ export interface FollowingSiblingMergeIterator$instance {
 
 
 export const FollowingSiblingMergeIterator: {
-    new(): FollowingSiblingMergeIterator$instance;
+    new(): FollowingSiblingMergeIterator;
 };
 
 
@@ -270,7 +270,7 @@ export interface IdIterator$instance {
 
 
 export const IdIterator: {
-    new(): IdIterator$instance;
+    new(): IdIterator;
 };
 
 
@@ -291,7 +291,7 @@ export interface Int32Aggregator$instance {
 
 
 export const Int32Aggregator: {
-    new(): Int32Aggregator$instance;
+    new(): Int32Aggregator;
 };
 
 
@@ -312,7 +312,7 @@ export interface Int64Aggregator$instance {
 
 
 export const Int64Aggregator: {
-    new(): Int64Aggregator$instance;
+    new(): Int64Aggregator;
 };
 
 
@@ -326,7 +326,7 @@ export interface IntersectIterator$instance {
 
 
 export const IntersectIterator: {
-    new(): IntersectIterator$instance;
+    new(): IntersectIterator;
 };
 
 
@@ -340,7 +340,7 @@ export interface NamespaceIterator$instance {
 
 
 export const NamespaceIterator: {
-    new(): NamespaceIterator$instance;
+    new(): NamespaceIterator;
 };
 
 
@@ -354,7 +354,7 @@ export interface NodeKindContentIterator$instance {
 
 
 export const NodeKindContentIterator: {
-    new(): NodeKindContentIterator$instance;
+    new(): NodeKindContentIterator;
 };
 
 
@@ -368,7 +368,7 @@ export interface NodeRangeIterator$instance {
 
 
 export const NodeRangeIterator: {
-    new(): NodeRangeIterator$instance;
+    new(): NodeRangeIterator;
 };
 
 
@@ -382,7 +382,7 @@ export interface ParentIterator$instance {
 
 
 export const ParentIterator: {
-    new(): ParentIterator$instance;
+    new(): ParentIterator;
 };
 
 
@@ -396,7 +396,7 @@ export interface PrecedingIterator$instance {
 
 
 export const PrecedingIterator: {
-    new(): PrecedingIterator$instance;
+    new(): PrecedingIterator;
 };
 
 
@@ -410,7 +410,7 @@ export interface PrecedingSiblingDocOrderIterator$instance {
 
 
 export const PrecedingSiblingDocOrderIterator: {
-    new(): PrecedingSiblingDocOrderIterator$instance;
+    new(): PrecedingSiblingDocOrderIterator;
 };
 
 
@@ -424,7 +424,7 @@ export interface PrecedingSiblingIterator$instance {
 
 
 export const PrecedingSiblingIterator: {
-    new(): PrecedingSiblingIterator$instance;
+    new(): PrecedingSiblingIterator;
 };
 
 
@@ -439,7 +439,7 @@ export interface StringConcat$instance {
 
 
 export const StringConcat: {
-    new(): StringConcat$instance;
+    new(): StringConcat;
 };
 
 
@@ -453,7 +453,7 @@ export interface UnionIterator$instance {
 
 
 export const UnionIterator: {
-    new(): UnionIterator$instance;
+    new(): UnionIterator;
 };
 
 
@@ -474,7 +474,7 @@ export interface XmlSortKeyAccumulator$instance {
 
 
 export const XmlSortKeyAccumulator: {
-    new(): XmlSortKeyAccumulator$instance;
+    new(): XmlSortKeyAccumulator;
 };
 
 
@@ -488,7 +488,7 @@ export interface XPathFollowingIterator$instance {
 
 
 export const XPathFollowingIterator: {
-    new(): XPathFollowingIterator$instance;
+    new(): XPathFollowingIterator;
 };
 
 
@@ -502,7 +502,7 @@ export interface XPathFollowingMergeIterator$instance {
 
 
 export const XPathFollowingMergeIterator: {
-    new(): XPathFollowingMergeIterator$instance;
+    new(): XPathFollowingMergeIterator;
 };
 
 
@@ -516,7 +516,7 @@ export interface XPathPrecedingDocOrderIterator$instance {
 
 
 export const XPathPrecedingDocOrderIterator: {
-    new(): XPathPrecedingDocOrderIterator$instance;
+    new(): XPathPrecedingDocOrderIterator;
 };
 
 
@@ -530,7 +530,7 @@ export interface XPathPrecedingIterator$instance {
 
 
 export const XPathPrecedingIterator: {
-    new(): XPathPrecedingIterator$instance;
+    new(): XPathPrecedingIterator;
 };
 
 
@@ -544,7 +544,7 @@ export interface XPathPrecedingMergeIterator$instance {
 
 
 export const XPathPrecedingMergeIterator: {
-    new(): XPathPrecedingMergeIterator$instance;
+    new(): XPathPrecedingMergeIterator;
 };
 
 
@@ -557,7 +557,7 @@ export interface XmlCollation$instance {
 
 
 export const XmlCollation: {
-    new(): XmlCollation$instance;
+    new(): XmlCollation;
 };
 
 
@@ -570,7 +570,7 @@ export interface XmlILIndex$instance {
 
 
 export const XmlILIndex: {
-    new(): XmlILIndex$instance;
+    new(): XmlILIndex;
 };
 
 
@@ -606,7 +606,7 @@ export interface XmlQueryContext$instance {
 
 
 export const XmlQueryContext: {
-    new(): XmlQueryContext$instance;
+    new(): XmlQueryContext;
 };
 
 
@@ -633,9 +633,9 @@ export interface XmlQueryItemSequence$instance extends XmlQuerySequence_1$instan
 
 
 export const XmlQueryItemSequence: {
-    new(): XmlQueryItemSequence$instance;
-    new(capacity: int): XmlQueryItemSequence$instance;
-    new(item: XPathItem): XmlQueryItemSequence$instance;
+    new(): XmlQueryItemSequence;
+    new(capacity: int): XmlQueryItemSequence;
+    new(item: XPathItem): XmlQueryItemSequence;
 };
 
 
@@ -674,11 +674,11 @@ export interface XmlQueryNodeSequence$instance extends XmlQuerySequence_1$instan
 
 
 export const XmlQueryNodeSequence: {
-    new(): XmlQueryNodeSequence$instance;
-    new(capacity: int): XmlQueryNodeSequence$instance;
-    new(list: IList_1<XPathNavigator>): XmlQueryNodeSequence$instance;
-    new(array: XPathNavigator[], size: int): XmlQueryNodeSequence$instance;
-    new(navigator: XPathNavigator): XmlQueryNodeSequence$instance;
+    new(): XmlQueryNodeSequence;
+    new(capacity: int): XmlQueryNodeSequence;
+    new(list: IList_1<XPathNavigator>): XmlQueryNodeSequence;
+    new(array: XPathNavigator[], size: int): XmlQueryNodeSequence;
+    new(navigator: XPathNavigator): XmlQueryNodeSequence;
 };
 
 
@@ -771,7 +771,7 @@ export interface XmlQueryOutput$instance extends XmlWriter {
 
 
 export const XmlQueryOutput: {
-    new(): XmlQueryOutput$instance;
+    new(): XmlQueryOutput;
 };
 
 
@@ -828,7 +828,7 @@ export interface XmlQueryRuntime$instance {
 
 
 export const XmlQueryRuntime: {
-    new(): XmlQueryRuntime$instance;
+    new(): XmlQueryRuntime;
     OnCurrentNodeChanged(currentNode: XPathNavigator): int;
 };
 
@@ -849,10 +849,10 @@ export interface XmlQuerySequence_1$instance<T> {
 
 
 export const XmlQuerySequence_1: {
-    new<T>(): XmlQuerySequence_1$instance<T>;
-    new<T>(capacity: int): XmlQuerySequence_1$instance<T>;
-    new<T>(array: T[], size: int): XmlQuerySequence_1$instance<T>;
-    new<T>(value: T): XmlQuerySequence_1$instance<T>;
+    new<T>(): XmlQuerySequence_1<T>;
+    new<T>(capacity: int): XmlQuerySequence_1<T>;
+    new<T>(array: T[], size: int): XmlQuerySequence_1<T>;
+    new<T>(value: T): XmlQuerySequence_1<T>;
     readonly Empty: unknown;
     CreateOrReuse<T>(seq: XmlQuerySequence_1<T>, item: T): XmlQuerySequence_1<T>;
     CreateOrReuse<T>(seq: XmlQuerySequence_1<T>): XmlQuerySequence_1<T>;
@@ -889,7 +889,7 @@ export interface XsltLibrary$instance {
 
 
 export const XsltLibrary: {
-    new(): XsltLibrary$instance;
+    new(): XsltLibrary;
 };
 
 

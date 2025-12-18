@@ -34,7 +34,7 @@ export interface BoundedChannelOptions$instance extends ChannelOptions {
 
 
 export const BoundedChannelOptions: {
-    new(capacity: int): BoundedChannelOptions$instance;
+    new(capacity: int): BoundedChannelOptions;
 };
 
 
@@ -68,10 +68,10 @@ export interface ChannelClosedException$instance extends InvalidOperationExcepti
 
 
 export const ChannelClosedException: {
-    new(): ChannelClosedException$instance;
-    new(message: string): ChannelClosedException$instance;
-    new(innerException: Exception): ChannelClosedException$instance;
-    new(message: string, innerException: Exception): ChannelClosedException$instance;
+    new(): ChannelClosedException;
+    new(message: string): ChannelClosedException;
+    new(innerException: Exception): ChannelClosedException;
+    new(message: string, innerException: Exception): ChannelClosedException;
 };
 
 
@@ -134,7 +134,7 @@ export interface UnboundedChannelOptions$instance extends ChannelOptions {
 
 
 export const UnboundedChannelOptions: {
-    new(): UnboundedChannelOptions$instance;
+    new(): UnboundedChannelOptions;
 };
 
 
@@ -146,7 +146,7 @@ export interface UnboundedPrioritizedChannelOptions_1$instance<T> extends Channe
 
 
 export const UnboundedPrioritizedChannelOptions_1: {
-    new<T>(): UnboundedPrioritizedChannelOptions_1$instance<T>;
+    new<T>(): UnboundedPrioritizedChannelOptions_1<T>;
 };
 
 

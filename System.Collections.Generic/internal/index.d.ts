@@ -216,7 +216,7 @@ export interface Dictionary_2_AlternateLookup_1$instance<TKey, TValue, TAlternat
 
 
 export const Dictionary_2_AlternateLookup_1: {
-    new<TKey, TValue, TAlternateKey>(): Dictionary_2_AlternateLookup_1$instance<TKey, TValue, TAlternateKey>;
+    new<TKey, TValue, TAlternateKey>(): Dictionary_2_AlternateLookup_1<TKey, TValue, TAlternateKey>;
 };
 
 
@@ -231,7 +231,7 @@ export interface Dictionary_2_Enumerator$instance<TKey, TValue> extends IDisposa
 
 
 export const Dictionary_2_Enumerator: {
-    new<TKey, TValue>(): Dictionary_2_Enumerator$instance<TKey, TValue>;
+    new<TKey, TValue>(): Dictionary_2_Enumerator<TKey, TValue>;
 };
 
 
@@ -253,7 +253,7 @@ export interface Dictionary_2_KeyCollection_Enumerator$instance<TKey, TValue> ex
 
 
 export const Dictionary_2_KeyCollection_Enumerator: {
-    new<TKey, TValue>(): Dictionary_2_KeyCollection_Enumerator$instance<TKey, TValue>;
+    new<TKey, TValue>(): Dictionary_2_KeyCollection_Enumerator<TKey, TValue>;
 };
 
 
@@ -274,7 +274,7 @@ export interface Dictionary_2_ValueCollection_Enumerator$instance<TKey, TValue> 
 
 
 export const Dictionary_2_ValueCollection_Enumerator: {
-    new<TKey, TValue>(): Dictionary_2_ValueCollection_Enumerator$instance<TKey, TValue>;
+    new<TKey, TValue>(): Dictionary_2_ValueCollection_Enumerator<TKey, TValue>;
 };
 
 
@@ -296,7 +296,7 @@ export interface HashSet_1_AlternateLookup_1$instance<T, TAlternate> {
 
 
 export const HashSet_1_AlternateLookup_1: {
-    new<T, TAlternate>(): HashSet_1_AlternateLookup_1$instance<T, TAlternate>;
+    new<T, TAlternate>(): HashSet_1_AlternateLookup_1<T, TAlternate>;
 };
 
 
@@ -311,7 +311,7 @@ export interface HashSet_1_Enumerator$instance<T> extends IDisposable {
 
 
 export const HashSet_1_Enumerator: {
-    new<T>(): HashSet_1_Enumerator$instance<T>;
+    new<T>(): HashSet_1_Enumerator<T>;
 };
 
 
@@ -332,7 +332,7 @@ export interface KeyValuePair_2$instance<TKey, TValue> {
 
 
 export const KeyValuePair_2: {
-    new<TKey, TValue>(key: TKey, value: TValue): KeyValuePair_2$instance<TKey, TValue>;
+    new<TKey, TValue>(key: TKey, value: TValue): KeyValuePair_2<TKey, TValue>;
 };
 
 
@@ -347,7 +347,7 @@ export interface LinkedList_1_Enumerator$instance<T> extends IDisposable {
 
 
 export const LinkedList_1_Enumerator: {
-    new<T>(): LinkedList_1_Enumerator$instance<T>;
+    new<T>(): LinkedList_1_Enumerator<T>;
 };
 
 
@@ -372,7 +372,7 @@ export interface List_1_Enumerator$instance<T> extends IDisposable {
 
 
 export const List_1_Enumerator: {
-    new<T>(): List_1_Enumerator$instance<T>;
+    new<T>(): List_1_Enumerator<T>;
 };
 
 
@@ -392,7 +392,7 @@ export interface OrderedDictionary_2_Enumerator$instance<TKey, TValue> {
 
 
 export const OrderedDictionary_2_Enumerator: {
-    new<TKey, TValue>(): OrderedDictionary_2_Enumerator$instance<TKey, TValue>;
+    new<TKey, TValue>(): OrderedDictionary_2_Enumerator<TKey, TValue>;
 };
 
 
@@ -413,7 +413,7 @@ export interface OrderedDictionary_2_KeyCollection_Enumerator$instance<TKey, TVa
 
 
 export const OrderedDictionary_2_KeyCollection_Enumerator: {
-    new<TKey, TValue>(): OrderedDictionary_2_KeyCollection_Enumerator$instance<TKey, TValue>;
+    new<TKey, TValue>(): OrderedDictionary_2_KeyCollection_Enumerator<TKey, TValue>;
 };
 
 
@@ -433,7 +433,7 @@ export interface OrderedDictionary_2_ValueCollection_Enumerator$instance<TKey, T
 
 
 export const OrderedDictionary_2_ValueCollection_Enumerator: {
-    new<TKey, TValue>(): OrderedDictionary_2_ValueCollection_Enumerator$instance<TKey, TValue>;
+    new<TKey, TValue>(): OrderedDictionary_2_ValueCollection_Enumerator<TKey, TValue>;
 };
 
 
@@ -454,7 +454,7 @@ export interface PriorityQueue_2_UnorderedItemsCollection_Enumerator$instance<TE
 
 
 export const PriorityQueue_2_UnorderedItemsCollection_Enumerator: {
-    new<TElement, TPriority>(): PriorityQueue_2_UnorderedItemsCollection_Enumerator$instance<TElement, TPriority>;
+    new<TElement, TPriority>(): PriorityQueue_2_UnorderedItemsCollection_Enumerator<TElement, TPriority>;
 };
 
 
@@ -475,7 +475,7 @@ export interface Queue_1_Enumerator$instance<T> extends IDisposable {
 
 
 export const Queue_1_Enumerator: {
-    new<T>(): Queue_1_Enumerator$instance<T>;
+    new<T>(): Queue_1_Enumerator<T>;
 };
 
 
@@ -496,7 +496,7 @@ export interface SortedDictionary_2_Enumerator$instance<TKey, TValue> extends ID
 
 
 export const SortedDictionary_2_Enumerator: {
-    new<TKey, TValue>(): SortedDictionary_2_Enumerator$instance<TKey, TValue>;
+    new<TKey, TValue>(): SortedDictionary_2_Enumerator<TKey, TValue>;
 };
 
 
@@ -518,7 +518,7 @@ export interface SortedDictionary_2_KeyCollection_Enumerator$instance<TKey, TVal
 
 
 export const SortedDictionary_2_KeyCollection_Enumerator: {
-    new<TKey, TValue>(): SortedDictionary_2_KeyCollection_Enumerator$instance<TKey, TValue>;
+    new<TKey, TValue>(): SortedDictionary_2_KeyCollection_Enumerator<TKey, TValue>;
 };
 
 
@@ -539,7 +539,7 @@ export interface SortedDictionary_2_ValueCollection_Enumerator$instance<TKey, TV
 
 
 export const SortedDictionary_2_ValueCollection_Enumerator: {
-    new<TKey, TValue>(): SortedDictionary_2_ValueCollection_Enumerator$instance<TKey, TValue>;
+    new<TKey, TValue>(): SortedDictionary_2_ValueCollection_Enumerator<TKey, TValue>;
 };
 
 
@@ -560,7 +560,7 @@ export interface SortedSet_1_Enumerator$instance<T> extends IDisposable {
 
 
 export const SortedSet_1_Enumerator: {
-    new<T>(): SortedSet_1_Enumerator$instance<T>;
+    new<T>(): SortedSet_1_Enumerator<T>;
 };
 
 
@@ -585,7 +585,7 @@ export interface Stack_1_Enumerator$instance<T> extends IDisposable {
 
 
 export const Stack_1_Enumerator: {
-    new<T>(): Stack_1_Enumerator$instance<T>;
+    new<T>(): Stack_1_Enumerator<T>;
 };
 
 
@@ -604,7 +604,7 @@ export interface ByteEqualityComparer$instance extends EqualityComparer_1$instan
 
 
 export const ByteEqualityComparer: {
-    new(): ByteEqualityComparer$instance;
+    new(): ByteEqualityComparer;
 };
 
 
@@ -664,14 +664,14 @@ export interface Dictionary_2$instance<TKey, TValue> {
 
 
 export const Dictionary_2: {
-    new<TKey, TValue>(): Dictionary_2$instance<TKey, TValue>;
-    new<TKey, TValue>(capacity: int): Dictionary_2$instance<TKey, TValue>;
-    new<TKey, TValue>(comparer: IEqualityComparer_1<TKey>): Dictionary_2$instance<TKey, TValue>;
-    new<TKey, TValue>(capacity: int, comparer: IEqualityComparer_1<TKey>): Dictionary_2$instance<TKey, TValue>;
-    new<TKey, TValue>(dictionary: IDictionary_2<TKey, TValue>): Dictionary_2$instance<TKey, TValue>;
-    new<TKey, TValue>(dictionary: IDictionary_2<TKey, TValue>, comparer: IEqualityComparer_1<TKey>): Dictionary_2$instance<TKey, TValue>;
-    new<TKey, TValue>(collection: IEnumerable_1<KeyValuePair_2<TKey, TValue>>): Dictionary_2$instance<TKey, TValue>;
-    new<TKey, TValue>(collection: IEnumerable_1<KeyValuePair_2<TKey, TValue>>, comparer: IEqualityComparer_1<TKey>): Dictionary_2$instance<TKey, TValue>;
+    new<TKey, TValue>(): Dictionary_2<TKey, TValue>;
+    new<TKey, TValue>(capacity: int): Dictionary_2<TKey, TValue>;
+    new<TKey, TValue>(comparer: IEqualityComparer_1<TKey>): Dictionary_2<TKey, TValue>;
+    new<TKey, TValue>(capacity: int, comparer: IEqualityComparer_1<TKey>): Dictionary_2<TKey, TValue>;
+    new<TKey, TValue>(dictionary: IDictionary_2<TKey, TValue>): Dictionary_2<TKey, TValue>;
+    new<TKey, TValue>(dictionary: IDictionary_2<TKey, TValue>, comparer: IEqualityComparer_1<TKey>): Dictionary_2<TKey, TValue>;
+    new<TKey, TValue>(collection: IEnumerable_1<KeyValuePair_2<TKey, TValue>>): Dictionary_2<TKey, TValue>;
+    new<TKey, TValue>(collection: IEnumerable_1<KeyValuePair_2<TKey, TValue>>, comparer: IEqualityComparer_1<TKey>): Dictionary_2<TKey, TValue>;
 };
 
 
@@ -702,7 +702,7 @@ export interface Dictionary_2_KeyCollection$instance<TKey, TValue> {
 
 
 export const Dictionary_2_KeyCollection: {
-    new<TKey, TValue>(dictionary: Dictionary_2<TKey, TValue>): Dictionary_2_KeyCollection$instance<TKey, TValue>;
+    new<TKey, TValue>(dictionary: Dictionary_2<TKey, TValue>): Dictionary_2_KeyCollection<TKey, TValue>;
 };
 
 
@@ -725,7 +725,7 @@ export interface Dictionary_2_ValueCollection$instance<TKey, TValue> {
 
 
 export const Dictionary_2_ValueCollection: {
-    new<TKey, TValue>(dictionary: Dictionary_2<TKey, TValue>): Dictionary_2_ValueCollection$instance<TKey, TValue>;
+    new<TKey, TValue>(dictionary: Dictionary_2<TKey, TValue>): Dictionary_2_ValueCollection<TKey, TValue>;
 };
 
 
@@ -748,7 +748,7 @@ export interface EnumEqualityComparer_1$instance<T extends number> extends Equal
 
 
 export const EnumEqualityComparer_1: {
-    new<T extends number>(): EnumEqualityComparer_1$instance<T>;
+    new<T extends number>(): EnumEqualityComparer_1<T>;
 };
 
 
@@ -791,7 +791,7 @@ export interface GenericComparer_1$instance<T extends (IComparable_1<T> | number
 
 
 export const GenericComparer_1: {
-    new<T extends (IComparable_1<T> | number | string | boolean)>(): GenericComparer_1$instance<T>;
+    new<T extends (IComparable_1<T> | number | string | boolean)>(): GenericComparer_1<T>;
 };
 
 
@@ -810,7 +810,7 @@ export interface GenericEqualityComparer_1$instance<T extends (IEquatable_1<T> |
 
 
 export const GenericEqualityComparer_1: {
-    new<T extends (IEquatable_1<T> | number | string | boolean)>(): GenericEqualityComparer_1$instance<T>;
+    new<T extends (IEquatable_1<T> | number | string | boolean)>(): GenericEqualityComparer_1<T>;
 };
 
 
@@ -857,12 +857,12 @@ export interface HashSet_1$instance<T> {
 
 
 export const HashSet_1: {
-    new<T>(): HashSet_1$instance<T>;
-    new<T>(comparer: IEqualityComparer_1<T>): HashSet_1$instance<T>;
-    new<T>(capacity: int): HashSet_1$instance<T>;
-    new<T>(collection: IEnumerable_1<T>): HashSet_1$instance<T>;
-    new<T>(collection: IEnumerable_1<T>, comparer: IEqualityComparer_1<T>): HashSet_1$instance<T>;
-    new<T>(capacity: int, comparer: IEqualityComparer_1<T>): HashSet_1$instance<T>;
+    new<T>(): HashSet_1<T>;
+    new<T>(comparer: IEqualityComparer_1<T>): HashSet_1<T>;
+    new<T>(capacity: int): HashSet_1<T>;
+    new<T>(collection: IEnumerable_1<T>): HashSet_1<T>;
+    new<T>(collection: IEnumerable_1<T>, comparer: IEqualityComparer_1<T>): HashSet_1<T>;
+    new<T>(capacity: int, comparer: IEqualityComparer_1<T>): HashSet_1<T>;
     CreateSetComparer<T>(): IEqualityComparer_1<HashSet_1<T>>;
 };
 
@@ -889,9 +889,9 @@ export interface KeyNotFoundException$instance extends SystemException {
 
 
 export const KeyNotFoundException: {
-    new(): KeyNotFoundException$instance;
-    new(message: string): KeyNotFoundException$instance;
-    new(message: string, innerException: Exception): KeyNotFoundException$instance;
+    new(): KeyNotFoundException;
+    new(message: string): KeyNotFoundException;
+    new(message: string, innerException: Exception): KeyNotFoundException;
 };
 
 
@@ -930,8 +930,8 @@ export interface LinkedList_1$instance<T> {
 
 
 export const LinkedList_1: {
-    new<T>(): LinkedList_1$instance<T>;
-    new<T>(collection: IEnumerable_1<T>): LinkedList_1$instance<T>;
+    new<T>(): LinkedList_1<T>;
+    new<T>(collection: IEnumerable_1<T>): LinkedList_1<T>;
 };
 
 
@@ -960,7 +960,7 @@ export interface LinkedListNode_1$instance<T> {
 
 
 export const LinkedListNode_1: {
-    new<T>(value: T): LinkedListNode_1$instance<T>;
+    new<T>(value: T): LinkedListNode_1<T>;
 };
 
 
@@ -1022,9 +1022,9 @@ export interface List_1$instance<T> {
 
 
 export const List_1: {
-    new<T>(): List_1$instance<T>;
-    new<T>(capacity: int): List_1$instance<T>;
-    new<T>(collection: IEnumerable_1<T>): List_1$instance<T>;
+    new<T>(): List_1<T>;
+    new<T>(capacity: int): List_1<T>;
+    new<T>(collection: IEnumerable_1<T>): List_1<T>;
 };
 
 
@@ -1049,7 +1049,7 @@ export interface NonRandomizedStringEqualityComparer$instance {
 
 
 export const NonRandomizedStringEqualityComparer: {
-    new(): NonRandomizedStringEqualityComparer$instance;
+    new(): NonRandomizedStringEqualityComparer;
     GetStringComparer(comparer: unknown): IEqualityComparer_1<System_Internal.String>;
 };
 
@@ -1073,7 +1073,7 @@ export interface NullableComparer_1$instance<T extends unknown> extends Comparer
 
 
 export const NullableComparer_1: {
-    new<T extends unknown>(): NullableComparer_1$instance<T>;
+    new<T extends unknown>(): NullableComparer_1<T>;
 };
 
 
@@ -1096,7 +1096,7 @@ export interface NullableEqualityComparer_1$instance<T extends unknown> extends 
 
 
 export const NullableEqualityComparer_1: {
-    new<T extends unknown>(): NullableEqualityComparer_1$instance<T>;
+    new<T extends unknown>(): NullableEqualityComparer_1<T>;
 };
 
 
@@ -1119,7 +1119,7 @@ export interface ObjectComparer_1$instance<T> extends Comparer_1$instance<T> {
 
 
 export const ObjectComparer_1: {
-    new<T>(): ObjectComparer_1$instance<T>;
+    new<T>(): ObjectComparer_1<T>;
 };
 
 
@@ -1138,7 +1138,7 @@ export interface ObjectEqualityComparer_1$instance<T> extends EqualityComparer_1
 
 
 export const ObjectEqualityComparer_1: {
-    new<T>(): ObjectEqualityComparer_1$instance<T>;
+    new<T>(): ObjectEqualityComparer_1<T>;
 };
 
 
@@ -1181,14 +1181,14 @@ export interface OrderedDictionary_2$instance<TKey, TValue> {
 
 
 export const OrderedDictionary_2: {
-    new<TKey, TValue>(): OrderedDictionary_2$instance<TKey, TValue>;
-    new<TKey, TValue>(capacity: int): OrderedDictionary_2$instance<TKey, TValue>;
-    new<TKey, TValue>(comparer: IEqualityComparer_1<TKey>): OrderedDictionary_2$instance<TKey, TValue>;
-    new<TKey, TValue>(capacity: int, comparer: IEqualityComparer_1<TKey>): OrderedDictionary_2$instance<TKey, TValue>;
-    new<TKey, TValue>(dictionary: IDictionary_2<TKey, TValue>): OrderedDictionary_2$instance<TKey, TValue>;
-    new<TKey, TValue>(dictionary: IDictionary_2<TKey, TValue>, comparer: IEqualityComparer_1<TKey>): OrderedDictionary_2$instance<TKey, TValue>;
-    new<TKey, TValue>(collection: IEnumerable_1<KeyValuePair_2<TKey, TValue>>): OrderedDictionary_2$instance<TKey, TValue>;
-    new<TKey, TValue>(collection: IEnumerable_1<KeyValuePair_2<TKey, TValue>>, comparer: IEqualityComparer_1<TKey>): OrderedDictionary_2$instance<TKey, TValue>;
+    new<TKey, TValue>(): OrderedDictionary_2<TKey, TValue>;
+    new<TKey, TValue>(capacity: int): OrderedDictionary_2<TKey, TValue>;
+    new<TKey, TValue>(comparer: IEqualityComparer_1<TKey>): OrderedDictionary_2<TKey, TValue>;
+    new<TKey, TValue>(capacity: int, comparer: IEqualityComparer_1<TKey>): OrderedDictionary_2<TKey, TValue>;
+    new<TKey, TValue>(dictionary: IDictionary_2<TKey, TValue>): OrderedDictionary_2<TKey, TValue>;
+    new<TKey, TValue>(dictionary: IDictionary_2<TKey, TValue>, comparer: IEqualityComparer_1<TKey>): OrderedDictionary_2<TKey, TValue>;
+    new<TKey, TValue>(collection: IEnumerable_1<KeyValuePair_2<TKey, TValue>>): OrderedDictionary_2<TKey, TValue>;
+    new<TKey, TValue>(collection: IEnumerable_1<KeyValuePair_2<TKey, TValue>>, comparer: IEqualityComparer_1<TKey>): OrderedDictionary_2<TKey, TValue>;
 };
 
 
@@ -1217,7 +1217,7 @@ export interface OrderedDictionary_2_KeyCollection$instance<TKey, TValue> {
 
 
 export const OrderedDictionary_2_KeyCollection: {
-    new<TKey, TValue>(): OrderedDictionary_2_KeyCollection$instance<TKey, TValue>;
+    new<TKey, TValue>(): OrderedDictionary_2_KeyCollection<TKey, TValue>;
 };
 
 
@@ -1242,7 +1242,7 @@ export interface OrderedDictionary_2_ValueCollection$instance<TKey, TValue> {
 
 
 export const OrderedDictionary_2_ValueCollection: {
-    new<TKey, TValue>(): OrderedDictionary_2_ValueCollection$instance<TKey, TValue>;
+    new<TKey, TValue>(): OrderedDictionary_2_ValueCollection<TKey, TValue>;
 };
 
 
@@ -1281,12 +1281,12 @@ export interface PriorityQueue_2$instance<TElement, TPriority> {
 
 
 export const PriorityQueue_2: {
-    new<TElement, TPriority>(): PriorityQueue_2$instance<TElement, TPriority>;
-    new<TElement, TPriority>(initialCapacity: int): PriorityQueue_2$instance<TElement, TPriority>;
-    new<TElement, TPriority>(comparer: IComparer_1<TPriority>): PriorityQueue_2$instance<TElement, TPriority>;
-    new<TElement, TPriority>(initialCapacity: int, comparer: IComparer_1<TPriority>): PriorityQueue_2$instance<TElement, TPriority>;
-    new<TElement, TPriority>(items: IEnumerable_1<ValueTuple_2<TElement, TPriority>>): PriorityQueue_2$instance<TElement, TPriority>;
-    new<TElement, TPriority>(items: IEnumerable_1<ValueTuple_2<TElement, TPriority>>, comparer: IComparer_1<TPriority>): PriorityQueue_2$instance<TElement, TPriority>;
+    new<TElement, TPriority>(): PriorityQueue_2<TElement, TPriority>;
+    new<TElement, TPriority>(initialCapacity: int): PriorityQueue_2<TElement, TPriority>;
+    new<TElement, TPriority>(comparer: IComparer_1<TPriority>): PriorityQueue_2<TElement, TPriority>;
+    new<TElement, TPriority>(initialCapacity: int, comparer: IComparer_1<TPriority>): PriorityQueue_2<TElement, TPriority>;
+    new<TElement, TPriority>(items: IEnumerable_1<ValueTuple_2<TElement, TPriority>>): PriorityQueue_2<TElement, TPriority>;
+    new<TElement, TPriority>(items: IEnumerable_1<ValueTuple_2<TElement, TPriority>>, comparer: IComparer_1<TPriority>): PriorityQueue_2<TElement, TPriority>;
 };
 
 
@@ -1299,7 +1299,7 @@ export interface PriorityQueue_2_UnorderedItemsCollection$instance<TElement, TPr
 
 
 export const PriorityQueue_2_UnorderedItemsCollection: {
-    new<TElement, TPriority>(): PriorityQueue_2_UnorderedItemsCollection$instance<TElement, TPriority>;
+    new<TElement, TPriority>(): PriorityQueue_2_UnorderedItemsCollection<TElement, TPriority>;
 };
 
 
@@ -1333,9 +1333,9 @@ export interface Queue_1$instance<T> {
 
 
 export const Queue_1: {
-    new<T>(): Queue_1$instance<T>;
-    new<T>(capacity: int): Queue_1$instance<T>;
-    new<T>(collection: IEnumerable_1<T>): Queue_1$instance<T>;
+    new<T>(): Queue_1<T>;
+    new<T>(capacity: int): Queue_1<T>;
+    new<T>(collection: IEnumerable_1<T>): Queue_1<T>;
 };
 
 
@@ -1356,7 +1356,7 @@ export interface ReferenceEqualityComparer$instance {
 
 
 export const ReferenceEqualityComparer: {
-    new(): ReferenceEqualityComparer$instance;
+    new(): ReferenceEqualityComparer;
     readonly Instance: ReferenceEqualityComparer;
 };
 
@@ -1387,10 +1387,10 @@ export interface SortedDictionary_2$instance<TKey, TValue> {
 
 
 export const SortedDictionary_2: {
-    new<TKey, TValue>(): SortedDictionary_2$instance<TKey, TValue>;
-    new<TKey, TValue>(dictionary: IDictionary_2<TKey, TValue>): SortedDictionary_2$instance<TKey, TValue>;
-    new<TKey, TValue>(dictionary: IDictionary_2<TKey, TValue>, comparer: IComparer_1<TKey>): SortedDictionary_2$instance<TKey, TValue>;
-    new<TKey, TValue>(comparer: IComparer_1<TKey>): SortedDictionary_2$instance<TKey, TValue>;
+    new<TKey, TValue>(): SortedDictionary_2<TKey, TValue>;
+    new<TKey, TValue>(dictionary: IDictionary_2<TKey, TValue>): SortedDictionary_2<TKey, TValue>;
+    new<TKey, TValue>(dictionary: IDictionary_2<TKey, TValue>, comparer: IComparer_1<TKey>): SortedDictionary_2<TKey, TValue>;
+    new<TKey, TValue>(comparer: IComparer_1<TKey>): SortedDictionary_2<TKey, TValue>;
 };
 
 
@@ -1417,7 +1417,7 @@ export interface SortedDictionary_2_KeyCollection$instance<TKey, TValue> {
 
 
 export const SortedDictionary_2_KeyCollection: {
-    new<TKey, TValue>(dictionary: SortedDictionary_2<TKey, TValue>): SortedDictionary_2_KeyCollection$instance<TKey, TValue>;
+    new<TKey, TValue>(dictionary: SortedDictionary_2<TKey, TValue>): SortedDictionary_2_KeyCollection<TKey, TValue>;
 };
 
 
@@ -1440,7 +1440,7 @@ export interface SortedDictionary_2_KeyValuePairComparer$instance<TKey, TValue> 
 
 
 export const SortedDictionary_2_KeyValuePairComparer: {
-    new<TKey, TValue>(keyComparer: IComparer_1<TKey>): SortedDictionary_2_KeyValuePairComparer$instance<TKey, TValue>;
+    new<TKey, TValue>(keyComparer: IComparer_1<TKey>): SortedDictionary_2_KeyValuePairComparer<TKey, TValue>;
 };
 
 
@@ -1460,7 +1460,7 @@ export interface SortedDictionary_2_ValueCollection$instance<TKey, TValue> {
 
 
 export const SortedDictionary_2_ValueCollection: {
-    new<TKey, TValue>(dictionary: SortedDictionary_2<TKey, TValue>): SortedDictionary_2_ValueCollection$instance<TKey, TValue>;
+    new<TKey, TValue>(dictionary: SortedDictionary_2<TKey, TValue>): SortedDictionary_2_ValueCollection<TKey, TValue>;
 };
 
 
@@ -1500,12 +1500,12 @@ export interface SortedList_2$instance<TKey, TValue> {
 
 
 export const SortedList_2: {
-    new<TKey, TValue>(): SortedList_2$instance<TKey, TValue>;
-    new<TKey, TValue>(capacity: int): SortedList_2$instance<TKey, TValue>;
-    new<TKey, TValue>(comparer: IComparer_1<TKey>): SortedList_2$instance<TKey, TValue>;
-    new<TKey, TValue>(capacity: int, comparer: IComparer_1<TKey>): SortedList_2$instance<TKey, TValue>;
-    new<TKey, TValue>(dictionary: IDictionary_2<TKey, TValue>): SortedList_2$instance<TKey, TValue>;
-    new<TKey, TValue>(dictionary: IDictionary_2<TKey, TValue>, comparer: IComparer_1<TKey>): SortedList_2$instance<TKey, TValue>;
+    new<TKey, TValue>(): SortedList_2<TKey, TValue>;
+    new<TKey, TValue>(capacity: int): SortedList_2<TKey, TValue>;
+    new<TKey, TValue>(comparer: IComparer_1<TKey>): SortedList_2<TKey, TValue>;
+    new<TKey, TValue>(capacity: int, comparer: IComparer_1<TKey>): SortedList_2<TKey, TValue>;
+    new<TKey, TValue>(dictionary: IDictionary_2<TKey, TValue>): SortedList_2<TKey, TValue>;
+    new<TKey, TValue>(dictionary: IDictionary_2<TKey, TValue>, comparer: IComparer_1<TKey>): SortedList_2<TKey, TValue>;
 };
 
 
@@ -1540,7 +1540,7 @@ export interface SortedList_2_KeyList$instance<TKey, TValue> {
 
 
 export const SortedList_2_KeyList: {
-    new<TKey, TValue>(): SortedList_2_KeyList$instance<TKey, TValue>;
+    new<TKey, TValue>(): SortedList_2_KeyList<TKey, TValue>;
 };
 
 
@@ -1572,7 +1572,7 @@ export interface SortedList_2_ValueList$instance<TKey, TValue> {
 
 
 export const SortedList_2_ValueList: {
-    new<TKey, TValue>(): SortedList_2_ValueList$instance<TKey, TValue>;
+    new<TKey, TValue>(): SortedList_2_ValueList<TKey, TValue>;
 };
 
 
@@ -1618,10 +1618,10 @@ export interface SortedSet_1$instance<T> {
 
 
 export const SortedSet_1: {
-    new<T>(): SortedSet_1$instance<T>;
-    new<T>(comparer: IComparer_1<T>): SortedSet_1$instance<T>;
-    new<T>(collection: IEnumerable_1<T>): SortedSet_1$instance<T>;
-    new<T>(collection: IEnumerable_1<T>, comparer: IComparer_1<T>): SortedSet_1$instance<T>;
+    new<T>(): SortedSet_1<T>;
+    new<T>(comparer: IComparer_1<T>): SortedSet_1<T>;
+    new<T>(collection: IEnumerable_1<T>): SortedSet_1<T>;
+    new<T>(collection: IEnumerable_1<T>, comparer: IComparer_1<T>): SortedSet_1<T>;
     CreateSetComparer<T>(): IEqualityComparer_1<SortedSet_1<T>>;
     CreateSetComparer<T>(memberEqualityComparer: IEqualityComparer_1<T>): IEqualityComparer_1<SortedSet_1<T>>;
 };
@@ -1664,9 +1664,9 @@ export interface Stack_1$instance<T> {
 
 
 export const Stack_1: {
-    new<T>(): Stack_1$instance<T>;
-    new<T>(capacity: int): Stack_1$instance<T>;
-    new<T>(collection: IEnumerable_1<T>): Stack_1$instance<T>;
+    new<T>(): Stack_1<T>;
+    new<T>(capacity: int): Stack_1<T>;
+    new<T>(collection: IEnumerable_1<T>): Stack_1<T>;
 };
 
 
@@ -1701,8 +1701,8 @@ export interface TreeSet_1$instance<T> extends SortedSet_1$instance<T> {
 
 
 export const TreeSet_1: {
-    new<T>(): TreeSet_1$instance<T>;
-    new<T>(comparer: IComparer_1<T>): TreeSet_1$instance<T>;
+    new<T>(): TreeSet_1<T>;
+    new<T>(comparer: IComparer_1<T>): TreeSet_1<T>;
 };
 
 

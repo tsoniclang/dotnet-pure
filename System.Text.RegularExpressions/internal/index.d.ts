@@ -83,7 +83,7 @@ export interface Regex_ValueMatchEnumerator$instance {
 
 
 export const Regex_ValueMatchEnumerator: {
-    new(): Regex_ValueMatchEnumerator$instance;
+    new(): Regex_ValueMatchEnumerator;
 };
 
 
@@ -104,7 +104,7 @@ export interface Regex_ValueSplitEnumerator$instance {
 
 
 export const Regex_ValueSplitEnumerator: {
-    new(): Regex_ValueSplitEnumerator$instance;
+    new(): Regex_ValueSplitEnumerator;
 };
 
 
@@ -123,7 +123,7 @@ export interface ValueMatch$instance {
 
 
 export const ValueMatch: {
-    new(): ValueMatch$instance;
+    new(): ValueMatch;
 };
 
 
@@ -139,7 +139,7 @@ export interface Capture$instance {
 
 
 export const Capture: {
-    new(): Capture$instance;
+    new(): Capture;
 };
 
 
@@ -158,7 +158,7 @@ export interface CaptureCollection$instance {
 
 
 export const CaptureCollection: {
-    new(): CaptureCollection$instance;
+    new(): CaptureCollection;
 };
 
 
@@ -184,11 +184,11 @@ export interface GeneratedRegexAttribute$instance extends Attribute {
 
 
 export const GeneratedRegexAttribute: {
-    new(pattern: string): GeneratedRegexAttribute$instance;
-    new(pattern: string, options: RegexOptions): GeneratedRegexAttribute$instance;
-    new(pattern: string, options: RegexOptions, cultureName: string): GeneratedRegexAttribute$instance;
-    new(pattern: string, options: RegexOptions, matchTimeoutMilliseconds: int): GeneratedRegexAttribute$instance;
-    new(pattern: string, options: RegexOptions, matchTimeoutMilliseconds: int, cultureName: string): GeneratedRegexAttribute$instance;
+    new(pattern: string): GeneratedRegexAttribute;
+    new(pattern: string, options: RegexOptions): GeneratedRegexAttribute;
+    new(pattern: string, options: RegexOptions, cultureName: string): GeneratedRegexAttribute;
+    new(pattern: string, options: RegexOptions, matchTimeoutMilliseconds: int): GeneratedRegexAttribute;
+    new(pattern: string, options: RegexOptions, matchTimeoutMilliseconds: int, cultureName: string): GeneratedRegexAttribute;
 };
 
 
@@ -202,7 +202,7 @@ export interface Group$instance extends Capture {
 
 
 export const Group: {
-    new(): Group$instance;
+    new(): Group;
     Synchronized(inner: Group): Group;
 };
 
@@ -227,7 +227,7 @@ export interface GroupCollection$instance {
 
 
 export const GroupCollection: {
-    new(): GroupCollection$instance;
+    new(): GroupCollection;
 };
 
 
@@ -253,7 +253,7 @@ export interface Match$instance extends Group {
 
 
 export const Match: {
-    new(): Match$instance;
+    new(): Match;
     readonly Empty: Match;
 };
 
@@ -273,7 +273,7 @@ export interface MatchCollection$instance {
 
 
 export const MatchCollection: {
-    new(): MatchCollection$instance;
+    new(): MatchCollection;
 };
 
 
@@ -329,9 +329,9 @@ export interface Regex$instance {
 
 
 export const Regex: {
-    new(pattern: string): Regex$instance;
-    new(pattern: string, options: RegexOptions): Regex$instance;
-    new(pattern: string, options: RegexOptions, matchTimeout: TimeSpan): Regex$instance;
+    new(pattern: string): Regex;
+    new(pattern: string, options: RegexOptions): Regex;
+    new(pattern: string, options: RegexOptions, matchTimeout: TimeSpan): Regex;
     readonly InfiniteMatchTimeout: TimeSpan;
     CacheSize: int;
     CompileToAssembly(regexinfos: RegexCompilationInfo[], assemblyname: AssemblyName, attributes: CustomAttributeBuilder[], resourceFile: string): void;
@@ -395,8 +395,8 @@ export interface RegexCompilationInfo$instance {
 
 
 export const RegexCompilationInfo: {
-    new(pattern: string, options: RegexOptions, name: string, fullnamespace: string, ispublic: boolean): RegexCompilationInfo$instance;
-    new(pattern: string, options: RegexOptions, name: string, fullnamespace: string, ispublic: boolean, matchTimeout: TimeSpan): RegexCompilationInfo$instance;
+    new(pattern: string, options: RegexOptions, name: string, fullnamespace: string, ispublic: boolean): RegexCompilationInfo;
+    new(pattern: string, options: RegexOptions, name: string, fullnamespace: string, ispublic: boolean, matchTimeout: TimeSpan): RegexCompilationInfo;
 };
 
 
@@ -411,10 +411,10 @@ export interface RegexMatchTimeoutException$instance extends TimeoutException {
 
 
 export const RegexMatchTimeoutException: {
-    new(regexInput: string, regexPattern: string, matchTimeout: TimeSpan): RegexMatchTimeoutException$instance;
-    new(): RegexMatchTimeoutException$instance;
-    new(message: string): RegexMatchTimeoutException$instance;
-    new(message: string, inner: Exception): RegexMatchTimeoutException$instance;
+    new(regexInput: string, regexPattern: string, matchTimeout: TimeSpan): RegexMatchTimeoutException;
+    new(): RegexMatchTimeoutException;
+    new(message: string): RegexMatchTimeoutException;
+    new(message: string, inner: Exception): RegexMatchTimeoutException;
 };
 
 
@@ -433,7 +433,7 @@ export interface RegexParseException$instance extends ArgumentException {
 
 
 export const RegexParseException: {
-    new(): RegexParseException$instance;
+    new(): RegexParseException;
 };
 
 
