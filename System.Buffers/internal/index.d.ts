@@ -64,7 +64,7 @@ export interface MemoryHandle$instance {
 
 
 export const MemoryHandle: {
-    new(pointer: ptr<void>, handle: GCHandle, pinnable: IPinnable): MemoryHandle$instance;
+    new(pointer: ptr<void>, handle: GCHandle, pinnable: IPinnable): MemoryHandle;
 };
 
 
@@ -104,10 +104,10 @@ export interface ReadOnlySequence_1$instance<T> {
 
 
 export const ReadOnlySequence_1: {
-    new<T>(startSegment: ReadOnlySequenceSegment_1<T>, startIndex: int, endSegment: ReadOnlySequenceSegment_1<T>, endIndex: int): ReadOnlySequence_1$instance<T>;
-    new<T>(array: T[]): ReadOnlySequence_1$instance<T>;
-    new<T>(array: T[], start: int, length: int): ReadOnlySequence_1$instance<T>;
-    new<T>(memory: ReadOnlyMemory_1<T>): ReadOnlySequence_1$instance<T>;
+    new<T>(startSegment: ReadOnlySequenceSegment_1<T>, startIndex: int, endSegment: ReadOnlySequenceSegment_1<T>, endIndex: int): ReadOnlySequence_1<T>;
+    new<T>(array: T[]): ReadOnlySequence_1<T>;
+    new<T>(array: T[], start: int, length: int): ReadOnlySequence_1<T>;
+    new<T>(memory: ReadOnlyMemory_1<T>): ReadOnlySequence_1<T>;
     readonly Empty: unknown;
 };
 
@@ -121,7 +121,7 @@ export interface ReadOnlySequence_1_Enumerator$instance<T> {
 
 
 export const ReadOnlySequence_1_Enumerator: {
-    new<T>(sequence: ReadOnlySequence_1<T>): ReadOnlySequence_1_Enumerator$instance<T>;
+    new<T>(sequence: ReadOnlySequence_1<T>): ReadOnlySequence_1_Enumerator<T>;
 };
 
 
@@ -167,7 +167,7 @@ export interface SequenceReader_1$instance<T extends (IEquatable_1<T> | number |
 
 
 export const SequenceReader_1: {
-    new<T extends (IEquatable_1<T> | number | string | boolean)>(sequence: ReadOnlySequence_1<T>): SequenceReader_1$instance<T>;
+    new<T extends (IEquatable_1<T> | number | string | boolean)>(sequence: ReadOnlySequence_1<T>): SequenceReader_1<T>;
 };
 
 
@@ -186,7 +186,7 @@ export interface StandardFormat$instance {
 
 
 export const StandardFormat: {
-    new(symbol_: char, precision: byte): StandardFormat$instance;
+    new(symbol_: char, precision: byte): StandardFormat;
     readonly NoPrecision: byte;
     readonly MaxPrecision: byte;
     Parse(format: ReadOnlySpan_1<System_Internal.Char>): StandardFormat;
@@ -220,8 +220,8 @@ export interface ArrayBufferWriter_1$instance<T> {
 
 
 export const ArrayBufferWriter_1: {
-    new<T>(): ArrayBufferWriter_1$instance<T>;
-    new<T>(initialCapacity: int): ArrayBufferWriter_1$instance<T>;
+    new<T>(): ArrayBufferWriter_1<T>;
+    new<T>(initialCapacity: int): ArrayBufferWriter_1<T>;
 };
 
 
@@ -312,7 +312,7 @@ export interface SearchValues_1$instance<T extends (IEquatable_1<T> | number | s
 
 
 export const SearchValues_1: {
-    new<T extends (IEquatable_1<T> | number | string | boolean)>(): SearchValues_1$instance<T>;
+    new<T extends (IEquatable_1<T> | number | string | boolean)>(): SearchValues_1<T>;
 };
 
 

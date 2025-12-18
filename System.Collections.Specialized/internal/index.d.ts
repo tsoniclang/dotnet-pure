@@ -73,8 +73,8 @@ export interface BitVector32$instance {
 
 
 export const BitVector32: {
-    new(data: int): BitVector32$instance;
-    new(value: BitVector32): BitVector32$instance;
+    new(data: int): BitVector32;
+    new(value: BitVector32): BitVector32;
     CreateMask(): int;
     CreateMask(previous: int): int;
     CreateSection(maxValue: short, previous: BitVector32_Section): BitVector32_Section;
@@ -104,7 +104,7 @@ export interface BitVector32_Section$instance {
 
 
 export const BitVector32_Section: {
-    new(): BitVector32_Section$instance;
+    new(): BitVector32_Section;
     ToString(value: BitVector32_Section): string;
 };
 
@@ -124,7 +124,7 @@ export interface CollectionsUtil$instance {
 
 
 export const CollectionsUtil: {
-    new(): CollectionsUtil$instance;
+    new(): CollectionsUtil;
     CreateCaseInsensitiveHashtable(): Hashtable;
     CreateCaseInsensitiveHashtable(d: IDictionary): Hashtable;
     CreateCaseInsensitiveHashtable(capacity: int): Hashtable;
@@ -153,10 +153,10 @@ export interface HybridDictionary$instance {
 
 
 export const HybridDictionary: {
-    new(): HybridDictionary$instance;
-    new(initialSize: int): HybridDictionary$instance;
-    new(caseInsensitive: boolean): HybridDictionary$instance;
-    new(initialSize: int, caseInsensitive: boolean): HybridDictionary$instance;
+    new(): HybridDictionary;
+    new(initialSize: int): HybridDictionary;
+    new(caseInsensitive: boolean): HybridDictionary;
+    new(initialSize: int, caseInsensitive: boolean): HybridDictionary;
 };
 
 
@@ -188,8 +188,8 @@ export interface ListDictionary$instance {
 
 
 export const ListDictionary: {
-    new(): ListDictionary$instance;
-    new(comparer: IComparer): ListDictionary$instance;
+    new(): ListDictionary;
+    new(comparer: IComparer): ListDictionary;
 };
 
 
@@ -210,7 +210,7 @@ export interface ListDictionary_DictionaryNode$instance {
 
 
 export const ListDictionary_DictionaryNode: {
-    new(): ListDictionary_DictionaryNode$instance;
+    new(): ListDictionary_DictionaryNode;
 };
 
 
@@ -250,7 +250,7 @@ export interface NameObjectCollectionBase_KeysCollection$instance {
 
 
 export const NameObjectCollectionBase_KeysCollection: {
-    new(): NameObjectCollectionBase_KeysCollection$instance;
+    new(): NameObjectCollectionBase_KeysCollection;
 };
 
 
@@ -286,14 +286,14 @@ export interface NameValueCollection$instance extends NameObjectCollectionBase$i
 
 
 export const NameValueCollection: {
-    new(): NameValueCollection$instance;
-    new(col: NameValueCollection): NameValueCollection$instance;
-    new(hashProvider: IHashCodeProvider, comparer: IComparer): NameValueCollection$instance;
-    new(capacity: int): NameValueCollection$instance;
-    new(equalityComparer: IEqualityComparer): NameValueCollection$instance;
-    new(capacity: int, equalityComparer: IEqualityComparer): NameValueCollection$instance;
-    new(capacity: int, col: NameValueCollection): NameValueCollection$instance;
-    new(capacity: int, hashProvider: IHashCodeProvider, comparer: IComparer): NameValueCollection$instance;
+    new(): NameValueCollection;
+    new(col: NameValueCollection): NameValueCollection;
+    new(hashProvider: IHashCodeProvider, comparer: IComparer): NameValueCollection;
+    new(capacity: int): NameValueCollection;
+    new(equalityComparer: IEqualityComparer): NameValueCollection;
+    new(capacity: int, equalityComparer: IEqualityComparer): NameValueCollection;
+    new(capacity: int, col: NameValueCollection): NameValueCollection;
+    new(capacity: int, hashProvider: IHashCodeProvider, comparer: IComparer): NameValueCollection;
 };
 
 
@@ -319,17 +319,17 @@ export interface NotifyCollectionChangedEventArgs$instance extends EventArgs {
 
 
 export const NotifyCollectionChangedEventArgs: {
-    new(action: NotifyCollectionChangedAction): NotifyCollectionChangedEventArgs$instance;
-    new(action: NotifyCollectionChangedAction, changedItem: unknown): NotifyCollectionChangedEventArgs$instance;
-    new(action: NotifyCollectionChangedAction, changedItem: unknown, index: int): NotifyCollectionChangedEventArgs$instance;
-    new(action: NotifyCollectionChangedAction, changedItems: IList): NotifyCollectionChangedEventArgs$instance;
-    new(action: NotifyCollectionChangedAction, changedItems: IList, startingIndex: int): NotifyCollectionChangedEventArgs$instance;
-    new(action: NotifyCollectionChangedAction, newItem: unknown, oldItem: unknown): NotifyCollectionChangedEventArgs$instance;
-    new(action: NotifyCollectionChangedAction, newItem: unknown, oldItem: unknown, index: int): NotifyCollectionChangedEventArgs$instance;
-    new(action: NotifyCollectionChangedAction, newItems: IList, oldItems: IList): NotifyCollectionChangedEventArgs$instance;
-    new(action: NotifyCollectionChangedAction, newItems: IList, oldItems: IList, startingIndex: int): NotifyCollectionChangedEventArgs$instance;
-    new(action: NotifyCollectionChangedAction, changedItem: unknown, index: int, oldIndex: int): NotifyCollectionChangedEventArgs$instance;
-    new(action: NotifyCollectionChangedAction, changedItems: IList, index: int, oldIndex: int): NotifyCollectionChangedEventArgs$instance;
+    new(action: NotifyCollectionChangedAction): NotifyCollectionChangedEventArgs;
+    new(action: NotifyCollectionChangedAction, changedItem: unknown): NotifyCollectionChangedEventArgs;
+    new(action: NotifyCollectionChangedAction, changedItem: unknown, index: int): NotifyCollectionChangedEventArgs;
+    new(action: NotifyCollectionChangedAction, changedItems: IList): NotifyCollectionChangedEventArgs;
+    new(action: NotifyCollectionChangedAction, changedItems: IList, startingIndex: int): NotifyCollectionChangedEventArgs;
+    new(action: NotifyCollectionChangedAction, newItem: unknown, oldItem: unknown): NotifyCollectionChangedEventArgs;
+    new(action: NotifyCollectionChangedAction, newItem: unknown, oldItem: unknown, index: int): NotifyCollectionChangedEventArgs;
+    new(action: NotifyCollectionChangedAction, newItems: IList, oldItems: IList): NotifyCollectionChangedEventArgs;
+    new(action: NotifyCollectionChangedAction, newItems: IList, oldItems: IList, startingIndex: int): NotifyCollectionChangedEventArgs;
+    new(action: NotifyCollectionChangedAction, changedItem: unknown, index: int, oldIndex: int): NotifyCollectionChangedEventArgs;
+    new(action: NotifyCollectionChangedAction, changedItems: IList, index: int, oldIndex: int): NotifyCollectionChangedEventArgs;
 };
 
 
@@ -358,10 +358,10 @@ export interface OrderedDictionary$instance {
 
 
 export const OrderedDictionary: {
-    new(): OrderedDictionary$instance;
-    new(capacity: int): OrderedDictionary$instance;
-    new(comparer: IEqualityComparer): OrderedDictionary$instance;
-    new(capacity: int, comparer: IEqualityComparer): OrderedDictionary$instance;
+    new(): OrderedDictionary;
+    new(capacity: int): OrderedDictionary;
+    new(comparer: IEqualityComparer): OrderedDictionary;
+    new(capacity: int, comparer: IEqualityComparer): OrderedDictionary;
 };
 
 
@@ -399,7 +399,7 @@ export interface StringCollection$instance {
 
 
 export const StringCollection: {
-    new(): StringCollection$instance;
+    new(): StringCollection;
 };
 
 
@@ -430,7 +430,7 @@ export interface StringDictionary$instance {
 
 
 export const StringDictionary: {
-    new(): StringDictionary$instance;
+    new(): StringDictionary;
 };
 
 
@@ -451,7 +451,7 @@ export interface StringEnumerator$instance {
 
 
 export const StringEnumerator: {
-    new(): StringEnumerator$instance;
+    new(): StringEnumerator;
 };
 
 

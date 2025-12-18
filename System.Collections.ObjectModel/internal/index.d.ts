@@ -36,8 +36,8 @@ export interface Collection_1$instance<T> {
 
 
 export const Collection_1: {
-    new<T>(): Collection_1$instance<T>;
-    new<T>(list: IList_1<T>): Collection_1$instance<T>;
+    new<T>(): Collection_1<T>;
+    new<T>(list: IList_1<T>): Collection_1<T>;
 };
 
 
@@ -113,9 +113,9 @@ export interface ObservableCollection_1$instance<T> extends Collection_1$instanc
 
 
 export const ObservableCollection_1: {
-    new<T>(): ObservableCollection_1$instance<T>;
-    new<T>(collection: IEnumerable_1<T>): ObservableCollection_1$instance<T>;
-    new<T>(list: List_1<T>): ObservableCollection_1$instance<T>;
+    new<T>(): ObservableCollection_1<T>;
+    new<T>(collection: IEnumerable_1<T>): ObservableCollection_1<T>;
+    new<T>(list: List_1<T>): ObservableCollection_1<T>;
 };
 
 
@@ -145,7 +145,7 @@ export interface ReadOnlyCollection_1$instance<T> {
 
 
 export const ReadOnlyCollection_1: {
-    new<T>(list: IList_1<T>): ReadOnlyCollection_1$instance<T>;
+    new<T>(list: IList_1<T>): ReadOnlyCollection_1<T>;
     readonly Empty: unknown;
 };
 
@@ -175,7 +175,7 @@ export interface ReadOnlyDictionary_2$instance<TKey, TValue> {
 
 
 export const ReadOnlyDictionary_2: {
-    new<TKey, TValue>(dictionary: IDictionary_2<TKey, TValue>): ReadOnlyDictionary_2$instance<TKey, TValue>;
+    new<TKey, TValue>(dictionary: IDictionary_2<TKey, TValue>): ReadOnlyDictionary_2<TKey, TValue>;
     readonly Empty: unknown;
 };
 
@@ -203,7 +203,7 @@ export interface ReadOnlyDictionary_2_KeyCollection$instance<TKey, TValue> {
 
 
 export const ReadOnlyDictionary_2_KeyCollection: {
-    new<TKey, TValue>(): ReadOnlyDictionary_2_KeyCollection$instance<TKey, TValue>;
+    new<TKey, TValue>(): ReadOnlyDictionary_2_KeyCollection<TKey, TValue>;
 };
 
 
@@ -226,7 +226,7 @@ export interface ReadOnlyDictionary_2_ValueCollection$instance<TKey, TValue> {
 
 
 export const ReadOnlyDictionary_2_ValueCollection: {
-    new<TKey, TValue>(): ReadOnlyDictionary_2_ValueCollection$instance<TKey, TValue>;
+    new<TKey, TValue>(): ReadOnlyDictionary_2_ValueCollection<TKey, TValue>;
 };
 
 
@@ -261,7 +261,7 @@ export interface ReadOnlyObservableCollection_1$instance<T> extends ReadOnlyColl
 
 
 export const ReadOnlyObservableCollection_1: {
-    new<T>(list: ObservableCollection_1<T>): ReadOnlyObservableCollection_1$instance<T>;
+    new<T>(list: ObservableCollection_1<T>): ReadOnlyObservableCollection_1<T>;
 };
 
 
@@ -294,7 +294,7 @@ export interface ReadOnlySet_1$instance<T> {
 
 
 export const ReadOnlySet_1: {
-    new<T>(set_: ISet_1<T>): ReadOnlySet_1$instance<T>;
+    new<T>(set_: ISet_1<T>): ReadOnlySet_1<T>;
     readonly Empty: unknown;
 };
 

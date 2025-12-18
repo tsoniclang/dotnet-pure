@@ -75,9 +75,9 @@ export interface AnonymousPipeClientStream$instance extends PipeStream$instance 
 
 
 export const AnonymousPipeClientStream: {
-    new(pipeHandleAsString: string): AnonymousPipeClientStream$instance;
-    new(direction: PipeDirection, pipeHandleAsString: string): AnonymousPipeClientStream$instance;
-    new(direction: PipeDirection, safePipeHandle: SafePipeHandle): AnonymousPipeClientStream$instance;
+    new(pipeHandleAsString: string): AnonymousPipeClientStream;
+    new(direction: PipeDirection, pipeHandleAsString: string): AnonymousPipeClientStream;
+    new(direction: PipeDirection, safePipeHandle: SafePipeHandle): AnonymousPipeClientStream;
 };
 
 
@@ -101,11 +101,11 @@ export interface AnonymousPipeServerStream$instance extends PipeStream$instance 
 
 
 export const AnonymousPipeServerStream: {
-    new(): AnonymousPipeServerStream$instance;
-    new(direction: PipeDirection): AnonymousPipeServerStream$instance;
-    new(direction: PipeDirection, inheritability: HandleInheritability): AnonymousPipeServerStream$instance;
-    new(direction: PipeDirection, serverSafePipeHandle: SafePipeHandle, clientSafePipeHandle: SafePipeHandle): AnonymousPipeServerStream$instance;
-    new(direction: PipeDirection, inheritability: HandleInheritability, bufferSize: int): AnonymousPipeServerStream$instance;
+    new(): AnonymousPipeServerStream;
+    new(direction: PipeDirection): AnonymousPipeServerStream;
+    new(direction: PipeDirection, inheritability: HandleInheritability): AnonymousPipeServerStream;
+    new(direction: PipeDirection, serverSafePipeHandle: SafePipeHandle, clientSafePipeHandle: SafePipeHandle): AnonymousPipeServerStream;
+    new(direction: PipeDirection, inheritability: HandleInheritability, bufferSize: int): AnonymousPipeServerStream;
 };
 
 
@@ -135,14 +135,14 @@ export interface NamedPipeClientStream$instance extends PipeStream$instance {
 
 
 export const NamedPipeClientStream: {
-    new(pipeName: string): NamedPipeClientStream$instance;
-    new(serverName: string, pipeName: string): NamedPipeClientStream$instance;
-    new(serverName: string, pipeName: string, direction: PipeDirection): NamedPipeClientStream$instance;
-    new(serverName: string, pipeName: string, direction: PipeDirection, options: PipeOptions): NamedPipeClientStream$instance;
-    new(serverName: string, pipeName: string, direction: PipeDirection, options: PipeOptions, impersonationLevel: TokenImpersonationLevel): NamedPipeClientStream$instance;
-    new(serverName: string, pipeName: string, direction: PipeDirection, options: PipeOptions, impersonationLevel: TokenImpersonationLevel, inheritability: HandleInheritability): NamedPipeClientStream$instance;
-    new(direction: PipeDirection, isAsync: boolean, isConnected: boolean, safePipeHandle: SafePipeHandle): NamedPipeClientStream$instance;
-    new(serverName: string, pipeName: string, desiredAccessRights: PipeAccessRights, options: PipeOptions, impersonationLevel: TokenImpersonationLevel, inheritability: HandleInheritability): NamedPipeClientStream$instance;
+    new(pipeName: string): NamedPipeClientStream;
+    new(serverName: string, pipeName: string): NamedPipeClientStream;
+    new(serverName: string, pipeName: string, direction: PipeDirection): NamedPipeClientStream;
+    new(serverName: string, pipeName: string, direction: PipeDirection, options: PipeOptions): NamedPipeClientStream;
+    new(serverName: string, pipeName: string, direction: PipeDirection, options: PipeOptions, impersonationLevel: TokenImpersonationLevel): NamedPipeClientStream;
+    new(serverName: string, pipeName: string, direction: PipeDirection, options: PipeOptions, impersonationLevel: TokenImpersonationLevel, inheritability: HandleInheritability): NamedPipeClientStream;
+    new(direction: PipeDirection, isAsync: boolean, isConnected: boolean, safePipeHandle: SafePipeHandle): NamedPipeClientStream;
+    new(serverName: string, pipeName: string, desiredAccessRights: PipeAccessRights, options: PipeOptions, impersonationLevel: TokenImpersonationLevel, inheritability: HandleInheritability): NamedPipeClientStream;
 };
 
 
@@ -171,13 +171,13 @@ export interface NamedPipeServerStream$instance extends PipeStream$instance {
 
 
 export const NamedPipeServerStream: {
-    new(pipeName: string): NamedPipeServerStream$instance;
-    new(pipeName: string, direction: PipeDirection): NamedPipeServerStream$instance;
-    new(pipeName: string, direction: PipeDirection, maxNumberOfServerInstances: int): NamedPipeServerStream$instance;
-    new(pipeName: string, direction: PipeDirection, maxNumberOfServerInstances: int, transmissionMode: PipeTransmissionMode): NamedPipeServerStream$instance;
-    new(pipeName: string, direction: PipeDirection, maxNumberOfServerInstances: int, transmissionMode: PipeTransmissionMode, options: PipeOptions): NamedPipeServerStream$instance;
-    new(pipeName: string, direction: PipeDirection, maxNumberOfServerInstances: int, transmissionMode: PipeTransmissionMode, options: PipeOptions, inBufferSize: int, outBufferSize: int): NamedPipeServerStream$instance;
-    new(direction: PipeDirection, isAsync: boolean, isConnected: boolean, safePipeHandle: SafePipeHandle): NamedPipeServerStream$instance;
+    new(pipeName: string): NamedPipeServerStream;
+    new(pipeName: string, direction: PipeDirection): NamedPipeServerStream;
+    new(pipeName: string, direction: PipeDirection, maxNumberOfServerInstances: int): NamedPipeServerStream;
+    new(pipeName: string, direction: PipeDirection, maxNumberOfServerInstances: int, transmissionMode: PipeTransmissionMode): NamedPipeServerStream;
+    new(pipeName: string, direction: PipeDirection, maxNumberOfServerInstances: int, transmissionMode: PipeTransmissionMode, options: PipeOptions): NamedPipeServerStream;
+    new(pipeName: string, direction: PipeDirection, maxNumberOfServerInstances: int, transmissionMode: PipeTransmissionMode, options: PipeOptions, inBufferSize: int, outBufferSize: int): NamedPipeServerStream;
+    new(direction: PipeDirection, isAsync: boolean, isConnected: boolean, safePipeHandle: SafePipeHandle): NamedPipeServerStream;
     readonly MaxAllowedServerInstances: int;
 };
 
@@ -196,8 +196,8 @@ export interface PipeAccessRule$instance extends AccessRule {
 
 
 export const PipeAccessRule: {
-    new(identity: IdentityReference, rights: PipeAccessRights, type_: AccessControlType): PipeAccessRule$instance;
-    new(identity: string, rights: PipeAccessRights, type_: AccessControlType): PipeAccessRule$instance;
+    new(identity: IdentityReference, rights: PipeAccessRights, type_: AccessControlType): PipeAccessRule;
+    new(identity: string, rights: PipeAccessRights, type_: AccessControlType): PipeAccessRule;
 };
 
 
@@ -209,8 +209,8 @@ export interface PipeAuditRule$instance extends AuditRule {
 
 
 export const PipeAuditRule: {
-    new(identity: IdentityReference, rights: PipeAccessRights, flags: AuditFlags): PipeAuditRule$instance;
-    new(identity: string, rights: PipeAccessRights, flags: AuditFlags): PipeAuditRule$instance;
+    new(identity: IdentityReference, rights: PipeAccessRights, flags: AuditFlags): PipeAuditRule;
+    new(identity: string, rights: PipeAccessRights, flags: AuditFlags): PipeAuditRule;
 };
 
 
@@ -236,7 +236,7 @@ export interface PipeSecurity$instance extends NativeObjectSecurity {
 
 
 export const PipeSecurity: {
-    new(): PipeSecurity$instance;
+    new(): PipeSecurity;
 };
 
 

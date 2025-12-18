@@ -21,7 +21,7 @@ export interface JsonSchemaExporterContext$instance {
 
 
 export const JsonSchemaExporterContext: {
-    new(): JsonSchemaExporterContext$instance;
+    new(): JsonSchemaExporterContext;
 };
 
 
@@ -34,7 +34,7 @@ export interface JsonSchemaExporterOptions$instance {
 
 
 export const JsonSchemaExporterOptions: {
-    new(): JsonSchemaExporterOptions$instance;
+    new(): JsonSchemaExporterOptions;
     readonly Default: JsonSchemaExporterOptions;
 };
 

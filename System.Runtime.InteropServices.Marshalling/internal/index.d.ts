@@ -106,7 +106,7 @@ export interface AnsiStringMarshaller_ManagedToUnmanagedIn$instance {
 
 
 export const AnsiStringMarshaller_ManagedToUnmanagedIn: {
-    new(): AnsiStringMarshaller_ManagedToUnmanagedIn$instance;
+    new(): AnsiStringMarshaller_ManagedToUnmanagedIn;
     readonly BufferSize: int;
 };
 
@@ -124,7 +124,7 @@ export interface ArrayMarshaller_2_ManagedToUnmanagedIn$instance<T, TUnmanagedEl
 
 
 export const ArrayMarshaller_2_ManagedToUnmanagedIn: {
-    new<T, TUnmanagedElement extends unknown>(): ArrayMarshaller_2_ManagedToUnmanagedIn$instance<T, TUnmanagedElement>;
+    new<T, TUnmanagedElement extends unknown>(): ArrayMarshaller_2_ManagedToUnmanagedIn<T, TUnmanagedElement>;
     readonly BufferSize: int;
     GetPinnableReference<T, TUnmanagedElement extends unknown>(array: T[]): T;
 };
@@ -140,7 +140,7 @@ export interface BStrStringMarshaller_ManagedToUnmanagedIn$instance {
 
 
 export const BStrStringMarshaller_ManagedToUnmanagedIn: {
-    new(): BStrStringMarshaller_ManagedToUnmanagedIn$instance;
+    new(): BStrStringMarshaller_ManagedToUnmanagedIn;
     readonly BufferSize: int;
 };
 
@@ -156,7 +156,7 @@ export interface ComVariant$instance {
 
 
 export const ComVariant: {
-    new(): ComVariant$instance;
+    new(): ComVariant;
     readonly Null: ComVariant;
     Create<T>(value: T): ComVariant;
     CreateRaw<T extends unknown>(vt: VarEnum, rawValue: T): ComVariant;
@@ -182,7 +182,7 @@ export interface ComVariantMarshaller_RefPropagate$instance {
 
 
 export const ComVariantMarshaller_RefPropagate: {
-    new(): ComVariantMarshaller_RefPropagate$instance;
+    new(): ComVariantMarshaller_RefPropagate;
 };
 
 
@@ -193,7 +193,7 @@ export interface CustomMarshallerAttribute_GenericPlaceholder$instance {
 
 
 export const CustomMarshallerAttribute_GenericPlaceholder: {
-    new(): CustomMarshallerAttribute_GenericPlaceholder$instance;
+    new(): CustomMarshallerAttribute_GenericPlaceholder;
 };
 
 
@@ -207,7 +207,7 @@ export interface IIUnknownCacheStrategy_TableInfo$instance {
 
 
 export const IIUnknownCacheStrategy_TableInfo: {
-    new(): IIUnknownCacheStrategy_TableInfo$instance;
+    new(): IIUnknownCacheStrategy_TableInfo;
 };
 
 
@@ -224,7 +224,7 @@ export interface PointerArrayMarshaller_2_ManagedToUnmanagedIn$instance<T extend
 
 
 export const PointerArrayMarshaller_2_ManagedToUnmanagedIn: {
-    new<T extends unknown, TUnmanagedElement extends unknown>(): PointerArrayMarshaller_2_ManagedToUnmanagedIn$instance<T, TUnmanagedElement>;
+    new<T extends unknown, TUnmanagedElement extends unknown>(): PointerArrayMarshaller_2_ManagedToUnmanagedIn<T, TUnmanagedElement>;
     readonly BufferSize: int;
     GetPinnableReference<T extends unknown, TUnmanagedElement extends unknown>(array: ptr<T>[]): byte;
 };
@@ -243,7 +243,7 @@ export interface ReadOnlySpanMarshaller_2_ManagedToUnmanagedIn$instance<T, TUnma
 
 
 export const ReadOnlySpanMarshaller_2_ManagedToUnmanagedIn: {
-    new<T, TUnmanagedElement extends unknown>(): ReadOnlySpanMarshaller_2_ManagedToUnmanagedIn$instance<T, TUnmanagedElement>;
+    new<T, TUnmanagedElement extends unknown>(): ReadOnlySpanMarshaller_2_ManagedToUnmanagedIn<T, TUnmanagedElement>;
     readonly BufferSize: int;
     GetPinnableReference<T, TUnmanagedElement extends unknown>(managed: ReadOnlySpan_1<T>): T;
 };
@@ -261,7 +261,7 @@ export interface ReadOnlySpanMarshaller_2_ManagedToUnmanagedOut$instance<T, TUnm
 
 
 export const ReadOnlySpanMarshaller_2_ManagedToUnmanagedOut: {
-    new<T, TUnmanagedElement extends unknown>(): ReadOnlySpanMarshaller_2_ManagedToUnmanagedOut$instance<T, TUnmanagedElement>;
+    new<T, TUnmanagedElement extends unknown>(): ReadOnlySpanMarshaller_2_ManagedToUnmanagedOut<T, TUnmanagedElement>;
 };
 
 
@@ -275,7 +275,7 @@ export interface SafeHandleMarshaller_1_ManagedToUnmanagedIn$instance<T extends 
 
 
 export const SafeHandleMarshaller_1_ManagedToUnmanagedIn: {
-    new<T extends SafeHandle>(): SafeHandleMarshaller_1_ManagedToUnmanagedIn$instance<T>;
+    new<T extends SafeHandle>(): SafeHandleMarshaller_1_ManagedToUnmanagedIn<T>;
 };
 
 
@@ -289,7 +289,7 @@ export interface SafeHandleMarshaller_1_ManagedToUnmanagedOut$instance<T extends
 
 
 export const SafeHandleMarshaller_1_ManagedToUnmanagedOut: {
-    new<T extends SafeHandle>(): SafeHandleMarshaller_1_ManagedToUnmanagedOut$instance<T>;
+    new<T extends SafeHandle>(): SafeHandleMarshaller_1_ManagedToUnmanagedOut<T>;
 };
 
 
@@ -306,7 +306,7 @@ export interface SafeHandleMarshaller_1_ManagedToUnmanagedRef$instance<T extends
 
 
 export const SafeHandleMarshaller_1_ManagedToUnmanagedRef: {
-    new<T extends SafeHandle>(): SafeHandleMarshaller_1_ManagedToUnmanagedRef$instance<T>;
+    new<T extends SafeHandle>(): SafeHandleMarshaller_1_ManagedToUnmanagedRef<T>;
 };
 
 
@@ -323,7 +323,7 @@ export interface SpanMarshaller_2_ManagedToUnmanagedIn$instance<T, TUnmanagedEle
 
 
 export const SpanMarshaller_2_ManagedToUnmanagedIn: {
-    new<T, TUnmanagedElement extends unknown>(): SpanMarshaller_2_ManagedToUnmanagedIn$instance<T, TUnmanagedElement>;
+    new<T, TUnmanagedElement extends unknown>(): SpanMarshaller_2_ManagedToUnmanagedIn<T, TUnmanagedElement>;
     readonly BufferSize: int;
     GetPinnableReference<T, TUnmanagedElement extends unknown>(managed: Span_1<T>): T;
 };
@@ -339,7 +339,7 @@ export interface Utf8StringMarshaller_ManagedToUnmanagedIn$instance {
 
 
 export const Utf8StringMarshaller_ManagedToUnmanagedIn: {
-    new(): Utf8StringMarshaller_ManagedToUnmanagedIn$instance;
+    new(): Utf8StringMarshaller_ManagedToUnmanagedIn;
     readonly BufferSize: int;
 };
 
@@ -354,7 +354,7 @@ export interface VirtualMethodTableInfo$instance {
 
 
 export const VirtualMethodTableInfo: {
-    new(thisPointer: ptr<void>, virtualMethodTable: ptr<void>): VirtualMethodTableInfo$instance;
+    new(thisPointer: ptr<void>, virtualMethodTable: ptr<void>): VirtualMethodTableInfo;
 };
 
 
@@ -366,7 +366,7 @@ export interface ComExposedClassAttribute_1$instance<T extends IComExposedClass>
 
 
 export const ComExposedClassAttribute_1: {
-    new<T extends IComExposedClass>(): ComExposedClassAttribute_1$instance<T>;
+    new<T extends IComExposedClass>(): ComExposedClassAttribute_1<T>;
 };
 
 
@@ -385,7 +385,7 @@ export interface ComObject$instance {
 
 
 export const ComObject: {
-    new(): ComObject$instance;
+    new(): ComObject;
 };
 
 
@@ -404,7 +404,7 @@ export interface ContiguousCollectionMarshallerAttribute$instance extends Attrib
 
 
 export const ContiguousCollectionMarshallerAttribute: {
-    new(): ContiguousCollectionMarshallerAttribute$instance;
+    new(): ContiguousCollectionMarshallerAttribute;
 };
 
 
@@ -418,7 +418,7 @@ export interface CustomMarshallerAttribute$instance extends Attribute {
 
 
 export const CustomMarshallerAttribute: {
-    new(managedType: Type, marshalMode: MarshalMode, marshallerType: Type): CustomMarshallerAttribute$instance;
+    new(managedType: Type, marshalMode: MarshalMode, marshallerType: Type): CustomMarshallerAttribute;
 };
 
 
@@ -429,7 +429,7 @@ export interface GeneratedComClassAttribute$instance extends Attribute {
 
 
 export const GeneratedComClassAttribute: {
-    new(): GeneratedComClassAttribute$instance;
+    new(): GeneratedComClassAttribute;
 };
 
 
@@ -444,7 +444,7 @@ export interface GeneratedComInterfaceAttribute$instance extends Attribute {
 
 
 export const GeneratedComInterfaceAttribute: {
-    new(): GeneratedComInterfaceAttribute$instance;
+    new(): GeneratedComInterfaceAttribute;
 };
 
 
@@ -458,7 +458,7 @@ export interface IUnknownDerivedAttribute_2$instance<T extends IIUnknownInterfac
 
 
 export const IUnknownDerivedAttribute_2: {
-    new<T extends IIUnknownInterfaceType, TImpl>(): IUnknownDerivedAttribute_2$instance<T, TImpl>;
+    new<T extends IIUnknownInterfaceType, TImpl>(): IUnknownDerivedAttribute_2<T, TImpl>;
 };
 
 
@@ -480,8 +480,8 @@ export interface MarshalUsingAttribute$instance extends Attribute {
 
 
 export const MarshalUsingAttribute: {
-    new(): MarshalUsingAttribute$instance;
-    new(nativeType: Type): MarshalUsingAttribute$instance;
+    new(): MarshalUsingAttribute;
+    new(nativeType: Type): MarshalUsingAttribute;
     readonly ReturnsCountValue: string;
 };
 
@@ -494,7 +494,7 @@ export interface NativeMarshallingAttribute$instance extends Attribute {
 
 
 export const NativeMarshallingAttribute: {
-    new(nativeType: Type): NativeMarshallingAttribute$instance;
+    new(nativeType: Type): NativeMarshallingAttribute;
 };
 
 
@@ -505,7 +505,7 @@ export interface StrategyBasedComWrappers$instance extends ComWrappers {
 
 
 export const StrategyBasedComWrappers: {
-    new(): StrategyBasedComWrappers$instance;
+    new(): StrategyBasedComWrappers;
     readonly DefaultIUnknownInterfaceDetailsStrategy: IIUnknownInterfaceDetailsStrategy;
     readonly DefaultIUnknownStrategy: IIUnknownStrategy;
 };

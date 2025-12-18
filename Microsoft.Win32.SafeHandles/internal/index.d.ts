@@ -52,8 +52,8 @@ export interface SafeAccessTokenHandle$instance extends SafeHandle {
 
 
 export const SafeAccessTokenHandle: {
-    new(): SafeAccessTokenHandle$instance;
-    new(handle: nint): SafeAccessTokenHandle$instance;
+    new(): SafeAccessTokenHandle;
+    new(handle: nint): SafeAccessTokenHandle;
     readonly InvalidHandle: SafeAccessTokenHandle;
 };
 
@@ -73,8 +73,8 @@ export interface SafeFileHandle$instance extends SafeHandleZeroOrMinusOneIsInval
 
 
 export const SafeFileHandle: {
-    new(preexistingHandle: nint, ownsHandle: boolean): SafeFileHandle$instance;
-    new(): SafeFileHandle$instance;
+    new(preexistingHandle: nint, ownsHandle: boolean): SafeFileHandle;
+    new(): SafeFileHandle;
 };
 
 
@@ -126,7 +126,7 @@ export interface SafeMemoryMappedFileHandle$instance extends SafeHandleZeroOrMin
 
 
 export const SafeMemoryMappedFileHandle: {
-    new(): SafeMemoryMappedFileHandle$instance;
+    new(): SafeMemoryMappedFileHandle;
 };
 
 
@@ -143,7 +143,7 @@ export interface SafeMemoryMappedViewHandle$instance extends SafeBuffer {
 
 
 export const SafeMemoryMappedViewHandle: {
-    new(): SafeMemoryMappedViewHandle$instance;
+    new(): SafeMemoryMappedViewHandle;
 };
 
 
@@ -176,8 +176,8 @@ export interface SafeNCryptKeyHandle$instance extends SafeNCryptHandle$instance 
 
 
 export const SafeNCryptKeyHandle: {
-    new(): SafeNCryptKeyHandle$instance;
-    new(handle: nint, parentHandle: SafeHandle): SafeNCryptKeyHandle$instance;
+    new(): SafeNCryptKeyHandle;
+    new(handle: nint, parentHandle: SafeHandle): SafeNCryptKeyHandle;
 };
 
 
@@ -194,7 +194,7 @@ export interface SafeNCryptProviderHandle$instance extends SafeNCryptHandle$inst
 
 
 export const SafeNCryptProviderHandle: {
-    new(): SafeNCryptProviderHandle$instance;
+    new(): SafeNCryptProviderHandle;
 };
 
 
@@ -211,7 +211,7 @@ export interface SafeNCryptSecretHandle$instance extends SafeNCryptHandle$instan
 
 
 export const SafeNCryptSecretHandle: {
-    new(): SafeNCryptSecretHandle$instance;
+    new(): SafeNCryptSecretHandle;
 };
 
 
@@ -229,8 +229,8 @@ export interface SafePipeHandle$instance extends SafeHandleZeroOrMinusOneIsInval
 
 
 export const SafePipeHandle: {
-    new(): SafePipeHandle$instance;
-    new(preexistingHandle: nint, ownsHandle: boolean): SafePipeHandle$instance;
+    new(): SafePipeHandle;
+    new(preexistingHandle: nint, ownsHandle: boolean): SafePipeHandle;
 };
 
 
@@ -247,8 +247,8 @@ export interface SafeProcessHandle$instance extends SafeHandleZeroOrMinusOneIsIn
 
 
 export const SafeProcessHandle: {
-    new(): SafeProcessHandle$instance;
-    new(existingHandle: nint, ownsHandle: boolean): SafeProcessHandle$instance;
+    new(): SafeProcessHandle;
+    new(existingHandle: nint, ownsHandle: boolean): SafeProcessHandle;
 };
 
 
@@ -265,8 +265,8 @@ export interface SafeRegistryHandle$instance extends SafeHandleZeroOrMinusOneIsI
 
 
 export const SafeRegistryHandle: {
-    new(): SafeRegistryHandle$instance;
-    new(preexistingHandle: nint, ownsHandle: boolean): SafeRegistryHandle$instance;
+    new(): SafeRegistryHandle;
+    new(preexistingHandle: nint, ownsHandle: boolean): SafeRegistryHandle;
 };
 
 
@@ -283,8 +283,8 @@ export interface SafeWaitHandle$instance extends SafeHandleZeroOrMinusOneIsInval
 
 
 export const SafeWaitHandle: {
-    new(): SafeWaitHandle$instance;
-    new(existingHandle: nint, ownsHandle: boolean): SafeWaitHandle$instance;
+    new(): SafeWaitHandle;
+    new(existingHandle: nint, ownsHandle: boolean): SafeWaitHandle;
 };
 
 
@@ -301,7 +301,7 @@ export interface SafeX509ChainHandle$instance extends SafeHandleZeroOrMinusOneIs
 
 
 export const SafeX509ChainHandle: {
-    new(): SafeX509ChainHandle$instance;
+    new(): SafeX509ChainHandle;
 };
 
 

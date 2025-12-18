@@ -30,8 +30,8 @@ export interface Utf8_TryWriteInterpolatedStringHandler$instance {
 
 
 export const Utf8_TryWriteInterpolatedStringHandler: {
-    new(literalLength: int, formattedCount: int, destination: Span_1<System_Internal.Byte>, shouldAppend: boolean): Utf8_TryWriteInterpolatedStringHandler$instance;
-    new(literalLength: int, formattedCount: int, destination: Span_1<System_Internal.Byte>, provider: IFormatProvider, shouldAppend: boolean): Utf8_TryWriteInterpolatedStringHandler$instance;
+    new(literalLength: int, formattedCount: int, destination: Span_1<System_Internal.Byte>, shouldAppend: boolean): Utf8_TryWriteInterpolatedStringHandler;
+    new(literalLength: int, formattedCount: int, destination: Span_1<System_Internal.Byte>, provider: IFormatProvider, shouldAppend: boolean): Utf8_TryWriteInterpolatedStringHandler;
 };
 
 
@@ -44,7 +44,7 @@ export interface UnicodeRange$instance {
 
 
 export const UnicodeRange: {
-    new(firstCodePoint: int, length: int): UnicodeRange$instance;
+    new(firstCodePoint: int, length: int): UnicodeRange;
     Create(firstCharacter: char, lastCharacter: char): UnicodeRange;
 };
 

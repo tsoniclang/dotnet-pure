@@ -509,7 +509,7 @@ export interface BIND_OPTS$instance {
 
 
 export const BIND_OPTS: {
-    new(): BIND_OPTS$instance;
+    new(): BIND_OPTS;
 };
 
 
@@ -523,7 +523,7 @@ export interface BINDPTR$instance {
 
 
 export const BINDPTR: {
-    new(): BINDPTR$instance;
+    new(): BINDPTR;
 };
 
 
@@ -536,7 +536,7 @@ export interface CONNECTDATA$instance {
 
 
 export const CONNECTDATA: {
-    new(): CONNECTDATA$instance;
+    new(): CONNECTDATA;
 };
 
 
@@ -551,7 +551,7 @@ export interface DISPPARAMS$instance {
 
 
 export const DISPPARAMS: {
-    new(): DISPPARAMS$instance;
+    new(): DISPPARAMS;
 };
 
 
@@ -564,7 +564,7 @@ export interface ELEMDESC$instance {
 
 
 export const ELEMDESC: {
-    new(): ELEMDESC$instance;
+    new(): ELEMDESC;
 };
 
 
@@ -577,7 +577,7 @@ export interface ELEMDESC_DESCUNION$instance {
 
 
 export const ELEMDESC_DESCUNION: {
-    new(): ELEMDESC_DESCUNION$instance;
+    new(): ELEMDESC_DESCUNION;
 };
 
 
@@ -597,7 +597,7 @@ export interface EXCEPINFO$instance {
 
 
 export const EXCEPINFO: {
-    new(): EXCEPINFO$instance;
+    new(): EXCEPINFO;
 };
 
 
@@ -610,7 +610,7 @@ export interface FILETIME$instance {
 
 
 export const FILETIME: {
-    new(): FILETIME$instance;
+    new(): FILETIME;
 };
 
 
@@ -626,7 +626,7 @@ export interface FORMATETC$instance {
 
 
 export const FORMATETC: {
-    new(): FORMATETC$instance;
+    new(): FORMATETC;
 };
 
 
@@ -649,7 +649,7 @@ export interface FUNCDESC$instance {
 
 
 export const FUNCDESC: {
-    new(): FUNCDESC$instance;
+    new(): FUNCDESC;
 };
 
 
@@ -662,7 +662,7 @@ export interface IDLDESC$instance {
 
 
 export const IDLDESC: {
-    new(): IDLDESC$instance;
+    new(): IDLDESC;
 };
 
 
@@ -675,7 +675,7 @@ export interface PARAMDESC$instance {
 
 
 export const PARAMDESC: {
-    new(): PARAMDESC$instance;
+    new(): PARAMDESC;
 };
 
 
@@ -690,7 +690,7 @@ export interface STATDATA$instance {
 
 
 export const STATDATA: {
-    new(): STATDATA$instance;
+    new(): STATDATA;
 };
 
 
@@ -712,7 +712,7 @@ export interface STATSTG$instance {
 
 
 export const STATSTG: {
-    new(): STATSTG$instance;
+    new(): STATSTG;
 };
 
 
@@ -726,7 +726,7 @@ export interface STGMEDIUM$instance {
 
 
 export const STGMEDIUM: {
-    new(): STGMEDIUM$instance;
+    new(): STGMEDIUM;
 };
 
 
@@ -755,7 +755,7 @@ export interface TYPEATTR$instance {
 
 
 export const TYPEATTR: {
-    new(): TYPEATTR$instance;
+    new(): TYPEATTR;
     readonly MEMBER_ID_NIL: int;
 };
 
@@ -769,7 +769,7 @@ export interface TYPEDESC$instance {
 
 
 export const TYPEDESC: {
-    new(): TYPEDESC$instance;
+    new(): TYPEDESC;
 };
 
 
@@ -786,7 +786,7 @@ export interface TYPELIBATTR$instance {
 
 
 export const TYPELIBATTR: {
-    new(): TYPELIBATTR$instance;
+    new(): TYPELIBATTR;
 };
 
 
@@ -803,7 +803,7 @@ export interface VARDESC$instance {
 
 
 export const VARDESC: {
-    new(): VARDESC$instance;
+    new(): VARDESC;
 };
 
 
@@ -816,7 +816,7 @@ export interface VARDESC_DESCUNION$instance {
 
 
 export const VARDESC_DESCUNION: {
-    new(): VARDESC_DESCUNION$instance;
+    new(): VARDESC_DESCUNION;
 };
 
 

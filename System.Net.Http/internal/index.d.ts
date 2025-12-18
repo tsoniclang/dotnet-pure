@@ -81,7 +81,7 @@ export interface HttpRequestOptionsKey_1$instance<TValue> {
 
 
 export const HttpRequestOptionsKey_1: {
-    new<TValue>(key: string): HttpRequestOptionsKey_1$instance<TValue>;
+    new<TValue>(key: string): HttpRequestOptionsKey_1<TValue>;
 };
 
 
@@ -93,8 +93,8 @@ export interface ByteArrayContent$instance extends HttpContent$instance {
 
 
 export const ByteArrayContent: {
-    new(content: byte[]): ByteArrayContent$instance;
-    new(content: byte[], offset: int, count: int): ByteArrayContent$instance;
+    new(content: byte[]): ByteArrayContent;
+    new(content: byte[], offset: int, count: int): ByteArrayContent;
 };
 
 
@@ -128,7 +128,7 @@ export interface FormUrlEncodedContent$instance extends ByteArrayContent$instanc
 
 
 export const FormUrlEncodedContent: {
-    new(nameValueCollection: IEnumerable_1<KeyValuePair_2<System_Internal.String, System_Internal.String>>): FormUrlEncodedContent$instance;
+    new(nameValueCollection: IEnumerable_1<KeyValuePair_2<System_Internal.String, System_Internal.String>>): FormUrlEncodedContent;
 };
 
 
@@ -191,9 +191,9 @@ export interface HttpClient$instance extends HttpMessageInvoker$instance {
 
 
 export const HttpClient: {
-    new(): HttpClient$instance;
-    new(handler: HttpMessageHandler): HttpClient$instance;
-    new(handler: HttpMessageHandler, disposeHandler: boolean): HttpClient$instance;
+    new(): HttpClient;
+    new(handler: HttpMessageHandler): HttpClient;
+    new(handler: HttpMessageHandler, disposeHandler: boolean): HttpClient;
     DefaultProxy: IWebProxy;
 };
 
@@ -235,7 +235,7 @@ export interface HttpClientHandler$instance extends HttpMessageHandler$instance 
 
 
 export const HttpClientHandler: {
-    new(): HttpClientHandler$instance;
+    new(): HttpClientHandler;
     readonly DangerousAcceptAnyServerCertificateValidator: Func_5<HttpRequestMessage, X509Certificate2, X509Chain, SslPolicyErrors, System_Internal.Boolean>;
 };
 
@@ -291,7 +291,7 @@ export interface HttpIOException$instance extends IOException {
 
 
 export const HttpIOException: {
-    new(httpRequestError: HttpRequestError, message: string, innerException: Exception): HttpIOException$instance;
+    new(httpRequestError: HttpRequestError, message: string, innerException: Exception): HttpIOException;
 };
 
 
@@ -328,8 +328,8 @@ export interface HttpMessageInvoker$instance {
 
 
 export const HttpMessageInvoker: {
-    new(handler: HttpMessageHandler): HttpMessageInvoker$instance;
-    new(handler: HttpMessageHandler, disposeHandler: boolean): HttpMessageInvoker$instance;
+    new(handler: HttpMessageHandler): HttpMessageInvoker;
+    new(handler: HttpMessageHandler, disposeHandler: boolean): HttpMessageInvoker;
 };
 
 
@@ -352,7 +352,7 @@ export interface HttpMethod$instance {
 
 
 export const HttpMethod: {
-    new(method: string): HttpMethod$instance;
+    new(method: string): HttpMethod;
     readonly Get: HttpMethod;
     readonly Put: HttpMethod;
     readonly Post: HttpMethod;
@@ -384,7 +384,7 @@ export interface HttpProtocolException$instance extends HttpIOException$instance
 
 
 export const HttpProtocolException: {
-    new(errorCode: long, message: string, innerException: Exception): HttpProtocolException$instance;
+    new(errorCode: long, message: string, innerException: Exception): HttpProtocolException;
 };
 
 
@@ -403,11 +403,11 @@ export interface HttpRequestException$instance extends Exception {
 
 
 export const HttpRequestException: {
-    new(): HttpRequestException$instance;
-    new(message: string): HttpRequestException$instance;
-    new(message: string, inner: Exception): HttpRequestException$instance;
-    new(message: string, inner: Exception, statusCode: Nullable_1<HttpStatusCode>): HttpRequestException$instance;
-    new(httpRequestError: HttpRequestError, message: string, inner: Exception, statusCode: Nullable_1<HttpStatusCode>): HttpRequestException$instance;
+    new(): HttpRequestException;
+    new(message: string): HttpRequestException;
+    new(message: string, inner: Exception): HttpRequestException;
+    new(message: string, inner: Exception, statusCode: Nullable_1<HttpStatusCode>): HttpRequestException;
+    new(httpRequestError: HttpRequestError, message: string, inner: Exception, statusCode: Nullable_1<HttpStatusCode>): HttpRequestException;
 };
 
 
@@ -433,9 +433,9 @@ export interface HttpRequestMessage$instance {
 
 
 export const HttpRequestMessage: {
-    new(): HttpRequestMessage$instance;
-    new(method: HttpMethod, requestUri: Uri): HttpRequestMessage$instance;
-    new(method: HttpMethod, requestUri: string): HttpRequestMessage$instance;
+    new(): HttpRequestMessage;
+    new(method: HttpMethod, requestUri: Uri): HttpRequestMessage;
+    new(method: HttpMethod, requestUri: string): HttpRequestMessage;
 };
 
 
@@ -455,7 +455,7 @@ export interface HttpRequestOptions$instance {
 
 
 export const HttpRequestOptions: {
-    new(): HttpRequestOptions$instance;
+    new(): HttpRequestOptions;
 };
 
 
@@ -487,8 +487,8 @@ export interface HttpResponseMessage$instance {
 
 
 export const HttpResponseMessage: {
-    new(): HttpResponseMessage$instance;
-    new(statusCode: HttpStatusCode): HttpResponseMessage$instance;
+    new(): HttpResponseMessage;
+    new(statusCode: HttpStatusCode): HttpResponseMessage;
 };
 
 
@@ -526,9 +526,9 @@ export interface MultipartContent$instance extends HttpContent$instance {
 
 
 export const MultipartContent: {
-    new(): MultipartContent$instance;
-    new(subtype: string): MultipartContent$instance;
-    new(subtype: string, boundary: string): MultipartContent$instance;
+    new(): MultipartContent;
+    new(subtype: string): MultipartContent;
+    new(subtype: string, boundary: string): MultipartContent;
 };
 
 
@@ -550,8 +550,8 @@ export interface MultipartFormDataContent$instance extends MultipartContent$inst
 
 
 export const MultipartFormDataContent: {
-    new(): MultipartFormDataContent$instance;
-    new(boundary: string): MultipartFormDataContent$instance;
+    new(): MultipartFormDataContent;
+    new(boundary: string): MultipartFormDataContent;
 };
 
 
@@ -570,7 +570,7 @@ export interface ReadOnlyMemoryContent$instance extends HttpContent$instance {
 
 
 export const ReadOnlyMemoryContent: {
-    new(content: ReadOnlyMemory_1<System_Internal.Byte>): ReadOnlyMemoryContent$instance;
+    new(content: ReadOnlyMemory_1<System_Internal.Byte>): ReadOnlyMemoryContent;
 };
 
 
@@ -588,7 +588,7 @@ export interface SocketsHttpConnectionContext$instance {
 
 
 export const SocketsHttpConnectionContext: {
-    new(): SocketsHttpConnectionContext$instance;
+    new(): SocketsHttpConnectionContext;
 };
 
 
@@ -632,7 +632,7 @@ export interface SocketsHttpHandler$instance extends HttpMessageHandler$instance
 
 
 export const SocketsHttpHandler: {
-    new(): SocketsHttpHandler$instance;
+    new(): SocketsHttpHandler;
     readonly IsSupported: boolean;
 };
 
@@ -652,7 +652,7 @@ export interface SocketsHttpPlaintextStreamFilterContext$instance {
 
 
 export const SocketsHttpPlaintextStreamFilterContext: {
-    new(): SocketsHttpPlaintextStreamFilterContext$instance;
+    new(): SocketsHttpPlaintextStreamFilterContext;
 };
 
 
@@ -664,8 +664,8 @@ export interface StreamContent$instance extends HttpContent$instance {
 
 
 export const StreamContent: {
-    new(content: Stream): StreamContent$instance;
-    new(content: Stream, bufferSize: int): StreamContent$instance;
+    new(content: Stream): StreamContent;
+    new(content: Stream, bufferSize: int): StreamContent;
 };
 
 
@@ -682,11 +682,11 @@ export interface StringContent$instance extends ByteArrayContent$instance {
 
 
 export const StringContent: {
-    new(content: string): StringContent$instance;
-    new(content: string, mediaType: MediaTypeHeaderValue): StringContent$instance;
-    new(content: string, encoding: Encoding): StringContent$instance;
-    new(content: string, encoding: Encoding, mediaType: string): StringContent$instance;
-    new(content: string, encoding: Encoding, mediaType: MediaTypeHeaderValue): StringContent$instance;
+    new(content: string): StringContent;
+    new(content: string, mediaType: MediaTypeHeaderValue): StringContent;
+    new(content: string, encoding: Encoding): StringContent;
+    new(content: string, encoding: Encoding, mediaType: string): StringContent;
+    new(content: string, encoding: Encoding, mediaType: MediaTypeHeaderValue): StringContent;
 };
 
 

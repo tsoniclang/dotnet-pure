@@ -173,7 +173,7 @@ export interface ImmutableArray_1$instance<T> {
 
 
 export const ImmutableArray_1: {
-    new<T>(): ImmutableArray_1$instance<T>;
+    new<T>(): ImmutableArray_1<T>;
     readonly Empty: unknown;
     CastUp<T, TDerived extends T>(items: ImmutableArray_1<TDerived>): ImmutableArray_1<T>;
 };
@@ -208,7 +208,7 @@ export interface ImmutableArray_1_Enumerator$instance<T> {
 
 
 export const ImmutableArray_1_Enumerator: {
-    new<T>(): ImmutableArray_1_Enumerator$instance<T>;
+    new<T>(): ImmutableArray_1_Enumerator<T>;
 };
 
 
@@ -223,7 +223,7 @@ export interface ImmutableDictionary_2_Enumerator$instance<TKey, TValue> extends
 
 
 export const ImmutableDictionary_2_Enumerator: {
-    new<TKey, TValue>(): ImmutableDictionary_2_Enumerator$instance<TKey, TValue>;
+    new<TKey, TValue>(): ImmutableDictionary_2_Enumerator<TKey, TValue>;
 };
 
 
@@ -244,7 +244,7 @@ export interface ImmutableHashSet_1_Enumerator$instance<T> extends IDisposable {
 
 
 export const ImmutableHashSet_1_Enumerator: {
-    new<T>(): ImmutableHashSet_1_Enumerator$instance<T>;
+    new<T>(): ImmutableHashSet_1_Enumerator<T>;
 };
 
 
@@ -265,7 +265,7 @@ export interface ImmutableList_1_Enumerator$instance<T> extends IDisposable {
 
 
 export const ImmutableList_1_Enumerator: {
-    new<T>(): ImmutableList_1_Enumerator$instance<T>;
+    new<T>(): ImmutableList_1_Enumerator<T>;
 };
 
 
@@ -284,7 +284,7 @@ export interface ImmutableQueue_1_Enumerator$instance<T> {
 
 
 export const ImmutableQueue_1_Enumerator: {
-    new<T>(): ImmutableQueue_1_Enumerator$instance<T>;
+    new<T>(): ImmutableQueue_1_Enumerator<T>;
 };
 
 
@@ -299,7 +299,7 @@ export interface ImmutableSortedDictionary_2_Enumerator$instance<TKey, TValue> e
 
 
 export const ImmutableSortedDictionary_2_Enumerator: {
-    new<TKey, TValue>(): ImmutableSortedDictionary_2_Enumerator$instance<TKey, TValue>;
+    new<TKey, TValue>(): ImmutableSortedDictionary_2_Enumerator<TKey, TValue>;
 };
 
 
@@ -320,7 +320,7 @@ export interface ImmutableSortedSet_1_Enumerator$instance<T> extends IDisposable
 
 
 export const ImmutableSortedSet_1_Enumerator: {
-    new<T>(): ImmutableSortedSet_1_Enumerator$instance<T>;
+    new<T>(): ImmutableSortedSet_1_Enumerator<T>;
 };
 
 
@@ -339,7 +339,7 @@ export interface ImmutableStack_1_Enumerator$instance<T> {
 
 
 export const ImmutableStack_1_Enumerator: {
-    new<T>(): ImmutableStack_1_Enumerator$instance<T>;
+    new<T>(): ImmutableStack_1_Enumerator<T>;
 };
 
 
@@ -400,7 +400,7 @@ export interface ImmutableArray_1_Builder$instance<T> {
 
 
 export const ImmutableArray_1_Builder: {
-    new<T>(): ImmutableArray_1_Builder$instance<T>;
+    new<T>(): ImmutableArray_1_Builder<T>;
 };
 
 
@@ -443,7 +443,7 @@ export interface ImmutableDictionary_2$instance<TKey, TValue> {
 
 
 export const ImmutableDictionary_2: {
-    new<TKey, TValue>(): ImmutableDictionary_2$instance<TKey, TValue>;
+    new<TKey, TValue>(): ImmutableDictionary_2<TKey, TValue>;
     readonly Empty: unknown;
 };
 
@@ -490,7 +490,7 @@ export interface ImmutableDictionary_2_Builder$instance<TKey, TValue> {
 
 
 export const ImmutableDictionary_2_Builder: {
-    new<TKey, TValue>(): ImmutableDictionary_2_Builder$instance<TKey, TValue>;
+    new<TKey, TValue>(): ImmutableDictionary_2_Builder<TKey, TValue>;
 };
 
 
@@ -534,7 +534,7 @@ export interface ImmutableHashSet_1$instance<T> {
 
 
 export const ImmutableHashSet_1: {
-    new<T>(): ImmutableHashSet_1$instance<T>;
+    new<T>(): ImmutableHashSet_1<T>;
     readonly Empty: unknown;
 };
 
@@ -577,7 +577,7 @@ export interface ImmutableHashSet_1_Builder$instance<T> {
 
 
 export const ImmutableHashSet_1_Builder: {
-    new<T>(): ImmutableHashSet_1_Builder$instance<T>;
+    new<T>(): ImmutableHashSet_1_Builder<T>;
 };
 
 
@@ -648,7 +648,7 @@ export interface ImmutableList_1$instance<T> {
 
 
 export const ImmutableList_1: {
-    new<T>(): ImmutableList_1$instance<T>;
+    new<T>(): ImmutableList_1<T>;
     readonly Empty: unknown;
 };
 
@@ -726,7 +726,7 @@ export interface ImmutableList_1_Builder$instance<T> {
 
 
 export const ImmutableList_1_Builder: {
-    new<T>(): ImmutableList_1_Builder$instance<T>;
+    new<T>(): ImmutableList_1_Builder<T>;
 };
 
 
@@ -756,7 +756,7 @@ export interface ImmutableQueue_1$instance<T> {
 
 
 export const ImmutableQueue_1: {
-    new<T>(): ImmutableQueue_1$instance<T>;
+    new<T>(): ImmutableQueue_1<T>;
     readonly Empty: unknown;
 };
 
@@ -799,7 +799,7 @@ export interface ImmutableSortedDictionary_2$instance<TKey, TValue> {
 
 
 export const ImmutableSortedDictionary_2: {
-    new<TKey, TValue>(): ImmutableSortedDictionary_2$instance<TKey, TValue>;
+    new<TKey, TValue>(): ImmutableSortedDictionary_2<TKey, TValue>;
     readonly Empty: unknown;
 };
 
@@ -847,7 +847,7 @@ export interface ImmutableSortedDictionary_2_Builder$instance<TKey, TValue> {
 
 
 export const ImmutableSortedDictionary_2_Builder: {
-    new<TKey, TValue>(): ImmutableSortedDictionary_2_Builder$instance<TKey, TValue>;
+    new<TKey, TValue>(): ImmutableSortedDictionary_2_Builder<TKey, TValue>;
 };
 
 
@@ -897,7 +897,7 @@ export interface ImmutableSortedSet_1$instance<T> {
 
 
 export const ImmutableSortedSet_1: {
-    new<T>(): ImmutableSortedSet_1$instance<T>;
+    new<T>(): ImmutableSortedSet_1<T>;
     readonly Empty: unknown;
 };
 
@@ -948,7 +948,7 @@ export interface ImmutableSortedSet_1_Builder$instance<T> {
 
 
 export const ImmutableSortedSet_1_Builder: {
-    new<T>(): ImmutableSortedSet_1_Builder$instance<T>;
+    new<T>(): ImmutableSortedSet_1_Builder<T>;
 };
 
 
@@ -977,7 +977,7 @@ export interface ImmutableStack_1$instance<T> {
 
 
 export const ImmutableStack_1: {
-    new<T>(): ImmutableStack_1$instance<T>;
+    new<T>(): ImmutableStack_1<T>;
     readonly Empty: unknown;
 };
 

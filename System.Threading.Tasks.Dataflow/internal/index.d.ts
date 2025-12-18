@@ -100,7 +100,7 @@ export interface DataflowMessageHeader$instance {
 
 
 export const DataflowMessageHeader: {
-    new(id: long): DataflowMessageHeader$instance;
+    new(id: long): DataflowMessageHeader;
 };
 
 
@@ -124,10 +124,10 @@ export interface ActionBlock_1$instance<TInput> {
 
 
 export const ActionBlock_1: {
-    new<TInput>(action: Action_1<TInput>): ActionBlock_1$instance<TInput>;
-    new<TInput>(action: Action_1<TInput>, dataflowBlockOptions: ExecutionDataflowBlockOptions): ActionBlock_1$instance<TInput>;
-    new<TInput>(action: Func_2<TInput, Task>): ActionBlock_1$instance<TInput>;
-    new<TInput>(action: Func_2<TInput, Task>, dataflowBlockOptions: ExecutionDataflowBlockOptions): ActionBlock_1$instance<TInput>;
+    new<TInput>(action: Action_1<TInput>): ActionBlock_1<TInput>;
+    new<TInput>(action: Action_1<TInput>, dataflowBlockOptions: ExecutionDataflowBlockOptions): ActionBlock_1<TInput>;
+    new<TInput>(action: Func_2<TInput, Task>): ActionBlock_1<TInput>;
+    new<TInput>(action: Func_2<TInput, Task>, dataflowBlockOptions: ExecutionDataflowBlockOptions): ActionBlock_1<TInput>;
 };
 
 
@@ -153,8 +153,8 @@ export interface BatchBlock_1$instance<T> {
 
 
 export const BatchBlock_1: {
-    new<T>(batchSize: int): BatchBlock_1$instance<T>;
-    new<T>(batchSize: int, dataflowBlockOptions: GroupingDataflowBlockOptions): BatchBlock_1$instance<T>;
+    new<T>(batchSize: int): BatchBlock_1<T>;
+    new<T>(batchSize: int, dataflowBlockOptions: GroupingDataflowBlockOptions): BatchBlock_1<T>;
 };
 
 
@@ -183,8 +183,8 @@ export interface BatchedJoinBlock_2$instance<T1, T2> {
 
 
 export const BatchedJoinBlock_2: {
-    new<T1, T2>(batchSize: int): BatchedJoinBlock_2$instance<T1, T2>;
-    new<T1, T2>(batchSize: int, dataflowBlockOptions: GroupingDataflowBlockOptions): BatchedJoinBlock_2$instance<T1, T2>;
+    new<T1, T2>(batchSize: int): BatchedJoinBlock_2<T1, T2>;
+    new<T1, T2>(batchSize: int, dataflowBlockOptions: GroupingDataflowBlockOptions): BatchedJoinBlock_2<T1, T2>;
 };
 
 
@@ -213,8 +213,8 @@ export interface BatchedJoinBlock_3$instance<T1, T2, T3> {
 
 
 export const BatchedJoinBlock_3: {
-    new<T1, T2, T3>(batchSize: int): BatchedJoinBlock_3$instance<T1, T2, T3>;
-    new<T1, T2, T3>(batchSize: int, dataflowBlockOptions: GroupingDataflowBlockOptions): BatchedJoinBlock_3$instance<T1, T2, T3>;
+    new<T1, T2, T3>(batchSize: int): BatchedJoinBlock_3<T1, T2, T3>;
+    new<T1, T2, T3>(batchSize: int, dataflowBlockOptions: GroupingDataflowBlockOptions): BatchedJoinBlock_3<T1, T2, T3>;
 };
 
 
@@ -237,8 +237,8 @@ export interface BroadcastBlock_1$instance<T> {
 
 
 export const BroadcastBlock_1: {
-    new<T>(cloningFunction: Func_2<T, T>): BroadcastBlock_1$instance<T>;
-    new<T>(cloningFunction: Func_2<T, T>, dataflowBlockOptions: DataflowBlockOptions): BroadcastBlock_1$instance<T>;
+    new<T>(cloningFunction: Func_2<T, T>): BroadcastBlock_1<T>;
+    new<T>(cloningFunction: Func_2<T, T>, dataflowBlockOptions: DataflowBlockOptions): BroadcastBlock_1<T>;
 };
 
 
@@ -264,8 +264,8 @@ export interface BufferBlock_1$instance<T> {
 
 
 export const BufferBlock_1: {
-    new<T>(): BufferBlock_1$instance<T>;
-    new<T>(dataflowBlockOptions: DataflowBlockOptions): BufferBlock_1$instance<T>;
+    new<T>(): BufferBlock_1<T>;
+    new<T>(dataflowBlockOptions: DataflowBlockOptions): BufferBlock_1<T>;
 };
 
 
@@ -290,7 +290,7 @@ export interface DataflowBlockOptions$instance {
 
 
 export const DataflowBlockOptions: {
-    new(): DataflowBlockOptions$instance;
+    new(): DataflowBlockOptions;
     readonly Unbounded: int;
 };
 
@@ -305,7 +305,7 @@ export interface DataflowLinkOptions$instance {
 
 
 export const DataflowLinkOptions: {
-    new(): DataflowLinkOptions$instance;
+    new(): DataflowLinkOptions;
 };
 
 
@@ -318,7 +318,7 @@ export interface ExecutionDataflowBlockOptions$instance extends DataflowBlockOpt
 
 
 export const ExecutionDataflowBlockOptions: {
-    new(): ExecutionDataflowBlockOptions$instance;
+    new(): ExecutionDataflowBlockOptions;
 };
 
 
@@ -331,7 +331,7 @@ export interface GroupingDataflowBlockOptions$instance extends DataflowBlockOpti
 
 
 export const GroupingDataflowBlockOptions: {
-    new(): GroupingDataflowBlockOptions$instance;
+    new(): GroupingDataflowBlockOptions;
 };
 
 
@@ -351,8 +351,8 @@ export interface JoinBlock_2$instance<T1, T2> {
 
 
 export const JoinBlock_2: {
-    new<T1, T2>(): JoinBlock_2$instance<T1, T2>;
-    new<T1, T2>(dataflowBlockOptions: GroupingDataflowBlockOptions): JoinBlock_2$instance<T1, T2>;
+    new<T1, T2>(): JoinBlock_2<T1, T2>;
+    new<T1, T2>(dataflowBlockOptions: GroupingDataflowBlockOptions): JoinBlock_2<T1, T2>;
 };
 
 
@@ -380,8 +380,8 @@ export interface JoinBlock_3$instance<T1, T2, T3> {
 
 
 export const JoinBlock_3: {
-    new<T1, T2, T3>(): JoinBlock_3$instance<T1, T2, T3>;
-    new<T1, T2, T3>(dataflowBlockOptions: GroupingDataflowBlockOptions): JoinBlock_3$instance<T1, T2, T3>;
+    new<T1, T2, T3>(): JoinBlock_3<T1, T2, T3>;
+    new<T1, T2, T3>(dataflowBlockOptions: GroupingDataflowBlockOptions): JoinBlock_3<T1, T2, T3>;
 };
 
 
@@ -407,8 +407,8 @@ export interface TransformBlock_2$instance<TInput, TOutput> {
 
 
 export const TransformBlock_2: {
-    new<TInput, TOutput>(transform: Func_2<TInput, TOutput>): TransformBlock_2$instance<TInput, TOutput>;
-    new<TInput, TOutput>(transform: Func_2<TInput, TOutput>, dataflowBlockOptions: ExecutionDataflowBlockOptions): TransformBlock_2$instance<TInput, TOutput>;
+    new<TInput, TOutput>(transform: Func_2<TInput, TOutput>): TransformBlock_2<TInput, TOutput>;
+    new<TInput, TOutput>(transform: Func_2<TInput, TOutput>, dataflowBlockOptions: ExecutionDataflowBlockOptions): TransformBlock_2<TInput, TOutput>;
 };
 
 
@@ -435,8 +435,8 @@ export interface TransformManyBlock_2$instance<TInput, TOutput> {
 
 
 export const TransformManyBlock_2: {
-    new<TInput, TOutput>(transform: Func_2<TInput, IEnumerable_1<TOutput>>): TransformManyBlock_2$instance<TInput, TOutput>;
-    new<TInput, TOutput>(transform: Func_2<TInput, IEnumerable_1<TOutput>>, dataflowBlockOptions: ExecutionDataflowBlockOptions): TransformManyBlock_2$instance<TInput, TOutput>;
+    new<TInput, TOutput>(transform: Func_2<TInput, IEnumerable_1<TOutput>>): TransformManyBlock_2<TInput, TOutput>;
+    new<TInput, TOutput>(transform: Func_2<TInput, IEnumerable_1<TOutput>>, dataflowBlockOptions: ExecutionDataflowBlockOptions): TransformManyBlock_2<TInput, TOutput>;
 };
 
 
@@ -460,8 +460,8 @@ export interface WriteOnceBlock_1$instance<T> {
 
 
 export const WriteOnceBlock_1: {
-    new<T>(cloningFunction: Func_2<T, T>): WriteOnceBlock_1$instance<T>;
-    new<T>(cloningFunction: Func_2<T, T>, dataflowBlockOptions: DataflowBlockOptions): WriteOnceBlock_1$instance<T>;
+    new<T>(cloningFunction: Func_2<T, T>): WriteOnceBlock_1<T>;
+    new<T>(cloningFunction: Func_2<T, T>, dataflowBlockOptions: DataflowBlockOptions): WriteOnceBlock_1<T>;
 };
 
 

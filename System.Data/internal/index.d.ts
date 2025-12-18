@@ -650,7 +650,7 @@ export interface ConstraintCollection$instance extends InternalDataCollectionBas
 
 
 export const ConstraintCollection: {
-    new(): ConstraintCollection$instance;
+    new(): ConstraintCollection;
 };
 
 
@@ -668,9 +668,9 @@ export interface ConstraintException$instance extends DataException$instance {
 
 
 export const ConstraintException: {
-    new(): ConstraintException$instance;
-    new(s: string): ConstraintException$instance;
-    new(message: string, innerException: Exception): ConstraintException$instance;
+    new(): ConstraintException;
+    new(s: string): ConstraintException;
+    new(message: string, innerException: Exception): ConstraintException;
 };
 
 
@@ -709,11 +709,11 @@ export interface DataColumn$instance extends MarshalByValueComponent {
 
 
 export const DataColumn: {
-    new(): DataColumn$instance;
-    new(columnName: string): DataColumn$instance;
-    new(columnName: string, dataType: Type): DataColumn$instance;
-    new(columnName: string, dataType: Type, expr: string): DataColumn$instance;
-    new(columnName: string, dataType: Type, expr: string, type_: MappingType): DataColumn$instance;
+    new(): DataColumn;
+    new(columnName: string): DataColumn;
+    new(columnName: string, dataType: Type): DataColumn;
+    new(columnName: string, dataType: Type, expr: string): DataColumn;
+    new(columnName: string, dataType: Type, expr: string, type_: MappingType): DataColumn;
 };
 
 
@@ -736,7 +736,7 @@ export interface DataColumnChangeEventArgs$instance extends EventArgs {
 
 
 export const DataColumnChangeEventArgs: {
-    new(row: DataRow, column: DataColumn, value: unknown): DataColumnChangeEventArgs$instance;
+    new(row: DataRow, column: DataColumn, value: unknown): DataColumnChangeEventArgs;
 };
 
 
@@ -765,7 +765,7 @@ export interface DataColumnCollection$instance extends InternalDataCollectionBas
 
 
 export const DataColumnCollection: {
-    new(): DataColumnCollection$instance;
+    new(): DataColumnCollection;
 };
 
 
@@ -783,9 +783,9 @@ export interface DataException$instance extends SystemException {
 
 
 export const DataException: {
-    new(): DataException$instance;
-    new(s: string): DataException$instance;
-    new(s: string, innerException: Exception): DataException$instance;
+    new(): DataException;
+    new(s: string): DataException;
+    new(s: string, innerException: Exception): DataException;
 };
 
 
@@ -812,12 +812,12 @@ export interface DataRelation$instance {
 
 
 export const DataRelation: {
-    new(relationName: string, parentColumn: DataColumn, childColumn: DataColumn): DataRelation$instance;
-    new(relationName: string, parentColumn: DataColumn, childColumn: DataColumn, createConstraints: boolean): DataRelation$instance;
-    new(relationName: string, parentColumns: DataColumn[], childColumns: DataColumn[]): DataRelation$instance;
-    new(relationName: string, parentColumns: DataColumn[], childColumns: DataColumn[], createConstraints: boolean): DataRelation$instance;
-    new(relationName: string, parentTableName: string, childTableName: string, parentColumnNames: string[], childColumnNames: string[], nested: boolean): DataRelation$instance;
-    new(relationName: string, parentTableName: string, parentTableNamespace: string, childTableName: string, childTableNamespace: string, parentColumnNames: string[], childColumnNames: string[], nested: boolean): DataRelation$instance;
+    new(relationName: string, parentColumn: DataColumn, childColumn: DataColumn): DataRelation;
+    new(relationName: string, parentColumn: DataColumn, childColumn: DataColumn, createConstraints: boolean): DataRelation;
+    new(relationName: string, parentColumns: DataColumn[], childColumns: DataColumn[]): DataRelation;
+    new(relationName: string, parentColumns: DataColumn[], childColumns: DataColumn[], createConstraints: boolean): DataRelation;
+    new(relationName: string, parentTableName: string, childTableName: string, parentColumnNames: string[], childColumnNames: string[], nested: boolean): DataRelation;
+    new(relationName: string, parentTableName: string, parentTableNamespace: string, childTableName: string, childTableNamespace: string, parentColumnNames: string[], childColumnNames: string[], nested: boolean): DataRelation;
 };
 
 
@@ -913,7 +913,7 @@ export interface DataRow$instance {
 
 
 export const DataRow: {
-    new(): DataRow$instance;
+    new(): DataRow;
 };
 
 
@@ -924,7 +924,7 @@ export interface DataRowBuilder$instance {
 
 
 export const DataRowBuilder: {
-    new(): DataRowBuilder$instance;
+    new(): DataRowBuilder;
 };
 
 
@@ -937,7 +937,7 @@ export interface DataRowChangeEventArgs$instance extends EventArgs {
 
 
 export const DataRowChangeEventArgs: {
-    new(row: DataRow, action: DataRowAction): DataRowChangeEventArgs$instance;
+    new(row: DataRow, action: DataRowAction): DataRowChangeEventArgs;
 };
 
 
@@ -964,7 +964,7 @@ export interface DataRowCollection$instance extends InternalDataCollectionBase$i
 
 
 export const DataRowCollection: {
-    new(): DataRowCollection$instance;
+    new(): DataRowCollection;
 };
 
 
@@ -983,7 +983,7 @@ export interface DataRowComparer_1$instance<TRow extends DataRow> {
 
 
 export const DataRowComparer_1: {
-    new<TRow extends DataRow>(): DataRowComparer_1$instance<TRow>;
+    new<TRow extends DataRow>(): DataRowComparer_1<TRow>;
     readonly Default: unknown;
 };
 
@@ -1019,7 +1019,7 @@ export interface DataRowView$instance extends INotifyPropertyChanged {
 
 
 export const DataRowView: {
-    new(): DataRowView$instance;
+    new(): DataRowView;
 };
 
 
@@ -1115,8 +1115,8 @@ export interface DataSet$instance extends MarshalByValueComponent {
 
 
 export const DataSet: {
-    new(): DataSet$instance;
-    new(dataSetName: string): DataSet$instance;
+    new(): DataSet;
+    new(dataSetName: string): DataSet;
     GetDataSetSchema(schemaSet: XmlSchemaSet): XmlSchemaComplexType;
 };
 
@@ -1143,7 +1143,7 @@ export interface DataSysDescriptionAttribute$instance extends DescriptionAttribu
 
 
 export const DataSysDescriptionAttribute: {
-    new(description: string): DataSysDescriptionAttribute$instance;
+    new(description: string): DataSysDescriptionAttribute;
 };
 
 
@@ -1239,9 +1239,9 @@ export interface DataTable$instance extends MarshalByValueComponent {
 
 
 export const DataTable: {
-    new(): DataTable$instance;
-    new(tableName: string): DataTable$instance;
-    new(tableName: string, tableNamespace: string): DataTable$instance;
+    new(): DataTable;
+    new(tableName: string): DataTable;
+    new(tableName: string, tableNamespace: string): DataTable;
     GetDataTableSchema(schemaSet: XmlSchemaSet): XmlSchemaComplexType;
 };
 
@@ -1270,7 +1270,7 @@ export interface DataTableClearEventArgs$instance extends EventArgs {
 
 
 export const DataTableClearEventArgs: {
-    new(dataTable: DataTable): DataTableClearEventArgs$instance;
+    new(dataTable: DataTable): DataTableClearEventArgs;
 };
 
 
@@ -1302,7 +1302,7 @@ export interface DataTableCollection$instance extends InternalDataCollectionBase
 
 
 export const DataTableCollection: {
-    new(): DataTableCollection$instance;
+    new(): DataTableCollection;
 };
 
 
@@ -1320,7 +1320,7 @@ export interface DataTableNewRowEventArgs$instance extends EventArgs {
 
 
 export const DataTableNewRowEventArgs: {
-    new(dataRow: DataRow): DataTableNewRowEventArgs$instance;
+    new(dataRow: DataRow): DataTableNewRowEventArgs;
 };
 
 
@@ -1371,8 +1371,8 @@ export interface DataTableReader$instance extends DbDataReader {
 
 
 export const DataTableReader: {
-    new(dataTable: DataTable): DataTableReader$instance;
-    new(dataTables: DataTable[]): DataTableReader$instance;
+    new(dataTable: DataTable): DataTableReader;
+    new(dataTables: DataTable[]): DataTableReader;
 };
 
 
@@ -1422,9 +1422,9 @@ export interface DataView$instance extends MarshalByValueComponent {
 
 
 export const DataView: {
-    new(): DataView$instance;
-    new(table: DataTable): DataView$instance;
-    new(table: DataTable, RowFilter: string, Sort: string, RowState: DataViewRowState): DataView$instance;
+    new(): DataView;
+    new(table: DataTable): DataView;
+    new(table: DataTable, RowFilter: string, Sort: string, RowState: DataViewRowState): DataView;
 };
 
 
@@ -1458,8 +1458,8 @@ export interface DataViewManager$instance extends MarshalByValueComponent {
 
 
 export const DataViewManager: {
-    new(): DataViewManager$instance;
-    new(dataSet: DataSet): DataViewManager$instance;
+    new(): DataViewManager;
+    new(dataSet: DataSet): DataViewManager;
 };
 
 
@@ -1490,7 +1490,7 @@ export interface DataViewSetting$instance {
 
 
 export const DataViewSetting: {
-    new(): DataViewSetting$instance;
+    new(): DataViewSetting;
 };
 
 
@@ -1513,7 +1513,7 @@ export interface DataViewSettingCollection$instance {
 
 
 export const DataViewSettingCollection: {
-    new(): DataViewSettingCollection$instance;
+    new(): DataViewSettingCollection;
 };
 
 
@@ -1535,10 +1535,10 @@ export interface DBConcurrencyException$instance extends SystemException {
 
 
 export const DBConcurrencyException: {
-    new(): DBConcurrencyException$instance;
-    new(message: string): DBConcurrencyException$instance;
-    new(message: string, inner: Exception): DBConcurrencyException$instance;
-    new(message: string, inner: Exception, dataRows: DataRow[]): DBConcurrencyException$instance;
+    new(): DBConcurrencyException;
+    new(message: string): DBConcurrencyException;
+    new(message: string, inner: Exception): DBConcurrencyException;
+    new(message: string, inner: Exception, dataRows: DataRow[]): DBConcurrencyException;
 };
 
 
@@ -1555,9 +1555,9 @@ export interface DeletedRowInaccessibleException$instance extends DataException$
 
 
 export const DeletedRowInaccessibleException: {
-    new(): DeletedRowInaccessibleException$instance;
-    new(s: string): DeletedRowInaccessibleException$instance;
-    new(message: string, innerException: Exception): DeletedRowInaccessibleException$instance;
+    new(): DeletedRowInaccessibleException;
+    new(s: string): DeletedRowInaccessibleException;
+    new(message: string, innerException: Exception): DeletedRowInaccessibleException;
 };
 
 
@@ -1574,9 +1574,9 @@ export interface DuplicateNameException$instance extends DataException$instance 
 
 
 export const DuplicateNameException: {
-    new(): DuplicateNameException$instance;
-    new(s: string): DuplicateNameException$instance;
-    new(message: string, innerException: Exception): DuplicateNameException$instance;
+    new(): DuplicateNameException;
+    new(s: string): DuplicateNameException;
+    new(message: string, innerException: Exception): DuplicateNameException;
 };
 
 
@@ -1610,7 +1610,7 @@ export interface EnumerableRowCollection_1$instance<TRow> extends EnumerableRowC
 
 
 export const EnumerableRowCollection_1: {
-    new<TRow>(): EnumerableRowCollection_1$instance<TRow>;
+    new<TRow>(): EnumerableRowCollection_1<TRow>;
 };
 
 
@@ -1628,9 +1628,9 @@ export interface EvaluateException$instance extends InvalidExpressionException$i
 
 
 export const EvaluateException: {
-    new(): EvaluateException$instance;
-    new(s: string): EvaluateException$instance;
-    new(message: string, innerException: Exception): EvaluateException$instance;
+    new(): EvaluateException;
+    new(s: string): EvaluateException;
+    new(message: string, innerException: Exception): EvaluateException;
 };
 
 
@@ -1650,7 +1650,7 @@ export interface FillErrorEventArgs$instance extends EventArgs {
 
 
 export const FillErrorEventArgs: {
-    new(dataTable: DataTable, values: unknown[]): FillErrorEventArgs$instance;
+    new(dataTable: DataTable, values: unknown[]): FillErrorEventArgs;
 };
 
 
@@ -1670,12 +1670,12 @@ export interface ForeignKeyConstraint$instance extends Constraint {
 
 
 export const ForeignKeyConstraint: {
-    new(parentColumn: DataColumn, childColumn: DataColumn): ForeignKeyConstraint$instance;
-    new(constraintName: string, parentColumn: DataColumn, childColumn: DataColumn): ForeignKeyConstraint$instance;
-    new(parentColumns: DataColumn[], childColumns: DataColumn[]): ForeignKeyConstraint$instance;
-    new(constraintName: string, parentColumns: DataColumn[], childColumns: DataColumn[]): ForeignKeyConstraint$instance;
-    new(constraintName: string, parentTableName: string, parentColumnNames: string[], childColumnNames: string[], acceptRejectRule: AcceptRejectRule, deleteRule: Rule, updateRule: Rule): ForeignKeyConstraint$instance;
-    new(constraintName: string, parentTableName: string, parentTableNamespace: string, parentColumnNames: string[], childColumnNames: string[], acceptRejectRule: AcceptRejectRule, deleteRule: Rule, updateRule: Rule): ForeignKeyConstraint$instance;
+    new(parentColumn: DataColumn, childColumn: DataColumn): ForeignKeyConstraint;
+    new(constraintName: string, parentColumn: DataColumn, childColumn: DataColumn): ForeignKeyConstraint;
+    new(parentColumns: DataColumn[], childColumns: DataColumn[]): ForeignKeyConstraint;
+    new(constraintName: string, parentColumns: DataColumn[], childColumns: DataColumn[]): ForeignKeyConstraint;
+    new(constraintName: string, parentTableName: string, parentColumnNames: string[], childColumnNames: string[], acceptRejectRule: AcceptRejectRule, deleteRule: Rule, updateRule: Rule): ForeignKeyConstraint;
+    new(constraintName: string, parentTableName: string, parentTableNamespace: string, parentColumnNames: string[], childColumnNames: string[], acceptRejectRule: AcceptRejectRule, deleteRule: Rule, updateRule: Rule): ForeignKeyConstraint;
 };
 
 
@@ -1687,9 +1687,9 @@ export interface InRowChangingEventException$instance extends DataException$inst
 
 
 export const InRowChangingEventException: {
-    new(): InRowChangingEventException$instance;
-    new(s: string): InRowChangingEventException$instance;
-    new(message: string, innerException: Exception): InRowChangingEventException$instance;
+    new(): InRowChangingEventException;
+    new(s: string): InRowChangingEventException;
+    new(message: string, innerException: Exception): InRowChangingEventException;
 };
 
 
@@ -1711,7 +1711,7 @@ export interface InternalDataCollectionBase$instance {
 
 
 export const InternalDataCollectionBase: {
-    new(): InternalDataCollectionBase$instance;
+    new(): InternalDataCollectionBase;
 };
 
 
@@ -1729,9 +1729,9 @@ export interface InvalidConstraintException$instance extends DataException$insta
 
 
 export const InvalidConstraintException: {
-    new(): InvalidConstraintException$instance;
-    new(s: string): InvalidConstraintException$instance;
-    new(message: string, innerException: Exception): InvalidConstraintException$instance;
+    new(): InvalidConstraintException;
+    new(s: string): InvalidConstraintException;
+    new(message: string, innerException: Exception): InvalidConstraintException;
 };
 
 
@@ -1748,9 +1748,9 @@ export interface InvalidExpressionException$instance extends DataException$insta
 
 
 export const InvalidExpressionException: {
-    new(): InvalidExpressionException$instance;
-    new(s: string): InvalidExpressionException$instance;
-    new(message: string, innerException: Exception): InvalidExpressionException$instance;
+    new(): InvalidExpressionException;
+    new(s: string): InvalidExpressionException;
+    new(message: string, innerException: Exception): InvalidExpressionException;
 };
 
 
@@ -1768,7 +1768,7 @@ export interface MergeFailedEventArgs$instance extends EventArgs {
 
 
 export const MergeFailedEventArgs: {
-    new(table: DataTable, conflict: string): MergeFailedEventArgs$instance;
+    new(table: DataTable, conflict: string): MergeFailedEventArgs;
 };
 
 
@@ -1780,9 +1780,9 @@ export interface MissingPrimaryKeyException$instance extends DataException$insta
 
 
 export const MissingPrimaryKeyException: {
-    new(): MissingPrimaryKeyException$instance;
-    new(s: string): MissingPrimaryKeyException$instance;
-    new(message: string, innerException: Exception): MissingPrimaryKeyException$instance;
+    new(): MissingPrimaryKeyException;
+    new(s: string): MissingPrimaryKeyException;
+    new(message: string, innerException: Exception): MissingPrimaryKeyException;
 };
 
 
@@ -1799,9 +1799,9 @@ export interface NoNullAllowedException$instance extends DataException$instance 
 
 
 export const NoNullAllowedException: {
-    new(): NoNullAllowedException$instance;
-    new(s: string): NoNullAllowedException$instance;
-    new(message: string, innerException: Exception): NoNullAllowedException$instance;
+    new(): NoNullAllowedException;
+    new(s: string): NoNullAllowedException;
+    new(message: string, innerException: Exception): NoNullAllowedException;
 };
 
 
@@ -1819,7 +1819,7 @@ export interface OrderedEnumerableRowCollection_1$instance<TRow> extends Enumera
 
 
 export const OrderedEnumerableRowCollection_1: {
-    new<TRow>(): OrderedEnumerableRowCollection_1$instance<TRow>;
+    new<TRow>(): OrderedEnumerableRowCollection_1<TRow>;
 };
 
 
@@ -1846,7 +1846,7 @@ export interface PropertyCollection$instance extends Hashtable {
 
 
 export const PropertyCollection: {
-    new(): PropertyCollection$instance;
+    new(): PropertyCollection;
 };
 
 
@@ -1868,9 +1868,9 @@ export interface ReadOnlyException$instance extends DataException$instance {
 
 
 export const ReadOnlyException: {
-    new(): ReadOnlyException$instance;
-    new(s: string): ReadOnlyException$instance;
-    new(message: string, innerException: Exception): ReadOnlyException$instance;
+    new(): ReadOnlyException;
+    new(s: string): ReadOnlyException;
+    new(message: string, innerException: Exception): ReadOnlyException;
 };
 
 
@@ -1887,9 +1887,9 @@ export interface RowNotInTableException$instance extends DataException$instance 
 
 
 export const RowNotInTableException: {
-    new(): RowNotInTableException$instance;
-    new(s: string): RowNotInTableException$instance;
-    new(message: string, innerException: Exception): RowNotInTableException$instance;
+    new(): RowNotInTableException;
+    new(s: string): RowNotInTableException;
+    new(message: string, innerException: Exception): RowNotInTableException;
 };
 
 
@@ -1907,7 +1907,7 @@ export interface StateChangeEventArgs$instance extends EventArgs {
 
 
 export const StateChangeEventArgs: {
-    new(originalState: ConnectionState, currentState: ConnectionState): StateChangeEventArgs$instance;
+    new(originalState: ConnectionState, currentState: ConnectionState): StateChangeEventArgs;
 };
 
 
@@ -1919,7 +1919,7 @@ export interface StatementCompletedEventArgs$instance extends EventArgs {
 
 
 export const StatementCompletedEventArgs: {
-    new(recordCount: int): StatementCompletedEventArgs$instance;
+    new(recordCount: int): StatementCompletedEventArgs;
 };
 
 
@@ -1931,9 +1931,9 @@ export interface StrongTypingException$instance extends DataException$instance {
 
 
 export const StrongTypingException: {
-    new(): StrongTypingException$instance;
-    new(message: string): StrongTypingException$instance;
-    new(s: string, innerException: Exception): StrongTypingException$instance;
+    new(): StrongTypingException;
+    new(message: string): StrongTypingException;
+    new(s: string, innerException: Exception): StrongTypingException;
 };
 
 
@@ -1950,9 +1950,9 @@ export interface SyntaxErrorException$instance extends InvalidExpressionExceptio
 
 
 export const SyntaxErrorException: {
-    new(): SyntaxErrorException$instance;
-    new(s: string): SyntaxErrorException$instance;
-    new(message: string, innerException: Exception): SyntaxErrorException$instance;
+    new(): SyntaxErrorException;
+    new(s: string): SyntaxErrorException;
+    new(message: string, innerException: Exception): SyntaxErrorException;
 };
 
 
@@ -2028,15 +2028,15 @@ export interface UniqueConstraint$instance extends Constraint {
 
 
 export const UniqueConstraint: {
-    new(name: string, column: DataColumn): UniqueConstraint$instance;
-    new(column: DataColumn): UniqueConstraint$instance;
-    new(name: string, columns: DataColumn[]): UniqueConstraint$instance;
-    new(columns: DataColumn[]): UniqueConstraint$instance;
-    new(name: string, columnNames: string[], isPrimaryKey: boolean): UniqueConstraint$instance;
-    new(name: string, column: DataColumn, isPrimaryKey: boolean): UniqueConstraint$instance;
-    new(column: DataColumn, isPrimaryKey: boolean): UniqueConstraint$instance;
-    new(name: string, columns: DataColumn[], isPrimaryKey: boolean): UniqueConstraint$instance;
-    new(columns: DataColumn[], isPrimaryKey: boolean): UniqueConstraint$instance;
+    new(name: string, column: DataColumn): UniqueConstraint;
+    new(column: DataColumn): UniqueConstraint;
+    new(name: string, columns: DataColumn[]): UniqueConstraint;
+    new(columns: DataColumn[]): UniqueConstraint;
+    new(name: string, columnNames: string[], isPrimaryKey: boolean): UniqueConstraint;
+    new(name: string, column: DataColumn, isPrimaryKey: boolean): UniqueConstraint;
+    new(column: DataColumn, isPrimaryKey: boolean): UniqueConstraint;
+    new(name: string, columns: DataColumn[], isPrimaryKey: boolean): UniqueConstraint;
+    new(columns: DataColumn[], isPrimaryKey: boolean): UniqueConstraint;
 };
 
 
@@ -2048,9 +2048,9 @@ export interface VersionNotFoundException$instance extends DataException$instanc
 
 
 export const VersionNotFoundException: {
-    new(): VersionNotFoundException$instance;
-    new(s: string): VersionNotFoundException$instance;
-    new(message: string, innerException: Exception): VersionNotFoundException$instance;
+    new(): VersionNotFoundException;
+    new(s: string): VersionNotFoundException;
+    new(message: string, innerException: Exception): VersionNotFoundException;
 };
 
 

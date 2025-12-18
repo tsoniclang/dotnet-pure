@@ -145,7 +145,7 @@ export interface DictionaryEntry$instance {
 
 
 export const DictionaryEntry: {
-    new(key: unknown, value: unknown): DictionaryEntry$instance;
+    new(key: unknown, value: unknown): DictionaryEntry;
 };
 
 
@@ -197,9 +197,9 @@ export interface ArrayList$instance {
 
 
 export const ArrayList: {
-    new(): ArrayList$instance;
-    new(capacity: int): ArrayList$instance;
-    new(c: ICollection): ArrayList$instance;
+    new(): ArrayList;
+    new(capacity: int): ArrayList;
+    new(c: ICollection): ArrayList;
     Adapter(list: IList): ArrayList;
     FixedSize(list: ArrayList): ArrayList;
     FixedSize(list: IList): IList;
@@ -248,12 +248,12 @@ export interface BitArray$instance {
 
 
 export const BitArray: {
-    new(length: int): BitArray$instance;
-    new(length: int, defaultValue: boolean): BitArray$instance;
-    new(bytes: byte[]): BitArray$instance;
-    new(values: boolean[]): BitArray$instance;
-    new(values: int[]): BitArray$instance;
-    new(bits: BitArray): BitArray$instance;
+    new(length: int): BitArray;
+    new(length: int, defaultValue: boolean): BitArray;
+    new(bytes: byte[]): BitArray;
+    new(values: boolean[]): BitArray;
+    new(values: int[]): BitArray;
+    new(bits: BitArray): BitArray;
 };
 
 
@@ -275,8 +275,8 @@ export interface CaseInsensitiveComparer$instance {
 
 
 export const CaseInsensitiveComparer: {
-    new(): CaseInsensitiveComparer$instance;
-    new(culture: CultureInfo): CaseInsensitiveComparer$instance;
+    new(): CaseInsensitiveComparer;
+    new(culture: CultureInfo): CaseInsensitiveComparer;
     readonly Default: CaseInsensitiveComparer;
     readonly DefaultInvariant: CaseInsensitiveComparer;
 };
@@ -297,8 +297,8 @@ export interface CaseInsensitiveHashCodeProvider$instance {
 
 
 export const CaseInsensitiveHashCodeProvider: {
-    new(): CaseInsensitiveHashCodeProvider$instance;
-    new(culture: CultureInfo): CaseInsensitiveHashCodeProvider$instance;
+    new(): CaseInsensitiveHashCodeProvider;
+    new(culture: CultureInfo): CaseInsensitiveHashCodeProvider;
     readonly Default: CaseInsensitiveHashCodeProvider;
     readonly DefaultInvariant: CaseInsensitiveHashCodeProvider;
 };
@@ -340,7 +340,7 @@ export interface Comparer$instance {
 
 
 export const Comparer: {
-    new(culture: CultureInfo): Comparer$instance;
+    new(culture: CultureInfo): Comparer;
     readonly Default: Comparer;
     readonly DefaultInvariant: Comparer;
 };
@@ -401,21 +401,21 @@ export interface Hashtable$instance {
 
 
 export const Hashtable: {
-    new(): Hashtable$instance;
-    new(capacity: int): Hashtable$instance;
-    new(capacity: int, loadFactor: float): Hashtable$instance;
-    new(capacity: int, loadFactor: float, equalityComparer: IEqualityComparer): Hashtable$instance;
-    new(hcp: IHashCodeProvider, comparer: IComparer): Hashtable$instance;
-    new(equalityComparer: IEqualityComparer): Hashtable$instance;
-    new(capacity: int, hcp: IHashCodeProvider, comparer: IComparer): Hashtable$instance;
-    new(capacity: int, equalityComparer: IEqualityComparer): Hashtable$instance;
-    new(d: IDictionary): Hashtable$instance;
-    new(d: IDictionary, loadFactor: float): Hashtable$instance;
-    new(d: IDictionary, hcp: IHashCodeProvider, comparer: IComparer): Hashtable$instance;
-    new(d: IDictionary, equalityComparer: IEqualityComparer): Hashtable$instance;
-    new(capacity: int, loadFactor: float, hcp: IHashCodeProvider, comparer: IComparer): Hashtable$instance;
-    new(d: IDictionary, loadFactor: float, hcp: IHashCodeProvider, comparer: IComparer): Hashtable$instance;
-    new(d: IDictionary, loadFactor: float, equalityComparer: IEqualityComparer): Hashtable$instance;
+    new(): Hashtable;
+    new(capacity: int): Hashtable;
+    new(capacity: int, loadFactor: float): Hashtable;
+    new(capacity: int, loadFactor: float, equalityComparer: IEqualityComparer): Hashtable;
+    new(hcp: IHashCodeProvider, comparer: IComparer): Hashtable;
+    new(equalityComparer: IEqualityComparer): Hashtable;
+    new(capacity: int, hcp: IHashCodeProvider, comparer: IComparer): Hashtable;
+    new(capacity: int, equalityComparer: IEqualityComparer): Hashtable;
+    new(d: IDictionary): Hashtable;
+    new(d: IDictionary, loadFactor: float): Hashtable;
+    new(d: IDictionary, hcp: IHashCodeProvider, comparer: IComparer): Hashtable;
+    new(d: IDictionary, equalityComparer: IEqualityComparer): Hashtable;
+    new(capacity: int, loadFactor: float, hcp: IHashCodeProvider, comparer: IComparer): Hashtable;
+    new(d: IDictionary, loadFactor: float, hcp: IHashCodeProvider, comparer: IComparer): Hashtable;
+    new(d: IDictionary, loadFactor: float, equalityComparer: IEqualityComparer): Hashtable;
     Synchronized(table: Hashtable): Hashtable;
 };
 
@@ -453,7 +453,7 @@ export interface ListDictionaryInternal$instance {
 
 
 export const ListDictionaryInternal: {
-    new(): ListDictionaryInternal$instance;
+    new(): ListDictionaryInternal;
 };
 
 
@@ -484,10 +484,10 @@ export interface Queue$instance {
 
 
 export const Queue: {
-    new(): Queue$instance;
-    new(capacity: int): Queue$instance;
-    new(capacity: int, growFactor: float): Queue$instance;
-    new(col: ICollection): Queue$instance;
+    new(): Queue;
+    new(capacity: int): Queue;
+    new(capacity: int, growFactor: float): Queue;
+    new(col: ICollection): Queue;
     Synchronized(queue: Queue): Queue;
 };
 
@@ -553,12 +553,12 @@ export interface SortedList$instance {
 
 
 export const SortedList: {
-    new(): SortedList$instance;
-    new(initialCapacity: int): SortedList$instance;
-    new(comparer: IComparer): SortedList$instance;
-    new(comparer: IComparer, capacity: int): SortedList$instance;
-    new(d: IDictionary): SortedList$instance;
-    new(d: IDictionary, comparer: IComparer): SortedList$instance;
+    new(): SortedList;
+    new(initialCapacity: int): SortedList;
+    new(comparer: IComparer): SortedList;
+    new(comparer: IComparer, capacity: int): SortedList;
+    new(d: IDictionary): SortedList;
+    new(d: IDictionary, comparer: IComparer): SortedList;
     Synchronized(list: SortedList): SortedList;
 };
 
@@ -592,9 +592,9 @@ export interface Stack$instance {
 
 
 export const Stack: {
-    new(): Stack$instance;
-    new(initialCapacity: int): Stack$instance;
-    new(col: ICollection): Stack$instance;
+    new(): Stack;
+    new(initialCapacity: int): Stack;
+    new(col: ICollection): Stack;
     Synchronized(stack: Stack): Stack;
 };
 

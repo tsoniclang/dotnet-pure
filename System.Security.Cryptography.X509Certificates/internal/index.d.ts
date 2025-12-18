@@ -259,7 +259,7 @@ export interface X509ChainStatus$instance {
 
 
 export const X509ChainStatus: {
-    new(): X509ChainStatus$instance;
+    new(): X509ChainStatus;
 };
 
 
@@ -284,18 +284,18 @@ export interface CertificateRequest$instance {
 
 
 export const CertificateRequest: {
-    new(subjectName: string, key: ECDsa, hashAlgorithm: HashAlgorithmName): CertificateRequest$instance;
-    new(subjectName: X500DistinguishedName, key: ECDsa, hashAlgorithm: HashAlgorithmName): CertificateRequest$instance;
-    new(subjectName: string, key: RSA, hashAlgorithm: HashAlgorithmName, padding: RSASignaturePadding): CertificateRequest$instance;
-    new(subjectName: X500DistinguishedName, key: RSA, hashAlgorithm: HashAlgorithmName, padding: RSASignaturePadding): CertificateRequest$instance;
-    new(subjectName: string, key: MLDsa): CertificateRequest$instance;
-    new(subjectName: X500DistinguishedName, key: MLDsa): CertificateRequest$instance;
-    new(subjectName: string, key: SlhDsa): CertificateRequest$instance;
-    new(subjectName: X500DistinguishedName, key: SlhDsa): CertificateRequest$instance;
-    new(subjectName: string, key: CompositeMLDsa): CertificateRequest$instance;
-    new(subjectName: X500DistinguishedName, key: CompositeMLDsa): CertificateRequest$instance;
-    new(subjectName: X500DistinguishedName, publicKey: PublicKey, hashAlgorithm: HashAlgorithmName): CertificateRequest$instance;
-    new(subjectName: X500DistinguishedName, publicKey: PublicKey, hashAlgorithm: HashAlgorithmName, rsaSignaturePadding: RSASignaturePadding): CertificateRequest$instance;
+    new(subjectName: string, key: ECDsa, hashAlgorithm: HashAlgorithmName): CertificateRequest;
+    new(subjectName: X500DistinguishedName, key: ECDsa, hashAlgorithm: HashAlgorithmName): CertificateRequest;
+    new(subjectName: string, key: RSA, hashAlgorithm: HashAlgorithmName, padding: RSASignaturePadding): CertificateRequest;
+    new(subjectName: X500DistinguishedName, key: RSA, hashAlgorithm: HashAlgorithmName, padding: RSASignaturePadding): CertificateRequest;
+    new(subjectName: string, key: MLDsa): CertificateRequest;
+    new(subjectName: X500DistinguishedName, key: MLDsa): CertificateRequest;
+    new(subjectName: string, key: SlhDsa): CertificateRequest;
+    new(subjectName: X500DistinguishedName, key: SlhDsa): CertificateRequest;
+    new(subjectName: string, key: CompositeMLDsa): CertificateRequest;
+    new(subjectName: X500DistinguishedName, key: CompositeMLDsa): CertificateRequest;
+    new(subjectName: X500DistinguishedName, publicKey: PublicKey, hashAlgorithm: HashAlgorithmName): CertificateRequest;
+    new(subjectName: X500DistinguishedName, publicKey: PublicKey, hashAlgorithm: HashAlgorithmName, rsaSignaturePadding: RSASignaturePadding): CertificateRequest;
     LoadSigningRequest(pkcs10: byte[], signerHashAlgorithm: HashAlgorithmName, options?: CertificateRequestLoadOptions, signerSignaturePadding?: RSASignaturePadding): CertificateRequest;
     LoadSigningRequest(pkcs10: ReadOnlySpan_1<System_Internal.Byte>, signerHashAlgorithm: HashAlgorithmName, bytesConsumed: int, options?: CertificateRequestLoadOptions, signerSignaturePadding?: RSASignaturePadding): CertificateRequest;
     LoadSigningRequestPem(pkcs10Pem: ReadOnlySpan_1<System_Internal.Char>, signerHashAlgorithm: HashAlgorithmName, options?: CertificateRequestLoadOptions, signerSignaturePadding?: RSASignaturePadding): CertificateRequest;
@@ -317,7 +317,7 @@ export interface CertificateRevocationListBuilder$instance {
 
 
 export const CertificateRevocationListBuilder: {
-    new(): CertificateRevocationListBuilder$instance;
+    new(): CertificateRevocationListBuilder;
     BuildCrlDistributionPointExtension(uris: IEnumerable_1<System_Internal.String>, critical?: boolean): X509Extension;
     Load(currentCrl: byte[], currentCrlNumber: BigInteger): CertificateRevocationListBuilder;
     Load(currentCrl: ReadOnlySpan_1<System_Internal.Byte>, currentCrlNumber: BigInteger, bytesConsumed: int): CertificateRevocationListBuilder;
@@ -347,8 +347,8 @@ export interface Pkcs12LoaderLimits$instance {
 
 
 export const Pkcs12LoaderLimits: {
-    new(): Pkcs12LoaderLimits$instance;
-    new(copyFrom: Pkcs12LoaderLimits): Pkcs12LoaderLimits$instance;
+    new(): Pkcs12LoaderLimits;
+    new(copyFrom: Pkcs12LoaderLimits): Pkcs12LoaderLimits;
     readonly Defaults: Pkcs12LoaderLimits;
     readonly DangerousNoLimits: Pkcs12LoaderLimits;
 };
@@ -362,7 +362,7 @@ export interface Pkcs12LoadLimitExceededException$instance extends Cryptographic
 
 
 export const Pkcs12LoadLimitExceededException: {
-    new(propertyName: string): Pkcs12LoadLimitExceededException$instance;
+    new(propertyName: string): Pkcs12LoadLimitExceededException;
 };
 
 
@@ -392,12 +392,12 @@ export interface PublicKey$instance {
 
 
 export const PublicKey: {
-    new(oid: Oid, parameters: AsnEncodedData, keyValue: AsnEncodedData): PublicKey$instance;
-    new(key: AsymmetricAlgorithm): PublicKey$instance;
-    new(key: MLKem): PublicKey$instance;
-    new(key: MLDsa): PublicKey$instance;
-    new(key: SlhDsa): PublicKey$instance;
-    new(key: CompositeMLDsa): PublicKey$instance;
+    new(oid: Oid, parameters: AsnEncodedData, keyValue: AsnEncodedData): PublicKey;
+    new(key: AsymmetricAlgorithm): PublicKey;
+    new(key: MLKem): PublicKey;
+    new(key: MLDsa): PublicKey;
+    new(key: SlhDsa): PublicKey;
+    new(key: CompositeMLDsa): PublicKey;
     CreateFromSubjectPublicKeyInfo(source: ReadOnlySpan_1<System_Internal.Byte>, bytesRead: int): PublicKey;
 };
 
@@ -415,7 +415,7 @@ export interface SubjectAlternativeNameBuilder$instance {
 
 
 export const SubjectAlternativeNameBuilder: {
-    new(): SubjectAlternativeNameBuilder$instance;
+    new(): SubjectAlternativeNameBuilder;
 };
 
 
@@ -430,12 +430,12 @@ export interface X500DistinguishedName$instance extends AsnEncodedData {
 
 
 export const X500DistinguishedName: {
-    new(encodedDistinguishedName: byte[]): X500DistinguishedName$instance;
-    new(encodedDistinguishedName: ReadOnlySpan_1<System_Internal.Byte>): X500DistinguishedName$instance;
-    new(encodedDistinguishedName: AsnEncodedData): X500DistinguishedName$instance;
-    new(distinguishedName: X500DistinguishedName): X500DistinguishedName$instance;
-    new(distinguishedName: string): X500DistinguishedName$instance;
-    new(distinguishedName: string, flag: X500DistinguishedNameFlags): X500DistinguishedName$instance;
+    new(encodedDistinguishedName: byte[]): X500DistinguishedName;
+    new(encodedDistinguishedName: ReadOnlySpan_1<System_Internal.Byte>): X500DistinguishedName;
+    new(encodedDistinguishedName: AsnEncodedData): X500DistinguishedName;
+    new(distinguishedName: X500DistinguishedName): X500DistinguishedName;
+    new(distinguishedName: string): X500DistinguishedName;
+    new(distinguishedName: string, flag: X500DistinguishedNameFlags): X500DistinguishedName;
 };
 
 
@@ -457,7 +457,7 @@ export interface X500DistinguishedNameBuilder$instance {
 
 
 export const X500DistinguishedNameBuilder: {
-    new(): X500DistinguishedNameBuilder$instance;
+    new(): X500DistinguishedNameBuilder;
 };
 
 
@@ -472,7 +472,7 @@ export interface X500RelativeDistinguishedName$instance {
 
 
 export const X500RelativeDistinguishedName: {
-    new(): X500RelativeDistinguishedName$instance;
+    new(): X500RelativeDistinguishedName;
 };
 
 
@@ -488,10 +488,10 @@ export interface X509AuthorityInformationAccessExtension$instance extends X509Ex
 
 
 export const X509AuthorityInformationAccessExtension: {
-    new(): X509AuthorityInformationAccessExtension$instance;
-    new(rawData: byte[], critical: boolean): X509AuthorityInformationAccessExtension$instance;
-    new(rawData: ReadOnlySpan_1<System_Internal.Byte>, critical: boolean): X509AuthorityInformationAccessExtension$instance;
-    new(ocspUris: IEnumerable_1<System_Internal.String>, caIssuersUris: IEnumerable_1<System_Internal.String>, critical: boolean): X509AuthorityInformationAccessExtension$instance;
+    new(): X509AuthorityInformationAccessExtension;
+    new(rawData: byte[], critical: boolean): X509AuthorityInformationAccessExtension;
+    new(rawData: ReadOnlySpan_1<System_Internal.Byte>, critical: boolean): X509AuthorityInformationAccessExtension;
+    new(ocspUris: IEnumerable_1<System_Internal.String>, caIssuersUris: IEnumerable_1<System_Internal.String>, critical: boolean): X509AuthorityInformationAccessExtension;
 };
 
 
@@ -507,9 +507,9 @@ export interface X509AuthorityKeyIdentifierExtension$instance extends X509Extens
 
 
 export const X509AuthorityKeyIdentifierExtension: {
-    new(): X509AuthorityKeyIdentifierExtension$instance;
-    new(rawData: byte[], critical: boolean): X509AuthorityKeyIdentifierExtension$instance;
-    new(rawData: ReadOnlySpan_1<System_Internal.Byte>, critical: boolean): X509AuthorityKeyIdentifierExtension$instance;
+    new(): X509AuthorityKeyIdentifierExtension;
+    new(rawData: byte[], critical: boolean): X509AuthorityKeyIdentifierExtension;
+    new(rawData: ReadOnlySpan_1<System_Internal.Byte>, critical: boolean): X509AuthorityKeyIdentifierExtension;
     Create(keyIdentifier: byte[], issuerName: X500DistinguishedName, serialNumber: byte[]): X509AuthorityKeyIdentifierExtension;
     Create(keyIdentifier: ReadOnlySpan_1<System_Internal.Byte>, issuerName: X500DistinguishedName, serialNumber: ReadOnlySpan_1<System_Internal.Byte>): X509AuthorityKeyIdentifierExtension;
     CreateFromCertificate(certificate: X509Certificate2, includeKeyIdentifier: boolean, includeIssuerAndSerial: boolean): X509AuthorityKeyIdentifierExtension;
@@ -532,9 +532,9 @@ export interface X509BasicConstraintsExtension$instance extends X509Extension {
 
 
 export const X509BasicConstraintsExtension: {
-    new(): X509BasicConstraintsExtension$instance;
-    new(certificateAuthority: boolean, hasPathLengthConstraint: boolean, pathLengthConstraint: int, critical: boolean): X509BasicConstraintsExtension$instance;
-    new(encodedBasicConstraints: AsnEncodedData, critical: boolean): X509BasicConstraintsExtension$instance;
+    new(): X509BasicConstraintsExtension;
+    new(certificateAuthority: boolean, hasPathLengthConstraint: boolean, pathLengthConstraint: int, critical: boolean): X509BasicConstraintsExtension;
+    new(encodedBasicConstraints: AsnEncodedData, critical: boolean): X509BasicConstraintsExtension;
     CreateForCertificateAuthority(pathLengthConstraint?: Nullable_1<System_Internal.Int32>): X509BasicConstraintsExtension;
     CreateForEndEntity(critical?: boolean): X509BasicConstraintsExtension;
 };
@@ -588,20 +588,20 @@ export interface X509Certificate$instance {
 
 
 export const X509Certificate: {
-    new(): X509Certificate$instance;
-    new(data: byte[]): X509Certificate$instance;
-    new(rawData: byte[], password: string): X509Certificate$instance;
-    new(rawData: byte[], password: SecureString): X509Certificate$instance;
-    new(rawData: byte[], password: string, keyStorageFlags: X509KeyStorageFlags): X509Certificate$instance;
-    new(rawData: byte[], password: SecureString, keyStorageFlags: X509KeyStorageFlags): X509Certificate$instance;
-    new(handle: nint): X509Certificate$instance;
-    new(fileName: string): X509Certificate$instance;
-    new(fileName: string, password: string): X509Certificate$instance;
-    new(fileName: string, password: SecureString): X509Certificate$instance;
-    new(fileName: string, password: string, keyStorageFlags: X509KeyStorageFlags): X509Certificate$instance;
-    new(fileName: string, password: SecureString, keyStorageFlags: X509KeyStorageFlags): X509Certificate$instance;
-    new(cert: X509Certificate): X509Certificate$instance;
-    new(info: SerializationInfo, context: StreamingContext): X509Certificate$instance;
+    new(): X509Certificate;
+    new(data: byte[]): X509Certificate;
+    new(rawData: byte[], password: string): X509Certificate;
+    new(rawData: byte[], password: SecureString): X509Certificate;
+    new(rawData: byte[], password: string, keyStorageFlags: X509KeyStorageFlags): X509Certificate;
+    new(rawData: byte[], password: SecureString, keyStorageFlags: X509KeyStorageFlags): X509Certificate;
+    new(handle: nint): X509Certificate;
+    new(fileName: string): X509Certificate;
+    new(fileName: string, password: string): X509Certificate;
+    new(fileName: string, password: SecureString): X509Certificate;
+    new(fileName: string, password: string, keyStorageFlags: X509KeyStorageFlags): X509Certificate;
+    new(fileName: string, password: SecureString, keyStorageFlags: X509KeyStorageFlags): X509Certificate;
+    new(cert: X509Certificate): X509Certificate;
+    new(info: SerializationInfo, context: StreamingContext): X509Certificate;
     CreateFromCertFile(filename: string): X509Certificate;
     CreateFromSignedFile(filename: string): X509Certificate;
 };
@@ -671,22 +671,22 @@ export interface X509Certificate2$instance extends X509Certificate$instance {
 
 
 export const X509Certificate2: {
-    new(): X509Certificate2$instance;
-    new(rawData: byte[]): X509Certificate2$instance;
-    new(rawData: byte[], password: string): X509Certificate2$instance;
-    new(rawData: byte[], password: SecureString): X509Certificate2$instance;
-    new(rawData: byte[], password: string, keyStorageFlags: X509KeyStorageFlags): X509Certificate2$instance;
-    new(rawData: byte[], password: SecureString, keyStorageFlags: X509KeyStorageFlags): X509Certificate2$instance;
-    new(rawData: ReadOnlySpan_1<System_Internal.Byte>): X509Certificate2$instance;
-    new(rawData: ReadOnlySpan_1<System_Internal.Byte>, password: ReadOnlySpan_1<System_Internal.Char>, keyStorageFlags: X509KeyStorageFlags): X509Certificate2$instance;
-    new(handle: nint): X509Certificate2$instance;
-    new(fileName: string): X509Certificate2$instance;
-    new(fileName: string, password: string): X509Certificate2$instance;
-    new(fileName: string, password: SecureString): X509Certificate2$instance;
-    new(fileName: string, password: string, keyStorageFlags: X509KeyStorageFlags): X509Certificate2$instance;
-    new(fileName: string, password: SecureString, keyStorageFlags: X509KeyStorageFlags): X509Certificate2$instance;
-    new(fileName: string, password: ReadOnlySpan_1<System_Internal.Char>, keyStorageFlags: X509KeyStorageFlags): X509Certificate2$instance;
-    new(certificate: X509Certificate): X509Certificate2$instance;
+    new(): X509Certificate2;
+    new(rawData: byte[]): X509Certificate2;
+    new(rawData: byte[], password: string): X509Certificate2;
+    new(rawData: byte[], password: SecureString): X509Certificate2;
+    new(rawData: byte[], password: string, keyStorageFlags: X509KeyStorageFlags): X509Certificate2;
+    new(rawData: byte[], password: SecureString, keyStorageFlags: X509KeyStorageFlags): X509Certificate2;
+    new(rawData: ReadOnlySpan_1<System_Internal.Byte>): X509Certificate2;
+    new(rawData: ReadOnlySpan_1<System_Internal.Byte>, password: ReadOnlySpan_1<System_Internal.Char>, keyStorageFlags: X509KeyStorageFlags): X509Certificate2;
+    new(handle: nint): X509Certificate2;
+    new(fileName: string): X509Certificate2;
+    new(fileName: string, password: string): X509Certificate2;
+    new(fileName: string, password: SecureString): X509Certificate2;
+    new(fileName: string, password: string, keyStorageFlags: X509KeyStorageFlags): X509Certificate2;
+    new(fileName: string, password: SecureString, keyStorageFlags: X509KeyStorageFlags): X509Certificate2;
+    new(fileName: string, password: ReadOnlySpan_1<System_Internal.Char>, keyStorageFlags: X509KeyStorageFlags): X509Certificate2;
+    new(certificate: X509Certificate): X509Certificate2;
     CreateFromEncryptedPem(certPem: ReadOnlySpan_1<System_Internal.Char>, keyPem: ReadOnlySpan_1<System_Internal.Char>, password: ReadOnlySpan_1<System_Internal.Char>): X509Certificate2;
     CreateFromEncryptedPemFile(certPemFilePath: string, password: ReadOnlySpan_1<System_Internal.Char>, keyPemFilePath?: string): X509Certificate2;
     CreateFromPem(certPem: ReadOnlySpan_1<System_Internal.Char>, keyPem: ReadOnlySpan_1<System_Internal.Char>): X509Certificate2;
@@ -756,10 +756,10 @@ export interface X509Certificate2Collection$instance extends X509CertificateColl
 
 
 export const X509Certificate2Collection: {
-    new(): X509Certificate2Collection$instance;
-    new(certificate: X509Certificate2): X509Certificate2Collection$instance;
-    new(certificates: X509Certificate2[]): X509Certificate2Collection$instance;
-    new(certificates: X509Certificate2Collection): X509Certificate2Collection$instance;
+    new(): X509Certificate2Collection;
+    new(certificate: X509Certificate2): X509Certificate2Collection;
+    new(certificates: X509Certificate2[]): X509Certificate2Collection;
+    new(certificates: X509Certificate2Collection): X509Certificate2Collection;
 };
 
 
@@ -781,7 +781,7 @@ export interface X509Certificate2Enumerator$instance {
 
 
 export const X509Certificate2Enumerator: {
-    new(): X509Certificate2Enumerator$instance;
+    new(): X509Certificate2Enumerator;
 };
 
 
@@ -812,9 +812,9 @@ export interface X509CertificateCollection$instance extends CollectionBase {
 
 
 export const X509CertificateCollection: {
-    new(): X509CertificateCollection$instance;
-    new(value: X509Certificate[]): X509CertificateCollection$instance;
-    new(value: X509CertificateCollection): X509CertificateCollection$instance;
+    new(): X509CertificateCollection;
+    new(value: X509Certificate[]): X509CertificateCollection;
+    new(value: X509CertificateCollection): X509CertificateCollection;
 };
 
 
@@ -835,7 +835,7 @@ export interface X509CertificateCollection_X509CertificateEnumerator$instance {
 
 
 export const X509CertificateCollection_X509CertificateEnumerator: {
-    new(mappings: X509CertificateCollection): X509CertificateCollection_X509CertificateEnumerator$instance;
+    new(mappings: X509CertificateCollection): X509CertificateCollection_X509CertificateEnumerator;
 };
 
 
@@ -859,9 +859,9 @@ export interface X509Chain$instance {
 
 
 export const X509Chain: {
-    new(): X509Chain$instance;
-    new(useMachineContext: boolean): X509Chain$instance;
-    new(chainContext: nint): X509Chain$instance;
+    new(): X509Chain;
+    new(useMachineContext: boolean): X509Chain;
+    new(chainContext: nint): X509Chain;
     Create(): X509Chain;
 };
 
@@ -883,7 +883,7 @@ export interface X509ChainElement$instance {
 
 
 export const X509ChainElement: {
-    new(): X509ChainElement$instance;
+    new(): X509ChainElement;
 };
 
 
@@ -900,7 +900,7 @@ export interface X509ChainElementCollection$instance {
 
 
 export const X509ChainElementCollection: {
-    new(): X509ChainElementCollection$instance;
+    new(): X509ChainElementCollection;
 };
 
 
@@ -921,7 +921,7 @@ export interface X509ChainElementEnumerator$instance {
 
 
 export const X509ChainElementEnumerator: {
-    new(): X509ChainElementEnumerator$instance;
+    new(): X509ChainElementEnumerator;
 };
 
 
@@ -953,7 +953,7 @@ export interface X509ChainPolicy$instance {
 
 
 export const X509ChainPolicy: {
-    new(): X509ChainPolicy$instance;
+    new(): X509ChainPolicy;
 };
 
 
@@ -966,9 +966,9 @@ export interface X509EnhancedKeyUsageExtension$instance extends X509Extension {
 
 
 export const X509EnhancedKeyUsageExtension: {
-    new(): X509EnhancedKeyUsageExtension$instance;
-    new(encodedEnhancedKeyUsages: AsnEncodedData, critical: boolean): X509EnhancedKeyUsageExtension$instance;
-    new(enhancedKeyUsages: OidCollection, critical: boolean): X509EnhancedKeyUsageExtension$instance;
+    new(): X509EnhancedKeyUsageExtension;
+    new(encodedEnhancedKeyUsages: AsnEncodedData, critical: boolean): X509EnhancedKeyUsageExtension;
+    new(enhancedKeyUsages: OidCollection, critical: boolean): X509EnhancedKeyUsageExtension;
 };
 
 
@@ -981,11 +981,11 @@ export interface X509Extension$instance extends AsnEncodedData {
 
 
 export const X509Extension: {
-    new(encodedExtension: AsnEncodedData, critical: boolean): X509Extension$instance;
-    new(oid: Oid, rawData: byte[], critical: boolean): X509Extension$instance;
-    new(oid: Oid, rawData: ReadOnlySpan_1<System_Internal.Byte>, critical: boolean): X509Extension$instance;
-    new(oid: string, rawData: byte[], critical: boolean): X509Extension$instance;
-    new(oid: string, rawData: ReadOnlySpan_1<System_Internal.Byte>, critical: boolean): X509Extension$instance;
+    new(encodedExtension: AsnEncodedData, critical: boolean): X509Extension;
+    new(oid: Oid, rawData: byte[], critical: boolean): X509Extension;
+    new(oid: Oid, rawData: ReadOnlySpan_1<System_Internal.Byte>, critical: boolean): X509Extension;
+    new(oid: string, rawData: byte[], critical: boolean): X509Extension;
+    new(oid: string, rawData: ReadOnlySpan_1<System_Internal.Byte>, critical: boolean): X509Extension;
 };
 
 
@@ -1004,7 +1004,7 @@ export interface X509ExtensionCollection$instance {
 
 
 export const X509ExtensionCollection: {
-    new(): X509ExtensionCollection$instance;
+    new(): X509ExtensionCollection;
 };
 
 
@@ -1025,7 +1025,7 @@ export interface X509ExtensionEnumerator$instance {
 
 
 export const X509ExtensionEnumerator: {
-    new(): X509ExtensionEnumerator$instance;
+    new(): X509ExtensionEnumerator;
 };
 
 
@@ -1045,9 +1045,9 @@ export interface X509KeyUsageExtension$instance extends X509Extension {
 
 
 export const X509KeyUsageExtension: {
-    new(): X509KeyUsageExtension$instance;
-    new(encodedKeyUsage: AsnEncodedData, critical: boolean): X509KeyUsageExtension$instance;
-    new(keyUsages: X509KeyUsageFlags, critical: boolean): X509KeyUsageExtension$instance;
+    new(): X509KeyUsageExtension;
+    new(encodedKeyUsage: AsnEncodedData, critical: boolean): X509KeyUsageExtension;
+    new(keyUsages: X509KeyUsageFlags, critical: boolean): X509KeyUsageExtension;
 };
 
 
@@ -1088,15 +1088,15 @@ export interface X509Store$instance {
 
 
 export const X509Store: {
-    new(): X509Store$instance;
-    new(storeName: string): X509Store$instance;
-    new(storeName: StoreName): X509Store$instance;
-    new(storeLocation: StoreLocation): X509Store$instance;
-    new(storeName: StoreName, storeLocation: StoreLocation): X509Store$instance;
-    new(storeName: StoreName, storeLocation: StoreLocation, flags: OpenFlags): X509Store$instance;
-    new(storeName: string, storeLocation: StoreLocation): X509Store$instance;
-    new(storeName: string, storeLocation: StoreLocation, flags: OpenFlags): X509Store$instance;
-    new(storeHandle: nint): X509Store$instance;
+    new(): X509Store;
+    new(storeName: string): X509Store;
+    new(storeName: StoreName): X509Store;
+    new(storeLocation: StoreLocation): X509Store;
+    new(storeName: StoreName, storeLocation: StoreLocation): X509Store;
+    new(storeName: StoreName, storeLocation: StoreLocation, flags: OpenFlags): X509Store;
+    new(storeName: string, storeLocation: StoreLocation): X509Store;
+    new(storeName: string, storeLocation: StoreLocation, flags: OpenFlags): X509Store;
+    new(storeHandle: nint): X509Store;
 };
 
 
@@ -1117,9 +1117,9 @@ export interface X509SubjectAlternativeNameExtension$instance extends X509Extens
 
 
 export const X509SubjectAlternativeNameExtension: {
-    new(): X509SubjectAlternativeNameExtension$instance;
-    new(rawData: byte[], critical: boolean): X509SubjectAlternativeNameExtension$instance;
-    new(rawData: ReadOnlySpan_1<System_Internal.Byte>, critical: boolean): X509SubjectAlternativeNameExtension$instance;
+    new(): X509SubjectAlternativeNameExtension;
+    new(rawData: byte[], critical: boolean): X509SubjectAlternativeNameExtension;
+    new(rawData: ReadOnlySpan_1<System_Internal.Byte>, critical: boolean): X509SubjectAlternativeNameExtension;
 };
 
 
@@ -1133,13 +1133,13 @@ export interface X509SubjectKeyIdentifierExtension$instance extends X509Extensio
 
 
 export const X509SubjectKeyIdentifierExtension: {
-    new(): X509SubjectKeyIdentifierExtension$instance;
-    new(encodedSubjectKeyIdentifier: AsnEncodedData, critical: boolean): X509SubjectKeyIdentifierExtension$instance;
-    new(subjectKeyIdentifier: byte[], critical: boolean): X509SubjectKeyIdentifierExtension$instance;
-    new(subjectKeyIdentifier: ReadOnlySpan_1<System_Internal.Byte>, critical: boolean): X509SubjectKeyIdentifierExtension$instance;
-    new(key: PublicKey, critical: boolean): X509SubjectKeyIdentifierExtension$instance;
-    new(key: PublicKey, algorithm: X509SubjectKeyIdentifierHashAlgorithm, critical: boolean): X509SubjectKeyIdentifierExtension$instance;
-    new(subjectKeyIdentifier: string, critical: boolean): X509SubjectKeyIdentifierExtension$instance;
+    new(): X509SubjectKeyIdentifierExtension;
+    new(encodedSubjectKeyIdentifier: AsnEncodedData, critical: boolean): X509SubjectKeyIdentifierExtension;
+    new(subjectKeyIdentifier: byte[], critical: boolean): X509SubjectKeyIdentifierExtension;
+    new(subjectKeyIdentifier: ReadOnlySpan_1<System_Internal.Byte>, critical: boolean): X509SubjectKeyIdentifierExtension;
+    new(key: PublicKey, critical: boolean): X509SubjectKeyIdentifierExtension;
+    new(key: PublicKey, algorithm: X509SubjectKeyIdentifierHashAlgorithm, critical: boolean): X509SubjectKeyIdentifierExtension;
+    new(subjectKeyIdentifier: string, critical: boolean): X509SubjectKeyIdentifierExtension;
 };
 
 

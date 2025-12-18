@@ -48,7 +48,7 @@ export interface AllowNullAttribute$instance extends Attribute {
 
 
 export const AllowNullAttribute: {
-    new(): AllowNullAttribute$instance;
+    new(): AllowNullAttribute;
 };
 
 
@@ -61,7 +61,7 @@ export interface ConstantExpectedAttribute$instance extends Attribute {
 
 
 export const ConstantExpectedAttribute: {
-    new(): ConstantExpectedAttribute$instance;
+    new(): ConstantExpectedAttribute;
 };
 
 
@@ -72,7 +72,7 @@ export interface DisallowNullAttribute$instance extends Attribute {
 
 
 export const DisallowNullAttribute: {
-    new(): DisallowNullAttribute$instance;
+    new(): DisallowNullAttribute;
 };
 
 
@@ -83,7 +83,7 @@ export interface DoesNotReturnAttribute$instance extends Attribute {
 
 
 export const DoesNotReturnAttribute: {
-    new(): DoesNotReturnAttribute$instance;
+    new(): DoesNotReturnAttribute;
 };
 
 
@@ -95,7 +95,7 @@ export interface DoesNotReturnIfAttribute$instance extends Attribute {
 
 
 export const DoesNotReturnIfAttribute: {
-    new(parameterValue: boolean): DoesNotReturnIfAttribute$instance;
+    new(parameterValue: boolean): DoesNotReturnIfAttribute;
 };
 
 
@@ -107,7 +107,7 @@ export interface DynamicallyAccessedMembersAttribute$instance extends Attribute 
 
 
 export const DynamicallyAccessedMembersAttribute: {
-    new(memberTypes: DynamicallyAccessedMemberTypes): DynamicallyAccessedMembersAttribute$instance;
+    new(memberTypes: DynamicallyAccessedMemberTypes): DynamicallyAccessedMembersAttribute;
 };
 
 
@@ -124,11 +124,11 @@ export interface DynamicDependencyAttribute$instance extends Attribute {
 
 
 export const DynamicDependencyAttribute: {
-    new(memberSignature: string): DynamicDependencyAttribute$instance;
-    new(memberSignature: string, type_: Type): DynamicDependencyAttribute$instance;
-    new(memberSignature: string, typeName: string, assemblyName: string): DynamicDependencyAttribute$instance;
-    new(memberTypes: DynamicallyAccessedMemberTypes, type_: Type): DynamicDependencyAttribute$instance;
-    new(memberTypes: DynamicallyAccessedMemberTypes, typeName: string, assemblyName: string): DynamicDependencyAttribute$instance;
+    new(memberSignature: string): DynamicDependencyAttribute;
+    new(memberSignature: string, type_: Type): DynamicDependencyAttribute;
+    new(memberSignature: string, typeName: string, assemblyName: string): DynamicDependencyAttribute;
+    new(memberTypes: DynamicallyAccessedMemberTypes, type_: Type): DynamicDependencyAttribute;
+    new(memberTypes: DynamicallyAccessedMemberTypes, typeName: string, assemblyName: string): DynamicDependencyAttribute;
 };
 
 
@@ -140,7 +140,7 @@ export interface ExcludeFromCodeCoverageAttribute$instance extends Attribute {
 
 
 export const ExcludeFromCodeCoverageAttribute: {
-    new(): ExcludeFromCodeCoverageAttribute$instance;
+    new(): ExcludeFromCodeCoverageAttribute;
 };
 
 
@@ -154,7 +154,7 @@ export interface ExperimentalAttribute$instance extends Attribute {
 
 
 export const ExperimentalAttribute: {
-    new(diagnosticId: string): ExperimentalAttribute$instance;
+    new(diagnosticId: string): ExperimentalAttribute;
 };
 
 
@@ -166,7 +166,7 @@ export interface FeatureGuardAttribute$instance extends Attribute {
 
 
 export const FeatureGuardAttribute: {
-    new(featureType: Type): FeatureGuardAttribute$instance;
+    new(featureType: Type): FeatureGuardAttribute;
 };
 
 
@@ -178,7 +178,7 @@ export interface FeatureSwitchDefinitionAttribute$instance extends Attribute {
 
 
 export const FeatureSwitchDefinitionAttribute: {
-    new(switchName: string): FeatureSwitchDefinitionAttribute$instance;
+    new(switchName: string): FeatureSwitchDefinitionAttribute;
 };
 
 
@@ -189,7 +189,7 @@ export interface MaybeNullAttribute$instance extends Attribute {
 
 
 export const MaybeNullAttribute: {
-    new(): MaybeNullAttribute$instance;
+    new(): MaybeNullAttribute;
 };
 
 
@@ -201,7 +201,7 @@ export interface MaybeNullWhenAttribute$instance extends Attribute {
 
 
 export const MaybeNullWhenAttribute: {
-    new(returnValue: boolean): MaybeNullWhenAttribute$instance;
+    new(returnValue: boolean): MaybeNullWhenAttribute;
 };
 
 
@@ -213,8 +213,8 @@ export interface MemberNotNullAttribute$instance extends Attribute {
 
 
 export const MemberNotNullAttribute: {
-    new(member: string): MemberNotNullAttribute$instance;
-    new(members: string[]): MemberNotNullAttribute$instance;
+    new(member: string): MemberNotNullAttribute;
+    new(members: string[]): MemberNotNullAttribute;
 };
 
 
@@ -227,8 +227,8 @@ export interface MemberNotNullWhenAttribute$instance extends Attribute {
 
 
 export const MemberNotNullWhenAttribute: {
-    new(returnValue: boolean, member: string): MemberNotNullWhenAttribute$instance;
-    new(returnValue: boolean, members: string[]): MemberNotNullWhenAttribute$instance;
+    new(returnValue: boolean, member: string): MemberNotNullWhenAttribute;
+    new(returnValue: boolean, members: string[]): MemberNotNullWhenAttribute;
 };
 
 
@@ -239,7 +239,7 @@ export interface NotNullAttribute$instance extends Attribute {
 
 
 export const NotNullAttribute: {
-    new(): NotNullAttribute$instance;
+    new(): NotNullAttribute;
 };
 
 
@@ -251,7 +251,7 @@ export interface NotNullIfNotNullAttribute$instance extends Attribute {
 
 
 export const NotNullIfNotNullAttribute: {
-    new(parameterName: string): NotNullIfNotNullAttribute$instance;
+    new(parameterName: string): NotNullIfNotNullAttribute;
 };
 
 
@@ -263,7 +263,7 @@ export interface NotNullWhenAttribute$instance extends Attribute {
 
 
 export const NotNullWhenAttribute: {
-    new(returnValue: boolean): NotNullWhenAttribute$instance;
+    new(returnValue: boolean): NotNullWhenAttribute;
 };
 
 
@@ -276,8 +276,8 @@ export interface RequiresAssemblyFilesAttribute$instance extends Attribute {
 
 
 export const RequiresAssemblyFilesAttribute: {
-    new(): RequiresAssemblyFilesAttribute$instance;
-    new(message: string): RequiresAssemblyFilesAttribute$instance;
+    new(): RequiresAssemblyFilesAttribute;
+    new(message: string): RequiresAssemblyFilesAttribute;
 };
 
 
@@ -291,7 +291,7 @@ export interface RequiresDynamicCodeAttribute$instance extends Attribute {
 
 
 export const RequiresDynamicCodeAttribute: {
-    new(message: string): RequiresDynamicCodeAttribute$instance;
+    new(message: string): RequiresDynamicCodeAttribute;
 };
 
 
@@ -305,7 +305,7 @@ export interface RequiresUnreferencedCodeAttribute$instance extends Attribute {
 
 
 export const RequiresUnreferencedCodeAttribute: {
-    new(message: string): RequiresUnreferencedCodeAttribute$instance;
+    new(message: string): RequiresUnreferencedCodeAttribute;
 };
 
 
@@ -316,7 +316,7 @@ export interface SetsRequiredMembersAttribute$instance extends Attribute {
 
 
 export const SetsRequiredMembersAttribute: {
-    new(): SetsRequiredMembersAttribute$instance;
+    new(): SetsRequiredMembersAttribute;
 };
 
 
@@ -329,8 +329,8 @@ export interface StringSyntaxAttribute$instance extends Attribute {
 
 
 export const StringSyntaxAttribute: {
-    new(syntax: string): StringSyntaxAttribute$instance;
-    new(syntax: string, arguments: unknown[]): StringSyntaxAttribute$instance;
+    new(syntax: string): StringSyntaxAttribute;
+    new(syntax: string, arguments: unknown[]): StringSyntaxAttribute;
     readonly CompositeFormat: string;
     readonly DateOnlyFormat: string;
     readonly DateTimeFormat: string;
@@ -359,7 +359,7 @@ export interface SuppressMessageAttribute$instance extends Attribute {
 
 
 export const SuppressMessageAttribute: {
-    new(category: string, checkId: string): SuppressMessageAttribute$instance;
+    new(category: string, checkId: string): SuppressMessageAttribute;
 };
 
 
@@ -376,7 +376,7 @@ export interface UnconditionalSuppressMessageAttribute$instance extends Attribut
 
 
 export const UnconditionalSuppressMessageAttribute: {
-    new(category: string, checkId: string): UnconditionalSuppressMessageAttribute$instance;
+    new(category: string, checkId: string): UnconditionalSuppressMessageAttribute;
 };
 
 
@@ -387,7 +387,7 @@ export interface UnscopedRefAttribute$instance extends Attribute {
 
 
 export const UnscopedRefAttribute: {
-    new(): UnscopedRefAttribute$instance;
+    new(): UnscopedRefAttribute;
 };
 
 

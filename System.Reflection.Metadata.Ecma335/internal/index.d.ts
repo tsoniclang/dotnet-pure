@@ -111,7 +111,7 @@ export interface ArrayShapeEncoder$instance {
 
 
 export const ArrayShapeEncoder: {
-    new(builder: BlobBuilder): ArrayShapeEncoder$instance;
+    new(builder: BlobBuilder): ArrayShapeEncoder;
 };
 
 
@@ -134,7 +134,7 @@ export interface BlobEncoder$instance {
 
 
 export const BlobEncoder: {
-    new(builder: BlobBuilder): BlobEncoder$instance;
+    new(builder: BlobBuilder): BlobEncoder;
 };
 
 
@@ -148,7 +148,7 @@ export interface CustomAttributeArrayTypeEncoder$instance {
 
 
 export const CustomAttributeArrayTypeEncoder: {
-    new(builder: BlobBuilder): CustomAttributeArrayTypeEncoder$instance;
+    new(builder: BlobBuilder): CustomAttributeArrayTypeEncoder;
 };
 
 
@@ -176,7 +176,7 @@ export interface CustomAttributeElementTypeEncoder$instance {
 
 
 export const CustomAttributeElementTypeEncoder: {
-    new(builder: BlobBuilder): CustomAttributeElementTypeEncoder$instance;
+    new(builder: BlobBuilder): CustomAttributeElementTypeEncoder;
 };
 
 
@@ -189,7 +189,7 @@ export interface CustomAttributeNamedArgumentsEncoder$instance {
 
 
 export const CustomAttributeNamedArgumentsEncoder: {
-    new(builder: BlobBuilder): CustomAttributeNamedArgumentsEncoder$instance;
+    new(builder: BlobBuilder): CustomAttributeNamedArgumentsEncoder;
 };
 
 
@@ -202,7 +202,7 @@ export interface CustomModifiersEncoder$instance {
 
 
 export const CustomModifiersEncoder: {
-    new(builder: BlobBuilder): CustomModifiersEncoder$instance;
+    new(builder: BlobBuilder): CustomModifiersEncoder;
 };
 
 
@@ -218,7 +218,7 @@ export interface EditAndContinueLogEntry$instance {
 
 
 export const EditAndContinueLogEntry: {
-    new(handle: EntityHandle, operation: EditAndContinueOperation): EditAndContinueLogEntry$instance;
+    new(handle: EntityHandle, operation: EditAndContinueOperation): EditAndContinueLogEntry;
 };
 
 
@@ -244,7 +244,7 @@ export interface ExceptionRegionEncoder$instance {
 
 
 export const ExceptionRegionEncoder: {
-    new(): ExceptionRegionEncoder$instance;
+    new(): ExceptionRegionEncoder;
     IsSmallExceptionRegion(startOffset: int, length: int): boolean;
     IsSmallRegionCount(exceptionRegionCount: int): boolean;
 };
@@ -261,7 +261,7 @@ export interface FieldTypeEncoder$instance {
 
 
 export const FieldTypeEncoder: {
-    new(builder: BlobBuilder): FieldTypeEncoder$instance;
+    new(builder: BlobBuilder): FieldTypeEncoder;
 };
 
 
@@ -274,7 +274,7 @@ export interface FixedArgumentsEncoder$instance {
 
 
 export const FixedArgumentsEncoder: {
-    new(builder: BlobBuilder): FixedArgumentsEncoder$instance;
+    new(builder: BlobBuilder): FixedArgumentsEncoder;
 };
 
 
@@ -287,7 +287,7 @@ export interface GenericTypeArgumentsEncoder$instance {
 
 
 export const GenericTypeArgumentsEncoder: {
-    new(builder: BlobBuilder): GenericTypeArgumentsEncoder$instance;
+    new(builder: BlobBuilder): GenericTypeArgumentsEncoder;
 };
 
 
@@ -324,7 +324,7 @@ export interface InstructionEncoder$instance {
 
 
 export const InstructionEncoder: {
-    new(codeBuilder: BlobBuilder, controlFlowBuilder: ControlFlowBuilder): InstructionEncoder$instance;
+    new(codeBuilder: BlobBuilder, controlFlowBuilder: ControlFlowBuilder): InstructionEncoder;
 };
 
 
@@ -340,7 +340,7 @@ export interface LabelHandle$instance {
 
 
 export const LabelHandle: {
-    new(): LabelHandle$instance;
+    new(): LabelHandle;
 };
 
 
@@ -366,7 +366,7 @@ export interface LiteralEncoder$instance {
 
 
 export const LiteralEncoder: {
-    new(builder: BlobBuilder): LiteralEncoder$instance;
+    new(builder: BlobBuilder): LiteralEncoder;
 };
 
 
@@ -379,7 +379,7 @@ export interface LiteralsEncoder$instance {
 
 
 export const LiteralsEncoder: {
-    new(builder: BlobBuilder): LiteralsEncoder$instance;
+    new(builder: BlobBuilder): LiteralsEncoder;
 };
 
 
@@ -392,7 +392,7 @@ export interface LocalVariablesEncoder$instance {
 
 
 export const LocalVariablesEncoder: {
-    new(builder: BlobBuilder): LocalVariablesEncoder$instance;
+    new(builder: BlobBuilder): LocalVariablesEncoder;
 };
 
 
@@ -407,7 +407,7 @@ export interface LocalVariableTypeEncoder$instance {
 
 
 export const LocalVariableTypeEncoder: {
-    new(builder: BlobBuilder): LocalVariableTypeEncoder$instance;
+    new(builder: BlobBuilder): LocalVariableTypeEncoder;
 };
 
 
@@ -423,7 +423,7 @@ export interface MethodBodyStreamEncoder$instance {
 
 
 export const MethodBodyStreamEncoder: {
-    new(builder: BlobBuilder): MethodBodyStreamEncoder$instance;
+    new(builder: BlobBuilder): MethodBodyStreamEncoder;
 };
 
 
@@ -437,7 +437,7 @@ export interface MethodBodyStreamEncoder_MethodBody$instance {
 
 
 export const MethodBodyStreamEncoder_MethodBody: {
-    new(): MethodBodyStreamEncoder_MethodBody$instance;
+    new(): MethodBodyStreamEncoder_MethodBody;
 };
 
 
@@ -452,7 +452,7 @@ export interface MethodSignatureEncoder$instance {
 
 
 export const MethodSignatureEncoder: {
-    new(builder: BlobBuilder, hasVarArgs: boolean): MethodSignatureEncoder$instance;
+    new(builder: BlobBuilder, hasVarArgs: boolean): MethodSignatureEncoder;
 };
 
 
@@ -466,7 +466,7 @@ export interface NamedArgumentsEncoder$instance {
 
 
 export const NamedArgumentsEncoder: {
-    new(builder: BlobBuilder): NamedArgumentsEncoder$instance;
+    new(builder: BlobBuilder): NamedArgumentsEncoder;
 };
 
 
@@ -481,7 +481,7 @@ export interface NamedArgumentTypeEncoder$instance {
 
 
 export const NamedArgumentTypeEncoder: {
-    new(builder: BlobBuilder): NamedArgumentTypeEncoder$instance;
+    new(builder: BlobBuilder): NamedArgumentTypeEncoder;
 };
 
 
@@ -494,7 +494,7 @@ export interface NameEncoder$instance {
 
 
 export const NameEncoder: {
-    new(builder: BlobBuilder): NameEncoder$instance;
+    new(builder: BlobBuilder): NameEncoder;
 };
 
 
@@ -509,7 +509,7 @@ export interface ParametersEncoder$instance {
 
 
 export const ParametersEncoder: {
-    new(builder: BlobBuilder, hasVarArgs: boolean): ParametersEncoder$instance;
+    new(builder: BlobBuilder, hasVarArgs: boolean): ParametersEncoder;
 };
 
 
@@ -524,7 +524,7 @@ export interface ParameterTypeEncoder$instance {
 
 
 export const ParameterTypeEncoder: {
-    new(builder: BlobBuilder): ParameterTypeEncoder$instance;
+    new(builder: BlobBuilder): ParameterTypeEncoder;
 };
 
 
@@ -538,7 +538,7 @@ export interface PermissionSetEncoder$instance {
 
 
 export const PermissionSetEncoder: {
-    new(builder: BlobBuilder): PermissionSetEncoder$instance;
+    new(builder: BlobBuilder): PermissionSetEncoder;
 };
 
 
@@ -554,7 +554,7 @@ export interface ReturnTypeEncoder$instance {
 
 
 export const ReturnTypeEncoder: {
-    new(builder: BlobBuilder): ReturnTypeEncoder$instance;
+    new(builder: BlobBuilder): ReturnTypeEncoder;
 };
 
 
@@ -569,7 +569,7 @@ export interface ScalarEncoder$instance {
 
 
 export const ScalarEncoder: {
-    new(builder: BlobBuilder): ScalarEncoder$instance;
+    new(builder: BlobBuilder): ScalarEncoder;
 };
 
 
@@ -585,7 +585,7 @@ export interface SignatureDecoder_2$instance<TType, TGenericContext> {
 
 
 export const SignatureDecoder_2: {
-    new<TType, TGenericContext>(provider: ISignatureTypeProvider_2<TType, TGenericContext>, metadataReader: MetadataReader, genericContext: TGenericContext): SignatureDecoder_2$instance<TType, TGenericContext>;
+    new<TType, TGenericContext>(provider: ISignatureTypeProvider_2<TType, TGenericContext>, metadataReader: MetadataReader, genericContext: TGenericContext): SignatureDecoder_2<TType, TGenericContext>;
 };
 
 
@@ -626,7 +626,7 @@ export interface SignatureTypeEncoder$instance {
 
 
 export const SignatureTypeEncoder: {
-    new(builder: BlobBuilder): SignatureTypeEncoder$instance;
+    new(builder: BlobBuilder): SignatureTypeEncoder;
 };
 
 
@@ -638,7 +638,7 @@ export interface SwitchInstructionEncoder$instance {
 
 
 export const SwitchInstructionEncoder: {
-    new(): SwitchInstructionEncoder$instance;
+    new(): SwitchInstructionEncoder;
 };
 
 
@@ -651,7 +651,7 @@ export interface VectorEncoder$instance {
 
 
 export const VectorEncoder: {
-    new(builder: BlobBuilder): VectorEncoder$instance;
+    new(builder: BlobBuilder): VectorEncoder;
 };
 
 
@@ -667,7 +667,7 @@ export interface ControlFlowBuilder$instance {
 
 
 export const ControlFlowBuilder: {
-    new(): ControlFlowBuilder$instance;
+    new(): ControlFlowBuilder;
 };
 
 
@@ -679,8 +679,8 @@ export interface MetadataAggregator$instance {
 
 
 export const MetadataAggregator: {
-    new(baseReader: MetadataReader, deltaReaders: IReadOnlyList_1<MetadataReader>): MetadataAggregator$instance;
-    new(baseTableRowCounts: IReadOnlyList_1<System_Internal.Int32>, baseHeapSizes: IReadOnlyList_1<System_Internal.Int32>, deltaReaders: IReadOnlyList_1<MetadataReader>): MetadataAggregator$instance;
+    new(baseReader: MetadataReader, deltaReaders: IReadOnlyList_1<MetadataReader>): MetadataAggregator;
+    new(baseTableRowCounts: IReadOnlyList_1<System_Internal.Int32>, baseHeapSizes: IReadOnlyList_1<System_Internal.Int32>, deltaReaders: IReadOnlyList_1<MetadataReader>): MetadataAggregator;
 };
 
 
@@ -751,7 +751,7 @@ export interface MetadataBuilder$instance {
 
 
 export const MetadataBuilder: {
-    new(userStringHeapStartOffset: int, stringHeapStartOffset: int, blobHeapStartOffset: int, guidHeapStartOffset: int): MetadataBuilder$instance;
+    new(userStringHeapStartOffset: int, stringHeapStartOffset: int, blobHeapStartOffset: int, guidHeapStartOffset: int): MetadataBuilder;
 };
 
 
@@ -766,7 +766,7 @@ export interface MetadataRootBuilder$instance {
 
 
 export const MetadataRootBuilder: {
-    new(tablesAndHeaps: MetadataBuilder, metadataVersion: string, suppressValidation: boolean): MetadataRootBuilder$instance;
+    new(tablesAndHeaps: MetadataBuilder, metadataVersion: string, suppressValidation: boolean): MetadataRootBuilder;
 };
 
 
@@ -781,7 +781,7 @@ export interface MetadataSizes$instance {
 
 
 export const MetadataSizes: {
-    new(): MetadataSizes$instance;
+    new(): MetadataSizes;
 };
 
 
@@ -796,7 +796,7 @@ export interface PortablePdbBuilder$instance {
 
 
 export const PortablePdbBuilder: {
-    new(tablesAndHeaps: MetadataBuilder, typeSystemRowCounts: ImmutableArray_1<System_Internal.Int32>, entryPoint: MethodDefinitionHandle, idProvider: Func_2<IEnumerable_1<Blob>, BlobContentId>): PortablePdbBuilder$instance;
+    new(tablesAndHeaps: MetadataBuilder, typeSystemRowCounts: ImmutableArray_1<System_Internal.Int32>, entryPoint: MethodDefinitionHandle, idProvider: Func_2<IEnumerable_1<Blob>, BlobContentId>): PortablePdbBuilder;
 };
 
 

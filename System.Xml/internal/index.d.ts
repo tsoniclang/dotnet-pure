@@ -298,7 +298,7 @@ export interface NameTable$instance extends XmlNameTable {
 
 
 export const NameTable: {
-    new(): NameTable$instance;
+    new(): NameTable;
 };
 
 
@@ -317,12 +317,12 @@ export interface UniqueId$instance {
 
 
 export const UniqueId: {
-    new(): UniqueId$instance;
-    new(guid: Guid): UniqueId$instance;
-    new(guid: byte[]): UniqueId$instance;
-    new(guid: byte[], offset: int): UniqueId$instance;
-    new(value: string): UniqueId$instance;
-    new(chars: char[], offset: int, count: int): UniqueId$instance;
+    new(): UniqueId;
+    new(guid: Guid): UniqueId;
+    new(guid: byte[]): UniqueId;
+    new(guid: byte[], offset: int): UniqueId;
+    new(value: string): UniqueId;
+    new(chars: char[], offset: int, count: int): UniqueId;
 };
 
 
@@ -360,7 +360,7 @@ export interface XmlAttribute$instance extends XmlNode$instance {
 
 
 export const XmlAttribute: {
-    new(): XmlAttribute$instance;
+    new(): XmlAttribute;
 };
 
 
@@ -391,7 +391,7 @@ export interface XmlAttributeCollection$instance extends XmlNamedNodeMap$instanc
 
 
 export const XmlAttributeCollection: {
-    new(): XmlAttributeCollection$instance;
+    new(): XmlAttributeCollection;
 };
 
 
@@ -413,7 +413,7 @@ export interface XmlBinaryReaderSession$instance {
 
 
 export const XmlBinaryReaderSession: {
-    new(): XmlBinaryReaderSession$instance;
+    new(): XmlBinaryReaderSession;
 };
 
 
@@ -431,7 +431,7 @@ export interface XmlBinaryWriterSession$instance {
 
 
 export const XmlBinaryWriterSession: {
-    new(): XmlBinaryWriterSession$instance;
+    new(): XmlBinaryWriterSession;
 };
 
 
@@ -454,7 +454,7 @@ export interface XmlCDataSection$instance extends XmlCharacterData$instance {
 
 
 export const XmlCDataSection: {
-    new(): XmlCDataSection$instance;
+    new(): XmlCDataSection;
 };
 
 
@@ -512,7 +512,7 @@ export interface XmlComment$instance extends XmlCharacterData$instance {
 
 
 export const XmlComment: {
-    new(): XmlComment$instance;
+    new(): XmlComment;
 };
 
 
@@ -530,7 +530,7 @@ export interface XmlConvert$instance {
 
 
 export const XmlConvert: {
-    new(): XmlConvert$instance;
+    new(): XmlConvert;
     DecodeName(name: string): string;
     EncodeLocalName(name: string): string;
     EncodeName(name: string): string;
@@ -619,8 +619,8 @@ export interface XmlDataDocument$instance extends XmlDocument$instance {
 
 
 export const XmlDataDocument: {
-    new(): XmlDataDocument$instance;
-    new(dataset: DataSet): XmlDataDocument$instance;
+    new(): XmlDataDocument;
+    new(dataset: DataSet): XmlDataDocument;
 };
 
 
@@ -653,7 +653,7 @@ export interface XmlDeclaration$instance extends XmlLinkedNode$instance {
 
 
 export const XmlDeclaration: {
-    new(): XmlDeclaration$instance;
+    new(): XmlDeclaration;
 };
 
 
@@ -675,8 +675,8 @@ export interface XmlDictionary$instance {
 
 
 export const XmlDictionary: {
-    new(): XmlDictionary$instance;
-    new(capacity: int): XmlDictionary$instance;
+    new(): XmlDictionary;
+    new(capacity: int): XmlDictionary;
     readonly Empty: IXmlDictionary;
 };
 
@@ -848,7 +848,7 @@ export interface XmlDictionaryReaderQuotas$instance {
 
 
 export const XmlDictionaryReaderQuotas: {
-    new(): XmlDictionaryReaderQuotas$instance;
+    new(): XmlDictionaryReaderQuotas;
     readonly Max: XmlDictionaryReaderQuotas;
 };
 
@@ -864,7 +864,7 @@ export interface XmlDictionaryString$instance {
 
 
 export const XmlDictionaryString: {
-    new(dictionary: IXmlDictionary, value: string, key: int): XmlDictionaryString$instance;
+    new(dictionary: IXmlDictionary, value: string, key: int): XmlDictionaryString;
     readonly Empty: XmlDictionaryString;
 };
 
@@ -1023,8 +1023,8 @@ export interface XmlDocument$instance extends XmlNode$instance {
 
 
 export const XmlDocument: {
-    new(): XmlDocument$instance;
-    new(nt: XmlNameTable): XmlDocument$instance;
+    new(): XmlDocument;
+    new(nt: XmlNameTable): XmlDocument;
 };
 
 
@@ -1055,7 +1055,7 @@ export interface XmlDocumentFragment$instance extends XmlNode$instance {
 
 
 export const XmlDocumentFragment: {
-    new(): XmlDocumentFragment$instance;
+    new(): XmlDocumentFragment;
 };
 
 
@@ -1089,7 +1089,7 @@ export interface XmlDocumentType$instance extends XmlLinkedNode$instance {
 
 
 export const XmlDocumentType: {
-    new(): XmlDocumentType$instance;
+    new(): XmlDocumentType;
 };
 
 
@@ -1147,7 +1147,7 @@ export interface XmlElement$instance extends XmlLinkedNode$instance {
 
 
 export const XmlElement: {
-    new(): XmlElement$instance;
+    new(): XmlElement;
 };
 
 
@@ -1183,7 +1183,7 @@ export interface XmlEntity$instance extends XmlNode$instance {
 
 
 export const XmlEntity: {
-    new(): XmlEntity$instance;
+    new(): XmlEntity;
 };
 
 
@@ -1214,7 +1214,7 @@ export interface XmlEntityReference$instance extends XmlLinkedNode$instance {
 
 
 export const XmlEntityReference: {
-    new(): XmlEntityReference$instance;
+    new(): XmlEntityReference;
 };
 
 
@@ -1237,10 +1237,10 @@ export interface XmlException$instance extends SystemException {
 
 
 export const XmlException: {
-    new(): XmlException$instance;
-    new(message: string): XmlException$instance;
-    new(message: string, innerException: Exception): XmlException$instance;
-    new(message: string, innerException: Exception, lineNumber: int, linePosition: int): XmlException$instance;
+    new(): XmlException;
+    new(message: string): XmlException;
+    new(message: string, innerException: Exception): XmlException;
+    new(message: string, innerException: Exception, lineNumber: int, linePosition: int): XmlException;
 };
 
 
@@ -1258,8 +1258,8 @@ export interface XmlImplementation$instance {
 
 
 export const XmlImplementation: {
-    new(): XmlImplementation$instance;
-    new(nt: XmlNameTable): XmlImplementation$instance;
+    new(): XmlImplementation;
+    new(nt: XmlNameTable): XmlImplementation;
 };
 
 
@@ -1301,7 +1301,7 @@ export interface XmlNamedNodeMap$instance {
 
 
 export const XmlNamedNodeMap: {
-    new(): XmlNamedNodeMap$instance;
+    new(): XmlNamedNodeMap;
 };
 
 
@@ -1330,7 +1330,7 @@ export interface XmlNamespaceManager$instance {
 
 
 export const XmlNamespaceManager: {
-    new(nameTable: XmlNameTable): XmlNamespaceManager$instance;
+    new(nameTable: XmlNameTable): XmlNamespaceManager;
 };
 
 
@@ -1433,7 +1433,7 @@ export interface XmlNodeChangedEventArgs$instance extends EventArgs {
 
 
 export const XmlNodeChangedEventArgs: {
-    new(node: XmlNode, oldParent: XmlNode, newParent: XmlNode, oldValue: string, newValue: string, action: XmlNodeChangedAction): XmlNodeChangedEventArgs$instance;
+    new(node: XmlNode, oldParent: XmlNode, newParent: XmlNode, oldValue: string, newValue: string, action: XmlNodeChangedAction): XmlNodeChangedEventArgs;
 };
 
 
@@ -1508,7 +1508,7 @@ export interface XmlNodeReader$instance extends XmlReader$instance {
 
 
 export const XmlNodeReader: {
-    new(node: XmlNode): XmlNodeReader$instance;
+    new(node: XmlNode): XmlNodeReader;
 };
 
 
@@ -1540,7 +1540,7 @@ export interface XmlNotation$instance extends XmlNode$instance {
 
 
 export const XmlNotation: {
-    new(): XmlNotation$instance;
+    new(): XmlNotation;
 };
 
 
@@ -1568,10 +1568,10 @@ export interface XmlParserContext$instance {
 
 
 export const XmlParserContext: {
-    new(nt: XmlNameTable, nsMgr: XmlNamespaceManager, xmlLang: string, xmlSpace: XmlSpace): XmlParserContext$instance;
-    new(nt: XmlNameTable, nsMgr: XmlNamespaceManager, xmlLang: string, xmlSpace: XmlSpace, enc: Encoding): XmlParserContext$instance;
-    new(nt: XmlNameTable, nsMgr: XmlNamespaceManager, docTypeName: string, pubId: string, sysId: string, internalSubset: string, baseURI: string, xmlLang: string, xmlSpace: XmlSpace): XmlParserContext$instance;
-    new(nt: XmlNameTable, nsMgr: XmlNamespaceManager, docTypeName: string, pubId: string, sysId: string, internalSubset: string, baseURI: string, xmlLang: string, xmlSpace: XmlSpace, enc: Encoding): XmlParserContext$instance;
+    new(nt: XmlNameTable, nsMgr: XmlNamespaceManager, xmlLang: string, xmlSpace: XmlSpace): XmlParserContext;
+    new(nt: XmlNameTable, nsMgr: XmlNamespaceManager, xmlLang: string, xmlSpace: XmlSpace, enc: Encoding): XmlParserContext;
+    new(nt: XmlNameTable, nsMgr: XmlNamespaceManager, docTypeName: string, pubId: string, sysId: string, internalSubset: string, baseURI: string, xmlLang: string, xmlSpace: XmlSpace): XmlParserContext;
+    new(nt: XmlNameTable, nsMgr: XmlNamespaceManager, docTypeName: string, pubId: string, sysId: string, internalSubset: string, baseURI: string, xmlLang: string, xmlSpace: XmlSpace, enc: Encoding): XmlParserContext;
 };
 
 
@@ -1596,7 +1596,7 @@ export interface XmlProcessingInstruction$instance extends XmlLinkedNode$instanc
 
 
 export const XmlProcessingInstruction: {
-    new(): XmlProcessingInstruction$instance;
+    new(): XmlProcessingInstruction;
 };
 
 
@@ -1620,9 +1620,9 @@ export interface XmlQualifiedName$instance {
 
 
 export const XmlQualifiedName: {
-    new(): XmlQualifiedName$instance;
-    new(name: string): XmlQualifiedName$instance;
-    new(name: string, ns: string): XmlQualifiedName$instance;
+    new(): XmlQualifiedName;
+    new(name: string): XmlQualifiedName;
+    new(name: string, ns: string): XmlQualifiedName;
     readonly Empty: XmlQualifiedName;
     ToString(name: string, ns: string): string;
 };
@@ -1804,7 +1804,7 @@ export interface XmlReaderSettings$instance {
 
 
 export const XmlReaderSettings: {
-    new(): XmlReaderSettings$instance;
+    new(): XmlReaderSettings;
 };
 
 
@@ -1837,7 +1837,7 @@ export interface XmlSecureResolver$instance extends XmlResolver {
 
 
 export const XmlSecureResolver: {
-    new(resolver: XmlResolver, securityUrl: string): XmlSecureResolver$instance;
+    new(resolver: XmlResolver, securityUrl: string): XmlSecureResolver;
 };
 
 
@@ -1861,7 +1861,7 @@ export interface XmlSignificantWhitespace$instance extends XmlCharacterData$inst
 
 
 export const XmlSignificantWhitespace: {
-    new(): XmlSignificantWhitespace$instance;
+    new(): XmlSignificantWhitespace;
 };
 
 
@@ -1893,7 +1893,7 @@ export interface XmlText$instance extends XmlCharacterData$instance {
 
 
 export const XmlText: {
-    new(): XmlText$instance;
+    new(): XmlText;
 };
 
 
@@ -1970,18 +1970,18 @@ export interface XmlTextReader$instance extends XmlReader$instance {
 
 
 export const XmlTextReader: {
-    new(input: Stream): XmlTextReader$instance;
-    new(url: string, input: Stream): XmlTextReader$instance;
-    new(input: Stream, nt: XmlNameTable): XmlTextReader$instance;
-    new(url: string, input: Stream, nt: XmlNameTable): XmlTextReader$instance;
-    new(input: TextReader): XmlTextReader$instance;
-    new(url: string, input: TextReader): XmlTextReader$instance;
-    new(input: TextReader, nt: XmlNameTable): XmlTextReader$instance;
-    new(url: string, input: TextReader, nt: XmlNameTable): XmlTextReader$instance;
-    new(xmlFragment: Stream, fragType: XmlNodeType, context: XmlParserContext): XmlTextReader$instance;
-    new(xmlFragment: string, fragType: XmlNodeType, context: XmlParserContext): XmlTextReader$instance;
-    new(url: string): XmlTextReader$instance;
-    new(url: string, nt: XmlNameTable): XmlTextReader$instance;
+    new(input: Stream): XmlTextReader;
+    new(url: string, input: Stream): XmlTextReader;
+    new(input: Stream, nt: XmlNameTable): XmlTextReader;
+    new(url: string, input: Stream, nt: XmlNameTable): XmlTextReader;
+    new(input: TextReader): XmlTextReader;
+    new(url: string, input: TextReader): XmlTextReader;
+    new(input: TextReader, nt: XmlNameTable): XmlTextReader;
+    new(url: string, input: TextReader, nt: XmlNameTable): XmlTextReader;
+    new(xmlFragment: Stream, fragType: XmlNodeType, context: XmlParserContext): XmlTextReader;
+    new(xmlFragment: string, fragType: XmlNodeType, context: XmlParserContext): XmlTextReader;
+    new(url: string): XmlTextReader;
+    new(url: string, nt: XmlNameTable): XmlTextReader;
 };
 
 
@@ -2044,9 +2044,9 @@ export interface XmlTextWriter$instance extends XmlWriter$instance {
 
 
 export const XmlTextWriter: {
-    new(w: Stream, encoding: Encoding): XmlTextWriter$instance;
-    new(filename: string, encoding: Encoding): XmlTextWriter$instance;
-    new(w: TextWriter): XmlTextWriter$instance;
+    new(w: Stream, encoding: Encoding): XmlTextWriter;
+    new(filename: string, encoding: Encoding): XmlTextWriter;
+    new(w: TextWriter): XmlTextWriter;
 };
 
 
@@ -2070,7 +2070,7 @@ export interface XmlUrlResolver$instance extends XmlResolver {
 
 
 export const XmlUrlResolver: {
-    new(): XmlUrlResolver$instance;
+    new(): XmlUrlResolver;
 };
 
 
@@ -2133,9 +2133,9 @@ export interface XmlValidatingReader$instance extends XmlReader$instance {
 
 
 export const XmlValidatingReader: {
-    new(reader: XmlReader): XmlValidatingReader$instance;
-    new(xmlFragment: string, fragType: XmlNodeType, context: XmlParserContext): XmlValidatingReader$instance;
-    new(xmlFragment: Stream, fragType: XmlNodeType, context: XmlParserContext): XmlValidatingReader$instance;
+    new(reader: XmlReader): XmlValidatingReader;
+    new(xmlFragment: string, fragType: XmlNodeType, context: XmlParserContext): XmlValidatingReader;
+    new(xmlFragment: Stream, fragType: XmlNodeType, context: XmlParserContext): XmlValidatingReader;
 };
 
 
@@ -2168,7 +2168,7 @@ export interface XmlWhitespace$instance extends XmlCharacterData$instance {
 
 
 export const XmlWhitespace: {
-    new(): XmlWhitespace$instance;
+    new(): XmlWhitespace;
 };
 
 
@@ -2317,7 +2317,7 @@ export interface XmlWriterSettings$instance {
 
 
 export const XmlWriterSettings: {
-    new(): XmlWriterSettings$instance;
+    new(): XmlWriterSettings;
 };
 
 

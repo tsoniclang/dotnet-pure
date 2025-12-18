@@ -138,7 +138,7 @@ export interface Label$instance {
 
 
 export const Label: {
-    new(): Label$instance;
+    new(): Label;
 };
 
 
@@ -170,7 +170,7 @@ export interface OpCode$instance {
 
 
 export const OpCode: {
-    new(): OpCode$instance;
+    new(): OpCode;
 };
 
 
@@ -252,10 +252,10 @@ export interface CustomAttributeBuilder$instance {
 
 
 export const CustomAttributeBuilder: {
-    new(con: ConstructorInfo, constructorArgs: unknown[]): CustomAttributeBuilder$instance;
-    new(con: ConstructorInfo, constructorArgs: unknown[], namedProperties: PropertyInfo[], propertyValues: unknown[]): CustomAttributeBuilder$instance;
-    new(con: ConstructorInfo, constructorArgs: unknown[], namedFields: FieldInfo[], fieldValues: unknown[]): CustomAttributeBuilder$instance;
-    new(con: ConstructorInfo, constructorArgs: unknown[], namedProperties: PropertyInfo[], propertyValues: unknown[], namedFields: FieldInfo[], fieldValues: unknown[]): CustomAttributeBuilder$instance;
+    new(con: ConstructorInfo, constructorArgs: unknown[]): CustomAttributeBuilder;
+    new(con: ConstructorInfo, constructorArgs: unknown[], namedProperties: PropertyInfo[], propertyValues: unknown[]): CustomAttributeBuilder;
+    new(con: ConstructorInfo, constructorArgs: unknown[], namedFields: FieldInfo[], fieldValues: unknown[]): CustomAttributeBuilder;
+    new(con: ConstructorInfo, constructorArgs: unknown[], namedProperties: PropertyInfo[], propertyValues: unknown[], namedFields: FieldInfo[], fieldValues: unknown[]): CustomAttributeBuilder;
 };
 
 
@@ -281,7 +281,7 @@ export interface DynamicILInfo$instance {
 
 
 export const DynamicILInfo: {
-    new(): DynamicILInfo$instance;
+    new(): DynamicILInfo;
 };
 
 
@@ -323,14 +323,14 @@ export interface DynamicMethod$instance extends MethodInfo {
 
 
 export const DynamicMethod: {
-    new(name: string, returnType: Type, parameterTypes: Type[]): DynamicMethod$instance;
-    new(name: string, returnType: Type, parameterTypes: Type[], restrictedSkipVisibility: boolean): DynamicMethod$instance;
-    new(name: string, returnType: Type, parameterTypes: Type[], m: Module): DynamicMethod$instance;
-    new(name: string, returnType: Type, parameterTypes: Type[], m: Module, skipVisibility: boolean): DynamicMethod$instance;
-    new(name: string, attributes: MethodAttributes, callingConvention: CallingConventions, returnType: Type, parameterTypes: Type[], m: Module, skipVisibility: boolean): DynamicMethod$instance;
-    new(name: string, returnType: Type, parameterTypes: Type[], owner: Type): DynamicMethod$instance;
-    new(name: string, returnType: Type, parameterTypes: Type[], owner: Type, skipVisibility: boolean): DynamicMethod$instance;
-    new(name: string, attributes: MethodAttributes, callingConvention: CallingConventions, returnType: Type, parameterTypes: Type[], owner: Type, skipVisibility: boolean): DynamicMethod$instance;
+    new(name: string, returnType: Type, parameterTypes: Type[]): DynamicMethod;
+    new(name: string, returnType: Type, parameterTypes: Type[], restrictedSkipVisibility: boolean): DynamicMethod;
+    new(name: string, returnType: Type, parameterTypes: Type[], m: Module): DynamicMethod;
+    new(name: string, returnType: Type, parameterTypes: Type[], m: Module, skipVisibility: boolean): DynamicMethod;
+    new(name: string, attributes: MethodAttributes, callingConvention: CallingConventions, returnType: Type, parameterTypes: Type[], m: Module, skipVisibility: boolean): DynamicMethod;
+    new(name: string, returnType: Type, parameterTypes: Type[], owner: Type): DynamicMethod;
+    new(name: string, returnType: Type, parameterTypes: Type[], owner: Type, skipVisibility: boolean): DynamicMethod;
+    new(name: string, attributes: MethodAttributes, callingConvention: CallingConventions, returnType: Type, parameterTypes: Type[], owner: Type, skipVisibility: boolean): DynamicMethod;
 };
 
 
@@ -651,7 +651,7 @@ export interface OpCodes$instance {
 
 
 export const OpCodes: {
-    new(): OpCodes$instance;
+    new(): OpCodes;
     readonly Nop: OpCode;
     readonly Break: OpCode;
     readonly Ldarg_0: OpCode;
@@ -920,7 +920,7 @@ export interface PersistedAssemblyBuilder$instance extends AssemblyBuilder$insta
 
 
 export const PersistedAssemblyBuilder: {
-    new(name: AssemblyName, coreAssembly: Assembly, assemblyAttributes: IEnumerable_1<CustomAttributeBuilder>): PersistedAssemblyBuilder$instance;
+    new(name: AssemblyName, coreAssembly: Assembly, assemblyAttributes: IEnumerable_1<CustomAttributeBuilder>): PersistedAssemblyBuilder;
 };
 
 
@@ -970,7 +970,7 @@ export interface SignatureHelper$instance {
 
 
 export const SignatureHelper: {
-    new(): SignatureHelper$instance;
+    new(): SignatureHelper;
     GetFieldSigHelper(mod: Module): SignatureHelper;
     GetLocalVarSigHelper(): SignatureHelper;
     GetLocalVarSigHelper(mod: Module): SignatureHelper;

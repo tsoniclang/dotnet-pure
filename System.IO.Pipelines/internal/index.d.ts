@@ -32,7 +32,7 @@ export interface FlushResult$instance {
 
 
 export const FlushResult: {
-    new(isCanceled: boolean, isCompleted: boolean): FlushResult$instance;
+    new(isCanceled: boolean, isCompleted: boolean): FlushResult;
 };
 
 
@@ -46,7 +46,7 @@ export interface ReadResult$instance {
 
 
 export const ReadResult: {
-    new(buffer: ReadOnlySequence_1<System_Internal.Byte>, isCanceled: boolean, isCompleted: boolean): ReadResult$instance;
+    new(buffer: ReadOnlySequence_1<System_Internal.Byte>, isCanceled: boolean, isCompleted: boolean): ReadResult;
 };
 
 
@@ -60,8 +60,8 @@ export interface Pipe$instance {
 
 
 export const Pipe: {
-    new(): Pipe$instance;
-    new(options: PipeOptions): Pipe$instance;
+    new(): Pipe;
+    new(options: PipeOptions): Pipe;
 };
 
 
@@ -79,7 +79,7 @@ export interface PipeOptions$instance {
 
 
 export const PipeOptions: {
-    new(pool: MemoryPool_1<System_Internal.Byte>, readerScheduler: PipeScheduler, writerScheduler: PipeScheduler, pauseWriterThreshold: long, resumeWriterThreshold: long, minimumSegmentSize: int, useSynchronizationContext: boolean): PipeOptions$instance;
+    new(pool: MemoryPool_1<System_Internal.Byte>, readerScheduler: PipeScheduler, writerScheduler: PipeScheduler, pauseWriterThreshold: long, resumeWriterThreshold: long, minimumSegmentSize: int, useSynchronizationContext: boolean): PipeOptions;
     readonly Default: PipeOptions;
 };
 
@@ -163,8 +163,8 @@ export interface StreamPipeReaderOptions$instance {
 
 
 export const StreamPipeReaderOptions: {
-    new(pool: MemoryPool_1<System_Internal.Byte>, bufferSize: int, minimumReadSize: int, leaveOpen: boolean): StreamPipeReaderOptions$instance;
-    new(pool: MemoryPool_1<System_Internal.Byte>, bufferSize: int, minimumReadSize: int, leaveOpen: boolean, useZeroByteReads: boolean): StreamPipeReaderOptions$instance;
+    new(pool: MemoryPool_1<System_Internal.Byte>, bufferSize: int, minimumReadSize: int, leaveOpen: boolean): StreamPipeReaderOptions;
+    new(pool: MemoryPool_1<System_Internal.Byte>, bufferSize: int, minimumReadSize: int, leaveOpen: boolean, useZeroByteReads: boolean): StreamPipeReaderOptions;
 };
 
 
@@ -178,7 +178,7 @@ export interface StreamPipeWriterOptions$instance {
 
 
 export const StreamPipeWriterOptions: {
-    new(pool: MemoryPool_1<System_Internal.Byte>, minimumBufferSize: int, leaveOpen: boolean): StreamPipeWriterOptions$instance;
+    new(pool: MemoryPool_1<System_Internal.Byte>, minimumBufferSize: int, leaveOpen: boolean): StreamPipeWriterOptions;
 };
 
 

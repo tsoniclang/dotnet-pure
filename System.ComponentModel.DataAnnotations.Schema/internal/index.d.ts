@@ -24,8 +24,8 @@ export interface ColumnAttribute$instance extends Attribute {
 
 
 export const ColumnAttribute: {
-    new(): ColumnAttribute$instance;
-    new(name: string): ColumnAttribute$instance;
+    new(): ColumnAttribute;
+    new(name: string): ColumnAttribute;
 };
 
 
@@ -36,7 +36,7 @@ export interface ComplexTypeAttribute$instance extends Attribute {
 
 
 export const ComplexTypeAttribute: {
-    new(): ComplexTypeAttribute$instance;
+    new(): ComplexTypeAttribute;
 };
 
 
@@ -48,7 +48,7 @@ export interface DatabaseGeneratedAttribute$instance extends Attribute {
 
 
 export const DatabaseGeneratedAttribute: {
-    new(databaseGeneratedOption: DatabaseGeneratedOption): DatabaseGeneratedAttribute$instance;
+    new(databaseGeneratedOption: DatabaseGeneratedOption): DatabaseGeneratedAttribute;
 };
 
 
@@ -60,7 +60,7 @@ export interface ForeignKeyAttribute$instance extends Attribute {
 
 
 export const ForeignKeyAttribute: {
-    new(name: string): ForeignKeyAttribute$instance;
+    new(name: string): ForeignKeyAttribute;
 };
 
 
@@ -72,7 +72,7 @@ export interface InversePropertyAttribute$instance extends Attribute {
 
 
 export const InversePropertyAttribute: {
-    new(property: string): InversePropertyAttribute$instance;
+    new(property: string): InversePropertyAttribute;
 };
 
 
@@ -83,7 +83,7 @@ export interface NotMappedAttribute$instance extends Attribute {
 
 
 export const NotMappedAttribute: {
-    new(): NotMappedAttribute$instance;
+    new(): NotMappedAttribute;
 };
 
 
@@ -96,7 +96,7 @@ export interface TableAttribute$instance extends Attribute {
 
 
 export const TableAttribute: {
-    new(name: string): TableAttribute$instance;
+    new(name: string): TableAttribute;
 };
 
 

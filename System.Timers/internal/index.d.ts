@@ -23,7 +23,7 @@ export interface ElapsedEventArgs$instance extends EventArgs {
 
 
 export const ElapsedEventArgs: {
-    new(signalTime: DateTime): ElapsedEventArgs$instance;
+    new(signalTime: DateTime): ElapsedEventArgs;
 };
 
 
@@ -45,9 +45,9 @@ export interface Timer$instance extends Component {
 
 
 export const Timer: {
-    new(): Timer$instance;
-    new(interval: double): Timer$instance;
-    new(interval: TimeSpan): Timer$instance;
+    new(): Timer;
+    new(interval: double): Timer;
+    new(interval: TimeSpan): Timer;
 };
 
 
@@ -68,7 +68,7 @@ export interface TimersDescriptionAttribute$instance extends DescriptionAttribut
 
 
 export const TimersDescriptionAttribute: {
-    new(description: string): TimersDescriptionAttribute$instance;
+    new(description: string): TimersDescriptionAttribute;
 };
 
 

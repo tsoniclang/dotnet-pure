@@ -51,7 +51,7 @@ export interface AllowedValuesAttribute$instance extends ValidationAttribute {
 
 
 export const AllowedValuesAttribute: {
-    new(values: unknown[]): AllowedValuesAttribute$instance;
+    new(values: unknown[]): AllowedValuesAttribute;
 };
 
 
@@ -65,8 +65,8 @@ export interface AssociatedMetadataTypeTypeDescriptionProvider$instance extends 
 
 
 export const AssociatedMetadataTypeTypeDescriptionProvider: {
-    new(type_: Type): AssociatedMetadataTypeTypeDescriptionProvider$instance;
-    new(type_: Type, associatedMetadataType: Type): AssociatedMetadataTypeTypeDescriptionProvider$instance;
+    new(type_: Type): AssociatedMetadataTypeTypeDescriptionProvider;
+    new(type_: Type, associatedMetadataType: Type): AssociatedMetadataTypeTypeDescriptionProvider;
 };
 
 
@@ -83,7 +83,7 @@ export interface AssociationAttribute$instance extends Attribute {
 
 
 export const AssociationAttribute: {
-    new(name: string, thisKey: string, otherKey: string): AssociationAttribute$instance;
+    new(name: string, thisKey: string, otherKey: string): AssociationAttribute;
 };
 
 
@@ -95,7 +95,7 @@ export interface Base64StringAttribute$instance extends ValidationAttribute {
 
 
 export const Base64StringAttribute: {
-    new(): Base64StringAttribute$instance;
+    new(): Base64StringAttribute;
 };
 
 
@@ -110,7 +110,7 @@ export interface CompareAttribute$instance extends ValidationAttribute {
 
 
 export const CompareAttribute: {
-    new(otherProperty: string): CompareAttribute$instance;
+    new(otherProperty: string): CompareAttribute;
 };
 
 
@@ -121,7 +121,7 @@ export interface ConcurrencyCheckAttribute$instance extends Attribute {
 
 
 export const ConcurrencyCheckAttribute: {
-    new(): ConcurrencyCheckAttribute$instance;
+    new(): ConcurrencyCheckAttribute;
 };
 
 
@@ -133,7 +133,7 @@ export interface CreditCardAttribute$instance extends DataTypeAttribute {
 
 
 export const CreditCardAttribute: {
-    new(): CreditCardAttribute$instance;
+    new(): CreditCardAttribute;
 };
 
 
@@ -149,7 +149,7 @@ export interface CustomValidationAttribute$instance extends ValidationAttribute 
 
 
 export const CustomValidationAttribute: {
-    new(validatorType: Type, method: string): CustomValidationAttribute$instance;
+    new(validatorType: Type, method: string): CustomValidationAttribute;
 };
 
 
@@ -165,8 +165,8 @@ export interface DataTypeAttribute$instance extends ValidationAttribute {
 
 
 export const DataTypeAttribute: {
-    new(dataType: DataType): DataTypeAttribute$instance;
-    new(customDataType: string): DataTypeAttribute$instance;
+    new(dataType: DataType): DataTypeAttribute;
+    new(customDataType: string): DataTypeAttribute;
 };
 
 
@@ -179,7 +179,7 @@ export interface DeniedValuesAttribute$instance extends ValidationAttribute {
 
 
 export const DeniedValuesAttribute: {
-    new(values: unknown[]): DeniedValuesAttribute$instance;
+    new(values: unknown[]): DeniedValuesAttribute;
 };
 
 
@@ -207,7 +207,7 @@ export interface DisplayAttribute$instance extends Attribute {
 
 
 export const DisplayAttribute: {
-    new(): DisplayAttribute$instance;
+    new(): DisplayAttribute;
 };
 
 
@@ -221,9 +221,9 @@ export interface DisplayColumnAttribute$instance extends Attribute {
 
 
 export const DisplayColumnAttribute: {
-    new(displayColumn: string): DisplayColumnAttribute$instance;
-    new(displayColumn: string, sortColumn: string): DisplayColumnAttribute$instance;
-    new(displayColumn: string, sortColumn: string, sortDescending: boolean): DisplayColumnAttribute$instance;
+    new(displayColumn: string): DisplayColumnAttribute;
+    new(displayColumn: string, sortColumn: string): DisplayColumnAttribute;
+    new(displayColumn: string, sortColumn: string, sortDescending: boolean): DisplayColumnAttribute;
 };
 
 
@@ -241,7 +241,7 @@ export interface DisplayFormatAttribute$instance extends Attribute {
 
 
 export const DisplayFormatAttribute: {
-    new(): DisplayFormatAttribute$instance;
+    new(): DisplayFormatAttribute;
 };
 
 
@@ -254,7 +254,7 @@ export interface EditableAttribute$instance extends Attribute {
 
 
 export const EditableAttribute: {
-    new(allowEdit: boolean): EditableAttribute$instance;
+    new(allowEdit: boolean): EditableAttribute;
 };
 
 
@@ -266,7 +266,7 @@ export interface EmailAddressAttribute$instance extends DataTypeAttribute {
 
 
 export const EmailAddressAttribute: {
-    new(): EmailAddressAttribute$instance;
+    new(): EmailAddressAttribute;
 };
 
 
@@ -279,7 +279,7 @@ export interface EnumDataTypeAttribute$instance extends DataTypeAttribute {
 
 
 export const EnumDataTypeAttribute: {
-    new(enumType: Type): EnumDataTypeAttribute$instance;
+    new(enumType: Type): EnumDataTypeAttribute;
 };
 
 
@@ -293,7 +293,7 @@ export interface FileExtensionsAttribute$instance extends DataTypeAttribute {
 
 
 export const FileExtensionsAttribute: {
-    new(): FileExtensionsAttribute$instance;
+    new(): FileExtensionsAttribute;
 };
 
 
@@ -309,9 +309,9 @@ export interface FilterUIHintAttribute$instance extends Attribute {
 
 
 export const FilterUIHintAttribute: {
-    new(filterUIHint: string): FilterUIHintAttribute$instance;
-    new(filterUIHint: string, presentationLayer: string): FilterUIHintAttribute$instance;
-    new(filterUIHint: string, presentationLayer: string, controlParameters: unknown[]): FilterUIHintAttribute$instance;
+    new(filterUIHint: string): FilterUIHintAttribute;
+    new(filterUIHint: string, presentationLayer: string): FilterUIHintAttribute;
+    new(filterUIHint: string, presentationLayer: string, controlParameters: unknown[]): FilterUIHintAttribute;
 };
 
 
@@ -322,7 +322,7 @@ export interface KeyAttribute$instance extends Attribute {
 
 
 export const KeyAttribute: {
-    new(): KeyAttribute$instance;
+    new(): KeyAttribute;
 };
 
 
@@ -337,7 +337,7 @@ export interface LengthAttribute$instance extends ValidationAttribute {
 
 
 export const LengthAttribute: {
-    new(minimumLength: int, maximumLength: int): LengthAttribute$instance;
+    new(minimumLength: int, maximumLength: int): LengthAttribute;
 };
 
 
@@ -351,8 +351,8 @@ export interface MaxLengthAttribute$instance extends ValidationAttribute {
 
 
 export const MaxLengthAttribute: {
-    new(length: int): MaxLengthAttribute$instance;
-    new(): MaxLengthAttribute$instance;
+    new(length: int): MaxLengthAttribute;
+    new(): MaxLengthAttribute;
 };
 
 
@@ -364,7 +364,7 @@ export interface MetadataTypeAttribute$instance extends Attribute {
 
 
 export const MetadataTypeAttribute: {
-    new(metadataClassType: Type): MetadataTypeAttribute$instance;
+    new(metadataClassType: Type): MetadataTypeAttribute;
 };
 
 
@@ -378,7 +378,7 @@ export interface MinLengthAttribute$instance extends ValidationAttribute {
 
 
 export const MinLengthAttribute: {
-    new(length: int): MinLengthAttribute$instance;
+    new(length: int): MinLengthAttribute;
 };
 
 
@@ -390,7 +390,7 @@ export interface PhoneAttribute$instance extends DataTypeAttribute {
 
 
 export const PhoneAttribute: {
-    new(): PhoneAttribute$instance;
+    new(): PhoneAttribute;
 };
 
 
@@ -410,9 +410,9 @@ export interface RangeAttribute$instance extends ValidationAttribute {
 
 
 export const RangeAttribute: {
-    new(minimum: int, maximum: int): RangeAttribute$instance;
-    new(minimum: double, maximum: double): RangeAttribute$instance;
-    new(type_: Type, minimum: string, maximum: string): RangeAttribute$instance;
+    new(minimum: int, maximum: int): RangeAttribute;
+    new(minimum: double, maximum: double): RangeAttribute;
+    new(type_: Type, minimum: string, maximum: string): RangeAttribute;
 };
 
 
@@ -428,7 +428,7 @@ export interface RegularExpressionAttribute$instance extends ValidationAttribute
 
 
 export const RegularExpressionAttribute: {
-    new(pattern: string): RegularExpressionAttribute$instance;
+    new(pattern: string): RegularExpressionAttribute;
 };
 
 
@@ -441,7 +441,7 @@ export interface RequiredAttribute$instance extends ValidationAttribute {
 
 
 export const RequiredAttribute: {
-    new(): RequiredAttribute$instance;
+    new(): RequiredAttribute;
 };
 
 
@@ -453,7 +453,7 @@ export interface ScaffoldColumnAttribute$instance extends Attribute {
 
 
 export const ScaffoldColumnAttribute: {
-    new(scaffold: boolean): ScaffoldColumnAttribute$instance;
+    new(scaffold: boolean): ScaffoldColumnAttribute;
 };
 
 
@@ -468,7 +468,7 @@ export interface StringLengthAttribute$instance extends ValidationAttribute {
 
 
 export const StringLengthAttribute: {
-    new(maximumLength: int): StringLengthAttribute$instance;
+    new(maximumLength: int): StringLengthAttribute;
 };
 
 
@@ -479,7 +479,7 @@ export interface TimestampAttribute$instance extends Attribute {
 
 
 export const TimestampAttribute: {
-    new(): TimestampAttribute$instance;
+    new(): TimestampAttribute;
 };
 
 
@@ -495,9 +495,9 @@ export interface UIHintAttribute$instance extends Attribute {
 
 
 export const UIHintAttribute: {
-    new(uiHint: string): UIHintAttribute$instance;
-    new(uiHint: string, presentationLayer: string): UIHintAttribute$instance;
-    new(uiHint: string, presentationLayer: string, controlParameters: unknown[]): UIHintAttribute$instance;
+    new(uiHint: string): UIHintAttribute;
+    new(uiHint: string, presentationLayer: string): UIHintAttribute;
+    new(uiHint: string, presentationLayer: string, controlParameters: unknown[]): UIHintAttribute;
 };
 
 
@@ -509,7 +509,7 @@ export interface UrlAttribute$instance extends DataTypeAttribute {
 
 
 export const UrlAttribute: {
-    new(): UrlAttribute$instance;
+    new(): UrlAttribute;
 };
 
 
@@ -546,10 +546,10 @@ export interface ValidationContext$instance {
 
 
 export const ValidationContext: {
-    new(instance: unknown): ValidationContext$instance;
-    new(instance: unknown, items: IDictionary_2<unknown, unknown>): ValidationContext$instance;
-    new(instance: unknown, serviceProvider: IServiceProvider, items: IDictionary_2<unknown, unknown>): ValidationContext$instance;
-    new(instance: unknown, displayName: string, serviceProvider: IServiceProvider, items: IDictionary_2<unknown, unknown>): ValidationContext$instance;
+    new(instance: unknown): ValidationContext;
+    new(instance: unknown, items: IDictionary_2<unknown, unknown>): ValidationContext;
+    new(instance: unknown, serviceProvider: IServiceProvider, items: IDictionary_2<unknown, unknown>): ValidationContext;
+    new(instance: unknown, displayName: string, serviceProvider: IServiceProvider, items: IDictionary_2<unknown, unknown>): ValidationContext;
 };
 
 
@@ -571,11 +571,11 @@ export interface ValidationException$instance extends Exception {
 
 
 export const ValidationException: {
-    new(validationResult: ValidationResult, validatingAttribute: ValidationAttribute, value: unknown): ValidationException$instance;
-    new(errorMessage: string, validatingAttribute: ValidationAttribute, value: unknown): ValidationException$instance;
-    new(): ValidationException$instance;
-    new(message: string): ValidationException$instance;
-    new(message: string, innerException: Exception): ValidationException$instance;
+    new(validationResult: ValidationResult, validatingAttribute: ValidationAttribute, value: unknown): ValidationException;
+    new(errorMessage: string, validatingAttribute: ValidationAttribute, value: unknown): ValidationException;
+    new(): ValidationException;
+    new(message: string): ValidationException;
+    new(message: string, innerException: Exception): ValidationException;
 };
 
 
@@ -594,8 +594,8 @@ export interface ValidationResult$instance {
 
 
 export const ValidationResult: {
-    new(errorMessage: string): ValidationResult$instance;
-    new(errorMessage: string, memberNames: IEnumerable_1<System_Internal.String>): ValidationResult$instance;
+    new(errorMessage: string): ValidationResult;
+    new(errorMessage: string, memberNames: IEnumerable_1<System_Internal.String>): ValidationResult;
     readonly Success: ValidationResult;
 };
 

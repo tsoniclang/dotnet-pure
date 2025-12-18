@@ -38,9 +38,9 @@ export interface JsonDerivedType$instance {
 
 
 export const JsonDerivedType: {
-    new(derivedType: Type): JsonDerivedType$instance;
-    new(derivedType: Type, typeDiscriminator: int): JsonDerivedType$instance;
-    new(derivedType: Type, typeDiscriminator: string): JsonDerivedType$instance;
+    new(derivedType: Type): JsonDerivedType;
+    new(derivedType: Type, typeDiscriminator: int): JsonDerivedType;
+    new(derivedType: Type, typeDiscriminator: string): JsonDerivedType;
 };
 
 
@@ -53,7 +53,7 @@ export interface DefaultJsonTypeInfoResolver$instance {
 
 
 export const DefaultJsonTypeInfoResolver: {
-    new(): DefaultJsonTypeInfoResolver$instance;
+    new(): DefaultJsonTypeInfoResolver;
 };
 
 
@@ -76,7 +76,7 @@ export interface JsonCollectionInfoValues_1$instance<TCollection> {
 
 
 export const JsonCollectionInfoValues_1: {
-    new<TCollection>(): JsonCollectionInfoValues_1$instance<TCollection>;
+    new<TCollection>(): JsonCollectionInfoValues_1<TCollection>;
 };
 
 
@@ -94,7 +94,7 @@ export interface JsonObjectInfoValues_1$instance<T> {
 
 
 export const JsonObjectInfoValues_1: {
-    new<T>(): JsonObjectInfoValues_1$instance<T>;
+    new<T>(): JsonObjectInfoValues_1<T>;
 };
 
 
@@ -131,7 +131,7 @@ export interface JsonParameterInfoValues$instance {
 
 
 export const JsonParameterInfoValues: {
-    new(): JsonParameterInfoValues$instance;
+    new(): JsonParameterInfoValues;
 };
 
 
@@ -146,7 +146,7 @@ export interface JsonPolymorphismOptions$instance {
 
 
 export const JsonPolymorphismOptions: {
-    new(): JsonPolymorphismOptions$instance;
+    new(): JsonPolymorphismOptions;
 };
 
 
@@ -199,7 +199,7 @@ export interface JsonPropertyInfoValues_1$instance<T> {
 
 
 export const JsonPropertyInfoValues_1: {
-    new<T>(): JsonPropertyInfoValues_1$instance<T>;
+    new<T>(): JsonPropertyInfoValues_1<T>;
 };
 
 
@@ -245,7 +245,7 @@ export interface JsonTypeInfo_1$instance<T> extends JsonTypeInfo {
 
 
 export const JsonTypeInfo_1: {
-    new<T>(): JsonTypeInfo_1$instance<T>;
+    new<T>(): JsonTypeInfo_1<T>;
 };
 
 

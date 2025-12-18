@@ -439,8 +439,8 @@ export interface SslApplicationProtocol$instance {
 
 
 export const SslApplicationProtocol: {
-    new(protocol: byte[]): SslApplicationProtocol$instance;
-    new(protocol: string): SslApplicationProtocol$instance;
+    new(protocol: byte[]): SslApplicationProtocol;
+    new(protocol: string): SslApplicationProtocol;
     readonly Http3: SslApplicationProtocol;
     readonly Http2: SslApplicationProtocol;
     readonly Http11: SslApplicationProtocol;
@@ -464,7 +464,7 @@ export interface SslClientHelloInfo$instance {
 
 
 export const SslClientHelloInfo: {
-    new(serverName: string, sslProtocols: SslProtocols): SslClientHelloInfo$instance;
+    new(serverName: string, sslProtocols: SslProtocols): SslClientHelloInfo;
 };
 
 
@@ -500,7 +500,7 @@ export interface CipherSuitesPolicy$instance {
 
 
 export const CipherSuitesPolicy: {
-    new(allowedCipherSuites: IEnumerable_1<TlsCipherSuite>): CipherSuitesPolicy$instance;
+    new(allowedCipherSuites: IEnumerable_1<TlsCipherSuite>): CipherSuitesPolicy;
 };
 
 
@@ -529,8 +529,8 @@ export interface NegotiateAuthentication$instance {
 
 
 export const NegotiateAuthentication: {
-    new(clientOptions: NegotiateAuthenticationClientOptions): NegotiateAuthentication$instance;
-    new(serverOptions: NegotiateAuthenticationServerOptions): NegotiateAuthentication$instance;
+    new(clientOptions: NegotiateAuthenticationClientOptions): NegotiateAuthentication;
+    new(serverOptions: NegotiateAuthenticationServerOptions): NegotiateAuthentication;
 };
 
 
@@ -555,7 +555,7 @@ export interface NegotiateAuthenticationClientOptions$instance {
 
 
 export const NegotiateAuthenticationClientOptions: {
-    new(): NegotiateAuthenticationClientOptions$instance;
+    new(): NegotiateAuthenticationClientOptions;
 };
 
 
@@ -572,7 +572,7 @@ export interface NegotiateAuthenticationServerOptions$instance {
 
 
 export const NegotiateAuthenticationServerOptions: {
-    new(): NegotiateAuthenticationServerOptions$instance;
+    new(): NegotiateAuthenticationServerOptions;
 };
 
 
@@ -651,8 +651,8 @@ export interface NegotiateStream$instance extends AuthenticatedStream$instance {
 
 
 export const NegotiateStream: {
-    new(innerStream: Stream): NegotiateStream$instance;
-    new(innerStream: Stream, leaveInnerStreamOpen: boolean): NegotiateStream$instance;
+    new(innerStream: Stream): NegotiateStream;
+    new(innerStream: Stream, leaveInnerStreamOpen: boolean): NegotiateStream;
 };
 
 
@@ -669,7 +669,7 @@ export interface SslCertificateTrust$instance {
 
 
 export const SslCertificateTrust: {
-    new(): SslCertificateTrust$instance;
+    new(): SslCertificateTrust;
     CreateForX509Collection(trustList: X509Certificate2Collection, sendTrustInHandshake?: boolean): SslCertificateTrust;
     CreateForX509Store(store: X509Store, sendTrustInHandshake?: boolean): SslCertificateTrust;
 };
@@ -697,7 +697,7 @@ export interface SslClientAuthenticationOptions$instance {
 
 
 export const SslClientAuthenticationOptions: {
-    new(): SslClientAuthenticationOptions$instance;
+    new(): SslClientAuthenticationOptions;
 };
 
 
@@ -723,7 +723,7 @@ export interface SslServerAuthenticationOptions$instance {
 
 
 export const SslServerAuthenticationOptions: {
-    new(): SslServerAuthenticationOptions$instance;
+    new(): SslServerAuthenticationOptions;
 };
 
 
@@ -817,11 +817,11 @@ export interface SslStream$instance extends AuthenticatedStream$instance {
 
 
 export const SslStream: {
-    new(innerStream: Stream): SslStream$instance;
-    new(innerStream: Stream, leaveInnerStreamOpen: boolean): SslStream$instance;
-    new(innerStream: Stream, leaveInnerStreamOpen: boolean, userCertificateValidationCallback: RemoteCertificateValidationCallback): SslStream$instance;
-    new(innerStream: Stream, leaveInnerStreamOpen: boolean, userCertificateValidationCallback: RemoteCertificateValidationCallback, userCertificateSelectionCallback: LocalCertificateSelectionCallback): SslStream$instance;
-    new(innerStream: Stream, leaveInnerStreamOpen: boolean, userCertificateValidationCallback: RemoteCertificateValidationCallback, userCertificateSelectionCallback: LocalCertificateSelectionCallback, encryptionPolicy: EncryptionPolicy): SslStream$instance;
+    new(innerStream: Stream): SslStream;
+    new(innerStream: Stream, leaveInnerStreamOpen: boolean): SslStream;
+    new(innerStream: Stream, leaveInnerStreamOpen: boolean, userCertificateValidationCallback: RemoteCertificateValidationCallback): SslStream;
+    new(innerStream: Stream, leaveInnerStreamOpen: boolean, userCertificateValidationCallback: RemoteCertificateValidationCallback, userCertificateSelectionCallback: LocalCertificateSelectionCallback): SslStream;
+    new(innerStream: Stream, leaveInnerStreamOpen: boolean, userCertificateValidationCallback: RemoteCertificateValidationCallback, userCertificateSelectionCallback: LocalCertificateSelectionCallback, encryptionPolicy: EncryptionPolicy): SslStream;
 };
 
 
@@ -840,7 +840,7 @@ export interface SslStreamCertificateContext$instance {
 
 
 export const SslStreamCertificateContext: {
-    new(): SslStreamCertificateContext$instance;
+    new(): SslStreamCertificateContext;
     Create(target: X509Certificate2, additionalCertificates: X509Certificate2Collection, offline?: boolean, trust?: SslCertificateTrust): SslStreamCertificateContext;
     Create(target: X509Certificate2, additionalCertificates: X509Certificate2Collection, offline: boolean): SslStreamCertificateContext;
 };

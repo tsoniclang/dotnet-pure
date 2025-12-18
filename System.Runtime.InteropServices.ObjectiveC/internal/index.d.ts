@@ -33,7 +33,7 @@ export interface ObjectiveCTrackedTypeAttribute$instance extends Attribute {
 
 
 export const ObjectiveCTrackedTypeAttribute: {
-    new(): ObjectiveCTrackedTypeAttribute$instance;
+    new(): ObjectiveCTrackedTypeAttribute;
 };
 
 

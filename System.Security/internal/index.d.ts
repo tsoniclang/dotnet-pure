@@ -72,7 +72,7 @@ export interface AllowPartiallyTrustedCallersAttribute$instance extends Attribut
 
 
 export const AllowPartiallyTrustedCallersAttribute: {
-    new(): AllowPartiallyTrustedCallersAttribute$instance;
+    new(): AllowPartiallyTrustedCallersAttribute;
 };
 
 
@@ -109,8 +109,8 @@ export interface PermissionSet$instance {
 
 
 export const PermissionSet: {
-    new(state: PermissionState): PermissionSet$instance;
-    new(permSet: PermissionSet): PermissionSet$instance;
+    new(state: PermissionState): PermissionSet;
+    new(permSet: PermissionSet): PermissionSet;
     ConvertPermissionSet(inFormat: string, inData: byte[], outFormat: string): byte[];
     RevertAssert(): void;
 };
@@ -144,8 +144,8 @@ export interface SecureString$instance {
 
 
 export const SecureString: {
-    new(): SecureString$instance;
-    new(value: ptr<char>, length: int): SecureString$instance;
+    new(): SecureString;
+    new(value: ptr<char>, length: int): SecureString;
 };
 
 
@@ -164,8 +164,8 @@ export interface SecurityCriticalAttribute$instance extends Attribute {
 
 
 export const SecurityCriticalAttribute: {
-    new(): SecurityCriticalAttribute$instance;
-    new(scope: SecurityCriticalScope): SecurityCriticalAttribute$instance;
+    new(): SecurityCriticalAttribute;
+    new(scope: SecurityCriticalScope): SecurityCriticalAttribute;
 };
 
 
@@ -188,8 +188,8 @@ export interface SecurityElement$instance {
 
 
 export const SecurityElement: {
-    new(tag: string): SecurityElement$instance;
-    new(tag: string, text: string): SecurityElement$instance;
+    new(tag: string): SecurityElement;
+    new(tag: string, text: string): SecurityElement;
     Escape(str: string): string;
     FromString(xml: string): SecurityElement;
     IsValidAttributeName(name: string): boolean;
@@ -218,11 +218,11 @@ export interface SecurityException$instance extends SystemException {
 
 
 export const SecurityException: {
-    new(): SecurityException$instance;
-    new(message: string): SecurityException$instance;
-    new(message: string, inner: Exception): SecurityException$instance;
-    new(message: string, type_: Type): SecurityException$instance;
-    new(message: string, type_: Type, state: string): SecurityException$instance;
+    new(): SecurityException;
+    new(message: string): SecurityException;
+    new(message: string, inner: Exception): SecurityException;
+    new(message: string, type_: Type): SecurityException;
+    new(message: string, type_: Type, state: string): SecurityException;
 };
 
 
@@ -240,7 +240,7 @@ export interface SecurityRulesAttribute$instance extends Attribute {
 
 
 export const SecurityRulesAttribute: {
-    new(ruleSet: SecurityRuleSet): SecurityRulesAttribute$instance;
+    new(ruleSet: SecurityRuleSet): SecurityRulesAttribute;
 };
 
 
@@ -251,7 +251,7 @@ export interface SecuritySafeCriticalAttribute$instance extends Attribute {
 
 
 export const SecuritySafeCriticalAttribute: {
-    new(): SecuritySafeCriticalAttribute$instance;
+    new(): SecuritySafeCriticalAttribute;
 };
 
 
@@ -262,7 +262,7 @@ export interface SecurityTransparentAttribute$instance extends Attribute {
 
 
 export const SecurityTransparentAttribute: {
-    new(): SecurityTransparentAttribute$instance;
+    new(): SecurityTransparentAttribute;
 };
 
 
@@ -273,7 +273,7 @@ export interface SecurityTreatAsSafeAttribute$instance extends Attribute {
 
 
 export const SecurityTreatAsSafeAttribute: {
-    new(): SecurityTreatAsSafeAttribute$instance;
+    new(): SecurityTreatAsSafeAttribute;
 };
 
 
@@ -284,7 +284,7 @@ export interface SuppressUnmanagedCodeSecurityAttribute$instance extends Attribu
 
 
 export const SuppressUnmanagedCodeSecurityAttribute: {
-    new(): SuppressUnmanagedCodeSecurityAttribute$instance;
+    new(): SuppressUnmanagedCodeSecurityAttribute;
 };
 
 
@@ -295,7 +295,7 @@ export interface UnverifiableCodeAttribute$instance extends Attribute {
 
 
 export const UnverifiableCodeAttribute: {
-    new(): UnverifiableCodeAttribute$instance;
+    new(): UnverifiableCodeAttribute;
 };
 
 
@@ -307,9 +307,9 @@ export interface VerificationException$instance extends SystemException {
 
 
 export const VerificationException: {
-    new(): VerificationException$instance;
-    new(message: string): VerificationException$instance;
-    new(message: string, innerException: Exception): VerificationException$instance;
+    new(): VerificationException;
+    new(message: string): VerificationException;
+    new(message: string, innerException: Exception): VerificationException;
 };
 
 

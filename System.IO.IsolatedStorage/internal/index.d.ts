@@ -63,9 +63,9 @@ export interface IsolatedStorageException$instance extends Exception {
 
 
 export const IsolatedStorageException: {
-    new(): IsolatedStorageException$instance;
-    new(message: string): IsolatedStorageException$instance;
-    new(message: string, inner: Exception): IsolatedStorageException$instance;
+    new(): IsolatedStorageException;
+    new(message: string): IsolatedStorageException;
+    new(message: string, inner: Exception): IsolatedStorageException;
 };
 
 
@@ -110,7 +110,7 @@ export interface IsolatedStorageFile$instance extends IsolatedStorage {
 
 
 export const IsolatedStorageFile: {
-    new(): IsolatedStorageFile$instance;
+    new(): IsolatedStorageFile;
     readonly IsEnabled: boolean;
     GetEnumerator(scope: IsolatedStorageScope): IEnumerator;
     GetMachineStoreForApplication(): IsolatedStorageFile;
@@ -181,14 +181,14 @@ export interface IsolatedStorageFileStream$instance extends FileStream {
 
 
 export const IsolatedStorageFileStream: {
-    new(path: string, mode: FileMode): IsolatedStorageFileStream$instance;
-    new(path: string, mode: FileMode, isf: IsolatedStorageFile): IsolatedStorageFileStream$instance;
-    new(path: string, mode: FileMode, access: FileAccess): IsolatedStorageFileStream$instance;
-    new(path: string, mode: FileMode, access: FileAccess, isf: IsolatedStorageFile): IsolatedStorageFileStream$instance;
-    new(path: string, mode: FileMode, access: FileAccess, share: FileShare): IsolatedStorageFileStream$instance;
-    new(path: string, mode: FileMode, access: FileAccess, share: FileShare, isf: IsolatedStorageFile): IsolatedStorageFileStream$instance;
-    new(path: string, mode: FileMode, access: FileAccess, share: FileShare, bufferSize: int): IsolatedStorageFileStream$instance;
-    new(path: string, mode: FileMode, access: FileAccess, share: FileShare, bufferSize: int, isf: IsolatedStorageFile): IsolatedStorageFileStream$instance;
+    new(path: string, mode: FileMode): IsolatedStorageFileStream;
+    new(path: string, mode: FileMode, isf: IsolatedStorageFile): IsolatedStorageFileStream;
+    new(path: string, mode: FileMode, access: FileAccess): IsolatedStorageFileStream;
+    new(path: string, mode: FileMode, access: FileAccess, isf: IsolatedStorageFile): IsolatedStorageFileStream;
+    new(path: string, mode: FileMode, access: FileAccess, share: FileShare): IsolatedStorageFileStream;
+    new(path: string, mode: FileMode, access: FileAccess, share: FileShare, isf: IsolatedStorageFile): IsolatedStorageFileStream;
+    new(path: string, mode: FileMode, access: FileAccess, share: FileShare, bufferSize: int): IsolatedStorageFileStream;
+    new(path: string, mode: FileMode, access: FileAccess, share: FileShare, bufferSize: int, isf: IsolatedStorageFile): IsolatedStorageFileStream;
 };
 
 

@@ -41,7 +41,7 @@ export interface DependentHandle$instance {
 
 
 export const DependentHandle: {
-    new(target: unknown, dependent: unknown): DependentHandle$instance;
+    new(target: unknown, dependent: unknown): DependentHandle;
 };
 
 
@@ -60,9 +60,9 @@ export interface AmbiguousImplementationException$instance extends Exception {
 
 
 export const AmbiguousImplementationException: {
-    new(): AmbiguousImplementationException$instance;
-    new(message: string): AmbiguousImplementationException$instance;
-    new(message: string, innerException: Exception): AmbiguousImplementationException$instance;
+    new(): AmbiguousImplementationException;
+    new(message: string): AmbiguousImplementationException;
+    new(message: string, innerException: Exception): AmbiguousImplementationException;
 };
 
 
@@ -79,7 +79,7 @@ export interface AssemblyTargetedPatchBandAttribute$instance extends Attribute {
 
 
 export const AssemblyTargetedPatchBandAttribute: {
-    new(targetedPatchBand: string): AssemblyTargetedPatchBandAttribute$instance;
+    new(targetedPatchBand: string): AssemblyTargetedPatchBandAttribute;
 };
 
 
@@ -91,7 +91,7 @@ export interface MemoryFailPoint$instance extends CriticalFinalizerObject {
 
 
 export const MemoryFailPoint: {
-    new(sizeInMegabytes: int): MemoryFailPoint$instance;
+    new(sizeInMegabytes: int): MemoryFailPoint;
 };
 
 
@@ -110,7 +110,7 @@ export interface TargetedPatchingOptOutAttribute$instance extends Attribute {
 
 
 export const TargetedPatchingOptOutAttribute: {
-    new(reason: string): TargetedPatchingOptOutAttribute$instance;
+    new(reason: string): TargetedPatchingOptOutAttribute;
 };
 
 

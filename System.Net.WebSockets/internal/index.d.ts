@@ -87,7 +87,7 @@ export interface ValueWebSocketReceiveResult$instance {
 
 
 export const ValueWebSocketReceiveResult: {
-    new(count: int, messageType: WebSocketMessageType, endOfMessage: boolean): ValueWebSocketReceiveResult$instance;
+    new(count: int, messageType: WebSocketMessageType, endOfMessage: boolean): ValueWebSocketReceiveResult;
 };
 
 
@@ -119,7 +119,7 @@ export interface ClientWebSocket$instance extends WebSocket$instance {
 
 
 export const ClientWebSocket: {
-    new(): ClientWebSocket$instance;
+    new(): ClientWebSocket;
 };
 
 
@@ -151,7 +151,7 @@ export interface ClientWebSocketOptions$instance {
 
 
 export const ClientWebSocketOptions: {
-    new(): ClientWebSocketOptions$instance;
+    new(): ClientWebSocketOptions;
 };
 
 
@@ -174,7 +174,7 @@ export interface HttpListenerWebSocketContext$instance extends WebSocketContext 
 
 
 export const HttpListenerWebSocketContext: {
-    new(): HttpListenerWebSocketContext$instance;
+    new(): HttpListenerWebSocketContext;
 };
 
 
@@ -250,7 +250,7 @@ export interface WebSocketCreationOptions$instance {
 
 
 export const WebSocketCreationOptions: {
-    new(): WebSocketCreationOptions$instance;
+    new(): WebSocketCreationOptions;
 };
 
 
@@ -265,7 +265,7 @@ export interface WebSocketDeflateOptions$instance {
 
 
 export const WebSocketDeflateOptions: {
-    new(): WebSocketDeflateOptions$instance;
+    new(): WebSocketDeflateOptions;
 };
 
 
@@ -279,20 +279,20 @@ export interface WebSocketException$instance extends Win32Exception {
 
 
 export const WebSocketException: {
-    new(): WebSocketException$instance;
-    new(error: WebSocketError): WebSocketException$instance;
-    new(error: WebSocketError, message: string): WebSocketException$instance;
-    new(error: WebSocketError, innerException: Exception): WebSocketException$instance;
-    new(error: WebSocketError, message: string, innerException: Exception): WebSocketException$instance;
-    new(nativeError: int): WebSocketException$instance;
-    new(nativeError: int, message: string): WebSocketException$instance;
-    new(nativeError: int, innerException: Exception): WebSocketException$instance;
-    new(error: WebSocketError, nativeError: int): WebSocketException$instance;
-    new(error: WebSocketError, nativeError: int, message: string): WebSocketException$instance;
-    new(error: WebSocketError, nativeError: int, innerException: Exception): WebSocketException$instance;
-    new(error: WebSocketError, nativeError: int, message: string, innerException: Exception): WebSocketException$instance;
-    new(message: string): WebSocketException$instance;
-    new(message: string, innerException: Exception): WebSocketException$instance;
+    new(): WebSocketException;
+    new(error: WebSocketError): WebSocketException;
+    new(error: WebSocketError, message: string): WebSocketException;
+    new(error: WebSocketError, innerException: Exception): WebSocketException;
+    new(error: WebSocketError, message: string, innerException: Exception): WebSocketException;
+    new(nativeError: int): WebSocketException;
+    new(nativeError: int, message: string): WebSocketException;
+    new(nativeError: int, innerException: Exception): WebSocketException;
+    new(error: WebSocketError, nativeError: int): WebSocketException;
+    new(error: WebSocketError, nativeError: int, message: string): WebSocketException;
+    new(error: WebSocketError, nativeError: int, innerException: Exception): WebSocketException;
+    new(error: WebSocketError, nativeError: int, message: string, innerException: Exception): WebSocketException;
+    new(message: string): WebSocketException;
+    new(message: string, innerException: Exception): WebSocketException;
 };
 
 
@@ -313,8 +313,8 @@ export interface WebSocketReceiveResult$instance {
 
 
 export const WebSocketReceiveResult: {
-    new(count: int, messageType: WebSocketMessageType, endOfMessage: boolean): WebSocketReceiveResult$instance;
-    new(count: int, messageType: WebSocketMessageType, endOfMessage: boolean, closeStatus: Nullable_1<WebSocketCloseStatus>, closeStatusDescription: string): WebSocketReceiveResult$instance;
+    new(count: int, messageType: WebSocketMessageType, endOfMessage: boolean): WebSocketReceiveResult;
+    new(count: int, messageType: WebSocketMessageType, endOfMessage: boolean, closeStatus: Nullable_1<WebSocketCloseStatus>, closeStatusDescription: string): WebSocketReceiveResult;
 };
 
 
@@ -355,7 +355,7 @@ export interface WebSocketStream$instance extends Stream {
 
 
 export const WebSocketStream: {
-    new(): WebSocketStream$instance;
+    new(): WebSocketStream;
     Create(webSocket: WebSocket, writeMessageType: WebSocketMessageType, ownsWebSocket?: boolean): WebSocketStream;
     Create(webSocket: WebSocket, writeMessageType: WebSocketMessageType, closeTimeout: TimeSpan): WebSocketStream;
     CreateReadableMessageStream(webSocket: WebSocket): WebSocketStream;

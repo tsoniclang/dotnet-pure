@@ -233,7 +233,7 @@ export interface CngProperty$instance {
 
 
 export const CngProperty: {
-    new(name: string, value: byte[], options: CngPropertyOptions): CngProperty$instance;
+    new(name: string, value: byte[], options: CngPropertyOptions): CngProperty;
 };
 
 
@@ -260,7 +260,7 @@ export interface DSAParameters$instance {
 
 
 export const DSAParameters: {
-    new(): DSAParameters$instance;
+    new(): DSAParameters;
 };
 
 
@@ -287,7 +287,7 @@ export interface ECCurve$instance {
 
 
 export const ECCurve: {
-    new(): ECCurve$instance;
+    new(): ECCurve;
     CreateFromFriendlyName(oidFriendlyName: string): ECCurve;
     CreateFromOid(curveOid: Oid): ECCurve;
     CreateFromValue(oidValue: string): ECCurve;
@@ -305,7 +305,7 @@ export interface ECParameters$instance {
 
 
 export const ECParameters: {
-    new(): ECParameters$instance;
+    new(): ECParameters;
 };
 
 
@@ -318,7 +318,7 @@ export interface ECPoint$instance {
 
 
 export const ECPoint: {
-    new(): ECPoint$instance;
+    new(): ECPoint;
 };
 
 
@@ -334,7 +334,7 @@ export interface HashAlgorithmName$instance {
 
 
 export const HashAlgorithmName: {
-    new(name: string): HashAlgorithmName$instance;
+    new(name: string): HashAlgorithmName;
     readonly MD5: HashAlgorithmName;
     readonly SHA1: HashAlgorithmName;
     readonly SHA256: HashAlgorithmName;
@@ -367,7 +367,7 @@ export interface PemFields$instance {
 
 
 export const PemFields: {
-    new(): PemFields$instance;
+    new(): PemFields;
 };
 
 
@@ -386,7 +386,7 @@ export interface RSAParameters$instance {
 
 
 export const RSAParameters: {
-    new(): RSAParameters$instance;
+    new(): RSAParameters;
 };
 
 
@@ -426,8 +426,8 @@ export interface AesCcm$instance {
 
 
 export const AesCcm: {
-    new(key: ReadOnlySpan_1<System_Internal.Byte>): AesCcm$instance;
-    new(key: byte[]): AesCcm$instance;
+    new(key: ReadOnlySpan_1<System_Internal.Byte>): AesCcm;
+    new(key: byte[]): AesCcm;
     readonly NonceByteSizes: KeySizes;
     readonly TagByteSizes: KeySizes;
     readonly IsSupported: boolean;
@@ -455,11 +455,11 @@ export interface AesCng$instance extends Aes$instance {
 
 
 export const AesCng: {
-    new(): AesCng$instance;
-    new(keyName: string): AesCng$instance;
-    new(keyName: string, provider: CngProvider): AesCng$instance;
-    new(keyName: string, provider: CngProvider, openOptions: CngKeyOpenOptions): AesCng$instance;
-    new(key: CngKey): AesCng$instance;
+    new(): AesCng;
+    new(keyName: string): AesCng;
+    new(keyName: string, provider: CngProvider): AesCng;
+    new(keyName: string, provider: CngProvider, openOptions: CngKeyOpenOptions): AesCng;
+    new(key: CngKey): AesCng;
 };
 
 
@@ -491,7 +491,7 @@ export interface AesCryptoServiceProvider$instance extends Aes$instance {
 
 
 export const AesCryptoServiceProvider: {
-    new(): AesCryptoServiceProvider$instance;
+    new(): AesCryptoServiceProvider;
 };
 
 
@@ -513,10 +513,10 @@ export interface AesGcm$instance {
 
 
 export const AesGcm: {
-    new(key: ReadOnlySpan_1<System_Internal.Byte>, tagSizeInBytes: int): AesGcm$instance;
-    new(key: byte[], tagSizeInBytes: int): AesGcm$instance;
-    new(key: ReadOnlySpan_1<System_Internal.Byte>): AesGcm$instance;
-    new(key: byte[]): AesGcm$instance;
+    new(key: ReadOnlySpan_1<System_Internal.Byte>, tagSizeInBytes: int): AesGcm;
+    new(key: byte[], tagSizeInBytes: int): AesGcm;
+    new(key: ReadOnlySpan_1<System_Internal.Byte>): AesGcm;
+    new(key: byte[]): AesGcm;
     readonly NonceByteSizes: KeySizes;
     readonly TagByteSizes: KeySizes;
     readonly IsSupported: boolean;
@@ -553,7 +553,7 @@ export interface AesManaged$instance extends Aes$instance {
 
 
 export const AesManaged: {
-    new(): AesManaged$instance;
+    new(): AesManaged;
 };
 
 
@@ -573,13 +573,13 @@ export interface AsnEncodedData$instance {
 
 
 export const AsnEncodedData: {
-    new(rawData: byte[]): AsnEncodedData$instance;
-    new(rawData: ReadOnlySpan_1<System_Internal.Byte>): AsnEncodedData$instance;
-    new(asnEncodedData: AsnEncodedData): AsnEncodedData$instance;
-    new(oid: Oid, rawData: byte[]): AsnEncodedData$instance;
-    new(oid: string, rawData: byte[]): AsnEncodedData$instance;
-    new(oid: Oid, rawData: ReadOnlySpan_1<System_Internal.Byte>): AsnEncodedData$instance;
-    new(oid: string, rawData: ReadOnlySpan_1<System_Internal.Byte>): AsnEncodedData$instance;
+    new(rawData: byte[]): AsnEncodedData;
+    new(rawData: ReadOnlySpan_1<System_Internal.Byte>): AsnEncodedData;
+    new(asnEncodedData: AsnEncodedData): AsnEncodedData;
+    new(oid: Oid, rawData: byte[]): AsnEncodedData;
+    new(oid: string, rawData: byte[]): AsnEncodedData;
+    new(oid: Oid, rawData: ReadOnlySpan_1<System_Internal.Byte>): AsnEncodedData;
+    new(oid: string, rawData: ReadOnlySpan_1<System_Internal.Byte>): AsnEncodedData;
 };
 
 
@@ -598,8 +598,8 @@ export interface AsnEncodedDataCollection$instance {
 
 
 export const AsnEncodedDataCollection: {
-    new(): AsnEncodedDataCollection$instance;
-    new(asnEncodedData: AsnEncodedData): AsnEncodedDataCollection$instance;
+    new(): AsnEncodedDataCollection;
+    new(asnEncodedData: AsnEncodedData): AsnEncodedDataCollection;
 };
 
 
@@ -619,7 +619,7 @@ export interface AsnEncodedDataEnumerator$instance {
 
 
 export const AsnEncodedDataEnumerator: {
-    new(): AsnEncodedDataEnumerator$instance;
+    new(): AsnEncodedDataEnumerator;
 };
 
 
@@ -741,9 +741,9 @@ export interface AuthenticationTagMismatchException$instance extends Cryptograph
 
 
 export const AuthenticationTagMismatchException: {
-    new(): AuthenticationTagMismatchException$instance;
-    new(message: string): AuthenticationTagMismatchException$instance;
-    new(message: string, inner: Exception): AuthenticationTagMismatchException$instance;
+    new(): AuthenticationTagMismatchException;
+    new(message: string): AuthenticationTagMismatchException;
+    new(message: string, inner: Exception): AuthenticationTagMismatchException;
 };
 
 
@@ -764,8 +764,8 @@ export interface ChaCha20Poly1305$instance {
 
 
 export const ChaCha20Poly1305: {
-    new(key: ReadOnlySpan_1<System_Internal.Byte>): ChaCha20Poly1305$instance;
-    new(key: byte[]): ChaCha20Poly1305$instance;
+    new(key: ReadOnlySpan_1<System_Internal.Byte>): ChaCha20Poly1305;
+    new(key: byte[]): ChaCha20Poly1305;
     readonly IsSupported: boolean;
 };
 
@@ -789,7 +789,7 @@ export interface CngAlgorithm$instance {
 
 
 export const CngAlgorithm: {
-    new(algorithm: string): CngAlgorithm$instance;
+    new(algorithm: string): CngAlgorithm;
     readonly Rsa: CngAlgorithm;
     readonly ECDiffieHellman: CngAlgorithm;
     readonly ECDiffieHellmanP256: CngAlgorithm;
@@ -830,7 +830,7 @@ export interface CngAlgorithmGroup$instance {
 
 
 export const CngAlgorithmGroup: {
-    new(algorithmGroup: string): CngAlgorithmGroup$instance;
+    new(algorithmGroup: string): CngAlgorithmGroup;
     readonly DiffieHellman: CngAlgorithmGroup;
     readonly Dsa: CngAlgorithmGroup;
     readonly ECDiffieHellman: CngAlgorithmGroup;
@@ -877,7 +877,7 @@ export interface CngKey$instance {
 
 
 export const CngKey: {
-    new(): CngKey$instance;
+    new(): CngKey;
     Create(algorithm: CngAlgorithm, keyName: string, creationParameters: CngKeyCreationParameters): CngKey;
     Create(algorithm: CngAlgorithm, keyName: string): CngKey;
     Create(algorithm: CngAlgorithm): CngKey;
@@ -912,7 +912,7 @@ export interface CngKeyBlobFormat$instance {
 
 
 export const CngKeyBlobFormat: {
-    new(format: string): CngKeyBlobFormat$instance;
+    new(format: string): CngKeyBlobFormat;
     readonly EccPrivateBlob: CngKeyBlobFormat;
     readonly EccPublicBlob: CngKeyBlobFormat;
     readonly EccFullPrivateBlob: CngKeyBlobFormat;
@@ -952,7 +952,7 @@ export interface CngKeyCreationParameters$instance {
 
 
 export const CngKeyCreationParameters: {
-    new(): CngKeyCreationParameters$instance;
+    new(): CngKeyCreationParameters;
 };
 
 
@@ -978,7 +978,7 @@ export interface CngPropertyCollection$instance extends Collection_1<CngProperty
 
 
 export const CngPropertyCollection: {
-    new(): CngPropertyCollection$instance;
+    new(): CngPropertyCollection;
 };
 
 
@@ -1005,7 +1005,7 @@ export interface CngProvider$instance {
 
 
 export const CngProvider: {
-    new(provider: string): CngProvider$instance;
+    new(provider: string): CngProvider;
     readonly MicrosoftPlatformCryptoProvider: CngProvider;
     readonly MicrosoftSmartCardKeyStorageProvider: CngProvider;
     readonly MicrosoftSoftwareKeyStorageProvider: CngProvider;
@@ -1032,11 +1032,11 @@ export interface CngUIPolicy$instance {
 
 
 export const CngUIPolicy: {
-    new(protectionLevel: CngUIProtectionLevels): CngUIPolicy$instance;
-    new(protectionLevel: CngUIProtectionLevels, friendlyName: string): CngUIPolicy$instance;
-    new(protectionLevel: CngUIProtectionLevels, friendlyName: string, description: string): CngUIPolicy$instance;
-    new(protectionLevel: CngUIProtectionLevels, friendlyName: string, description: string, useContext: string): CngUIPolicy$instance;
-    new(protectionLevel: CngUIProtectionLevels, friendlyName: string, description: string, useContext: string, creationTitle: string): CngUIPolicy$instance;
+    new(protectionLevel: CngUIProtectionLevels): CngUIPolicy;
+    new(protectionLevel: CngUIProtectionLevels, friendlyName: string): CngUIPolicy;
+    new(protectionLevel: CngUIProtectionLevels, friendlyName: string, description: string): CngUIPolicy;
+    new(protectionLevel: CngUIProtectionLevels, friendlyName: string, description: string, useContext: string): CngUIPolicy;
+    new(protectionLevel: CngUIProtectionLevels, friendlyName: string, description: string, useContext: string, creationTitle: string): CngUIPolicy;
 };
 
 
@@ -1117,7 +1117,7 @@ export interface CompositeMLDsaAlgorithm$instance {
 
 
 export const CompositeMLDsaAlgorithm: {
-    new(): CompositeMLDsaAlgorithm$instance;
+    new(): CompositeMLDsaAlgorithm;
     readonly MLDsa44WithRSA2048Pss: CompositeMLDsaAlgorithm;
     readonly MLDsa44WithRSA2048Pkcs15: CompositeMLDsaAlgorithm;
     readonly MLDsa44WithEd25519: CompositeMLDsaAlgorithm;
@@ -1156,7 +1156,7 @@ export interface CompositeMLDsaCng$instance extends CompositeMLDsa$instance {
 
 
 export const CompositeMLDsaCng: {
-    new(key: CngKey): CompositeMLDsaCng$instance;
+    new(key: CngKey): CompositeMLDsaCng;
 };
 
 
@@ -1172,7 +1172,7 @@ export interface CryptoConfig$instance {
 
 
 export const CryptoConfig: {
-    new(): CryptoConfig$instance;
+    new(): CryptoConfig;
     readonly AllowOnlyFipsAlgorithms: boolean;
     AddAlgorithm(algorithm: Type, ...names: string[]): void;
     AddOID(oid: string, ...names: string[]): void;
@@ -1191,11 +1191,11 @@ export interface CryptographicException$instance extends SystemException {
 
 
 export const CryptographicException: {
-    new(): CryptographicException$instance;
-    new(hr: int): CryptographicException$instance;
-    new(message: string): CryptographicException$instance;
-    new(message: string, inner: Exception): CryptographicException$instance;
-    new(format: string, insert: string): CryptographicException$instance;
+    new(): CryptographicException;
+    new(hr: int): CryptographicException;
+    new(message: string): CryptographicException;
+    new(message: string, inner: Exception): CryptographicException;
+    new(format: string, insert: string): CryptographicException;
 };
 
 
@@ -1212,10 +1212,10 @@ export interface CryptographicUnexpectedOperationException$instance extends Cryp
 
 
 export const CryptographicUnexpectedOperationException: {
-    new(): CryptographicUnexpectedOperationException$instance;
-    new(message: string): CryptographicUnexpectedOperationException$instance;
-    new(message: string, inner: Exception): CryptographicUnexpectedOperationException$instance;
-    new(format: string, insert: string): CryptographicUnexpectedOperationException$instance;
+    new(): CryptographicUnexpectedOperationException;
+    new(message: string): CryptographicUnexpectedOperationException;
+    new(message: string, inner: Exception): CryptographicUnexpectedOperationException;
+    new(format: string, insert: string): CryptographicUnexpectedOperationException;
 };
 
 
@@ -1273,8 +1273,8 @@ export interface CryptoStream$instance extends Stream {
 
 
 export const CryptoStream: {
-    new(stream: Stream, transform: ICryptoTransform, mode: CryptoStreamMode): CryptoStream$instance;
-    new(stream: Stream, transform: ICryptoTransform, mode: CryptoStreamMode, leaveOpen: boolean): CryptoStream$instance;
+    new(stream: Stream, transform: ICryptoTransform, mode: CryptoStreamMode): CryptoStream;
+    new(stream: Stream, transform: ICryptoTransform, mode: CryptoStreamMode, leaveOpen: boolean): CryptoStream;
 };
 
 
@@ -1303,7 +1303,7 @@ export interface CspKeyContainerInfo$instance {
 
 
 export const CspKeyContainerInfo: {
-    new(parameters: CspParameters): CspKeyContainerInfo$instance;
+    new(parameters: CspParameters): CspKeyContainerInfo;
 };
 
 
@@ -1321,10 +1321,10 @@ export interface CspParameters$instance {
 
 
 export const CspParameters: {
-    new(): CspParameters$instance;
-    new(dwTypeIn: int): CspParameters$instance;
-    new(dwTypeIn: int, strProviderNameIn: string): CspParameters$instance;
-    new(dwTypeIn: int, strProviderNameIn: string, strContainerNameIn: string): CspParameters$instance;
+    new(): CspParameters;
+    new(dwTypeIn: int): CspParameters;
+    new(dwTypeIn: int, strProviderNameIn: string): CspParameters;
+    new(dwTypeIn: int, strProviderNameIn: string, strContainerNameIn: string): CspParameters;
 };
 
 
@@ -1390,7 +1390,7 @@ export interface DESCryptoServiceProvider$instance extends DES$instance {
 
 
 export const DESCryptoServiceProvider: {
-    new(): DESCryptoServiceProvider$instance;
+    new(): DESCryptoServiceProvider;
 };
 
 
@@ -1482,9 +1482,9 @@ export interface DSACng$instance extends DSA$instance {
 
 
 export const DSACng: {
-    new(): DSACng$instance;
-    new(keySize: int): DSACng$instance;
-    new(key: CngKey): DSACng$instance;
+    new(): DSACng;
+    new(keySize: int): DSACng;
+    new(key: CngKey): DSACng;
 };
 
 
@@ -1548,10 +1548,10 @@ export interface DSACryptoServiceProvider$instance extends DSA$instance {
 
 
 export const DSACryptoServiceProvider: {
-    new(): DSACryptoServiceProvider$instance;
-    new(dwKeySize: int): DSACryptoServiceProvider$instance;
-    new(dwKeySize: int, parameters: CspParameters): DSACryptoServiceProvider$instance;
-    new(parameters: CspParameters): DSACryptoServiceProvider$instance;
+    new(): DSACryptoServiceProvider;
+    new(dwKeySize: int): DSACryptoServiceProvider;
+    new(dwKeySize: int, parameters: CspParameters): DSACryptoServiceProvider;
+    new(parameters: CspParameters): DSACryptoServiceProvider;
     UseMachineKeyStore: boolean;
 };
 
@@ -1590,11 +1590,11 @@ export interface DSAOpenSsl$instance extends DSA$instance {
 
 
 export const DSAOpenSsl: {
-    new(): DSAOpenSsl$instance;
-    new(keySize: int): DSAOpenSsl$instance;
-    new(parameters: DSAParameters): DSAOpenSsl$instance;
-    new(pkeyHandle: SafeEvpPKeyHandle): DSAOpenSsl$instance;
-    new(handle: nint): DSAOpenSsl$instance;
+    new(): DSAOpenSsl;
+    new(keySize: int): DSAOpenSsl;
+    new(parameters: DSAParameters): DSAOpenSsl;
+    new(pkeyHandle: SafeEvpPKeyHandle): DSAOpenSsl;
+    new(handle: nint): DSAOpenSsl;
 };
 
 
@@ -1614,8 +1614,8 @@ export interface DSASignatureDeformatter$instance extends AsymmetricSignatureDef
 
 
 export const DSASignatureDeformatter: {
-    new(): DSASignatureDeformatter$instance;
-    new(key: AsymmetricAlgorithm): DSASignatureDeformatter$instance;
+    new(): DSASignatureDeformatter;
+    new(key: AsymmetricAlgorithm): DSASignatureDeformatter;
 };
 
 
@@ -1630,8 +1630,8 @@ export interface DSASignatureFormatter$instance extends AsymmetricSignatureForma
 
 
 export const DSASignatureFormatter: {
-    new(): DSASignatureFormatter$instance;
-    new(key: AsymmetricAlgorithm): DSASignatureFormatter$instance;
+    new(): DSASignatureFormatter;
+    new(key: AsymmetricAlgorithm): DSASignatureFormatter;
 };
 
 
@@ -1734,10 +1734,10 @@ export interface ECDiffieHellmanCng$instance extends ECDiffieHellman$instance {
 
 
 export const ECDiffieHellmanCng: {
-    new(): ECDiffieHellmanCng$instance;
-    new(keySize: int): ECDiffieHellmanCng$instance;
-    new(key: CngKey): ECDiffieHellmanCng$instance;
-    new(curve: ECCurve): ECDiffieHellmanCng$instance;
+    new(): ECDiffieHellmanCng;
+    new(keySize: int): ECDiffieHellmanCng;
+    new(key: CngKey): ECDiffieHellmanCng;
+    new(curve: ECCurve): ECDiffieHellmanCng;
 };
 
 
@@ -1757,7 +1757,7 @@ export interface ECDiffieHellmanCngPublicKey$instance extends ECDiffieHellmanPub
 
 
 export const ECDiffieHellmanCngPublicKey: {
-    new(): ECDiffieHellmanCngPublicKey$instance;
+    new(): ECDiffieHellmanCngPublicKey;
     FromByteArray(publicKeyBlob: byte[], format: CngKeyBlobFormat): ECDiffieHellmanPublicKey;
     FromXmlString(xml: string): ECDiffieHellmanCngPublicKey;
 };
@@ -1794,11 +1794,11 @@ export interface ECDiffieHellmanOpenSsl$instance extends ECDiffieHellman$instanc
 
 
 export const ECDiffieHellmanOpenSsl: {
-    new(curve: ECCurve): ECDiffieHellmanOpenSsl$instance;
-    new(): ECDiffieHellmanOpenSsl$instance;
-    new(keySize: int): ECDiffieHellmanOpenSsl$instance;
-    new(pkeyHandle: SafeEvpPKeyHandle): ECDiffieHellmanOpenSsl$instance;
-    new(handle: nint): ECDiffieHellmanOpenSsl$instance;
+    new(curve: ECCurve): ECDiffieHellmanOpenSsl;
+    new(): ECDiffieHellmanOpenSsl;
+    new(keySize: int): ECDiffieHellmanOpenSsl;
+    new(pkeyHandle: SafeEvpPKeyHandle): ECDiffieHellmanOpenSsl;
+    new(handle: nint): ECDiffieHellmanOpenSsl;
 };
 
 
@@ -1930,10 +1930,10 @@ export interface ECDsaCng$instance extends ECDsa$instance {
 
 
 export const ECDsaCng: {
-    new(): ECDsaCng$instance;
-    new(keySize: int): ECDsaCng$instance;
-    new(key: CngKey): ECDsaCng$instance;
-    new(curve: ECCurve): ECDsaCng$instance;
+    new(): ECDsaCng;
+    new(keySize: int): ECDsaCng;
+    new(key: CngKey): ECDsaCng;
+    new(curve: ECCurve): ECDsaCng;
 };
 
 
@@ -1974,11 +1974,11 @@ export interface ECDsaOpenSsl$instance extends ECDsa$instance {
 
 
 export const ECDsaOpenSsl: {
-    new(curve: ECCurve): ECDsaOpenSsl$instance;
-    new(): ECDsaOpenSsl$instance;
-    new(keySize: int): ECDsaOpenSsl$instance;
-    new(pkeyHandle: SafeEvpPKeyHandle): ECDsaOpenSsl$instance;
-    new(handle: nint): ECDsaOpenSsl$instance;
+    new(curve: ECCurve): ECDsaOpenSsl;
+    new(): ECDsaOpenSsl;
+    new(keySize: int): ECDsaOpenSsl;
+    new(pkeyHandle: SafeEvpPKeyHandle): ECDsaOpenSsl;
+    new(handle: nint): ECDsaOpenSsl;
 };
 
 
@@ -2002,8 +2002,8 @@ export interface FromBase64Transform$instance {
 
 
 export const FromBase64Transform: {
-    new(): FromBase64Transform$instance;
-    new(whitespaces: FromBase64TransformMode): FromBase64Transform$instance;
+    new(): FromBase64Transform;
+    new(whitespaces: FromBase64TransformMode): FromBase64Transform;
 };
 
 
@@ -2081,8 +2081,8 @@ export interface HMACMD5$instance extends HMAC$instance {
 
 
 export const HMACMD5: {
-    new(): HMACMD5$instance;
-    new(key: byte[]): HMACMD5$instance;
+    new(): HMACMD5;
+    new(key: byte[]): HMACMD5;
     readonly HashSizeInBits: int;
     readonly HashSizeInBytes: int;
     HashData(key: byte[], source: byte[]): byte[];
@@ -2116,9 +2116,9 @@ export interface HMACSHA1$instance extends HMAC$instance {
 
 
 export const HMACSHA1: {
-    new(): HMACSHA1$instance;
-    new(key: byte[]): HMACSHA1$instance;
-    new(key: byte[], useManagedSha1: boolean): HMACSHA1$instance;
+    new(): HMACSHA1;
+    new(key: byte[]): HMACSHA1;
+    new(key: byte[], useManagedSha1: boolean): HMACSHA1;
     readonly HashSizeInBits: int;
     readonly HashSizeInBytes: int;
     HashData(key: byte[], source: byte[]): byte[];
@@ -2152,8 +2152,8 @@ export interface HMACSHA256$instance extends HMAC$instance {
 
 
 export const HMACSHA256: {
-    new(): HMACSHA256$instance;
-    new(key: byte[]): HMACSHA256$instance;
+    new(): HMACSHA256;
+    new(key: byte[]): HMACSHA256;
     readonly HashSizeInBits: int;
     readonly HashSizeInBytes: int;
     HashData(key: byte[], source: byte[]): byte[];
@@ -2187,8 +2187,8 @@ export interface HMACSHA3_256$instance extends HMAC$instance {
 
 
 export const HMACSHA3_256: {
-    new(): HMACSHA3_256$instance;
-    new(key: byte[]): HMACSHA3_256$instance;
+    new(): HMACSHA3_256;
+    new(key: byte[]): HMACSHA3_256;
     readonly HashSizeInBits: int;
     readonly HashSizeInBytes: int;
     readonly IsSupported: boolean;
@@ -2223,8 +2223,8 @@ export interface HMACSHA3_384$instance extends HMAC$instance {
 
 
 export const HMACSHA3_384: {
-    new(): HMACSHA3_384$instance;
-    new(key: byte[]): HMACSHA3_384$instance;
+    new(): HMACSHA3_384;
+    new(key: byte[]): HMACSHA3_384;
     readonly HashSizeInBits: int;
     readonly HashSizeInBytes: int;
     readonly IsSupported: boolean;
@@ -2259,8 +2259,8 @@ export interface HMACSHA3_512$instance extends HMAC$instance {
 
 
 export const HMACSHA3_512: {
-    new(): HMACSHA3_512$instance;
-    new(key: byte[]): HMACSHA3_512$instance;
+    new(): HMACSHA3_512;
+    new(key: byte[]): HMACSHA3_512;
     readonly HashSizeInBits: int;
     readonly HashSizeInBytes: int;
     readonly IsSupported: boolean;
@@ -2296,8 +2296,8 @@ export interface HMACSHA384$instance extends HMAC$instance {
 
 
 export const HMACSHA384: {
-    new(): HMACSHA384$instance;
-    new(key: byte[]): HMACSHA384$instance;
+    new(): HMACSHA384;
+    new(key: byte[]): HMACSHA384;
     readonly HashSizeInBits: int;
     readonly HashSizeInBytes: int;
     HashData(key: byte[], source: byte[]): byte[];
@@ -2332,8 +2332,8 @@ export interface HMACSHA512$instance extends HMAC$instance {
 
 
 export const HMACSHA512: {
-    new(): HMACSHA512$instance;
-    new(key: byte[]): HMACSHA512$instance;
+    new(): HMACSHA512;
+    new(key: byte[]): HMACSHA512;
     readonly HashSizeInBits: int;
     readonly HashSizeInBytes: int;
     HashData(key: byte[], source: byte[]): byte[];
@@ -2375,7 +2375,7 @@ export interface IncrementalHash$instance {
 
 
 export const IncrementalHash: {
-    new(): IncrementalHash$instance;
+    new(): IncrementalHash;
     CreateHash(hashAlgorithm: HashAlgorithmName): IncrementalHash;
     CreateHMAC(hashAlgorithm: HashAlgorithmName, key: byte[]): IncrementalHash;
     CreateHMAC(hashAlgorithm: HashAlgorithmName, key: ReadOnlySpan_1<System_Internal.Byte>): IncrementalHash;
@@ -2419,7 +2419,7 @@ export interface KeySizes$instance {
 
 
 export const KeySizes: {
-    new(minSize: int, maxSize: int, skipSize: int): KeySizes$instance;
+    new(minSize: int, maxSize: int, skipSize: int): KeySizes;
 };
 
 
@@ -2438,8 +2438,8 @@ export interface Kmac128$instance {
 
 
 export const Kmac128: {
-    new(key: byte[], customizationString: byte[]): Kmac128$instance;
-    new(key: ReadOnlySpan_1<System_Internal.Byte>, customizationString: ReadOnlySpan_1<System_Internal.Byte>): Kmac128$instance;
+    new(key: byte[], customizationString: byte[]): Kmac128;
+    new(key: ReadOnlySpan_1<System_Internal.Byte>, customizationString: ReadOnlySpan_1<System_Internal.Byte>): Kmac128;
     readonly IsSupported: boolean;
     HashData(key: byte[], source: byte[], outputLength: int, customizationString?: byte[]): byte[];
     HashData(key: byte[], source: Stream, outputLength: int, customizationString?: byte[]): byte[];
@@ -2475,8 +2475,8 @@ export interface Kmac256$instance {
 
 
 export const Kmac256: {
-    new(key: byte[], customizationString: byte[]): Kmac256$instance;
-    new(key: ReadOnlySpan_1<System_Internal.Byte>, customizationString: ReadOnlySpan_1<System_Internal.Byte>): Kmac256$instance;
+    new(key: byte[], customizationString: byte[]): Kmac256;
+    new(key: ReadOnlySpan_1<System_Internal.Byte>, customizationString: ReadOnlySpan_1<System_Internal.Byte>): Kmac256;
     readonly IsSupported: boolean;
     HashData(key: byte[], source: byte[], outputLength: int, customizationString?: byte[]): byte[];
     HashData(key: byte[], source: Stream, outputLength: int, customizationString?: byte[]): byte[];
@@ -2512,8 +2512,8 @@ export interface KmacXof128$instance {
 
 
 export const KmacXof128: {
-    new(key: byte[], customizationString: byte[]): KmacXof128$instance;
-    new(key: ReadOnlySpan_1<System_Internal.Byte>, customizationString: ReadOnlySpan_1<System_Internal.Byte>): KmacXof128$instance;
+    new(key: byte[], customizationString: byte[]): KmacXof128;
+    new(key: ReadOnlySpan_1<System_Internal.Byte>, customizationString: ReadOnlySpan_1<System_Internal.Byte>): KmacXof128;
     readonly IsSupported: boolean;
     HashData(key: byte[], source: byte[], outputLength: int, customizationString?: byte[]): byte[];
     HashData(key: byte[], source: Stream, outputLength: int, customizationString?: byte[]): byte[];
@@ -2549,8 +2549,8 @@ export interface KmacXof256$instance {
 
 
 export const KmacXof256: {
-    new(key: byte[], customizationString: byte[]): KmacXof256$instance;
-    new(key: ReadOnlySpan_1<System_Internal.Byte>, customizationString: ReadOnlySpan_1<System_Internal.Byte>): KmacXof256$instance;
+    new(key: byte[], customizationString: byte[]): KmacXof256;
+    new(key: ReadOnlySpan_1<System_Internal.Byte>, customizationString: ReadOnlySpan_1<System_Internal.Byte>): KmacXof256;
     readonly IsSupported: boolean;
     HashData(key: byte[], source: byte[], outputLength: int, customizationString?: byte[]): byte[];
     HashData(key: byte[], source: Stream, outputLength: int, customizationString?: byte[]): byte[];
@@ -2622,7 +2622,7 @@ export interface MD5CryptoServiceProvider$instance extends MD5$instance {
 
 
 export const MD5CryptoServiceProvider: {
-    new(): MD5CryptoServiceProvider$instance;
+    new(): MD5CryptoServiceProvider;
 };
 
 
@@ -2723,7 +2723,7 @@ export interface MLDsaAlgorithm$instance {
 
 
 export const MLDsaAlgorithm: {
-    new(): MLDsaAlgorithm$instance;
+    new(): MLDsaAlgorithm;
     readonly MLDsa44: MLDsaAlgorithm;
     readonly MLDsa65: MLDsaAlgorithm;
     readonly MLDsa87: MLDsaAlgorithm;
@@ -2747,7 +2747,7 @@ export interface MLDsaCng$instance extends MLDsa$instance {
 
 
 export const MLDsaCng: {
-    new(key: CngKey): MLDsaCng$instance;
+    new(key: CngKey): MLDsaCng;
 };
 
 
@@ -2765,7 +2765,7 @@ export interface MLDsaOpenSsl$instance extends MLDsa$instance {
 
 
 export const MLDsaOpenSsl: {
-    new(pkeyHandle: SafeEvpPKeyHandle): MLDsaOpenSsl$instance;
+    new(pkeyHandle: SafeEvpPKeyHandle): MLDsaOpenSsl;
 };
 
 
@@ -2856,7 +2856,7 @@ export interface MLKemAlgorithm$instance {
 
 
 export const MLKemAlgorithm: {
-    new(): MLKemAlgorithm$instance;
+    new(): MLKemAlgorithm;
     readonly MLKem512: MLKemAlgorithm;
     readonly MLKem768: MLKemAlgorithm;
     readonly MLKem1024: MLKemAlgorithm;
@@ -2880,7 +2880,7 @@ export interface MLKemCng$instance extends MLKem$instance {
 
 
 export const MLKemCng: {
-    new(key: CngKey): MLKemCng$instance;
+    new(key: CngKey): MLKemCng;
 };
 
 
@@ -2898,7 +2898,7 @@ export interface MLKemOpenSsl$instance extends MLKem$instance {
 
 
 export const MLKemOpenSsl: {
-    new(pkeyHandle: SafeEvpPKeyHandle): MLKemOpenSsl$instance;
+    new(pkeyHandle: SafeEvpPKeyHandle): MLKemOpenSsl;
 };
 
 
@@ -2916,10 +2916,10 @@ export interface Oid$instance {
 
 
 export const Oid: {
-    new(): Oid$instance;
-    new(oid: string): Oid$instance;
-    new(value: string, friendlyName: string): Oid$instance;
-    new(oid: Oid): Oid$instance;
+    new(): Oid;
+    new(oid: string): Oid;
+    new(value: string, friendlyName: string): Oid;
+    new(oid: Oid): Oid;
     FromFriendlyName(friendlyName: string, group: OidGroup): Oid;
     FromOidValue(oidValue: string, group: OidGroup): Oid;
 };
@@ -2940,7 +2940,7 @@ export interface OidCollection$instance {
 
 
 export const OidCollection: {
-    new(): OidCollection$instance;
+    new(): OidCollection;
 };
 
 
@@ -2960,7 +2960,7 @@ export interface OidEnumerator$instance {
 
 
 export const OidEnumerator: {
-    new(): OidEnumerator$instance;
+    new(): OidEnumerator;
 };
 
 
@@ -2983,14 +2983,14 @@ export interface PasswordDeriveBytes$instance extends DeriveBytes$instance {
 
 
 export const PasswordDeriveBytes: {
-    new(strPassword: string, rgbSalt: byte[]): PasswordDeriveBytes$instance;
-    new(password: byte[], salt: byte[]): PasswordDeriveBytes$instance;
-    new(strPassword: string, rgbSalt: byte[], strHashName: string, iterations: int): PasswordDeriveBytes$instance;
-    new(password: byte[], salt: byte[], hashName: string, iterations: int): PasswordDeriveBytes$instance;
-    new(strPassword: string, rgbSalt: byte[], cspParams: CspParameters): PasswordDeriveBytes$instance;
-    new(password: byte[], salt: byte[], cspParams: CspParameters): PasswordDeriveBytes$instance;
-    new(strPassword: string, rgbSalt: byte[], strHashName: string, iterations: int, cspParams: CspParameters): PasswordDeriveBytes$instance;
-    new(password: byte[], salt: byte[], hashName: string, iterations: int, cspParams: CspParameters): PasswordDeriveBytes$instance;
+    new(strPassword: string, rgbSalt: byte[]): PasswordDeriveBytes;
+    new(password: byte[], salt: byte[]): PasswordDeriveBytes;
+    new(strPassword: string, rgbSalt: byte[], strHashName: string, iterations: int): PasswordDeriveBytes;
+    new(password: byte[], salt: byte[], hashName: string, iterations: int): PasswordDeriveBytes;
+    new(strPassword: string, rgbSalt: byte[], cspParams: CspParameters): PasswordDeriveBytes;
+    new(password: byte[], salt: byte[], cspParams: CspParameters): PasswordDeriveBytes;
+    new(strPassword: string, rgbSalt: byte[], strHashName: string, iterations: int, cspParams: CspParameters): PasswordDeriveBytes;
+    new(password: byte[], salt: byte[], hashName: string, iterations: int, cspParams: CspParameters): PasswordDeriveBytes;
 };
 
 
@@ -3009,7 +3009,7 @@ export interface PbeParameters$instance {
 
 
 export const PbeParameters: {
-    new(encryptionAlgorithm: PbeEncryptionAlgorithm, hashAlgorithm: HashAlgorithmName, iterationCount: int): PbeParameters$instance;
+    new(encryptionAlgorithm: PbeEncryptionAlgorithm, hashAlgorithm: HashAlgorithmName, iterationCount: int): PbeParameters;
 };
 
 
@@ -3022,7 +3022,7 @@ export interface PKCS1MaskGenerationMethod$instance extends MaskGenerationMethod
 
 
 export const PKCS1MaskGenerationMethod: {
-    new(): PKCS1MaskGenerationMethod$instance;
+    new(): PKCS1MaskGenerationMethod;
 };
 
 
@@ -3104,7 +3104,7 @@ export interface RC2CryptoServiceProvider$instance extends RC2$instance {
 
 
 export const RC2CryptoServiceProvider: {
-    new(): RC2CryptoServiceProvider$instance;
+    new(): RC2CryptoServiceProvider;
 };
 
 
@@ -3127,14 +3127,14 @@ export interface Rfc2898DeriveBytes$instance extends DeriveBytes$instance {
 
 
 export const Rfc2898DeriveBytes: {
-    new(password: byte[], salt: byte[], iterations: int): Rfc2898DeriveBytes$instance;
-    new(password: byte[], salt: byte[], iterations: int, hashAlgorithm: HashAlgorithmName): Rfc2898DeriveBytes$instance;
-    new(password: string, salt: byte[]): Rfc2898DeriveBytes$instance;
-    new(password: string, salt: byte[], iterations: int): Rfc2898DeriveBytes$instance;
-    new(password: string, salt: byte[], iterations: int, hashAlgorithm: HashAlgorithmName): Rfc2898DeriveBytes$instance;
-    new(password: string, saltSize: int): Rfc2898DeriveBytes$instance;
-    new(password: string, saltSize: int, iterations: int): Rfc2898DeriveBytes$instance;
-    new(password: string, saltSize: int, iterations: int, hashAlgorithm: HashAlgorithmName): Rfc2898DeriveBytes$instance;
+    new(password: byte[], salt: byte[], iterations: int): Rfc2898DeriveBytes;
+    new(password: byte[], salt: byte[], iterations: int, hashAlgorithm: HashAlgorithmName): Rfc2898DeriveBytes;
+    new(password: string, salt: byte[]): Rfc2898DeriveBytes;
+    new(password: string, salt: byte[], iterations: int): Rfc2898DeriveBytes;
+    new(password: string, salt: byte[], iterations: int, hashAlgorithm: HashAlgorithmName): Rfc2898DeriveBytes;
+    new(password: string, saltSize: int): Rfc2898DeriveBytes;
+    new(password: string, saltSize: int, iterations: int): Rfc2898DeriveBytes;
+    new(password: string, saltSize: int, iterations: int, hashAlgorithm: HashAlgorithmName): Rfc2898DeriveBytes;
     Pbkdf2(password: byte[], salt: byte[], iterations: int, hashAlgorithm: HashAlgorithmName, outputLength: int): byte[];
     Pbkdf2(password: ReadOnlySpan_1<System_Internal.Byte>, salt: ReadOnlySpan_1<System_Internal.Byte>, iterations: int, hashAlgorithm: HashAlgorithmName, outputLength: int): byte[];
     Pbkdf2(password: ReadOnlySpan_1<System_Internal.Byte>, salt: ReadOnlySpan_1<System_Internal.Byte>, destination: Span_1<System_Internal.Byte>, iterations: int, hashAlgorithm: HashAlgorithmName): void;
@@ -3187,7 +3187,7 @@ export interface RijndaelManaged$instance extends Rijndael$instance {
 
 
 export const RijndaelManaged: {
-    new(): RijndaelManaged$instance;
+    new(): RijndaelManaged;
 };
 
 
@@ -3211,10 +3211,10 @@ export interface RNGCryptoServiceProvider$instance extends RandomNumberGenerator
 
 
 export const RNGCryptoServiceProvider: {
-    new(): RNGCryptoServiceProvider$instance;
-    new(str: string): RNGCryptoServiceProvider$instance;
-    new(rgb: byte[]): RNGCryptoServiceProvider$instance;
-    new(cspParams: CspParameters): RNGCryptoServiceProvider$instance;
+    new(): RNGCryptoServiceProvider;
+    new(str: string): RNGCryptoServiceProvider;
+    new(rgb: byte[]): RNGCryptoServiceProvider;
+    new(cspParams: CspParameters): RNGCryptoServiceProvider;
 };
 
 
@@ -3314,9 +3314,9 @@ export interface RSACng$instance extends RSA$instance {
 
 
 export const RSACng: {
-    new(): RSACng$instance;
-    new(keySize: int): RSACng$instance;
-    new(key: CngKey): RSACng$instance;
+    new(): RSACng;
+    new(keySize: int): RSACng;
+    new(key: CngKey): RSACng;
 };
 
 
@@ -3380,10 +3380,10 @@ export interface RSACryptoServiceProvider$instance extends RSA$instance {
 
 
 export const RSACryptoServiceProvider: {
-    new(): RSACryptoServiceProvider$instance;
-    new(dwKeySize: int): RSACryptoServiceProvider$instance;
-    new(dwKeySize: int, parameters: CspParameters): RSACryptoServiceProvider$instance;
-    new(parameters: CspParameters): RSACryptoServiceProvider$instance;
+    new(): RSACryptoServiceProvider;
+    new(dwKeySize: int): RSACryptoServiceProvider;
+    new(dwKeySize: int, parameters: CspParameters): RSACryptoServiceProvider;
+    new(parameters: CspParameters): RSACryptoServiceProvider;
     UseMachineKeyStore: boolean;
 };
 
@@ -3409,7 +3409,7 @@ export interface RSAEncryptionPadding$instance {
 
 
 export const RSAEncryptionPadding: {
-    new(): RSAEncryptionPadding$instance;
+    new(): RSAEncryptionPadding;
     readonly Pkcs1: RSAEncryptionPadding;
     readonly OaepSHA1: RSAEncryptionPadding;
     readonly OaepSHA256: RSAEncryptionPadding;
@@ -3440,8 +3440,8 @@ export interface RSAOAEPKeyExchangeDeformatter$instance extends AsymmetricKeyExc
 
 
 export const RSAOAEPKeyExchangeDeformatter: {
-    new(): RSAOAEPKeyExchangeDeformatter$instance;
-    new(key: AsymmetricAlgorithm): RSAOAEPKeyExchangeDeformatter$instance;
+    new(): RSAOAEPKeyExchangeDeformatter;
+    new(key: AsymmetricAlgorithm): RSAOAEPKeyExchangeDeformatter;
 };
 
 
@@ -3458,8 +3458,8 @@ export interface RSAOAEPKeyExchangeFormatter$instance extends AsymmetricKeyExcha
 
 
 export const RSAOAEPKeyExchangeFormatter: {
-    new(): RSAOAEPKeyExchangeFormatter$instance;
-    new(key: AsymmetricAlgorithm): RSAOAEPKeyExchangeFormatter$instance;
+    new(): RSAOAEPKeyExchangeFormatter;
+    new(key: AsymmetricAlgorithm): RSAOAEPKeyExchangeFormatter;
 };
 
 
@@ -3517,11 +3517,11 @@ export interface RSAOpenSsl$instance extends RSA$instance {
 
 
 export const RSAOpenSsl: {
-    new(): RSAOpenSsl$instance;
-    new(keySize: int): RSAOpenSsl$instance;
-    new(parameters: RSAParameters): RSAOpenSsl$instance;
-    new(handle: nint): RSAOpenSsl$instance;
-    new(pkeyHandle: SafeEvpPKeyHandle): RSAOpenSsl$instance;
+    new(): RSAOpenSsl;
+    new(keySize: int): RSAOpenSsl;
+    new(parameters: RSAParameters): RSAOpenSsl;
+    new(handle: nint): RSAOpenSsl;
+    new(pkeyHandle: SafeEvpPKeyHandle): RSAOpenSsl;
 };
 
 
@@ -3541,8 +3541,8 @@ export interface RSAPKCS1KeyExchangeDeformatter$instance extends AsymmetricKeyEx
 
 
 export const RSAPKCS1KeyExchangeDeformatter: {
-    new(): RSAPKCS1KeyExchangeDeformatter$instance;
-    new(key: AsymmetricAlgorithm): RSAPKCS1KeyExchangeDeformatter$instance;
+    new(): RSAPKCS1KeyExchangeDeformatter;
+    new(key: AsymmetricAlgorithm): RSAPKCS1KeyExchangeDeformatter;
 };
 
 
@@ -3558,8 +3558,8 @@ export interface RSAPKCS1KeyExchangeFormatter$instance extends AsymmetricKeyExch
 
 
 export const RSAPKCS1KeyExchangeFormatter: {
-    new(): RSAPKCS1KeyExchangeFormatter$instance;
-    new(key: AsymmetricAlgorithm): RSAPKCS1KeyExchangeFormatter$instance;
+    new(): RSAPKCS1KeyExchangeFormatter;
+    new(key: AsymmetricAlgorithm): RSAPKCS1KeyExchangeFormatter;
 };
 
 
@@ -3574,8 +3574,8 @@ export interface RSAPKCS1SignatureDeformatter$instance extends AsymmetricSignatu
 
 
 export const RSAPKCS1SignatureDeformatter: {
-    new(): RSAPKCS1SignatureDeformatter$instance;
-    new(key: AsymmetricAlgorithm): RSAPKCS1SignatureDeformatter$instance;
+    new(): RSAPKCS1SignatureDeformatter;
+    new(key: AsymmetricAlgorithm): RSAPKCS1SignatureDeformatter;
 };
 
 
@@ -3590,8 +3590,8 @@ export interface RSAPKCS1SignatureFormatter$instance extends AsymmetricSignature
 
 
 export const RSAPKCS1SignatureFormatter: {
-    new(): RSAPKCS1SignatureFormatter$instance;
-    new(key: AsymmetricAlgorithm): RSAPKCS1SignatureFormatter$instance;
+    new(): RSAPKCS1SignatureFormatter;
+    new(key: AsymmetricAlgorithm): RSAPKCS1SignatureFormatter;
 };
 
 
@@ -3607,7 +3607,7 @@ export interface RSASignaturePadding$instance {
 
 
 export const RSASignaturePadding: {
-    new(): RSASignaturePadding$instance;
+    new(): RSASignaturePadding;
     readonly Pkcs1: RSASignaturePadding;
     readonly Pss: RSASignaturePadding;
 };
@@ -3631,8 +3631,8 @@ export interface SafeEvpPKeyHandle$instance extends SafeHandle {
 
 
 export const SafeEvpPKeyHandle: {
-    new(): SafeEvpPKeyHandle$instance;
-    new(handle: nint, ownsHandle: boolean): SafeEvpPKeyHandle$instance;
+    new(): SafeEvpPKeyHandle;
+    new(handle: nint, ownsHandle: boolean): SafeEvpPKeyHandle;
     readonly OpenSslVersion: long;
     OpenKeyFromProvider(providerName: string, keyUri: string): SafeEvpPKeyHandle;
     OpenPrivateKeyFromEngine(engineName: string, keyId: string): SafeEvpPKeyHandle;
@@ -3685,7 +3685,7 @@ export interface SHA1CryptoServiceProvider$instance extends SHA1$instance {
 
 
 export const SHA1CryptoServiceProvider: {
-    new(): SHA1CryptoServiceProvider$instance;
+    new(): SHA1CryptoServiceProvider;
 };
 
 
@@ -3706,7 +3706,7 @@ export interface SHA1Managed$instance extends SHA1$instance {
 
 
 export const SHA1Managed: {
-    new(): SHA1Managed$instance;
+    new(): SHA1Managed;
 };
 
 
@@ -3756,7 +3756,7 @@ export interface SHA256CryptoServiceProvider$instance extends SHA256$instance {
 
 
 export const SHA256CryptoServiceProvider: {
-    new(): SHA256CryptoServiceProvider$instance;
+    new(): SHA256CryptoServiceProvider;
 };
 
 
@@ -3777,7 +3777,7 @@ export interface SHA256Managed$instance extends SHA256$instance {
 
 
 export const SHA256Managed: {
-    new(): SHA256Managed$instance;
+    new(): SHA256Managed;
 };
 
 
@@ -3917,7 +3917,7 @@ export interface SHA384CryptoServiceProvider$instance extends SHA384$instance {
 
 
 export const SHA384CryptoServiceProvider: {
-    new(): SHA384CryptoServiceProvider$instance;
+    new(): SHA384CryptoServiceProvider;
 };
 
 
@@ -3938,7 +3938,7 @@ export interface SHA384Managed$instance extends SHA384$instance {
 
 
 export const SHA384Managed: {
-    new(): SHA384Managed$instance;
+    new(): SHA384Managed;
 };
 
 
@@ -3988,7 +3988,7 @@ export interface SHA512CryptoServiceProvider$instance extends SHA512$instance {
 
 
 export const SHA512CryptoServiceProvider: {
-    new(): SHA512CryptoServiceProvider$instance;
+    new(): SHA512CryptoServiceProvider;
 };
 
 
@@ -4009,7 +4009,7 @@ export interface SHA512Managed$instance extends SHA512$instance {
 
 
 export const SHA512Managed: {
-    new(): SHA512Managed$instance;
+    new(): SHA512Managed;
 };
 
 
@@ -4037,7 +4037,7 @@ export interface Shake128$instance {
 
 
 export const Shake128: {
-    new(): Shake128$instance;
+    new(): Shake128;
     readonly IsSupported: boolean;
     HashData(source: byte[], outputLength: int): byte[];
     HashData(source: Stream, outputLength: int): byte[];
@@ -4074,7 +4074,7 @@ export interface Shake256$instance {
 
 
 export const Shake256: {
-    new(): Shake256$instance;
+    new(): Shake256;
     readonly IsSupported: boolean;
     HashData(source: byte[], outputLength: int): byte[];
     HashData(source: Stream, outputLength: int): byte[];
@@ -4107,8 +4107,8 @@ export interface SignatureDescription$instance {
 
 
 export const SignatureDescription: {
-    new(): SignatureDescription$instance;
-    new(el: SecurityElement): SignatureDescription$instance;
+    new(): SignatureDescription;
+    new(el: SecurityElement): SignatureDescription;
 };
 
 
@@ -4192,7 +4192,7 @@ export interface SlhDsaAlgorithm$instance {
 
 
 export const SlhDsaAlgorithm: {
-    new(): SlhDsaAlgorithm$instance;
+    new(): SlhDsaAlgorithm;
     readonly SlhDsaSha2_128s: SlhDsaAlgorithm;
     readonly SlhDsaShake128s: SlhDsaAlgorithm;
     readonly SlhDsaSha2_128f: SlhDsaAlgorithm;
@@ -4225,7 +4225,7 @@ export interface SlhDsaCng$instance extends SlhDsa$instance {
 
 
 export const SlhDsaCng: {
-    new(key: CngKey): SlhDsaCng$instance;
+    new(key: CngKey): SlhDsaCng;
 };
 
 
@@ -4243,7 +4243,7 @@ export interface SlhDsaOpenSsl$instance extends SlhDsa$instance {
 
 
 export const SlhDsaOpenSsl: {
-    new(pkeyHandle: SafeEvpPKeyHandle): SlhDsaOpenSsl$instance;
+    new(pkeyHandle: SafeEvpPKeyHandle): SlhDsaOpenSsl;
 };
 
 
@@ -4266,8 +4266,8 @@ export interface SP800108HmacCounterKdf$instance {
 
 
 export const SP800108HmacCounterKdf: {
-    new(key: ReadOnlySpan_1<System_Internal.Byte>, hashAlgorithm: HashAlgorithmName): SP800108HmacCounterKdf$instance;
-    new(key: byte[], hashAlgorithm: HashAlgorithmName): SP800108HmacCounterKdf$instance;
+    new(key: ReadOnlySpan_1<System_Internal.Byte>, hashAlgorithm: HashAlgorithmName): SP800108HmacCounterKdf;
+    new(key: byte[], hashAlgorithm: HashAlgorithmName): SP800108HmacCounterKdf;
     DeriveBytes(key: byte[], hashAlgorithm: HashAlgorithmName, label: byte[], context: byte[], derivedKeyLengthInBytes: int): byte[];
     DeriveBytes(key: byte[], hashAlgorithm: HashAlgorithmName, label: string, context: string, derivedKeyLengthInBytes: int): byte[];
     DeriveBytes(key: ReadOnlySpan_1<System_Internal.Byte>, hashAlgorithm: HashAlgorithmName, label: ReadOnlySpan_1<System_Internal.Byte>, context: ReadOnlySpan_1<System_Internal.Byte>, derivedKeyLengthInBytes: int): byte[];
@@ -4364,7 +4364,7 @@ export interface ToBase64Transform$instance {
 
 
 export const ToBase64Transform: {
-    new(): ToBase64Transform$instance;
+    new(): ToBase64Transform;
 };
 
 
@@ -4406,10 +4406,10 @@ export interface TripleDESCng$instance extends TripleDES$instance {
 
 
 export const TripleDESCng: {
-    new(): TripleDESCng$instance;
-    new(keyName: string): TripleDESCng$instance;
-    new(keyName: string, provider: CngProvider): TripleDESCng$instance;
-    new(keyName: string, provider: CngProvider, openOptions: CngKeyOpenOptions): TripleDESCng$instance;
+    new(): TripleDESCng;
+    new(keyName: string): TripleDESCng;
+    new(keyName: string, provider: CngProvider): TripleDESCng;
+    new(keyName: string, provider: CngProvider, openOptions: CngKeyOpenOptions): TripleDESCng;
 };
 
 
@@ -4441,7 +4441,7 @@ export interface TripleDESCryptoServiceProvider$instance extends TripleDES$insta
 
 
 export const TripleDESCryptoServiceProvider: {
-    new(): TripleDESCryptoServiceProvider$instance;
+    new(): TripleDESCryptoServiceProvider;
 };
 
 

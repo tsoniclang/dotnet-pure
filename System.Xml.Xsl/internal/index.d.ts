@@ -72,8 +72,8 @@ export interface XslCompiledTransform$instance {
 
 
 export const XslCompiledTransform: {
-    new(): XslCompiledTransform$instance;
-    new(enableDebug: boolean): XslCompiledTransform$instance;
+    new(): XslCompiledTransform;
+    new(enableDebug: boolean): XslCompiledTransform;
 };
 
 
@@ -91,7 +91,7 @@ export interface XsltArgumentList$instance {
 
 
 export const XsltArgumentList: {
-    new(): XsltArgumentList$instance;
+    new(): XsltArgumentList;
 };
 
 
@@ -103,10 +103,10 @@ export interface XsltCompileException$instance extends XsltException$instance {
 
 
 export const XsltCompileException: {
-    new(): XsltCompileException$instance;
-    new(message: string): XsltCompileException$instance;
-    new(message: string, innerException: Exception): XsltCompileException$instance;
-    new(inner: Exception, sourceUri: string, lineNumber: int, linePosition: int): XsltCompileException$instance;
+    new(): XsltCompileException;
+    new(message: string): XsltCompileException;
+    new(message: string, innerException: Exception): XsltCompileException;
+    new(inner: Exception, sourceUri: string, lineNumber: int, linePosition: int): XsltCompileException;
 };
 
 
@@ -151,9 +151,9 @@ export interface XsltException$instance extends SystemException {
 
 
 export const XsltException: {
-    new(): XsltException$instance;
-    new(message: string): XsltException$instance;
-    new(message: string, innerException: Exception): XsltException$instance;
+    new(): XsltException;
+    new(message: string): XsltException;
+    new(message: string, innerException: Exception): XsltException;
 };
 
 
@@ -207,7 +207,7 @@ export interface XslTransform$instance {
 
 
 export const XslTransform: {
-    new(): XslTransform$instance;
+    new(): XslTransform;
 };
 
 
@@ -220,8 +220,8 @@ export interface XsltSettings$instance {
 
 
 export const XsltSettings: {
-    new(): XsltSettings$instance;
-    new(enableDocumentFunction: boolean, enableScript: boolean): XsltSettings$instance;
+    new(): XsltSettings;
+    new(enableDocumentFunction: boolean, enableScript: boolean): XsltSettings;
     readonly Default: XsltSettings;
     readonly TrustedXslt: XsltSettings;
 };

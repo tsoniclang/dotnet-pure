@@ -16,8 +16,8 @@ export interface ValueSerializerAttribute$instance extends Attribute {
 
 
 export const ValueSerializerAttribute: {
-    new(valueSerializerType: Type): ValueSerializerAttribute$instance;
-    new(valueSerializerTypeName: string): ValueSerializerAttribute$instance;
+    new(valueSerializerType: Type): ValueSerializerAttribute;
+    new(valueSerializerTypeName: string): ValueSerializerAttribute;
 };
 
 

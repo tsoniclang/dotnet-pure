@@ -20,7 +20,7 @@ export interface ComponentCrossReference$instance {
 
 
 export const ComponentCrossReference: {
-    new(): ComponentCrossReference$instance;
+    new(): ComponentCrossReference;
 };
 
 
@@ -35,7 +35,7 @@ export interface MarkCrossReferencesArgs$instance {
 
 
 export const MarkCrossReferencesArgs: {
-    new(): MarkCrossReferencesArgs$instance;
+    new(): MarkCrossReferencesArgs;
 };
 
 
@@ -48,7 +48,7 @@ export interface StronglyConnectedComponent$instance {
 
 
 export const StronglyConnectedComponent: {
-    new(): StronglyConnectedComponent$instance;
+    new(): StronglyConnectedComponent;
 };
 
 

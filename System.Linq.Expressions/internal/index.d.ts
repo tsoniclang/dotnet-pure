@@ -155,7 +155,7 @@ export interface BinaryExpression$instance extends Expression {
 
 
 export const BinaryExpression: {
-    new(): BinaryExpression$instance;
+    new(): BinaryExpression;
 };
 
 
@@ -172,7 +172,7 @@ export interface BlockExpression$instance extends Expression {
 
 
 export const BlockExpression: {
-    new(): BlockExpression$instance;
+    new(): BlockExpression;
 };
 
 
@@ -189,7 +189,7 @@ export interface CatchBlock$instance {
 
 
 export const CatchBlock: {
-    new(): CatchBlock$instance;
+    new(): CatchBlock;
 };
 
 
@@ -206,7 +206,7 @@ export interface ConditionalExpression$instance extends Expression {
 
 
 export const ConditionalExpression: {
-    new(): ConditionalExpression$instance;
+    new(): ConditionalExpression;
 };
 
 
@@ -220,7 +220,7 @@ export interface ConstantExpression$instance extends Expression {
 
 
 export const ConstantExpression: {
-    new(): ConstantExpression$instance;
+    new(): ConstantExpression;
 };
 
 
@@ -239,7 +239,7 @@ export interface DebugInfoExpression$instance extends Expression {
 
 
 export const DebugInfoExpression: {
-    new(): DebugInfoExpression$instance;
+    new(): DebugInfoExpression;
 };
 
 
@@ -252,7 +252,7 @@ export interface DefaultExpression$instance extends Expression {
 
 
 export const DefaultExpression: {
-    new(): DefaultExpression$instance;
+    new(): DefaultExpression;
 };
 
 
@@ -271,7 +271,7 @@ export interface DynamicExpression$instance extends Expression {
 
 
 export const DynamicExpression: {
-    new(): DynamicExpression$instance;
+    new(): DynamicExpression;
     Dynamic(binder: CallSiteBinder, returnType: Type, arguments: IEnumerable_1<Expression>): DynamicExpression;
     Dynamic(binder: CallSiteBinder, returnType: Type, arg0: Expression, arg1: Expression, arg2: Expression, arg3: Expression): DynamicExpression;
     Dynamic(binder: CallSiteBinder, returnType: Type, arg0: Expression, arg1: Expression, arg2: Expression): DynamicExpression;
@@ -302,7 +302,7 @@ export interface DynamicExpressionVisitor$instance extends ExpressionVisitor {
 
 
 export const DynamicExpressionVisitor: {
-    new(): DynamicExpressionVisitor$instance;
+    new(): DynamicExpressionVisitor;
 };
 
 
@@ -319,7 +319,7 @@ export interface ElementInit$instance {
 
 
 export const ElementInit: {
-    new(): ElementInit$instance;
+    new(): ElementInit;
 };
 
 
@@ -670,7 +670,7 @@ export interface Expression_1$instance<TDelegate> extends LambdaExpression {
 
 
 export const Expression_1: {
-    new<TDelegate>(): Expression_1$instance<TDelegate>;
+    new<TDelegate>(): Expression_1<TDelegate>;
 };
 
 
@@ -702,7 +702,7 @@ export interface GotoExpression$instance extends Expression {
 
 
 export const GotoExpression: {
-    new(): GotoExpression$instance;
+    new(): GotoExpression;
 };
 
 
@@ -721,7 +721,7 @@ export interface IndexExpression$instance extends Expression {
 
 
 export const IndexExpression: {
-    new(): IndexExpression$instance;
+    new(): IndexExpression;
 };
 
 
@@ -746,7 +746,7 @@ export interface InvocationExpression$instance extends Expression {
 
 
 export const InvocationExpression: {
-    new(): InvocationExpression$instance;
+    new(): InvocationExpression;
 };
 
 
@@ -769,7 +769,7 @@ export interface LabelExpression$instance extends Expression {
 
 
 export const LabelExpression: {
-    new(): LabelExpression$instance;
+    new(): LabelExpression;
 };
 
 
@@ -783,7 +783,7 @@ export interface LabelTarget$instance {
 
 
 export const LabelTarget: {
-    new(): LabelTarget$instance;
+    new(): LabelTarget;
 };
 
 
@@ -823,7 +823,7 @@ export interface ListInitExpression$instance extends Expression {
 
 
 export const ListInitExpression: {
-    new(): ListInitExpression$instance;
+    new(): ListInitExpression;
 };
 
 
@@ -840,7 +840,7 @@ export interface LoopExpression$instance extends Expression {
 
 
 export const LoopExpression: {
-    new(): LoopExpression$instance;
+    new(): LoopExpression;
 };
 
 
@@ -853,7 +853,7 @@ export interface MemberAssignment$instance extends MemberBinding {
 
 
 export const MemberAssignment: {
-    new(): MemberAssignment$instance;
+    new(): MemberAssignment;
 };
 
 
@@ -881,7 +881,7 @@ export interface MemberExpression$instance extends Expression {
 
 
 export const MemberExpression: {
-    new(): MemberExpression$instance;
+    new(): MemberExpression;
 };
 
 
@@ -899,7 +899,7 @@ export interface MemberInitExpression$instance extends Expression {
 
 
 export const MemberInitExpression: {
-    new(): MemberInitExpression$instance;
+    new(): MemberInitExpression;
 };
 
 
@@ -912,7 +912,7 @@ export interface MemberListBinding$instance extends MemberBinding {
 
 
 export const MemberListBinding: {
-    new(): MemberListBinding$instance;
+    new(): MemberListBinding;
 };
 
 
@@ -925,7 +925,7 @@ export interface MemberMemberBinding$instance extends MemberBinding {
 
 
 export const MemberMemberBinding: {
-    new(): MemberMemberBinding$instance;
+    new(): MemberMemberBinding;
 };
 
 
@@ -944,7 +944,7 @@ export interface MethodCallExpression$instance extends Expression {
 
 
 export const MethodCallExpression: {
-    new(): MethodCallExpression$instance;
+    new(): MethodCallExpression;
 };
 
 
@@ -965,7 +965,7 @@ export interface NewArrayExpression$instance extends Expression {
 
 
 export const NewArrayExpression: {
-    new(): NewArrayExpression$instance;
+    new(): NewArrayExpression;
 };
 
 
@@ -984,7 +984,7 @@ export interface NewExpression$instance extends Expression {
 
 
 export const NewExpression: {
-    new(): NewExpression$instance;
+    new(): NewExpression;
 };
 
 
@@ -1006,7 +1006,7 @@ export interface ParameterExpression$instance extends Expression {
 
 
 export const ParameterExpression: {
-    new(): ParameterExpression$instance;
+    new(): ParameterExpression;
 };
 
 
@@ -1021,7 +1021,7 @@ export interface RuntimeVariablesExpression$instance extends Expression {
 
 
 export const RuntimeVariablesExpression: {
-    new(): RuntimeVariablesExpression$instance;
+    new(): RuntimeVariablesExpression;
 };
 
 
@@ -1036,7 +1036,7 @@ export interface SwitchCase$instance {
 
 
 export const SwitchCase: {
-    new(): SwitchCase$instance;
+    new(): SwitchCase;
 };
 
 
@@ -1054,7 +1054,7 @@ export interface SwitchExpression$instance extends Expression {
 
 
 export const SwitchExpression: {
-    new(): SwitchExpression$instance;
+    new(): SwitchExpression;
 };
 
 
@@ -1069,7 +1069,7 @@ export interface SymbolDocumentInfo$instance {
 
 
 export const SymbolDocumentInfo: {
-    new(): SymbolDocumentInfo$instance;
+    new(): SymbolDocumentInfo;
 };
 
 
@@ -1087,7 +1087,7 @@ export interface TryExpression$instance extends Expression {
 
 
 export const TryExpression: {
-    new(): TryExpression$instance;
+    new(): TryExpression;
 };
 
 
@@ -1103,7 +1103,7 @@ export interface TypeBinaryExpression$instance extends Expression {
 
 
 export const TypeBinaryExpression: {
-    new(): TypeBinaryExpression$instance;
+    new(): TypeBinaryExpression;
 };
 
 
@@ -1123,7 +1123,7 @@ export interface UnaryExpression$instance extends Expression {
 
 
 export const UnaryExpression: {
-    new(): UnaryExpression$instance;
+    new(): UnaryExpression;
 };
 
 

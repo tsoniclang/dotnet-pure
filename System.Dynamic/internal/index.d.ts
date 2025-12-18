@@ -78,8 +78,8 @@ export interface CallInfo$instance {
 
 
 export const CallInfo: {
-    new(argCount: int, argNames: string[]): CallInfo$instance;
-    new(argCount: int, argNames: IEnumerable_1<System_Internal.String>): CallInfo$instance;
+    new(argCount: int, argNames: string[]): CallInfo;
+    new(argCount: int, argNames: IEnumerable_1<System_Internal.String>): CallInfo;
 };
 
 
@@ -175,8 +175,8 @@ export interface DynamicMetaObject$instance {
 
 
 export const DynamicMetaObject: {
-    new(expression: Expression, restrictions: BindingRestrictions): DynamicMetaObject$instance;
-    new(expression: Expression, restrictions: BindingRestrictions, value: unknown): DynamicMetaObject$instance;
+    new(expression: Expression, restrictions: BindingRestrictions): DynamicMetaObject;
+    new(expression: Expression, restrictions: BindingRestrictions, value: unknown): DynamicMetaObject;
     readonly EmptyMetaObjects: DynamicMetaObject[];
     Create(value: unknown, expression: Expression): DynamicMetaObject;
 };
@@ -220,7 +220,7 @@ export interface DynamicObject$instance {
 
 
 export const DynamicObject: {
-    new(): DynamicObject$instance;
+    new(): DynamicObject;
 };
 
 
@@ -238,7 +238,7 @@ export interface ExpandoObject$instance extends INotifyPropertyChanged {
 
 
 export const ExpandoObject: {
-    new(): ExpandoObject$instance;
+    new(): ExpandoObject;
 };
 
 

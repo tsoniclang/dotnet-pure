@@ -129,7 +129,7 @@ export interface AsyncFlowControl$instance {
 
 
 export const AsyncFlowControl: {
-    new(): AsyncFlowControl$instance;
+    new(): AsyncFlowControl;
 };
 
 
@@ -154,7 +154,7 @@ export interface AsyncLocalValueChangedArgs_1$instance<T> {
 
 
 export const AsyncLocalValueChangedArgs_1: {
-    new<T>(): AsyncLocalValueChangedArgs_1$instance<T>;
+    new<T>(): AsyncLocalValueChangedArgs_1<T>;
 };
 
 
@@ -179,7 +179,7 @@ export interface CancellationToken$instance {
 
 
 export const CancellationToken: {
-    new(canceled: boolean): CancellationToken$instance;
+    new(canceled: boolean): CancellationToken;
     readonly None: CancellationToken;
 };
 
@@ -206,7 +206,7 @@ export interface CancellationTokenRegistration$instance {
 
 
 export const CancellationTokenRegistration: {
-    new(): CancellationTokenRegistration$instance;
+    new(): CancellationTokenRegistration;
 };
 
 
@@ -230,7 +230,7 @@ export interface Lock_Scope$instance {
 
 
 export const Lock_Scope: {
-    new(): Lock_Scope$instance;
+    new(): Lock_Scope;
 };
 
 
@@ -244,7 +244,7 @@ export interface LockCookie$instance {
 
 
 export const LockCookie: {
-    new(): LockCookie$instance;
+    new(): LockCookie;
 };
 
 
@@ -265,7 +265,7 @@ export interface NamedWaitHandleOptions$instance {
 
 
 export const NamedWaitHandleOptions: {
-    new(): NamedWaitHandleOptions$instance;
+    new(): NamedWaitHandleOptions;
 };
 
 
@@ -281,7 +281,7 @@ export interface NativeOverlapped$instance {
 
 
 export const NativeOverlapped: {
-    new(): NativeOverlapped$instance;
+    new(): NativeOverlapped;
 };
 
 
@@ -301,7 +301,7 @@ export interface SpinLock$instance {
 
 
 export const SpinLock: {
-    new(enableThreadOwnerTracking: boolean): SpinLock$instance;
+    new(enableThreadOwnerTracking: boolean): SpinLock;
 };
 
 
@@ -317,7 +317,7 @@ export interface SpinWait$instance {
 
 
 export const SpinWait: {
-    new(): SpinWait$instance;
+    new(): SpinWait;
     SpinUntil(condition: Func_1<System_Internal.Boolean>, millisecondsTimeout: int): boolean;
     SpinUntil(condition: Func_1<System_Internal.Boolean>, timeout: TimeSpan): boolean;
     SpinUntil(condition: Func_1<System_Internal.Boolean>): void;
@@ -334,12 +334,12 @@ export interface AbandonedMutexException$instance extends SystemException {
 
 
 export const AbandonedMutexException: {
-    new(): AbandonedMutexException$instance;
-    new(message: string): AbandonedMutexException$instance;
-    new(message: string, inner: Exception): AbandonedMutexException$instance;
-    new(location: int, handle: WaitHandle): AbandonedMutexException$instance;
-    new(message: string, location: int, handle: WaitHandle): AbandonedMutexException$instance;
-    new(message: string, inner: Exception, location: int, handle: WaitHandle): AbandonedMutexException$instance;
+    new(): AbandonedMutexException;
+    new(message: string): AbandonedMutexException;
+    new(message: string, inner: Exception): AbandonedMutexException;
+    new(location: int, handle: WaitHandle): AbandonedMutexException;
+    new(message: string, location: int, handle: WaitHandle): AbandonedMutexException;
+    new(message: string, inner: Exception, location: int, handle: WaitHandle): AbandonedMutexException;
 };
 
 
@@ -356,8 +356,8 @@ export interface AsyncLocal_1$instance<T> {
 
 
 export const AsyncLocal_1: {
-    new<T>(): AsyncLocal_1$instance<T>;
-    new<T>(valueChangedHandler: Action_1<AsyncLocalValueChangedArgs_1<T>>): AsyncLocal_1$instance<T>;
+    new<T>(): AsyncLocal_1<T>;
+    new<T>(valueChangedHandler: Action_1<AsyncLocalValueChangedArgs_1<T>>): AsyncLocal_1<T>;
 };
 
 
@@ -369,7 +369,7 @@ export interface AutoResetEvent$instance extends EventWaitHandle$instance {
 
 
 export const AutoResetEvent: {
-    new(initialState: boolean): AutoResetEvent$instance;
+    new(initialState: boolean): AutoResetEvent;
 };
 
 
@@ -399,8 +399,8 @@ export interface Barrier$instance {
 
 
 export const Barrier: {
-    new(participantCount: int): Barrier$instance;
-    new(participantCount: int, postPhaseAction: Action_1<Barrier>): Barrier$instance;
+    new(participantCount: int): Barrier;
+    new(participantCount: int, postPhaseAction: Action_1<Barrier>): Barrier;
 };
 
 
@@ -419,10 +419,10 @@ export interface BarrierPostPhaseException$instance extends Exception {
 
 
 export const BarrierPostPhaseException: {
-    new(): BarrierPostPhaseException$instance;
-    new(innerException: Exception): BarrierPostPhaseException$instance;
-    new(message: string): BarrierPostPhaseException$instance;
-    new(message: string, innerException: Exception): BarrierPostPhaseException$instance;
+    new(): BarrierPostPhaseException;
+    new(innerException: Exception): BarrierPostPhaseException;
+    new(message: string): BarrierPostPhaseException;
+    new(message: string, innerException: Exception): BarrierPostPhaseException;
 };
 
 
@@ -447,10 +447,10 @@ export interface CancellationTokenSource$instance {
 
 
 export const CancellationTokenSource: {
-    new(): CancellationTokenSource$instance;
-    new(delay: TimeSpan): CancellationTokenSource$instance;
-    new(delay: TimeSpan, timeProvider: TimeProvider): CancellationTokenSource$instance;
-    new(millisecondsDelay: int): CancellationTokenSource$instance;
+    new(): CancellationTokenSource;
+    new(delay: TimeSpan): CancellationTokenSource;
+    new(delay: TimeSpan, timeProvider: TimeProvider): CancellationTokenSource;
+    new(millisecondsDelay: int): CancellationTokenSource;
     CreateLinkedTokenSource(tokens: ReadOnlySpan_1<CancellationToken>): CancellationTokenSource;
     CreateLinkedTokenSource(token1: CancellationToken, token2: CancellationToken): CancellationTokenSource;
     CreateLinkedTokenSource(token: CancellationToken): CancellationTokenSource;
@@ -474,7 +474,7 @@ export interface CompressedStack$instance {
 
 
 export const CompressedStack: {
-    new(): CompressedStack$instance;
+    new(): CompressedStack;
     Capture(): CompressedStack;
     GetCompressedStack(): CompressedStack;
     Run(compressedStack: CompressedStack, callback: ContextCallback, state: unknown): void;
@@ -514,7 +514,7 @@ export interface CountdownEvent$instance {
 
 
 export const CountdownEvent: {
-    new(initialCount: int): CountdownEvent$instance;
+    new(initialCount: int): CountdownEvent;
 };
 
 
@@ -535,11 +535,11 @@ export interface EventWaitHandle$instance extends WaitHandle$instance {
 
 
 export const EventWaitHandle: {
-    new(initialState: boolean, mode: EventResetMode): EventWaitHandle$instance;
-    new(initialState: boolean, mode: EventResetMode, name: string, options: NamedWaitHandleOptions): EventWaitHandle$instance;
-    new(initialState: boolean, mode: EventResetMode, name: string): EventWaitHandle$instance;
-    new(initialState: boolean, mode: EventResetMode, name: string, options: NamedWaitHandleOptions, createdNew: boolean): EventWaitHandle$instance;
-    new(initialState: boolean, mode: EventResetMode, name: string, createdNew: boolean): EventWaitHandle$instance;
+    new(initialState: boolean, mode: EventResetMode): EventWaitHandle;
+    new(initialState: boolean, mode: EventResetMode, name: string, options: NamedWaitHandleOptions): EventWaitHandle;
+    new(initialState: boolean, mode: EventResetMode, name: string): EventWaitHandle;
+    new(initialState: boolean, mode: EventResetMode, name: string, options: NamedWaitHandleOptions, createdNew: boolean): EventWaitHandle;
+    new(initialState: boolean, mode: EventResetMode, name: string, createdNew: boolean): EventWaitHandle;
     OpenExisting(name: string, options: NamedWaitHandleOptions): EventWaitHandle;
     OpenExisting(name: string): EventWaitHandle;
     TryOpenExisting(name: string, result: EventWaitHandle): boolean;
@@ -562,7 +562,7 @@ export interface ExecutionContext$instance {
 
 
 export const ExecutionContext: {
-    new(): ExecutionContext$instance;
+    new(): ExecutionContext;
     Capture(): ExecutionContext;
     IsFlowSuppressed(): boolean;
     Restore(executionContext: ExecutionContext): void;
@@ -590,8 +590,8 @@ export interface HostExecutionContext$instance {
 
 
 export const HostExecutionContext: {
-    new(): HostExecutionContext$instance;
-    new(state: unknown): HostExecutionContext$instance;
+    new(): HostExecutionContext;
+    new(state: unknown): HostExecutionContext;
 };
 
 
@@ -610,7 +610,7 @@ export interface HostExecutionContextManager$instance {
 
 
 export const HostExecutionContextManager: {
-    new(): HostExecutionContextManager$instance;
+    new(): HostExecutionContextManager;
 };
 
 
@@ -628,7 +628,7 @@ export interface Lock$instance {
 
 
 export const Lock: {
-    new(): Lock$instance;
+    new(): Lock;
 };
 
 
@@ -640,9 +640,9 @@ export interface LockRecursionException$instance extends Exception {
 
 
 export const LockRecursionException: {
-    new(): LockRecursionException$instance;
-    new(message: string): LockRecursionException$instance;
-    new(message: string, innerException: Exception): LockRecursionException$instance;
+    new(): LockRecursionException;
+    new(message: string): LockRecursionException;
+    new(message: string, innerException: Exception): LockRecursionException;
 };
 
 
@@ -659,7 +659,7 @@ export interface ManualResetEvent$instance extends EventWaitHandle$instance {
 
 
 export const ManualResetEvent: {
-    new(initialState: boolean): ManualResetEvent$instance;
+    new(initialState: boolean): ManualResetEvent;
 };
 
 
@@ -687,9 +687,9 @@ export interface ManualResetEventSlim$instance {
 
 
 export const ManualResetEventSlim: {
-    new(): ManualResetEventSlim$instance;
-    new(initialState: boolean): ManualResetEventSlim$instance;
-    new(initialState: boolean, spinCount: int): ManualResetEventSlim$instance;
+    new(): ManualResetEventSlim;
+    new(initialState: boolean): ManualResetEventSlim;
+    new(initialState: boolean, spinCount: int): ManualResetEventSlim;
 };
 
 
@@ -709,13 +709,13 @@ export interface Mutex$instance extends WaitHandle$instance {
 
 
 export const Mutex: {
-    new(initiallyOwned: boolean, name: string, options: NamedWaitHandleOptions, createdNew: boolean): Mutex$instance;
-    new(initiallyOwned: boolean, name: string, createdNew: boolean): Mutex$instance;
-    new(initiallyOwned: boolean, name: string, options: NamedWaitHandleOptions): Mutex$instance;
-    new(initiallyOwned: boolean, name: string): Mutex$instance;
-    new(name: string, options: NamedWaitHandleOptions): Mutex$instance;
-    new(initiallyOwned: boolean): Mutex$instance;
-    new(): Mutex$instance;
+    new(initiallyOwned: boolean, name: string, options: NamedWaitHandleOptions, createdNew: boolean): Mutex;
+    new(initiallyOwned: boolean, name: string, createdNew: boolean): Mutex;
+    new(initiallyOwned: boolean, name: string, options: NamedWaitHandleOptions): Mutex;
+    new(initiallyOwned: boolean, name: string): Mutex;
+    new(name: string, options: NamedWaitHandleOptions): Mutex;
+    new(initiallyOwned: boolean): Mutex;
+    new(): Mutex;
     OpenExisting(name: string, options: NamedWaitHandleOptions): Mutex;
     OpenExisting(name: string): Mutex;
     TryOpenExisting(name: string, result: Mutex): boolean;
@@ -744,9 +744,9 @@ export interface Overlapped$instance {
 
 
 export const Overlapped: {
-    new(): Overlapped$instance;
-    new(offsetLo: int, offsetHi: int, hEvent: nint, ar: IAsyncResult): Overlapped$instance;
-    new(offsetLo: int, offsetHi: int, hEvent: int, ar: IAsyncResult): Overlapped$instance;
+    new(): Overlapped;
+    new(offsetLo: int, offsetHi: int, hEvent: nint, ar: IAsyncResult): Overlapped;
+    new(offsetLo: int, offsetHi: int, hEvent: int, ar: IAsyncResult): Overlapped;
     Free(nativeOverlappedPtr: ptr<NativeOverlapped>): void;
     Unpack(nativeOverlappedPtr: ptr<NativeOverlapped>): Overlapped;
 };
@@ -762,8 +762,8 @@ export interface PeriodicTimer$instance {
 
 
 export const PeriodicTimer: {
-    new(period: TimeSpan): PeriodicTimer$instance;
-    new(period: TimeSpan, timeProvider: TimeProvider): PeriodicTimer$instance;
+    new(period: TimeSpan): PeriodicTimer;
+    new(period: TimeSpan, timeProvider: TimeProvider): PeriodicTimer;
 };
 
 
@@ -782,7 +782,7 @@ export interface PreAllocatedOverlapped$instance {
 
 
 export const PreAllocatedOverlapped: {
-    new(callback: IOCompletionCallback, state: unknown, pinData: unknown): PreAllocatedOverlapped$instance;
+    new(callback: IOCompletionCallback, state: unknown, pinData: unknown): PreAllocatedOverlapped;
     UnsafeCreate(callback: IOCompletionCallback, state: unknown, pinData: unknown): PreAllocatedOverlapped;
 };
 
@@ -816,7 +816,7 @@ export interface ReaderWriterLock$instance extends CriticalFinalizerObject {
 
 
 export const ReaderWriterLock: {
-    new(): ReaderWriterLock$instance;
+    new(): ReaderWriterLock;
 };
 
 
@@ -851,8 +851,8 @@ export interface ReaderWriterLockSlim$instance {
 
 
 export const ReaderWriterLockSlim: {
-    new(): ReaderWriterLockSlim$instance;
-    new(recursionPolicy: LockRecursionPolicy): ReaderWriterLockSlim$instance;
+    new(): ReaderWriterLockSlim;
+    new(recursionPolicy: LockRecursionPolicy): ReaderWriterLockSlim;
 };
 
 
@@ -871,7 +871,7 @@ export interface RegisteredWaitHandle$instance extends MarshalByRefObject {
 
 
 export const RegisteredWaitHandle: {
-    new(): RegisteredWaitHandle$instance;
+    new(): RegisteredWaitHandle;
 };
 
 
@@ -885,11 +885,11 @@ export interface Semaphore$instance extends WaitHandle$instance {
 
 
 export const Semaphore: {
-    new(initialCount: int, maximumCount: int): Semaphore$instance;
-    new(initialCount: int, maximumCount: int, name: string, options: NamedWaitHandleOptions): Semaphore$instance;
-    new(initialCount: int, maximumCount: int, name: string): Semaphore$instance;
-    new(initialCount: int, maximumCount: int, name: string, options: NamedWaitHandleOptions, createdNew: boolean): Semaphore$instance;
-    new(initialCount: int, maximumCount: int, name: string, createdNew: boolean): Semaphore$instance;
+    new(initialCount: int, maximumCount: int): Semaphore;
+    new(initialCount: int, maximumCount: int, name: string, options: NamedWaitHandleOptions): Semaphore;
+    new(initialCount: int, maximumCount: int, name: string): Semaphore;
+    new(initialCount: int, maximumCount: int, name: string, options: NamedWaitHandleOptions, createdNew: boolean): Semaphore;
+    new(initialCount: int, maximumCount: int, name: string, createdNew: boolean): Semaphore;
     OpenExisting(name: string, options: NamedWaitHandleOptions): Semaphore;
     OpenExisting(name: string): Semaphore;
     TryOpenExisting(name: string, options: NamedWaitHandleOptions, result: Semaphore): boolean;
@@ -910,9 +910,9 @@ export interface SemaphoreFullException$instance extends SystemException {
 
 
 export const SemaphoreFullException: {
-    new(): SemaphoreFullException$instance;
-    new(message: string): SemaphoreFullException$instance;
-    new(message: string, innerException: Exception): SemaphoreFullException$instance;
+    new(): SemaphoreFullException;
+    new(message: string): SemaphoreFullException;
+    new(message: string, innerException: Exception): SemaphoreFullException;
 };
 
 
@@ -945,8 +945,8 @@ export interface SemaphoreSlim$instance {
 
 
 export const SemaphoreSlim: {
-    new(initialCount: int): SemaphoreSlim$instance;
-    new(initialCount: int, maxCount: int): SemaphoreSlim$instance;
+    new(initialCount: int): SemaphoreSlim;
+    new(initialCount: int, maxCount: int): SemaphoreSlim;
 };
 
 
@@ -971,7 +971,7 @@ export interface SynchronizationContext$instance {
 
 
 export const SynchronizationContext: {
-    new(): SynchronizationContext$instance;
+    new(): SynchronizationContext;
     readonly Current: SynchronizationContext;
     SetSynchronizationContext(syncContext: SynchronizationContext): void;
 };
@@ -985,9 +985,9 @@ export interface SynchronizationLockException$instance extends SystemException {
 
 
 export const SynchronizationLockException: {
-    new(): SynchronizationLockException$instance;
-    new(message: string): SynchronizationLockException$instance;
-    new(message: string, innerException: Exception): SynchronizationLockException$instance;
+    new(): SynchronizationLockException;
+    new(message: string): SynchronizationLockException;
+    new(message: string, innerException: Exception): SynchronizationLockException;
 };
 
 
@@ -1033,10 +1033,10 @@ export interface Thread$instance extends CriticalFinalizerObject {
 
 
 export const Thread: {
-    new(start: ThreadStart): Thread$instance;
-    new(start: ThreadStart, maxStackSize: int): Thread$instance;
-    new(start: ParameterizedThreadStart): Thread$instance;
-    new(start: ParameterizedThreadStart, maxStackSize: int): Thread$instance;
+    new(start: ThreadStart): Thread;
+    new(start: ThreadStart, maxStackSize: int): Thread;
+    new(start: ParameterizedThreadStart): Thread;
+    new(start: ParameterizedThreadStart, maxStackSize: int): Thread;
     CurrentPrincipal: IPrincipal;
     readonly CurrentThread: Thread;
     AllocateDataSlot(): LocalDataStoreSlot;
@@ -1096,7 +1096,7 @@ export interface ThreadAbortException$instance extends SystemException {
 
 
 export const ThreadAbortException: {
-    new(): ThreadAbortException$instance;
+    new(): ThreadAbortException;
 };
 
 
@@ -1113,7 +1113,7 @@ export interface ThreadExceptionEventArgs$instance extends EventArgs {
 
 
 export const ThreadExceptionEventArgs: {
-    new(t: Exception): ThreadExceptionEventArgs$instance;
+    new(t: Exception): ThreadExceptionEventArgs;
 };
 
 
@@ -1125,9 +1125,9 @@ export interface ThreadInterruptedException$instance extends SystemException {
 
 
 export const ThreadInterruptedException: {
-    new(): ThreadInterruptedException$instance;
-    new(message: string): ThreadInterruptedException$instance;
-    new(message: string, innerException: Exception): ThreadInterruptedException$instance;
+    new(): ThreadInterruptedException;
+    new(message: string): ThreadInterruptedException;
+    new(message: string, innerException: Exception): ThreadInterruptedException;
 };
 
 
@@ -1148,10 +1148,10 @@ export interface ThreadLocal_1$instance<T> {
 
 
 export const ThreadLocal_1: {
-    new<T>(): ThreadLocal_1$instance<T>;
-    new<T>(trackAllValues: boolean): ThreadLocal_1$instance<T>;
-    new<T>(valueFactory: Func_1<T>): ThreadLocal_1$instance<T>;
-    new<T>(valueFactory: Func_1<T>, trackAllValues: boolean): ThreadLocal_1$instance<T>;
+    new<T>(): ThreadLocal_1<T>;
+    new<T>(trackAllValues: boolean): ThreadLocal_1<T>;
+    new<T>(valueFactory: Func_1<T>): ThreadLocal_1<T>;
+    new<T>(valueFactory: Func_1<T>, trackAllValues: boolean): ThreadLocal_1<T>;
 };
 
 
@@ -1175,7 +1175,7 @@ export interface ThreadPoolBoundHandle$instance {
 
 
 export const ThreadPoolBoundHandle: {
-    new(): ThreadPoolBoundHandle$instance;
+    new(): ThreadPoolBoundHandle;
     BindHandle(handle: SafeHandle): ThreadPoolBoundHandle;
     GetNativeOverlappedState(overlapped: ptr<NativeOverlapped>): unknown;
 };
@@ -1196,7 +1196,7 @@ export interface ThreadStartException$instance extends SystemException {
 
 
 export const ThreadStartException: {
-    new(): ThreadStartException$instance;
+    new(): ThreadStartException;
 };
 
 
@@ -1213,9 +1213,9 @@ export interface ThreadStateException$instance extends SystemException {
 
 
 export const ThreadStateException: {
-    new(): ThreadStateException$instance;
-    new(message: string): ThreadStateException$instance;
-    new(message: string, innerException: Exception): ThreadStateException$instance;
+    new(): ThreadStateException;
+    new(message: string): ThreadStateException;
+    new(message: string, innerException: Exception): ThreadStateException;
 };
 
 
@@ -1238,11 +1238,11 @@ export interface Timer$instance extends MarshalByRefObject {
 
 
 export const Timer: {
-    new(callback: TimerCallback, state: unknown, dueTime: int, period: int): Timer$instance;
-    new(callback: TimerCallback, state: unknown, dueTime: TimeSpan, period: TimeSpan): Timer$instance;
-    new(callback: TimerCallback, state: unknown, dueTime: uint, period: uint): Timer$instance;
-    new(callback: TimerCallback, state: unknown, dueTime: long, period: long): Timer$instance;
-    new(callback: TimerCallback): Timer$instance;
+    new(callback: TimerCallback, state: unknown, dueTime: int, period: int): Timer;
+    new(callback: TimerCallback, state: unknown, dueTime: TimeSpan, period: TimeSpan): Timer;
+    new(callback: TimerCallback, state: unknown, dueTime: uint, period: uint): Timer;
+    new(callback: TimerCallback, state: unknown, dueTime: long, period: long): Timer;
+    new(callback: TimerCallback): Timer;
     readonly ActiveCount: long;
 };
 
@@ -1302,9 +1302,9 @@ export interface WaitHandleCannotBeOpenedException$instance extends ApplicationE
 
 
 export const WaitHandleCannotBeOpenedException: {
-    new(): WaitHandleCannotBeOpenedException$instance;
-    new(message: string): WaitHandleCannotBeOpenedException$instance;
-    new(message: string, innerException: Exception): WaitHandleCannotBeOpenedException$instance;
+    new(): WaitHandleCannotBeOpenedException;
+    new(message: string): WaitHandleCannotBeOpenedException;
+    new(message: string, innerException: Exception): WaitHandleCannotBeOpenedException;
 };
 
 

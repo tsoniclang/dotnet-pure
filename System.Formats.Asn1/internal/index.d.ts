@@ -95,8 +95,8 @@ export interface Asn1Tag$instance {
 
 
 export const Asn1Tag: {
-    new(universalTagNumber: UniversalTagNumber, isConstructed: boolean): Asn1Tag$instance;
-    new(tagClass: TagClass, tagValue: int, isConstructed: boolean): Asn1Tag$instance;
+    new(universalTagNumber: UniversalTagNumber, isConstructed: boolean): Asn1Tag;
+    new(tagClass: TagClass, tagValue: int, isConstructed: boolean): Asn1Tag;
     readonly Boolean: Asn1Tag;
     readonly Integer: Asn1Tag;
     readonly PrimitiveBitString: Asn1Tag;
@@ -132,7 +132,7 @@ export interface AsnReaderOptions$instance {
 
 
 export const AsnReaderOptions: {
-    new(): AsnReaderOptions$instance;
+    new(): AsnReaderOptions;
 };
 
 
@@ -144,7 +144,7 @@ export interface AsnWriter_Scope$instance {
 
 
 export const AsnWriter_Scope: {
-    new(): AsnWriter_Scope$instance;
+    new(): AsnWriter_Scope;
 };
 
 
@@ -163,9 +163,9 @@ export interface AsnContentException$instance extends Exception {
 
 
 export const AsnContentException: {
-    new(): AsnContentException$instance;
-    new(message: string): AsnContentException$instance;
-    new(message: string, inner: Exception): AsnContentException$instance;
+    new(): AsnContentException;
+    new(message: string): AsnContentException;
+    new(message: string, inner: Exception): AsnContentException;
 };
 
 
@@ -220,7 +220,7 @@ export interface AsnReader$instance {
 
 
 export const AsnReader: {
-    new(data: ReadOnlyMemory_1<System_Internal.Byte>, ruleSet: AsnEncodingRules, options: AsnReaderOptions): AsnReader$instance;
+    new(data: ReadOnlyMemory_1<System_Internal.Byte>, ruleSet: AsnEncodingRules, options: AsnReaderOptions): AsnReader;
 };
 
 
@@ -271,8 +271,8 @@ export interface AsnWriter$instance {
 
 
 export const AsnWriter: {
-    new(ruleSet: AsnEncodingRules): AsnWriter$instance;
-    new(ruleSet: AsnEncodingRules, initialCapacity: int): AsnWriter$instance;
+    new(ruleSet: AsnEncodingRules): AsnWriter;
+    new(ruleSet: AsnEncodingRules, initialCapacity: int): AsnWriter;
 };
 
 

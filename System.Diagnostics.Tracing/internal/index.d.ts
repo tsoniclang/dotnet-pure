@@ -130,7 +130,7 @@ export interface EventSource_EventSourcePrimitive$instance {
 
 
 export const EventSource_EventSourcePrimitive: {
-    new(): EventSource_EventSourcePrimitive$instance;
+    new(): EventSource_EventSourcePrimitive;
 };
 
 
@@ -146,7 +146,7 @@ export interface EventSourceOptions$instance {
 
 
 export const EventSourceOptions: {
-    new(): EventSourceOptions$instance;
+    new(): EventSourceOptions;
 };
 
 
@@ -190,7 +190,7 @@ export interface EventAttribute$instance extends Attribute {
 
 
 export const EventAttribute: {
-    new(eventId: int): EventAttribute$instance;
+    new(eventId: int): EventAttribute;
 };
 
 
@@ -205,7 +205,7 @@ export interface EventCommandEventArgs$instance extends EventArgs {
 
 
 export const EventCommandEventArgs: {
-    new(): EventCommandEventArgs$instance;
+    new(): EventCommandEventArgs;
 };
 
 
@@ -220,7 +220,7 @@ export interface EventCounter$instance extends DiagnosticCounter$instance {
 
 
 export const EventCounter: {
-    new(name: string, eventSource: EventSource): EventCounter$instance;
+    new(name: string, eventSource: EventSource): EventCounter;
 };
 
 
@@ -237,7 +237,7 @@ export interface EventDataAttribute$instance extends Attribute {
 
 
 export const EventDataAttribute: {
-    new(): EventDataAttribute$instance;
+    new(): EventDataAttribute;
 };
 
 
@@ -250,7 +250,7 @@ export interface EventFieldAttribute$instance extends Attribute {
 
 
 export const EventFieldAttribute: {
-    new(): EventFieldAttribute$instance;
+    new(): EventFieldAttribute;
 };
 
 
@@ -261,7 +261,7 @@ export interface EventIgnoreAttribute$instance extends Attribute {
 
 
 export const EventIgnoreAttribute: {
-    new(): EventIgnoreAttribute$instance;
+    new(): EventIgnoreAttribute;
 };
 
 
@@ -310,9 +310,9 @@ export interface EventSource$instance {
 
 
 export const EventSource: {
-    new(eventSourceName: string): EventSource$instance;
-    new(eventSourceName: string, config: EventSourceSettings): EventSource$instance;
-    new(eventSourceName: string, config: EventSourceSettings, traits: string[]): EventSource$instance;
+    new(eventSourceName: string): EventSource;
+    new(eventSourceName: string, config: EventSourceSettings): EventSource;
+    new(eventSourceName: string, config: EventSourceSettings, traits: string[]): EventSource;
     readonly CurrentThreadActivityId: Guid;
     GenerateManifest(eventSourceType: Type, assemblyPathToIncludeInManifest: string, flags: EventManifestOptions): string;
     GenerateManifest(eventSourceType: Type, assemblyPathToIncludeInManifest: string): string;
@@ -342,7 +342,7 @@ export interface EventSourceAttribute$instance extends Attribute {
 
 
 export const EventSourceAttribute: {
-    new(): EventSourceAttribute$instance;
+    new(): EventSourceAttribute;
 };
 
 
@@ -354,7 +354,7 @@ export interface EventSourceCreatedEventArgs$instance extends EventArgs {
 
 
 export const EventSourceCreatedEventArgs: {
-    new(): EventSourceCreatedEventArgs$instance;
+    new(): EventSourceCreatedEventArgs;
 };
 
 
@@ -366,9 +366,9 @@ export interface EventSourceException$instance extends Exception {
 
 
 export const EventSourceException: {
-    new(): EventSourceException$instance;
-    new(message: string): EventSourceException$instance;
-    new(message: string, innerException: Exception): EventSourceException$instance;
+    new(): EventSourceException;
+    new(message: string): EventSourceException;
+    new(message: string, innerException: Exception): EventSourceException;
 };
 
 
@@ -401,7 +401,7 @@ export interface EventWrittenEventArgs$instance extends EventArgs {
 
 
 export const EventWrittenEventArgs: {
-    new(): EventWrittenEventArgs$instance;
+    new(): EventWrittenEventArgs;
 };
 
 
@@ -416,7 +416,7 @@ export interface IncrementingEventCounter$instance extends DiagnosticCounter$ins
 
 
 export const IncrementingEventCounter: {
-    new(name: string, eventSource: EventSource): IncrementingEventCounter$instance;
+    new(name: string, eventSource: EventSource): IncrementingEventCounter;
 };
 
 
@@ -435,7 +435,7 @@ export interface IncrementingPollingCounter$instance extends DiagnosticCounter$i
 
 
 export const IncrementingPollingCounter: {
-    new(name: string, eventSource: EventSource, totalValueProvider: Func_1<System_Internal.Double>): IncrementingPollingCounter$instance;
+    new(name: string, eventSource: EventSource, totalValueProvider: Func_1<System_Internal.Double>): IncrementingPollingCounter;
 };
 
 
@@ -451,7 +451,7 @@ export interface NonEventAttribute$instance extends Attribute {
 
 
 export const NonEventAttribute: {
-    new(): NonEventAttribute$instance;
+    new(): NonEventAttribute;
 };
 
 
@@ -464,7 +464,7 @@ export interface PollingCounter$instance extends DiagnosticCounter$instance {
 
 
 export const PollingCounter: {
-    new(name: string, eventSource: EventSource, metricProvider: Func_1<System_Internal.Double>): PollingCounter$instance;
+    new(name: string, eventSource: EventSource, metricProvider: Func_1<System_Internal.Double>): PollingCounter;
 };
 
 

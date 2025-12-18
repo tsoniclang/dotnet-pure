@@ -51,8 +51,8 @@ export interface GnuTarEntry$instance extends PosixTarEntry {
 
 
 export const GnuTarEntry: {
-    new(entryType: TarEntryType, entryName: string): GnuTarEntry$instance;
-    new(other: TarEntry): GnuTarEntry$instance;
+    new(entryType: TarEntryType, entryName: string): GnuTarEntry;
+    new(other: TarEntry): GnuTarEntry;
 };
 
 
@@ -64,7 +64,7 @@ export interface PaxGlobalExtendedAttributesTarEntry$instance extends PosixTarEn
 
 
 export const PaxGlobalExtendedAttributesTarEntry: {
-    new(globalExtendedAttributes: IEnumerable_1<KeyValuePair_2<System_Internal.String, System_Internal.String>>): PaxGlobalExtendedAttributesTarEntry$instance;
+    new(globalExtendedAttributes: IEnumerable_1<KeyValuePair_2<System_Internal.String, System_Internal.String>>): PaxGlobalExtendedAttributesTarEntry;
 };
 
 
@@ -76,9 +76,9 @@ export interface PaxTarEntry$instance extends PosixTarEntry {
 
 
 export const PaxTarEntry: {
-    new(entryType: TarEntryType, entryName: string): PaxTarEntry$instance;
-    new(entryType: TarEntryType, entryName: string, extendedAttributes: IEnumerable_1<KeyValuePair_2<System_Internal.String, System_Internal.String>>): PaxTarEntry$instance;
-    new(other: TarEntry): PaxTarEntry$instance;
+    new(entryType: TarEntryType, entryName: string): PaxTarEntry;
+    new(entryType: TarEntryType, entryName: string, extendedAttributes: IEnumerable_1<KeyValuePair_2<System_Internal.String, System_Internal.String>>): PaxTarEntry;
+    new(other: TarEntry): PaxTarEntry;
 };
 
 
@@ -132,7 +132,7 @@ export interface TarReader$instance {
 
 
 export const TarReader: {
-    new(archiveStream: Stream, leaveOpen: boolean): TarReader$instance;
+    new(archiveStream: Stream, leaveOpen: boolean): TarReader;
 };
 
 
@@ -158,9 +158,9 @@ export interface TarWriter$instance {
 
 
 export const TarWriter: {
-    new(archiveStream: Stream): TarWriter$instance;
-    new(archiveStream: Stream, leaveOpen: boolean): TarWriter$instance;
-    new(archiveStream: Stream, format: TarEntryFormat, leaveOpen: boolean): TarWriter$instance;
+    new(archiveStream: Stream): TarWriter;
+    new(archiveStream: Stream, leaveOpen: boolean): TarWriter;
+    new(archiveStream: Stream, format: TarEntryFormat, leaveOpen: boolean): TarWriter;
 };
 
 
@@ -179,8 +179,8 @@ export interface UstarTarEntry$instance extends PosixTarEntry {
 
 
 export const UstarTarEntry: {
-    new(entryType: TarEntryType, entryName: string): UstarTarEntry$instance;
-    new(other: TarEntry): UstarTarEntry$instance;
+    new(entryType: TarEntryType, entryName: string): UstarTarEntry;
+    new(other: TarEntry): UstarTarEntry;
 };
 
 
@@ -191,8 +191,8 @@ export interface V7TarEntry$instance extends TarEntry {
 
 
 export const V7TarEntry: {
-    new(entryType: TarEntryType, entryName: string): V7TarEntry$instance;
-    new(other: TarEntry): V7TarEntry$instance;
+    new(entryType: TarEntryType, entryName: string): V7TarEntry;
+    new(other: TarEntry): V7TarEntry;
 };
 
 

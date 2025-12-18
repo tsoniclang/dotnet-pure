@@ -134,7 +134,7 @@ export interface AsyncIteratorMethodBuilder$instance {
 
 
 export const AsyncIteratorMethodBuilder: {
-    new(): AsyncIteratorMethodBuilder$instance;
+    new(): AsyncIteratorMethodBuilder;
     Create(): AsyncIteratorMethodBuilder;
 };
 
@@ -153,7 +153,7 @@ export interface AsyncTaskMethodBuilder$instance {
 
 
 export const AsyncTaskMethodBuilder: {
-    new(): AsyncTaskMethodBuilder$instance;
+    new(): AsyncTaskMethodBuilder;
     Create(): AsyncTaskMethodBuilder;
 };
 
@@ -172,7 +172,7 @@ export interface AsyncTaskMethodBuilder_1$instance<TResult> {
 
 
 export const AsyncTaskMethodBuilder_1: {
-    new<TResult>(): AsyncTaskMethodBuilder_1$instance<TResult>;
+    new<TResult>(): AsyncTaskMethodBuilder_1<TResult>;
     Create<TResult>(): AsyncTaskMethodBuilder_1<TResult>;
 };
 
@@ -191,7 +191,7 @@ export interface AsyncValueTaskMethodBuilder$instance {
 
 
 export const AsyncValueTaskMethodBuilder: {
-    new(): AsyncValueTaskMethodBuilder$instance;
+    new(): AsyncValueTaskMethodBuilder;
     Create(): AsyncValueTaskMethodBuilder;
 };
 
@@ -210,7 +210,7 @@ export interface AsyncValueTaskMethodBuilder_1$instance<TResult> {
 
 
 export const AsyncValueTaskMethodBuilder_1: {
-    new<TResult>(): AsyncValueTaskMethodBuilder_1$instance<TResult>;
+    new<TResult>(): AsyncValueTaskMethodBuilder_1<TResult>;
     Create<TResult>(): AsyncValueTaskMethodBuilder_1<TResult>;
 };
 
@@ -228,7 +228,7 @@ export interface AsyncVoidMethodBuilder$instance {
 
 
 export const AsyncVoidMethodBuilder: {
-    new(): AsyncVoidMethodBuilder$instance;
+    new(): AsyncVoidMethodBuilder;
     Create(): AsyncVoidMethodBuilder;
 };
 
@@ -241,7 +241,7 @@ export interface ConfiguredAsyncDisposable$instance {
 
 
 export const ConfiguredAsyncDisposable: {
-    new(): ConfiguredAsyncDisposable$instance;
+    new(): ConfiguredAsyncDisposable;
 };
 
 
@@ -255,7 +255,7 @@ export interface ConfiguredCancelableAsyncEnumerable_1$instance<T> {
 
 
 export const ConfiguredCancelableAsyncEnumerable_1: {
-    new<T>(): ConfiguredCancelableAsyncEnumerable_1$instance<T>;
+    new<T>(): ConfiguredCancelableAsyncEnumerable_1<T>;
 };
 
 
@@ -269,7 +269,7 @@ export interface ConfiguredCancelableAsyncEnumerable_1_Enumerator$instance<T> {
 
 
 export const ConfiguredCancelableAsyncEnumerable_1_Enumerator: {
-    new<T>(): ConfiguredCancelableAsyncEnumerable_1_Enumerator$instance<T>;
+    new<T>(): ConfiguredCancelableAsyncEnumerable_1_Enumerator<T>;
 };
 
 
@@ -281,7 +281,7 @@ export interface ConfiguredTaskAwaitable$instance {
 
 
 export const ConfiguredTaskAwaitable: {
-    new(): ConfiguredTaskAwaitable$instance;
+    new(): ConfiguredTaskAwaitable;
 };
 
 
@@ -293,7 +293,7 @@ export interface ConfiguredTaskAwaitable_1$instance<TResult> {
 
 
 export const ConfiguredTaskAwaitable_1: {
-    new<TResult>(): ConfiguredTaskAwaitable_1$instance<TResult>;
+    new<TResult>(): ConfiguredTaskAwaitable_1<TResult>;
 };
 
 
@@ -308,7 +308,7 @@ export interface ConfiguredTaskAwaitable_1_ConfiguredTaskAwaiter$instance<TResul
 
 
 export const ConfiguredTaskAwaitable_1_ConfiguredTaskAwaiter: {
-    new<TResult>(): ConfiguredTaskAwaitable_1_ConfiguredTaskAwaiter$instance<TResult>;
+    new<TResult>(): ConfiguredTaskAwaitable_1_ConfiguredTaskAwaiter<TResult>;
 };
 
 
@@ -330,7 +330,7 @@ export interface ConfiguredTaskAwaitable_ConfiguredTaskAwaiter$instance extends 
 
 
 export const ConfiguredTaskAwaitable_ConfiguredTaskAwaiter: {
-    new(): ConfiguredTaskAwaitable_ConfiguredTaskAwaiter$instance;
+    new(): ConfiguredTaskAwaitable_ConfiguredTaskAwaiter;
 };
 
 
@@ -349,7 +349,7 @@ export interface ConfiguredValueTaskAwaitable$instance {
 
 
 export const ConfiguredValueTaskAwaitable: {
-    new(): ConfiguredValueTaskAwaitable$instance;
+    new(): ConfiguredValueTaskAwaitable;
 };
 
 
@@ -361,7 +361,7 @@ export interface ConfiguredValueTaskAwaitable_1$instance<TResult> {
 
 
 export const ConfiguredValueTaskAwaitable_1: {
-    new<TResult>(): ConfiguredValueTaskAwaitable_1$instance<TResult>;
+    new<TResult>(): ConfiguredValueTaskAwaitable_1<TResult>;
 };
 
 
@@ -376,7 +376,7 @@ export interface ConfiguredValueTaskAwaitable_1_ConfiguredValueTaskAwaiter$insta
 
 
 export const ConfiguredValueTaskAwaitable_1_ConfiguredValueTaskAwaiter: {
-    new<TResult>(): ConfiguredValueTaskAwaitable_1_ConfiguredValueTaskAwaiter$instance<TResult>;
+    new<TResult>(): ConfiguredValueTaskAwaitable_1_ConfiguredValueTaskAwaiter<TResult>;
 };
 
 
@@ -398,7 +398,7 @@ export interface ConfiguredValueTaskAwaitable_ConfiguredValueTaskAwaiter$instanc
 
 
 export const ConfiguredValueTaskAwaitable_ConfiguredValueTaskAwaiter: {
-    new(): ConfiguredValueTaskAwaitable_ConfiguredValueTaskAwaiter$instance;
+    new(): ConfiguredValueTaskAwaitable_ConfiguredValueTaskAwaiter;
 };
 
 
@@ -430,9 +430,9 @@ export interface DefaultInterpolatedStringHandler$instance {
 
 
 export const DefaultInterpolatedStringHandler: {
-    new(literalLength: int, formattedCount: int): DefaultInterpolatedStringHandler$instance;
-    new(literalLength: int, formattedCount: int, provider: IFormatProvider): DefaultInterpolatedStringHandler$instance;
-    new(literalLength: int, formattedCount: int, provider: IFormatProvider, initialBuffer: Span_1<System_Internal.Char>): DefaultInterpolatedStringHandler$instance;
+    new(literalLength: int, formattedCount: int): DefaultInterpolatedStringHandler;
+    new(literalLength: int, formattedCount: int, provider: IFormatProvider): DefaultInterpolatedStringHandler;
+    new(literalLength: int, formattedCount: int, provider: IFormatProvider, initialBuffer: Span_1<System_Internal.Char>): DefaultInterpolatedStringHandler;
 };
 
 
@@ -443,7 +443,7 @@ export interface InlineArray10_1$instance<T> {
 
 
 export const InlineArray10_1: {
-    new<T>(): InlineArray10_1$instance<T>;
+    new<T>(): InlineArray10_1<T>;
 };
 
 
@@ -454,7 +454,7 @@ export interface InlineArray11_1$instance<T> {
 
 
 export const InlineArray11_1: {
-    new<T>(): InlineArray11_1$instance<T>;
+    new<T>(): InlineArray11_1<T>;
 };
 
 
@@ -465,7 +465,7 @@ export interface InlineArray12_1$instance<T> {
 
 
 export const InlineArray12_1: {
-    new<T>(): InlineArray12_1$instance<T>;
+    new<T>(): InlineArray12_1<T>;
 };
 
 
@@ -476,7 +476,7 @@ export interface InlineArray13_1$instance<T> {
 
 
 export const InlineArray13_1: {
-    new<T>(): InlineArray13_1$instance<T>;
+    new<T>(): InlineArray13_1<T>;
 };
 
 
@@ -487,7 +487,7 @@ export interface InlineArray14_1$instance<T> {
 
 
 export const InlineArray14_1: {
-    new<T>(): InlineArray14_1$instance<T>;
+    new<T>(): InlineArray14_1<T>;
 };
 
 
@@ -498,7 +498,7 @@ export interface InlineArray15_1$instance<T> {
 
 
 export const InlineArray15_1: {
-    new<T>(): InlineArray15_1$instance<T>;
+    new<T>(): InlineArray15_1<T>;
 };
 
 
@@ -509,7 +509,7 @@ export interface InlineArray16_1$instance<T> {
 
 
 export const InlineArray16_1: {
-    new<T>(): InlineArray16_1$instance<T>;
+    new<T>(): InlineArray16_1<T>;
 };
 
 
@@ -520,7 +520,7 @@ export interface InlineArray2_1$instance<T> {
 
 
 export const InlineArray2_1: {
-    new<T>(): InlineArray2_1$instance<T>;
+    new<T>(): InlineArray2_1<T>;
 };
 
 
@@ -531,7 +531,7 @@ export interface InlineArray3_1$instance<T> {
 
 
 export const InlineArray3_1: {
-    new<T>(): InlineArray3_1$instance<T>;
+    new<T>(): InlineArray3_1<T>;
 };
 
 
@@ -542,7 +542,7 @@ export interface InlineArray4_1$instance<T> {
 
 
 export const InlineArray4_1: {
-    new<T>(): InlineArray4_1$instance<T>;
+    new<T>(): InlineArray4_1<T>;
 };
 
 
@@ -553,7 +553,7 @@ export interface InlineArray5_1$instance<T> {
 
 
 export const InlineArray5_1: {
-    new<T>(): InlineArray5_1$instance<T>;
+    new<T>(): InlineArray5_1<T>;
 };
 
 
@@ -564,7 +564,7 @@ export interface InlineArray6_1$instance<T> {
 
 
 export const InlineArray6_1: {
-    new<T>(): InlineArray6_1$instance<T>;
+    new<T>(): InlineArray6_1<T>;
 };
 
 
@@ -575,7 +575,7 @@ export interface InlineArray7_1$instance<T> {
 
 
 export const InlineArray7_1: {
-    new<T>(): InlineArray7_1$instance<T>;
+    new<T>(): InlineArray7_1<T>;
 };
 
 
@@ -586,7 +586,7 @@ export interface InlineArray8_1$instance<T> {
 
 
 export const InlineArray8_1: {
-    new<T>(): InlineArray8_1$instance<T>;
+    new<T>(): InlineArray8_1<T>;
 };
 
 
@@ -597,7 +597,7 @@ export interface InlineArray9_1$instance<T> {
 
 
 export const InlineArray9_1: {
-    new<T>(): InlineArray9_1$instance<T>;
+    new<T>(): InlineArray9_1<T>;
 };
 
 
@@ -615,7 +615,7 @@ export interface PoolingAsyncValueTaskMethodBuilder$instance {
 
 
 export const PoolingAsyncValueTaskMethodBuilder: {
-    new(): PoolingAsyncValueTaskMethodBuilder$instance;
+    new(): PoolingAsyncValueTaskMethodBuilder;
     Create(): PoolingAsyncValueTaskMethodBuilder;
 };
 
@@ -634,7 +634,7 @@ export interface PoolingAsyncValueTaskMethodBuilder_1$instance<TResult> {
 
 
 export const PoolingAsyncValueTaskMethodBuilder_1: {
-    new<TResult>(): PoolingAsyncValueTaskMethodBuilder_1$instance<TResult>;
+    new<TResult>(): PoolingAsyncValueTaskMethodBuilder_1<TResult>;
     Create<TResult>(): PoolingAsyncValueTaskMethodBuilder_1<TResult>;
 };
 
@@ -650,7 +650,7 @@ export interface TaskAwaiter$instance extends ICriticalNotifyCompletion {
 
 
 export const TaskAwaiter: {
-    new(): TaskAwaiter$instance;
+    new(): TaskAwaiter;
 };
 
 
@@ -672,7 +672,7 @@ export interface TaskAwaiter_1$instance<TResult> extends ICriticalNotifyCompleti
 
 
 export const TaskAwaiter_1: {
-    new<TResult>(): TaskAwaiter_1$instance<TResult>;
+    new<TResult>(): TaskAwaiter_1<TResult>;
 };
 
 
@@ -694,7 +694,7 @@ export interface ValueTaskAwaiter$instance extends ICriticalNotifyCompletion {
 
 
 export const ValueTaskAwaiter: {
-    new(): ValueTaskAwaiter$instance;
+    new(): ValueTaskAwaiter;
 };
 
 
@@ -716,7 +716,7 @@ export interface ValueTaskAwaiter_1$instance<TResult> extends ICriticalNotifyCom
 
 
 export const ValueTaskAwaiter_1: {
-    new<TResult>(): ValueTaskAwaiter_1$instance<TResult>;
+    new<TResult>(): ValueTaskAwaiter_1<TResult>;
 };
 
 
@@ -735,7 +735,7 @@ export interface YieldAwaitable$instance {
 
 
 export const YieldAwaitable: {
-    new(): YieldAwaitable$instance;
+    new(): YieldAwaitable;
 };
 
 
@@ -750,7 +750,7 @@ export interface YieldAwaitable_YieldAwaiter$instance extends ICriticalNotifyCom
 
 
 export const YieldAwaitable_YieldAwaiter: {
-    new(): YieldAwaitable_YieldAwaiter$instance;
+    new(): YieldAwaitable_YieldAwaiter;
 };
 
 
@@ -769,7 +769,7 @@ export interface AccessedThroughPropertyAttribute$instance extends Attribute {
 
 
 export const AccessedThroughPropertyAttribute: {
-    new(propertyName: string): AccessedThroughPropertyAttribute$instance;
+    new(propertyName: string): AccessedThroughPropertyAttribute;
 };
 
 
@@ -780,7 +780,7 @@ export interface AsyncIteratorStateMachineAttribute$instance extends StateMachin
 
 
 export const AsyncIteratorStateMachineAttribute: {
-    new(stateMachineType: Type): AsyncIteratorStateMachineAttribute$instance;
+    new(stateMachineType: Type): AsyncIteratorStateMachineAttribute;
 };
 
 
@@ -792,7 +792,7 @@ export interface AsyncMethodBuilderAttribute$instance extends Attribute {
 
 
 export const AsyncMethodBuilderAttribute: {
-    new(builderType: Type): AsyncMethodBuilderAttribute$instance;
+    new(builderType: Type): AsyncMethodBuilderAttribute;
 };
 
 
@@ -803,7 +803,7 @@ export interface AsyncStateMachineAttribute$instance extends StateMachineAttribu
 
 
 export const AsyncStateMachineAttribute: {
-    new(stateMachineType: Type): AsyncStateMachineAttribute$instance;
+    new(stateMachineType: Type): AsyncStateMachineAttribute;
 };
 
 
@@ -814,7 +814,7 @@ export interface CallConvCdecl$instance {
 
 
 export const CallConvCdecl: {
-    new(): CallConvCdecl$instance;
+    new(): CallConvCdecl;
 };
 
 
@@ -825,7 +825,7 @@ export interface CallConvFastcall$instance {
 
 
 export const CallConvFastcall: {
-    new(): CallConvFastcall$instance;
+    new(): CallConvFastcall;
 };
 
 
@@ -836,7 +836,7 @@ export interface CallConvMemberFunction$instance {
 
 
 export const CallConvMemberFunction: {
-    new(): CallConvMemberFunction$instance;
+    new(): CallConvMemberFunction;
 };
 
 
@@ -847,7 +847,7 @@ export interface CallConvStdcall$instance {
 
 
 export const CallConvStdcall: {
-    new(): CallConvStdcall$instance;
+    new(): CallConvStdcall;
 };
 
 
@@ -858,7 +858,7 @@ export interface CallConvSuppressGCTransition$instance {
 
 
 export const CallConvSuppressGCTransition: {
-    new(): CallConvSuppressGCTransition$instance;
+    new(): CallConvSuppressGCTransition;
 };
 
 
@@ -869,7 +869,7 @@ export interface CallConvSwift$instance {
 
 
 export const CallConvSwift: {
-    new(): CallConvSwift$instance;
+    new(): CallConvSwift;
 };
 
 
@@ -880,7 +880,7 @@ export interface CallConvThiscall$instance {
 
 
 export const CallConvThiscall: {
-    new(): CallConvThiscall$instance;
+    new(): CallConvThiscall;
 };
 
 
@@ -892,7 +892,7 @@ export interface CallerArgumentExpressionAttribute$instance extends Attribute {
 
 
 export const CallerArgumentExpressionAttribute: {
-    new(parameterName: string): CallerArgumentExpressionAttribute$instance;
+    new(parameterName: string): CallerArgumentExpressionAttribute;
 };
 
 
@@ -903,7 +903,7 @@ export interface CallerFilePathAttribute$instance extends Attribute {
 
 
 export const CallerFilePathAttribute: {
-    new(): CallerFilePathAttribute$instance;
+    new(): CallerFilePathAttribute;
 };
 
 
@@ -914,7 +914,7 @@ export interface CallerLineNumberAttribute$instance extends Attribute {
 
 
 export const CallerLineNumberAttribute: {
-    new(): CallerLineNumberAttribute$instance;
+    new(): CallerLineNumberAttribute;
 };
 
 
@@ -925,7 +925,7 @@ export interface CallerMemberNameAttribute$instance extends Attribute {
 
 
 export const CallerMemberNameAttribute: {
-    new(): CallerMemberNameAttribute$instance;
+    new(): CallerMemberNameAttribute;
 };
 
 
@@ -937,7 +937,7 @@ export interface CallSite$instance {
 
 
 export const CallSite: {
-    new(): CallSite$instance;
+    new(): CallSite;
     Create(delegateType: Type, binder: CallSiteBinder): CallSite;
 };
 
@@ -951,7 +951,7 @@ export interface CallSite_1$instance<T> extends CallSite {
 
 
 export const CallSite_1: {
-    new<T>(): CallSite_1$instance<T>;
+    new<T>(): CallSite_1<T>;
 };
 
 
@@ -977,7 +977,7 @@ export interface Closure$instance {
 
 
 export const Closure: {
-    new(constants: unknown[], locals: unknown[]): Closure$instance;
+    new(constants: unknown[], locals: unknown[]): Closure;
 };
 
 
@@ -990,7 +990,7 @@ export interface CollectionBuilderAttribute$instance extends Attribute {
 
 
 export const CollectionBuilderAttribute: {
-    new(builderType: Type, methodName: string): CollectionBuilderAttribute$instance;
+    new(builderType: Type, methodName: string): CollectionBuilderAttribute;
 };
 
 
@@ -1002,8 +1002,8 @@ export interface CompilationRelaxationsAttribute$instance extends Attribute {
 
 
 export const CompilationRelaxationsAttribute: {
-    new(relaxations: int): CompilationRelaxationsAttribute$instance;
-    new(relaxations: CompilationRelaxations): CompilationRelaxationsAttribute$instance;
+    new(relaxations: int): CompilationRelaxationsAttribute;
+    new(relaxations: CompilationRelaxations): CompilationRelaxationsAttribute;
 };
 
 
@@ -1016,7 +1016,7 @@ export interface CompilerFeatureRequiredAttribute$instance extends Attribute {
 
 
 export const CompilerFeatureRequiredAttribute: {
-    new(featureName: string): CompilerFeatureRequiredAttribute$instance;
+    new(featureName: string): CompilerFeatureRequiredAttribute;
     readonly RefStructs: string;
     readonly RequiredMembers: string;
 };
@@ -1029,7 +1029,7 @@ export interface CompilerGeneratedAttribute$instance extends Attribute {
 
 
 export const CompilerGeneratedAttribute: {
-    new(): CompilerGeneratedAttribute$instance;
+    new(): CompilerGeneratedAttribute;
 };
 
 
@@ -1040,7 +1040,7 @@ export interface CompilerGlobalScopeAttribute$instance extends Attribute {
 
 
 export const CompilerGlobalScopeAttribute: {
-    new(): CompilerGlobalScopeAttribute$instance;
+    new(): CompilerGlobalScopeAttribute;
 };
 
 
@@ -1051,7 +1051,7 @@ export interface CompilerLoweringPreserveAttribute$instance extends Attribute {
 
 
 export const CompilerLoweringPreserveAttribute: {
-    new(): CompilerLoweringPreserveAttribute$instance;
+    new(): CompilerLoweringPreserveAttribute;
 };
 
 
@@ -1074,7 +1074,7 @@ export interface ConditionalWeakTable_2$instance<TKey, TValue> {
 
 
 export const ConditionalWeakTable_2: {
-    new<TKey, TValue>(): ConditionalWeakTable_2$instance<TKey, TValue>;
+    new<TKey, TValue>(): ConditionalWeakTable_2<TKey, TValue>;
 };
 
 
@@ -1093,7 +1093,7 @@ export interface CppInlineNamespaceAttribute$instance extends Attribute {
 
 
 export const CppInlineNamespaceAttribute: {
-    new(dottedName: string): CppInlineNamespaceAttribute$instance;
+    new(dottedName: string): CppInlineNamespaceAttribute;
 };
 
 
@@ -1104,7 +1104,7 @@ export interface CreateNewOnMetadataUpdateAttribute$instance extends Attribute {
 
 
 export const CreateNewOnMetadataUpdateAttribute: {
-    new(): CreateNewOnMetadataUpdateAttribute$instance;
+    new(): CreateNewOnMetadataUpdateAttribute;
 };
 
 
@@ -1127,7 +1127,7 @@ export interface DateTimeConstantAttribute$instance extends CustomConstantAttrib
 
 
 export const DateTimeConstantAttribute: {
-    new(ticks: long): DateTimeConstantAttribute$instance;
+    new(ticks: long): DateTimeConstantAttribute;
 };
 
 
@@ -1151,8 +1151,8 @@ export interface DecimalConstantAttribute$instance extends Attribute {
 
 
 export const DecimalConstantAttribute: {
-    new(scale: byte, sign: byte, hi: uint, mid: uint, low: uint): DecimalConstantAttribute$instance;
-    new(scale: byte, sign: byte, hi: int, mid: int, low: int): DecimalConstantAttribute$instance;
+    new(scale: byte, sign: byte, hi: uint, mid: uint, low: uint): DecimalConstantAttribute;
+    new(scale: byte, sign: byte, hi: int, mid: int, low: int): DecimalConstantAttribute;
 };
 
 
@@ -1164,7 +1164,7 @@ export interface DefaultDependencyAttribute$instance extends Attribute {
 
 
 export const DefaultDependencyAttribute: {
-    new(loadHintArgument: LoadHint): DefaultDependencyAttribute$instance;
+    new(loadHintArgument: LoadHint): DefaultDependencyAttribute;
 };
 
 
@@ -1177,7 +1177,7 @@ export interface DependencyAttribute$instance extends Attribute {
 
 
 export const DependencyAttribute: {
-    new(dependentAssemblyArgument: string, loadHintArgument: LoadHint): DependencyAttribute$instance;
+    new(dependentAssemblyArgument: string, loadHintArgument: LoadHint): DependencyAttribute;
 };
 
 
@@ -1188,7 +1188,7 @@ export interface DisablePrivateReflectionAttribute$instance extends Attribute {
 
 
 export const DisablePrivateReflectionAttribute: {
-    new(): DisablePrivateReflectionAttribute$instance;
+    new(): DisablePrivateReflectionAttribute;
 };
 
 
@@ -1199,7 +1199,7 @@ export interface DisableRuntimeMarshallingAttribute$instance extends Attribute {
 
 
 export const DisableRuntimeMarshallingAttribute: {
-    new(): DisableRuntimeMarshallingAttribute$instance;
+    new(): DisableRuntimeMarshallingAttribute;
 };
 
 
@@ -1210,7 +1210,7 @@ export interface DiscardableAttribute$instance extends Attribute {
 
 
 export const DiscardableAttribute: {
-    new(): DiscardableAttribute$instance;
+    new(): DiscardableAttribute;
 };
 
 
@@ -1222,8 +1222,8 @@ export interface DynamicAttribute$instance extends Attribute {
 
 
 export const DynamicAttribute: {
-    new(): DynamicAttribute$instance;
-    new(transformFlags: boolean[]): DynamicAttribute$instance;
+    new(): DynamicAttribute;
+    new(transformFlags: boolean[]): DynamicAttribute;
 };
 
 
@@ -1234,7 +1234,7 @@ export interface EnumeratorCancellationAttribute$instance extends Attribute {
 
 
 export const EnumeratorCancellationAttribute: {
-    new(): EnumeratorCancellationAttribute$instance;
+    new(): EnumeratorCancellationAttribute;
 };
 
 
@@ -1245,7 +1245,7 @@ export interface ExtensionAttribute$instance extends Attribute {
 
 
 export const ExtensionAttribute: {
-    new(): ExtensionAttribute$instance;
+    new(): ExtensionAttribute;
 };
 
 
@@ -1257,7 +1257,7 @@ export interface ExtensionMarkerAttribute$instance extends Attribute {
 
 
 export const ExtensionMarkerAttribute: {
-    new(name: string): ExtensionMarkerAttribute$instance;
+    new(name: string): ExtensionMarkerAttribute;
 };
 
 
@@ -1268,7 +1268,7 @@ export interface FixedAddressValueTypeAttribute$instance extends Attribute {
 
 
 export const FixedAddressValueTypeAttribute: {
-    new(): FixedAddressValueTypeAttribute$instance;
+    new(): FixedAddressValueTypeAttribute;
 };
 
 
@@ -1281,7 +1281,7 @@ export interface FixedBufferAttribute$instance extends Attribute {
 
 
 export const FixedBufferAttribute: {
-    new(elementType: Type, length: int): FixedBufferAttribute$instance;
+    new(elementType: Type, length: int): FixedBufferAttribute;
 };
 
 
@@ -1292,7 +1292,7 @@ export interface HasCopySemanticsAttribute$instance extends Attribute {
 
 
 export const HasCopySemanticsAttribute: {
-    new(): HasCopySemanticsAttribute$instance;
+    new(): HasCopySemanticsAttribute;
 };
 
 
@@ -1304,7 +1304,7 @@ export interface IDispatchConstantAttribute$instance extends CustomConstantAttri
 
 
 export const IDispatchConstantAttribute: {
-    new(): IDispatchConstantAttribute$instance;
+    new(): IDispatchConstantAttribute;
 };
 
 
@@ -1315,7 +1315,7 @@ export interface IndexerNameAttribute$instance extends Attribute {
 
 
 export const IndexerNameAttribute: {
-    new(indexerName: string): IndexerNameAttribute$instance;
+    new(indexerName: string): IndexerNameAttribute;
 };
 
 
@@ -1327,7 +1327,7 @@ export interface InlineArrayAttribute$instance extends Attribute {
 
 
 export const InlineArrayAttribute: {
-    new(length: int): InlineArrayAttribute$instance;
+    new(length: int): InlineArrayAttribute;
 };
 
 
@@ -1340,7 +1340,7 @@ export interface InternalsVisibleToAttribute$instance extends Attribute {
 
 
 export const InternalsVisibleToAttribute: {
-    new(assemblyName: string): InternalsVisibleToAttribute$instance;
+    new(assemblyName: string): InternalsVisibleToAttribute;
 };
 
 
@@ -1352,8 +1352,8 @@ export interface InterpolatedStringHandlerArgumentAttribute$instance extends Att
 
 
 export const InterpolatedStringHandlerArgumentAttribute: {
-    new(argument: string): InterpolatedStringHandlerArgumentAttribute$instance;
-    new(arguments: string[]): InterpolatedStringHandlerArgumentAttribute$instance;
+    new(argument: string): InterpolatedStringHandlerArgumentAttribute;
+    new(arguments: string[]): InterpolatedStringHandlerArgumentAttribute;
 };
 
 
@@ -1364,7 +1364,7 @@ export interface InterpolatedStringHandlerAttribute$instance extends Attribute {
 
 
 export const InterpolatedStringHandlerAttribute: {
-    new(): InterpolatedStringHandlerAttribute$instance;
+    new(): InterpolatedStringHandlerAttribute;
 };
 
 
@@ -1375,7 +1375,7 @@ export interface IsByRefLikeAttribute$instance extends Attribute {
 
 
 export const IsByRefLikeAttribute: {
-    new(): IsByRefLikeAttribute$instance;
+    new(): IsByRefLikeAttribute;
 };
 
 
@@ -1386,7 +1386,7 @@ export interface IsReadOnlyAttribute$instance extends Attribute {
 
 
 export const IsReadOnlyAttribute: {
-    new(): IsReadOnlyAttribute$instance;
+    new(): IsReadOnlyAttribute;
 };
 
 
@@ -1397,7 +1397,7 @@ export interface IsUnmanagedAttribute$instance extends Attribute {
 
 
 export const IsUnmanagedAttribute: {
-    new(): IsUnmanagedAttribute$instance;
+    new(): IsUnmanagedAttribute;
 };
 
 
@@ -1408,7 +1408,7 @@ export interface IteratorStateMachineAttribute$instance extends StateMachineAttr
 
 
 export const IteratorStateMachineAttribute: {
-    new(stateMachineType: Type): IteratorStateMachineAttribute$instance;
+    new(stateMachineType: Type): IteratorStateMachineAttribute;
 };
 
 
@@ -1420,7 +1420,7 @@ export interface IUnknownConstantAttribute$instance extends CustomConstantAttrib
 
 
 export const IUnknownConstantAttribute: {
-    new(): IUnknownConstantAttribute$instance;
+    new(): IUnknownConstantAttribute;
 };
 
 
@@ -1431,7 +1431,7 @@ export interface MetadataUpdateDeletedAttribute$instance extends Attribute {
 
 
 export const MetadataUpdateDeletedAttribute: {
-    new(): MetadataUpdateDeletedAttribute$instance;
+    new(): MetadataUpdateDeletedAttribute;
 };
 
 
@@ -1443,7 +1443,7 @@ export interface MetadataUpdateOriginalTypeAttribute$instance extends Attribute 
 
 
 export const MetadataUpdateOriginalTypeAttribute: {
-    new(originalType: Type): MetadataUpdateOriginalTypeAttribute$instance;
+    new(originalType: Type): MetadataUpdateOriginalTypeAttribute;
 };
 
 
@@ -1456,9 +1456,9 @@ export interface MethodImplAttribute$instance extends Attribute {
 
 
 export const MethodImplAttribute: {
-    new(methodImplOptions: MethodImplOptions): MethodImplAttribute$instance;
-    new(value: short): MethodImplAttribute$instance;
-    new(): MethodImplAttribute$instance;
+    new(methodImplOptions: MethodImplOptions): MethodImplAttribute;
+    new(value: short): MethodImplAttribute;
+    new(): MethodImplAttribute;
 };
 
 
@@ -1469,7 +1469,7 @@ export interface ModuleInitializerAttribute$instance extends Attribute {
 
 
 export const ModuleInitializerAttribute: {
-    new(): ModuleInitializerAttribute$instance;
+    new(): ModuleInitializerAttribute;
 };
 
 
@@ -1480,7 +1480,7 @@ export interface NativeCppClassAttribute$instance extends Attribute {
 
 
 export const NativeCppClassAttribute: {
-    new(): NativeCppClassAttribute$instance;
+    new(): NativeCppClassAttribute;
 };
 
 
@@ -1492,8 +1492,8 @@ export interface NullableAttribute$instance extends Attribute {
 
 
 export const NullableAttribute: {
-    new(value: byte): NullableAttribute$instance;
-    new(value: byte[]): NullableAttribute$instance;
+    new(value: byte): NullableAttribute;
+    new(value: byte[]): NullableAttribute;
 };
 
 
@@ -1505,7 +1505,7 @@ export interface NullableContextAttribute$instance extends Attribute {
 
 
 export const NullableContextAttribute: {
-    new(value: byte): NullableContextAttribute$instance;
+    new(value: byte): NullableContextAttribute;
 };
 
 
@@ -1517,7 +1517,7 @@ export interface NullablePublicOnlyAttribute$instance extends Attribute {
 
 
 export const NullablePublicOnlyAttribute: {
-    new(value: boolean): NullablePublicOnlyAttribute$instance;
+    new(value: boolean): NullablePublicOnlyAttribute;
 };
 
 
@@ -1529,7 +1529,7 @@ export interface OverloadResolutionPriorityAttribute$instance extends Attribute 
 
 
 export const OverloadResolutionPriorityAttribute: {
-    new(priority: int): OverloadResolutionPriorityAttribute$instance;
+    new(priority: int): OverloadResolutionPriorityAttribute;
 };
 
 
@@ -1540,7 +1540,7 @@ export interface ParamCollectionAttribute$instance extends Attribute {
 
 
 export const ParamCollectionAttribute: {
-    new(): ParamCollectionAttribute$instance;
+    new(): ParamCollectionAttribute;
 };
 
 
@@ -1551,7 +1551,7 @@ export interface PreserveBaseOverridesAttribute$instance extends Attribute {
 
 
 export const PreserveBaseOverridesAttribute: {
-    new(): PreserveBaseOverridesAttribute$instance;
+    new(): PreserveBaseOverridesAttribute;
 };
 
 
@@ -1578,9 +1578,9 @@ export interface ReadOnlyCollectionBuilder_1$instance<T> {
 
 
 export const ReadOnlyCollectionBuilder_1: {
-    new<T>(): ReadOnlyCollectionBuilder_1$instance<T>;
-    new<T>(capacity: int): ReadOnlyCollectionBuilder_1$instance<T>;
-    new<T>(collection: IEnumerable_1<T>): ReadOnlyCollectionBuilder_1$instance<T>;
+    new<T>(): ReadOnlyCollectionBuilder_1<T>;
+    new<T>(capacity: int): ReadOnlyCollectionBuilder_1<T>;
+    new<T>(collection: IEnumerable_1<T>): ReadOnlyCollectionBuilder_1<T>;
 };
 
 
@@ -1602,8 +1602,8 @@ export interface ReferenceAssemblyAttribute$instance extends Attribute {
 
 
 export const ReferenceAssemblyAttribute: {
-    new(): ReferenceAssemblyAttribute$instance;
-    new(description: string): ReferenceAssemblyAttribute$instance;
+    new(): ReferenceAssemblyAttribute;
+    new(description: string): ReferenceAssemblyAttribute;
 };
 
 
@@ -1615,7 +1615,7 @@ export interface RefSafetyRulesAttribute$instance extends Attribute {
 
 
 export const RefSafetyRulesAttribute: {
-    new(version: int): RefSafetyRulesAttribute$instance;
+    new(version: int): RefSafetyRulesAttribute;
 };
 
 
@@ -1627,7 +1627,7 @@ export interface RequiredAttributeAttribute$instance extends Attribute {
 
 
 export const RequiredAttributeAttribute: {
-    new(requiredContract: Type): RequiredAttributeAttribute$instance;
+    new(requiredContract: Type): RequiredAttributeAttribute;
 };
 
 
@@ -1638,7 +1638,7 @@ export interface RequiredMemberAttribute$instance extends Attribute {
 
 
 export const RequiredMemberAttribute: {
-    new(): RequiredMemberAttribute$instance;
+    new(): RequiredMemberAttribute;
 };
 
 
@@ -1649,7 +1649,7 @@ export interface RequiresLocationAttribute$instance extends Attribute {
 
 
 export const RequiresLocationAttribute: {
-    new(): RequiresLocationAttribute$instance;
+    new(): RequiresLocationAttribute;
 };
 
 
@@ -1660,7 +1660,7 @@ export interface RuleCache_1$instance<T> {
 
 
 export const RuleCache_1: {
-    new<T>(): RuleCache_1$instance<T>;
+    new<T>(): RuleCache_1<T>;
 };
 
 
@@ -1672,7 +1672,7 @@ export interface RuntimeCompatibilityAttribute$instance extends Attribute {
 
 
 export const RuntimeCompatibilityAttribute: {
-    new(): RuntimeCompatibilityAttribute$instance;
+    new(): RuntimeCompatibilityAttribute;
 };
 
 
@@ -1685,7 +1685,7 @@ export interface RuntimeWrappedException$instance extends Exception {
 
 
 export const RuntimeWrappedException: {
-    new(thrownObject: unknown): RuntimeWrappedException$instance;
+    new(thrownObject: unknown): RuntimeWrappedException;
 };
 
 
@@ -1701,7 +1701,7 @@ export interface ScopedRefAttribute$instance extends Attribute {
 
 
 export const ScopedRefAttribute: {
-    new(): ScopedRefAttribute$instance;
+    new(): ScopedRefAttribute;
 };
 
 
@@ -1712,7 +1712,7 @@ export interface ScopelessEnumAttribute$instance extends Attribute {
 
 
 export const ScopelessEnumAttribute: {
-    new(): ScopelessEnumAttribute$instance;
+    new(): ScopelessEnumAttribute;
 };
 
 
@@ -1723,7 +1723,7 @@ export interface SkipLocalsInitAttribute$instance extends Attribute {
 
 
 export const SkipLocalsInitAttribute: {
-    new(): SkipLocalsInitAttribute$instance;
+    new(): SkipLocalsInitAttribute;
 };
 
 
@@ -1734,7 +1734,7 @@ export interface SpecialNameAttribute$instance extends Attribute {
 
 
 export const SpecialNameAttribute: {
-    new(): SpecialNameAttribute$instance;
+    new(): SpecialNameAttribute;
 };
 
 
@@ -1746,7 +1746,7 @@ export interface StateMachineAttribute$instance extends Attribute {
 
 
 export const StateMachineAttribute: {
-    new(stateMachineType: Type): StateMachineAttribute$instance;
+    new(stateMachineType: Type): StateMachineAttribute;
 };
 
 
@@ -1757,7 +1757,7 @@ export interface StringFreezingAttribute$instance extends Attribute {
 
 
 export const StringFreezingAttribute: {
-    new(): StringFreezingAttribute$instance;
+    new(): StringFreezingAttribute;
 };
 
 
@@ -1769,8 +1769,8 @@ export interface StrongBox_1$instance<T> {
 
 
 export const StrongBox_1: {
-    new<T>(): StrongBox_1$instance<T>;
-    new<T>(value: T): StrongBox_1$instance<T>;
+    new<T>(): StrongBox_1<T>;
+    new<T>(value: T): StrongBox_1<T>;
 };
 
 
@@ -1788,7 +1788,7 @@ export interface SuppressIldasmAttribute$instance extends Attribute {
 
 
 export const SuppressIldasmAttribute: {
-    new(): SuppressIldasmAttribute$instance;
+    new(): SuppressIldasmAttribute;
 };
 
 
@@ -1802,11 +1802,11 @@ export interface SwitchExpressionException$instance extends InvalidOperationExce
 
 
 export const SwitchExpressionException: {
-    new(): SwitchExpressionException$instance;
-    new(innerException: Exception): SwitchExpressionException$instance;
-    new(unmatchedValue: unknown): SwitchExpressionException$instance;
-    new(message: string): SwitchExpressionException$instance;
-    new(message: string, innerException: Exception): SwitchExpressionException$instance;
+    new(): SwitchExpressionException;
+    new(innerException: Exception): SwitchExpressionException;
+    new(unmatchedValue: unknown): SwitchExpressionException;
+    new(message: string): SwitchExpressionException;
+    new(message: string, innerException: Exception): SwitchExpressionException;
 };
 
 
@@ -1823,7 +1823,7 @@ export interface TupleElementNamesAttribute$instance extends Attribute {
 
 
 export const TupleElementNamesAttribute: {
-    new(transformNames: string[]): TupleElementNamesAttribute$instance;
+    new(transformNames: string[]): TupleElementNamesAttribute;
 };
 
 
@@ -1835,7 +1835,7 @@ export interface TypeForwardedFromAttribute$instance extends Attribute {
 
 
 export const TypeForwardedFromAttribute: {
-    new(assemblyFullName: string): TypeForwardedFromAttribute$instance;
+    new(assemblyFullName: string): TypeForwardedFromAttribute;
 };
 
 
@@ -1847,7 +1847,7 @@ export interface TypeForwardedToAttribute$instance extends Attribute {
 
 
 export const TypeForwardedToAttribute: {
-    new(destination: Type): TypeForwardedToAttribute$instance;
+    new(destination: Type): TypeForwardedToAttribute;
 };
 
 
@@ -1860,7 +1860,7 @@ export interface UnsafeAccessorAttribute$instance extends Attribute {
 
 
 export const UnsafeAccessorAttribute: {
-    new(kind: UnsafeAccessorKind): UnsafeAccessorAttribute$instance;
+    new(kind: UnsafeAccessorKind): UnsafeAccessorAttribute;
 };
 
 
@@ -1872,7 +1872,7 @@ export interface UnsafeAccessorTypeAttribute$instance extends Attribute {
 
 
 export const UnsafeAccessorTypeAttribute: {
-    new(typeName: string): UnsafeAccessorTypeAttribute$instance;
+    new(typeName: string): UnsafeAccessorTypeAttribute;
 };
 
 
@@ -1883,7 +1883,7 @@ export interface UnsafeValueTypeAttribute$instance extends Attribute {
 
 
 export const UnsafeValueTypeAttribute: {
-    new(): UnsafeValueTypeAttribute$instance;
+    new(): UnsafeValueTypeAttribute;
 };
 
 

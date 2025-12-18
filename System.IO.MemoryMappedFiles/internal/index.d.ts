@@ -60,7 +60,7 @@ export interface MemoryMappedFile$instance {
 
 
 export const MemoryMappedFile: {
-    new(): MemoryMappedFile$instance;
+    new(): MemoryMappedFile;
     CreateFromFile(fileHandle: SafeFileHandle, mapName: string, capacity: long, access: MemoryMappedFileAccess, inheritability: HandleInheritability, leaveOpen: boolean): MemoryMappedFile;
     CreateFromFile(fileStream: FileStream, mapName: string, capacity: long, access: MemoryMappedFileAccess, inheritability: HandleInheritability, leaveOpen: boolean): MemoryMappedFile;
     CreateFromFile(path: string, mode: FileMode, mapName: string, capacity: long, access: MemoryMappedFileAccess): MemoryMappedFile;
@@ -98,7 +98,7 @@ export interface MemoryMappedViewAccessor$instance extends UnmanagedMemoryAccess
 
 
 export const MemoryMappedViewAccessor: {
-    new(): MemoryMappedViewAccessor$instance;
+    new(): MemoryMappedViewAccessor;
 };
 
 
@@ -120,7 +120,7 @@ export interface MemoryMappedViewStream$instance extends UnmanagedMemoryStream {
 
 
 export const MemoryMappedViewStream: {
-    new(): MemoryMappedViewStream$instance;
+    new(): MemoryMappedViewStream;
 };
 
 

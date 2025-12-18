@@ -93,7 +93,7 @@ export interface SecurityPermissionAttribute$instance extends CodeAccessSecurity
 
 
 export const SecurityPermissionAttribute: {
-    new(action: SecurityAction): SecurityPermissionAttribute$instance;
+    new(action: SecurityAction): SecurityPermissionAttribute;
 };
 
 

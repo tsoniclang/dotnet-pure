@@ -18,7 +18,7 @@ export interface AssemblyLoadContext_ContextualReflectionScope$instance {
 
 
 export const AssemblyLoadContext_ContextualReflectionScope: {
-    new(): AssemblyLoadContext_ContextualReflectionScope$instance;
+    new(): AssemblyLoadContext_ContextualReflectionScope;
 };
 
 
@@ -38,7 +38,7 @@ export interface AssemblyDependencyResolver$instance {
 
 
 export const AssemblyDependencyResolver: {
-    new(componentAssemblyPath: string): AssemblyDependencyResolver$instance;
+    new(componentAssemblyPath: string): AssemblyDependencyResolver;
 };
 
 
@@ -62,7 +62,7 @@ export interface AssemblyLoadContext$instance {
 
 
 export const AssemblyLoadContext: {
-    new(name: string, isCollectible: boolean): AssemblyLoadContext$instance;
+    new(name: string, isCollectible: boolean): AssemblyLoadContext;
     readonly Default: AssemblyLoadContext;
     readonly All: IEnumerable_1<AssemblyLoadContext>;
     readonly CurrentContextualReflectionContext: AssemblyLoadContext;

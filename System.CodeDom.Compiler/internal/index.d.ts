@@ -21,7 +21,7 @@ export interface GeneratedCodeAttribute$instance extends Attribute {
 
 
 export const GeneratedCodeAttribute: {
-    new(tool: string, version: string): GeneratedCodeAttribute$instance;
+    new(tool: string, version: string): GeneratedCodeAttribute;
 };
 
 
@@ -102,8 +102,8 @@ export interface IndentedTextWriter$instance extends TextWriter {
 
 
 export const IndentedTextWriter: {
-    new(writer: TextWriter): IndentedTextWriter$instance;
-    new(writer: TextWriter, tabString: string): IndentedTextWriter$instance;
+    new(writer: TextWriter): IndentedTextWriter;
+    new(writer: TextWriter, tabString: string): IndentedTextWriter;
     readonly DefaultTabString: string;
 };
 

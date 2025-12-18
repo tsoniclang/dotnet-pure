@@ -53,7 +53,7 @@ export interface ConcurrentDictionary_2_AlternateLookup_1$instance<TKey, TValue,
 
 
 export const ConcurrentDictionary_2_AlternateLookup_1: {
-    new<TKey, TValue, TAlternateKey>(): ConcurrentDictionary_2_AlternateLookup_1$instance<TKey, TValue, TAlternateKey>;
+    new<TKey, TValue, TAlternateKey>(): ConcurrentDictionary_2_AlternateLookup_1<TKey, TValue, TAlternateKey>;
 };
 
 
@@ -86,10 +86,10 @@ export interface BlockingCollection_1$instance<T> {
 
 
 export const BlockingCollection_1: {
-    new<T>(): BlockingCollection_1$instance<T>;
-    new<T>(boundedCapacity: int): BlockingCollection_1$instance<T>;
-    new<T>(collection: IProducerConsumerCollection_1<T>, boundedCapacity: int): BlockingCollection_1$instance<T>;
-    new<T>(collection: IProducerConsumerCollection_1<T>): BlockingCollection_1$instance<T>;
+    new<T>(): BlockingCollection_1<T>;
+    new<T>(boundedCapacity: int): BlockingCollection_1<T>;
+    new<T>(collection: IProducerConsumerCollection_1<T>, boundedCapacity: int): BlockingCollection_1<T>;
+    new<T>(collection: IProducerConsumerCollection_1<T>): BlockingCollection_1<T>;
     AddToAny<T>(collections: BlockingCollection_1<T>[], item: T, cancellationToken: CancellationToken): int;
     AddToAny<T>(collections: BlockingCollection_1<T>[], item: T): int;
     TakeFromAny<T>(collections: BlockingCollection_1<T>[], item: T, cancellationToken: CancellationToken): int;
@@ -132,8 +132,8 @@ export interface ConcurrentBag_1$instance<T> {
 
 
 export const ConcurrentBag_1: {
-    new<T>(): ConcurrentBag_1$instance<T>;
-    new<T>(collection: IEnumerable_1<T>): ConcurrentBag_1$instance<T>;
+    new<T>(): ConcurrentBag_1<T>;
+    new<T>(collection: IEnumerable_1<T>): ConcurrentBag_1<T>;
 };
 
 
@@ -176,13 +176,13 @@ export interface ConcurrentDictionary_2$instance<TKey, TValue> {
 
 
 export const ConcurrentDictionary_2: {
-    new<TKey, TValue>(): ConcurrentDictionary_2$instance<TKey, TValue>;
-    new<TKey, TValue>(concurrencyLevel: int, capacity: int): ConcurrentDictionary_2$instance<TKey, TValue>;
-    new<TKey, TValue>(collection: IEnumerable_1<KeyValuePair_2<TKey, TValue>>): ConcurrentDictionary_2$instance<TKey, TValue>;
-    new<TKey, TValue>(comparer: IEqualityComparer_1<TKey>): ConcurrentDictionary_2$instance<TKey, TValue>;
-    new<TKey, TValue>(collection: IEnumerable_1<KeyValuePair_2<TKey, TValue>>, comparer: IEqualityComparer_1<TKey>): ConcurrentDictionary_2$instance<TKey, TValue>;
-    new<TKey, TValue>(concurrencyLevel: int, collection: IEnumerable_1<KeyValuePair_2<TKey, TValue>>, comparer: IEqualityComparer_1<TKey>): ConcurrentDictionary_2$instance<TKey, TValue>;
-    new<TKey, TValue>(concurrencyLevel: int, capacity: int, comparer: IEqualityComparer_1<TKey>): ConcurrentDictionary_2$instance<TKey, TValue>;
+    new<TKey, TValue>(): ConcurrentDictionary_2<TKey, TValue>;
+    new<TKey, TValue>(concurrencyLevel: int, capacity: int): ConcurrentDictionary_2<TKey, TValue>;
+    new<TKey, TValue>(collection: IEnumerable_1<KeyValuePair_2<TKey, TValue>>): ConcurrentDictionary_2<TKey, TValue>;
+    new<TKey, TValue>(comparer: IEqualityComparer_1<TKey>): ConcurrentDictionary_2<TKey, TValue>;
+    new<TKey, TValue>(collection: IEnumerable_1<KeyValuePair_2<TKey, TValue>>, comparer: IEqualityComparer_1<TKey>): ConcurrentDictionary_2<TKey, TValue>;
+    new<TKey, TValue>(concurrencyLevel: int, collection: IEnumerable_1<KeyValuePair_2<TKey, TValue>>, comparer: IEqualityComparer_1<TKey>): ConcurrentDictionary_2<TKey, TValue>;
+    new<TKey, TValue>(concurrencyLevel: int, capacity: int, comparer: IEqualityComparer_1<TKey>): ConcurrentDictionary_2<TKey, TValue>;
 };
 
 
@@ -214,8 +214,8 @@ export interface ConcurrentQueue_1$instance<T> {
 
 
 export const ConcurrentQueue_1: {
-    new<T>(): ConcurrentQueue_1$instance<T>;
-    new<T>(collection: IEnumerable_1<T>): ConcurrentQueue_1$instance<T>;
+    new<T>(): ConcurrentQueue_1<T>;
+    new<T>(collection: IEnumerable_1<T>): ConcurrentQueue_1<T>;
 };
 
 
@@ -248,8 +248,8 @@ export interface ConcurrentStack_1$instance<T> {
 
 
 export const ConcurrentStack_1: {
-    new<T>(): ConcurrentStack_1$instance<T>;
-    new<T>(collection: IEnumerable_1<T>): ConcurrentStack_1$instance<T>;
+    new<T>(): ConcurrentStack_1<T>;
+    new<T>(collection: IEnumerable_1<T>): ConcurrentStack_1<T>;
 };
 
 

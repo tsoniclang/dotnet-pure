@@ -210,7 +210,7 @@ export interface SpcInfo$instance {
 
 
 export const SpcInfo: {
-    new(): SpcInfo$instance;
+    new(): SpcInfo;
 };
 
 
@@ -222,7 +222,7 @@ export interface TabInfo$instance {
 
 
 export const TabInfo: {
-    new(): TabInfo$instance;
+    new(): TabInfo;
 };
 
 
@@ -243,7 +243,7 @@ export interface Collection$instance {
 
 
 export const Collection: {
-    new(): Collection$instance;
+    new(): Collection;
 };
 
 
@@ -265,10 +265,10 @@ export interface ComClassAttribute$instance extends Attribute {
 
 
 export const ComClassAttribute: {
-    new(): ComClassAttribute$instance;
-    new(_ClassID: string): ComClassAttribute$instance;
-    new(_ClassID: string, _InterfaceID: string): ComClassAttribute$instance;
-    new(_ClassID: string, _InterfaceID: string, _EventId: string): ComClassAttribute$instance;
+    new(): ComClassAttribute;
+    new(_ClassID: string): ComClassAttribute;
+    new(_ClassID: string, _InterfaceID: string): ComClassAttribute;
+    new(_ClassID: string, _InterfaceID: string, _EventId: string): ComClassAttribute;
 };
 
 
@@ -279,7 +279,7 @@ export interface Constants$instance {
 
 
 export const Constants: {
-    new(): Constants$instance;
+    new(): Constants;
     readonly vbCrLf: string;
     readonly vbObjectError: int;
     readonly vbNewLine: string;
@@ -392,7 +392,7 @@ export interface ControlChars$instance {
 
 
 export const ControlChars: {
-    new(): ControlChars$instance;
+    new(): ControlChars;
     readonly CrLf: string;
     readonly NewLine: string;
     readonly Cr: char;
@@ -413,7 +413,7 @@ export interface Conversion$instance {
 
 
 export const Conversion: {
-    new(): Conversion$instance;
+    new(): Conversion;
     CTypeDynamic(Expression: unknown, TargetType: Type): unknown;
     CTypeDynamic<TargetType>(Expression: unknown): TargetType;
     ErrorToString(): string;
@@ -464,7 +464,7 @@ export interface DateAndTime$instance {
 
 
 export const DateAndTime: {
-    new(): DateAndTime$instance;
+    new(): DateAndTime;
     Today: DateTime;
     readonly Now: DateTime;
     TimeOfDay: DateTime;
@@ -510,7 +510,7 @@ export interface ErrObject$instance {
 
 
 export const ErrObject: {
-    new(): ErrObject$instance;
+    new(): ErrObject;
 };
 
 
@@ -521,7 +521,7 @@ export interface FileSystem$instance {
 
 
 export const FileSystem: {
-    new(): FileSystem$instance;
+    new(): FileSystem;
     ChDir(Path: string): void;
     ChDrive(Drive: char): void;
     ChDrive(Drive: string): void;
@@ -615,7 +615,7 @@ export interface Financial$instance {
 
 
 export const Financial: {
-    new(): Financial$instance;
+    new(): Financial;
     DDB(Cost: double, Salvage: double, Life: double, Period: double, Factor?: double): double;
     FV(Rate: double, NPer: double, Pmt: double, PV?: double, Due?: DueDate): double;
     IPmt(Rate: double, Per: double, NPer: double, PV: double, FV?: double, Due?: DueDate): double;
@@ -639,7 +639,7 @@ export interface HideModuleNameAttribute$instance extends Attribute {
 
 
 export const HideModuleNameAttribute: {
-    new(): HideModuleNameAttribute$instance;
+    new(): HideModuleNameAttribute;
 };
 
 
@@ -650,7 +650,7 @@ export interface Information$instance {
 
 
 export const Information: {
-    new(): Information$instance;
+    new(): Information;
     Erl(): int;
     Err(): ErrObject;
     IsArray(VarName: unknown): boolean;
@@ -678,7 +678,7 @@ export interface Interaction$instance {
 
 
 export const Interaction: {
-    new(): Interaction$instance;
+    new(): Interaction;
     AppActivate(ProcessId: int): void;
     AppActivate(Title: string): void;
     Beep(): void;
@@ -713,7 +713,7 @@ export interface MyGroupCollectionAttribute$instance extends Attribute {
 
 
 export const MyGroupCollectionAttribute: {
-    new(typeToCollect: string, createInstanceMethodName: string, disposeInstanceMethodName: string, defaultInstanceAlias: string): MyGroupCollectionAttribute$instance;
+    new(typeToCollect: string, createInstanceMethodName: string, disposeInstanceMethodName: string, defaultInstanceAlias: string): MyGroupCollectionAttribute;
 };
 
 
@@ -724,7 +724,7 @@ export interface Strings$instance {
 
 
 export const Strings: {
-    new(): Strings$instance;
+    new(): Strings;
     Asc(String: char): int;
     Asc(String: string): int;
     AscW(String: char): int;
@@ -794,8 +794,8 @@ export interface VBFixedArrayAttribute$instance extends Attribute {
 
 
 export const VBFixedArrayAttribute: {
-    new(UpperBound1: int): VBFixedArrayAttribute$instance;
-    new(UpperBound1: int, UpperBound2: int): VBFixedArrayAttribute$instance;
+    new(UpperBound1: int): VBFixedArrayAttribute;
+    new(UpperBound1: int, UpperBound2: int): VBFixedArrayAttribute;
 };
 
 
@@ -807,7 +807,7 @@ export interface VBFixedStringAttribute$instance extends Attribute {
 
 
 export const VBFixedStringAttribute: {
-    new(Length: int): VBFixedStringAttribute$instance;
+    new(Length: int): VBFixedStringAttribute;
 };
 
 
@@ -818,7 +818,7 @@ export interface VBMath$instance {
 
 
 export const VBMath: {
-    new(): VBMath$instance;
+    new(): VBMath;
     Randomize(): void;
     Randomize(Number: double): void;
     Rnd(): float;

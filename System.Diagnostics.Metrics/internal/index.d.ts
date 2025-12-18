@@ -37,11 +37,11 @@ export interface Measurement_1$instance<T extends unknown> {
 
 
 export const Measurement_1: {
-    new<T extends unknown>(value: T): Measurement_1$instance<T>;
-    new<T extends unknown>(value: T, tags: IEnumerable_1<KeyValuePair_2<System_Internal.String, unknown>>): Measurement_1$instance<T>;
-    new<T extends unknown>(value: T, tags: KeyValuePair_2<System_Internal.String, unknown>[]): Measurement_1$instance<T>;
-    new<T extends unknown>(value: T, tags: ReadOnlySpan_1<KeyValuePair_2<System_Internal.String, unknown>>): Measurement_1$instance<T>;
-    new<T extends unknown>(value: T, tags: TagList): Measurement_1$instance<T>;
+    new<T extends unknown>(value: T): Measurement_1<T>;
+    new<T extends unknown>(value: T, tags: IEnumerable_1<KeyValuePair_2<System_Internal.String, unknown>>): Measurement_1<T>;
+    new<T extends unknown>(value: T, tags: KeyValuePair_2<System_Internal.String, unknown>[]): Measurement_1<T>;
+    new<T extends unknown>(value: T, tags: ReadOnlySpan_1<KeyValuePair_2<System_Internal.String, unknown>>): Measurement_1<T>;
+    new<T extends unknown>(value: T, tags: TagList): Measurement_1<T>;
 };
 
 
@@ -59,7 +59,7 @@ export interface Counter_1$instance<T extends unknown> extends Instrument_1<T> {
 
 
 export const Counter_1: {
-    new<T extends unknown>(): Counter_1$instance<T>;
+    new<T extends unknown>(): Counter_1<T>;
 };
 
 
@@ -77,7 +77,7 @@ export interface Gauge_1$instance<T extends unknown> extends Instrument_1<T> {
 
 
 export const Gauge_1: {
-    new<T extends unknown>(): Gauge_1$instance<T>;
+    new<T extends unknown>(): Gauge_1<T>;
 };
 
 
@@ -95,7 +95,7 @@ export interface Histogram_1$instance<T extends unknown> extends Instrument_1<T>
 
 
 export const Histogram_1: {
-    new<T extends unknown>(): Histogram_1$instance<T>;
+    new<T extends unknown>(): Histogram_1<T>;
 };
 
 
@@ -135,7 +135,7 @@ export interface InstrumentAdvice_1$instance<T extends unknown> {
 
 
 export const InstrumentAdvice_1: {
-    new<T extends unknown>(): InstrumentAdvice_1$instance<T>;
+    new<T extends unknown>(): InstrumentAdvice_1<T>;
 };
 
 
@@ -168,10 +168,10 @@ export interface Meter$instance {
 
 
 export const Meter: {
-    new(options: MeterOptions): Meter$instance;
-    new(name: string): Meter$instance;
-    new(name: string, version: string): Meter$instance;
-    new(name: string, version: string, tags: IEnumerable_1<KeyValuePair_2<System_Internal.String, unknown>>, scope: unknown): Meter$instance;
+    new(options: MeterOptions): Meter;
+    new(name: string): Meter;
+    new(name: string, version: string): Meter;
+    new(name: string, version: string, tags: IEnumerable_1<KeyValuePair_2<System_Internal.String, unknown>>, scope: unknown): Meter;
 };
 
 
@@ -197,7 +197,7 @@ export interface MeterListener$instance {
 
 
 export const MeterListener: {
-    new(): MeterListener$instance;
+    new(): MeterListener;
 };
 
 
@@ -220,7 +220,7 @@ export interface MeterOptions$instance {
 
 
 export const MeterOptions: {
-    new(name: string): MeterOptions$instance;
+    new(name: string): MeterOptions;
 };
 
 
@@ -231,7 +231,7 @@ export interface ObservableCounter_1$instance<T extends unknown> extends Observa
 
 
 export const ObservableCounter_1: {
-    new<T extends unknown>(): ObservableCounter_1$instance<T>;
+    new<T extends unknown>(): ObservableCounter_1<T>;
 };
 
 
@@ -242,7 +242,7 @@ export interface ObservableGauge_1$instance<T extends unknown> extends Observabl
 
 
 export const ObservableGauge_1: {
-    new<T extends unknown>(): ObservableGauge_1$instance<T>;
+    new<T extends unknown>(): ObservableGauge_1<T>;
 };
 
 
@@ -264,7 +264,7 @@ export interface ObservableUpDownCounter_1$instance<T extends unknown> extends O
 
 
 export const ObservableUpDownCounter_1: {
-    new<T extends unknown>(): ObservableUpDownCounter_1$instance<T>;
+    new<T extends unknown>(): ObservableUpDownCounter_1<T>;
 };
 
 
@@ -282,7 +282,7 @@ export interface UpDownCounter_1$instance<T extends unknown> extends Instrument_
 
 
 export const UpDownCounter_1: {
-    new<T extends unknown>(): UpDownCounter_1$instance<T>;
+    new<T extends unknown>(): UpDownCounter_1<T>;
 };
 
 

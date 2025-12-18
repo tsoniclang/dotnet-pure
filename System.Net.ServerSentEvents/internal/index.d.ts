@@ -29,7 +29,7 @@ export interface SseItem_1$instance<T> {
 
 
 export const SseItem_1: {
-    new<T>(data: T, eventType: string): SseItem_1$instance<T>;
+    new<T>(data: T, eventType: string): SseItem_1<T>;
 };
 
 
@@ -44,7 +44,7 @@ export interface SseParser_1$instance<T> {
 
 
 export const SseParser_1: {
-    new<T>(): SseParser_1$instance<T>;
+    new<T>(): SseParser_1<T>;
 };
 
 

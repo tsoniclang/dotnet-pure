@@ -54,12 +54,12 @@ export interface HttpRequestCachePolicy$instance extends RequestCachePolicy {
 
 
 export const HttpRequestCachePolicy: {
-    new(): HttpRequestCachePolicy$instance;
-    new(level: HttpRequestCacheLevel): HttpRequestCachePolicy$instance;
-    new(cacheAgeControl: HttpCacheAgeControl, ageOrFreshOrStale: TimeSpan): HttpRequestCachePolicy$instance;
-    new(cacheAgeControl: HttpCacheAgeControl, maxAge: TimeSpan, freshOrStale: TimeSpan): HttpRequestCachePolicy$instance;
-    new(cacheSyncDate: DateTime): HttpRequestCachePolicy$instance;
-    new(cacheAgeControl: HttpCacheAgeControl, maxAge: TimeSpan, freshOrStale: TimeSpan, cacheSyncDate: DateTime): HttpRequestCachePolicy$instance;
+    new(): HttpRequestCachePolicy;
+    new(level: HttpRequestCacheLevel): HttpRequestCachePolicy;
+    new(cacheAgeControl: HttpCacheAgeControl, ageOrFreshOrStale: TimeSpan): HttpRequestCachePolicy;
+    new(cacheAgeControl: HttpCacheAgeControl, maxAge: TimeSpan, freshOrStale: TimeSpan): HttpRequestCachePolicy;
+    new(cacheSyncDate: DateTime): HttpRequestCachePolicy;
+    new(cacheAgeControl: HttpCacheAgeControl, maxAge: TimeSpan, freshOrStale: TimeSpan, cacheSyncDate: DateTime): HttpRequestCachePolicy;
 };
 
 
@@ -72,8 +72,8 @@ export interface RequestCachePolicy$instance {
 
 
 export const RequestCachePolicy: {
-    new(): RequestCachePolicy$instance;
-    new(level: RequestCacheLevel): RequestCachePolicy$instance;
+    new(): RequestCachePolicy;
+    new(level: RequestCacheLevel): RequestCachePolicy;
 };
 
 

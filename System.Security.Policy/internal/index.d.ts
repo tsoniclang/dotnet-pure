@@ -35,10 +35,10 @@ export interface Evidence$instance {
 
 
 export const Evidence: {
-    new(): Evidence$instance;
-    new(hostEvidence: unknown[], assemblyEvidence: unknown[]): Evidence$instance;
-    new(evidence: Evidence): Evidence$instance;
-    new(hostEvidence: EvidenceBase[], assemblyEvidence: EvidenceBase[]): Evidence$instance;
+    new(): Evidence;
+    new(hostEvidence: unknown[], assemblyEvidence: unknown[]): Evidence;
+    new(evidence: Evidence): Evidence;
+    new(hostEvidence: EvidenceBase[], assemblyEvidence: EvidenceBase[]): Evidence;
 };
 
 

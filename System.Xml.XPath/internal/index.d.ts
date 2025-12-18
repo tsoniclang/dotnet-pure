@@ -84,12 +84,12 @@ export interface XPathDocument$instance {
 
 
 export const XPathDocument: {
-    new(reader: XmlReader): XPathDocument$instance;
-    new(reader: XmlReader, space: XmlSpace): XPathDocument$instance;
-    new(textReader: TextReader): XPathDocument$instance;
-    new(stream: Stream): XPathDocument$instance;
-    new(uri: string): XPathDocument$instance;
-    new(uri: string, space: XmlSpace): XPathDocument$instance;
+    new(reader: XmlReader): XPathDocument;
+    new(reader: XmlReader, space: XmlSpace): XPathDocument;
+    new(textReader: TextReader): XPathDocument;
+    new(stream: Stream): XPathDocument;
+    new(uri: string): XPathDocument;
+    new(uri: string, space: XmlSpace): XPathDocument;
 };
 
 
@@ -109,9 +109,9 @@ export interface XPathException$instance extends SystemException {
 
 
 export const XPathException: {
-    new(): XPathException$instance;
-    new(message: string): XPathException$instance;
-    new(message: string, innerException: Exception): XPathException$instance;
+    new(): XPathException;
+    new(message: string): XPathException;
+    new(message: string, innerException: Exception): XPathException;
 };
 
 

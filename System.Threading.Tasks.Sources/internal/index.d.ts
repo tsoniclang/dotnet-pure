@@ -55,7 +55,7 @@ export interface ManualResetValueTaskSourceCore_1$instance<TResult> {
 
 
 export const ManualResetValueTaskSourceCore_1: {
-    new<TResult>(): ManualResetValueTaskSourceCore_1$instance<TResult>;
+    new<TResult>(): ManualResetValueTaskSourceCore_1<TResult>;
 };
 
 

@@ -63,9 +63,9 @@ export interface AuthenticationException$instance extends SystemException {
 
 
 export const AuthenticationException: {
-    new(): AuthenticationException$instance;
-    new(message: string): AuthenticationException$instance;
-    new(message: string, innerException: Exception): AuthenticationException$instance;
+    new(): AuthenticationException;
+    new(message: string): AuthenticationException;
+    new(message: string, innerException: Exception): AuthenticationException;
 };
 
 
@@ -82,9 +82,9 @@ export interface InvalidCredentialException$instance extends AuthenticationExcep
 
 
 export const InvalidCredentialException: {
-    new(): InvalidCredentialException$instance;
-    new(message: string): InvalidCredentialException$instance;
-    new(message: string, innerException: Exception): InvalidCredentialException$instance;
+    new(): InvalidCredentialException;
+    new(message: string): InvalidCredentialException;
+    new(message: string, innerException: Exception): InvalidCredentialException;
 };
 
 

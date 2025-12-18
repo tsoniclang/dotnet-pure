@@ -150,7 +150,7 @@ export interface EnumerableExecutor_1$instance<T> extends EnumerableExecutor {
 
 
 export const EnumerableExecutor_1: {
-    new<T>(expression: Expression): EnumerableExecutor_1$instance<T>;
+    new<T>(expression: Expression): EnumerableExecutor_1<T>;
 };
 
 
@@ -172,8 +172,8 @@ export interface EnumerableQuery_1$instance<T> extends EnumerableQuery {
 
 
 export const EnumerableQuery_1: {
-    new<T>(enumerable: IEnumerable_1<T>): EnumerableQuery_1$instance<T>;
-    new<T>(expression: Expression): EnumerableQuery_1$instance<T>;
+    new<T>(enumerable: IEnumerable_1<T>): EnumerableQuery_1<T>;
+    new<T>(expression: Expression): EnumerableQuery_1<T>;
 };
 
 
@@ -199,7 +199,7 @@ export interface Lookup_2$instance<TKey, TElement> {
 
 
 export const Lookup_2: {
-    new<TKey, TElement>(): Lookup_2$instance<TKey, TElement>;
+    new<TKey, TElement>(): Lookup_2<TKey, TElement>;
 };
 
 
@@ -220,7 +220,7 @@ export interface OrderedParallelQuery_1$instance<TSource> extends ParallelQuery_
 
 
 export const OrderedParallelQuery_1: {
-    new<TSource>(): OrderedParallelQuery_1$instance<TSource>;
+    new<TSource>(): OrderedParallelQuery_1<TSource>;
 };
 
 
@@ -237,7 +237,7 @@ export interface ParallelQuery$instance {
 
 
 export const ParallelQuery: {
-    new(): ParallelQuery$instance;
+    new(): ParallelQuery;
 };
 
 
@@ -256,7 +256,7 @@ export interface ParallelQuery_1$instance<TSource> extends ParallelQuery$instanc
 
 
 export const ParallelQuery_1: {
-    new<TSource>(): ParallelQuery_1$instance<TSource>;
+    new<TSource>(): ParallelQuery_1<TSource>;
 };
 
 

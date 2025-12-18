@@ -61,8 +61,8 @@ export interface DataContractSet$instance {
 
 
 export const DataContractSet: {
-    new(dataContractSurrogate: ISerializationSurrogateProvider, referencedTypes: IEnumerable_1<Type>, referencedCollectionTypes: IEnumerable_1<Type>): DataContractSet$instance;
-    new(dataContractSet: DataContractSet): DataContractSet$instance;
+    new(dataContractSurrogate: ISerializationSurrogateProvider, referencedTypes: IEnumerable_1<Type>, referencedCollectionTypes: IEnumerable_1<Type>): DataContractSet;
+    new(dataContractSet: DataContractSet): DataContractSet;
 };
 
 
@@ -79,7 +79,7 @@ export interface DataMember$instance {
 
 
 export const DataMember: {
-    new(): DataMember$instance;
+    new(): DataMember;
 };
 
 
@@ -101,7 +101,7 @@ export interface XmlDataContract$instance extends DataContract {
 
 
 export const XmlDataContract: {
-    new(): XmlDataContract$instance;
+    new(): XmlDataContract;
 };
 
 

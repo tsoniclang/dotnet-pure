@@ -56,9 +56,9 @@ export interface MissingManifestResourceException$instance extends SystemExcepti
 
 
 export const MissingManifestResourceException: {
-    new(): MissingManifestResourceException$instance;
-    new(message: string): MissingManifestResourceException$instance;
-    new(message: string, inner: Exception): MissingManifestResourceException$instance;
+    new(): MissingManifestResourceException;
+    new(message: string): MissingManifestResourceException;
+    new(message: string, inner: Exception): MissingManifestResourceException;
 };
 
 
@@ -76,10 +76,10 @@ export interface MissingSatelliteAssemblyException$instance extends SystemExcept
 
 
 export const MissingSatelliteAssemblyException: {
-    new(): MissingSatelliteAssemblyException$instance;
-    new(message: string): MissingSatelliteAssemblyException$instance;
-    new(message: string, cultureName: string): MissingSatelliteAssemblyException$instance;
-    new(message: string, inner: Exception): MissingSatelliteAssemblyException$instance;
+    new(): MissingSatelliteAssemblyException;
+    new(message: string): MissingSatelliteAssemblyException;
+    new(message: string, cultureName: string): MissingSatelliteAssemblyException;
+    new(message: string, inner: Exception): MissingSatelliteAssemblyException;
 };
 
 
@@ -97,8 +97,8 @@ export interface NeutralResourcesLanguageAttribute$instance extends Attribute {
 
 
 export const NeutralResourcesLanguageAttribute: {
-    new(cultureName: string): NeutralResourcesLanguageAttribute$instance;
-    new(cultureName: string, location: UltimateResourceFallbackLocation): NeutralResourcesLanguageAttribute$instance;
+    new(cultureName: string): NeutralResourcesLanguageAttribute;
+    new(cultureName: string, location: UltimateResourceFallbackLocation): NeutralResourcesLanguageAttribute;
 };
 
 
@@ -120,9 +120,9 @@ export interface ResourceManager$instance {
 
 
 export const ResourceManager: {
-    new(baseName: string, assembly: Assembly): ResourceManager$instance;
-    new(baseName: string, assembly: Assembly, usingResourceSet: Type): ResourceManager$instance;
-    new(resourceSource: Type): ResourceManager$instance;
+    new(baseName: string, assembly: Assembly): ResourceManager;
+    new(baseName: string, assembly: Assembly, usingResourceSet: Type): ResourceManager;
+    new(resourceSource: Type): ResourceManager;
     readonly MagicNumber: int;
     readonly HeaderVersionNumber: int;
     CreateFileBasedResourceManager(baseName: string, resourceDir: string, usingResourceSet: Type): ResourceManager;
@@ -140,8 +140,8 @@ export interface ResourceReader$instance {
 
 
 export const ResourceReader: {
-    new(fileName: string): ResourceReader$instance;
-    new(stream: Stream): ResourceReader$instance;
+    new(fileName: string): ResourceReader;
+    new(stream: Stream): ResourceReader;
 };
 
 
@@ -168,9 +168,9 @@ export interface ResourceSet$instance {
 
 
 export const ResourceSet: {
-    new(fileName: string): ResourceSet$instance;
-    new(stream: Stream): ResourceSet$instance;
-    new(reader: IResourceReader): ResourceSet$instance;
+    new(fileName: string): ResourceSet;
+    new(stream: Stream): ResourceSet;
+    new(reader: IResourceReader): ResourceSet;
 };
 
 
@@ -199,8 +199,8 @@ export interface ResourceWriter$instance {
 
 
 export const ResourceWriter: {
-    new(fileName: string): ResourceWriter$instance;
-    new(stream: Stream): ResourceWriter$instance;
+    new(fileName: string): ResourceWriter;
+    new(stream: Stream): ResourceWriter;
 };
 
 
@@ -218,7 +218,7 @@ export interface SatelliteContractVersionAttribute$instance extends Attribute {
 
 
 export const SatelliteContractVersionAttribute: {
-    new(version: string): SatelliteContractVersionAttribute$instance;
+    new(version: string): SatelliteContractVersionAttribute;
 };
 
 
