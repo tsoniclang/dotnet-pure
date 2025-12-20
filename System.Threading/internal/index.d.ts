@@ -147,8 +147,8 @@ export type AsyncFlowControl = AsyncFlowControl$instance & __AsyncFlowControl$vi
 
 
 export interface AsyncLocalValueChangedArgs_1$instance<T> {
-    readonly CurrentValue: T;
-    readonly PreviousValue: T;
+    readonly CurrentValue: T | undefined;
+    readonly PreviousValue: T | undefined;
     readonly ThreadContextChanged: boolean;
 }
 
@@ -165,16 +165,16 @@ export interface CancellationToken$instance {
     readonly IsCancellationRequested: boolean;
     readonly WaitHandle: WaitHandle;
     Equals(other: CancellationToken): boolean;
-    Equals(other: unknown): boolean;
+    Equals(other: unknown | undefined): boolean;
     GetHashCode(): int;
-    Register(callback: Action): CancellationTokenRegistration;
-    Register(callback: Action, useSynchronizationContext: boolean): CancellationTokenRegistration;
-    Register(callback: Action_1<unknown>, state: unknown): CancellationTokenRegistration;
-    Register(callback: Action_2<unknown, CancellationToken>, state: unknown): CancellationTokenRegistration;
-    Register(callback: Action_1<unknown>, state: unknown, useSynchronizationContext: boolean): CancellationTokenRegistration;
+    Register(callback: Action | undefined): CancellationTokenRegistration;
+    Register(callback: Action | undefined, useSynchronizationContext: boolean): CancellationTokenRegistration;
+    Register(callback: Action_1<unknown | undefined>, state: unknown | undefined): CancellationTokenRegistration;
+    Register(callback: Action_2<unknown | undefined, CancellationToken>, state: unknown | undefined): CancellationTokenRegistration;
+    Register(callback: Action_1<unknown | undefined>, state: unknown | undefined, useSynchronizationContext: boolean): CancellationTokenRegistration;
     ThrowIfCancellationRequested(): void;
-    UnsafeRegister(callback: Action_1<unknown>, state: unknown): CancellationTokenRegistration;
-    UnsafeRegister(callback: Action_2<unknown, CancellationToken>, state: unknown): CancellationTokenRegistration;
+    UnsafeRegister(callback: Action_1<unknown | undefined>, state: unknown | undefined): CancellationTokenRegistration;
+    UnsafeRegister(callback: Action_2<unknown | undefined, CancellationToken>, state: unknown | undefined): CancellationTokenRegistration;
 }
 
 
@@ -327,7 +327,7 @@ export const SpinWait: {
 export type SpinWait = SpinWait$instance;
 
 export interface AbandonedMutexException$instance extends SystemException {
-    readonly Mutex: Mutex;
+    readonly Mutex: Mutex | undefined;
     readonly MutexIndex: int;
     GetObjectData(info: SerializationInfo, context: StreamingContext): void;
 }
@@ -335,11 +335,11 @@ export interface AbandonedMutexException$instance extends SystemException {
 
 export const AbandonedMutexException: {
     new(): AbandonedMutexException;
-    new(message: string): AbandonedMutexException;
-    new(message: string, inner: Exception): AbandonedMutexException;
-    new(location: int, handle: WaitHandle): AbandonedMutexException;
-    new(message: string, location: int, handle: WaitHandle): AbandonedMutexException;
-    new(message: string, inner: Exception, location: int, handle: WaitHandle): AbandonedMutexException;
+    new(message: string | undefined): AbandonedMutexException;
+    new(message: string | undefined, inner: Exception | undefined): AbandonedMutexException;
+    new(location: int, handle: WaitHandle | undefined): AbandonedMutexException;
+    new(message: string | undefined, location: int, handle: WaitHandle | undefined): AbandonedMutexException;
+    new(message: string | undefined, inner: Exception | undefined, location: int, handle: WaitHandle | undefined): AbandonedMutexException;
 };
 
 
@@ -357,7 +357,7 @@ export interface AsyncLocal_1$instance<T> {
 
 export const AsyncLocal_1: {
     new<T>(): AsyncLocal_1<T>;
-    new<T>(valueChangedHandler: Action_1<AsyncLocalValueChangedArgs_1<T>>): AsyncLocal_1<T>;
+    new<T>(valueChangedHandler: Action_1<AsyncLocalValueChangedArgs_1<T>> | undefined): AsyncLocal_1<T>;
 };
 
 
@@ -400,7 +400,7 @@ export interface Barrier$instance {
 
 export const Barrier: {
     new(participantCount: int): Barrier;
-    new(participantCount: int, postPhaseAction: Action_1<Barrier>): Barrier;
+    new(participantCount: int, postPhaseAction: Action_1<Barrier> | undefined): Barrier;
 };
 
 
@@ -414,15 +414,15 @@ export type Barrier = Barrier$instance & __Barrier$views;
 
 
 export interface BarrierPostPhaseException$instance extends Exception {
-    GetObjectData(info: SerializationInfo, context: StreamingContext): void;
+    GetObjectData(info: SerializationInfo | undefined, context: StreamingContext): void;
 }
 
 
 export const BarrierPostPhaseException: {
     new(): BarrierPostPhaseException;
-    new(innerException: Exception): BarrierPostPhaseException;
-    new(message: string): BarrierPostPhaseException;
-    new(message: string, innerException: Exception): BarrierPostPhaseException;
+    new(innerException: Exception | undefined): BarrierPostPhaseException;
+    new(message: string | undefined): BarrierPostPhaseException;
+    new(message: string | undefined, innerException: Exception | undefined): BarrierPostPhaseException;
 };
 
 
@@ -477,7 +477,7 @@ export const CompressedStack: {
     new(): CompressedStack;
     Capture(): CompressedStack;
     GetCompressedStack(): CompressedStack;
-    Run(compressedStack: CompressedStack, callback: ContextCallback, state: unknown): void;
+    Run(compressedStack: CompressedStack, callback: ContextCallback, state: unknown | undefined): void;
 };
 
 
@@ -542,8 +542,8 @@ export const EventWaitHandle: {
     new(initialState: boolean, mode: EventResetMode, name: string, createdNew: boolean): EventWaitHandle;
     OpenExisting(name: string, options: NamedWaitHandleOptions): EventWaitHandle;
     OpenExisting(name: string): EventWaitHandle;
-    TryOpenExisting(name: string, result: EventWaitHandle): boolean;
-    TryOpenExisting(name: string, options: NamedWaitHandleOptions, result: EventWaitHandle): boolean;
+    TryOpenExisting(name: string, result: EventWaitHandle | undefined): boolean;
+    TryOpenExisting(name: string, options: NamedWaitHandleOptions, result: EventWaitHandle | undefined): boolean;
 };
 
 
@@ -567,7 +567,7 @@ export const ExecutionContext: {
     IsFlowSuppressed(): boolean;
     Restore(executionContext: ExecutionContext): void;
     RestoreFlow(): void;
-    Run(executionContext: ExecutionContext, callback: ContextCallback, state: unknown): void;
+    Run(executionContext: ExecutionContext, callback: ContextCallback, state: unknown | undefined): void;
     SuppressFlow(): AsyncFlowControl;
 };
 
@@ -591,7 +591,7 @@ export interface HostExecutionContext$instance {
 
 export const HostExecutionContext: {
     new(): HostExecutionContext;
-    new(state: unknown): HostExecutionContext;
+    new(state: unknown | undefined): HostExecutionContext;
 };
 
 
@@ -635,14 +635,14 @@ export const Lock: {
 export type Lock = Lock$instance;
 
 export interface LockRecursionException$instance extends Exception {
-    GetObjectData(info: SerializationInfo, context: StreamingContext): void;
+    GetObjectData(info: SerializationInfo | undefined, context: StreamingContext): void;
 }
 
 
 export const LockRecursionException: {
     new(): LockRecursionException;
-    new(message: string): LockRecursionException;
-    new(message: string, innerException: Exception): LockRecursionException;
+    new(message: string | undefined): LockRecursionException;
+    new(message: string | undefined, innerException: Exception | undefined): LockRecursionException;
 };
 
 
@@ -709,17 +709,17 @@ export interface Mutex$instance extends WaitHandle$instance {
 
 
 export const Mutex: {
-    new(initiallyOwned: boolean, name: string, options: NamedWaitHandleOptions, createdNew: boolean): Mutex;
-    new(initiallyOwned: boolean, name: string, createdNew: boolean): Mutex;
-    new(initiallyOwned: boolean, name: string, options: NamedWaitHandleOptions): Mutex;
-    new(initiallyOwned: boolean, name: string): Mutex;
-    new(name: string, options: NamedWaitHandleOptions): Mutex;
+    new(initiallyOwned: boolean, name: string | undefined, options: NamedWaitHandleOptions, createdNew: boolean): Mutex;
+    new(initiallyOwned: boolean, name: string | undefined, createdNew: boolean): Mutex;
+    new(initiallyOwned: boolean, name: string | undefined, options: NamedWaitHandleOptions): Mutex;
+    new(initiallyOwned: boolean, name: string | undefined): Mutex;
+    new(name: string | undefined, options: NamedWaitHandleOptions): Mutex;
     new(initiallyOwned: boolean): Mutex;
     new(): Mutex;
-    OpenExisting(name: string, options: NamedWaitHandleOptions): Mutex;
-    OpenExisting(name: string): Mutex;
-    TryOpenExisting(name: string, result: Mutex): boolean;
-    TryOpenExisting(name: string, options: NamedWaitHandleOptions, result: Mutex): boolean;
+    OpenExisting(name: string | undefined, options: NamedWaitHandleOptions): Mutex | undefined;
+    OpenExisting(name: string | undefined): Mutex | undefined;
+    TryOpenExisting(name: string | undefined, result: Mutex | undefined): boolean;
+    TryOpenExisting(name: string | undefined, options: NamedWaitHandleOptions, result: Mutex | undefined): boolean;
 };
 
 
@@ -736,9 +736,9 @@ export interface Overlapped$instance {
     EventHandleIntPtr: nint;
     OffsetHigh: int;
     OffsetLow: int;
-    Pack(iocb: IOCompletionCallback): ptr<NativeOverlapped>;
+    Pack(iocb: IOCompletionCallback | undefined): ptr<NativeOverlapped>;
     Pack(iocb: IOCompletionCallback, userData: unknown): ptr<NativeOverlapped>;
-    UnsafePack(iocb: IOCompletionCallback): ptr<NativeOverlapped>;
+    UnsafePack(iocb: IOCompletionCallback | undefined): ptr<NativeOverlapped>;
     UnsafePack(iocb: IOCompletionCallback, userData: unknown): ptr<NativeOverlapped>;
 }
 
@@ -783,7 +783,7 @@ export interface PreAllocatedOverlapped$instance {
 
 export const PreAllocatedOverlapped: {
     new(callback: IOCompletionCallback, state: unknown, pinData: unknown): PreAllocatedOverlapped;
-    UnsafeCreate(callback: IOCompletionCallback, state: unknown, pinData: unknown): PreAllocatedOverlapped;
+    UnsafeCreate(callback: IOCompletionCallback, state: unknown | undefined, pinData: unknown | undefined): PreAllocatedOverlapped;
 };
 
 
@@ -866,7 +866,7 @@ export type ReaderWriterLockSlim = ReaderWriterLockSlim$instance & __ReaderWrite
 
 
 export interface RegisteredWaitHandle$instance extends MarshalByRefObject {
-    Unregister(waitObject: WaitHandle): boolean;
+    Unregister(waitObject: WaitHandle | undefined): boolean;
 }
 
 
@@ -892,8 +892,8 @@ export const Semaphore: {
     new(initialCount: int, maximumCount: int, name: string, createdNew: boolean): Semaphore;
     OpenExisting(name: string, options: NamedWaitHandleOptions): Semaphore;
     OpenExisting(name: string): Semaphore;
-    TryOpenExisting(name: string, options: NamedWaitHandleOptions, result: Semaphore): boolean;
-    TryOpenExisting(name: string, result: Semaphore): boolean;
+    TryOpenExisting(name: string, options: NamedWaitHandleOptions, result: Semaphore | undefined): boolean;
+    TryOpenExisting(name: string, result: Semaphore | undefined): boolean;
 };
 
 
@@ -911,8 +911,8 @@ export interface SemaphoreFullException$instance extends SystemException {
 
 export const SemaphoreFullException: {
     new(): SemaphoreFullException;
-    new(message: string): SemaphoreFullException;
-    new(message: string, innerException: Exception): SemaphoreFullException;
+    new(message: string | undefined): SemaphoreFullException;
+    new(message: string | undefined, innerException: Exception | undefined): SemaphoreFullException;
 };
 
 
@@ -964,15 +964,15 @@ export interface SynchronizationContext$instance {
     IsWaitNotificationRequired(): boolean;
     OperationCompleted(): void;
     OperationStarted(): void;
-    Post(d: SendOrPostCallback, state: unknown): void;
-    Send(d: SendOrPostCallback, state: unknown): void;
+    Post(d: SendOrPostCallback, state: unknown | undefined): void;
+    Send(d: SendOrPostCallback, state: unknown | undefined): void;
     Wait(waitHandles: nint[], waitAll: boolean, millisecondsTimeout: int): int;
 }
 
 
 export const SynchronizationContext: {
     new(): SynchronizationContext;
-    readonly Current: SynchronizationContext;
+    readonly Current: SynchronizationContext | undefined;
     SetSynchronizationContext(syncContext: SynchronizationContext): void;
 };
 
@@ -986,8 +986,8 @@ export interface SynchronizationLockException$instance extends SystemException {
 
 export const SynchronizationLockException: {
     new(): SynchronizationLockException;
-    new(message: string): SynchronizationLockException;
-    new(message: string, innerException: Exception): SynchronizationLockException;
+    new(message: string | undefined): SynchronizationLockException;
+    new(message: string | undefined, innerException: Exception | undefined): SynchronizationLockException;
 };
 
 
@@ -1002,7 +1002,7 @@ export interface Thread$instance extends CriticalFinalizerObject {
     ApartmentState: ApartmentState;
     CurrentCulture: CultureInfo;
     CurrentUICulture: CultureInfo;
-    readonly ExecutionContext: ExecutionContext;
+    readonly ExecutionContext: ExecutionContext | undefined;
     readonly IsAlive: boolean;
     IsBackground: boolean;
     readonly IsThreadPoolThread: boolean;
@@ -1037,7 +1037,7 @@ export const Thread: {
     new(start: ThreadStart, maxStackSize: int): Thread;
     new(start: ParameterizedThreadStart): Thread;
     new(start: ParameterizedThreadStart, maxStackSize: int): Thread;
-    CurrentPrincipal: IPrincipal;
+    CurrentPrincipal: IPrincipal | undefined;
     readonly CurrentThread: Thread;
     AllocateDataSlot(): LocalDataStoreSlot;
     AllocateNamedDataSlot(name: string): LocalDataStoreSlot;
@@ -1047,13 +1047,13 @@ export const Thread: {
     EndThreadAffinity(): void;
     FreeNamedDataSlot(name: string): void;
     GetCurrentProcessorId(): int;
-    GetData(slot: LocalDataStoreSlot): unknown;
+    GetData(slot: LocalDataStoreSlot): unknown | undefined;
     GetDomain(): AppDomain;
     GetDomainID(): int;
     GetNamedDataSlot(name: string): LocalDataStoreSlot;
     MemoryBarrier(): void;
     ResetAbort(): void;
-    SetData(slot: LocalDataStoreSlot, data: unknown): void;
+    SetData(slot: LocalDataStoreSlot, data: unknown | undefined): void;
     Sleep(millisecondsTimeout: int): void;
     Sleep(timeout: TimeSpan): void;
     SpinWait(iterations: int): void;
@@ -1090,7 +1090,7 @@ export const Thread: {
 export type Thread = Thread$instance;
 
 export interface ThreadAbortException$instance extends SystemException {
-    readonly ExceptionState: unknown;
+    readonly ExceptionState: unknown | undefined;
     GetObjectData(info: SerializationInfo, context: StreamingContext): void;
 }
 
@@ -1126,8 +1126,8 @@ export interface ThreadInterruptedException$instance extends SystemException {
 
 export const ThreadInterruptedException: {
     new(): ThreadInterruptedException;
-    new(message: string): ThreadInterruptedException;
-    new(message: string, innerException: Exception): ThreadInterruptedException;
+    new(message: string | undefined): ThreadInterruptedException;
+    new(message: string | undefined, innerException: Exception | undefined): ThreadInterruptedException;
 };
 
 
@@ -1177,7 +1177,7 @@ export interface ThreadPoolBoundHandle$instance {
 export const ThreadPoolBoundHandle: {
     new(): ThreadPoolBoundHandle;
     BindHandle(handle: SafeHandle): ThreadPoolBoundHandle;
-    GetNativeOverlappedState(overlapped: ptr<NativeOverlapped>): unknown;
+    GetNativeOverlappedState(overlapped: ptr<NativeOverlapped>): unknown | undefined;
 };
 
 
@@ -1214,8 +1214,8 @@ export interface ThreadStateException$instance extends SystemException {
 
 export const ThreadStateException: {
     new(): ThreadStateException;
-    new(message: string): ThreadStateException;
-    new(message: string, innerException: Exception): ThreadStateException;
+    new(message: string | undefined): ThreadStateException;
+    new(message: string | undefined, innerException: Exception | undefined): ThreadStateException;
 };
 
 
@@ -1238,10 +1238,10 @@ export interface Timer$instance extends MarshalByRefObject {
 
 
 export const Timer: {
-    new(callback: TimerCallback, state: unknown, dueTime: int, period: int): Timer;
-    new(callback: TimerCallback, state: unknown, dueTime: TimeSpan, period: TimeSpan): Timer;
-    new(callback: TimerCallback, state: unknown, dueTime: uint, period: uint): Timer;
-    new(callback: TimerCallback, state: unknown, dueTime: long, period: long): Timer;
+    new(callback: TimerCallback, state: unknown | undefined, dueTime: int, period: int): Timer;
+    new(callback: TimerCallback, state: unknown | undefined, dueTime: TimeSpan, period: TimeSpan): Timer;
+    new(callback: TimerCallback, state: unknown | undefined, dueTime: uint, period: uint): Timer;
+    new(callback: TimerCallback, state: unknown | undefined, dueTime: long, period: long): Timer;
     new(callback: TimerCallback): Timer;
     readonly ActiveCount: long;
 };
@@ -1303,8 +1303,8 @@ export interface WaitHandleCannotBeOpenedException$instance extends ApplicationE
 
 export const WaitHandleCannotBeOpenedException: {
     new(): WaitHandleCannotBeOpenedException;
-    new(message: string): WaitHandleCannotBeOpenedException;
-    new(message: string, innerException: Exception): WaitHandleCannotBeOpenedException;
+    new(message: string | undefined): WaitHandleCannotBeOpenedException;
+    new(message: string | undefined, innerException: Exception | undefined): WaitHandleCannotBeOpenedException;
 };
 
 
@@ -1318,7 +1318,7 @@ export type WaitHandleCannotBeOpenedException = WaitHandleCannotBeOpenedExceptio
 export abstract class EventWaitHandleAcl$instance {
     static Create(initialState: boolean, mode: EventResetMode, name: string, createdNew: boolean, eventSecurity: EventWaitHandleSecurity): EventWaitHandle;
     static OpenExisting(name: string, rights: EventWaitHandleRights): EventWaitHandle;
-    static TryOpenExisting(name: string, rights: EventWaitHandleRights, result: EventWaitHandle): boolean;
+    static TryOpenExisting(name: string, rights: EventWaitHandleRights, result: EventWaitHandle | undefined): boolean;
 }
 
 
@@ -1383,11 +1383,11 @@ export abstract class Interlocked$instance {
 export type Interlocked = Interlocked$instance;
 
 export abstract class LazyInitializer$instance {
-    static EnsureInitialized<T>(target: T, valueFactory: Func_1<T>): T;
-    static EnsureInitialized<T>(target: T, initialized: boolean, syncLock: unknown, valueFactory: Func_1<T>): T;
-    static EnsureInitialized<T>(target: T, initialized: boolean, syncLock: unknown): T;
-    static EnsureInitialized<T>(target: T, syncLock: unknown, valueFactory: Func_1<T>): T;
-    static EnsureInitialized<T>(target: T): T;
+    static EnsureInitialized<T>(target: T | undefined, valueFactory: Func_1<T>): T;
+    static EnsureInitialized<T>(target: T, initialized: boolean, syncLock: unknown | undefined, valueFactory: Func_1<T>): T;
+    static EnsureInitialized<T>(target: T, initialized: boolean, syncLock: unknown | undefined): T;
+    static EnsureInitialized<T>(target: T | undefined, syncLock: unknown | undefined, valueFactory: Func_1<T>): T;
+    static EnsureInitialized<T>(target: T | undefined): T;
 }
 
 
@@ -1420,7 +1420,7 @@ export type Monitor = Monitor$instance;
 export abstract class MutexAcl$instance {
     static Create(initiallyOwned: boolean, name: string, createdNew: boolean, mutexSecurity: MutexSecurity): Mutex;
     static OpenExisting(name: string, rights: MutexRights): Mutex;
-    static TryOpenExisting(name: string, rights: MutexRights, result: Mutex): boolean;
+    static TryOpenExisting(name: string, rights: MutexRights, result: Mutex | undefined): boolean;
 }
 
 
@@ -1429,7 +1429,7 @@ export type MutexAcl = MutexAcl$instance;
 export abstract class SemaphoreAcl$instance {
     static Create(initialCount: int, maximumCount: int, name: string, createdNew: boolean, semaphoreSecurity: SemaphoreSecurity): Semaphore;
     static OpenExisting(name: string, rights: SemaphoreRights): Semaphore;
-    static TryOpenExisting(name: string, rights: SemaphoreRights, result: Semaphore): boolean;
+    static TryOpenExisting(name: string, rights: SemaphoreRights, result: Semaphore | undefined): boolean;
 }
 
 
@@ -1457,22 +1457,22 @@ export abstract class ThreadPool$instance {
     static GetMaxThreads(workerThreads: int, completionPortThreads: int): void;
     static GetMinThreads(workerThreads: int, completionPortThreads: int): void;
     static QueueUserWorkItem<TState>(callBack: Action_1<TState>, state: TState, preferLocal: boolean): boolean;
-    static QueueUserWorkItem(callBack: WaitCallback, state: unknown): boolean;
+    static QueueUserWorkItem(callBack: WaitCallback, state: unknown | undefined): boolean;
     static QueueUserWorkItem(callBack: WaitCallback): boolean;
-    static RegisterWaitForSingleObject(waitObject: WaitHandle, callBack: WaitOrTimerCallback, state: unknown, millisecondsTimeOutInterval: int, executeOnlyOnce: boolean): RegisteredWaitHandle;
-    static RegisterWaitForSingleObject(waitObject: WaitHandle, callBack: WaitOrTimerCallback, state: unknown, millisecondsTimeOutInterval: long, executeOnlyOnce: boolean): RegisteredWaitHandle;
-    static RegisterWaitForSingleObject(waitObject: WaitHandle, callBack: WaitOrTimerCallback, state: unknown, timeout: TimeSpan, executeOnlyOnce: boolean): RegisteredWaitHandle;
-    static RegisterWaitForSingleObject(waitObject: WaitHandle, callBack: WaitOrTimerCallback, state: unknown, millisecondsTimeOutInterval: uint, executeOnlyOnce: boolean): RegisteredWaitHandle;
+    static RegisterWaitForSingleObject(waitObject: WaitHandle, callBack: WaitOrTimerCallback, state: unknown | undefined, millisecondsTimeOutInterval: int, executeOnlyOnce: boolean): RegisteredWaitHandle;
+    static RegisterWaitForSingleObject(waitObject: WaitHandle, callBack: WaitOrTimerCallback, state: unknown | undefined, millisecondsTimeOutInterval: long, executeOnlyOnce: boolean): RegisteredWaitHandle;
+    static RegisterWaitForSingleObject(waitObject: WaitHandle, callBack: WaitOrTimerCallback, state: unknown | undefined, timeout: TimeSpan, executeOnlyOnce: boolean): RegisteredWaitHandle;
+    static RegisterWaitForSingleObject(waitObject: WaitHandle, callBack: WaitOrTimerCallback, state: unknown | undefined, millisecondsTimeOutInterval: uint, executeOnlyOnce: boolean): RegisteredWaitHandle;
     static SetMaxThreads(workerThreads: int, completionPortThreads: int): boolean;
     static SetMinThreads(workerThreads: int, completionPortThreads: int): boolean;
     static UnsafeQueueNativeOverlapped(overlapped: ptr<NativeOverlapped>): boolean;
     static UnsafeQueueUserWorkItem<TState>(callBack: Action_1<TState>, state: TState, preferLocal: boolean): boolean;
     static UnsafeQueueUserWorkItem(callBack: IThreadPoolWorkItem, preferLocal: boolean): boolean;
-    static UnsafeQueueUserWorkItem(callBack: WaitCallback, state: unknown): boolean;
-    static UnsafeRegisterWaitForSingleObject(waitObject: WaitHandle, callBack: WaitOrTimerCallback, state: unknown, millisecondsTimeOutInterval: int, executeOnlyOnce: boolean): RegisteredWaitHandle;
-    static UnsafeRegisterWaitForSingleObject(waitObject: WaitHandle, callBack: WaitOrTimerCallback, state: unknown, millisecondsTimeOutInterval: long, executeOnlyOnce: boolean): RegisteredWaitHandle;
-    static UnsafeRegisterWaitForSingleObject(waitObject: WaitHandle, callBack: WaitOrTimerCallback, state: unknown, timeout: TimeSpan, executeOnlyOnce: boolean): RegisteredWaitHandle;
-    static UnsafeRegisterWaitForSingleObject(waitObject: WaitHandle, callBack: WaitOrTimerCallback, state: unknown, millisecondsTimeOutInterval: uint, executeOnlyOnce: boolean): RegisteredWaitHandle;
+    static UnsafeQueueUserWorkItem(callBack: WaitCallback, state: unknown | undefined): boolean;
+    static UnsafeRegisterWaitForSingleObject(waitObject: WaitHandle, callBack: WaitOrTimerCallback, state: unknown | undefined, millisecondsTimeOutInterval: int, executeOnlyOnce: boolean): RegisteredWaitHandle;
+    static UnsafeRegisterWaitForSingleObject(waitObject: WaitHandle, callBack: WaitOrTimerCallback, state: unknown | undefined, millisecondsTimeOutInterval: long, executeOnlyOnce: boolean): RegisteredWaitHandle;
+    static UnsafeRegisterWaitForSingleObject(waitObject: WaitHandle, callBack: WaitOrTimerCallback, state: unknown | undefined, timeout: TimeSpan, executeOnlyOnce: boolean): RegisteredWaitHandle;
+    static UnsafeRegisterWaitForSingleObject(waitObject: WaitHandle, callBack: WaitOrTimerCallback, state: unknown | undefined, millisecondsTimeOutInterval: uint, executeOnlyOnce: boolean): RegisteredWaitHandle;
 }
 
 
@@ -1524,7 +1524,7 @@ export type Volatile = Volatile$instance;
 
 export abstract class WaitHandleExtensions$instance {
     static GetSafeWaitHandle(waitHandle: WaitHandle): SafeWaitHandle;
-    static SetSafeWaitHandle(waitHandle: WaitHandle, value: SafeWaitHandle): void;
+    static SetSafeWaitHandle(waitHandle: WaitHandle, value: SafeWaitHandle | undefined): void;
 }
 
 

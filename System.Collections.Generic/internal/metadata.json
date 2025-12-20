@@ -1440,6 +1440,22 @@
           "isExtensionMethod": false
         },
         {
+          "stableId": "System.Private.CoreLib:System.Collections.Generic.ICollection\u00601::Contains(T):System.Boolean",
+          "clrName": "Contains",
+          "tsEmitName": "Contains",
+          "normalizedSignature": "Contains|(T):System.Boolean|static=false",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": true,
+          "isVirtual": true,
+          "isOverride": false,
+          "isSealed": false,
+          "arity": 0,
+          "parameterCount": 1,
+          "isExtensionMethod": false
+        },
+        {
           "stableId": "System.Private.CoreLib:System.Collections.Generic.ICollection\u00601::CopyTo(T[],System.Int32):System.Void",
           "clrName": "CopyTo",
           "tsEmitName": "CopyTo",
@@ -17787,23 +17803,6 @@
           "isExtensionMethod": false
         },
         {
-          "stableId": "System.Private.CoreLib:System.Collections.Generic.ICollection\u00601::CopyTo(T[],System.Int32):System.Void",
-          "clrName": "CopyTo",
-          "tsEmitName": "CopyTo$view",
-          "normalizedSignature": "CopyTo|(T[],System.Int32):System.Void|static=false",
-          "provenance": "ExplicitView",
-          "emitScope": "ViewOnly",
-          "isStatic": false,
-          "isAbstract": false,
-          "isVirtual": true,
-          "isOverride": false,
-          "isSealed": false,
-          "arity": 0,
-          "parameterCount": 2,
-          "sourceInterface": "System.Collections.Generic.ICollection\u00601",
-          "isExtensionMethod": false
-        },
-        {
           "stableId": "System.Private.CoreLib:System.Collections.Generic.ICollection\u00601::Contains(T):System.Boolean",
           "clrName": "Contains",
           "tsEmitName": "Contains$view",
@@ -17817,6 +17816,23 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 1,
+          "sourceInterface": "System.Collections.Generic.ICollection\u00601",
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.Private.CoreLib:System.Collections.Generic.ICollection\u00601::CopyTo(T[],System.Int32):System.Void",
+          "clrName": "CopyTo",
+          "tsEmitName": "CopyTo$view",
+          "normalizedSignature": "CopyTo|(T[],System.Int32):System.Void|static=false",
+          "provenance": "ExplicitView",
+          "emitScope": "ViewOnly",
+          "isStatic": false,
+          "isAbstract": false,
+          "isVirtual": true,
+          "isOverride": false,
+          "isSealed": false,
+          "arity": 0,
+          "parameterCount": 2,
           "sourceInterface": "System.Collections.Generic.ICollection\u00601",
           "isExtensionMethod": false
         },

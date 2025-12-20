@@ -19,17 +19,17 @@ import * as System_Internal from "../../System/internal/index.js";
 import type { Boolean as ClrBoolean, Int32, Int64, Nullable_1, Object as ClrObject, String as ClrString, Type, Void } from "../../System/internal/index.js";
 
 export interface DataContract$instance {
-    readonly BaseContract: DataContract;
-    readonly ContractType: string;
+    readonly BaseContract: DataContract | undefined;
+    readonly ContractType: string | undefined;
     readonly DataMembers: ReadOnlyCollection_1<DataMember>;
     readonly IsBuiltInDataContract: boolean;
     readonly IsISerializable: boolean;
     readonly IsReference: boolean;
     readonly IsValueType: boolean;
-    readonly KnownDataContracts: Dictionary_2<XmlQualifiedName, DataContract>;
+    readonly KnownDataContracts: Dictionary_2<XmlQualifiedName, DataContract> | undefined;
     readonly OriginalUnderlyingType: Type;
-    readonly TopLevelElementName: XmlDictionaryString;
-    readonly TopLevelElementNamespace: XmlDictionaryString;
+    readonly TopLevelElementName: XmlDictionaryString | undefined;
+    readonly TopLevelElementNamespace: XmlDictionaryString | undefined;
     readonly UnderlyingType: Type;
     readonly XmlName: XmlQualifiedName;
     Equals(obj: unknown): boolean;
@@ -40,7 +40,7 @@ export interface DataContract$instance {
 
 
 export const DataContract: {
-    GetBuiltInDataContract(name: string, ns: string): DataContract;
+    GetBuiltInDataContract(name: string, ns: string): DataContract | undefined;
     GetXmlName(type_: Type): XmlQualifiedName;
 };
 
@@ -49,19 +49,19 @@ export type DataContract = DataContract$instance;
 
 export interface DataContractSet$instance {
     readonly Contracts: Dictionary_2<XmlQualifiedName, DataContract>;
-    readonly KnownTypesForObject: Dictionary_2<XmlQualifiedName, DataContract>;
+    readonly KnownTypesForObject: Dictionary_2<XmlQualifiedName, DataContract> | undefined;
     readonly ProcessedContracts: Dictionary_2<DataContract, unknown>;
     readonly SurrogateData: Hashtable;
     GetDataContract(type_: Type): DataContract;
-    GetDataContract(key: XmlQualifiedName): DataContract;
-    GetReferencedType(xmlName: XmlQualifiedName, dataContract: DataContract, referencedContract: DataContract, genericParameters: unknown[], supportGenericTypes?: Nullable_1<System_Internal.Boolean>): Type;
-    ImportSchemaSet(schemaSet: XmlSchemaSet, typeNames: IEnumerable_1<XmlQualifiedName>, importXmlDataType: boolean): void;
+    GetDataContract(key: XmlQualifiedName): DataContract | undefined;
+    GetReferencedType(xmlName: XmlQualifiedName, dataContract: DataContract, referencedContract: DataContract | undefined, genericParameters: unknown[] | undefined, supportGenericTypes?: Nullable_1<System_Internal.Boolean>): Type | undefined;
+    ImportSchemaSet(schemaSet: XmlSchemaSet, typeNames: IEnumerable_1<XmlQualifiedName> | undefined, importXmlDataType: boolean): void;
     ImportSchemaSet(schemaSet: XmlSchemaSet, elements: IEnumerable_1<XmlSchemaElement>, importXmlDataType: boolean): List_1<XmlQualifiedName>;
 }
 
 
 export const DataContractSet: {
-    new(dataContractSurrogate: ISerializationSurrogateProvider, referencedTypes: IEnumerable_1<Type>, referencedCollectionTypes: IEnumerable_1<Type>): DataContractSet;
+    new(dataContractSurrogate: ISerializationSurrogateProvider, referencedTypes: IEnumerable_1<Type> | undefined, referencedCollectionTypes: IEnumerable_1<Type> | undefined): DataContractSet;
     new(dataContractSet: DataContractSet): DataContractSet;
 };
 
@@ -86,17 +86,17 @@ export const DataMember: {
 export type DataMember = DataMember$instance;
 
 export interface XmlDataContract$instance extends DataContract {
-    readonly ContractType: string;
+    readonly ContractType: string | undefined;
     readonly HasRoot: boolean;
     readonly IsAnonymous: boolean;
     readonly IsBuiltInDataContract: boolean;
     readonly IsTopLevelElementNullable: boolean;
     IsTypeDefinedOnImport: boolean;
     IsValueType: boolean;
-    readonly KnownDataContracts: Dictionary_2<XmlQualifiedName, DataContract>;
-    readonly TopLevelElementName: XmlDictionaryString;
-    readonly TopLevelElementNamespace: XmlDictionaryString;
-    readonly XsdType: XmlSchemaType;
+    readonly KnownDataContracts: Dictionary_2<XmlQualifiedName, DataContract> | undefined;
+    readonly TopLevelElementName: XmlDictionaryString | undefined;
+    readonly TopLevelElementNamespace: XmlDictionaryString | undefined;
+    readonly XsdType: XmlSchemaType | undefined;
 }
 
 

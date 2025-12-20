@@ -19809,6 +19809,20 @@
           "declaringClrType": "System.Reflection.Metadata.IConstructedTypeProvider\u00601",
           "declaringAssemblyName": "System.Reflection.Metadata",
           "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.Reflection.Metadata:System.Reflection.Metadata.ISZArrayTypeProvider\u00601::GetSZArrayType(TType):TType",
+          "clrName": "GetSZArrayType",
+          "tsEmitName": "GetSZArrayType",
+          "metadataToken": 100664785,
+          "canonicalSignature": "(TType):TType",
+          "normalizedSignature": "GetSZArrayType|(TType):TType|static=false",
+          "emitScope": "ClassSurface",
+          "arity": 0,
+          "parameterCount": 1,
+          "declaringClrType": "System.Reflection.Metadata.ISZArrayTypeProvider\u00601",
+          "declaringAssemblyName": "System.Reflection.Metadata",
+          "isExtensionMethod": false
         }
       ],
       "properties": [],
@@ -19844,6 +19858,16 @@
             "declaringClrType": "System.Reflection.Metadata.IConstructedTypeProvider\u00601",
             "declaringAssemblyName": "System.Reflection.Metadata",
             "metadataToken": 100664797
+          }
+        },
+        {
+          "tsName": "GetSZArrayType",
+          "isStatic": false,
+          "tsSignatureId": "GetSZArrayType|(TType):TType|static=false",
+          "target": {
+            "declaringClrType": "System.Reflection.Metadata.ISZArrayTypeProvider\u00601",
+            "declaringAssemblyName": "System.Reflection.Metadata",
+            "metadataToken": 100664785
           }
         }
       ]
@@ -20201,6 +20225,20 @@
           "declaringClrType": "System.Reflection.Metadata.IConstructedTypeProvider\u00601",
           "declaringAssemblyName": "System.Reflection.Metadata",
           "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.Reflection.Metadata:System.Reflection.Metadata.IConstructedTypeProvider\u00601::GetByReferenceType(TType):TType",
+          "clrName": "GetByReferenceType",
+          "tsEmitName": "GetByReferenceType",
+          "metadataToken": 100664797,
+          "canonicalSignature": "(TType):TType",
+          "normalizedSignature": "GetByReferenceType|(TType):TType|static=false",
+          "emitScope": "ClassSurface",
+          "arity": 0,
+          "parameterCount": 1,
+          "declaringClrType": "System.Reflection.Metadata.IConstructedTypeProvider\u00601",
+          "declaringAssemblyName": "System.Reflection.Metadata",
+          "isExtensionMethod": false
         }
       ],
       "properties": [],
@@ -20306,6 +20344,16 @@
             "declaringClrType": "System.Reflection.Metadata.IConstructedTypeProvider\u00601",
             "declaringAssemblyName": "System.Reflection.Metadata",
             "metadataToken": 100664796
+          }
+        },
+        {
+          "tsName": "GetByReferenceType",
+          "isStatic": false,
+          "tsSignatureId": "GetByReferenceType|(TType):TType|static=false",
+          "target": {
+            "declaringClrType": "System.Reflection.Metadata.IConstructedTypeProvider\u00601",
+            "declaringAssemblyName": "System.Reflection.Metadata",
+            "metadataToken": 100664797
           }
         }
       ]

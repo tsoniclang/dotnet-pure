@@ -133,7 +133,7 @@ export type JsonConstructorAttribute = JsonConstructorAttribute$instance;
 
 export interface JsonConverter$instance {
     readonly Type: Type;
-    CanConvert(typeToConvert: Type): boolean;
+    CanConvert(typeToConvert: Type | undefined): boolean;
 }
 
 
@@ -147,7 +147,7 @@ export interface JsonConverter_1$instance<T> extends JsonConverter {
     readonly HandleNull: boolean;
     readonly Type: Type;
     CanConvert(typeToConvert: Type): boolean;
-    Read(reader: Utf8JsonReader, typeToConvert: Type, options: JsonSerializerOptions): T;
+    Read(reader: Utf8JsonReader, typeToConvert: Type, options: JsonSerializerOptions): T | undefined;
     ReadAsPropertyName(reader: Utf8JsonReader, typeToConvert: Type, options: JsonSerializerOptions): T;
     Write(writer: Utf8JsonWriter, value: T, options: JsonSerializerOptions): void;
     WriteAsPropertyName(writer: Utf8JsonWriter, value: T, options: JsonSerializerOptions): void;
@@ -161,8 +161,8 @@ export const JsonConverter_1: {
 export type JsonConverter_1<T> = JsonConverter_1$instance<T>;
 
 export interface JsonConverterAttribute$instance extends JsonAttribute {
-    readonly ConverterType: Type;
-    CreateConverter(typeToConvert: Type): JsonConverter;
+    readonly ConverterType: Type | undefined;
+    CreateConverter(typeToConvert: Type): JsonConverter | undefined;
 }
 
 
@@ -175,7 +175,7 @@ export type JsonConverterAttribute = JsonConverterAttribute$instance;
 
 export interface JsonConverterFactory$instance extends JsonConverter {
     readonly Type: Type;
-    CreateConverter(typeToConvert: Type, options: JsonSerializerOptions): JsonConverter;
+    CreateConverter(typeToConvert: Type | undefined, options: JsonSerializerOptions | undefined): JsonConverter | undefined;
 }
 
 
@@ -187,7 +187,7 @@ export type JsonConverterFactory = JsonConverterFactory$instance;
 
 export interface JsonDerivedTypeAttribute$instance extends JsonAttribute {
     readonly DerivedType: Type;
-    readonly TypeDiscriminator: unknown;
+    readonly TypeDiscriminator: unknown | undefined;
 }
 
 
@@ -236,7 +236,7 @@ export type JsonIncludeAttribute = JsonIncludeAttribute$instance;
 
 export interface JsonNumberEnumConverter_1$instance<TEnum extends number> extends JsonConverterFactory {
     CanConvert(typeToConvert: Type): boolean;
-    CreateConverter(typeToConvert: Type, options: JsonSerializerOptions): JsonConverter;
+    CreateConverter(typeToConvert: Type, options: JsonSerializerOptions): JsonConverter | undefined;
 }
 
 
@@ -322,12 +322,12 @@ export type JsonRequiredAttribute = JsonRequiredAttribute$instance;
 
 export interface JsonSerializableAttribute$instance extends JsonAttribute {
     GenerationMode: JsonSourceGenerationMode;
-    TypeInfoPropertyName: string;
+    TypeInfoPropertyName: string | undefined;
 }
 
 
 export const JsonSerializableAttribute: {
-    new(type_: Type): JsonSerializableAttribute;
+    new(type_: Type | undefined): JsonSerializableAttribute;
 };
 
 
@@ -405,7 +405,7 @@ export type JsonStringEnumConverter = JsonStringEnumConverter$instance;
 
 export interface JsonStringEnumConverter_1$instance<TEnum extends number> extends JsonConverterFactory {
     CanConvert(typeToConvert: Type): boolean;
-    CreateConverter(typeToConvert: Type, options: JsonSerializerOptions): JsonConverter;
+    CreateConverter(typeToConvert: Type, options: JsonSerializerOptions): JsonConverter | undefined;
 }
 
 

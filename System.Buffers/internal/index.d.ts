@@ -64,7 +64,7 @@ export interface MemoryHandle$instance {
 
 
 export const MemoryHandle: {
-    new(pointer: ptr<void>, handle: GCHandle, pinnable: IPinnable): MemoryHandle;
+    new(pointer: ptr<void>, handle: GCHandle, pinnable: IPinnable | undefined): MemoryHandle;
 };
 
 
@@ -181,7 +181,7 @@ export interface StandardFormat$instance {
     Equals(obj: unknown): boolean;
     Equals(other: StandardFormat): boolean;
     GetHashCode(): int;
-    ToString(): string;
+    ToString(): string | undefined;
 }
 
 
@@ -295,7 +295,7 @@ export type MemoryPool_1<T> = MemoryPool_1$instance<T> & __MemoryPool_1$views<T>
 
 export interface ReadOnlySequenceSegment_1$instance<T> {
     readonly Memory: ReadOnlyMemory_1<T>;
-    readonly Next: ReadOnlySequenceSegment_1<T>;
+    readonly Next: ReadOnlySequenceSegment_1<T> | undefined;
     readonly RunningIndex: long;
 }
 

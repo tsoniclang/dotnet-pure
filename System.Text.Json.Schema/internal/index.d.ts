@@ -13,9 +13,9 @@ import * as System_Internal from "../../System/internal/index.js";
 import type { Boolean as ClrBoolean, Func_3, Int32, Object as ClrObject, ReadOnlySpan_1, String as ClrString, Type, ValueType } from "../../System/internal/index.js";
 
 export interface JsonSchemaExporterContext$instance {
-    readonly BaseTypeInfo: JsonTypeInfo;
+    readonly BaseTypeInfo: JsonTypeInfo | undefined;
     readonly Path: ReadOnlySpan_1<System_Internal.String>;
-    readonly PropertyInfo: JsonPropertyInfo;
+    readonly PropertyInfo: JsonPropertyInfo | undefined;
     readonly TypeInfo: JsonTypeInfo;
 }
 
@@ -28,7 +28,7 @@ export const JsonSchemaExporterContext: {
 export type JsonSchemaExporterContext = JsonSchemaExporterContext$instance;
 
 export interface JsonSchemaExporterOptions$instance {
-    TransformSchemaNode: Func_3<JsonSchemaExporterContext, JsonNode, JsonNode>;
+    TransformSchemaNode: Func_3<JsonSchemaExporterContext, JsonNode, JsonNode> | undefined;
     TreatNullObliviousAsNonNullable: boolean;
 }
 
@@ -42,8 +42,8 @@ export const JsonSchemaExporterOptions: {
 export type JsonSchemaExporterOptions = JsonSchemaExporterOptions$instance;
 
 export abstract class JsonSchemaExporter$instance {
-    static GetJsonSchemaAsNode(options: JsonSerializerOptions, type_: Type, exporterOptions?: JsonSchemaExporterOptions): JsonNode;
-    static GetJsonSchemaAsNode(typeInfo: JsonTypeInfo, exporterOptions?: JsonSchemaExporterOptions): JsonNode;
+    static GetJsonSchemaAsNode(options: JsonSerializerOptions, type_: Type, exporterOptions?: JsonSchemaExporterOptions | undefined): JsonNode;
+    static GetJsonSchemaAsNode(typeInfo: JsonTypeInfo, exporterOptions?: JsonSchemaExporterOptions | undefined): JsonNode;
 }
 
 

@@ -82,7 +82,7 @@ export interface QuicConnection$instance {
     readonly LocalEndPoint: IPEndPoint;
     readonly NegotiatedApplicationProtocol: SslApplicationProtocol;
     readonly NegotiatedCipherSuite: TlsCipherSuite;
-    readonly RemoteCertificate: X509Certificate;
+    readonly RemoteCertificate: X509Certificate | undefined;
     readonly RemoteEndPoint: IPEndPoint;
     readonly SslProtocol: SslProtocols;
     readonly TargetHostName: string;
@@ -119,7 +119,7 @@ export interface QuicConnectionOptions$instance {
     KeepAliveInterval: TimeSpan;
     MaxInboundBidirectionalStreams: int;
     MaxInboundUnidirectionalStreams: int;
-    StreamCapacityCallback: Action_2<QuicConnection, QuicStreamCapacityChangedArgs>;
+    StreamCapacityCallback: Action_2<QuicConnection, QuicStreamCapacityChangedArgs> | undefined;
 }
 
 
@@ -229,8 +229,8 @@ export interface QuicStream$instance extends Stream {
     readonly WritesClosed: Task;
     WriteTimeout: int;
     Abort(abortDirection: QuicAbortDirection, errorCode: long): void;
-    BeginRead(buffer: byte[], offset: int, count: int, callback: AsyncCallback, state: unknown): IAsyncResult;
-    BeginWrite(buffer: byte[], offset: int, count: int, callback: AsyncCallback, state: unknown): IAsyncResult;
+    BeginRead(buffer: byte[], offset: int, count: int, callback: AsyncCallback | undefined, state: unknown | undefined): IAsyncResult;
+    BeginWrite(buffer: byte[], offset: int, count: int, callback: AsyncCallback | undefined, state: unknown | undefined): IAsyncResult;
     CompleteWrites(): void;
     Dispose(): void;
     DisposeAsync(): ValueTask;

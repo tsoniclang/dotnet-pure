@@ -43,8 +43,8 @@ export const ContentDisposition: {
 export type ContentDisposition = ContentDisposition$instance;
 
 export interface ContentType$instance {
-    Boundary: string;
-    CharSet: string;
+    Boundary: string | undefined;
+    CharSet: string | undefined;
     MediaType: string;
     Name: string;
     readonly Parameters: StringDictionary;

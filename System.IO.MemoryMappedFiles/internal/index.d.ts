@@ -61,16 +61,16 @@ export interface MemoryMappedFile$instance {
 
 export const MemoryMappedFile: {
     new(): MemoryMappedFile;
-    CreateFromFile(fileHandle: SafeFileHandle, mapName: string, capacity: long, access: MemoryMappedFileAccess, inheritability: HandleInheritability, leaveOpen: boolean): MemoryMappedFile;
-    CreateFromFile(fileStream: FileStream, mapName: string, capacity: long, access: MemoryMappedFileAccess, inheritability: HandleInheritability, leaveOpen: boolean): MemoryMappedFile;
-    CreateFromFile(path: string, mode: FileMode, mapName: string, capacity: long, access: MemoryMappedFileAccess): MemoryMappedFile;
-    CreateFromFile(path: string, mode: FileMode, mapName: string, capacity: long): MemoryMappedFile;
-    CreateFromFile(path: string, mode: FileMode, mapName: string): MemoryMappedFile;
+    CreateFromFile(fileHandle: SafeFileHandle, mapName: string | undefined, capacity: long, access: MemoryMappedFileAccess, inheritability: HandleInheritability, leaveOpen: boolean): MemoryMappedFile;
+    CreateFromFile(fileStream: FileStream, mapName: string | undefined, capacity: long, access: MemoryMappedFileAccess, inheritability: HandleInheritability, leaveOpen: boolean): MemoryMappedFile;
+    CreateFromFile(path: string, mode: FileMode, mapName: string | undefined, capacity: long, access: MemoryMappedFileAccess): MemoryMappedFile;
+    CreateFromFile(path: string, mode: FileMode, mapName: string | undefined, capacity: long): MemoryMappedFile;
+    CreateFromFile(path: string, mode: FileMode, mapName: string | undefined): MemoryMappedFile;
     CreateFromFile(path: string, mode: FileMode): MemoryMappedFile;
     CreateFromFile(path: string): MemoryMappedFile;
-    CreateNew(mapName: string, capacity: long, access: MemoryMappedFileAccess, options: MemoryMappedFileOptions, inheritability: HandleInheritability): MemoryMappedFile;
-    CreateNew(mapName: string, capacity: long, access: MemoryMappedFileAccess): MemoryMappedFile;
-    CreateNew(mapName: string, capacity: long): MemoryMappedFile;
+    CreateNew(mapName: string | undefined, capacity: long, access: MemoryMappedFileAccess, options: MemoryMappedFileOptions, inheritability: HandleInheritability): MemoryMappedFile;
+    CreateNew(mapName: string | undefined, capacity: long, access: MemoryMappedFileAccess): MemoryMappedFile;
+    CreateNew(mapName: string | undefined, capacity: long): MemoryMappedFile;
     CreateOrOpen(mapName: string, capacity: long, access: MemoryMappedFileAccess, options: MemoryMappedFileOptions, inheritability: HandleInheritability): MemoryMappedFile;
     CreateOrOpen(mapName: string, capacity: long, access: MemoryMappedFileAccess): MemoryMappedFile;
     CreateOrOpen(mapName: string, capacity: long): MemoryMappedFile;

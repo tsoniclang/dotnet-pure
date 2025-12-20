@@ -55,9 +55,9 @@ export enum XObjectChange {
 export interface XAttribute$instance extends XObject$instance {
     readonly IsNamespaceDeclaration: boolean;
     readonly Name: XName;
-    readonly NextAttribute: XAttribute;
+    readonly NextAttribute: XAttribute | undefined;
     readonly NodeType: XmlNodeType;
-    readonly PreviousAttribute: XAttribute;
+    readonly PreviousAttribute: XAttribute | undefined;
     Value: string;
     HasLineInfo(): boolean;
     Remove(): void;
@@ -126,8 +126,8 @@ export type XComment = XComment$instance & __XComment$views;
 
 
 export interface XContainer$instance extends XNode$instance {
-    readonly FirstNode: XNode;
-    readonly LastNode: XNode;
+    readonly FirstNode: XNode | undefined;
+    readonly LastNode: XNode | undefined;
     Add(content: unknown): void;
     Add(...content: unknown[]): void;
     AddFirst(content: unknown): void;
@@ -135,10 +135,10 @@ export interface XContainer$instance extends XNode$instance {
     CreateWriter(): XmlWriter;
     DescendantNodes(): IEnumerable_1<XNode>;
     Descendants(): IEnumerable_1<XElement>;
-    Descendants(name: XName): IEnumerable_1<XElement>;
-    Element(name: XName): XElement;
+    Descendants(name: XName | undefined): IEnumerable_1<XElement>;
+    Element(name: XName): XElement | undefined;
     Elements(): IEnumerable_1<XElement>;
-    Elements(name: XName): IEnumerable_1<XElement>;
+    Elements(name: XName | undefined): IEnumerable_1<XElement>;
     HasLineInfo(): boolean;
     Nodes(): IEnumerable_1<XNode>;
     RemoveNodes(): void;
@@ -162,21 +162,21 @@ export interface XDeclaration$instance {
     Encoding: string;
     Standalone: string;
     Version: string;
-    ToString(): string;
+    ToString(): string | undefined;
 }
 
 
 export const XDeclaration: {
-    new(version: string, encoding: string, standalone: string): XDeclaration;
-    new(other: XDeclaration): XDeclaration;
+    new(version: string | undefined, encoding: string | undefined, standalone: string | undefined): XDeclaration;
+    new(other: XDeclaration | undefined): XDeclaration;
 };
 
 
 export type XDeclaration = XDeclaration$instance;
 
 export interface XDocument$instance extends XContainer$instance {
-    Declaration: XDeclaration;
-    readonly DocumentType: XDocumentType;
+    Declaration: XDeclaration | undefined;
+    readonly DocumentType: XDocumentType | undefined;
     readonly NodeType: XmlNodeType;
     readonly Root: XElement;
     HasLineInfo(): boolean;
@@ -230,14 +230,14 @@ export interface XDocumentType$instance extends XNode$instance {
     PublicId: string;
     SystemId: string;
     HasLineInfo(): boolean;
-    WriteTo(writer: XmlWriter): void;
-    WriteToAsync(writer: XmlWriter, cancellationToken: CancellationToken): Task;
+    WriteTo(writer: XmlWriter | undefined): void;
+    WriteToAsync(writer: XmlWriter | undefined, cancellationToken: CancellationToken): Task;
 }
 
 
 export const XDocumentType: {
-    new(name: string, publicId: string, systemId: string, internalSubset: string): XDocumentType;
-    new(other: XDocumentType): XDocumentType;
+    new(name: string, publicId: string | undefined, systemId: string | undefined, internalSubset: string | undefined): XDocumentType;
+    new(other: XDocumentType | undefined): XDocumentType;
 };
 
 
@@ -249,25 +249,25 @@ export type XDocumentType = XDocumentType$instance & __XDocumentType$views;
 
 
 export interface XElement$instance extends XContainer$instance {
-    readonly FirstAttribute: XAttribute;
+    readonly FirstAttribute: XAttribute | undefined;
     readonly HasAttributes: boolean;
     readonly HasElements: boolean;
     readonly IsEmpty: boolean;
-    readonly LastAttribute: XAttribute;
+    readonly LastAttribute: XAttribute | undefined;
     Name: XName;
     readonly NodeType: XmlNodeType;
     Value: string;
     AncestorsAndSelf(): IEnumerable_1<XElement>;
-    AncestorsAndSelf(name: XName): IEnumerable_1<XElement>;
-    Attribute(name: XName): XAttribute;
+    AncestorsAndSelf(name: XName | undefined): IEnumerable_1<XElement>;
+    Attribute(name: XName): XAttribute | undefined;
     Attributes(): IEnumerable_1<XAttribute>;
-    Attributes(name: XName): IEnumerable_1<XAttribute>;
+    Attributes(name: XName | undefined): IEnumerable_1<XAttribute>;
     DescendantNodesAndSelf(): IEnumerable_1<XNode>;
     DescendantsAndSelf(): IEnumerable_1<XElement>;
-    DescendantsAndSelf(name: XName): IEnumerable_1<XElement>;
+    DescendantsAndSelf(name: XName | undefined): IEnumerable_1<XElement>;
     GetDefaultNamespace(): XNamespace;
     GetNamespaceOfPrefix(prefix: string): XNamespace;
-    GetPrefixOfNamespace(ns: XNamespace): string;
+    GetPrefixOfNamespace(ns: XNamespace): string | undefined;
     HasLineInfo(): boolean;
     RemoveAll(): void;
     RemoveAttributes(): void;
@@ -285,8 +285,8 @@ export interface XElement$instance extends XContainer$instance {
     SaveAsync(stream: Stream, options: SaveOptions, cancellationToken: CancellationToken): Task;
     SaveAsync(textWriter: TextWriter, options: SaveOptions, cancellationToken: CancellationToken): Task;
     SaveAsync(writer: XmlWriter, cancellationToken: CancellationToken): Task;
-    SetAttributeValue(name: XName, value: unknown): void;
-    SetElementValue(name: XName, value: unknown): void;
+    SetAttributeValue(name: XName, value: unknown | undefined): void;
+    SetElementValue(name: XName, value: unknown | undefined): void;
     SetValue(value: unknown): void;
     WriteTo(writer: XmlWriter): void;
     WriteToAsync(writer: XmlWriter, cancellationToken: CancellationToken): Task;
@@ -295,7 +295,7 @@ export interface XElement$instance extends XContainer$instance {
 
 export const XElement: {
     new(name: XName): XElement;
-    new(name: XName, content: unknown): XElement;
+    new(name: XName, content: unknown | undefined): XElement;
     new(name: XName, content: unknown[]): XElement;
     new(other: XElement): XElement;
     new(other: XStreamingElement): XElement;
@@ -377,20 +377,20 @@ export const XNamespace: {
 export type XNamespace = XNamespace$instance;
 
 export interface XNode$instance extends XObject$instance {
-    readonly NextNode: XNode;
-    readonly PreviousNode: XNode;
+    readonly NextNode: XNode | undefined;
+    readonly PreviousNode: XNode | undefined;
     AddAfterSelf(content: unknown): void;
     AddAfterSelf(...content: unknown[]): void;
     AddBeforeSelf(content: unknown): void;
     AddBeforeSelf(...content: unknown[]): void;
     Ancestors(): IEnumerable_1<XElement>;
-    Ancestors(name: XName): IEnumerable_1<XElement>;
+    Ancestors(name: XName | undefined): IEnumerable_1<XElement>;
     CreateReader(): XmlReader;
     CreateReader(readerOptions: ReaderOptions): XmlReader;
     ElementsAfterSelf(): IEnumerable_1<XElement>;
-    ElementsAfterSelf(name: XName): IEnumerable_1<XElement>;
+    ElementsAfterSelf(name: XName | undefined): IEnumerable_1<XElement>;
     ElementsBeforeSelf(): IEnumerable_1<XElement>;
-    ElementsBeforeSelf(name: XName): IEnumerable_1<XElement>;
+    ElementsBeforeSelf(name: XName | undefined): IEnumerable_1<XElement>;
     HasLineInfo(): boolean;
     IsAfter(node: XNode): boolean;
     IsBefore(node: XNode): boolean;
@@ -470,8 +470,8 @@ export interface XObject$instance {
     readonly NodeType: XmlNodeType;
     readonly Parent: XElement;
     AddAnnotation(annotation: unknown): void;
-    Annotation(type_: Type): unknown;
-    Annotation<T>(): T;
+    Annotation(type_: Type): unknown | undefined;
+    Annotation<T>(): T | undefined;
     Annotations(type_: Type): IEnumerable_1<unknown>;
     Annotations<T>(): IEnumerable_1<T>;
     RemoveAnnotations(type_: Type): void;
@@ -550,7 +550,7 @@ export interface XStreamingElement$instance {
 
 export const XStreamingElement: {
     new(name: XName): XStreamingElement;
-    new(name: XName, content: unknown): XStreamingElement;
+    new(name: XName, content: unknown | undefined): XStreamingElement;
     new(name: XName, content: unknown[]): XStreamingElement;
 };
 
@@ -580,24 +580,24 @@ export type XText = XText$instance & __XText$views;
 
 
 export abstract class Extensions$instance {
-    static Ancestors<T extends XNode>(source: IEnumerable_1<T>, name: XName): IEnumerable_1<XElement>;
-    static Ancestors<T extends XNode>(source: IEnumerable_1<T>): IEnumerable_1<XElement>;
-    static AncestorsAndSelf(source: IEnumerable_1<XElement>, name: XName): IEnumerable_1<XElement>;
-    static AncestorsAndSelf(source: IEnumerable_1<XElement>): IEnumerable_1<XElement>;
-    static Attributes(source: IEnumerable_1<XElement>, name: XName): IEnumerable_1<XAttribute>;
-    static Attributes(source: IEnumerable_1<XElement>): IEnumerable_1<XAttribute>;
-    static DescendantNodes<T extends XContainer>(source: IEnumerable_1<T>): IEnumerable_1<XNode>;
-    static DescendantNodesAndSelf(source: IEnumerable_1<XElement>): IEnumerable_1<XNode>;
-    static Descendants<T extends XContainer>(source: IEnumerable_1<T>, name: XName): IEnumerable_1<XElement>;
-    static Descendants<T extends XContainer>(source: IEnumerable_1<T>): IEnumerable_1<XElement>;
-    static DescendantsAndSelf(source: IEnumerable_1<XElement>, name: XName): IEnumerable_1<XElement>;
-    static DescendantsAndSelf(source: IEnumerable_1<XElement>): IEnumerable_1<XElement>;
-    static Elements<T extends XContainer>(source: IEnumerable_1<T>, name: XName): IEnumerable_1<XElement>;
-    static Elements<T extends XContainer>(source: IEnumerable_1<T>): IEnumerable_1<XElement>;
+    static Ancestors<T extends XNode>(source: IEnumerable_1<T | undefined>, name: XName | undefined): IEnumerable_1<XElement>;
+    static Ancestors<T extends XNode>(source: IEnumerable_1<T | undefined>): IEnumerable_1<XElement>;
+    static AncestorsAndSelf(source: IEnumerable_1<XElement | undefined>, name: XName | undefined): IEnumerable_1<XElement>;
+    static AncestorsAndSelf(source: IEnumerable_1<XElement | undefined>): IEnumerable_1<XElement>;
+    static Attributes(source: IEnumerable_1<XElement | undefined>, name: XName | undefined): IEnumerable_1<XAttribute>;
+    static Attributes(source: IEnumerable_1<XElement | undefined>): IEnumerable_1<XAttribute>;
+    static DescendantNodes<T extends XContainer>(source: IEnumerable_1<T | undefined>): IEnumerable_1<XNode>;
+    static DescendantNodesAndSelf(source: IEnumerable_1<XElement | undefined>): IEnumerable_1<XNode>;
+    static Descendants<T extends XContainer>(source: IEnumerable_1<T | undefined>, name: XName | undefined): IEnumerable_1<XElement>;
+    static Descendants<T extends XContainer>(source: IEnumerable_1<T | undefined>): IEnumerable_1<XElement>;
+    static DescendantsAndSelf(source: IEnumerable_1<XElement | undefined>, name: XName | undefined): IEnumerable_1<XElement>;
+    static DescendantsAndSelf(source: IEnumerable_1<XElement | undefined>): IEnumerable_1<XElement>;
+    static Elements<T extends XContainer>(source: IEnumerable_1<T | undefined>, name: XName | undefined): IEnumerable_1<XElement>;
+    static Elements<T extends XContainer>(source: IEnumerable_1<T | undefined>): IEnumerable_1<XElement>;
     static InDocumentOrder<T extends XNode>(source: IEnumerable_1<T>): IEnumerable_1<T>;
-    static Nodes<T extends XContainer>(source: IEnumerable_1<T>): IEnumerable_1<XNode>;
-    static Remove<T extends XNode>(source: IEnumerable_1<T>): void;
-    static Remove(source: IEnumerable_1<XAttribute>): void;
+    static Nodes<T extends XContainer>(source: IEnumerable_1<T | undefined>): IEnumerable_1<XNode>;
+    static Remove<T extends XNode>(source: IEnumerable_1<T | undefined>): void;
+    static Remove(source: IEnumerable_1<XAttribute | undefined>): void;
 }
 
 

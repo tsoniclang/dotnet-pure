@@ -10,12 +10,12 @@ import * as System_Internal from "../../System/internal/index.js";
 import type { Boolean as ClrBoolean, Int32, MarshalByRefObject, Object as ClrObject, String as ClrString, Type } from "../../System/internal/index.js";
 
 export interface ObjectHandle$instance extends MarshalByRefObject {
-    Unwrap(): unknown;
+    Unwrap(): unknown | undefined;
 }
 
 
 export const ObjectHandle: {
-    new(o: unknown): ObjectHandle;
+    new(o: unknown | undefined): ObjectHandle;
 };
 
 

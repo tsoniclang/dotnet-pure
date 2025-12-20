@@ -58,47 +58,47 @@ export enum ViewTechnology {
 }
 
 
-export type ActiveDesignerEventHandler = (sender: unknown, e: ActiveDesignerEventArgs) => void;
+export type ActiveDesignerEventHandler = (sender: unknown | undefined, e: ActiveDesignerEventArgs) => void;
 
 
-export type ComponentChangedEventHandler = (sender: unknown, e: ComponentChangedEventArgs) => void;
+export type ComponentChangedEventHandler = (sender: unknown | undefined, e: ComponentChangedEventArgs) => void;
 
 
-export type ComponentChangingEventHandler = (sender: unknown, e: ComponentChangingEventArgs) => void;
+export type ComponentChangingEventHandler = (sender: unknown | undefined, e: ComponentChangingEventArgs) => void;
 
 
-export type ComponentEventHandler = (sender: unknown, e: ComponentEventArgs) => void;
+export type ComponentEventHandler = (sender: unknown | undefined, e: ComponentEventArgs) => void;
 
 
-export type ComponentRenameEventHandler = (sender: unknown, e: ComponentRenameEventArgs) => void;
+export type ComponentRenameEventHandler = (sender: unknown | undefined, e: ComponentRenameEventArgs) => void;
 
 
-export type DesignerEventHandler = (sender: unknown, e: DesignerEventArgs) => void;
+export type DesignerEventHandler = (sender: unknown | undefined, e: DesignerEventArgs) => void;
 
 
-export type DesignerTransactionCloseEventHandler = (sender: unknown, e: DesignerTransactionCloseEventArgs) => void;
+export type DesignerTransactionCloseEventHandler = (sender: unknown | undefined, e: DesignerTransactionCloseEventArgs) => void;
 
 
-export type ServiceCreatorCallback = (container: IServiceContainer, serviceType: Type) => unknown;
+export type ServiceCreatorCallback = (container: IServiceContainer, serviceType: Type) => unknown | undefined;
 
 
 export interface IComponentChangeService$instance {
     OnComponentChanged(component: unknown, member: MemberDescriptor, oldValue: unknown, newValue: unknown): void;
-    OnComponentChanging(component: unknown, member: MemberDescriptor): void;
+    OnComponentChanging(component: unknown, member: MemberDescriptor | undefined): void;
 }
 
 
 export type IComponentChangeService = IComponentChangeService$instance;
 
 export interface IComponentDiscoveryService$instance {
-    GetComponentTypes(designerHost: IDesignerHost, baseType: Type): ICollection;
+    GetComponentTypes(designerHost: IDesignerHost | undefined, baseType: Type | undefined): ICollection;
 }
 
 
 export type IComponentDiscoveryService = IComponentDiscoveryService$instance;
 
 export interface IComponentInitializer$instance {
-    InitializeExistingComponent(defaultValues: IDictionary): void;
+    InitializeExistingComponent(defaultValues: IDictionary | undefined): void;
 }
 
 
@@ -106,7 +106,7 @@ export type IComponentInitializer = IComponentInitializer$instance;
 
 export interface IDesigner$instance extends IDisposable {
     readonly Component: IComponent;
-    readonly Verbs: DesignerVerbCollection;
+    readonly Verbs: DesignerVerbCollection | undefined;
     DoDefaultAction(): void;
     Initialize(component: IComponent): void;
     Dispose(): void;
@@ -118,7 +118,7 @@ export interface IDesigner$instance extends System_Internal.IDisposable$instance
 export type IDesigner = IDesigner$instance;
 
 export interface IDesignerEventService$instance {
-    readonly ActiveDesigner: IDesignerHost;
+    readonly ActiveDesigner: IDesignerHost | undefined;
     readonly Designers: DesignerCollection;
 }
 
@@ -149,9 +149,9 @@ export interface IDesignerHost$instance extends IServiceContainer, IServiceProvi
     CreateTransaction(): DesignerTransaction;
     CreateTransaction(description: string): DesignerTransaction;
     DestroyComponent(component: IComponent): void;
-    GetDesigner(component: IComponent): IDesigner;
-    GetService(serviceType: Type): unknown;
-    GetType(typeName: string): Type;
+    GetDesigner(component: IComponent): IDesigner | undefined;
+    GetService(serviceType: Type): unknown | undefined;
+    GetType(typeName: string): Type | undefined;
     RemoveService(serviceType: Type, promote: boolean): void;
     RemoveService(serviceType: Type): void;
 }
@@ -167,7 +167,7 @@ export interface IDesignerHostTransactionState$instance {
 export type IDesignerHostTransactionState = IDesignerHostTransactionState$instance;
 
 export interface IDesignerOptionService$instance {
-    GetOptionValue(pageName: string, valueName: string): unknown;
+    GetOptionValue(pageName: string, valueName: string): unknown | undefined;
     SetOptionValue(pageName: string, valueName: string, value: unknown): void;
 }
 
@@ -176,7 +176,7 @@ export type IDesignerOptionService = IDesignerOptionService$instance;
 
 export interface IDictionaryService$instance {
     GetKey(value: unknown): unknown;
-    SetValue(key: unknown, value: unknown): void;
+    SetValue(key: unknown, value: unknown | undefined): void;
 }
 
 
@@ -185,7 +185,7 @@ export type IDictionaryService = IDictionaryService$instance;
 export interface IEventBindingService$instance {
     CreateUniqueMethodName(component: IComponent, e: EventDescriptor): string;
     GetCompatibleMethods(e: EventDescriptor): ICollection;
-    GetEvent(property: PropertyDescriptor): EventDescriptor;
+    GetEvent(property: PropertyDescriptor): EventDescriptor | undefined;
     GetEventProperties(events: EventDescriptorCollection): PropertyDescriptorCollection;
     GetEventProperty(e: EventDescriptor): PropertyDescriptor;
     ShowCode(): boolean;
@@ -234,7 +234,7 @@ export interface IMenuCommandService$instance {
     readonly Verbs: DesignerVerbCollection;
     AddCommand(command: MenuCommand): void;
     AddVerb(verb: DesignerVerb): void;
-    FindCommand(commandID: CommandID): MenuCommand;
+    FindCommand(commandID: CommandID): MenuCommand | undefined;
     GlobalInvoke(commandID: CommandID): boolean;
     ShowContextMenu(menuID: CommandID, x: int, y: int): void;
 }
@@ -243,9 +243,9 @@ export interface IMenuCommandService$instance {
 export type IMenuCommandService = IMenuCommandService$instance;
 
 export interface IReferenceService$instance {
-    GetComponent(reference: unknown): IComponent;
-    GetName(reference: unknown): string;
-    GetReference(name: string): unknown;
+    GetComponent(reference: unknown): IComponent | undefined;
+    GetName(reference: unknown): string | undefined;
+    GetReference(name: string): unknown | undefined;
     GetReferences(): unknown[];
     GetReferences(baseType: Type): unknown[];
 }
@@ -254,7 +254,7 @@ export interface IReferenceService$instance {
 export type IReferenceService = IReferenceService$instance;
 
 export interface IResourceService$instance {
-    GetResourceReader(info: CultureInfo): IResourceReader;
+    GetResourceReader(info: CultureInfo): IResourceReader | undefined;
     GetResourceWriter(info: CultureInfo): IResourceWriter;
 }
 
@@ -264,7 +264,7 @@ export type IResourceService = IResourceService$instance;
 export interface IRootDesigner$instance extends IDesigner, IDisposable {
     readonly SupportedTechnologies: ViewTechnology[];
     readonly Component: IComponent;
-    readonly Verbs: DesignerVerbCollection;
+    readonly Verbs: DesignerVerbCollection | undefined;
     DoDefaultAction(): void;
     GetView(technology: ViewTechnology): unknown;
     Initialize(component: IComponent): void;
@@ -277,7 +277,7 @@ export interface IRootDesigner$instance extends IDesigner$instance {}
 export type IRootDesigner = IRootDesigner$instance;
 
 export interface ISelectionService$instance {
-    readonly PrimarySelection: unknown;
+    readonly PrimarySelection: unknown | undefined;
     readonly SelectionCount: int;
     GetComponentSelected(component: unknown): boolean;
     GetSelectedComponents(): ICollection;
@@ -293,7 +293,7 @@ export interface IServiceContainer$instance extends IServiceProvider {
     AddService(serviceType: Type, callback: ServiceCreatorCallback): void;
     AddService(serviceType: Type, serviceInstance: unknown, promote: boolean): void;
     AddService(serviceType: Type, serviceInstance: unknown): void;
-    GetService(serviceType: Type): unknown;
+    GetService(serviceType: Type): unknown | undefined;
     RemoveService(serviceType: Type, promote: boolean): void;
     RemoveService(serviceType: Type): void;
 }
@@ -307,7 +307,7 @@ export interface ITreeDesigner$instance extends IDesigner, IDisposable {
     readonly Children: ICollection;
     readonly Parent: IDesigner;
     readonly Component: IComponent;
-    readonly Verbs: DesignerVerbCollection;
+    readonly Verbs: DesignerVerbCollection | undefined;
     DoDefaultAction(): void;
     Initialize(component: IComponent): void;
     Dispose(): void;
@@ -326,19 +326,19 @@ export interface ITypeDescriptorFilterService$instance {
 export type ITypeDescriptorFilterService = ITypeDescriptorFilterService$instance;
 
 export interface ITypeDiscoveryService$instance {
-    GetTypes(baseType: Type, excludeGlobalTypes: boolean): ICollection;
+    GetTypes(baseType: Type | undefined, excludeGlobalTypes: boolean): ICollection;
 }
 
 
 export type ITypeDiscoveryService = ITypeDiscoveryService$instance;
 
 export interface ITypeResolutionService$instance {
-    GetAssembly(name: AssemblyName, throwOnError: boolean): Assembly;
-    GetAssembly(name: AssemblyName): Assembly;
-    GetPathOfAssembly(name: AssemblyName): string;
-    GetType(name: string, throwOnError: boolean, ignoreCase: boolean): Type;
-    GetType(name: string, throwOnError: boolean): Type;
-    GetType(name: string): Type;
+    GetAssembly(name: AssemblyName, throwOnError: boolean): Assembly | undefined;
+    GetAssembly(name: AssemblyName): Assembly | undefined;
+    GetPathOfAssembly(name: AssemblyName): string | undefined;
+    GetType(name: string, throwOnError: boolean, ignoreCase: boolean): Type | undefined;
+    GetType(name: string, throwOnError: boolean): Type | undefined;
+    GetType(name: string): Type | undefined;
     ReferenceAssembly(name: AssemblyName): void;
 }
 
@@ -346,13 +346,13 @@ export interface ITypeResolutionService$instance {
 export type ITypeResolutionService = ITypeResolutionService$instance;
 
 export interface ActiveDesignerEventArgs$instance extends EventArgs {
-    readonly NewDesigner: IDesignerHost;
-    readonly OldDesigner: IDesignerHost;
+    readonly NewDesigner: IDesignerHost | undefined;
+    readonly OldDesigner: IDesignerHost | undefined;
 }
 
 
 export const ActiveDesignerEventArgs: {
-    new(oldDesigner: IDesignerHost, newDesigner: IDesignerHost): ActiveDesignerEventArgs;
+    new(oldDesigner: IDesignerHost | undefined, newDesigner: IDesignerHost | undefined): ActiveDesignerEventArgs;
 };
 
 
@@ -365,9 +365,9 @@ export interface CheckoutException$instance extends ExternalException {
 
 export const CheckoutException: {
     new(): CheckoutException;
-    new(message: string): CheckoutException;
-    new(message: string, errorCode: int): CheckoutException;
-    new(message: string, innerException: Exception): CheckoutException;
+    new(message: string | undefined): CheckoutException;
+    new(message: string | undefined, errorCode: int): CheckoutException;
+    new(message: string | undefined, innerException: Exception | undefined): CheckoutException;
     readonly Canceled: CheckoutException;
 };
 
@@ -384,7 +384,7 @@ export interface CommandID$instance {
     readonly ID: int;
     Equals(obj: unknown): boolean;
     GetHashCode(): int;
-    ToString(): string;
+    ToString(): string | undefined;
 }
 
 
@@ -396,54 +396,54 @@ export const CommandID: {
 export type CommandID = CommandID$instance;
 
 export interface ComponentChangedEventArgs$instance extends EventArgs {
-    readonly Component: unknown;
+    readonly Component: unknown | undefined;
     readonly Member: MemberDescriptor;
-    readonly NewValue: unknown;
-    readonly OldValue: unknown;
+    readonly NewValue: unknown | undefined;
+    readonly OldValue: unknown | undefined;
 }
 
 
 export const ComponentChangedEventArgs: {
-    new(component: unknown, member: MemberDescriptor, oldValue: unknown, newValue: unknown): ComponentChangedEventArgs;
+    new(component: unknown | undefined, member: MemberDescriptor | undefined, oldValue: unknown | undefined, newValue: unknown | undefined): ComponentChangedEventArgs;
 };
 
 
 export type ComponentChangedEventArgs = ComponentChangedEventArgs$instance;
 
 export interface ComponentChangingEventArgs$instance extends EventArgs {
-    readonly Component: unknown;
+    readonly Component: unknown | undefined;
     readonly Member: MemberDescriptor;
 }
 
 
 export const ComponentChangingEventArgs: {
-    new(component: unknown, member: MemberDescriptor): ComponentChangingEventArgs;
+    new(component: unknown | undefined, member: MemberDescriptor | undefined): ComponentChangingEventArgs;
 };
 
 
 export type ComponentChangingEventArgs = ComponentChangingEventArgs$instance;
 
 export interface ComponentEventArgs$instance extends EventArgs {
-    readonly Component: IComponent;
+    readonly Component: IComponent | undefined;
 }
 
 
 export const ComponentEventArgs: {
-    new(component: IComponent): ComponentEventArgs;
+    new(component: IComponent | undefined): ComponentEventArgs;
 };
 
 
 export type ComponentEventArgs = ComponentEventArgs$instance;
 
 export interface ComponentRenameEventArgs$instance extends EventArgs {
-    readonly Component: unknown;
-    readonly NewName: string;
-    readonly OldName: string;
+    readonly Component: unknown | undefined;
+    readonly NewName: string | undefined;
+    readonly OldName: string | undefined;
 }
 
 
 export const ComponentRenameEventArgs: {
-    new(component: unknown, oldName: string, newName: string): ComponentRenameEventArgs;
+    new(component: unknown | undefined, oldName: string | undefined, newName: string | undefined): ComponentRenameEventArgs;
 };
 
 
@@ -457,7 +457,7 @@ export interface DesignerCollection$instance {
 
 
 export const DesignerCollection: {
-    new(designers: IDesignerHost[]): DesignerCollection;
+    new(designers: IDesignerHost[] | undefined): DesignerCollection;
     new(designers: IList): DesignerCollection;
 };
 
@@ -471,12 +471,12 @@ export type DesignerCollection = DesignerCollection$instance & __DesignerCollect
 
 
 export interface DesignerEventArgs$instance extends EventArgs {
-    readonly Designer: IDesignerHost;
+    readonly Designer: IDesignerHost | undefined;
 }
 
 
 export const DesignerEventArgs: {
-    new(host: IDesignerHost): DesignerEventArgs;
+    new(host: IDesignerHost | undefined): DesignerEventArgs;
 };
 
 
@@ -581,23 +581,23 @@ export type DesignerVerb = DesignerVerb$instance;
 
 export interface DesignerVerbCollection$instance extends CollectionBase {
     Item: DesignerVerb;
-    Add(value: unknown): int;
-    AddRange(value: DesignerVerb[]): void;
-    AddRange(value: DesignerVerbCollection): void;
+    Add(value: unknown | undefined): int;
+    AddRange(value: (DesignerVerb | undefined)[]): void;
+    AddRange(value: DesignerVerbCollection | undefined): void;
     Clear(): void;
-    Contains(value: unknown): boolean;
+    Contains(value: unknown | undefined): boolean;
     CopyTo(array: ClrArray, index: int): void;
     GetEnumerator(): IEnumerator;
-    IndexOf(value: DesignerVerb): int;
-    Insert(index: int, value: unknown): void;
-    Remove(value: unknown): void;
+    IndexOf(value: DesignerVerb | undefined): int;
+    Insert(index: int, value: unknown | undefined): void;
+    Remove(value: unknown | undefined): void;
     RemoveAt(index: int): void;
 }
 
 
 export const DesignerVerbCollection: {
     new(): DesignerVerbCollection;
-    new(value: DesignerVerb[]): DesignerVerbCollection;
+    new(value: (DesignerVerb | undefined)[] | undefined): DesignerVerbCollection;
 };
 
 
@@ -613,7 +613,7 @@ export type DesignerVerbCollection = DesignerVerbCollection$instance & __Designe
 export interface DesigntimeLicenseContext$instance extends LicenseContext {
     readonly UsageMode: LicenseUsageMode;
     GetSavedLicenseKey(type_: Type, resourceAssembly: Assembly): string;
-    GetService(type_: Type): unknown;
+    GetService(type_: Type): unknown | undefined;
     SetSavedLicenseKey(type_: Type, key: string): void;
 }
 
@@ -643,7 +643,7 @@ export const DesigntimeLicenseContextSerializer: {
 export type DesigntimeLicenseContextSerializer = DesigntimeLicenseContextSerializer$instance;
 
 export interface HelpKeywordAttribute$instance extends Attribute {
-    readonly HelpKeyword: string;
+    readonly HelpKeyword: string | undefined;
     Equals(obj: unknown): boolean;
     GetHashCode(): int;
     IsDefaultAttribute(): boolean;
@@ -662,20 +662,20 @@ export type HelpKeywordAttribute = HelpKeywordAttribute$instance;
 
 export interface MenuCommand$instance {
     Checked: boolean;
-    readonly CommandID: CommandID;
+    readonly CommandID: CommandID | undefined;
     Enabled: boolean;
     readonly OleStatus: int;
     readonly Properties: IDictionary;
     Supported: boolean;
     Visible: boolean;
     Invoke(): void;
-    Invoke(arg: unknown): void;
-    ToString(): string;
+    Invoke(arg: unknown | undefined): void;
+    ToString(): string | undefined;
 }
 
 
 export const MenuCommand: {
-    new(handler: EventHandler, command: CommandID): MenuCommand;
+    new(handler: EventHandler | undefined, command: CommandID | undefined): MenuCommand;
 };
 
 
@@ -687,7 +687,7 @@ export interface ServiceContainer$instance {
     AddService(serviceType: Type, callback: ServiceCreatorCallback): void;
     AddService(serviceType: Type, callback: ServiceCreatorCallback, promote: boolean): void;
     Dispose(): void;
-    GetService(serviceType: Type): unknown;
+    GetService(serviceType: Type): unknown | undefined;
     RemoveService(serviceType: Type): void;
     RemoveService(serviceType: Type, promote: boolean): void;
 }
