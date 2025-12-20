@@ -63,7 +63,7 @@ export interface ICollection_1$instance<T> extends IEnumerable_1<T>, IEnumerable
 export type ICollection_1<T> = ICollection_1$instance<T>;
 
 export interface IComparer_1$instance<T> {
-    Compare(x: T, y: T): int;
+    Compare(x: T | undefined, y: T | undefined): int;
 }
 
 
@@ -111,8 +111,8 @@ export interface IEnumerator_1$instance<T> extends System_Internal.IDisposable$i
 export type IEnumerator_1<T> = IEnumerator_1$instance<T>;
 
 export interface IEqualityComparer_1$instance<T> {
-    Equals(x: T, y: T): boolean;
-    GetHashCode(obj: T): int;
+    Equals(x: T | undefined, y: T | undefined): boolean;
+    GetHashCode(obj: T | undefined): int;
 }
 
 
@@ -191,12 +191,12 @@ export interface ISet_1$instance<T> extends ICollection_1<T>, IEnumerable_1<T>, 
     Add(item: T): void;
     Add(item: T): boolean;
     Clear(): void;
+    Contains(item: T): boolean;
     CopyTo(array: T[], arrayIndex: int): void;
     GetEnumerator(): IEnumerator_1<T>;
     GetEnumerator(): IEnumerator;
     IsSubsetOf(other: IEnumerable_1<T>): boolean;
     UnionWith(other: IEnumerable_1<T>): void;
-    Contains(item: T): boolean;
     GetEnumerator2(): IEnumerator;
 }
 
@@ -666,12 +666,12 @@ export interface Dictionary_2$instance<TKey, TValue> {
 export const Dictionary_2: {
     new<TKey, TValue>(): Dictionary_2<TKey, TValue>;
     new<TKey, TValue>(capacity: int): Dictionary_2<TKey, TValue>;
-    new<TKey, TValue>(comparer: IEqualityComparer_1<TKey>): Dictionary_2<TKey, TValue>;
-    new<TKey, TValue>(capacity: int, comparer: IEqualityComparer_1<TKey>): Dictionary_2<TKey, TValue>;
+    new<TKey, TValue>(comparer: IEqualityComparer_1<TKey> | undefined): Dictionary_2<TKey, TValue>;
+    new<TKey, TValue>(capacity: int, comparer: IEqualityComparer_1<TKey> | undefined): Dictionary_2<TKey, TValue>;
     new<TKey, TValue>(dictionary: IDictionary_2<TKey, TValue>): Dictionary_2<TKey, TValue>;
-    new<TKey, TValue>(dictionary: IDictionary_2<TKey, TValue>, comparer: IEqualityComparer_1<TKey>): Dictionary_2<TKey, TValue>;
+    new<TKey, TValue>(dictionary: IDictionary_2<TKey, TValue>, comparer: IEqualityComparer_1<TKey> | undefined): Dictionary_2<TKey, TValue>;
     new<TKey, TValue>(collection: IEnumerable_1<KeyValuePair_2<TKey, TValue>>): Dictionary_2<TKey, TValue>;
-    new<TKey, TValue>(collection: IEnumerable_1<KeyValuePair_2<TKey, TValue>>, comparer: IEqualityComparer_1<TKey>): Dictionary_2<TKey, TValue>;
+    new<TKey, TValue>(collection: IEnumerable_1<KeyValuePair_2<TKey, TValue>>, comparer: IEqualityComparer_1<TKey> | undefined): Dictionary_2<TKey, TValue>;
 };
 
 
@@ -688,7 +688,7 @@ export interface __Dictionary_2$views<TKey, TValue> {
     As_ISerializable(): System_Runtime_Serialization_Internal.ISerializable$instance;
 }
 
-export interface Dictionary_2$instance<TKey, TValue> extends System_Runtime_Serialization_Internal.IDeserializationCallback$instance, System_Runtime_Serialization_Internal.ISerializable$instance {}
+export interface Dictionary_2$instance<TKey, TValue> extends System_Runtime_Serialization_Internal.ISerializable$instance {}
 
 export type Dictionary_2<TKey, TValue> = Dictionary_2$instance<TKey, TValue> & __Dictionary_2$views<TKey, TValue>;
 
@@ -741,7 +741,9 @@ export type Dictionary_2_ValueCollection<TKey, TValue> = Dictionary_2_ValueColle
 
 
 export interface EnumEqualityComparer_1$instance<T extends number> extends EqualityComparer_1$instance<T> {
+    Equals(x: T, y: T): boolean;
     Equals(x: unknown, y: unknown): boolean;
+    GetHashCode(obj: T): int;
     GetHashCode(obj: unknown): int;
     GetObjectData(info: SerializationInfo, context: StreamingContext): void;
 }
@@ -771,7 +773,7 @@ export interface EqualityComparer_1$instance<T> {
 
 export const EqualityComparer_1: {
     readonly Default: unknown;
-    Create<T>(equals: Func_3<T, T, System_Internal.Boolean>, getHashCode?: Func_2<T, System_Internal.Int32>): EqualityComparer_1<T>;
+    Create<T>(equals: Func_3<T | undefined, T | undefined, System_Internal.Boolean>, getHashCode?: Func_2<T, System_Internal.Int32> | undefined): EqualityComparer_1<T>;
 };
 
 
@@ -784,8 +786,9 @@ export type EqualityComparer_1<T> = EqualityComparer_1$instance<T> & __EqualityC
 
 
 export interface GenericComparer_1$instance<T extends (IComparable_1<T> | number | string | boolean)> extends Comparer_1$instance<T> {
-    Compare(x: unknown, y: unknown): int;
-    Equals(obj: unknown): boolean;
+    Compare(x: T | undefined, y: T | undefined): int;
+    Compare(x: unknown | undefined, y: unknown | undefined): int;
+    Equals(obj: unknown | undefined): boolean;
     GetHashCode(): int;
 }
 
@@ -804,7 +807,9 @@ export type GenericComparer_1<T extends (IComparable_1<T> | number | string | bo
 
 
 export interface GenericEqualityComparer_1$instance<T extends (IEquatable_1<T> | number | string | boolean)> extends EqualityComparer_1$instance<T> {
+    Equals(x: T | undefined, y: T | undefined): boolean;
     Equals(x: unknown, y: unknown): boolean;
+    GetHashCode(obj: T | undefined): int;
     GetHashCode(obj: unknown): int;
 }
 
@@ -858,11 +863,11 @@ export interface HashSet_1$instance<T> {
 
 export const HashSet_1: {
     new<T>(): HashSet_1<T>;
-    new<T>(comparer: IEqualityComparer_1<T>): HashSet_1<T>;
+    new<T>(comparer: IEqualityComparer_1<T> | undefined): HashSet_1<T>;
     new<T>(capacity: int): HashSet_1<T>;
     new<T>(collection: IEnumerable_1<T>): HashSet_1<T>;
-    new<T>(collection: IEnumerable_1<T>, comparer: IEqualityComparer_1<T>): HashSet_1<T>;
-    new<T>(capacity: int, comparer: IEqualityComparer_1<T>): HashSet_1<T>;
+    new<T>(collection: IEnumerable_1<T>, comparer: IEqualityComparer_1<T> | undefined): HashSet_1<T>;
+    new<T>(capacity: int, comparer: IEqualityComparer_1<T> | undefined): HashSet_1<T>;
     CreateSetComparer<T>(): IEqualityComparer_1<HashSet_1<T>>;
 };
 
@@ -878,7 +883,7 @@ export interface __HashSet_1$views<T> {
     As_ISerializable(): System_Runtime_Serialization_Internal.ISerializable$instance;
 }
 
-export interface HashSet_1$instance<T> extends System_Runtime_Serialization_Internal.IDeserializationCallback$instance, System_Runtime_Serialization_Internal.ISerializable$instance {}
+export interface HashSet_1$instance<T> extends System_Runtime_Serialization_Internal.ISerializable$instance {}
 
 export type HashSet_1<T> = HashSet_1$instance<T> & __HashSet_1$views<T>;
 
@@ -890,8 +895,8 @@ export interface KeyNotFoundException$instance extends SystemException {
 
 export const KeyNotFoundException: {
     new(): KeyNotFoundException;
-    new(message: string): KeyNotFoundException;
-    new(message: string, innerException: Exception): KeyNotFoundException;
+    new(message: string | undefined): KeyNotFoundException;
+    new(message: string | undefined, innerException: Exception | undefined): KeyNotFoundException;
 };
 
 
@@ -904,8 +909,8 @@ export type KeyNotFoundException = KeyNotFoundException$instance & __KeyNotFound
 
 export interface LinkedList_1$instance<T> {
     readonly Count: int;
-    readonly First: LinkedListNode_1<T>;
-    readonly Last: LinkedListNode_1<T>;
+    readonly First: LinkedListNode_1<T> | undefined;
+    readonly Last: LinkedListNode_1<T> | undefined;
     AddAfter(node: LinkedListNode_1<T>, value: T): LinkedListNode_1<T>;
     AddAfter(node: LinkedListNode_1<T>, newNode: LinkedListNode_1<T>): void;
     AddBefore(node: LinkedListNode_1<T>, value: T): LinkedListNode_1<T>;
@@ -917,8 +922,8 @@ export interface LinkedList_1$instance<T> {
     Clear(): void;
     Contains(value: T): boolean;
     CopyTo(array: T[], index: int): void;
-    Find(value: T): LinkedListNode_1<T>;
-    FindLast(value: T): LinkedListNode_1<T>;
+    Find(value: T): LinkedListNode_1<T> | undefined;
+    FindLast(value: T): LinkedListNode_1<T> | undefined;
     GetEnumerator(): LinkedList_1_Enumerator<T>;
     GetObjectData(info: SerializationInfo, context: StreamingContext): void;
     OnDeserialization(sender: unknown): void;
@@ -945,15 +950,15 @@ export interface __LinkedList_1$views<T> {
     As_ISerializable(): System_Runtime_Serialization_Internal.ISerializable$instance;
 }
 
-export interface LinkedList_1$instance<T> extends System_Runtime_Serialization_Internal.IDeserializationCallback$instance, System_Runtime_Serialization_Internal.ISerializable$instance {}
+export interface LinkedList_1$instance<T> extends System_Runtime_Serialization_Internal.ISerializable$instance {}
 
 export type LinkedList_1<T> = LinkedList_1$instance<T> & __LinkedList_1$views<T>;
 
 
 export interface LinkedListNode_1$instance<T> {
-    readonly List: LinkedList_1<T>;
-    readonly Next: LinkedListNode_1<T>;
-    readonly Previous: LinkedListNode_1<T>;
+    readonly List: LinkedList_1<T> | undefined;
+    readonly Next: LinkedListNode_1<T> | undefined;
+    readonly Previous: LinkedListNode_1<T> | undefined;
     Value: T;
     readonly ValueRef: T;
 }
@@ -973,9 +978,9 @@ export interface List_1$instance<T> {
     Add(item: T): void;
     AddRange(collection: IEnumerable_1<T>): void;
     AsReadOnly(): ReadOnlyCollection_1<T>;
-    BinarySearch(index: int, count: int, item: T, comparer: IComparer_1<T>): int;
+    BinarySearch(index: int, count: int, item: T, comparer: IComparer_1<T> | undefined): int;
     BinarySearch(item: T): int;
-    BinarySearch(item: T, comparer: IComparer_1<T>): int;
+    BinarySearch(item: T, comparer: IComparer_1<T> | undefined): int;
     Clear(): void;
     Contains(item: T): boolean;
     ConvertAll<TOutput>(converter: Converter_2<T, TOutput>): List_1<TOutput>;
@@ -984,12 +989,12 @@ export interface List_1$instance<T> {
     CopyTo(array: T[], arrayIndex: int): void;
     EnsureCapacity(capacity: int): int;
     Exists(match: Predicate_1<T>): boolean;
-    Find(match: Predicate_1<T>): T;
+    Find(match: Predicate_1<T>): T | undefined;
     FindAll(match: Predicate_1<T>): List_1<T>;
     FindIndex(match: Predicate_1<T>): int;
     FindIndex(startIndex: int, match: Predicate_1<T>): int;
     FindIndex(startIndex: int, count: int, match: Predicate_1<T>): int;
-    FindLast(match: Predicate_1<T>): T;
+    FindLast(match: Predicate_1<T>): T | undefined;
     FindLastIndex(match: Predicate_1<T>): int;
     FindLastIndex(startIndex: int, match: Predicate_1<T>): int;
     FindLastIndex(startIndex: int, count: int, match: Predicate_1<T>): int;
@@ -1012,8 +1017,8 @@ export interface List_1$instance<T> {
     Reverse(index: int, count: int): void;
     Slice(start: int, length: int): List_1<T>;
     Sort(): void;
-    Sort(comparer: IComparer_1<T>): void;
-    Sort(index: int, count: int, comparer: IComparer_1<T>): void;
+    Sort(comparer: IComparer_1<T> | undefined): void;
+    Sort(index: int, count: int, comparer: IComparer_1<T> | undefined): void;
     Sort(comparison: Comparison_1<T>): void;
     ToArray(): T[];
     TrimExcess(): void;
@@ -1044,13 +1049,13 @@ export type List_1<T> = List_1$instance<T> & __List_1$views<T>;
 export interface NonRandomizedStringEqualityComparer$instance {
     Equals(x: string, y: string): boolean;
     GetHashCode(obj: string): int;
-    GetUnderlyingEqualityComparer(): IEqualityComparer_1<System_Internal.String>;
+    GetUnderlyingEqualityComparer(): IEqualityComparer_1<string | undefined>;
 }
 
 
 export const NonRandomizedStringEqualityComparer: {
     new(): NonRandomizedStringEqualityComparer;
-    GetStringComparer(comparer: unknown): IEqualityComparer_1<System_Internal.String>;
+    GetStringComparer(comparer: unknown): IEqualityComparer_1<System_Internal.String> | undefined;
 };
 
 
@@ -1065,7 +1070,7 @@ export type NonRandomizedStringEqualityComparer = NonRandomizedStringEqualityCom
 
 
 export interface NullableComparer_1$instance<T extends unknown> extends Comparer_1$instance<Nullable_1<T>> {
-    Compare(x: unknown, y: unknown): int;
+    Compare(x: unknown | undefined, y: unknown | undefined): int;
     Equals(obj: unknown): boolean;
     GetHashCode(): int;
     GetObjectData(info: SerializationInfo, context: StreamingContext): void;
@@ -1112,8 +1117,9 @@ export type NullableEqualityComparer_1<T> = NullableEqualityComparer_1$instance<
 
 
 export interface ObjectComparer_1$instance<T> extends Comparer_1$instance<T> {
-    Compare(x: unknown, y: unknown): int;
-    Equals(obj: unknown): boolean;
+    Compare(x: T | undefined, y: T | undefined): int;
+    Compare(x: unknown | undefined, y: unknown | undefined): int;
+    Equals(obj: unknown | undefined): boolean;
     GetHashCode(): int;
 }
 
@@ -1132,7 +1138,9 @@ export type ObjectComparer_1<T> = ObjectComparer_1$instance<T> & __ObjectCompare
 
 
 export interface ObjectEqualityComparer_1$instance<T> extends EqualityComparer_1$instance<T> {
+    Equals(x: T | undefined, y: T | undefined): boolean;
     Equals(x: unknown, y: unknown): boolean;
+    GetHashCode(obj: T | undefined): int;
     GetHashCode(obj: unknown): int;
 }
 
@@ -1183,12 +1191,12 @@ export interface OrderedDictionary_2$instance<TKey, TValue> {
 export const OrderedDictionary_2: {
     new<TKey, TValue>(): OrderedDictionary_2<TKey, TValue>;
     new<TKey, TValue>(capacity: int): OrderedDictionary_2<TKey, TValue>;
-    new<TKey, TValue>(comparer: IEqualityComparer_1<TKey>): OrderedDictionary_2<TKey, TValue>;
-    new<TKey, TValue>(capacity: int, comparer: IEqualityComparer_1<TKey>): OrderedDictionary_2<TKey, TValue>;
+    new<TKey, TValue>(comparer: IEqualityComparer_1<TKey> | undefined): OrderedDictionary_2<TKey, TValue>;
+    new<TKey, TValue>(capacity: int, comparer: IEqualityComparer_1<TKey> | undefined): OrderedDictionary_2<TKey, TValue>;
     new<TKey, TValue>(dictionary: IDictionary_2<TKey, TValue>): OrderedDictionary_2<TKey, TValue>;
-    new<TKey, TValue>(dictionary: IDictionary_2<TKey, TValue>, comparer: IEqualityComparer_1<TKey>): OrderedDictionary_2<TKey, TValue>;
+    new<TKey, TValue>(dictionary: IDictionary_2<TKey, TValue>, comparer: IEqualityComparer_1<TKey> | undefined): OrderedDictionary_2<TKey, TValue>;
     new<TKey, TValue>(collection: IEnumerable_1<KeyValuePair_2<TKey, TValue>>): OrderedDictionary_2<TKey, TValue>;
-    new<TKey, TValue>(collection: IEnumerable_1<KeyValuePair_2<TKey, TValue>>, comparer: IEqualityComparer_1<TKey>): OrderedDictionary_2<TKey, TValue>;
+    new<TKey, TValue>(collection: IEnumerable_1<KeyValuePair_2<TKey, TValue>>, comparer: IEqualityComparer_1<TKey> | undefined): OrderedDictionary_2<TKey, TValue>;
 };
 
 
@@ -1273,7 +1281,7 @@ export interface PriorityQueue_2$instance<TElement, TPriority> {
     EnqueueRange(elements: IEnumerable_1<TElement>, priority: TPriority): void;
     EnsureCapacity(capacity: int): int;
     Peek(): TElement;
-    Remove(element: TElement, removedElement: TElement, priority: TPriority, equalityComparer?: IEqualityComparer_1<TElement>): boolean;
+    Remove(element: TElement, removedElement: TElement, priority: TPriority, equalityComparer?: IEqualityComparer_1<TElement> | undefined): boolean;
     TrimExcess(): void;
     TryDequeue(element: TElement, priority: TPriority): boolean;
     TryPeek(element: TElement, priority: TPriority): boolean;
@@ -1283,10 +1291,10 @@ export interface PriorityQueue_2$instance<TElement, TPriority> {
 export const PriorityQueue_2: {
     new<TElement, TPriority>(): PriorityQueue_2<TElement, TPriority>;
     new<TElement, TPriority>(initialCapacity: int): PriorityQueue_2<TElement, TPriority>;
-    new<TElement, TPriority>(comparer: IComparer_1<TPriority>): PriorityQueue_2<TElement, TPriority>;
-    new<TElement, TPriority>(initialCapacity: int, comparer: IComparer_1<TPriority>): PriorityQueue_2<TElement, TPriority>;
+    new<TElement, TPriority>(comparer: IComparer_1<TPriority> | undefined): PriorityQueue_2<TElement, TPriority>;
+    new<TElement, TPriority>(initialCapacity: int, comparer: IComparer_1<TPriority> | undefined): PriorityQueue_2<TElement, TPriority>;
     new<TElement, TPriority>(items: IEnumerable_1<ValueTuple_2<TElement, TPriority>>): PriorityQueue_2<TElement, TPriority>;
-    new<TElement, TPriority>(items: IEnumerable_1<ValueTuple_2<TElement, TPriority>>, comparer: IComparer_1<TPriority>): PriorityQueue_2<TElement, TPriority>;
+    new<TElement, TPriority>(items: IEnumerable_1<ValueTuple_2<TElement, TPriority>>, comparer: IComparer_1<TPriority> | undefined): PriorityQueue_2<TElement, TPriority>;
 };
 
 
@@ -1389,8 +1397,8 @@ export interface SortedDictionary_2$instance<TKey, TValue> {
 export const SortedDictionary_2: {
     new<TKey, TValue>(): SortedDictionary_2<TKey, TValue>;
     new<TKey, TValue>(dictionary: IDictionary_2<TKey, TValue>): SortedDictionary_2<TKey, TValue>;
-    new<TKey, TValue>(dictionary: IDictionary_2<TKey, TValue>, comparer: IComparer_1<TKey>): SortedDictionary_2<TKey, TValue>;
-    new<TKey, TValue>(comparer: IComparer_1<TKey>): SortedDictionary_2<TKey, TValue>;
+    new<TKey, TValue>(dictionary: IDictionary_2<TKey, TValue>, comparer: IComparer_1<TKey> | undefined): SortedDictionary_2<TKey, TValue>;
+    new<TKey, TValue>(comparer: IComparer_1<TKey> | undefined): SortedDictionary_2<TKey, TValue>;
 };
 
 
@@ -1433,14 +1441,14 @@ export type SortedDictionary_2_KeyCollection<TKey, TValue> = SortedDictionary_2_
 
 
 export interface SortedDictionary_2_KeyValuePairComparer$instance<TKey, TValue> extends Comparer_1$instance<KeyValuePair_2<TKey, TValue>> {
-    Compare(x: unknown, y: unknown): int;
-    Equals(obj: unknown): boolean;
+    Compare(x: unknown | undefined, y: unknown | undefined): int;
+    Equals(obj: unknown | undefined): boolean;
     GetHashCode(): int;
 }
 
 
 export const SortedDictionary_2_KeyValuePairComparer: {
-    new<TKey, TValue>(keyComparer: IComparer_1<TKey>): SortedDictionary_2_KeyValuePairComparer<TKey, TValue>;
+    new<TKey, TValue>(keyComparer: IComparer_1<TKey> | undefined): SortedDictionary_2_KeyValuePairComparer<TKey, TValue>;
 };
 
 
@@ -1502,10 +1510,10 @@ export interface SortedList_2$instance<TKey, TValue> {
 export const SortedList_2: {
     new<TKey, TValue>(): SortedList_2<TKey, TValue>;
     new<TKey, TValue>(capacity: int): SortedList_2<TKey, TValue>;
-    new<TKey, TValue>(comparer: IComparer_1<TKey>): SortedList_2<TKey, TValue>;
-    new<TKey, TValue>(capacity: int, comparer: IComparer_1<TKey>): SortedList_2<TKey, TValue>;
+    new<TKey, TValue>(comparer: IComparer_1<TKey> | undefined): SortedList_2<TKey, TValue>;
+    new<TKey, TValue>(capacity: int, comparer: IComparer_1<TKey> | undefined): SortedList_2<TKey, TValue>;
     new<TKey, TValue>(dictionary: IDictionary_2<TKey, TValue>): SortedList_2<TKey, TValue>;
-    new<TKey, TValue>(dictionary: IDictionary_2<TKey, TValue>, comparer: IComparer_1<TKey>): SortedList_2<TKey, TValue>;
+    new<TKey, TValue>(dictionary: IDictionary_2<TKey, TValue>, comparer: IComparer_1<TKey> | undefined): SortedList_2<TKey, TValue>;
 };
 
 
@@ -1590,8 +1598,8 @@ export type SortedList_2_ValueList<TKey, TValue> = SortedList_2_ValueList$instan
 export interface SortedSet_1$instance<T> {
     readonly Comparer: IComparer_1<T>;
     readonly Count: int;
-    readonly Max: T;
-    readonly Min: T;
+    readonly Max: T | undefined;
+    readonly Min: T | undefined;
     Add(item: T): boolean;
     Clear(): void;
     Contains(item: T): boolean;
@@ -1619,11 +1627,11 @@ export interface SortedSet_1$instance<T> {
 
 export const SortedSet_1: {
     new<T>(): SortedSet_1<T>;
-    new<T>(comparer: IComparer_1<T>): SortedSet_1<T>;
+    new<T>(comparer: IComparer_1<T> | undefined): SortedSet_1<T>;
     new<T>(collection: IEnumerable_1<T>): SortedSet_1<T>;
-    new<T>(collection: IEnumerable_1<T>, comparer: IComparer_1<T>): SortedSet_1<T>;
+    new<T>(collection: IEnumerable_1<T>, comparer: IComparer_1<T> | undefined): SortedSet_1<T>;
     CreateSetComparer<T>(): IEqualityComparer_1<SortedSet_1<T>>;
-    CreateSetComparer<T>(memberEqualityComparer: IEqualityComparer_1<T>): IEqualityComparer_1<SortedSet_1<T>>;
+    CreateSetComparer<T>(memberEqualityComparer: IEqualityComparer_1<T> | undefined): IEqualityComparer_1<SortedSet_1<T>>;
 };
 
 
@@ -1695,14 +1703,14 @@ export interface TreeSet_1$instance<T> extends SortedSet_1$instance<T> {
     GetObjectData(info: SerializationInfo, context: StreamingContext): void;
     IsProperSubsetOf(other: IEnumerable_1<T>): boolean;
     IsSubsetOf(other: IEnumerable_1<T>): boolean;
-    OnDeserialization(sender: unknown): void;
+    OnDeserialization(sender: unknown | undefined): void;
     UnionWith(other: IEnumerable_1<T>): void;
 }
 
 
 export const TreeSet_1: {
     new<T>(): TreeSet_1<T>;
-    new<T>(comparer: IComparer_1<T>): TreeSet_1<T>;
+    new<T>(comparer: IComparer_1<T> | undefined): TreeSet_1<T>;
 };
 
 

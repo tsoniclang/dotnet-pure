@@ -235,7 +235,7 @@ export interface Collection$instance {
     Contains(Key: string): boolean;
     get_Item(Index: int): unknown;
     get_Item(Key: string): unknown;
-    get_Item(Index: unknown): unknown;
+    get_Item(Index: unknown): unknown | undefined;
     GetEnumerator(): IEnumerator;
     Remove(Key: string): void;
     Remove(Index: int): void;

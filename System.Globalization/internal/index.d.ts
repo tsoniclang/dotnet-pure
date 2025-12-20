@@ -360,8 +360,8 @@ export const CultureInfo: {
     CurrentCulture: CultureInfo;
     CurrentUICulture: CultureInfo;
     readonly InstalledUICulture: CultureInfo;
-    DefaultThreadCurrentCulture: CultureInfo;
-    DefaultThreadCurrentUICulture: CultureInfo;
+    DefaultThreadCurrentCulture: CultureInfo | undefined;
+    DefaultThreadCurrentUICulture: CultureInfo | undefined;
     readonly InvariantCulture: CultureInfo;
     CreateSpecificCulture(name: string): CultureInfo;
     GetCultureInfo(culture: int): CultureInfo;
@@ -379,28 +379,28 @@ export interface __CultureInfo$views {
     As_IFormatProvider(): System_Internal.IFormatProvider$instance;
 }
 
-export interface CultureInfo$instance extends System_Internal.ICloneable$instance, System_Internal.IFormatProvider$instance {}
+export interface CultureInfo$instance extends System_Internal.ICloneable$instance {}
 
 export type CultureInfo = CultureInfo$instance & __CultureInfo$views;
 
 
 export interface CultureNotFoundException$instance extends ArgumentException {
     readonly InvalidCultureId: Nullable_1<System_Internal.Int32>;
-    readonly InvalidCultureName: string;
+    readonly InvalidCultureName: string | undefined;
     readonly Message: string;
-    GetObjectData(info: SerializationInfo, context: StreamingContext): void;
+    GetObjectData(info: SerializationInfo | undefined, context: StreamingContext): void;
 }
 
 
 export const CultureNotFoundException: {
     new(): CultureNotFoundException;
-    new(message: string): CultureNotFoundException;
-    new(paramName: string, message: string): CultureNotFoundException;
-    new(message: string, innerException: Exception): CultureNotFoundException;
-    new(paramName: string, invalidCultureName: string, message: string): CultureNotFoundException;
-    new(message: string, invalidCultureName: string, innerException: Exception): CultureNotFoundException;
-    new(message: string, invalidCultureId: int, innerException: Exception): CultureNotFoundException;
-    new(paramName: string, invalidCultureId: int, message: string): CultureNotFoundException;
+    new(message: string | undefined): CultureNotFoundException;
+    new(paramName: string | undefined, message: string | undefined): CultureNotFoundException;
+    new(message: string | undefined, innerException: Exception | undefined): CultureNotFoundException;
+    new(paramName: string | undefined, invalidCultureName: string | undefined, message: string | undefined): CultureNotFoundException;
+    new(message: string | undefined, invalidCultureName: string | undefined, innerException: Exception | undefined): CultureNotFoundException;
+    new(message: string | undefined, invalidCultureId: int, innerException: Exception | undefined): CultureNotFoundException;
+    new(paramName: string | undefined, invalidCultureId: int, message: string | undefined): CultureNotFoundException;
 };
 
 
@@ -458,7 +458,7 @@ export const DateTimeFormatInfo: {
     new(): DateTimeFormatInfo;
     readonly InvariantInfo: DateTimeFormatInfo;
     readonly CurrentInfo: DateTimeFormatInfo;
-    GetInstance(provider: IFormatProvider): DateTimeFormatInfo;
+    GetInstance(provider: IFormatProvider | undefined): DateTimeFormatInfo;
     ReadOnly(dtfi: DateTimeFormatInfo): DateTimeFormatInfo;
 };
 
@@ -468,7 +468,7 @@ export interface __DateTimeFormatInfo$views {
     As_IFormatProvider(): System_Internal.IFormatProvider$instance;
 }
 
-export interface DateTimeFormatInfo$instance extends System_Internal.ICloneable$instance, System_Internal.IFormatProvider$instance {}
+export interface DateTimeFormatInfo$instance extends System_Internal.ICloneable$instance {}
 
 export type DateTimeFormatInfo = DateTimeFormatInfo$instance & __DateTimeFormatInfo$views;
 
@@ -927,7 +927,7 @@ export const NumberFormatInfo: {
     new(): NumberFormatInfo;
     readonly InvariantInfo: NumberFormatInfo;
     readonly CurrentInfo: NumberFormatInfo;
-    GetInstance(formatProvider: IFormatProvider): NumberFormatInfo;
+    GetInstance(formatProvider: IFormatProvider | undefined): NumberFormatInfo;
     ReadOnly(nfi: NumberFormatInfo): NumberFormatInfo;
 };
 
@@ -937,7 +937,7 @@ export interface __NumberFormatInfo$views {
     As_IFormatProvider(): System_Internal.IFormatProvider$instance;
 }
 
-export interface NumberFormatInfo$instance extends System_Internal.ICloneable$instance, System_Internal.IFormatProvider$instance {}
+export interface NumberFormatInfo$instance extends System_Internal.ICloneable$instance {}
 
 export type NumberFormatInfo = NumberFormatInfo$instance & __NumberFormatInfo$views;
 
@@ -1039,8 +1039,8 @@ export type SortKey = SortKey$instance;
 export interface SortVersion$instance {
     readonly FullVersion: int;
     readonly SortId: Guid;
-    Equals(obj: unknown): boolean;
-    Equals(other: SortVersion): boolean;
+    Equals(obj: unknown | undefined): boolean;
+    Equals(other: SortVersion | undefined): boolean;
     GetHashCode(): int;
 }
 

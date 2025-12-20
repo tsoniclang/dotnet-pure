@@ -59,15 +59,15 @@ export interface JSMarshalerArgument$instance {
     ToJS(value: JSObject): void;
     ToJS(value: JSObject[]): void;
     ToJS(value: Task): void;
-    ToJS<T>(value: Task_1<T>, marshaler: JSMarshalerArgument_ArgumentToJSCallback_1<T>): void;
+    ToJS<T>(value: Task_1<T> | undefined, marshaler: JSMarshalerArgument_ArgumentToJSCallback_1<T>): void;
     ToJS(value: Action): void;
-    ToJS<T>(value: Action_1<T>, arg1Marshaler: JSMarshalerArgument_ArgumentToManagedCallback_1<T>): void;
-    ToJS<T1, T2>(value: Action_2<T1, T2>, arg1Marshaler: JSMarshalerArgument_ArgumentToManagedCallback_1<T1>, arg2Marshaler: JSMarshalerArgument_ArgumentToManagedCallback_1<T2>): void;
-    ToJS<T1, T2, T3>(value: Action_3<T1, T2, T3>, arg1Marshaler: JSMarshalerArgument_ArgumentToManagedCallback_1<T1>, arg2Marshaler: JSMarshalerArgument_ArgumentToManagedCallback_1<T2>, arg3Marshaler: JSMarshalerArgument_ArgumentToManagedCallback_1<T3>): void;
-    ToJS<TResult>(value: Func_1<TResult>, resMarshaler: JSMarshalerArgument_ArgumentToJSCallback_1<TResult>): void;
-    ToJS<T, TResult>(value: Func_2<T, TResult>, arg1Marshaler: JSMarshalerArgument_ArgumentToManagedCallback_1<T>, resMarshaler: JSMarshalerArgument_ArgumentToJSCallback_1<TResult>): void;
-    ToJS<T1, T2, TResult>(value: Func_3<T1, T2, TResult>, arg1Marshaler: JSMarshalerArgument_ArgumentToManagedCallback_1<T1>, arg2Marshaler: JSMarshalerArgument_ArgumentToManagedCallback_1<T2>, resMarshaler: JSMarshalerArgument_ArgumentToJSCallback_1<TResult>): void;
-    ToJS<T1, T2, T3, TResult>(value: Func_4<T1, T2, T3, TResult>, arg1Marshaler: JSMarshalerArgument_ArgumentToManagedCallback_1<T1>, arg2Marshaler: JSMarshalerArgument_ArgumentToManagedCallback_1<T2>, arg3Marshaler: JSMarshalerArgument_ArgumentToManagedCallback_1<T3>, resMarshaler: JSMarshalerArgument_ArgumentToJSCallback_1<TResult>): void;
+    ToJS<T>(value: Action_1<T> | undefined, arg1Marshaler: JSMarshalerArgument_ArgumentToManagedCallback_1<T>): void;
+    ToJS<T1, T2>(value: Action_2<T1, T2> | undefined, arg1Marshaler: JSMarshalerArgument_ArgumentToManagedCallback_1<T1>, arg2Marshaler: JSMarshalerArgument_ArgumentToManagedCallback_1<T2>): void;
+    ToJS<T1, T2, T3>(value: Action_3<T1, T2, T3> | undefined, arg1Marshaler: JSMarshalerArgument_ArgumentToManagedCallback_1<T1>, arg2Marshaler: JSMarshalerArgument_ArgumentToManagedCallback_1<T2>, arg3Marshaler: JSMarshalerArgument_ArgumentToManagedCallback_1<T3>): void;
+    ToJS<TResult>(value: Func_1<TResult> | undefined, resMarshaler: JSMarshalerArgument_ArgumentToJSCallback_1<TResult>): void;
+    ToJS<T, TResult>(value: Func_2<T, TResult> | undefined, arg1Marshaler: JSMarshalerArgument_ArgumentToManagedCallback_1<T>, resMarshaler: JSMarshalerArgument_ArgumentToJSCallback_1<TResult>): void;
+    ToJS<T1, T2, TResult>(value: Func_3<T1, T2, TResult> | undefined, arg1Marshaler: JSMarshalerArgument_ArgumentToManagedCallback_1<T1>, arg2Marshaler: JSMarshalerArgument_ArgumentToManagedCallback_1<T2>, resMarshaler: JSMarshalerArgument_ArgumentToJSCallback_1<TResult>): void;
+    ToJS<T1, T2, T3, TResult>(value: Func_4<T1, T2, T3, TResult> | undefined, arg1Marshaler: JSMarshalerArgument_ArgumentToManagedCallback_1<T1>, arg2Marshaler: JSMarshalerArgument_ArgumentToManagedCallback_1<T2>, arg3Marshaler: JSMarshalerArgument_ArgumentToManagedCallback_1<T3>, resMarshaler: JSMarshalerArgument_ArgumentToJSCallback_1<TResult>): void;
     ToJS(value: ptr<void>): void;
     ToJS(value: Span_1<System_Internal.Byte>): void;
     ToJS(value: ArraySegment_1<System_Internal.Byte>): void;
@@ -110,15 +110,15 @@ export interface JSMarshalerArgument$instance {
     ToManaged(value: JSObject): void;
     ToManaged(value: JSObject[]): void;
     ToManaged(value: Task): void;
-    ToManaged<T>(value: Task_1<T>, marshaler: JSMarshalerArgument_ArgumentToManagedCallback_1<T>): void;
+    ToManaged<T>(value: Task_1<T> | undefined, marshaler: JSMarshalerArgument_ArgumentToManagedCallback_1<T>): void;
     ToManaged(value: Action): void;
-    ToManaged<T>(value: Action_1<T>, arg1Marshaler: JSMarshalerArgument_ArgumentToJSCallback_1<T>): void;
-    ToManaged<T1, T2>(value: Action_2<T1, T2>, arg1Marshaler: JSMarshalerArgument_ArgumentToJSCallback_1<T1>, arg2Marshaler: JSMarshalerArgument_ArgumentToJSCallback_1<T2>): void;
-    ToManaged<T1, T2, T3>(value: Action_3<T1, T2, T3>, arg1Marshaler: JSMarshalerArgument_ArgumentToJSCallback_1<T1>, arg2Marshaler: JSMarshalerArgument_ArgumentToJSCallback_1<T2>, arg3Marshaler: JSMarshalerArgument_ArgumentToJSCallback_1<T3>): void;
-    ToManaged<TResult>(value: Func_1<TResult>, resMarshaler: JSMarshalerArgument_ArgumentToManagedCallback_1<TResult>): void;
-    ToManaged<T, TResult>(value: Func_2<T, TResult>, arg1Marshaler: JSMarshalerArgument_ArgumentToJSCallback_1<T>, resMarshaler: JSMarshalerArgument_ArgumentToManagedCallback_1<TResult>): void;
-    ToManaged<T1, T2, TResult>(value: Func_3<T1, T2, TResult>, arg1Marshaler: JSMarshalerArgument_ArgumentToJSCallback_1<T1>, arg2Marshaler: JSMarshalerArgument_ArgumentToJSCallback_1<T2>, resMarshaler: JSMarshalerArgument_ArgumentToManagedCallback_1<TResult>): void;
-    ToManaged<T1, T2, T3, TResult>(value: Func_4<T1, T2, T3, TResult>, arg1Marshaler: JSMarshalerArgument_ArgumentToJSCallback_1<T1>, arg2Marshaler: JSMarshalerArgument_ArgumentToJSCallback_1<T2>, arg3Marshaler: JSMarshalerArgument_ArgumentToJSCallback_1<T3>, resMarshaler: JSMarshalerArgument_ArgumentToManagedCallback_1<TResult>): void;
+    ToManaged<T>(value: Action_1<T> | undefined, arg1Marshaler: JSMarshalerArgument_ArgumentToJSCallback_1<T>): void;
+    ToManaged<T1, T2>(value: Action_2<T1, T2> | undefined, arg1Marshaler: JSMarshalerArgument_ArgumentToJSCallback_1<T1>, arg2Marshaler: JSMarshalerArgument_ArgumentToJSCallback_1<T2>): void;
+    ToManaged<T1, T2, T3>(value: Action_3<T1, T2, T3> | undefined, arg1Marshaler: JSMarshalerArgument_ArgumentToJSCallback_1<T1>, arg2Marshaler: JSMarshalerArgument_ArgumentToJSCallback_1<T2>, arg3Marshaler: JSMarshalerArgument_ArgumentToJSCallback_1<T3>): void;
+    ToManaged<TResult>(value: Func_1<TResult> | undefined, resMarshaler: JSMarshalerArgument_ArgumentToManagedCallback_1<TResult>): void;
+    ToManaged<T, TResult>(value: Func_2<T, TResult> | undefined, arg1Marshaler: JSMarshalerArgument_ArgumentToJSCallback_1<T>, resMarshaler: JSMarshalerArgument_ArgumentToManagedCallback_1<TResult>): void;
+    ToManaged<T1, T2, TResult>(value: Func_3<T1, T2, TResult> | undefined, arg1Marshaler: JSMarshalerArgument_ArgumentToJSCallback_1<T1>, arg2Marshaler: JSMarshalerArgument_ArgumentToJSCallback_1<T2>, resMarshaler: JSMarshalerArgument_ArgumentToManagedCallback_1<TResult>): void;
+    ToManaged<T1, T2, T3, TResult>(value: Func_4<T1, T2, T3, TResult> | undefined, arg1Marshaler: JSMarshalerArgument_ArgumentToJSCallback_1<T1>, arg2Marshaler: JSMarshalerArgument_ArgumentToJSCallback_1<T2>, arg3Marshaler: JSMarshalerArgument_ArgumentToJSCallback_1<T3>, resMarshaler: JSMarshalerArgument_ArgumentToManagedCallback_1<TResult>): void;
     ToManaged(value: ptr<void>): void;
     ToManaged(value: Span_1<System_Internal.Byte>): void;
     ToManaged(value: ArraySegment_1<System_Internal.Byte>): void;
@@ -139,7 +139,7 @@ export const JSMarshalerArgument: {
 export type JSMarshalerArgument = JSMarshalerArgument$instance;
 
 export interface JSException$instance extends Exception {
-    GetObjectData(info: SerializationInfo, context: StreamingContext): void;
+    GetObjectData(info: SerializationInfo | undefined, context: StreamingContext): void;
 }
 
 
@@ -252,19 +252,19 @@ export interface JSObject$instance {
     readonly IsDisposed: boolean;
     Dispose(): void;
     GetPropertyAsBoolean(propertyName: string): boolean;
-    GetPropertyAsByteArray(propertyName: string): byte[];
+    GetPropertyAsByteArray(propertyName: string): byte[] | undefined;
     GetPropertyAsDouble(propertyName: string): double;
     GetPropertyAsInt32(propertyName: string): int;
-    GetPropertyAsJSObject(propertyName: string): JSObject;
-    GetPropertyAsString(propertyName: string): string;
+    GetPropertyAsJSObject(propertyName: string): JSObject | undefined;
+    GetPropertyAsString(propertyName: string): string | undefined;
     GetTypeOfProperty(propertyName: string): string;
     HasProperty(propertyName: string): boolean;
     SetProperty(propertyName: string, value: boolean): void;
     SetProperty(propertyName: string, value: int): void;
     SetProperty(propertyName: string, value: double): void;
-    SetProperty(propertyName: string, value: string): void;
-    SetProperty(propertyName: string, value: JSObject): void;
-    SetProperty(propertyName: string, value: byte[]): void;
+    SetProperty(propertyName: string, value: string | undefined): void;
+    SetProperty(propertyName: string, value: JSObject | undefined): void;
+    SetProperty(propertyName: string, value: byte[] | undefined): void;
 }
 
 

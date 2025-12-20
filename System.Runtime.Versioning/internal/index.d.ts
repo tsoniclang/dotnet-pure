@@ -54,7 +54,7 @@ export interface FrameworkName$instance {
 
 export const FrameworkName: {
     new(identifier: string, version: Version): FrameworkName;
-    new(identifier: string, version: Version, profile: string): FrameworkName;
+    new(identifier: string, version: Version, profile: string | undefined): FrameworkName;
     new(frameworkName: string): FrameworkName;
 };
 
@@ -71,13 +71,13 @@ export type FrameworkName = FrameworkName$instance & __FrameworkName$views;
 
 export interface ObsoletedOSPlatformAttribute$instance extends OSPlatformAttribute {
     readonly Message: string;
-    Url: string;
+    Url: string | undefined;
 }
 
 
 export const ObsoletedOSPlatformAttribute: {
-    new(platformName: string): ObsoletedOSPlatformAttribute;
-    new(platformName: string, message: string): ObsoletedOSPlatformAttribute;
+    new(platformName: string | undefined): ObsoletedOSPlatformAttribute;
+    new(platformName: string | undefined, message: string | undefined): ObsoletedOSPlatformAttribute;
 };
 
 
@@ -96,13 +96,13 @@ export type OSPlatformAttribute = OSPlatformAttribute$instance;
 
 export interface RequiresPreviewFeaturesAttribute$instance extends Attribute {
     readonly Message: string;
-    Url: string;
+    Url: string | undefined;
 }
 
 
 export const RequiresPreviewFeaturesAttribute: {
     new(): RequiresPreviewFeaturesAttribute;
-    new(message: string): RequiresPreviewFeaturesAttribute;
+    new(message: string | undefined): RequiresPreviewFeaturesAttribute;
 };
 
 
@@ -157,7 +157,7 @@ export const SupportedOSPlatformGuardAttribute: {
 export type SupportedOSPlatformGuardAttribute = SupportedOSPlatformGuardAttribute$instance;
 
 export interface TargetFrameworkAttribute$instance extends Attribute {
-    FrameworkDisplayName: string;
+    FrameworkDisplayName: string | undefined;
     readonly FrameworkName: string;
 }
 
@@ -187,7 +187,7 @@ export interface UnsupportedOSPlatformAttribute$instance extends OSPlatformAttri
 
 export const UnsupportedOSPlatformAttribute: {
     new(platformName: string): UnsupportedOSPlatformAttribute;
-    new(platformName: string, message: string): UnsupportedOSPlatformAttribute;
+    new(platformName: string, message: string | undefined): UnsupportedOSPlatformAttribute;
 };
 
 
@@ -206,7 +206,7 @@ export type UnsupportedOSPlatformGuardAttribute = UnsupportedOSPlatformGuardAttr
 
 export abstract class VersioningHelper$instance {
     static MakeVersionSafeName(name: string, from_: ResourceScope, to: ResourceScope, type_: Type): string;
-    static MakeVersionSafeName(name: string, from_: ResourceScope, to: ResourceScope): string;
+    static MakeVersionSafeName(name: string | undefined, from_: ResourceScope, to: ResourceScope): string;
 }
 
 

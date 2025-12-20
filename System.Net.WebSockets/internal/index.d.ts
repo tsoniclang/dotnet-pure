@@ -95,17 +95,17 @@ export type ValueWebSocketReceiveResult = ValueWebSocketReceiveResult$instance;
 
 export interface ClientWebSocket$instance extends WebSocket$instance {
     readonly CloseStatus: Nullable_1<WebSocketCloseStatus>;
-    readonly CloseStatusDescription: string;
-    HttpResponseHeaders: IReadOnlyDictionary_2<System_Internal.String, IEnumerable_1<System_Internal.String>>;
+    readonly CloseStatusDescription: string | undefined;
+    HttpResponseHeaders: IReadOnlyDictionary_2<System_Internal.String, IEnumerable_1<System_Internal.String>> | undefined;
     readonly HttpStatusCode: HttpStatusCode;
     readonly Options: ClientWebSocketOptions;
     readonly State: WebSocketState;
-    readonly SubProtocol: string;
+    readonly SubProtocol: string | undefined;
     Abort(): void;
-    CloseAsync(closeStatus: WebSocketCloseStatus, statusDescription: string, cancellationToken: CancellationToken): Task;
-    CloseOutputAsync(closeStatus: WebSocketCloseStatus, statusDescription: string, cancellationToken: CancellationToken): Task;
+    CloseAsync(closeStatus: WebSocketCloseStatus, statusDescription: string | undefined, cancellationToken: CancellationToken): Task;
+    CloseOutputAsync(closeStatus: WebSocketCloseStatus, statusDescription: string | undefined, cancellationToken: CancellationToken): Task;
     ConnectAsync(uri: Uri, cancellationToken: CancellationToken): Task;
-    ConnectAsync(uri: Uri, invoker: HttpMessageInvoker, cancellationToken: CancellationToken): Task;
+    ConnectAsync(uri: Uri, invoker: HttpMessageInvoker | undefined, cancellationToken: CancellationToken): Task;
     Dispose(): void;
     ReceiveAsync(buffer: ArraySegment_1<System_Internal.Byte>, cancellationToken: CancellationToken): Task_1<WebSocketReceiveResult>;
     ReceiveAsync(buffer: Memory_1<System_Internal.Byte>, cancellationToken: CancellationToken): ValueTask_1<ValueWebSocketReceiveResult>;
@@ -135,18 +135,18 @@ export interface ClientWebSocketOptions$instance {
     CollectHttpResponseDetails: boolean;
     Cookies: CookieContainer;
     Credentials: ICredentials;
-    DangerousDeflateOptions: WebSocketDeflateOptions;
+    DangerousDeflateOptions: WebSocketDeflateOptions | undefined;
     HttpVersion: Version;
     HttpVersionPolicy: HttpVersionPolicy;
     KeepAliveInterval: TimeSpan;
     KeepAliveTimeout: TimeSpan;
-    Proxy: IWebProxy;
-    RemoteCertificateValidationCallback: RemoteCertificateValidationCallback;
+    Proxy: IWebProxy | undefined;
+    RemoteCertificateValidationCallback: RemoteCertificateValidationCallback | undefined;
     UseDefaultCredentials: boolean;
-    AddSubProtocol(subProtocol: string): void;
+    AddSubProtocol(subProtocol: string | undefined): void;
     SetBuffer(receiveBufferSize: int, sendBufferSize: int): void;
     SetBuffer(receiveBufferSize: int, sendBufferSize: int, buffer: ArraySegment_1<System_Internal.Byte>): void;
-    SetRequestHeader(headerName: string, headerValue: string): void;
+    SetRequestHeader(headerName: string | undefined, headerValue: string | undefined): void;
 }
 
 
@@ -182,12 +182,12 @@ export type HttpListenerWebSocketContext = HttpListenerWebSocketContext$instance
 
 export interface WebSocket$instance {
     readonly CloseStatus: Nullable_1<WebSocketCloseStatus>;
-    readonly CloseStatusDescription: string;
+    readonly CloseStatusDescription: string | undefined;
     readonly State: WebSocketState;
-    readonly SubProtocol: string;
+    readonly SubProtocol: string | undefined;
     Abort(): void;
-    CloseAsync(closeStatus: WebSocketCloseStatus, statusDescription: string, cancellationToken: CancellationToken): Task;
-    CloseOutputAsync(closeStatus: WebSocketCloseStatus, statusDescription: string, cancellationToken: CancellationToken): Task;
+    CloseAsync(closeStatus: WebSocketCloseStatus, statusDescription: string | undefined, cancellationToken: CancellationToken): Task;
+    CloseOutputAsync(closeStatus: WebSocketCloseStatus, statusDescription: string | undefined, cancellationToken: CancellationToken): Task;
     Dispose(): void;
     ReceiveAsync(buffer: ArraySegment_1<System_Internal.Byte>, cancellationToken: CancellationToken): Task_1<WebSocketReceiveResult>;
     ReceiveAsync(buffer: Memory_1<System_Internal.Byte>, cancellationToken: CancellationToken): ValueTask_1<ValueWebSocketReceiveResult>;
@@ -200,8 +200,8 @@ export interface WebSocket$instance {
 export const WebSocket: {
     readonly DefaultKeepAliveInterval: TimeSpan;
     CreateClientBuffer(receiveBufferSize: int, sendBufferSize: int): ArraySegment_1<System_Internal.Byte>;
-    CreateClientWebSocket(innerStream: Stream, subProtocol: string, receiveBufferSize: int, sendBufferSize: int, keepAliveInterval: TimeSpan, useZeroMaskingKey: boolean, internalBuffer: ArraySegment_1<System_Internal.Byte>): WebSocket;
-    CreateFromStream(stream: Stream, isServer: boolean, subProtocol: string, keepAliveInterval: TimeSpan): WebSocket;
+    CreateClientWebSocket(innerStream: Stream, subProtocol: string | undefined, receiveBufferSize: int, sendBufferSize: int, keepAliveInterval: TimeSpan, useZeroMaskingKey: boolean, internalBuffer: ArraySegment_1<System_Internal.Byte>): WebSocket;
+    CreateFromStream(stream: Stream, isServer: boolean, subProtocol: string | undefined, keepAliveInterval: TimeSpan): WebSocket;
     CreateFromStream(stream: Stream, options: WebSocketCreationOptions): WebSocket;
     CreateServerBuffer(receiveBufferSize: int): ArraySegment_1<System_Internal.Byte>;
     IsApplicationTargeting45(): boolean;
@@ -241,11 +241,11 @@ export const WebSocketContext: {
 export type WebSocketContext = WebSocketContext$instance;
 
 export interface WebSocketCreationOptions$instance {
-    DangerousDeflateOptions: WebSocketDeflateOptions;
+    DangerousDeflateOptions: WebSocketDeflateOptions | undefined;
     IsServer: boolean;
     KeepAliveInterval: TimeSpan;
     KeepAliveTimeout: TimeSpan;
-    SubProtocol: string;
+    SubProtocol: string | undefined;
 }
 
 
@@ -274,25 +274,25 @@ export type WebSocketDeflateOptions = WebSocketDeflateOptions$instance;
 export interface WebSocketException$instance extends Win32Exception {
     readonly ErrorCode: int;
     readonly WebSocketErrorCode: WebSocketError;
-    GetObjectData(info: SerializationInfo, context: StreamingContext): void;
+    GetObjectData(info: SerializationInfo | undefined, context: StreamingContext): void;
 }
 
 
 export const WebSocketException: {
     new(): WebSocketException;
     new(error: WebSocketError): WebSocketException;
-    new(error: WebSocketError, message: string): WebSocketException;
-    new(error: WebSocketError, innerException: Exception): WebSocketException;
-    new(error: WebSocketError, message: string, innerException: Exception): WebSocketException;
+    new(error: WebSocketError, message: string | undefined): WebSocketException;
+    new(error: WebSocketError, innerException: Exception | undefined): WebSocketException;
+    new(error: WebSocketError, message: string | undefined, innerException: Exception | undefined): WebSocketException;
     new(nativeError: int): WebSocketException;
-    new(nativeError: int, message: string): WebSocketException;
-    new(nativeError: int, innerException: Exception): WebSocketException;
+    new(nativeError: int, message: string | undefined): WebSocketException;
+    new(nativeError: int, innerException: Exception | undefined): WebSocketException;
     new(error: WebSocketError, nativeError: int): WebSocketException;
-    new(error: WebSocketError, nativeError: int, message: string): WebSocketException;
-    new(error: WebSocketError, nativeError: int, innerException: Exception): WebSocketException;
-    new(error: WebSocketError, nativeError: int, message: string, innerException: Exception): WebSocketException;
-    new(message: string): WebSocketException;
-    new(message: string, innerException: Exception): WebSocketException;
+    new(error: WebSocketError, nativeError: int, message: string | undefined): WebSocketException;
+    new(error: WebSocketError, nativeError: int, innerException: Exception | undefined): WebSocketException;
+    new(error: WebSocketError, nativeError: int, message: string | undefined, innerException: Exception | undefined): WebSocketException;
+    new(message: string | undefined): WebSocketException;
+    new(message: string | undefined, innerException: Exception | undefined): WebSocketException;
 };
 
 
@@ -305,7 +305,7 @@ export type WebSocketException = WebSocketException$instance & __WebSocketExcept
 
 export interface WebSocketReceiveResult$instance {
     readonly CloseStatus: Nullable_1<WebSocketCloseStatus>;
-    readonly CloseStatusDescription: string;
+    readonly CloseStatusDescription: string | undefined;
     readonly Count: int;
     readonly EndOfMessage: boolean;
     readonly MessageType: WebSocketMessageType;
@@ -314,7 +314,7 @@ export interface WebSocketReceiveResult$instance {
 
 export const WebSocketReceiveResult: {
     new(count: int, messageType: WebSocketMessageType, endOfMessage: boolean): WebSocketReceiveResult;
-    new(count: int, messageType: WebSocketMessageType, endOfMessage: boolean, closeStatus: Nullable_1<WebSocketCloseStatus>, closeStatusDescription: string): WebSocketReceiveResult;
+    new(count: int, messageType: WebSocketMessageType, endOfMessage: boolean, closeStatus: Nullable_1<WebSocketCloseStatus>, closeStatusDescription: string | undefined): WebSocketReceiveResult;
 };
 
 
@@ -327,8 +327,8 @@ export interface WebSocketStream$instance extends Stream {
     readonly Length: long;
     Position: long;
     readonly WebSocket: WebSocket;
-    BeginRead(buffer: byte[], offset: int, count: int, callback: AsyncCallback, state: unknown): IAsyncResult;
-    BeginWrite(buffer: byte[], offset: int, count: int, callback: AsyncCallback, state: unknown): IAsyncResult;
+    BeginRead(buffer: byte[], offset: int, count: int, callback: AsyncCallback | undefined, state: unknown | undefined): IAsyncResult;
+    BeginWrite(buffer: byte[], offset: int, count: int, callback: AsyncCallback | undefined, state: unknown | undefined): IAsyncResult;
     Dispose(): void;
     DisposeAsync(): ValueTask;
     EndRead(asyncResult: IAsyncResult): int;

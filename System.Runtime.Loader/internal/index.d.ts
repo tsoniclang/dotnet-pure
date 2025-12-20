@@ -32,8 +32,8 @@ export type AssemblyLoadContext_ContextualReflectionScope = AssemblyLoadContext_
 
 
 export interface AssemblyDependencyResolver$instance {
-    ResolveAssemblyToPath(assemblyName: AssemblyName): string;
-    ResolveUnmanagedDllToPath(unmanagedDllName: string): string;
+    ResolveAssemblyToPath(assemblyName: AssemblyName): string | undefined;
+    ResolveUnmanagedDllToPath(unmanagedDllName: string): string | undefined;
 }
 
 
@@ -51,9 +51,9 @@ export interface AssemblyLoadContext$instance {
     EnterContextualReflection(): AssemblyLoadContext_ContextualReflectionScope;
     LoadFromAssemblyName(assemblyName: AssemblyName): Assembly;
     LoadFromAssemblyPath(assemblyPath: string): Assembly;
-    LoadFromNativeImagePath(nativeImagePath: string, assemblyPath: string): Assembly;
+    LoadFromNativeImagePath(nativeImagePath: string, assemblyPath: string | undefined): Assembly;
     LoadFromStream(assembly: Stream): Assembly;
-    LoadFromStream(assembly: Stream, assemblySymbols: Stream): Assembly;
+    LoadFromStream(assembly: Stream, assemblySymbols: Stream | undefined): Assembly;
     SetProfileOptimizationRoot(directoryPath: string): void;
     StartProfileOptimization(profile: string): void;
     ToString(): string;
@@ -65,10 +65,10 @@ export const AssemblyLoadContext: {
     new(name: string, isCollectible: boolean): AssemblyLoadContext;
     readonly Default: AssemblyLoadContext;
     readonly All: IEnumerable_1<AssemblyLoadContext>;
-    readonly CurrentContextualReflectionContext: AssemblyLoadContext;
+    readonly CurrentContextualReflectionContext: AssemblyLoadContext | undefined;
     EnterContextualReflection(activating: Assembly): AssemblyLoadContext_ContextualReflectionScope;
     GetAssemblyName(assemblyPath: string): AssemblyName;
-    GetLoadContext(assembly: Assembly): AssemblyLoadContext;
+    GetLoadContext(assembly: Assembly): AssemblyLoadContext | undefined;
 };
 
 

@@ -157,7 +157,7 @@ export interface DiagnosticCounter$instance {
     DisplayUnits: string;
     readonly EventSource: EventSource;
     readonly Name: string;
-    AddMetadata(key: string, value: string): void;
+    AddMetadata(key: string, value: string | undefined): void;
     Dispose(): void;
 }
 
@@ -197,7 +197,7 @@ export const EventAttribute: {
 export type EventAttribute = EventAttribute$instance;
 
 export interface EventCommandEventArgs$instance extends EventArgs {
-    readonly Arguments: IDictionary_2<System_Internal.String, System_Internal.String>;
+    readonly Arguments: IDictionary_2<System_Internal.String, string | undefined>;
     readonly Command: EventCommand;
     DisableEvent(eventId: int): boolean;
     EnableEvent(eventId: int): boolean;
@@ -272,7 +272,7 @@ export interface EventListener$instance {
     Dispose(): void;
     EnableEvents(eventSource: EventSource, level: EventLevel): void;
     EnableEvents(eventSource: EventSource, level: EventLevel, matchAnyKeyword: EventKeywords): void;
-    EnableEvents(eventSource: EventSource, level: EventLevel, matchAnyKeyword: EventKeywords, arguments: IDictionary_2<System_Internal.String, System_Internal.String>): void;
+    EnableEvents(eventSource: EventSource, level: EventLevel, matchAnyKeyword: EventKeywords, arguments: IDictionary_2<System_Internal.String, string | undefined> | undefined): void;
 }
 
 
@@ -290,36 +290,36 @@ export type EventListener = EventListener$instance & __EventListener$views;
 
 
 export interface EventSource$instance {
-    readonly ConstructionException: Exception;
+    readonly ConstructionException: Exception | undefined;
     readonly Guid: Guid;
     readonly Name: string;
     readonly Settings: EventSourceSettings;
     Dispose(): void;
-    GetTrait(key: string): string;
+    GetTrait(key: string | undefined): string | undefined;
     IsEnabled(): boolean;
     IsEnabled(level: EventLevel, keywords: EventKeywords): boolean;
     IsEnabled(level: EventLevel, keywords: EventKeywords, channel: EventChannel): boolean;
-    ToString(): string;
-    Write(eventName: string): void;
-    Write(eventName: string, options: EventSourceOptions): void;
-    Write<T>(eventName: string, data: T): void;
-    Write<T>(eventName: string, options: EventSourceOptions, data: T): void;
-    Write<T>(eventName: string, options: EventSourceOptions, data: T): void;
-    Write<T>(eventName: string, options: EventSourceOptions, activityId: Guid, relatedActivityId: Guid, data: T): void;
+    ToString(): string | undefined;
+    Write(eventName: string | undefined): void;
+    Write(eventName: string | undefined, options: EventSourceOptions): void;
+    Write<T>(eventName: string | undefined, data: T): void;
+    Write<T>(eventName: string | undefined, options: EventSourceOptions, data: T): void;
+    Write<T>(eventName: string | undefined, options: EventSourceOptions, data: T): void;
+    Write<T>(eventName: string | undefined, options: EventSourceOptions, activityId: Guid, relatedActivityId: Guid, data: T): void;
 }
 
 
 export const EventSource: {
-    new(eventSourceName: string): EventSource;
-    new(eventSourceName: string, config: EventSourceSettings): EventSource;
-    new(eventSourceName: string, config: EventSourceSettings, traits: string[]): EventSource;
+    new(eventSourceName: string | undefined): EventSource;
+    new(eventSourceName: string | undefined, config: EventSourceSettings): EventSource;
+    new(eventSourceName: string | undefined, config: EventSourceSettings, traits: string[]): EventSource;
     readonly CurrentThreadActivityId: Guid;
-    GenerateManifest(eventSourceType: Type, assemblyPathToIncludeInManifest: string, flags: EventManifestOptions): string;
-    GenerateManifest(eventSourceType: Type, assemblyPathToIncludeInManifest: string): string;
-    GetGuid(eventSourceType: Type): Guid;
-    GetName(eventSourceType: Type): string;
-    GetSources(): IEnumerable_1<EventSource>;
-    SendCommand(eventSource: EventSource, command: EventCommand, commandArguments: IDictionary_2<System_Internal.String, System_Internal.String>): void;
+    GenerateManifest(eventSourceType: Type, assemblyPathToIncludeInManifest: string | undefined, flags: EventManifestOptions): string | undefined;
+    GenerateManifest(eventSourceType: Type, assemblyPathToIncludeInManifest: string | undefined): string | undefined;
+    GetGuid(eventSourceType: Type | undefined): Guid;
+    GetName(eventSourceType: Type | undefined): string | undefined;
+    GetSources(): IEnumerable_1<EventSource | undefined> | undefined;
+    SendCommand(eventSource: EventSource | undefined, command: EventCommand, commandArguments: IDictionary_2<System_Internal.String, string | undefined> | undefined): void;
     SetCurrentThreadActivityId(activityId: Guid, oldActivityThatWillContinue: Guid): void;
     SetCurrentThreadActivityId(activityId: Guid): void;
 };
@@ -335,8 +335,8 @@ export type EventSource = EventSource$instance & __EventSource$views;
 
 
 export interface EventSourceAttribute$instance extends Attribute {
-    Guid: string;
-    LocalizationResources: string;
+    Guid: string | undefined;
+    LocalizationResources: string | undefined;
     Name: string;
 }
 
@@ -361,14 +361,14 @@ export const EventSourceCreatedEventArgs: {
 export type EventSourceCreatedEventArgs = EventSourceCreatedEventArgs$instance;
 
 export interface EventSourceException$instance extends Exception {
-    GetObjectData(info: SerializationInfo, context: StreamingContext): void;
+    GetObjectData(info: SerializationInfo | undefined, context: StreamingContext): void;
 }
 
 
 export const EventSourceException: {
     new(): EventSourceException;
-    new(message: string): EventSourceException;
-    new(message: string, innerException: Exception): EventSourceException;
+    new(message: string | undefined): EventSourceException;
+    new(message: string | undefined, innerException: Exception | undefined): EventSourceException;
 };
 
 
@@ -390,8 +390,8 @@ export interface EventWrittenEventArgs$instance extends EventArgs {
     readonly Message: string;
     readonly Opcode: EventOpcode;
     readonly OSThreadId: long;
-    readonly Payload: ReadOnlyCollection_1<unknown>;
-    readonly PayloadNames: ReadOnlyCollection_1<System_Internal.String>;
+    readonly Payload: ReadOnlyCollection_1<unknown | undefined> | undefined;
+    readonly PayloadNames: ReadOnlyCollection_1<System_Internal.String> | undefined;
     readonly RelatedActivityId: Guid;
     readonly Tags: EventTags;
     readonly Task: EventTask;

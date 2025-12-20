@@ -49,7 +49,7 @@ export interface HttpRequestCachePolicy$instance extends RequestCachePolicy {
     readonly MaxAge: TimeSpan;
     readonly MaxStale: TimeSpan;
     readonly MinFresh: TimeSpan;
-    ToString(): string;
+    ToString(): string | undefined;
 }
 
 
@@ -67,7 +67,7 @@ export type HttpRequestCachePolicy = HttpRequestCachePolicy$instance;
 
 export interface RequestCachePolicy$instance {
     readonly Level: HttpRequestCacheLevel | RequestCacheLevel;
-    ToString(): string;
+    ToString(): string | undefined;
 }
 
 

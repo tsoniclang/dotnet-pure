@@ -4183,6 +4183,22 @@
           "arity": 0,
           "parameterCount": 1,
           "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.Reflection.Metadata:System.Reflection.Metadata.ISZArrayTypeProvider\u00601::GetSZArrayType(TType):TType",
+          "clrName": "GetSZArrayType",
+          "tsEmitName": "GetSZArrayType",
+          "normalizedSignature": "GetSZArrayType|(TType):TType|static=false",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": true,
+          "isVirtual": true,
+          "isOverride": false,
+          "isSealed": false,
+          "arity": 0,
+          "parameterCount": 1,
+          "isExtensionMethod": false
         }
       ],
       "properties": [],
@@ -4504,6 +4520,22 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 2,
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.Reflection.Metadata:System.Reflection.Metadata.IConstructedTypeProvider\u00601::GetByReferenceType(TType):TType",
+          "clrName": "GetByReferenceType",
+          "tsEmitName": "GetByReferenceType",
+          "normalizedSignature": "GetByReferenceType|(TType):TType|static=false",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": false,
+          "isAbstract": true,
+          "isVirtual": true,
+          "isOverride": false,
+          "isSealed": false,
+          "arity": 0,
+          "parameterCount": 1,
           "isExtensionMethod": false
         }
       ],

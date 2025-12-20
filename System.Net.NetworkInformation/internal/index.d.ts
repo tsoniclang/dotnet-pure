@@ -168,10 +168,10 @@ export enum TcpState {
 }
 
 
-export type NetworkAddressChangedEventHandler = (sender: unknown, e: EventArgs) => void;
+export type NetworkAddressChangedEventHandler = (sender: unknown | undefined, e: EventArgs) => void;
 
 
-export type NetworkAvailabilityChangedEventHandler = (sender: unknown, e: NetworkAvailabilityEventArgs) => void;
+export type NetworkAvailabilityChangedEventHandler = (sender: unknown | undefined, e: NetworkAvailabilityEventArgs) => void;
 
 
 export type PingCompletedEventHandler = (sender: unknown, e: PingCompletedEventArgs) => void;
@@ -580,7 +580,7 @@ export interface NetworkChange$instance {
 
 export const NetworkChange: {
     new(): NetworkChange;
-    RegisterNetworkChange(nc: NetworkChange): void;
+    RegisterNetworkChange(nc: NetworkChange | undefined): void;
 };
 
 
@@ -644,8 +644,8 @@ export const PhysicalAddress: {
     new(address: byte[]): PhysicalAddress;
     readonly None: PhysicalAddress;
     Parse(address: ReadOnlySpan_1<System_Internal.Char>): PhysicalAddress;
-    Parse(address: string): PhysicalAddress;
-    TryParse(address: ReadOnlySpan_1<System_Internal.Char>, value: PhysicalAddress): boolean;
+    Parse(address: string | undefined): PhysicalAddress;
+    TryParse(address: ReadOnlySpan_1<System_Internal.Char>, value: PhysicalAddress | undefined): boolean;
     TryParse(address: string, value: PhysicalAddress): boolean;
 };
 
@@ -660,18 +660,18 @@ export interface Ping$instance extends Component {
     Send(address: IPAddress, timeout: int): PingReply;
     Send(hostNameOrAddress: string, timeout: int, buffer: byte[]): PingReply;
     Send(address: IPAddress, timeout: int, buffer: byte[]): PingReply;
-    Send(hostNameOrAddress: string, timeout: int, buffer: byte[], options: PingOptions): PingReply;
-    Send(address: IPAddress, timeout: int, buffer: byte[], options: PingOptions): PingReply;
-    Send(address: IPAddress, timeout: TimeSpan, buffer?: byte[], options?: PingOptions): PingReply;
-    Send(hostNameOrAddress: string, timeout: TimeSpan, buffer?: byte[], options?: PingOptions): PingReply;
-    SendAsync(hostNameOrAddress: string, userToken: unknown): void;
-    SendAsync(hostNameOrAddress: string, timeout: int, userToken: unknown): void;
-    SendAsync(address: IPAddress, userToken: unknown): void;
-    SendAsync(address: IPAddress, timeout: int, userToken: unknown): void;
-    SendAsync(hostNameOrAddress: string, timeout: int, buffer: byte[], userToken: unknown): void;
-    SendAsync(address: IPAddress, timeout: int, buffer: byte[], userToken: unknown): void;
-    SendAsync(hostNameOrAddress: string, timeout: int, buffer: byte[], options: PingOptions, userToken: unknown): void;
-    SendAsync(address: IPAddress, timeout: int, buffer: byte[], options: PingOptions, userToken: unknown): void;
+    Send(hostNameOrAddress: string, timeout: int, buffer: byte[], options: PingOptions | undefined): PingReply;
+    Send(address: IPAddress, timeout: int, buffer: byte[], options: PingOptions | undefined): PingReply;
+    Send(address: IPAddress, timeout: TimeSpan, buffer?: byte[] | undefined, options?: PingOptions | undefined): PingReply;
+    Send(hostNameOrAddress: string, timeout: TimeSpan, buffer?: byte[] | undefined, options?: PingOptions | undefined): PingReply;
+    SendAsync(hostNameOrAddress: string, userToken: unknown | undefined): void;
+    SendAsync(hostNameOrAddress: string, timeout: int, userToken: unknown | undefined): void;
+    SendAsync(address: IPAddress, userToken: unknown | undefined): void;
+    SendAsync(address: IPAddress, timeout: int, userToken: unknown | undefined): void;
+    SendAsync(hostNameOrAddress: string, timeout: int, buffer: byte[], userToken: unknown | undefined): void;
+    SendAsync(address: IPAddress, timeout: int, buffer: byte[], userToken: unknown | undefined): void;
+    SendAsync(hostNameOrAddress: string, timeout: int, buffer: byte[], options: PingOptions | undefined, userToken: unknown | undefined): void;
+    SendAsync(address: IPAddress, timeout: int, buffer: byte[], options: PingOptions | undefined, userToken: unknown | undefined): void;
     SendAsyncCancel(): void;
     SendPingAsync(address: IPAddress): Task_1<PingReply>;
     SendPingAsync(hostNameOrAddress: string): Task_1<PingReply>;
@@ -679,10 +679,10 @@ export interface Ping$instance extends Component {
     SendPingAsync(hostNameOrAddress: string, timeout: int): Task_1<PingReply>;
     SendPingAsync(address: IPAddress, timeout: int, buffer: byte[]): Task_1<PingReply>;
     SendPingAsync(hostNameOrAddress: string, timeout: int, buffer: byte[]): Task_1<PingReply>;
-    SendPingAsync(address: IPAddress, timeout: int, buffer: byte[], options: PingOptions): Task_1<PingReply>;
-    SendPingAsync(address: IPAddress, timeout: TimeSpan, buffer?: byte[], options?: PingOptions, cancellationToken?: CancellationToken): Task_1<PingReply>;
-    SendPingAsync(hostNameOrAddress: string, timeout: int, buffer: byte[], options: PingOptions): Task_1<PingReply>;
-    SendPingAsync(hostNameOrAddress: string, timeout: TimeSpan, buffer?: byte[], options?: PingOptions, cancellationToken?: CancellationToken): Task_1<PingReply>;
+    SendPingAsync(address: IPAddress, timeout: int, buffer: byte[], options: PingOptions | undefined): Task_1<PingReply>;
+    SendPingAsync(address: IPAddress, timeout: TimeSpan, buffer?: byte[] | undefined, options?: PingOptions | undefined, cancellationToken?: CancellationToken): Task_1<PingReply>;
+    SendPingAsync(hostNameOrAddress: string, timeout: int, buffer: byte[], options: PingOptions | undefined): Task_1<PingReply>;
+    SendPingAsync(hostNameOrAddress: string, timeout: TimeSpan, buffer?: byte[] | undefined, options?: PingOptions | undefined, cancellationToken?: CancellationToken): Task_1<PingReply>;
 }
 
 
@@ -702,7 +702,7 @@ export type Ping = Ping$instance & __Ping$views;
 
 
 export interface PingCompletedEventArgs$instance extends AsyncCompletedEventArgs {
-    readonly Reply: PingReply;
+    readonly Reply: PingReply | undefined;
 }
 
 
@@ -719,8 +719,8 @@ export interface PingException$instance extends InvalidOperationException {
 
 
 export const PingException: {
-    new(message: string): PingException;
-    new(message: string, innerException: Exception): PingException;
+    new(message: string | undefined): PingException;
+    new(message: string | undefined, innerException: Exception | undefined): PingException;
 };
 
 

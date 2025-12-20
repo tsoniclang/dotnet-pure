@@ -221,7 +221,7 @@ export type IAdviseSink = IAdviseSink$instance;
 
 export interface IBindCtx$instance {
     EnumObjectParam(ppenum: IEnumString): void;
-    GetObjectParam(pszKey: string, ppunk: unknown): void;
+    GetObjectParam(pszKey: string, ppunk: unknown | undefined): void;
     GetRunningObjectTable(pprot: IRunningObjectTable): void;
     RegisterObjectBound(punk: unknown): void;
     RegisterObjectParam(pszKey: string, punk: unknown): void;
@@ -328,7 +328,7 @@ export type IEnumString = IEnumString$instance;
 
 export interface IEnumVARIANT$instance {
     Clone(): IEnumVARIANT;
-    Next(celt: int, rgVar: unknown[], pceltFetched: nint): int;
+    Next(celt: int, rgVar: (unknown | undefined)[], pceltFetched: nint): int;
     Reset(): int;
     Skip(celt: int): int;
 }
@@ -337,14 +337,14 @@ export interface IEnumVARIANT$instance {
 export type IEnumVARIANT = IEnumVARIANT$instance;
 
 export interface IMoniker$instance {
-    BindToObject(pbc: IBindCtx, pmkToLeft: IMoniker, riidResult: Guid, ppvResult: unknown): void;
-    CommonPrefixWith(pmkOther: IMoniker, ppmkPrefix: IMoniker): void;
-    ComposeWith(pmkRight: IMoniker, fOnlyIfNotGeneric: boolean, ppmkComposite: IMoniker): void;
+    BindToObject(pbc: IBindCtx, pmkToLeft: IMoniker | undefined, riidResult: Guid, ppvResult: unknown): void;
+    CommonPrefixWith(pmkOther: IMoniker, ppmkPrefix: IMoniker | undefined): void;
+    ComposeWith(pmkRight: IMoniker, fOnlyIfNotGeneric: boolean, ppmkComposite: IMoniker | undefined): void;
     Enum(fForward: boolean, ppenumMoniker: IEnumMoniker): void;
     GetClassID(pClassID: Guid): void;
-    GetDisplayName(pbc: IBindCtx, pmkToLeft: IMoniker, ppszDisplayName: string): void;
+    GetDisplayName(pbc: IBindCtx, pmkToLeft: IMoniker | undefined, ppszDisplayName: string): void;
     GetSizeMax(pcbSize: long): void;
-    GetTimeOfLastChange(pbc: IBindCtx, pmkToLeft: IMoniker, pFileTime: FILETIME): void;
+    GetTimeOfLastChange(pbc: IBindCtx, pmkToLeft: IMoniker | undefined, pFileTime: FILETIME): void;
     Hash(pdwHash: int): void;
     Inverse(ppmk: IMoniker): void;
     IsDirty(): int;
@@ -410,7 +410,7 @@ export type ITypeComp = ITypeComp$instance;
 
 export interface ITypeInfo$instance {
     AddressOfMember(memid: int, invKind: INVOKEKIND, ppv: nint): void;
-    CreateInstance(pUnkOuter: unknown, riid: Guid, ppvObj: unknown): void;
+    CreateInstance(pUnkOuter: unknown | undefined, riid: Guid, ppvObj: unknown): void;
     GetContainingTypeLib(ppTLB: ITypeLib, pIndex: int): void;
     GetDllEntry(memid: int, invKind: INVOKEKIND, pBstrDllName: nint, pBstrName: nint, pwOrdinal: nint): void;
     GetDocumentation(index: int, strName: string, strDocString: string, dwHelpContext: int, strHelpFile: string): void;
@@ -432,7 +432,7 @@ export type ITypeInfo = ITypeInfo$instance;
 
 export interface ITypeInfo2$instance extends ITypeInfo {
     AddressOfMember(memid: int, invKind: INVOKEKIND, ppv: nint): void;
-    CreateInstance(pUnkOuter: unknown, riid: Guid, ppvObj: unknown): void;
+    CreateInstance(pUnkOuter: unknown | undefined, riid: Guid, ppvObj: unknown): void;
     GetAllFuncCustData(index: int, pCustData: nint): void;
     GetAllParamCustData(indexFunc: int, indexParam: int, pCustData: nint): void;
     GetContainingTypeLib(ppTLB: ITypeLib, pIndex: int): void;
@@ -721,7 +721,7 @@ export type STATSTG = STATSTG$instance;
 export interface STGMEDIUM$instance {
     tymed: TYMED;
     unionmember: nint;
-    pUnkForRelease: unknown;
+    pUnkForRelease: unknown | undefined;
 }
 
 

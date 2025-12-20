@@ -256,8 +256,8 @@ export interface PipeStream$instance extends Stream {
     ReadMode: PipeTransmissionMode;
     readonly SafePipeHandle: SafePipeHandle;
     readonly TransmissionMode: PipeTransmissionMode;
-    BeginRead(buffer: byte[], offset: int, count: int, callback: AsyncCallback, state: unknown): IAsyncResult;
-    BeginWrite(buffer: byte[], offset: int, count: int, callback: AsyncCallback, state: unknown): IAsyncResult;
+    BeginRead(buffer: byte[], offset: int, count: int, callback: AsyncCallback | undefined, state: unknown | undefined): IAsyncResult;
+    BeginWrite(buffer: byte[], offset: int, count: int, callback: AsyncCallback | undefined, state: unknown | undefined): IAsyncResult;
     Dispose(): void;
     DisposeAsync(): ValueTask;
     EndRead(asyncResult: IAsyncResult): int;
@@ -301,14 +301,14 @@ export type PipeStream = PipeStream$instance & __PipeStream$views;
 
 
 export abstract class AnonymousPipeServerStreamAcl$instance {
-    static Create(direction: PipeDirection, inheritability: HandleInheritability, bufferSize: int, pipeSecurity: PipeSecurity): AnonymousPipeServerStream;
+    static Create(direction: PipeDirection, inheritability: HandleInheritability, bufferSize: int, pipeSecurity: PipeSecurity | undefined): AnonymousPipeServerStream;
 }
 
 
 export type AnonymousPipeServerStreamAcl = AnonymousPipeServerStreamAcl$instance;
 
 export abstract class NamedPipeServerStreamAcl$instance {
-    static Create(pipeName: string, direction: PipeDirection, maxNumberOfServerInstances: int, transmissionMode: PipeTransmissionMode, options: PipeOptions, inBufferSize: int, outBufferSize: int, pipeSecurity: PipeSecurity, inheritability?: HandleInheritability, additionalAccessRights?: PipeAccessRights): NamedPipeServerStream;
+    static Create(pipeName: string, direction: PipeDirection, maxNumberOfServerInstances: int, transmissionMode: PipeTransmissionMode, options: PipeOptions, inBufferSize: int, outBufferSize: int, pipeSecurity: PipeSecurity | undefined, inheritability?: HandleInheritability, additionalAccessRights?: PipeAccessRights): NamedPipeServerStream;
 }
 
 

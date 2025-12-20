@@ -350,21 +350,21 @@ export interface IColumnMappingCollection$instance extends IList, ICollection, I
     readonly SyncRoot: unknown;
     readonly IsSynchronized: boolean;
     Add(sourceColumnName: string, dataSetColumnName: string): IColumnMapping;
-    Add(value: unknown): int;
+    Add(value: unknown | undefined): int;
     Clear(): void;
     Contains(sourceColumnName: string): boolean;
-    Contains(value: unknown): boolean;
+    Contains(value: unknown | undefined): boolean;
     CopyTo(array: ClrArray, index: int): void;
     get_Item2(index: int): unknown;
     get_Item2(index: string): unknown;
     GetByDataSetColumn(dataSetColumnName: string): IColumnMapping;
     GetEnumerator(): IEnumerator;
     IndexOf(sourceColumnName: string): int;
-    Insert(index: int, value: unknown): void;
-    Remove(value: unknown): void;
+    Insert(index: int, value: unknown | undefined): void;
+    Remove(value: unknown | undefined): void;
     RemoveAt(sourceColumnName: string): void;
     RemoveAt(index: int): void;
-    set_Item2(index: int, value: unknown): void;
+    set_Item2(index: int, value: unknown | undefined): void;
     set_Item2(index: string, value: unknown): void;
 }
 
@@ -402,20 +402,20 @@ export interface IDataParameterCollection$instance extends IList, ICollection, I
     readonly Count: int;
     readonly SyncRoot: unknown;
     readonly IsSynchronized: boolean;
-    Add(value: unknown): int;
+    Add(value: unknown | undefined): int;
     Clear(): void;
     Contains(parameterName: string): boolean;
-    Contains(value: unknown): boolean;
+    Contains(value: unknown | undefined): boolean;
     CopyTo(array: ClrArray, index: int): void;
     get_Item2(index: int): unknown;
     get_Item2(parameterName: string): unknown;
     GetEnumerator(): IEnumerator;
     IndexOf(parameterName: string): int;
-    Insert(index: int, value: unknown): void;
-    Remove(value: unknown): void;
+    Insert(index: int, value: unknown | undefined): void;
+    Remove(value: unknown | undefined): void;
     RemoveAt(parameterName: string): void;
     RemoveAt(index: int): void;
-    set_Item2(index: int, value: unknown): void;
+    set_Item2(index: int, value: unknown | undefined): void;
     set_Item2(parameterName: string, value: unknown): void;
 }
 
@@ -490,7 +490,7 @@ export type IDataRecord = IDataRecord$instance;
 
 export interface IDbCommand$instance extends IDisposable {
     Connection: IDbConnection;
-    Transaction: IDbTransaction;
+    Transaction: IDbTransaction | undefined;
     CommandText: string;
     CommandTimeout: int;
     CommandType: CommandType;
@@ -529,10 +529,10 @@ export interface IDbConnection$instance extends System_Internal.IDisposable$inst
 export type IDbConnection = IDbConnection$instance;
 
 export interface IDbDataAdapter$instance extends IDataAdapter {
-    SelectCommand: IDbCommand;
-    InsertCommand: IDbCommand;
-    UpdateCommand: IDbCommand;
-    DeleteCommand: IDbCommand;
+    SelectCommand: IDbCommand | undefined;
+    InsertCommand: IDbCommand | undefined;
+    UpdateCommand: IDbCommand | undefined;
+    DeleteCommand: IDbCommand | undefined;
     MissingMappingAction: MissingMappingAction;
     MissingSchemaAction: MissingSchemaAction;
     readonly TableMappings: ITableMappingCollection;
@@ -592,21 +592,21 @@ export interface ITableMappingCollection$instance extends IList, ICollection, IE
     readonly SyncRoot: unknown;
     readonly IsSynchronized: boolean;
     Add(sourceTableName: string, dataSetTableName: string): ITableMapping;
-    Add(value: unknown): int;
+    Add(value: unknown | undefined): int;
     Clear(): void;
     Contains(sourceTableName: string): boolean;
-    Contains(value: unknown): boolean;
+    Contains(value: unknown | undefined): boolean;
     CopyTo(array: ClrArray, index: int): void;
     get_Item2(index: int): unknown;
     get_Item2(index: string): unknown;
     GetByDataSetTable(dataSetTableName: string): ITableMapping;
     GetEnumerator(): IEnumerator;
     IndexOf(sourceTableName: string): int;
-    Insert(index: int, value: unknown): void;
-    Remove(value: unknown): void;
+    Insert(index: int, value: unknown | undefined): void;
+    Remove(value: unknown | undefined): void;
     RemoveAt(sourceTableName: string): void;
     RemoveAt(index: int): void;
-    set_Item2(index: int, value: unknown): void;
+    set_Item2(index: int, value: unknown | undefined): void;
     set_Item2(index: string, value: unknown): void;
 }
 
@@ -629,11 +629,11 @@ export type Constraint = Constraint$instance;
 
 export interface ConstraintCollection$instance extends InternalDataCollectionBase$instance {
     Add(constraint: Constraint): void;
-    Add(name: string, columns: DataColumn[], primaryKey: boolean): Constraint;
-    Add(name: string, column: DataColumn, primaryKey: boolean): Constraint;
-    Add(name: string, primaryKeyColumn: DataColumn, foreignKeyColumn: DataColumn): Constraint;
-    Add(name: string, primaryKeyColumns: DataColumn[], foreignKeyColumns: DataColumn[]): Constraint;
-    AddRange(constraints: Constraint[]): void;
+    Add(name: string | undefined, columns: DataColumn[], primaryKey: boolean): Constraint;
+    Add(name: string | undefined, column: DataColumn, primaryKey: boolean): Constraint;
+    Add(name: string | undefined, primaryKeyColumn: DataColumn, foreignKeyColumn: DataColumn): Constraint;
+    Add(name: string | undefined, primaryKeyColumns: DataColumn[], foreignKeyColumns: DataColumn[]): Constraint;
+    AddRange(constraints: Constraint[] | undefined): void;
     CanRemove(constraint: Constraint): boolean;
     Clear(): void;
     Contains(name: string): boolean;
@@ -669,8 +669,8 @@ export interface ConstraintException$instance extends DataException$instance {
 
 export const ConstraintException: {
     new(): ConstraintException;
-    new(s: string): ConstraintException;
-    new(message: string, innerException: Exception): ConstraintException;
+    new(s: string | undefined): ConstraintException;
+    new(message: string | undefined, innerException: Exception | undefined): ConstraintException;
 };
 
 
@@ -702,7 +702,7 @@ export interface DataColumn$instance extends MarshalByValueComponent {
     readonly Table: DataTable;
     Unique: boolean;
     Dispose(): void;
-    GetService(service: Type): unknown;
+    GetService(service: Type | undefined): unknown | undefined;
     SetOrdinal(ordinal: int): void;
     ToString(): string;
 }
@@ -711,7 +711,7 @@ export interface DataColumn$instance extends MarshalByValueComponent {
 export const DataColumn: {
     new(): DataColumn;
     new(columnName: string): DataColumn;
-    new(columnName: string, dataType: Type): DataColumn;
+    new(columnName: string | undefined, dataType: Type): DataColumn;
     new(columnName: string, dataType: Type, expr: string): DataColumn;
     new(columnName: string, dataType: Type, expr: string, type_: MappingType): DataColumn;
 };
@@ -729,14 +729,14 @@ export type DataColumn = DataColumn$instance & __DataColumn$views;
 
 
 export interface DataColumnChangeEventArgs$instance extends EventArgs {
-    readonly Column: DataColumn;
-    ProposedValue: unknown;
+    readonly Column: DataColumn | undefined;
+    ProposedValue: unknown | undefined;
     readonly Row: DataRow;
 }
 
 
 export const DataColumnChangeEventArgs: {
-    new(row: DataRow, column: DataColumn, value: unknown): DataColumnChangeEventArgs;
+    new(row: DataRow, column: DataColumn | undefined, value: unknown | undefined): DataColumnChangeEventArgs;
 };
 
 
@@ -744,9 +744,9 @@ export type DataColumnChangeEventArgs = DataColumnChangeEventArgs$instance;
 
 export interface DataColumnCollection$instance extends InternalDataCollectionBase$instance {
     Add(column: DataColumn): void;
-    Add(columnName: string, type_: Type, expression: string): DataColumn;
-    Add(columnName: string, type_: Type): DataColumn;
-    Add(columnName: string): DataColumn;
+    Add(columnName: string | undefined, type_: Type, expression: string): DataColumn;
+    Add(columnName: string | undefined, type_: Type): DataColumn;
+    Add(columnName: string | undefined): DataColumn;
     Add(): DataColumn;
     AddRange(columns: DataColumn[]): void;
     CanRemove(column: DataColumn): boolean;
@@ -784,8 +784,8 @@ export interface DataException$instance extends SystemException {
 
 export const DataException: {
     new(): DataException;
-    new(s: string): DataException;
-    new(s: string, innerException: Exception): DataException;
+    new(s: string | undefined): DataException;
+    new(s: string | undefined, innerException: Exception | undefined): DataException;
 };
 
 
@@ -798,13 +798,13 @@ export type DataException = DataException$instance & __DataException$views;
 
 export interface DataRelation$instance {
     readonly ChildColumns: DataColumn[];
-    readonly ChildKeyConstraint: ForeignKeyConstraint;
+    readonly ChildKeyConstraint: ForeignKeyConstraint | undefined;
     readonly ChildTable: DataTable;
     readonly DataSet: DataSet;
     readonly ExtendedProperties: PropertyCollection;
     Nested: boolean;
     readonly ParentColumns: DataColumn[];
-    readonly ParentKeyConstraint: UniqueConstraint;
+    readonly ParentKeyConstraint: UniqueConstraint | undefined;
     readonly ParentTable: DataTable;
     RelationName: string;
     ToString(): string;
@@ -812,12 +812,12 @@ export interface DataRelation$instance {
 
 
 export const DataRelation: {
-    new(relationName: string, parentColumn: DataColumn, childColumn: DataColumn): DataRelation;
-    new(relationName: string, parentColumn: DataColumn, childColumn: DataColumn, createConstraints: boolean): DataRelation;
-    new(relationName: string, parentColumns: DataColumn[], childColumns: DataColumn[]): DataRelation;
-    new(relationName: string, parentColumns: DataColumn[], childColumns: DataColumn[], createConstraints: boolean): DataRelation;
-    new(relationName: string, parentTableName: string, childTableName: string, parentColumnNames: string[], childColumnNames: string[], nested: boolean): DataRelation;
-    new(relationName: string, parentTableName: string, parentTableNamespace: string, childTableName: string, childTableNamespace: string, parentColumnNames: string[], childColumnNames: string[], nested: boolean): DataRelation;
+    new(relationName: string | undefined, parentColumn: DataColumn, childColumn: DataColumn): DataRelation;
+    new(relationName: string | undefined, parentColumn: DataColumn, childColumn: DataColumn, createConstraints: boolean): DataRelation;
+    new(relationName: string | undefined, parentColumns: DataColumn[], childColumns: DataColumn[]): DataRelation;
+    new(relationName: string | undefined, parentColumns: DataColumn[], childColumns: DataColumn[], createConstraints: boolean): DataRelation;
+    new(relationName: string, parentTableName: string, childTableName: string, parentColumnNames: string[] | undefined, childColumnNames: string[] | undefined, nested: boolean): DataRelation;
+    new(relationName: string, parentTableName: string, parentTableNamespace: string, childTableName: string, childTableNamespace: string, parentColumnNames: string[] | undefined, childColumnNames: string[] | undefined, nested: boolean): DataRelation;
 };
 
 
@@ -825,13 +825,13 @@ export type DataRelation = DataRelation$instance;
 
 export interface DataRelationCollection$instance extends InternalDataCollectionBase$instance {
     Add(relation: DataRelation): void;
-    Add(name: string, parentColumns: DataColumn[], childColumns: DataColumn[]): DataRelation;
-    Add(name: string, parentColumns: DataColumn[], childColumns: DataColumn[], createConstraints: boolean): DataRelation;
+    Add(name: string | undefined, parentColumns: DataColumn[], childColumns: DataColumn[]): DataRelation;
+    Add(name: string | undefined, parentColumns: DataColumn[], childColumns: DataColumn[], createConstraints: boolean): DataRelation;
     Add(parentColumns: DataColumn[], childColumns: DataColumn[]): DataRelation;
-    Add(name: string, parentColumn: DataColumn, childColumn: DataColumn): DataRelation;
-    Add(name: string, parentColumn: DataColumn, childColumn: DataColumn, createConstraints: boolean): DataRelation;
+    Add(name: string | undefined, parentColumn: DataColumn, childColumn: DataColumn): DataRelation;
+    Add(name: string | undefined, parentColumn: DataColumn, childColumn: DataColumn, createConstraints: boolean): DataRelation;
     Add(parentColumn: DataColumn, childColumn: DataColumn): DataRelation;
-    AddRange(relations: DataRelation[]): void;
+    AddRange(relations: DataRelation[] | undefined): void;
     CanRemove(relation: DataRelation): boolean;
     Clear(): void;
     Contains(name: string): boolean;
@@ -861,7 +861,7 @@ export type DataRelationCollection = DataRelationCollection$instance & __DataRel
 
 export interface DataRow$instance {
     readonly HasErrors: boolean;
-    ItemArray: unknown[];
+    ItemArray: (unknown | undefined)[];
     RowError: string;
     readonly RowState: DataRowState;
     readonly Table: DataTable;
@@ -877,10 +877,10 @@ export interface DataRow$instance {
     get_Item(columnIndex: int, version: DataRowVersion): unknown;
     get_Item(columnName: string, version: DataRowVersion): unknown;
     get_Item(column: DataColumn, version: DataRowVersion): unknown;
-    GetChildRows(relationName: string): DataRow[];
-    GetChildRows(relationName: string, version: DataRowVersion): DataRow[];
-    GetChildRows(relation: DataRelation): DataRow[];
-    GetChildRows(relation: DataRelation, version: DataRowVersion): DataRow[];
+    GetChildRows(relationName: string | undefined): DataRow[];
+    GetChildRows(relationName: string | undefined, version: DataRowVersion): DataRow[];
+    GetChildRows(relation: DataRelation | undefined): DataRow[];
+    GetChildRows(relation: DataRelation | undefined, version: DataRowVersion): DataRow[];
     GetColumnError(columnIndex: int): string;
     GetColumnError(columnName: string): string;
     GetColumnError(column: DataColumn): string;
@@ -889,10 +889,10 @@ export interface DataRow$instance {
     GetParentRow(relationName: string, version: DataRowVersion): DataRow;
     GetParentRow(relation: DataRelation): DataRow;
     GetParentRow(relation: DataRelation, version: DataRowVersion): DataRow;
-    GetParentRows(relationName: string): DataRow[];
-    GetParentRows(relationName: string, version: DataRowVersion): DataRow[];
-    GetParentRows(relation: DataRelation): DataRow[];
-    GetParentRows(relation: DataRelation, version: DataRowVersion): DataRow[];
+    GetParentRows(relationName: string | undefined): DataRow[];
+    GetParentRows(relationName: string | undefined, version: DataRowVersion): DataRow[];
+    GetParentRows(relation: DataRelation | undefined): DataRow[];
+    GetParentRows(relation: DataRelation | undefined, version: DataRowVersion): DataRow[];
     HasVersion(version: DataRowVersion): boolean;
     IsNull(columnIndex: int): boolean;
     IsNull(columnName: string): boolean;
@@ -904,8 +904,8 @@ export interface DataRow$instance {
     set_Item(column: DataColumn, value: unknown): void;
     SetAdded(): void;
     SetColumnError(columnIndex: int, error: string): void;
-    SetColumnError(columnName: string, error: string): void;
-    SetColumnError(column: DataColumn, error: string): void;
+    SetColumnError(columnName: string, error: string | undefined): void;
+    SetColumnError(column: DataColumn, error: string | undefined): void;
     SetModified(): void;
     SetParentRow(parentRow: DataRow): void;
     SetParentRow(parentRow: DataRow, relation: DataRelation): void;
@@ -950,11 +950,11 @@ export interface DataRowCollection$instance extends InternalDataCollectionBase$i
     Add(...values: unknown[]): DataRow;
     Clear(): void;
     Contains(key: unknown): boolean;
-    Contains(keys: unknown[]): boolean;
+    Contains(keys: (unknown | undefined)[]): boolean;
     CopyTo(ar: ClrArray, index: int): void;
     CopyTo(array: DataRow[], index: int): void;
     Find(key: unknown): DataRow;
-    Find(keys: unknown[]): DataRow;
+    Find(keys: (unknown | undefined)[]): DataRow;
     GetEnumerator(): IEnumerator;
     IndexOf(row: DataRow): int;
     InsertAt(row: DataRow, pos: int): void;
@@ -1048,7 +1048,7 @@ export interface DataSet$instance extends MarshalByValueComponent {
     readonly Relations: DataRelationCollection;
     RemotingFormat: SerializationFormat;
     SchemaSerializationMode: SchemaSerializationMode;
-    Site: ISite;
+    Site: ISite | undefined;
     readonly Tables: DataTableCollection;
     AcceptChanges(): void;
     BeginInit(): void;
@@ -1062,16 +1062,16 @@ export interface DataSet$instance extends MarshalByValueComponent {
     GetChanges(): DataSet;
     GetChanges(rowStates: DataRowState): DataSet;
     GetObjectData(info: SerializationInfo, context: StreamingContext): void;
-    GetService(service: Type): unknown;
+    GetService(service: Type | undefined): unknown | undefined;
     GetXml(): string;
     GetXmlSchema(): string;
     HasChanges(): boolean;
     HasChanges(rowStates: DataRowState): boolean;
-    InferXmlSchema(reader: XmlReader, nsArray: string[]): void;
-    InferXmlSchema(stream: Stream, nsArray: string[]): void;
-    InferXmlSchema(reader: TextReader, nsArray: string[]): void;
-    InferXmlSchema(fileName: string, nsArray: string[]): void;
-    Load(reader: IDataReader, loadOption: LoadOption, errorHandler: FillErrorEventHandler, ...tables: DataTable[]): void;
+    InferXmlSchema(reader: XmlReader, nsArray: string[] | undefined): void;
+    InferXmlSchema(stream: Stream, nsArray: string[] | undefined): void;
+    InferXmlSchema(reader: TextReader, nsArray: string[] | undefined): void;
+    InferXmlSchema(fileName: string, nsArray: string[] | undefined): void;
+    Load(reader: IDataReader, loadOption: LoadOption, errorHandler: FillErrorEventHandler | undefined, ...tables: DataTable[]): void;
     Load(reader: IDataReader, loadOption: LoadOption, ...tables: DataTable[]): void;
     Load(reader: IDataReader, loadOption: LoadOption, ...tables: string[]): void;
     Merge(dataSet: DataSet): void;
@@ -1104,20 +1104,20 @@ export interface DataSet$instance extends MarshalByValueComponent {
     WriteXml(writer: XmlWriter, mode: XmlWriteMode): void;
     WriteXml(fileName: string, mode: XmlWriteMode): void;
     WriteXmlSchema(stream: Stream): void;
-    WriteXmlSchema(stream: Stream, multipleTargetConverter: Converter_2<Type, System_Internal.String>): void;
+    WriteXmlSchema(stream: Stream | undefined, multipleTargetConverter: Converter_2<Type, System_Internal.String>): void;
     WriteXmlSchema(fileName: string): void;
     WriteXmlSchema(fileName: string, multipleTargetConverter: Converter_2<Type, System_Internal.String>): void;
     WriteXmlSchema(writer: TextWriter): void;
-    WriteXmlSchema(writer: TextWriter, multipleTargetConverter: Converter_2<Type, System_Internal.String>): void;
+    WriteXmlSchema(writer: TextWriter | undefined, multipleTargetConverter: Converter_2<Type, System_Internal.String>): void;
     WriteXmlSchema(writer: XmlWriter): void;
-    WriteXmlSchema(writer: XmlWriter, multipleTargetConverter: Converter_2<Type, System_Internal.String>): void;
+    WriteXmlSchema(writer: XmlWriter | undefined, multipleTargetConverter: Converter_2<Type, System_Internal.String>): void;
 }
 
 
 export const DataSet: {
     new(): DataSet;
     new(dataSetName: string): DataSet;
-    GetDataSetSchema(schemaSet: XmlSchemaSet): XmlSchemaComplexType;
+    GetDataSetSchema(schemaSet: XmlSchemaSet | undefined): XmlSchemaComplexType;
 };
 
 
@@ -1168,7 +1168,7 @@ export interface DataTable$instance extends MarshalByValueComponent {
     PrimaryKey: DataColumn[];
     RemotingFormat: SerializationFormat;
     readonly Rows: DataRowCollection;
-    Site: ISite;
+    Site: ISite | undefined;
     TableName: string;
     AcceptChanges(): void;
     BeginInit(): void;
@@ -1185,13 +1185,13 @@ export interface DataTable$instance extends MarshalByValueComponent {
     GetChanges(rowStates: DataRowState): DataTable;
     GetErrors(): DataRow[];
     GetObjectData(info: SerializationInfo, context: StreamingContext): void;
-    GetService(service: Type): unknown;
+    GetService(service: Type | undefined): unknown | undefined;
     ImportRow(row: DataRow): void;
     Load(reader: IDataReader): void;
     Load(reader: IDataReader, loadOption: LoadOption): void;
-    Load(reader: IDataReader, loadOption: LoadOption, errorHandler: FillErrorEventHandler): void;
-    LoadDataRow(values: unknown[], fAcceptChanges: boolean): DataRow;
-    LoadDataRow(values: unknown[], loadOption: LoadOption): DataRow;
+    Load(reader: IDataReader, loadOption: LoadOption, errorHandler: FillErrorEventHandler | undefined): void;
+    LoadDataRow(values: (unknown | undefined)[], fAcceptChanges: boolean): DataRow;
+    LoadDataRow(values: (unknown | undefined)[], loadOption: LoadOption): DataRow;
     Merge(table: DataTable): void;
     Merge(table: DataTable, preserveChanges: boolean): void;
     Merge(table: DataTable, preserveChanges: boolean, missingSchemaAction: MissingSchemaAction): void;
@@ -1207,7 +1207,7 @@ export interface DataTable$instance extends MarshalByValueComponent {
     RejectChanges(): void;
     Reset(): void;
     Select(): DataRow[];
-    Select(filterExpression: string): DataRow[];
+    Select(filterExpression: string | undefined): DataRow[];
     Select(filterExpression: string, sort: string): DataRow[];
     Select(filterExpression: string, sort: string, recordStates: DataViewRowState): DataRow[];
     ToString(): string;
@@ -1242,7 +1242,7 @@ export const DataTable: {
     new(): DataTable;
     new(tableName: string): DataTable;
     new(tableName: string, tableNamespace: string): DataTable;
-    GetDataTableSchema(schemaSet: XmlSchemaSet): XmlSchemaComplexType;
+    GetDataTableSchema(schemaSet: XmlSchemaSet | undefined): XmlSchemaComplexType;
 };
 
 
@@ -1277,26 +1277,26 @@ export const DataTableClearEventArgs: {
 export type DataTableClearEventArgs = DataTableClearEventArgs$instance;
 
 export interface DataTableCollection$instance extends InternalDataCollectionBase$instance {
-    Add(table: DataTable): void;
-    Add(name: string): DataTable;
-    Add(name: string, tableNamespace: string): DataTable;
+    Add(table: DataTable | undefined): void;
+    Add(name: string | undefined): DataTable;
+    Add(name: string | undefined, tableNamespace: string | undefined): DataTable;
     Add(): DataTable;
-    AddRange(tables: DataTable[]): void;
-    CanRemove(table: DataTable): boolean;
+    AddRange(tables: (DataTable | undefined)[] | undefined): void;
+    CanRemove(table: DataTable | undefined): boolean;
     Clear(): void;
-    Contains(name: string): boolean;
-    Contains(name: string, tableNamespace: string): boolean;
+    Contains(name: string | undefined): boolean;
+    Contains(name: string | undefined, tableNamespace: string | undefined): boolean;
     CopyTo(ar: ClrArray, index: int): void;
     get_Item(index: int): DataTable;
-    get_Item(name: string): DataTable;
-    get_Item(name: string, tableNamespace: string): DataTable;
+    get_Item(name: string | undefined): DataTable;
+    get_Item(name: string | undefined, tableNamespace: string): DataTable | undefined;
     GetEnumerator(): IEnumerator;
-    IndexOf(table: DataTable): int;
-    IndexOf(tableName: string): int;
-    IndexOf(tableName: string, tableNamespace: string): int;
-    Remove(table: DataTable): void;
-    Remove(name: string): void;
-    Remove(name: string, tableNamespace: string): void;
+    IndexOf(table: DataTable | undefined): int;
+    IndexOf(tableName: string | undefined): int;
+    IndexOf(tableName: string | undefined, tableNamespace: string | undefined): int;
+    Remove(table: DataTable | undefined): void;
+    Remove(name: string | undefined): void;
+    Remove(name: string | undefined, tableNamespace: string | undefined): void;
     RemoveAt(index: int): void;
 }
 
@@ -1393,7 +1393,7 @@ export interface DataView$instance extends MarshalByValueComponent {
     AllowNew: boolean;
     ApplyDefaultSort: boolean;
     readonly Count: int;
-    readonly DataViewManager: DataViewManager;
+    readonly DataViewManager: DataViewManager | undefined;
     readonly IsInitialized: boolean;
     readonly Item: DataRowView;
     RowFilter: string;
@@ -1402,29 +1402,29 @@ export interface DataView$instance extends MarshalByValueComponent {
     Table: DataTable;
     AddNew(): DataRowView;
     BeginInit(): void;
-    CopyTo(array: ClrArray, index: int): void;
+    CopyTo(array: ClrArray | undefined, index: int): void;
     Delete(index: int): void;
     Dispose(): void;
     EndInit(): void;
-    Equals(view: DataView): boolean;
-    Equals(obj: unknown): boolean;
-    Find(key: unknown): int;
-    Find(key: unknown[]): int;
-    FindRows(key: unknown): DataRowView[];
-    FindRows(key: unknown[]): DataRowView[];
+    Equals(view: DataView | undefined): boolean;
+    Equals(obj: unknown | undefined): boolean;
+    Find(key: unknown | undefined): int;
+    Find(key: (unknown | undefined)[]): int;
+    FindRows(key: unknown | undefined): (DataRowView | undefined)[] | undefined;
+    FindRows(key: (unknown | undefined)[]): (DataRowView | undefined)[] | undefined;
     GetEnumerator(): IEnumerator;
-    GetService(service: Type): unknown;
-    ToTable(): DataTable;
-    ToTable(tableName: string): DataTable;
-    ToTable(distinct: boolean, ...columnNames: string[]): DataTable;
-    ToTable(tableName: string, distinct: boolean, ...columnNames: string[]): DataTable;
+    GetService(service: Type | undefined): unknown | undefined;
+    ToTable(): DataTable | undefined;
+    ToTable(tableName: string | undefined): DataTable | undefined;
+    ToTable(distinct: boolean, ...columnNames: string[]): DataTable | undefined;
+    ToTable(tableName: string | undefined, distinct: boolean, ...columnNames: string[]): DataTable | undefined;
 }
 
 
 export const DataView: {
     new(): DataView;
-    new(table: DataTable): DataView;
-    new(table: DataTable, RowFilter: string, Sort: string, RowState: DataViewRowState): DataView;
+    new(table: DataTable | undefined): DataView;
+    new(table: DataTable, RowFilter: string | undefined, Sort: string | undefined, RowState: DataViewRowState): DataView;
 };
 
 
@@ -1453,7 +1453,7 @@ export interface DataViewManager$instance extends MarshalByValueComponent {
     readonly DataViewSettings: DataViewSettingCollection;
     CreateDataView(table: DataTable): DataView;
     Dispose(): void;
-    GetService(service: Type): unknown;
+    GetService(service: Type | undefined): unknown | undefined;
 }
 
 
@@ -1481,7 +1481,7 @@ export type DataViewManager = DataViewManager$instance & __DataViewManager$views
 
 export interface DataViewSetting$instance {
     ApplyDefaultSort: boolean;
-    readonly DataViewManager: DataViewManager;
+    readonly DataViewManager: DataViewManager | undefined;
     RowFilter: string;
     RowStateFilter: DataViewRowState;
     Sort: string;
@@ -1508,7 +1508,7 @@ export interface DataViewSettingCollection$instance {
     get_Item(index: int): DataViewSetting;
     GetEnumerator(): IEnumerator;
     set_Item(table: DataTable, value: DataViewSetting): void;
-    set_Item(index: int, value: DataViewSetting): void;
+    set_Item(index: int, value: DataViewSetting | undefined): void;
 }
 
 
@@ -1528,17 +1528,17 @@ export type DataViewSettingCollection = DataViewSettingCollection$instance & __D
 export interface DBConcurrencyException$instance extends SystemException {
     Row: DataRow;
     readonly RowCount: int;
-    CopyToRows(array: DataRow[]): void;
-    CopyToRows(array: DataRow[], arrayIndex: int): void;
-    GetObjectData(info: SerializationInfo, context: StreamingContext): void;
+    CopyToRows(array: (DataRow | undefined)[] | undefined): void;
+    CopyToRows(array: (DataRow | undefined)[] | undefined, arrayIndex: int): void;
+    GetObjectData(info: SerializationInfo | undefined, context: StreamingContext): void;
 }
 
 
 export const DBConcurrencyException: {
     new(): DBConcurrencyException;
-    new(message: string): DBConcurrencyException;
-    new(message: string, inner: Exception): DBConcurrencyException;
-    new(message: string, inner: Exception, dataRows: DataRow[]): DBConcurrencyException;
+    new(message: string | undefined): DBConcurrencyException;
+    new(message: string | undefined, inner: Exception | undefined): DBConcurrencyException;
+    new(message: string | undefined, inner: Exception | undefined, dataRows: DataRow[] | undefined): DBConcurrencyException;
 };
 
 
@@ -1556,8 +1556,8 @@ export interface DeletedRowInaccessibleException$instance extends DataException$
 
 export const DeletedRowInaccessibleException: {
     new(): DeletedRowInaccessibleException;
-    new(s: string): DeletedRowInaccessibleException;
-    new(message: string, innerException: Exception): DeletedRowInaccessibleException;
+    new(s: string | undefined): DeletedRowInaccessibleException;
+    new(message: string | undefined, innerException: Exception | undefined): DeletedRowInaccessibleException;
 };
 
 
@@ -1575,8 +1575,8 @@ export interface DuplicateNameException$instance extends DataException$instance 
 
 export const DuplicateNameException: {
     new(): DuplicateNameException;
-    new(s: string): DuplicateNameException;
-    new(message: string, innerException: Exception): DuplicateNameException;
+    new(s: string | undefined): DuplicateNameException;
+    new(message: string | undefined, innerException: Exception | undefined): DuplicateNameException;
 };
 
 
@@ -1629,8 +1629,8 @@ export interface EvaluateException$instance extends InvalidExpressionException$i
 
 export const EvaluateException: {
     new(): EvaluateException;
-    new(s: string): EvaluateException;
-    new(message: string, innerException: Exception): EvaluateException;
+    new(s: string | undefined): EvaluateException;
+    new(message: string | undefined, innerException: Exception | undefined): EvaluateException;
 };
 
 
@@ -1643,14 +1643,14 @@ export type EvaluateException = EvaluateException$instance & __EvaluateException
 
 export interface FillErrorEventArgs$instance extends EventArgs {
     Continue: boolean;
-    readonly DataTable: DataTable;
+    readonly DataTable: DataTable | undefined;
     Errors: Exception;
-    readonly Values: unknown[];
+    readonly Values: (unknown | undefined)[];
 }
 
 
 export const FillErrorEventArgs: {
-    new(dataTable: DataTable, values: unknown[]): FillErrorEventArgs;
+    new(dataTable: DataTable | undefined, values: (unknown | undefined)[] | undefined): FillErrorEventArgs;
 };
 
 
@@ -1671,10 +1671,10 @@ export interface ForeignKeyConstraint$instance extends Constraint {
 
 export const ForeignKeyConstraint: {
     new(parentColumn: DataColumn, childColumn: DataColumn): ForeignKeyConstraint;
-    new(constraintName: string, parentColumn: DataColumn, childColumn: DataColumn): ForeignKeyConstraint;
+    new(constraintName: string | undefined, parentColumn: DataColumn, childColumn: DataColumn): ForeignKeyConstraint;
     new(parentColumns: DataColumn[], childColumns: DataColumn[]): ForeignKeyConstraint;
-    new(constraintName: string, parentColumns: DataColumn[], childColumns: DataColumn[]): ForeignKeyConstraint;
-    new(constraintName: string, parentTableName: string, parentColumnNames: string[], childColumnNames: string[], acceptRejectRule: AcceptRejectRule, deleteRule: Rule, updateRule: Rule): ForeignKeyConstraint;
+    new(constraintName: string | undefined, parentColumns: DataColumn[], childColumns: DataColumn[]): ForeignKeyConstraint;
+    new(constraintName: string | undefined, parentTableName: string | undefined, parentColumnNames: string[], childColumnNames: string[], acceptRejectRule: AcceptRejectRule, deleteRule: Rule, updateRule: Rule): ForeignKeyConstraint;
     new(constraintName: string, parentTableName: string, parentTableNamespace: string, parentColumnNames: string[], childColumnNames: string[], acceptRejectRule: AcceptRejectRule, deleteRule: Rule, updateRule: Rule): ForeignKeyConstraint;
 };
 
@@ -1688,8 +1688,8 @@ export interface InRowChangingEventException$instance extends DataException$inst
 
 export const InRowChangingEventException: {
     new(): InRowChangingEventException;
-    new(s: string): InRowChangingEventException;
-    new(message: string, innerException: Exception): InRowChangingEventException;
+    new(s: string | undefined): InRowChangingEventException;
+    new(message: string | undefined, innerException: Exception | undefined): InRowChangingEventException;
 };
 
 
@@ -1730,8 +1730,8 @@ export interface InvalidConstraintException$instance extends DataException$insta
 
 export const InvalidConstraintException: {
     new(): InvalidConstraintException;
-    new(s: string): InvalidConstraintException;
-    new(message: string, innerException: Exception): InvalidConstraintException;
+    new(s: string | undefined): InvalidConstraintException;
+    new(message: string | undefined, innerException: Exception | undefined): InvalidConstraintException;
 };
 
 
@@ -1749,8 +1749,8 @@ export interface InvalidExpressionException$instance extends DataException$insta
 
 export const InvalidExpressionException: {
     new(): InvalidExpressionException;
-    new(s: string): InvalidExpressionException;
-    new(message: string, innerException: Exception): InvalidExpressionException;
+    new(s: string | undefined): InvalidExpressionException;
+    new(message: string | undefined, innerException: Exception | undefined): InvalidExpressionException;
 };
 
 
@@ -1768,7 +1768,7 @@ export interface MergeFailedEventArgs$instance extends EventArgs {
 
 
 export const MergeFailedEventArgs: {
-    new(table: DataTable, conflict: string): MergeFailedEventArgs;
+    new(table: DataTable | undefined, conflict: string): MergeFailedEventArgs;
 };
 
 
@@ -1781,8 +1781,8 @@ export interface MissingPrimaryKeyException$instance extends DataException$insta
 
 export const MissingPrimaryKeyException: {
     new(): MissingPrimaryKeyException;
-    new(s: string): MissingPrimaryKeyException;
-    new(message: string, innerException: Exception): MissingPrimaryKeyException;
+    new(s: string | undefined): MissingPrimaryKeyException;
+    new(message: string | undefined, innerException: Exception | undefined): MissingPrimaryKeyException;
 };
 
 
@@ -1800,8 +1800,8 @@ export interface NoNullAllowedException$instance extends DataException$instance 
 
 export const NoNullAllowedException: {
     new(): NoNullAllowedException;
-    new(s: string): NoNullAllowedException;
-    new(message: string, innerException: Exception): NoNullAllowedException;
+    new(s: string | undefined): NoNullAllowedException;
+    new(message: string | undefined, innerException: Exception | undefined): NoNullAllowedException;
 };
 
 
@@ -1832,7 +1832,7 @@ export type OrderedEnumerableRowCollection_1<TRow> = OrderedEnumerableRowCollect
 
 
 export interface PropertyCollection$instance extends Hashtable {
-    Add(key: unknown, value: unknown): void;
+    Add(key: unknown, value: unknown | undefined): void;
     Clear(): void;
     Clone(): unknown;
     Contains(key: unknown): boolean;
@@ -1869,8 +1869,8 @@ export interface ReadOnlyException$instance extends DataException$instance {
 
 export const ReadOnlyException: {
     new(): ReadOnlyException;
-    new(s: string): ReadOnlyException;
-    new(message: string, innerException: Exception): ReadOnlyException;
+    new(s: string | undefined): ReadOnlyException;
+    new(message: string | undefined, innerException: Exception | undefined): ReadOnlyException;
 };
 
 
@@ -1888,8 +1888,8 @@ export interface RowNotInTableException$instance extends DataException$instance 
 
 export const RowNotInTableException: {
     new(): RowNotInTableException;
-    new(s: string): RowNotInTableException;
-    new(message: string, innerException: Exception): RowNotInTableException;
+    new(s: string | undefined): RowNotInTableException;
+    new(message: string | undefined, innerException: Exception | undefined): RowNotInTableException;
 };
 
 
@@ -1932,8 +1932,8 @@ export interface StrongTypingException$instance extends DataException$instance {
 
 export const StrongTypingException: {
     new(): StrongTypingException;
-    new(message: string): StrongTypingException;
-    new(s: string, innerException: Exception): StrongTypingException;
+    new(message: string | undefined): StrongTypingException;
+    new(s: string | undefined, innerException: Exception | undefined): StrongTypingException;
 };
 
 
@@ -1951,8 +1951,8 @@ export interface SyntaxErrorException$instance extends InvalidExpressionExceptio
 
 export const SyntaxErrorException: {
     new(): SyntaxErrorException;
-    new(s: string): SyntaxErrorException;
-    new(message: string, innerException: Exception): SyntaxErrorException;
+    new(s: string | undefined): SyntaxErrorException;
+    new(message: string | undefined, innerException: Exception | undefined): SyntaxErrorException;
 };
 
 
@@ -1971,7 +1971,7 @@ export interface TypedTableBase_1$instance<T extends DataRow> extends DataTable$
     GetList(): IList;
     GetObjectData(info: SerializationInfo, context: StreamingContext): void;
     GetSchema(): XmlSchema;
-    GetService(serviceType: Type): unknown;
+    GetService(serviceType: Type): unknown | undefined;
     ReadXml(stream: Stream): XmlReadMode;
     ReadXml(reader: TextReader): XmlReadMode;
     ReadXml(fileName: string): XmlReadMode;
@@ -2028,14 +2028,14 @@ export interface UniqueConstraint$instance extends Constraint {
 
 
 export const UniqueConstraint: {
-    new(name: string, column: DataColumn): UniqueConstraint;
+    new(name: string | undefined, column: DataColumn): UniqueConstraint;
     new(column: DataColumn): UniqueConstraint;
-    new(name: string, columns: DataColumn[]): UniqueConstraint;
+    new(name: string | undefined, columns: DataColumn[]): UniqueConstraint;
     new(columns: DataColumn[]): UniqueConstraint;
-    new(name: string, columnNames: string[], isPrimaryKey: boolean): UniqueConstraint;
-    new(name: string, column: DataColumn, isPrimaryKey: boolean): UniqueConstraint;
+    new(name: string, columnNames: string[] | undefined, isPrimaryKey: boolean): UniqueConstraint;
+    new(name: string | undefined, column: DataColumn, isPrimaryKey: boolean): UniqueConstraint;
     new(column: DataColumn, isPrimaryKey: boolean): UniqueConstraint;
-    new(name: string, columns: DataColumn[], isPrimaryKey: boolean): UniqueConstraint;
+    new(name: string | undefined, columns: DataColumn[], isPrimaryKey: boolean): UniqueConstraint;
     new(columns: DataColumn[], isPrimaryKey: boolean): UniqueConstraint;
 };
 
@@ -2049,8 +2049,8 @@ export interface VersionNotFoundException$instance extends DataException$instanc
 
 export const VersionNotFoundException: {
     new(): VersionNotFoundException;
-    new(s: string): VersionNotFoundException;
-    new(message: string, innerException: Exception): VersionNotFoundException;
+    new(s: string | undefined): VersionNotFoundException;
+    new(message: string | undefined, innerException: Exception | undefined): VersionNotFoundException;
 };
 
 
@@ -2101,15 +2101,15 @@ export abstract class DataRowComparer$instance {
 export type DataRowComparer = DataRowComparer$instance;
 
 export abstract class DataRowExtensions$instance {
-    static Field<T>(row: DataRow, column: DataColumn, version: DataRowVersion): T;
-    static Field<T>(row: DataRow, column: DataColumn): T;
+    static Field<T>(row: DataRow, column: DataColumn, version: DataRowVersion): T | undefined;
+    static Field<T>(row: DataRow, column: DataColumn): T | undefined;
     static Field<T>(row: DataRow, columnIndex: int, version: DataRowVersion): T;
     static Field<T>(row: DataRow, columnIndex: int): T;
-    static Field<T>(row: DataRow, columnName: string, version: DataRowVersion): T;
-    static Field<T>(row: DataRow, columnName: string): T;
-    static SetField<T>(row: DataRow, column: DataColumn, value: T): void;
+    static Field<T>(row: DataRow, columnName: string, version: DataRowVersion): T | undefined;
+    static Field<T>(row: DataRow, columnName: string): T | undefined;
+    static SetField<T>(row: DataRow, column: DataColumn, value: T | undefined): void;
     static SetField<T>(row: DataRow, columnIndex: int, value: T): void;
-    static SetField<T>(row: DataRow, columnName: string, value: T): void;
+    static SetField<T>(row: DataRow, columnName: string, value: T | undefined): void;
 }
 
 
@@ -2119,7 +2119,7 @@ export abstract class DataTableExtensions$instance {
     static AsDataView<T extends DataRow>(source: EnumerableRowCollection_1<T>): DataView;
     static AsDataView(table: DataTable): DataView;
     static AsEnumerable(source: DataTable): EnumerableRowCollection_1<DataRow>;
-    static CopyToDataTable<T extends DataRow>(source: IEnumerable_1<T>, table: DataTable, options: LoadOption, errorHandler: FillErrorEventHandler): void;
+    static CopyToDataTable<T extends DataRow>(source: IEnumerable_1<T>, table: DataTable, options: LoadOption, errorHandler: FillErrorEventHandler | undefined): void;
     static CopyToDataTable<T extends DataRow>(source: IEnumerable_1<T>, table: DataTable, options: LoadOption): void;
     static CopyToDataTable<T extends DataRow>(source: IEnumerable_1<T>): DataTable;
 }
@@ -2146,7 +2146,7 @@ export type EnumerableRowCollectionExtensions = EnumerableRowCollectionExtension
 
 export abstract class TypedTableBaseExtensions$instance {
     static AsEnumerable<TRow extends DataRow>(source: TypedTableBase_1<TRow>): EnumerableRowCollection_1<TRow>;
-    static ElementAtOrDefault<TRow extends DataRow>(source: TypedTableBase_1<TRow>, index: int): TRow;
+    static ElementAtOrDefault<TRow extends DataRow>(source: TypedTableBase_1<TRow>, index: int): TRow | undefined;
     static OrderBy<TRow extends DataRow, TKey>(source: TypedTableBase_1<TRow>, keySelector: Func_2<TRow, TKey>, comparer: IComparer_1<TKey>): OrderedEnumerableRowCollection_1<TRow>;
     static OrderBy<TRow extends DataRow, TKey>(source: TypedTableBase_1<TRow>, keySelector: Func_2<TRow, TKey>): OrderedEnumerableRowCollection_1<TRow>;
     static OrderByDescending<TRow extends DataRow, TKey>(source: TypedTableBase_1<TRow>, keySelector: Func_2<TRow, TKey>, comparer: IComparer_1<TKey>): OrderedEnumerableRowCollection_1<TRow>;

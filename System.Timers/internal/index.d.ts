@@ -14,7 +14,7 @@ import type { ISerializable, SerializationInfo, StreamingContext } from "../../S
 import * as System_Internal from "../../System/internal/index.js";
 import type { AsyncCallback, Boolean as ClrBoolean, DateTime, Delegate, Double, EventArgs, IAsyncResult, ICloneable, IDisposable, Int32, IntPtr, MulticastDelegate, Object as ClrObject, String as ClrString, TimeSpan, Type, Void } from "../../System/internal/index.js";
 
-export type ElapsedEventHandler = (sender: unknown, e: ElapsedEventArgs) => void;
+export type ElapsedEventHandler = (sender: unknown | undefined, e: ElapsedEventArgs) => void;
 
 
 export interface ElapsedEventArgs$instance extends EventArgs {
@@ -33,8 +33,8 @@ export interface Timer$instance extends Component {
     AutoReset: boolean;
     Enabled: boolean;
     Interval: double;
-    Site: ISite;
-    SynchronizingObject: ISynchronizeInvoke;
+    Site: ISite | undefined;
+    SynchronizingObject: ISynchronizeInvoke | undefined;
     BeginInit(): void;
     Close(): void;
     Dispose(): void;

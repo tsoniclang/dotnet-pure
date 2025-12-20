@@ -22,7 +22,7 @@ export interface Claim$instance {
     readonly Value: string;
     readonly ValueType: string;
     Clone(): Claim;
-    Clone(identity: ClaimsIdentity): Claim;
+    Clone(identity: ClaimsIdentity | undefined): Claim;
     ToString(): string;
     WriteTo(writer: BinaryWriter): void;
 }
@@ -30,10 +30,10 @@ export interface Claim$instance {
 
 export const Claim: {
     new(reader: BinaryReader): Claim;
-    new(reader: BinaryReader, subject: ClaimsIdentity): Claim;
+    new(reader: BinaryReader, subject: ClaimsIdentity | undefined): Claim;
     new(type_: string, value: string): Claim;
-    new(type_: string, value: string, valueType: string): Claim;
-    new(type_: string, value: string, valueType: string, issuer: string): Claim;
+    new(type_: string, value: string, valueType: string | undefined): Claim;
+    new(type_: string, value: string, valueType: string | undefined, issuer: string | undefined): Claim;
     new(type_: string, value: string, valueType: string, issuer: string, originalIssuer: string): Claim;
     new(type_: string, value: string, valueType: string, issuer: string, originalIssuer: string, subject: ClaimsIdentity): Claim;
 };
@@ -42,22 +42,22 @@ export const Claim: {
 export type Claim = Claim$instance;
 
 export interface ClaimsIdentity$instance {
-    Actor: ClaimsIdentity;
-    readonly AuthenticationType: string;
-    BootstrapContext: unknown;
+    Actor: ClaimsIdentity | undefined;
+    readonly AuthenticationType: string | string | undefined;
+    BootstrapContext: unknown | undefined;
     readonly Claims: IEnumerable_1<Claim>;
     readonly IsAuthenticated: boolean;
-    Label: string;
+    Label: string | undefined;
     readonly Name: string;
     readonly NameClaimType: string;
     readonly RoleClaimType: string;
     AddClaim(claim: Claim): void;
-    AddClaims(claims: IEnumerable_1<Claim>): void;
+    AddClaims(claims: IEnumerable_1<Claim | undefined>): void;
     Clone(): ClaimsIdentity;
     FindAll(match: Predicate_1<Claim>): IEnumerable_1<Claim>;
     FindAll(type_: string): IEnumerable_1<Claim>;
-    FindFirst(match: Predicate_1<Claim>): Claim;
-    FindFirst(type_: string): Claim;
+    FindFirst(match: Predicate_1<Claim>): Claim | undefined;
+    FindFirst(type_: string): Claim | undefined;
     HasClaim(match: Predicate_1<Claim>): boolean;
     HasClaim(type_: string, value: string): boolean;
     RemoveClaim(claim: Claim): void;
@@ -69,16 +69,16 @@ export interface ClaimsIdentity$instance {
 export const ClaimsIdentity: {
     new(): ClaimsIdentity;
     new(identity: IIdentity): ClaimsIdentity;
-    new(claims: IEnumerable_1<Claim>): ClaimsIdentity;
+    new(claims: IEnumerable_1<Claim> | undefined): ClaimsIdentity;
     new(authenticationType: string): ClaimsIdentity;
-    new(claims: IEnumerable_1<Claim>, authenticationType: string): ClaimsIdentity;
-    new(identity: IIdentity, claims: IEnumerable_1<Claim>): ClaimsIdentity;
+    new(claims: IEnumerable_1<Claim> | undefined, authenticationType: string): ClaimsIdentity;
+    new(identity: IIdentity, claims: IEnumerable_1<Claim> | undefined): ClaimsIdentity;
     new(authenticationType: string, nameType: string, roleType: string): ClaimsIdentity;
-    new(claims: IEnumerable_1<Claim>, authenticationType: string, nameType: string, roleType: string): ClaimsIdentity;
-    new(identity: IIdentity, claims: IEnumerable_1<Claim>, authenticationType: string, nameType: string, roleType: string): ClaimsIdentity;
+    new(claims: IEnumerable_1<Claim> | undefined, authenticationType: string, nameType: string, roleType: string): ClaimsIdentity;
+    new(identity: IIdentity, claims: IEnumerable_1<Claim> | undefined, authenticationType: string, nameType: string, roleType: string): ClaimsIdentity;
     new(reader: BinaryReader): ClaimsIdentity;
     new(reader: BinaryReader, stringComparison: StringComparison): ClaimsIdentity;
-    new(identity: IIdentity, claims: IEnumerable_1<Claim>, authenticationType: string, nameType: string, roleType: string, stringComparison: StringComparison): ClaimsIdentity;
+    new(identity: IIdentity, claims: IEnumerable_1<Claim> | undefined, authenticationType: string, nameType: string, roleType: string, stringComparison: StringComparison): ClaimsIdentity;
     readonly DefaultIssuer: string;
     readonly DefaultNameClaimType: string;
     readonly DefaultRoleClaimType: string;
@@ -97,14 +97,14 @@ export type ClaimsIdentity = ClaimsIdentity$instance & __ClaimsIdentity$views;
 export interface ClaimsPrincipal$instance {
     readonly Claims: IEnumerable_1<Claim>;
     readonly Identities: IEnumerable_1<ClaimsIdentity>;
-    readonly Identity: IIdentity;
+    readonly Identity: IIdentity | IIdentity | undefined;
     AddIdentities(identities: IEnumerable_1<ClaimsIdentity>): void;
     AddIdentity(identity: ClaimsIdentity): void;
     Clone(): ClaimsPrincipal;
     FindAll(match: Predicate_1<Claim>): IEnumerable_1<Claim>;
     FindAll(type_: string): IEnumerable_1<Claim>;
-    FindFirst(match: Predicate_1<Claim>): Claim;
-    FindFirst(type_: string): Claim;
+    FindFirst(match: Predicate_1<Claim>): Claim | undefined;
+    FindFirst(type_: string): Claim | undefined;
     HasClaim(match: Predicate_1<Claim>): boolean;
     HasClaim(type_: string, value: string): boolean;
     IsInRole(role: string): boolean;
@@ -118,17 +118,15 @@ export const ClaimsPrincipal: {
     new(identity: IIdentity): ClaimsPrincipal;
     new(principal: IPrincipal): ClaimsPrincipal;
     new(reader: BinaryReader): ClaimsPrincipal;
-    PrimaryIdentitySelector: Func_2<IEnumerable_1<ClaimsIdentity>, ClaimsIdentity>;
-    ClaimsPrincipalSelector: Func_1<ClaimsPrincipal>;
-    readonly Current: ClaimsPrincipal;
+    PrimaryIdentitySelector: Func_2<IEnumerable_1<ClaimsIdentity>, ClaimsIdentity | undefined>;
+    ClaimsPrincipalSelector: Func_1<ClaimsPrincipal | undefined> | undefined;
+    readonly Current: ClaimsPrincipal | undefined;
 };
 
 
 export interface __ClaimsPrincipal$views {
     As_IPrincipal(): System_Security_Principal_Internal.IPrincipal$instance;
 }
-
-export interface ClaimsPrincipal$instance extends System_Security_Principal_Internal.IPrincipal$instance {}
 
 export type ClaimsPrincipal = ClaimsPrincipal$instance & __ClaimsPrincipal$views;
 

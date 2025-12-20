@@ -68,10 +68,10 @@ export enum TransactionStatus {
 export type HostCurrentTransactionCallback = () => Transaction;
 
 
-export type TransactionCompletedEventHandler = (sender: unknown, e: TransactionEventArgs) => void;
+export type TransactionCompletedEventHandler = (sender: unknown | undefined, e: TransactionEventArgs) => void;
 
 
-export type TransactionStartedEventHandler = (sender: unknown, e: TransactionEventArgs) => void;
+export type TransactionStartedEventHandler = (sender: unknown | undefined, e: TransactionEventArgs) => void;
 
 
 export interface IDtcTransaction$instance {
@@ -93,7 +93,7 @@ export type IEnlistmentNotification = IEnlistmentNotification$instance;
 
 export interface IPromotableSinglePhaseNotification$instance extends ITransactionPromoter {
     Initialize(): void;
-    Promote(): byte[];
+    Promote(): byte[] | undefined;
     SinglePhaseCommit(singlePhaseEnlistment: SinglePhaseEnlistment): void;
 }
 
@@ -103,7 +103,7 @@ export interface IPromotableSinglePhaseNotification$instance extends ITransactio
 export type IPromotableSinglePhaseNotification = IPromotableSinglePhaseNotification$instance;
 
 export interface ISimpleTransactionSuperior$instance extends ITransactionPromoter {
-    Promote(): byte[];
+    Promote(): byte[] | undefined;
     Rollback(): void;
 }
 
@@ -124,7 +124,7 @@ export interface ISinglePhaseNotification$instance extends IEnlistmentNotificati
 export type ISinglePhaseNotification = ISinglePhaseNotification$instance;
 
 export interface ITransactionPromoter$instance {
-    Promote(): byte[];
+    Promote(): byte[] | undefined;
 }
 
 
@@ -232,10 +232,10 @@ export type PreparingEnlistment = PreparingEnlistment$instance;
 
 export interface SinglePhaseEnlistment$instance extends Enlistment {
     Aborted(): void;
-    Aborted(e: Exception): void;
+    Aborted(e: Exception | undefined): void;
     Committed(): void;
     InDoubt(): void;
-    InDoubt(e: Exception): void;
+    InDoubt(e: Exception | undefined): void;
 }
 
 
@@ -292,7 +292,7 @@ export interface Transaction$instance {
 
 export const Transaction: {
     new(): Transaction;
-    Current: Transaction;
+    Current: Transaction | undefined;
 };
 
 
@@ -313,8 +313,8 @@ export interface TransactionAbortedException$instance extends TransactionExcepti
 
 export const TransactionAbortedException: {
     new(): TransactionAbortedException;
-    new(message: string): TransactionAbortedException;
-    new(message: string, innerException: Exception): TransactionAbortedException;
+    new(message: string | undefined): TransactionAbortedException;
+    new(message: string | undefined, innerException: Exception | undefined): TransactionAbortedException;
 };
 
 
@@ -326,7 +326,7 @@ export type TransactionAbortedException = TransactionAbortedException$instance &
 
 
 export interface TransactionEventArgs$instance extends EventArgs {
-    readonly Transaction: Transaction;
+    readonly Transaction: Transaction | undefined;
 }
 
 
@@ -344,8 +344,8 @@ export interface TransactionException$instance extends SystemException {
 
 export const TransactionException: {
     new(): TransactionException;
-    new(message: string): TransactionException;
-    new(message: string, innerException: Exception): TransactionException;
+    new(message: string | undefined): TransactionException;
+    new(message: string | undefined, innerException: Exception | undefined): TransactionException;
 };
 
 
@@ -363,8 +363,8 @@ export interface TransactionInDoubtException$instance extends TransactionExcepti
 
 export const TransactionInDoubtException: {
     new(): TransactionInDoubtException;
-    new(message: string): TransactionInDoubtException;
-    new(message: string, innerException: Exception): TransactionInDoubtException;
+    new(message: string | undefined): TransactionInDoubtException;
+    new(message: string | undefined, innerException: Exception | undefined): TransactionInDoubtException;
 };
 
 
@@ -397,8 +397,8 @@ export interface TransactionManagerCommunicationException$instance extends Trans
 
 export const TransactionManagerCommunicationException: {
     new(): TransactionManagerCommunicationException;
-    new(message: string): TransactionManagerCommunicationException;
-    new(message: string, innerException: Exception): TransactionManagerCommunicationException;
+    new(message: string | undefined): TransactionManagerCommunicationException;
+    new(message: string | undefined, innerException: Exception | undefined): TransactionManagerCommunicationException;
 };
 
 
@@ -416,8 +416,8 @@ export interface TransactionPromotionException$instance extends TransactionExcep
 
 export const TransactionPromotionException: {
     new(): TransactionPromotionException;
-    new(message: string): TransactionPromotionException;
-    new(message: string, innerException: Exception): TransactionPromotionException;
+    new(message: string | undefined): TransactionPromotionException;
+    new(message: string | undefined, innerException: Exception | undefined): TransactionPromotionException;
 };
 
 
@@ -476,7 +476,7 @@ export abstract class TransactionInterop$instance {
 export type TransactionInterop = TransactionInterop$instance;
 
 export abstract class TransactionManager$instance {
-    static HostCurrentCallback: HostCurrentTransactionCallback;
+    static HostCurrentCallback: HostCurrentTransactionCallback | undefined;
     static DefaultTimeout: TimeSpan;
     static MaximumTimeout: TimeSpan;
     static ImplicitDistributedTransactions: boolean;
