@@ -71,10 +71,10 @@ export enum UnsafeAccessorKind {
 export type ConditionalWeakTable_2_CreateValueCallback<TKey, TValue> = (key: TKey) => TValue;
 
 
-export type RuntimeHelpers_CleanupCode = (userData: unknown, exceptionThrown: boolean) => void;
+export type RuntimeHelpers_CleanupCode = (userData: unknown | undefined, exceptionThrown: boolean) => void;
 
 
-export type RuntimeHelpers_TryCode = (userData: unknown) => void;
+export type RuntimeHelpers_TryCode = (userData: unknown | undefined) => void;
 
 
 export interface IAsyncStateMachine$instance {
@@ -301,7 +301,7 @@ export type ConfiguredTaskAwaitable_1<TResult> = ConfiguredTaskAwaitable_1$insta
 
 export interface ConfiguredTaskAwaitable_1_ConfiguredTaskAwaiter$instance<TResult> extends ICriticalNotifyCompletion {
     readonly IsCompleted: boolean;
-    GetResult(): TResult | undefined;
+    GetResult(): TResult;
     OnCompleted(continuation: Action): void;
     UnsafeOnCompleted(continuation: Action): void;
 }
@@ -369,7 +369,7 @@ export type ConfiguredValueTaskAwaitable_1<TResult> = ConfiguredValueTaskAwaitab
 
 export interface ConfiguredValueTaskAwaitable_1_ConfiguredValueTaskAwaiter$instance<TResult> extends ICriticalNotifyCompletion {
     readonly IsCompleted: boolean;
-    GetResult(): TResult | undefined;
+    GetResult(): TResult;
     OnCompleted(continuation: Action): void;
     UnsafeOnCompleted(continuation: Action): void;
 }
@@ -414,24 +414,24 @@ export type ConfiguredValueTaskAwaitable_ConfiguredValueTaskAwaiter = Configured
 export interface DefaultInterpolatedStringHandler$instance {
     readonly Text: ReadOnlySpan_1<System_Internal.Char>;
     AppendFormatted<T>(value: T): void;
-    AppendFormatted<T>(value: T, format: string): void;
+    AppendFormatted<T>(value: T, format: string | undefined): void;
     AppendFormatted<T>(value: T, alignment: int): void;
-    AppendFormatted<T>(value: T, alignment: int, format: string): void;
+    AppendFormatted<T>(value: T, alignment: int, format: string | undefined): void;
     AppendFormatted(value: ReadOnlySpan_1<System_Internal.Char>): void;
     AppendFormatted(value: ReadOnlySpan_1<System_Internal.Char>, alignment?: int, format?: string | undefined): void;
-    AppendFormatted(value: string): void;
-    AppendFormatted(value: string, alignment?: int, format?: string): void;
-    AppendFormatted(value: unknown, alignment?: int, format?: string): void;
+    AppendFormatted(value: string | undefined): void;
+    AppendFormatted(value: string | undefined, alignment?: int, format?: string | undefined): void;
+    AppendFormatted(value: unknown | undefined, alignment?: int, format?: string | undefined): void;
     AppendLiteral(value: string): void;
     Clear(): void;
-    ToString(): string | undefined;
+    ToString(): string;
     ToStringAndClear(): string;
 }
 
 
 export const DefaultInterpolatedStringHandler: {
     new(literalLength: int, formattedCount: int): DefaultInterpolatedStringHandler;
-    new(literalLength: int, formattedCount: int, provider: IFormatProvider): DefaultInterpolatedStringHandler;
+    new(literalLength: int, formattedCount: int, provider: IFormatProvider | undefined): DefaultInterpolatedStringHandler;
     new(literalLength: int, formattedCount: int, provider: IFormatProvider | undefined, initialBuffer: Span_1<System_Internal.Char>): DefaultInterpolatedStringHandler;
 };
 
@@ -665,7 +665,7 @@ export type TaskAwaiter = TaskAwaiter$instance & __TaskAwaiter$views;
 
 export interface TaskAwaiter_1$instance<TResult> extends ICriticalNotifyCompletion {
     readonly IsCompleted: boolean;
-    GetResult(): TResult | undefined;
+    GetResult(): TResult;
     OnCompleted(continuation: Action): void;
     UnsafeOnCompleted(continuation: Action): void;
 }
@@ -709,7 +709,7 @@ export type ValueTaskAwaiter = ValueTaskAwaiter$instance & __ValueTaskAwaiter$vi
 
 export interface ValueTaskAwaiter_1$instance<TResult> extends ICriticalNotifyCompletion {
     readonly IsCompleted: boolean;
-    GetResult(): TResult | undefined;
+    GetResult(): TResult;
     OnCompleted(continuation: Action): void;
     UnsafeOnCompleted(continuation: Action): void;
 }
@@ -938,7 +938,7 @@ export interface CallSite$instance {
 
 export const CallSite: {
     new(): CallSite;
-    Create(delegateType: Type | undefined, binder: CallSiteBinder | undefined): CallSite | undefined;
+    Create(delegateType: Type, binder: CallSiteBinder): CallSite;
 };
 
 
@@ -1797,7 +1797,7 @@ export type SuppressIldasmAttribute = SuppressIldasmAttribute$instance;
 export interface SwitchExpressionException$instance extends InvalidOperationException {
     readonly Message: string;
     readonly UnmatchedValue: unknown | undefined;
-    GetObjectData(info: SerializationInfo | undefined, context: StreamingContext): void;
+    GetObjectData(info: SerializationInfo, context: StreamingContext): void;
 }
 
 
@@ -2048,13 +2048,13 @@ export type RuntimeFeature = RuntimeFeature$instance;
 export abstract class RuntimeHelpers$instance {
     static readonly OffsetToStringData: int;
     static AllocateTypeAssociatedMemory(type_: Type, size: int): nint;
-    static Box(target: byte, type_: RuntimeTypeHandle): unknown;
+    static Box(target: byte, type_: RuntimeTypeHandle): unknown | undefined;
     static CreateSpan<T>(fldHandle: RuntimeFieldHandle): ReadOnlySpan_1<T>;
     static EnsureSufficientExecutionStack(): void;
-    static Equals(o1: unknown, o2: unknown): boolean;
+    static Equals(o1: unknown | undefined, o2: unknown | undefined): boolean;
     static ExecuteCodeWithGuaranteedCleanup(code: RuntimeHelpers_TryCode, backoutCode: RuntimeHelpers_CleanupCode, userData: unknown | undefined): void;
-    static GetHashCode(o: unknown): int;
-    static GetObjectValue(obj: unknown): unknown;
+    static GetHashCode(o: unknown | undefined): int;
+    static GetObjectValue(obj: unknown | undefined): unknown | undefined;
     static GetSubArray<T>(array: T[], range: Range): T[];
     static GetUninitializedObject(type_: Type): unknown;
     static InitializeArray(array: ClrArray, fldHandle: RuntimeFieldHandle): void;
@@ -2063,7 +2063,7 @@ export abstract class RuntimeHelpers$instance {
     static PrepareConstrainedRegionsNoOP(): void;
     static PrepareContractedDelegate(d: Function): void;
     static PrepareDelegate(d: Function): void;
-    static PrepareMethod(method: RuntimeMethodHandle, instantiation: RuntimeTypeHandle[]): void;
+    static PrepareMethod(method: RuntimeMethodHandle, instantiation: RuntimeTypeHandle[] | undefined): void;
     static PrepareMethod(method: RuntimeMethodHandle): void;
     static ProbeForSufficientStack(): void;
     static RunClassConstructor(type_: RuntimeTypeHandle): void;
@@ -2082,7 +2082,7 @@ export abstract class RuntimeOps$instance {
     static ExpandoPromoteClass(expando: ExpandoObject, oldClass: unknown, newClass: unknown): void;
     static ExpandoTryDeleteValue(expando: ExpandoObject, indexClass: unknown | undefined, index: int, name: string, ignoreCase: boolean): boolean;
     static ExpandoTryGetValue(expando: ExpandoObject, indexClass: unknown | undefined, index: int, name: string, ignoreCase: boolean, value: unknown | undefined): boolean;
-    static ExpandoTrySetValue(expando: ExpandoObject, indexClass: unknown, index: int, value: unknown, name: string, ignoreCase: boolean): unknown;
+    static ExpandoTrySetValue(expando: ExpandoObject, indexClass: unknown | undefined, index: int, value: unknown | undefined, name: string, ignoreCase: boolean): unknown | undefined;
     static MergeRuntimeVariables(first: IRuntimeVariables, second: IRuntimeVariables, indexes: int[]): IRuntimeVariables;
     static Quote(expression: Expression | undefined, hoistedLocals: unknown, locals: unknown[]): Expression | undefined;
 }
@@ -2098,7 +2098,7 @@ export abstract class Unsafe$instance {
     static AddByteOffset<T>(source: T, byteOffset: nint): T;
     static AddByteOffset<T>(source: T, byteOffset: nuint): T;
     static AreSame<T>(left: T, right: T): boolean;
-    static As<T>(o: unknown): T;
+    static As<T>(o: unknown | undefined): T;
     static As<TFrom, TTo>(source: TFrom): TTo;
     static AsPointer<T>(value: T): ptr<void>;
     static AsRef<T>(source: ptr<void>): T;

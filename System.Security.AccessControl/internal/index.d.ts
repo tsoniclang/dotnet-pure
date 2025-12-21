@@ -428,18 +428,18 @@ export interface CommonSecurityDescriptor$instance extends GenericSecurityDescri
     SystemAcl: SystemAcl | undefined;
     AddDiscretionaryAcl(revision: byte, trusted: int): void;
     AddSystemAcl(revision: byte, trusted: int): void;
-    PurgeAccessControl(sid: SecurityIdentifier | undefined): void;
-    PurgeAudit(sid: SecurityIdentifier | undefined): void;
+    PurgeAccessControl(sid: SecurityIdentifier): void;
+    PurgeAudit(sid: SecurityIdentifier): void;
     SetDiscretionaryAclProtection(isProtected: boolean, preserveInheritance: boolean): void;
     SetSystemAclProtection(isProtected: boolean, preserveInheritance: boolean): void;
 }
 
 
 export const CommonSecurityDescriptor: {
-    new(isContainer: boolean, isDS: boolean, binaryForm: byte[] | undefined, offset: int): CommonSecurityDescriptor;
+    new(isContainer: boolean, isDS: boolean, binaryForm: byte[], offset: int): CommonSecurityDescriptor;
     new(isContainer: boolean, isDS: boolean, flags: ControlFlags, owner: SecurityIdentifier | undefined, group: SecurityIdentifier | undefined, systemAcl: SystemAcl | undefined, discretionaryAcl: DiscretionaryAcl | undefined): CommonSecurityDescriptor;
-    new(isContainer: boolean, isDS: boolean, rawSecurityDescriptor: RawSecurityDescriptor | undefined): CommonSecurityDescriptor;
-    new(isContainer: boolean, isDS: boolean, sddlForm: string | undefined): CommonSecurityDescriptor;
+    new(isContainer: boolean, isDS: boolean, rawSecurityDescriptor: RawSecurityDescriptor): CommonSecurityDescriptor;
+    new(isContainer: boolean, isDS: boolean, sddlForm: string): CommonSecurityDescriptor;
 };
 
 
@@ -462,7 +462,7 @@ export type CompoundAce = CompoundAce$instance;
 export interface CustomAce$instance extends GenericAce {
     readonly BinaryLength: int;
     readonly OpaqueLength: int;
-    GetBinaryForm(binaryForm: byte[] | undefined, offset: int): void;
+    GetBinaryForm(binaryForm: byte[], offset: int): void;
     GetOpaque(): byte[] | undefined;
     SetOpaque(opaque: byte[] | undefined): void;
 }
@@ -527,7 +527,7 @@ export interface DiscretionaryAcl$instance extends CommonAcl$instance {
 export const DiscretionaryAcl: {
     new(isContainer: boolean, isDS: boolean, revision: byte, capacity: int): DiscretionaryAcl;
     new(isContainer: boolean, isDS: boolean, capacity: int): DiscretionaryAcl;
-    new(isContainer: boolean, isDS: boolean, rawAcl: RawAcl): DiscretionaryAcl;
+    new(isContainer: boolean, isDS: boolean, rawAcl: RawAcl | undefined): DiscretionaryAcl;
 };
 
 
@@ -668,7 +668,7 @@ export interface GenericAce$instance {
     readonly IsInherited: boolean;
     readonly PropagationFlags: PropagationFlags;
     Copy(): GenericAce;
-    Equals(o: unknown): boolean;
+    Equals(o: unknown | undefined): boolean;
     GetBinaryForm(binaryForm: byte[], offset: int): void;
     GetHashCode(): int;
 }
@@ -714,8 +714,8 @@ export interface GenericSecurityDescriptor$instance {
     readonly ControlFlags: ControlFlags;
     Group: SecurityIdentifier;
     Owner: SecurityIdentifier;
-    GetBinaryForm(binaryForm: byte[] | undefined, offset: int): void;
-    GetSddlForm(includeSections: AccessControlSections): string | undefined;
+    GetBinaryForm(binaryForm: byte[], offset: int): void;
+    GetSddlForm(includeSections: AccessControlSections): string;
 }
 
 
@@ -909,7 +909,7 @@ export type ObjectSecurity_1<T> = ObjectSecurity_1$instance<T>;
 
 export interface PrivilegeNotHeldException$instance extends UnauthorizedAccessException {
     readonly PrivilegeName: string | undefined;
-    GetObjectData(info: SerializationInfo | undefined, context: StreamingContext): void;
+    GetObjectData(info: SerializationInfo, context: StreamingContext): void;
 }
 
 
@@ -983,9 +983,9 @@ export interface RawSecurityDescriptor$instance extends GenericSecurityDescripto
 
 
 export const RawSecurityDescriptor: {
-    new(binaryForm: byte[] | undefined, offset: int): RawSecurityDescriptor;
+    new(binaryForm: byte[], offset: int): RawSecurityDescriptor;
     new(flags: ControlFlags, owner: SecurityIdentifier | undefined, group: SecurityIdentifier | undefined, systemAcl: RawAcl | undefined, discretionaryAcl: RawAcl | undefined): RawSecurityDescriptor;
-    new(sddlForm: string | undefined): RawSecurityDescriptor;
+    new(sddlForm: string): RawSecurityDescriptor;
 };
 
 

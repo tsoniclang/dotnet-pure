@@ -114,8 +114,8 @@ export interface ObservableCollection_1$instance<T> extends Collection_1$instanc
 
 export const ObservableCollection_1: {
     new<T>(): ObservableCollection_1<T>;
-    new<T>(collection: IEnumerable_1<T | undefined> | undefined): ObservableCollection_1<T>;
-    new<T>(list: List_1<T | undefined> | undefined): ObservableCollection_1<T>;
+    new<T>(collection: IEnumerable_1<T>): ObservableCollection_1<T>;
+    new<T>(list: List_1<T>): ObservableCollection_1<T>;
 };
 
 
@@ -261,7 +261,7 @@ export interface ReadOnlyObservableCollection_1$instance<T> extends ReadOnlyColl
 
 
 export const ReadOnlyObservableCollection_1: {
-    new<T>(list: ObservableCollection_1<T | undefined> | undefined): ReadOnlyObservableCollection_1<T>;
+    new<T>(list: ObservableCollection_1<T>): ReadOnlyObservableCollection_1<T>;
 };
 
 

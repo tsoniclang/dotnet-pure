@@ -87,7 +87,7 @@ export interface IEnumerator$instance {
 export type IEnumerator = IEnumerator$instance;
 
 export interface IEqualityComparer$instance {
-    Equals(x: unknown, y: unknown): boolean;
+    Equals(x: unknown | undefined, y: unknown | undefined): boolean;
     GetHashCode(obj: unknown): int;
 }
 
@@ -159,37 +159,37 @@ export interface ArrayList$instance {
     readonly IsSynchronized: boolean;
     Item: unknown;
     readonly SyncRoot: unknown;
-    Add(value: unknown): int;
+    Add(value: unknown | undefined): int;
     AddRange(c: ICollection): void;
-    BinarySearch(index: int, count: int, value: unknown, comparer: IComparer): int;
-    BinarySearch(value: unknown): int;
-    BinarySearch(value: unknown, comparer: IComparer): int;
+    BinarySearch(index: int, count: int, value: unknown | undefined, comparer: IComparer | undefined): int;
+    BinarySearch(value: unknown | undefined): int;
+    BinarySearch(value: unknown | undefined, comparer: IComparer | undefined): int;
     Clear(): void;
     Clone(): unknown;
-    Contains(item: unknown): boolean;
+    Contains(item: unknown | undefined): boolean;
     CopyTo(array: ClrArray): void;
     CopyTo(array: ClrArray, arrayIndex: int): void;
     CopyTo(index: int, array: ClrArray, arrayIndex: int, count: int): void;
     GetEnumerator(): IEnumerator;
     GetEnumerator(index: int, count: int): IEnumerator;
     GetRange(index: int, count: int): ArrayList;
-    IndexOf(value: unknown): int;
-    IndexOf(value: unknown, startIndex: int): int;
-    IndexOf(value: unknown, startIndex: int, count: int): int;
-    Insert(index: int, value: unknown): void;
+    IndexOf(value: unknown | undefined): int;
+    IndexOf(value: unknown | undefined, startIndex: int): int;
+    IndexOf(value: unknown | undefined, startIndex: int, count: int): int;
+    Insert(index: int, value: unknown | undefined): void;
     InsertRange(index: int, c: ICollection): void;
-    LastIndexOf(value: unknown): int;
-    LastIndexOf(value: unknown, startIndex: int): int;
-    LastIndexOf(value: unknown, startIndex: int, count: int): int;
-    Remove(obj: unknown): void;
+    LastIndexOf(value: unknown | undefined): int;
+    LastIndexOf(value: unknown | undefined, startIndex: int): int;
+    LastIndexOf(value: unknown | undefined, startIndex: int, count: int): int;
+    Remove(obj: unknown | undefined): void;
     RemoveAt(index: int): void;
     RemoveRange(index: int, count: int): void;
     Reverse(): void;
     Reverse(index: int, count: int): void;
     SetRange(index: int, c: ICollection): void;
     Sort(): void;
-    Sort(comparer: IComparer): void;
-    Sort(index: int, count: int, comparer: IComparer): void;
+    Sort(comparer: IComparer | undefined): void;
+    Sort(index: int, count: int, comparer: IComparer | undefined): void;
     ToArray(): (unknown | undefined)[];
     ToArray(type_: Type): ClrArray;
     TrimToSize(): void;
@@ -270,7 +270,7 @@ export type BitArray = BitArray$instance & __BitArray$views;
 
 
 export interface CaseInsensitiveComparer$instance {
-    Compare(a: unknown, b: unknown): int;
+    Compare(a: unknown | undefined, b: unknown | undefined): int;
 }
 
 
@@ -285,6 +285,8 @@ export const CaseInsensitiveComparer: {
 export interface __CaseInsensitiveComparer$views {
     As_IComparer(): IComparer$instance;
 }
+
+export interface CaseInsensitiveComparer$instance extends IComparer$instance {}
 
 export type CaseInsensitiveComparer = CaseInsensitiveComparer$instance & __CaseInsensitiveComparer$views;
 
@@ -332,7 +334,7 @@ export type CollectionBase = CollectionBase$instance & __CollectionBase$views;
 
 
 export interface Comparer$instance {
-    Compare(a: unknown, b: unknown): int;
+    Compare(a: unknown | undefined, b: unknown | undefined): int;
     GetObjectData(info: SerializationInfo, context: StreamingContext): void;
 }
 
@@ -349,7 +351,7 @@ export interface __Comparer$views {
     As_ISerializable(): System_Runtime_Serialization_Internal.ISerializable$instance;
 }
 
-export interface Comparer$instance extends System_Runtime_Serialization_Internal.ISerializable$instance {}
+export interface Comparer$instance extends IComparer$instance, System_Runtime_Serialization_Internal.ISerializable$instance {}
 
 export type Comparer = Comparer$instance & __Comparer$views;
 
@@ -389,11 +391,11 @@ export interface Hashtable$instance {
     Clone(): unknown;
     Contains(key: unknown): boolean;
     ContainsKey(key: unknown): boolean;
-    ContainsValue(value: unknown): boolean;
+    ContainsValue(value: unknown | undefined): boolean;
     CopyTo(array: ClrArray, arrayIndex: int): void;
     GetEnumerator(): IDictionaryEnumerator;
     GetObjectData(info: SerializationInfo, context: StreamingContext): void;
-    OnDeserialization(sender: unknown): void;
+    OnDeserialization(sender: unknown | undefined): void;
     Remove(key: unknown): void;
 }
 
@@ -402,17 +404,17 @@ export const Hashtable: {
     new(): Hashtable;
     new(capacity: int): Hashtable;
     new(capacity: int, loadFactor: float): Hashtable;
-    new(capacity: int, loadFactor: float, equalityComparer: IEqualityComparer): Hashtable;
-    new(hcp: IHashCodeProvider, comparer: IComparer): Hashtable;
-    new(equalityComparer: IEqualityComparer): Hashtable;
-    new(capacity: int, hcp: IHashCodeProvider, comparer: IComparer): Hashtable;
-    new(capacity: int, equalityComparer: IEqualityComparer): Hashtable;
+    new(capacity: int, loadFactor: float, equalityComparer: IEqualityComparer | undefined): Hashtable;
+    new(hcp: IHashCodeProvider | undefined, comparer: IComparer | undefined): Hashtable;
+    new(equalityComparer: IEqualityComparer | undefined): Hashtable;
+    new(capacity: int, hcp: IHashCodeProvider | undefined, comparer: IComparer | undefined): Hashtable;
+    new(capacity: int, equalityComparer: IEqualityComparer | undefined): Hashtable;
     new(d: IDictionary): Hashtable;
     new(d: IDictionary, loadFactor: float): Hashtable;
-    new(d: IDictionary, hcp: IHashCodeProvider, comparer: IComparer): Hashtable;
+    new(d: IDictionary, hcp: IHashCodeProvider | undefined, comparer: IComparer | undefined): Hashtable;
     new(d: IDictionary, equalityComparer: IEqualityComparer | undefined): Hashtable;
-    new(capacity: int, loadFactor: float, hcp: IHashCodeProvider, comparer: IComparer): Hashtable;
-    new(d: IDictionary, loadFactor: float, hcp: IHashCodeProvider, comparer: IComparer): Hashtable;
+    new(capacity: int, loadFactor: float, hcp: IHashCodeProvider | undefined, comparer: IComparer | undefined): Hashtable;
+    new(d: IDictionary, loadFactor: float, hcp: IHashCodeProvider | undefined, comparer: IComparer | undefined): Hashtable;
     new(d: IDictionary, loadFactor: float, equalityComparer: IEqualityComparer | undefined): Hashtable;
     Synchronized(table: Hashtable): Hashtable;
 };
@@ -427,7 +429,7 @@ export interface __Hashtable$views {
     As_ISerializable(): System_Runtime_Serialization_Internal.ISerializable$instance;
 }
 
-export interface Hashtable$instance extends System_Internal.ICloneable$instance, System_Runtime_Serialization_Internal.ISerializable$instance {}
+export interface Hashtable$instance extends System_Internal.ICloneable$instance, System_Runtime_Serialization_Internal.IDeserializationCallback$instance, System_Runtime_Serialization_Internal.ISerializable$instance {}
 
 export type Hashtable = Hashtable$instance & __Hashtable$views;
 
@@ -470,10 +472,10 @@ export interface Queue$instance {
     readonly SyncRoot: unknown;
     Clear(): void;
     Clone(): unknown;
-    Contains(obj: unknown): boolean;
+    Contains(obj: unknown | undefined): boolean;
     CopyTo(array: ClrArray, index: int): void;
     Dequeue(): unknown;
-    Enqueue(obj: unknown): void;
+    Enqueue(obj: unknown | undefined): void;
     GetEnumerator(): IEnumerator;
     Peek(): unknown;
     ToArray(): (unknown | undefined)[];
@@ -534,18 +536,18 @@ export interface SortedList$instance {
     Clone(): unknown;
     Contains(key: unknown): boolean;
     ContainsKey(key: unknown): boolean;
-    ContainsValue(value: unknown): boolean;
+    ContainsValue(value: unknown | undefined): boolean;
     CopyTo(array: ClrArray, arrayIndex: int): void;
-    GetByIndex(index: int): unknown;
+    GetByIndex(index: int): unknown | undefined;
     GetEnumerator(): IDictionaryEnumerator;
     GetKey(index: int): unknown;
     GetKeyList(): IList;
     GetValueList(): IList;
     IndexOfKey(key: unknown): int;
-    IndexOfValue(value: unknown): int;
+    IndexOfValue(value: unknown | undefined): int;
     Remove(key: unknown): void;
     RemoveAt(index: int): void;
-    SetByIndex(index: int, value: unknown): void;
+    SetByIndex(index: int, value: unknown | undefined): void;
     TrimToSize(): void;
 }
 
@@ -553,8 +555,8 @@ export interface SortedList$instance {
 export const SortedList: {
     new(): SortedList;
     new(initialCapacity: int): SortedList;
-    new(comparer: IComparer): SortedList;
-    new(comparer: IComparer, capacity: int): SortedList;
+    new(comparer: IComparer | undefined): SortedList;
+    new(comparer: IComparer | undefined, capacity: int): SortedList;
     new(d: IDictionary): SortedList;
     new(d: IDictionary, comparer: IComparer | undefined): SortedList;
     Synchronized(list: SortedList): SortedList;
@@ -579,12 +581,12 @@ export interface Stack$instance {
     readonly SyncRoot: unknown;
     Clear(): void;
     Clone(): unknown;
-    Contains(obj: unknown): boolean;
+    Contains(obj: unknown | undefined): boolean;
     CopyTo(array: ClrArray, index: int): void;
     GetEnumerator(): IEnumerator;
     Peek(): unknown;
     Pop(): unknown;
-    Push(obj: unknown): void;
+    Push(obj: unknown | undefined): void;
     ToArray(): (unknown | undefined)[];
 }
 

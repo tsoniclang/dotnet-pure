@@ -45,8 +45,8 @@ export interface FrameworkName$instance {
     readonly Identifier: string;
     readonly Profile: string;
     readonly Version: Version;
-    Equals(obj: unknown): boolean;
-    Equals(other: FrameworkName): boolean;
+    Equals(obj: unknown | undefined): boolean;
+    Equals(other: FrameworkName | undefined): boolean;
     GetHashCode(): int;
     ToString(): string;
 }
@@ -76,8 +76,8 @@ export interface ObsoletedOSPlatformAttribute$instance extends OSPlatformAttribu
 
 
 export const ObsoletedOSPlatformAttribute: {
-    new(platformName: string | undefined): ObsoletedOSPlatformAttribute;
-    new(platformName: string | undefined, message: string | undefined): ObsoletedOSPlatformAttribute;
+    new(platformName: string): ObsoletedOSPlatformAttribute;
+    new(platformName: string, message: string | undefined): ObsoletedOSPlatformAttribute;
 };
 
 
@@ -205,7 +205,7 @@ export const UnsupportedOSPlatformGuardAttribute: {
 export type UnsupportedOSPlatformGuardAttribute = UnsupportedOSPlatformGuardAttribute$instance;
 
 export abstract class VersioningHelper$instance {
-    static MakeVersionSafeName(name: string, from_: ResourceScope, to: ResourceScope, type_: Type): string;
+    static MakeVersionSafeName(name: string | undefined, from_: ResourceScope, to: ResourceScope, type_: Type | undefined): string;
     static MakeVersionSafeName(name: string | undefined, from_: ResourceScope, to: ResourceScope): string;
 }
 

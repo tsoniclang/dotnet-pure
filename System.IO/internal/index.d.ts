@@ -561,8 +561,8 @@ export interface FileLoadException$instance extends IOException$instance {
     readonly FileName: string;
     readonly FusionLog: string | undefined;
     readonly Message: string;
-    GetObjectData(info: SerializationInfo | undefined, context: StreamingContext): void;
-    ToString(): string | undefined;
+    GetObjectData(info: SerializationInfo, context: StreamingContext): void;
+    ToString(): string;
 }
 
 
@@ -586,8 +586,8 @@ export interface FileNotFoundException$instance extends IOException$instance {
     readonly FileName: string;
     readonly FusionLog: string | undefined;
     readonly Message: string;
-    GetObjectData(info: SerializationInfo | undefined, context: StreamingContext): void;
-    ToString(): string | undefined;
+    GetObjectData(info: SerializationInfo, context: StreamingContext): void;
+    ToString(): string;
 }
 
 
@@ -732,7 +732,7 @@ export interface FileSystemInfo$instance extends MarshalByRefObject {
     Delete(): void;
     GetObjectData(info: SerializationInfo, context: StreamingContext): void;
     Refresh(): void;
-    ResolveLinkTarget(returnFinalTarget: boolean): FileSystemInfo;
+    ResolveLinkTarget(returnFinalTarget: boolean): FileSystemInfo | undefined;
     ToString(): string;
 }
 
@@ -771,8 +771,8 @@ export interface FileSystemWatcher$instance extends Component {
 
 export const FileSystemWatcher: {
     new(): FileSystemWatcher;
-    new(path: string | undefined): FileSystemWatcher;
-    new(path: string | undefined, filter: string | undefined): FileSystemWatcher;
+    new(path: string): FileSystemWatcher;
+    new(path: string, filter: string): FileSystemWatcher;
 };
 
 
@@ -1027,7 +1027,7 @@ export interface StreamReader$instance extends TextReader$instance {
     ReadBlockAsync(buffer: Memory_1<System_Internal.Char>, cancellationToken?: CancellationToken): ValueTask_1<System_Internal.Int32>;
     ReadBlockAsync(buffer: char[], index: int, count: int): Task_1<System_Internal.Int32>;
     ReadBlockAsync(buffer: Memory_1<System_Internal.Char>, cancellationToken?: CancellationToken): ValueTask_1<System_Internal.Int32>;
-    ReadLine(): string;
+    ReadLine(): string | undefined;
     ReadLineAsync(): Task_1<string | undefined>;
     ReadLineAsync(cancellationToken: CancellationToken): ValueTask_1<System_Internal.String>;
     ReadLineAsync(): Task_1<string | undefined>;
@@ -1075,13 +1075,13 @@ export interface StreamWriter$instance extends TextWriter$instance {
     FlushAsync(): Task;
     FlushAsync(cancellationToken: CancellationToken): Task;
     Write(value: char): void;
-    Write(buffer: char[]): void;
+    Write(buffer: char[] | undefined): void;
     Write(buffer: char[], index: int, count: int): void;
     Write(buffer: ReadOnlySpan_1<System_Internal.Char>): void;
-    Write(value: string): void;
+    Write(value: string | undefined): void;
     Write(format: string, arg0: unknown | undefined): void;
-    Write(format: string, arg0: unknown, arg1: unknown): void;
-    Write(format: string, arg0: unknown, arg1: unknown, arg2: unknown): void;
+    Write(format: string, arg0: unknown | undefined, arg1: unknown | undefined): void;
+    Write(format: string, arg0: unknown | undefined, arg1: unknown | undefined, arg2: unknown | undefined): void;
     Write(format: string, ...arg: unknown[]): void;
     Write(format: string, arg: ReadOnlySpan_1<unknown>): void;
     Write(buffer: ReadOnlySpan_1<System_Internal.Char>): void;
@@ -1093,8 +1093,8 @@ export interface StreamWriter$instance extends TextWriter$instance {
     Write(value: float): void;
     Write(value: double): void;
     Write(value: decimal): void;
-    Write(value: unknown): void;
-    Write(value: StringBuilder): void;
+    Write(value: unknown | undefined): void;
+    Write(value: StringBuilder | undefined): void;
     Write(format: string, arg: ReadOnlySpan_1<unknown>): void;
     WriteAsync(value: char): Task;
     WriteAsync(value: string | undefined): Task;
@@ -1103,16 +1103,16 @@ export interface StreamWriter$instance extends TextWriter$instance {
     WriteAsync(value: StringBuilder | undefined, cancellationToken?: CancellationToken): Task;
     WriteAsync(buffer: char[] | undefined): Task;
     WriteAsync(buffer: ReadOnlyMemory_1<System_Internal.Char>, cancellationToken?: CancellationToken): Task;
-    WriteLine(value: string): void;
+    WriteLine(value: string | undefined): void;
     WriteLine(buffer: ReadOnlySpan_1<System_Internal.Char>): void;
     WriteLine(format: string, arg0: unknown | undefined): void;
-    WriteLine(format: string, arg0: unknown, arg1: unknown): void;
-    WriteLine(format: string, arg0: unknown, arg1: unknown, arg2: unknown): void;
+    WriteLine(format: string, arg0: unknown | undefined, arg1: unknown | undefined): void;
+    WriteLine(format: string, arg0: unknown | undefined, arg1: unknown | undefined, arg2: unknown | undefined): void;
     WriteLine(format: string, ...arg: unknown[]): void;
     WriteLine(format: string, arg: ReadOnlySpan_1<unknown>): void;
     WriteLine(): void;
     WriteLine(value: char): void;
-    WriteLine(buffer: char[]): void;
+    WriteLine(buffer: char[] | undefined): void;
     WriteLine(buffer: char[], index: int, count: int): void;
     WriteLine(buffer: ReadOnlySpan_1<System_Internal.Char>): void;
     WriteLine(value: boolean): void;
@@ -1123,8 +1123,8 @@ export interface StreamWriter$instance extends TextWriter$instance {
     WriteLine(value: float): void;
     WriteLine(value: double): void;
     WriteLine(value: decimal): void;
-    WriteLine(value: StringBuilder): void;
-    WriteLine(value: unknown): void;
+    WriteLine(value: StringBuilder | undefined): void;
+    WriteLine(value: unknown | undefined): void;
     WriteLine(format: string, arg: ReadOnlySpan_1<unknown>): void;
     WriteLineAsync(): Task;
     WriteLineAsync(value: char): Task;
@@ -1178,7 +1178,7 @@ export interface StringReader$instance extends TextReader$instance {
     ReadBlockAsync(buffer: Memory_1<System_Internal.Char>, cancellationToken?: CancellationToken): ValueTask_1<System_Internal.Int32>;
     ReadBlockAsync(buffer: char[], index: int, count: int): Task_1<System_Internal.Int32>;
     ReadBlockAsync(buffer: Memory_1<System_Internal.Char>, cancellationToken?: CancellationToken): ValueTask_1<System_Internal.Int32>;
-    ReadLine(): string;
+    ReadLine(): string | undefined;
     ReadLineAsync(): Task_1<string | undefined>;
     ReadLineAsync(cancellationToken: CancellationToken): ValueTask_1<System_Internal.String>;
     ReadLineAsync(): Task_1<string | undefined>;
@@ -1215,9 +1215,9 @@ export interface StringWriter$instance extends TextWriter$instance {
     Write(value: char): void;
     Write(buffer: char[], index: int, count: int): void;
     Write(buffer: ReadOnlySpan_1<System_Internal.Char>): void;
-    Write(value: string): void;
-    Write(value: StringBuilder): void;
-    Write(buffer: char[]): void;
+    Write(value: string | undefined): void;
+    Write(value: StringBuilder | undefined): void;
+    Write(buffer: char[] | undefined): void;
     Write(buffer: ReadOnlySpan_1<System_Internal.Char>): void;
     Write(value: boolean): void;
     Write(value: int): void;
@@ -1227,10 +1227,10 @@ export interface StringWriter$instance extends TextWriter$instance {
     Write(value: float): void;
     Write(value: double): void;
     Write(value: decimal): void;
-    Write(value: unknown): void;
+    Write(value: unknown | undefined): void;
     Write(format: string, arg0: unknown | undefined): void;
-    Write(format: string, arg0: unknown, arg1: unknown): void;
-    Write(format: string, arg0: unknown, arg1: unknown, arg2: unknown): void;
+    Write(format: string, arg0: unknown | undefined, arg1: unknown | undefined): void;
+    Write(format: string, arg0: unknown | undefined, arg1: unknown | undefined, arg2: unknown | undefined): void;
     Write(format: string, ...arg: unknown[]): void;
     Write(format: string, arg: ReadOnlySpan_1<unknown>): void;
     WriteAsync(value: char): Task;
@@ -1241,10 +1241,10 @@ export interface StringWriter$instance extends TextWriter$instance {
     WriteAsync(buffer: char[] | undefined): Task;
     WriteAsync(buffer: ReadOnlyMemory_1<System_Internal.Char>, cancellationToken?: CancellationToken): Task;
     WriteLine(buffer: ReadOnlySpan_1<System_Internal.Char>): void;
-    WriteLine(value: StringBuilder): void;
+    WriteLine(value: StringBuilder | undefined): void;
     WriteLine(): void;
     WriteLine(value: char): void;
-    WriteLine(buffer: char[]): void;
+    WriteLine(buffer: char[] | undefined): void;
     WriteLine(buffer: char[], index: int, count: int): void;
     WriteLine(buffer: ReadOnlySpan_1<System_Internal.Char>): void;
     WriteLine(value: boolean): void;
@@ -1255,11 +1255,11 @@ export interface StringWriter$instance extends TextWriter$instance {
     WriteLine(value: float): void;
     WriteLine(value: double): void;
     WriteLine(value: decimal): void;
-    WriteLine(value: string): void;
-    WriteLine(value: unknown): void;
+    WriteLine(value: string | undefined): void;
+    WriteLine(value: unknown | undefined): void;
     WriteLine(format: string, arg0: unknown | undefined): void;
-    WriteLine(format: string, arg0: unknown, arg1: unknown): void;
-    WriteLine(format: string, arg0: unknown, arg1: unknown, arg2: unknown): void;
+    WriteLine(format: string, arg0: unknown | undefined, arg1: unknown | undefined): void;
+    WriteLine(format: string, arg0: unknown | undefined, arg1: unknown | undefined, arg2: unknown | undefined): void;
     WriteLine(format: string, ...arg: unknown[]): void;
     WriteLine(format: string, arg: ReadOnlySpan_1<unknown>): void;
     WriteLineAsync(value: char): Task;
@@ -1275,7 +1275,7 @@ export interface StringWriter$instance extends TextWriter$instance {
 
 export const StringWriter: {
     new(): StringWriter;
-    new(formatProvider: IFormatProvider): StringWriter;
+    new(formatProvider: IFormatProvider | undefined): StringWriter;
     new(sb: StringBuilder): StringWriter;
     new(sb: StringBuilder, formatProvider: IFormatProvider | undefined): StringWriter;
 };
@@ -1302,7 +1302,7 @@ export interface TextReader$instance extends MarshalByRefObject {
     ReadBlock(buffer: Span_1<System_Internal.Char>): int;
     ReadBlockAsync(buffer: char[], index: int, count: int): Task_1<System_Internal.Int32>;
     ReadBlockAsync(buffer: Memory_1<System_Internal.Char>, cancellationToken?: CancellationToken): ValueTask_1<System_Internal.Int32>;
-    ReadLine(): string;
+    ReadLine(): string | undefined;
     ReadLineAsync(): Task_1<string | undefined>;
     ReadLineAsync(cancellationToken: CancellationToken): ValueTask_1<System_Internal.String>;
     ReadToEnd(): string;
@@ -1337,7 +1337,7 @@ export interface TextWriter$instance extends MarshalByRefObject {
     FlushAsync(): Task;
     FlushAsync(cancellationToken: CancellationToken): Task;
     Write(value: char): void;
-    Write(buffer: char[]): void;
+    Write(buffer: char[] | undefined): void;
     Write(buffer: char[], index: int, count: int): void;
     Write(buffer: ReadOnlySpan_1<System_Internal.Char>): void;
     Write(value: boolean): void;
@@ -1348,12 +1348,12 @@ export interface TextWriter$instance extends MarshalByRefObject {
     Write(value: float): void;
     Write(value: double): void;
     Write(value: decimal): void;
-    Write(value: string): void;
-    Write(value: unknown): void;
-    Write(value: StringBuilder): void;
+    Write(value: string | undefined): void;
+    Write(value: unknown | undefined): void;
+    Write(value: StringBuilder | undefined): void;
     Write(format: string, arg0: unknown | undefined): void;
-    Write(format: string, arg0: unknown, arg1: unknown): void;
-    Write(format: string, arg0: unknown, arg1: unknown, arg2: unknown): void;
+    Write(format: string, arg0: unknown | undefined, arg1: unknown | undefined): void;
+    Write(format: string, arg0: unknown | undefined, arg1: unknown | undefined, arg2: unknown | undefined): void;
     Write(format: string, ...arg: unknown[]): void;
     Write(format: string, arg: ReadOnlySpan_1<unknown>): void;
     WriteAsync(value: char): Task;
@@ -1364,7 +1364,7 @@ export interface TextWriter$instance extends MarshalByRefObject {
     WriteAsync(buffer: ReadOnlyMemory_1<System_Internal.Char>, cancellationToken?: CancellationToken): Task;
     WriteLine(): void;
     WriteLine(value: char): void;
-    WriteLine(buffer: char[]): void;
+    WriteLine(buffer: char[] | undefined): void;
     WriteLine(buffer: char[], index: int, count: int): void;
     WriteLine(buffer: ReadOnlySpan_1<System_Internal.Char>): void;
     WriteLine(value: boolean): void;
@@ -1375,12 +1375,12 @@ export interface TextWriter$instance extends MarshalByRefObject {
     WriteLine(value: float): void;
     WriteLine(value: double): void;
     WriteLine(value: decimal): void;
-    WriteLine(value: string): void;
-    WriteLine(value: StringBuilder): void;
-    WriteLine(value: unknown): void;
+    WriteLine(value: string | undefined): void;
+    WriteLine(value: StringBuilder | undefined): void;
+    WriteLine(value: unknown | undefined): void;
     WriteLine(format: string, arg0: unknown | undefined): void;
-    WriteLine(format: string, arg0: unknown, arg1: unknown): void;
-    WriteLine(format: string, arg0: unknown, arg1: unknown, arg2: unknown): void;
+    WriteLine(format: string, arg0: unknown | undefined, arg1: unknown | undefined): void;
+    WriteLine(format: string, arg0: unknown | undefined, arg1: unknown | undefined, arg2: unknown | undefined): void;
     WriteLine(format: string, ...arg: unknown[]): void;
     WriteLine(format: string, arg: ReadOnlySpan_1<unknown>): void;
     WriteLineAsync(value: char): Task;
@@ -1533,7 +1533,7 @@ export abstract class Directory$instance {
     static EnumerateFileSystemEntries(path: string, searchPattern: string, searchOption: SearchOption): IEnumerable_1<System_Internal.String>;
     static EnumerateFileSystemEntries(path: string, searchPattern: string): IEnumerable_1<System_Internal.String>;
     static EnumerateFileSystemEntries(path: string): IEnumerable_1<System_Internal.String>;
-    static Exists(path: string): boolean;
+    static Exists(path: string | undefined): boolean;
     static GetCreationTime(path: string): DateTime;
     static GetCreationTimeUtc(path: string): DateTime;
     static GetCurrentDirectory(): string;
@@ -1598,7 +1598,7 @@ export abstract class File$instance {
     static Decrypt(path: string): void;
     static Delete(path: string): void;
     static Encrypt(path: string): void;
-    static Exists(path: string): boolean;
+    static Exists(path: string | undefined): boolean;
     static GetAttributes(fileHandle: SafeFileHandle): FileAttributes;
     static GetAttributes(path: string): FileAttributes;
     static GetCreationTime(fileHandle: SafeFileHandle): DateTime;
@@ -1704,46 +1704,46 @@ export abstract class Path$instance {
     static readonly VolumeSeparatorChar: char;
     static readonly PathSeparator: char;
     static readonly InvalidPathChars: char[];
-    static ChangeExtension(path: string, extension: string): string;
+    static ChangeExtension(path: string | undefined, extension: string | undefined): string | undefined;
     static Combine(paths: ReadOnlySpan_1<System_Internal.String>): string;
     static Combine(path1: string, path2: string, path3: string, path4: string): string;
     static Combine(path1: string, path2: string, path3: string): string;
     static Combine(path1: string, path2: string): string;
     static Combine(...paths: string[]): string;
     static EndsInDirectorySeparator(path: ReadOnlySpan_1<System_Internal.Char>): boolean;
-    static EndsInDirectorySeparator(path: string): boolean;
-    static Exists(path: string): boolean;
+    static EndsInDirectorySeparator(path: string | undefined): boolean;
+    static Exists(path: string | undefined): boolean;
     static GetDirectoryName(path: ReadOnlySpan_1<System_Internal.Char>): ReadOnlySpan_1<System_Internal.Char>;
-    static GetDirectoryName(path: string): string;
+    static GetDirectoryName(path: string | undefined): string | undefined;
     static GetExtension(path: ReadOnlySpan_1<System_Internal.Char>): ReadOnlySpan_1<System_Internal.Char>;
-    static GetExtension(path: string): string;
+    static GetExtension(path: string | undefined): string | undefined;
     static GetFileName(path: ReadOnlySpan_1<System_Internal.Char>): ReadOnlySpan_1<System_Internal.Char>;
-    static GetFileName(path: string): string;
+    static GetFileName(path: string | undefined): string | undefined;
     static GetFileNameWithoutExtension(path: ReadOnlySpan_1<System_Internal.Char>): ReadOnlySpan_1<System_Internal.Char>;
-    static GetFileNameWithoutExtension(path: string): string;
+    static GetFileNameWithoutExtension(path: string | undefined): string | undefined;
     static GetFullPath(path: string, basePath: string): string;
     static GetFullPath(path: string): string;
     static GetInvalidFileNameChars(): char[];
     static GetInvalidPathChars(): char[];
     static GetPathRoot(path: ReadOnlySpan_1<System_Internal.Char>): ReadOnlySpan_1<System_Internal.Char>;
-    static GetPathRoot(path: string): string;
+    static GetPathRoot(path: string | undefined): string | undefined;
     static GetRandomFileName(): string;
     static GetRelativePath(relativeTo: string, path: string): string;
     static GetTempFileName(): string;
     static GetTempPath(): string;
     static HasExtension(path: ReadOnlySpan_1<System_Internal.Char>): boolean;
-    static HasExtension(path: string): boolean;
+    static HasExtension(path: string | undefined): boolean;
     static IsPathFullyQualified(path: ReadOnlySpan_1<System_Internal.Char>): boolean;
     static IsPathFullyQualified(path: string): boolean;
     static IsPathRooted(path: ReadOnlySpan_1<System_Internal.Char>): boolean;
-    static IsPathRooted(path: string): boolean;
+    static IsPathRooted(path: string | undefined): boolean;
     static Join(path1: ReadOnlySpan_1<System_Internal.Char>, path2: ReadOnlySpan_1<System_Internal.Char>, path3: ReadOnlySpan_1<System_Internal.Char>, path4: ReadOnlySpan_1<System_Internal.Char>): string;
     static Join(path1: ReadOnlySpan_1<System_Internal.Char>, path2: ReadOnlySpan_1<System_Internal.Char>, path3: ReadOnlySpan_1<System_Internal.Char>): string;
     static Join(path1: ReadOnlySpan_1<System_Internal.Char>, path2: ReadOnlySpan_1<System_Internal.Char>): string;
     static Join(paths: ReadOnlySpan_1<System_Internal.String>): string;
-    static Join(path1: string, path2: string, path3: string, path4: string): string;
-    static Join(path1: string, path2: string, path3: string): string;
-    static Join(path1: string, path2: string): string;
+    static Join(path1: string | undefined, path2: string | undefined, path3: string | undefined, path4: string | undefined): string;
+    static Join(path1: string | undefined, path2: string | undefined, path3: string | undefined): string;
+    static Join(path1: string | undefined, path2: string | undefined): string;
     static Join(...paths: string[]): string;
     static TrimEndingDirectorySeparator(path: ReadOnlySpan_1<System_Internal.Char>): ReadOnlySpan_1<System_Internal.Char>;
     static TrimEndingDirectorySeparator(path: string): string;

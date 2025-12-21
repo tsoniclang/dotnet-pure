@@ -186,7 +186,7 @@ export type IIdentity = IIdentity$instance;
 
 export interface IPrincipal$instance {
     readonly Identity: IIdentity | undefined;
-    IsInRole(role: string | undefined): boolean;
+    IsInRole(role: string): boolean;
 }
 
 
@@ -216,7 +216,7 @@ export type GenericIdentity = GenericIdentity$instance & __GenericIdentity$views
 
 export interface GenericPrincipal$instance extends ClaimsPrincipal {
     readonly Identity: IIdentity | IIdentity | undefined;
-    IsInRole(role: string): boolean;
+    IsInRole(role: string | undefined): boolean;
 }
 
 
@@ -240,8 +240,8 @@ export interface IdentityNotMappedException$instance extends SystemException {
 
 export const IdentityNotMappedException: {
     new(): IdentityNotMappedException;
-    new(message: string): IdentityNotMappedException;
-    new(message: string, inner: Exception): IdentityNotMappedException;
+    new(message: string | undefined): IdentityNotMappedException;
+    new(message: string | undefined, inner: Exception | undefined): IdentityNotMappedException;
 };
 
 
@@ -254,7 +254,7 @@ export type IdentityNotMappedException = IdentityNotMappedException$instance & _
 
 export interface IdentityReference$instance {
     readonly Value: string;
-    Equals(o: unknown): boolean;
+    Equals(o: unknown | undefined): boolean;
     GetHashCode(): int;
     IsValidTargetType(targetType: Type): boolean;
     ToString(): string;
@@ -299,7 +299,7 @@ export type IdentityReferenceCollection = IdentityReferenceCollection$instance &
 
 export interface NTAccount$instance extends IdentityReference {
     readonly Value: string;
-    Equals(o: unknown): boolean;
+    Equals(o: unknown | undefined): boolean;
     GetHashCode(): int;
     IsValidTargetType(targetType: Type): boolean;
     ToString(): string;
@@ -319,8 +319,8 @@ export interface SecurityIdentifier$instance extends IdentityReference {
     readonly AccountDomainSid: SecurityIdentifier | undefined;
     readonly BinaryLength: int;
     readonly Value: string;
-    CompareTo(sid: SecurityIdentifier): int;
-    Equals(o: unknown): boolean;
+    CompareTo(sid: SecurityIdentifier | undefined): int;
+    Equals(o: unknown | undefined): boolean;
     Equals(sid: SecurityIdentifier): boolean;
     GetBinaryForm(binaryForm: byte[], offset: int): void;
     GetHashCode(): int;
@@ -336,7 +336,7 @@ export interface SecurityIdentifier$instance extends IdentityReference {
 export const SecurityIdentifier: {
     new(binaryForm: byte[], offset: int): SecurityIdentifier;
     new(binaryForm: nint): SecurityIdentifier;
-    new(sidType: WellKnownSidType, domainSid: SecurityIdentifier): SecurityIdentifier;
+    new(sidType: WellKnownSidType, domainSid: SecurityIdentifier | undefined): SecurityIdentifier;
     new(sddlForm: string): SecurityIdentifier;
     readonly MaxBinaryLength: int;
     readonly MinBinaryLength: int;
@@ -349,8 +349,6 @@ export interface __SecurityIdentifier$views {
     // Structural method bridges for numeric interface constraints
     CompareTo(obj: unknown): int;
 }
-
-export interface SecurityIdentifier$instance extends System_Internal.IComparable_1$instance<SecurityIdentifier> {}
 
 export type SecurityIdentifier = SecurityIdentifier$instance & __SecurityIdentifier$views;
 
@@ -386,7 +384,7 @@ export const WindowsIdentity: {
     readonly DefaultIssuer: string;
     GetAnonymous(): WindowsIdentity;
     GetCurrent(): WindowsIdentity;
-    GetCurrent(ifImpersonating: boolean): WindowsIdentity;
+    GetCurrent(ifImpersonating: boolean): WindowsIdentity | undefined;
     GetCurrent(desiredAccess: TokenAccessLevels): WindowsIdentity;
     RunImpersonated<T>(safeAccessTokenHandle: SafeAccessTokenHandle, func: Func_1<T>): T;
     RunImpersonated(safeAccessTokenHandle: SafeAccessTokenHandle, action: Action): void;

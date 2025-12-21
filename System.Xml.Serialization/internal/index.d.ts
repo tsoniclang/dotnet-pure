@@ -50,7 +50,7 @@ export type XmlElementEventHandler = (sender: unknown | undefined, e: XmlElement
 export type XmlNodeEventHandler = (sender: unknown | undefined, e: XmlNodeEventArgs) => void;
 
 
-export type XmlSerializationCollectionFixupCallback = (collection: unknown, collectionItems: unknown) => void;
+export type XmlSerializationCollectionFixupCallback = (collection: unknown | undefined, collectionItems: unknown | undefined) => void;
 
 
 export type XmlSerializationFixupCallback = (fixup: unknown) => void;
@@ -139,7 +139,7 @@ export interface ImportContext$instance {
 
 
 export const ImportContext: {
-    new(identifiers: CodeIdentifiers, shareTypes: boolean): ImportContext;
+    new(identifiers: CodeIdentifiers | undefined, shareTypes: boolean): ImportContext;
 };
 
 
@@ -197,7 +197,7 @@ export interface SoapAttributes$instance {
 
 export const SoapAttributes: {
     new(): SoapAttributes;
-    new(provider: ICustomAttributeProvider | undefined): SoapAttributes;
+    new(provider: ICustomAttributeProvider): SoapAttributes;
 };
 
 
@@ -212,7 +212,7 @@ export interface SoapElementAttribute$instance extends Attribute {
 
 export const SoapElementAttribute: {
     new(): SoapElementAttribute;
-    new(elementName: string): SoapElementAttribute;
+    new(elementName: string | undefined): SoapElementAttribute;
 };
 
 
@@ -268,9 +268,9 @@ export interface SoapReflectionImporter$instance {
 
 export const SoapReflectionImporter: {
     new(): SoapReflectionImporter;
-    new(defaultNamespace: string): SoapReflectionImporter;
-    new(attributeOverrides: SoapAttributeOverrides): SoapReflectionImporter;
-    new(attributeOverrides: SoapAttributeOverrides, defaultNamespace: string): SoapReflectionImporter;
+    new(defaultNamespace: string | undefined): SoapReflectionImporter;
+    new(attributeOverrides: SoapAttributeOverrides | undefined): SoapReflectionImporter;
+    new(attributeOverrides: SoapAttributeOverrides | undefined, defaultNamespace: string | undefined): SoapReflectionImporter;
 };
 
 
@@ -509,7 +509,7 @@ export interface XmlAttributes$instance {
 
 export const XmlAttributes: {
     new(): XmlAttributes;
-    new(provider: ICustomAttributeProvider | undefined): XmlAttributes;
+    new(provider: ICustomAttributeProvider): XmlAttributes;
 };
 
 
@@ -522,7 +522,7 @@ export interface XmlChoiceIdentifierAttribute$instance extends Attribute {
 
 export const XmlChoiceIdentifierAttribute: {
     new(): XmlChoiceIdentifierAttribute;
-    new(name: string): XmlChoiceIdentifierAttribute;
+    new(name: string | undefined): XmlChoiceIdentifierAttribute;
 };
 
 
@@ -633,7 +633,7 @@ export interface XmlMapping$instance {
     readonly ElementName: string;
     readonly Namespace: string;
     readonly XsdElementName: string;
-    SetKey(key: string): void;
+    SetKey(key: string | undefined): void;
 }
 
 
@@ -724,9 +724,9 @@ export interface XmlReflectionImporter$instance {
 
 export const XmlReflectionImporter: {
     new(): XmlReflectionImporter;
-    new(defaultNamespace: string): XmlReflectionImporter;
-    new(attributeOverrides: XmlAttributeOverrides): XmlReflectionImporter;
-    new(attributeOverrides: XmlAttributeOverrides, defaultNamespace: string): XmlReflectionImporter;
+    new(defaultNamespace: string | undefined): XmlReflectionImporter;
+    new(attributeOverrides: XmlAttributeOverrides | undefined): XmlReflectionImporter;
+    new(attributeOverrides: XmlAttributeOverrides | undefined, defaultNamespace: string | undefined): XmlReflectionImporter;
 };
 
 
@@ -845,13 +845,13 @@ export interface XmlSchemas$instance extends CollectionBase {
     Add(value: unknown | undefined): int;
     AddReference(schema: XmlSchema): void;
     Clear(): void;
-    Compile(handler: ValidationEventHandler, fullCompile: boolean): void;
+    Compile(handler: ValidationEventHandler | undefined, fullCompile: boolean): void;
     Contains(schema: XmlSchema): boolean;
     Contains(value: unknown | undefined): boolean;
     CopyTo(array: ClrArray, index: int): void;
     Find(name: XmlQualifiedName, type_: Type): unknown | undefined;
     get_Item(index: int): XmlSchema;
-    get_Item(ns: string): XmlSchema;
+    get_Item(ns: string | undefined): XmlSchema;
     GetEnumerator(): IEnumerator;
     GetSchemas(ns: string | undefined): IList;
     IndexOf(schema: XmlSchema): int;
@@ -914,29 +914,29 @@ export interface XmlSerializer$instance {
     Deserialize(textReader: TextReader): unknown | undefined;
     Deserialize(xmlReader: XmlReader): unknown | undefined;
     Deserialize(xmlReader: XmlReader, events: XmlDeserializationEvents): unknown | undefined;
-    Deserialize(xmlReader: XmlReader, encodingStyle: string): unknown;
-    Deserialize(xmlReader: XmlReader, encodingStyle: string, events: XmlDeserializationEvents): unknown;
+    Deserialize(xmlReader: XmlReader, encodingStyle: string | undefined): unknown | undefined;
+    Deserialize(xmlReader: XmlReader, encodingStyle: string | undefined, events: XmlDeserializationEvents): unknown | undefined;
     Serialize(textWriter: TextWriter, o: unknown | undefined): void;
-    Serialize(textWriter: TextWriter, o: unknown, namespaces: XmlSerializerNamespaces): void;
+    Serialize(textWriter: TextWriter, o: unknown | undefined, namespaces: XmlSerializerNamespaces | undefined): void;
     Serialize(stream: Stream, o: unknown | undefined): void;
-    Serialize(stream: Stream, o: unknown, namespaces: XmlSerializerNamespaces): void;
+    Serialize(stream: Stream, o: unknown | undefined, namespaces: XmlSerializerNamespaces | undefined): void;
     Serialize(xmlWriter: XmlWriter, o: unknown | undefined): void;
-    Serialize(xmlWriter: XmlWriter, o: unknown, namespaces: XmlSerializerNamespaces): void;
-    Serialize(xmlWriter: XmlWriter, o: unknown, namespaces: XmlSerializerNamespaces, encodingStyle: string): void;
-    Serialize(xmlWriter: XmlWriter, o: unknown, namespaces: XmlSerializerNamespaces, encodingStyle: string, id: string): void;
+    Serialize(xmlWriter: XmlWriter, o: unknown | undefined, namespaces: XmlSerializerNamespaces | undefined): void;
+    Serialize(xmlWriter: XmlWriter, o: unknown | undefined, namespaces: XmlSerializerNamespaces | undefined, encodingStyle: string | undefined): void;
+    Serialize(xmlWriter: XmlWriter, o: unknown | undefined, namespaces: XmlSerializerNamespaces | undefined, encodingStyle: string | undefined, id: string | undefined): void;
 }
 
 
 export const XmlSerializer: {
-    new(type_: Type, overrides: XmlAttributeOverrides, extraTypes: Type[] | undefined, root: XmlRootAttribute, defaultNamespace: string): XmlSerializer;
+    new(type_: Type, overrides: XmlAttributeOverrides | undefined, extraTypes: Type[] | undefined, root: XmlRootAttribute | undefined, defaultNamespace: string | undefined): XmlSerializer;
     new(type_: Type, root: XmlRootAttribute | undefined): XmlSerializer;
     new(type_: Type, extraTypes: Type[] | undefined): XmlSerializer;
     new(type_: Type, overrides: XmlAttributeOverrides | undefined): XmlSerializer;
     new(xmlTypeMapping: XmlTypeMapping): XmlSerializer;
     new(type_: Type): XmlSerializer;
     new(type_: Type, defaultNamespace: string | undefined): XmlSerializer;
-    new(type_: Type, overrides: XmlAttributeOverrides, extraTypes: Type[] | undefined, root: XmlRootAttribute, defaultNamespace: string, location: string): XmlSerializer;
-    FromMappings(mappings: XmlMapping[] | undefined, type_: Type): (XmlSerializer | undefined)[];
+    new(type_: Type, overrides: XmlAttributeOverrides | undefined, extraTypes: Type[] | undefined, root: XmlRootAttribute | undefined, defaultNamespace: string | undefined, location: string | undefined): XmlSerializer;
+    FromMappings(mappings: XmlMapping[] | undefined, type_: Type | undefined): (XmlSerializer | undefined)[];
     FromMappings(mappings: XmlMapping[] | undefined): (XmlSerializer | undefined)[];
     FromTypes(types: Type[] | undefined): (XmlSerializer | undefined)[];
     GetXmlSerializerAssemblyName(type_: Type, defaultNamespace: string | undefined): string;
@@ -962,14 +962,14 @@ export const XmlSerializerAssemblyAttribute: {
 export type XmlSerializerAssemblyAttribute = XmlSerializerAssemblyAttribute$instance;
 
 export interface XmlSerializerFactory$instance {
-    CreateSerializer(type_: Type, overrides: XmlAttributeOverrides, extraTypes: Type[] | undefined, root: XmlRootAttribute, defaultNamespace: string): XmlSerializer;
+    CreateSerializer(type_: Type, overrides: XmlAttributeOverrides | undefined, extraTypes: Type[] | undefined, root: XmlRootAttribute | undefined, defaultNamespace: string | undefined): XmlSerializer;
     CreateSerializer(type_: Type, root: XmlRootAttribute | undefined): XmlSerializer;
     CreateSerializer(type_: Type, extraTypes: Type[] | undefined): XmlSerializer;
     CreateSerializer(type_: Type, overrides: XmlAttributeOverrides | undefined): XmlSerializer;
     CreateSerializer(xmlTypeMapping: XmlTypeMapping): XmlSerializer;
     CreateSerializer(type_: Type): XmlSerializer;
     CreateSerializer(type_: Type, defaultNamespace: string | undefined): XmlSerializer;
-    CreateSerializer(type_: Type, overrides: XmlAttributeOverrides, extraTypes: Type[] | undefined, root: XmlRootAttribute, defaultNamespace: string, location: string): XmlSerializer;
+    CreateSerializer(type_: Type, overrides: XmlAttributeOverrides | undefined, extraTypes: Type[] | undefined, root: XmlRootAttribute | undefined, defaultNamespace: string | undefined, location: string | undefined): XmlSerializer;
 }
 
 

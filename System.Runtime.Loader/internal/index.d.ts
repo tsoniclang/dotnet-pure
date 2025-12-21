@@ -55,18 +55,18 @@ export interface AssemblyLoadContext$instance {
     LoadFromStream(assembly: Stream): Assembly;
     LoadFromStream(assembly: Stream, assemblySymbols: Stream | undefined): Assembly;
     SetProfileOptimizationRoot(directoryPath: string): void;
-    StartProfileOptimization(profile: string): void;
+    StartProfileOptimization(profile: string | undefined): void;
     ToString(): string;
     Unload(): void;
 }
 
 
 export const AssemblyLoadContext: {
-    new(name: string, isCollectible: boolean): AssemblyLoadContext;
+    new(name: string | undefined, isCollectible: boolean): AssemblyLoadContext;
     readonly Default: AssemblyLoadContext;
     readonly All: IEnumerable_1<AssemblyLoadContext>;
     readonly CurrentContextualReflectionContext: AssemblyLoadContext | undefined;
-    EnterContextualReflection(activating: Assembly): AssemblyLoadContext_ContextualReflectionScope;
+    EnterContextualReflection(activating: Assembly | undefined): AssemblyLoadContext_ContextualReflectionScope;
     GetAssemblyName(assemblyPath: string): AssemblyName;
     GetLoadContext(assembly: Assembly): AssemblyLoadContext | undefined;
 };

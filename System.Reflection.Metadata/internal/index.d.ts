@@ -604,7 +604,7 @@ export type AssemblyDefinition = AssemblyDefinition$instance;
 
 export interface AssemblyDefinitionHandle$instance {
     readonly IsNil: boolean;
-    Equals(obj: unknown): boolean;
+    Equals(obj: unknown | undefined): boolean;
     Equals(other: AssemblyDefinitionHandle): boolean;
     GetHashCode(): int;
 }
@@ -642,7 +642,7 @@ export type AssemblyFile = AssemblyFile$instance;
 
 export interface AssemblyFileHandle$instance {
     readonly IsNil: boolean;
-    Equals(obj: unknown): boolean;
+    Equals(obj: unknown | undefined): boolean;
     Equals(other: AssemblyFileHandle): boolean;
     GetHashCode(): int;
 }
@@ -725,7 +725,7 @@ export type AssemblyReference = AssemblyReference$instance;
 
 export interface AssemblyReferenceHandle$instance {
     readonly IsNil: boolean;
-    Equals(obj: unknown): boolean;
+    Equals(obj: unknown | undefined): boolean;
     Equals(other: AssemblyReferenceHandle): boolean;
     GetHashCode(): int;
 }
@@ -829,7 +829,7 @@ export interface BlobContentId$instance {
     readonly IsDefault: boolean;
     readonly Stamp: uint;
     Equals(other: BlobContentId): boolean;
-    Equals(obj: unknown): boolean;
+    Equals(obj: unknown | undefined): boolean;
     GetHashCode(): int;
 }
 
@@ -856,7 +856,7 @@ export type BlobContentId = BlobContentId$instance & __BlobContentId$views;
 
 export interface BlobHandle$instance {
     readonly IsNil: boolean;
-    Equals(obj: unknown): boolean;
+    Equals(obj: unknown | undefined): boolean;
     Equals(other: BlobHandle): boolean;
     GetHashCode(): int;
 }
@@ -893,7 +893,7 @@ export interface BlobReader$instance {
     ReadChar(): char;
     ReadCompressedInteger(): int;
     ReadCompressedSignedInteger(): int;
-    ReadConstant(typeCode: ConstantTypeCode): unknown;
+    ReadConstant(typeCode: ConstantTypeCode): unknown | undefined;
     ReadDateTime(): DateTime;
     ReadDecimal(): decimal;
     ReadDouble(): double;
@@ -903,7 +903,7 @@ export interface BlobReader$instance {
     ReadInt64(): long;
     ReadSByte(): sbyte;
     ReadSerializationTypeCode(): SerializationTypeCode;
-    ReadSerializedString(): string;
+    ReadSerializedString(): string | undefined;
     ReadSignatureHeader(): SignatureHeader;
     ReadSignatureTypeCode(): SignatureTypeCode;
     ReadSingle(): float;
@@ -951,7 +951,7 @@ export interface BlobWriter$instance {
     WriteBytes(buffer: byte[], start: int, byteCount: int): void;
     WriteCompressedInteger(value: int): void;
     WriteCompressedSignedInteger(value: int): void;
-    WriteConstant(value: unknown): void;
+    WriteConstant(value: unknown | undefined): void;
     WriteDateTime(value: DateTime): void;
     WriteDecimal(value: decimal): void;
     WriteDouble(value: double): void;
@@ -963,7 +963,7 @@ export interface BlobWriter$instance {
     WriteInt64(value: long): void;
     WriteReference(reference: int, isSmall: boolean): void;
     WriteSByte(value: sbyte): void;
-    WriteSerializedString(str: string): void;
+    WriteSerializedString(str: string | undefined): void;
     WriteSingle(value: float): void;
     WriteUInt16(value: ushort): void;
     WriteUInt16BE(value: ushort): void;
@@ -1003,7 +1003,7 @@ export type Constant = Constant$instance;
 
 export interface ConstantHandle$instance {
     readonly IsNil: boolean;
-    Equals(obj: unknown): boolean;
+    Equals(obj: unknown | undefined): boolean;
     Equals(other: ConstantHandle): boolean;
     GetHashCode(): int;
 }
@@ -1041,7 +1041,7 @@ export type CustomAttribute = CustomAttribute$instance;
 
 export interface CustomAttributeHandle$instance {
     readonly IsNil: boolean;
-    Equals(obj: unknown): boolean;
+    Equals(obj: unknown | undefined): boolean;
     Equals(other: CustomAttributeHandle): boolean;
     GetHashCode(): int;
 }
@@ -1159,7 +1159,7 @@ export type CustomDebugInformation = CustomDebugInformation$instance;
 
 export interface CustomDebugInformationHandle$instance {
     readonly IsNil: boolean;
-    Equals(obj: unknown): boolean;
+    Equals(obj: unknown | undefined): boolean;
     Equals(other: CustomDebugInformationHandle): boolean;
     GetHashCode(): int;
 }
@@ -1236,7 +1236,7 @@ export type DeclarativeSecurityAttribute = DeclarativeSecurityAttribute$instance
 
 export interface DeclarativeSecurityAttributeHandle$instance {
     readonly IsNil: boolean;
-    Equals(obj: unknown): boolean;
+    Equals(obj: unknown | undefined): boolean;
     Equals(other: DeclarativeSecurityAttributeHandle): boolean;
     GetHashCode(): int;
 }
@@ -1314,7 +1314,7 @@ export type Document = Document$instance;
 
 export interface DocumentHandle$instance {
     readonly IsNil: boolean;
-    Equals(obj: unknown): boolean;
+    Equals(obj: unknown | undefined): boolean;
     Equals(other: DocumentHandle): boolean;
     GetHashCode(): int;
 }
@@ -1377,7 +1377,7 @@ export type DocumentHandleCollection_Enumerator = DocumentHandleCollection_Enume
 
 export interface DocumentNameBlobHandle$instance {
     readonly IsNil: boolean;
-    Equals(obj: unknown): boolean;
+    Equals(obj: unknown | undefined): boolean;
     Equals(other: DocumentNameBlobHandle): boolean;
     GetHashCode(): int;
 }
@@ -1401,7 +1401,7 @@ export type DocumentNameBlobHandle = DocumentNameBlobHandle$instance & __Documen
 export interface EntityHandle$instance {
     readonly IsNil: boolean;
     readonly Kind: HandleKind;
-    Equals(obj: unknown): boolean;
+    Equals(obj: unknown | undefined): boolean;
     Equals(other: EntityHandle): boolean;
     GetHashCode(): int;
 }
@@ -1458,7 +1458,7 @@ export type EventDefinition = EventDefinition$instance;
 
 export interface EventDefinitionHandle$instance {
     readonly IsNil: boolean;
-    Equals(obj: unknown): boolean;
+    Equals(obj: unknown | undefined): boolean;
     Equals(other: EventDefinitionHandle): boolean;
     GetHashCode(): int;
 }
@@ -1557,7 +1557,7 @@ export type ExportedType = ExportedType$instance;
 
 export interface ExportedTypeHandle$instance {
     readonly IsNil: boolean;
-    Equals(obj: unknown): boolean;
+    Equals(obj: unknown | undefined): boolean;
     Equals(other: ExportedTypeHandle): boolean;
     GetHashCode(): int;
 }
@@ -1641,7 +1641,7 @@ export type FieldDefinition = FieldDefinition$instance;
 
 export interface FieldDefinitionHandle$instance {
     readonly IsNil: boolean;
-    Equals(obj: unknown): boolean;
+    Equals(obj: unknown | undefined): boolean;
     Equals(other: FieldDefinitionHandle): boolean;
     GetHashCode(): int;
 }
@@ -1735,7 +1735,7 @@ export type GenericParameterConstraint = GenericParameterConstraint$instance;
 
 export interface GenericParameterConstraintHandle$instance {
     readonly IsNil: boolean;
-    Equals(obj: unknown): boolean;
+    Equals(obj: unknown | undefined): boolean;
     Equals(other: GenericParameterConstraintHandle): boolean;
     GetHashCode(): int;
 }
@@ -1799,7 +1799,7 @@ export type GenericParameterConstraintHandleCollection_Enumerator = GenericParam
 
 export interface GenericParameterHandle$instance {
     readonly IsNil: boolean;
-    Equals(obj: unknown): boolean;
+    Equals(obj: unknown | undefined): boolean;
     Equals(other: GenericParameterHandle): boolean;
     GetHashCode(): int;
 }
@@ -1863,7 +1863,7 @@ export type GenericParameterHandleCollection_Enumerator = GenericParameterHandle
 
 export interface GuidHandle$instance {
     readonly IsNil: boolean;
-    Equals(obj: unknown): boolean;
+    Equals(obj: unknown | undefined): boolean;
     Equals(other: GuidHandle): boolean;
     GetHashCode(): int;
 }
@@ -1887,7 +1887,7 @@ export type GuidHandle = GuidHandle$instance & __GuidHandle$views;
 export interface Handle$instance {
     readonly IsNil: boolean;
     readonly Kind: HandleKind;
-    Equals(obj: unknown): boolean;
+    Equals(obj: unknown | undefined): boolean;
     Equals(other: Handle): boolean;
     GetHashCode(): int;
 }
@@ -2021,7 +2021,7 @@ export type ImportScopeCollection_Enumerator = ImportScopeCollection_Enumerator$
 
 export interface ImportScopeHandle$instance {
     readonly IsNil: boolean;
-    Equals(obj: unknown): boolean;
+    Equals(obj: unknown | undefined): boolean;
     Equals(other: ImportScopeHandle): boolean;
     GetHashCode(): int;
 }
@@ -2057,7 +2057,7 @@ export type InterfaceImplementation = InterfaceImplementation$instance;
 
 export interface InterfaceImplementationHandle$instance {
     readonly IsNil: boolean;
-    Equals(obj: unknown): boolean;
+    Equals(obj: unknown | undefined): boolean;
     Equals(other: InterfaceImplementationHandle): boolean;
     GetHashCode(): int;
 }
@@ -2133,7 +2133,7 @@ export type LocalConstant = LocalConstant$instance;
 
 export interface LocalConstantHandle$instance {
     readonly IsNil: boolean;
-    Equals(obj: unknown): boolean;
+    Equals(obj: unknown | undefined): boolean;
     Equals(other: LocalConstantHandle): boolean;
     GetHashCode(): int;
 }
@@ -2215,7 +2215,7 @@ export type LocalScope = LocalScope$instance;
 
 export interface LocalScopeHandle$instance {
     readonly IsNil: boolean;
-    Equals(obj: unknown): boolean;
+    Equals(obj: unknown | undefined): boolean;
     Equals(other: LocalScopeHandle): boolean;
     GetHashCode(): int;
 }
@@ -2312,7 +2312,7 @@ export type LocalVariable = LocalVariable$instance;
 
 export interface LocalVariableHandle$instance {
     readonly IsNil: boolean;
-    Equals(obj: unknown): boolean;
+    Equals(obj: unknown | undefined): boolean;
     Equals(other: LocalVariableHandle): boolean;
     GetHashCode(): int;
 }
@@ -2391,7 +2391,7 @@ export type ManifestResource = ManifestResource$instance;
 
 export interface ManifestResourceHandle$instance {
     readonly IsNil: boolean;
-    Equals(obj: unknown): boolean;
+    Equals(obj: unknown | undefined): boolean;
     Equals(other: ManifestResourceHandle): boolean;
     GetHashCode(): int;
 }
@@ -2472,7 +2472,7 @@ export type MemberReference = MemberReference$instance;
 
 export interface MemberReferenceHandle$instance {
     readonly IsNil: boolean;
-    Equals(obj: unknown): boolean;
+    Equals(obj: unknown | undefined): boolean;
     Equals(other: MemberReferenceHandle): boolean;
     GetHashCode(): int;
 }
@@ -2570,7 +2570,7 @@ export type MethodDebugInformation = MethodDebugInformation$instance;
 
 export interface MethodDebugInformationHandle$instance {
     readonly IsNil: boolean;
-    Equals(obj: unknown): boolean;
+    Equals(obj: unknown | undefined): boolean;
     Equals(other: MethodDebugInformationHandle): boolean;
     GetHashCode(): int;
     ToDefinitionHandle(): MethodDefinitionHandle;
@@ -2657,7 +2657,7 @@ export type MethodDefinition = MethodDefinition$instance;
 
 export interface MethodDefinitionHandle$instance {
     readonly IsNil: boolean;
-    Equals(obj: unknown): boolean;
+    Equals(obj: unknown | undefined): boolean;
     Equals(other: MethodDefinitionHandle): boolean;
     GetHashCode(): int;
     ToDebugInformationHandle(): MethodDebugInformationHandle;
@@ -2736,7 +2736,7 @@ export type MethodImplementation = MethodImplementation$instance;
 
 export interface MethodImplementationHandle$instance {
     readonly IsNil: boolean;
-    Equals(obj: unknown): boolean;
+    Equals(obj: unknown | undefined): boolean;
     Equals(other: MethodImplementationHandle): boolean;
     GetHashCode(): int;
 }
@@ -2844,7 +2844,7 @@ export type MethodSpecification = MethodSpecification$instance;
 
 export interface MethodSpecificationHandle$instance {
     readonly IsNil: boolean;
-    Equals(obj: unknown): boolean;
+    Equals(obj: unknown | undefined): boolean;
     Equals(other: MethodSpecificationHandle): boolean;
     GetHashCode(): int;
 }
@@ -2884,7 +2884,7 @@ export type ModuleDefinition = ModuleDefinition$instance;
 
 export interface ModuleDefinitionHandle$instance {
     readonly IsNil: boolean;
-    Equals(obj: unknown): boolean;
+    Equals(obj: unknown | undefined): boolean;
     Equals(other: ModuleDefinitionHandle): boolean;
     GetHashCode(): int;
 }
@@ -2920,7 +2920,7 @@ export type ModuleReference = ModuleReference$instance;
 
 export interface ModuleReferenceHandle$instance {
     readonly IsNil: boolean;
-    Equals(obj: unknown): boolean;
+    Equals(obj: unknown | undefined): boolean;
     Equals(other: ModuleReferenceHandle): boolean;
     GetHashCode(): int;
 }
@@ -2959,7 +2959,7 @@ export type NamespaceDefinition = NamespaceDefinition$instance;
 
 export interface NamespaceDefinitionHandle$instance {
     readonly IsNil: boolean;
-    Equals(obj: unknown): boolean;
+    Equals(obj: unknown | undefined): boolean;
     Equals(other: NamespaceDefinitionHandle): boolean;
     GetHashCode(): int;
 }
@@ -2999,7 +2999,7 @@ export type Parameter = Parameter$instance;
 
 export interface ParameterHandle$instance {
     readonly IsNil: boolean;
-    Equals(obj: unknown): boolean;
+    Equals(obj: unknown | undefined): boolean;
     Equals(other: ParameterHandle): boolean;
     GetHashCode(): int;
 }
@@ -3095,7 +3095,7 @@ export type PropertyDefinition = PropertyDefinition$instance;
 
 export interface PropertyDefinitionHandle$instance {
     readonly IsNil: boolean;
-    Equals(obj: unknown): boolean;
+    Equals(obj: unknown | undefined): boolean;
     Equals(other: PropertyDefinitionHandle): boolean;
     GetHashCode(): int;
 }
@@ -3178,7 +3178,7 @@ export interface SequencePoint$instance {
     readonly Offset: int;
     readonly StartColumn: int;
     readonly StartLine: int;
-    Equals(obj: unknown): boolean;
+    Equals(obj: unknown | undefined): boolean;
     Equals(other: SequencePoint): boolean;
     GetHashCode(): int;
 }
@@ -3247,10 +3247,10 @@ export interface SignatureHeader$instance {
     readonly IsInstance: boolean;
     readonly Kind: SignatureKind;
     readonly RawValue: byte;
-    Equals(obj: unknown): boolean;
+    Equals(obj: unknown | undefined): boolean;
     Equals(other: SignatureHeader): boolean;
     GetHashCode(): int;
-    ToString(): string | undefined;
+    ToString(): string;
 }
 
 
@@ -3289,7 +3289,7 @@ export type StandaloneSignature = StandaloneSignature$instance;
 
 export interface StandaloneSignatureHandle$instance {
     readonly IsNil: boolean;
-    Equals(obj: unknown): boolean;
+    Equals(obj: unknown | undefined): boolean;
     Equals(other: StandaloneSignatureHandle): boolean;
     GetHashCode(): int;
 }
@@ -3312,7 +3312,7 @@ export type StandaloneSignatureHandle = StandaloneSignatureHandle$instance & __S
 
 export interface StringHandle$instance {
     readonly IsNil: boolean;
-    Equals(obj: unknown): boolean;
+    Equals(obj: unknown | undefined): boolean;
     Equals(other: StringHandle): boolean;
     GetHashCode(): int;
 }
@@ -3364,7 +3364,7 @@ export type TypeDefinition = TypeDefinition$instance;
 
 export interface TypeDefinitionHandle$instance {
     readonly IsNil: boolean;
-    Equals(obj: unknown): boolean;
+    Equals(obj: unknown | undefined): boolean;
     Equals(other: TypeDefinitionHandle): boolean;
     GetHashCode(): int;
 }
@@ -3455,7 +3455,7 @@ export type TypeReference = TypeReference$instance;
 
 export interface TypeReferenceHandle$instance {
     readonly IsNil: boolean;
-    Equals(obj: unknown): boolean;
+    Equals(obj: unknown | undefined): boolean;
     Equals(other: TypeReferenceHandle): boolean;
     GetHashCode(): int;
 }
@@ -3532,7 +3532,7 @@ export type TypeSpecification = TypeSpecification$instance;
 
 export interface TypeSpecificationHandle$instance {
     readonly IsNil: boolean;
-    Equals(obj: unknown): boolean;
+    Equals(obj: unknown | undefined): boolean;
     Equals(other: TypeSpecificationHandle): boolean;
     GetHashCode(): int;
 }
@@ -3555,7 +3555,7 @@ export type TypeSpecificationHandle = TypeSpecificationHandle$instance & __TypeS
 
 export interface UserStringHandle$instance {
     readonly IsNil: boolean;
-    Equals(obj: unknown): boolean;
+    Equals(obj: unknown | undefined): boolean;
     Equals(other: UserStringHandle): boolean;
     GetHashCode(): int;
 }
@@ -3588,7 +3588,7 @@ export interface AssemblyNameInfo$instance {
 
 
 export const AssemblyNameInfo: {
-    new(name: string, version: Version, cultureName: string, flags: AssemblyNameFlags, publicKeyOrToken: ImmutableArray_1<System_Internal.Byte>): AssemblyNameInfo;
+    new(name: string, version: Version | undefined, cultureName: string | undefined, flags: AssemblyNameFlags, publicKeyOrToken: ImmutableArray_1<System_Internal.Byte>): AssemblyNameInfo;
     Parse(assemblyName: ReadOnlySpan_1<System_Internal.Char>): AssemblyNameInfo;
     TryParse(assemblyName: ReadOnlySpan_1<System_Internal.Char>, result: AssemblyNameInfo | undefined): boolean;
 };
@@ -3621,7 +3621,7 @@ export interface BlobBuilder$instance {
     WriteBytes(buffer: byte[], start: int, byteCount: int): void;
     WriteCompressedInteger(value: int): void;
     WriteCompressedSignedInteger(value: int): void;
-    WriteConstant(value: unknown): void;
+    WriteConstant(value: unknown | undefined): void;
     WriteContentTo(destination: Stream): void;
     WriteContentTo(destination: BlobWriter): void;
     WriteContentTo(destination: BlobBuilder): void;
@@ -3636,7 +3636,7 @@ export interface BlobBuilder$instance {
     WriteInt64(value: long): void;
     WriteReference(reference: int, isSmall: boolean): void;
     WriteSByte(value: sbyte): void;
-    WriteSerializedString(value: string): void;
+    WriteSerializedString(value: string | undefined): void;
     WriteSingle(value: float): void;
     WriteUInt16(value: ushort): void;
     WriteUInt16BE(value: ushort): void;
@@ -3698,7 +3698,7 @@ export type HandleComparer = HandleComparer$instance & __HandleComparer$views;
 
 
 export interface ImageFormatLimitationException$instance extends Exception {
-    GetObjectData(info: SerializationInfo | undefined, context: StreamingContext): void;
+    GetObjectData(info: SerializationInfo, context: StreamingContext): void;
 }
 
 
@@ -3865,7 +3865,7 @@ export interface MethodBodyBlock$instance {
     readonly LocalVariablesInitialized: boolean;
     readonly MaxStack: int;
     readonly Size: int;
-    GetILBytes(): byte[];
+    GetILBytes(): byte[] | undefined;
     GetILContent(): ImmutableArray_1<System_Internal.Byte>;
     GetILReader(): BlobReader;
 }
@@ -3911,7 +3911,7 @@ export interface TypeName$instance {
 export const TypeName: {
     new(): TypeName;
     Parse(typeName: ReadOnlySpan_1<System_Internal.Char>, options?: TypeNameParseOptions | undefined): TypeName;
-    TryParse(typeName: ReadOnlySpan_1<System_Internal.Char>, result: TypeName, options?: TypeNameParseOptions): boolean;
+    TryParse(typeName: ReadOnlySpan_1<System_Internal.Char>, result: TypeName | undefined, options?: TypeNameParseOptions | undefined): boolean;
     Unescape(name: string): string;
 };
 

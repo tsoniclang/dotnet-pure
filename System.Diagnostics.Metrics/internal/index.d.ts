@@ -168,9 +168,9 @@ export interface Meter$instance {
 
 
 export const Meter: {
-    new(options: MeterOptions | undefined): Meter;
-    new(name: string | undefined): Meter;
-    new(name: string | undefined, version: string | undefined): Meter;
+    new(options: MeterOptions): Meter;
+    new(name: string): Meter;
+    new(name: string, version: string | undefined): Meter;
     new(name: string, version: string | undefined, tags: IEnumerable_1<KeyValuePair_2<System_Internal.String, unknown>> | undefined, scope: unknown | undefined): Meter;
 };
 
@@ -220,7 +220,7 @@ export interface MeterOptions$instance {
 
 
 export const MeterOptions: {
-    new(name: string | undefined): MeterOptions;
+    new(name: string): MeterOptions;
 };
 
 

@@ -322,8 +322,8 @@ export interface BigInteger$instance extends IAdditionOperators_3<BigInteger, Bi
     CompareTo(other: long): int;
     CompareTo(other: ulong): int;
     CompareTo(other: BigInteger): int;
-    CompareTo(obj: unknown): int;
-    Equals(obj: unknown): boolean;
+    CompareTo(obj: unknown | undefined): int;
+    Equals(obj: unknown | undefined): boolean;
     Equals(other: long): boolean;
     Equals(other: ulong): boolean;
     Equals(other: BigInteger): boolean;
@@ -332,10 +332,10 @@ export interface BigInteger$instance extends IAdditionOperators_3<BigInteger, Bi
     GetHashCode(): int;
     ToByteArray(): byte[];
     ToByteArray(isUnsigned?: boolean, isBigEndian?: boolean): byte[];
-    ToString(): string | undefined;
+    ToString(): string;
     ToString(provider: IFormatProvider | undefined): string;
     ToString(format: string | undefined): string;
-    ToString(format: string, provider: IFormatProvider): string;
+    ToString(format: string | undefined, provider: IFormatProvider | undefined): string;
     TryFormat(destination: Span_1<System_Internal.Char>, charsWritten: int, format?: ReadOnlySpan_1<System_Internal.Char>, provider?: IFormatProvider | undefined): boolean;
     TryWriteBytes(destination: Span_1<System_Internal.Byte>, bytesWritten: int, isUnsigned?: boolean, isBigEndian?: boolean): boolean;
 }
@@ -399,9 +399,9 @@ export const BigInteger: {
     TryParse(value: ReadOnlySpan_1<System_Internal.Char>, style: NumberStyles, provider: IFormatProvider | undefined, result: BigInteger): boolean;
     TryParse(s: ReadOnlySpan_1<System_Internal.Char>, provider: IFormatProvider | undefined, result: BigInteger): boolean;
     TryParse(value: ReadOnlySpan_1<System_Internal.Char>, result: BigInteger): boolean;
-    TryParse(value: string, style: NumberStyles, provider: IFormatProvider, result: BigInteger): boolean;
-    TryParse(s: string, provider: IFormatProvider, result: BigInteger): boolean;
-    TryParse(value: string, result: BigInteger): boolean;
+    TryParse(value: string | undefined, style: NumberStyles, provider: IFormatProvider | undefined, result: BigInteger): boolean;
+    TryParse(s: string | undefined, provider: IFormatProvider | undefined, result: BigInteger): boolean;
+    TryParse(value: string | undefined, result: BigInteger): boolean;
 };
 
 
@@ -441,13 +441,13 @@ export interface Complex$instance extends IAdditionOperators_3<Complex, Complex,
     readonly Magnitude: double;
     readonly Phase: double;
     readonly Real: double;
-    Equals(obj: unknown): boolean;
+    Equals(obj: unknown | undefined): boolean;
     Equals(value: Complex): boolean;
     GetHashCode(): int;
-    ToString(): string | undefined;
+    ToString(): string;
     ToString(format: string | undefined): string;
     ToString(provider: IFormatProvider | undefined): string;
-    ToString(format: string, provider: IFormatProvider): string;
+    ToString(format: string | undefined, provider: IFormatProvider | undefined): string;
     TryFormat(destination: Span_1<System_Internal.Char>, charsWritten: int, format?: ReadOnlySpan_1<System_Internal.Char>, provider?: IFormatProvider | undefined): boolean;
     TryFormat(utf8Destination: Span_1<System_Internal.Byte>, bytesWritten: int, format?: ReadOnlySpan_1<System_Internal.Char>, provider?: IFormatProvider | undefined): boolean;
 }
@@ -519,8 +519,8 @@ export const Complex: {
     Tanh(value: Complex): Complex;
     TryParse(s: ReadOnlySpan_1<System_Internal.Char>, style: NumberStyles, provider: IFormatProvider | undefined, result: Complex): boolean;
     TryParse(s: ReadOnlySpan_1<System_Internal.Char>, provider: IFormatProvider | undefined, result: Complex): boolean;
-    TryParse(s: string, style: NumberStyles, provider: IFormatProvider, result: Complex): boolean;
-    TryParse(s: string, provider: IFormatProvider, result: Complex): boolean;
+    TryParse(s: string | undefined, style: NumberStyles, provider: IFormatProvider | undefined, result: Complex): boolean;
+    TryParse(s: string | undefined, provider: IFormatProvider | undefined, result: Complex): boolean;
 };
 
 
@@ -556,7 +556,7 @@ export interface Matrix3x2$instance {
     X: Vector2;
     Y: Vector2;
     Z: Vector2;
-    Equals(obj: unknown): boolean;
+    Equals(obj: unknown | undefined): boolean;
     Equals(other: Matrix3x2): boolean;
     get_Item(row: int): Vector2;
     get_Item(row: int, column: int): float;
@@ -566,7 +566,7 @@ export interface Matrix3x2$instance {
     GetRow(index: int): Vector2;
     set_Item(row: int, value: Vector2): void;
     set_Item(row: int, column: int, value: float): void;
-    ToString(): string | undefined;
+    ToString(): string;
     WithElement(row: int, column: int, value: float): Matrix3x2;
     WithRow(index: int, value: Vector2): Matrix3x2;
 }
@@ -634,7 +634,7 @@ export interface Matrix4x4$instance {
     X: Vector4;
     Y: Vector4;
     Z: Vector4;
-    Equals(obj: unknown): boolean;
+    Equals(obj: unknown | undefined): boolean;
     Equals(other: Matrix4x4): boolean;
     get_Item(row: int): Vector4;
     get_Item(row: int, column: int): float;
@@ -644,7 +644,7 @@ export interface Matrix4x4$instance {
     GetRow(index: int): Vector4;
     set_Item(row: int, value: Vector4): void;
     set_Item(row: int, column: int, value: float): void;
-    ToString(): string | undefined;
+    ToString(): string;
     WithElement(row: int, column: int, value: float): Matrix4x4;
     WithRow(index: int, value: Vector4): Matrix4x4;
 }
@@ -725,10 +725,10 @@ export type Matrix4x4 = Matrix4x4$instance & __Matrix4x4$views;
 export interface Plane$instance {
     Normal: Vector3;
     D: float;
-    Equals(obj: unknown): boolean;
+    Equals(obj: unknown | undefined): boolean;
     Equals(other: Plane): boolean;
     GetHashCode(): int;
-    ToString(): string | undefined;
+    ToString(): string;
 }
 
 
@@ -766,12 +766,12 @@ export interface Quaternion$instance {
     W: float;
     readonly IsIdentity: boolean;
     Item: float;
-    Equals(obj: unknown): boolean;
+    Equals(obj: unknown | undefined): boolean;
     Equals(other: Quaternion): boolean;
     GetHashCode(): int;
     Length(): float;
     LengthSquared(): float;
-    ToString(): string | undefined;
+    ToString(): string;
 }
 
 
@@ -816,7 +816,7 @@ export interface TotalOrderIeee754Comparer_1$instance<T extends IFloatingPointIe
     Equals(x: T | undefined, y: T | undefined): boolean;
     Equals(other: TotalOrderIeee754Comparer_1<T>): boolean;
     Equals(obj: unknown | undefined): boolean;
-    GetHashCode(obj: T | undefined): int;
+    GetHashCode(obj: T): int;
     GetHashCode(): int;
 }
 
@@ -844,12 +844,12 @@ export interface Vector_1$instance<T> extends IAdditionOperators_3<Vector_1<T>, 
     CopyTo(destination: T[], startIndex: int): void;
     CopyTo(destination: Span_1<System_Internal.Byte>): void;
     CopyTo(destination: Span_1<T>): void;
-    Equals(obj: unknown): boolean;
+    Equals(obj: unknown | undefined): boolean;
     Equals(other: Vector_1<T>): boolean;
     GetHashCode(): int;
-    ToString(): string | undefined;
+    ToString(): string;
     ToString(format: string | undefined): string;
-    ToString(format: string, formatProvider: IFormatProvider): string;
+    ToString(format: string | undefined, formatProvider: IFormatProvider | undefined): string;
     TryCopyTo(destination: Span_1<System_Internal.Byte>): boolean;
     TryCopyTo(destination: Span_1<T>): boolean;
 }
@@ -891,14 +891,14 @@ export interface Vector2$instance {
     CopyTo(array: float[]): void;
     CopyTo(array: float[], index: int): void;
     CopyTo(destination: Span_1<System_Internal.Single>): void;
-    Equals(obj: unknown): boolean;
+    Equals(obj: unknown | undefined): boolean;
     Equals(other: Vector2): boolean;
     GetHashCode(): int;
     Length(): float;
     LengthSquared(): float;
-    ToString(): string | undefined;
+    ToString(): string;
     ToString(format: string | undefined): string;
-    ToString(format: string, formatProvider: IFormatProvider): string;
+    ToString(format: string | undefined, formatProvider: IFormatProvider | undefined): string;
     TryCopyTo(destination: Span_1<System_Internal.Single>): boolean;
 }
 
@@ -1050,14 +1050,14 @@ export interface Vector3$instance {
     CopyTo(array: float[]): void;
     CopyTo(array: float[], index: int): void;
     CopyTo(destination: Span_1<System_Internal.Single>): void;
-    Equals(obj: unknown): boolean;
+    Equals(obj: unknown | undefined): boolean;
     Equals(other: Vector3): boolean;
     GetHashCode(): int;
     Length(): float;
     LengthSquared(): float;
-    ToString(): string | undefined;
+    ToString(): string;
     ToString(format: string | undefined): string;
-    ToString(format: string, formatProvider: IFormatProvider): string;
+    ToString(format: string | undefined, formatProvider: IFormatProvider | undefined): string;
     TryCopyTo(destination: Span_1<System_Internal.Single>): boolean;
 }
 
@@ -1212,13 +1212,13 @@ export interface Vector4$instance {
     CopyTo(array: float[], index: int): void;
     CopyTo(destination: Span_1<System_Internal.Single>): void;
     Equals(other: Vector4): boolean;
-    Equals(obj: unknown): boolean;
+    Equals(obj: unknown | undefined): boolean;
     GetHashCode(): int;
     Length(): float;
     LengthSquared(): float;
-    ToString(): string | undefined;
+    ToString(): string;
     ToString(format: string | undefined): string;
-    ToString(format: string, formatProvider: IFormatProvider): string;
+    ToString(format: string | undefined, formatProvider: IFormatProvider | undefined): string;
     TryCopyTo(destination: Span_1<System_Internal.Single>): boolean;
 }
 

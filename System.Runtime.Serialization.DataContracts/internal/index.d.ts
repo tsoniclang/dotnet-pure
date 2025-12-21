@@ -32,10 +32,10 @@ export interface DataContract$instance {
     readonly TopLevelElementNamespace: XmlDictionaryString | undefined;
     readonly UnderlyingType: Type;
     readonly XmlName: XmlQualifiedName;
-    Equals(obj: unknown): boolean;
+    Equals(obj: unknown | undefined): boolean;
     GetArrayTypeName(isNullable: boolean): XmlQualifiedName;
     GetHashCode(): int;
-    IsDictionaryLike(keyName: string, valueName: string, itemName: string): boolean;
+    IsDictionaryLike(keyName: string | undefined, valueName: string | undefined, itemName: string | undefined): boolean;
 }
 
 
@@ -61,7 +61,7 @@ export interface DataContractSet$instance {
 
 
 export const DataContractSet: {
-    new(dataContractSurrogate: ISerializationSurrogateProvider, referencedTypes: IEnumerable_1<Type> | undefined, referencedCollectionTypes: IEnumerable_1<Type> | undefined): DataContractSet;
+    new(dataContractSurrogate: ISerializationSurrogateProvider | undefined, referencedTypes: IEnumerable_1<Type> | undefined, referencedCollectionTypes: IEnumerable_1<Type> | undefined): DataContractSet;
     new(dataContractSet: DataContractSet): DataContractSet;
 };
 

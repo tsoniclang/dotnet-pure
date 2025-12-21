@@ -71,8 +71,8 @@ export interface ISymbolMethod$instance {
     GetParameters(): ISymbolVariable[];
     GetRanges(document: ISymbolDocument, line: int, column: int): int[];
     GetScope(offset: int): ISymbolScope;
-    GetSequencePoints(offsets: int[], documents: ISymbolDocument[] | undefined, lines: int[], columns: int[], endLines: int[], endColumns: int[]): void;
-    GetSourceStartEnd(docs: ISymbolDocument[] | undefined, lines: int[], columns: int[]): boolean;
+    GetSequencePoints(offsets: int[] | undefined, documents: ISymbolDocument[] | undefined, lines: int[] | undefined, columns: int[] | undefined, endLines: int[] | undefined, endColumns: int[] | undefined): void;
+    GetSourceStartEnd(docs: ISymbolDocument[] | undefined, lines: int[] | undefined, columns: int[] | undefined): boolean;
 }
 
 
@@ -92,8 +92,8 @@ export interface ISymbolReader$instance {
     GetDocument(url: string, language: Guid, languageVendor: Guid, documentType: Guid): ISymbolDocument | undefined;
     GetDocuments(): ISymbolDocument[];
     GetGlobalVariables(): ISymbolVariable[];
-    GetMethod(method: SymbolToken, version: int): ISymbolMethod;
-    GetMethod(method: SymbolToken): ISymbolMethod;
+    GetMethod(method: SymbolToken, version: int): ISymbolMethod | undefined;
+    GetMethod(method: SymbolToken): ISymbolMethod | undefined;
     GetMethodFromDocumentPosition(document: ISymbolDocument, line: int, column: int): ISymbolMethod;
     GetNamespaces(): ISymbolNamespace[];
     GetSymAttribute(parent: SymbolToken, name: string): byte[];
@@ -154,7 +154,7 @@ export interface ISymbolWriter$instance {
 export type ISymbolWriter = ISymbolWriter$instance;
 
 export interface SymbolToken$instance {
-    Equals(obj: unknown): boolean;
+    Equals(obj: unknown | undefined): boolean;
     Equals(obj: SymbolToken): boolean;
     GetHashCode(): int;
     GetToken(): int;

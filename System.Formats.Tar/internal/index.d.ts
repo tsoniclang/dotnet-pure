@@ -126,7 +126,7 @@ export type TarEntry = TarEntry$instance;
 export interface TarReader$instance {
     Dispose(): void;
     DisposeAsync(): ValueTask;
-    GetNextEntry(copyData?: boolean): TarEntry;
+    GetNextEntry(copyData?: boolean): TarEntry | undefined;
     GetNextEntryAsync(copyData?: boolean, cancellationToken?: CancellationToken): ValueTask_1<TarEntry>;
 }
 

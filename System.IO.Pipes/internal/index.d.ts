@@ -157,7 +157,7 @@ export type NamedPipeClientStream = NamedPipeClientStream$instance & __NamedPipe
 export interface NamedPipeServerStream$instance extends PipeStream$instance {
     readonly InBufferSize: int;
     readonly OutBufferSize: int;
-    BeginWaitForConnection(callback: AsyncCallback, state: unknown): IAsyncResult;
+    BeginWaitForConnection(callback: AsyncCallback | undefined, state: unknown | undefined): IAsyncResult;
     Disconnect(): void;
     Dispose(): void;
     DisposeAsync(): ValueTask;

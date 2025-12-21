@@ -133,7 +133,7 @@ export type JsonConstructorAttribute = JsonConstructorAttribute$instance;
 
 export interface JsonConverter$instance {
     readonly Type: Type;
-    CanConvert(typeToConvert: Type | undefined): boolean;
+    CanConvert(typeToConvert: Type): boolean;
 }
 
 
@@ -175,7 +175,7 @@ export type JsonConverterAttribute = JsonConverterAttribute$instance;
 
 export interface JsonConverterFactory$instance extends JsonConverter {
     readonly Type: Type;
-    CreateConverter(typeToConvert: Type | undefined, options: JsonSerializerOptions | undefined): JsonConverter | undefined;
+    CreateConverter(typeToConvert: Type, options: JsonSerializerOptions): JsonConverter | undefined;
 }
 
 
@@ -327,7 +327,7 @@ export interface JsonSerializableAttribute$instance extends JsonAttribute {
 
 
 export const JsonSerializableAttribute: {
-    new(type_: Type | undefined): JsonSerializableAttribute;
+    new(type_: Type): JsonSerializableAttribute;
 };
 
 
@@ -397,7 +397,7 @@ export interface JsonStringEnumConverter$instance extends JsonConverterFactory {
 
 export const JsonStringEnumConverter: {
     new(): JsonStringEnumConverter;
-    new(namingPolicy: JsonNamingPolicy, allowIntegerValues: boolean): JsonStringEnumConverter;
+    new(namingPolicy: JsonNamingPolicy | undefined, allowIntegerValues: boolean): JsonStringEnumConverter;
 };
 
 
@@ -411,7 +411,7 @@ export interface JsonStringEnumConverter_1$instance<TEnum extends number> extend
 
 export const JsonStringEnumConverter_1: {
     new<TEnum extends number>(): JsonStringEnumConverter_1<TEnum>;
-    new<TEnum extends number>(namingPolicy: JsonNamingPolicy, allowIntegerValues: boolean): JsonStringEnumConverter_1<TEnum>;
+    new<TEnum extends number>(namingPolicy: JsonNamingPolicy | undefined, allowIntegerValues: boolean): JsonStringEnumConverter_1<TEnum>;
 };
 
 

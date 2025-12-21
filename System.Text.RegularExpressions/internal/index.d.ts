@@ -134,7 +134,7 @@ export interface Capture$instance {
     readonly Length: int;
     readonly Value: string;
     readonly ValueSpan: ReadOnlySpan_1<System_Internal.Char>;
-    ToString(): string | undefined;
+    ToString(): string;
 }
 
 
@@ -449,7 +449,7 @@ export interface RegexRunner$instance {
 
 
 export const RegexRunner: {
-    CharInClass(ch: char, charClass: string | undefined): boolean;
+    CharInClass(ch: char, charClass: string): boolean;
 };
 
 

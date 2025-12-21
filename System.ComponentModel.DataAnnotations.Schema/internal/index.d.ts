@@ -25,7 +25,7 @@ export interface ColumnAttribute$instance extends Attribute {
 
 export const ColumnAttribute: {
     new(): ColumnAttribute;
-    new(name: string | undefined): ColumnAttribute;
+    new(name: string): ColumnAttribute;
 };
 
 

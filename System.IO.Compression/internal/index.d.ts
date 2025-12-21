@@ -362,9 +362,9 @@ export interface ZLibException$instance extends IOException {
 
 
 export const ZLibException: {
-    new(message: string, zlibErrorContext: string, zlibErrorCode: int, zlibErrorMessage: string): ZLibException;
+    new(message: string | undefined, zlibErrorContext: string | undefined, zlibErrorCode: int, zlibErrorMessage: string | undefined): ZLibException;
     new(): ZLibException;
-    new(message: string, innerException: Exception): ZLibException;
+    new(message: string | undefined, innerException: Exception | undefined): ZLibException;
 };
 
 

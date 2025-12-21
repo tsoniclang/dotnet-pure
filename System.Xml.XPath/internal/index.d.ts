@@ -110,8 +110,8 @@ export interface XPathException$instance extends SystemException {
 
 export const XPathException: {
     new(): XPathException;
-    new(message: string): XPathException;
-    new(message: string, innerException: Exception): XPathException;
+    new(message: string | undefined): XPathException;
+    new(message: string | undefined, innerException: Exception | undefined): XPathException;
 };
 
 
@@ -129,7 +129,7 @@ export interface XPathExpression$instance {
     AddSort(expr: unknown, order: XmlSortOrder, caseOrder: XmlCaseOrder, lang: string, dataType: XmlDataType): void;
     Clone(): XPathExpression;
     SetContext(nsManager: XmlNamespaceManager): void;
-    SetContext(nsResolver: IXmlNamespaceResolver): void;
+    SetContext(nsResolver: IXmlNamespaceResolver | undefined): void;
 }
 
 
@@ -193,12 +193,12 @@ export interface XPathNavigator$instance extends XPathItem {
     AppendChild(newChild: string): void;
     AppendChild(newChild: XmlReader): void;
     AppendChild(newChild: XPathNavigator): void;
-    AppendChildElement(prefix: string, localName: string, namespaceURI: string, value: string): void;
+    AppendChildElement(prefix: string | undefined, localName: string, namespaceURI: string | undefined, value: string | undefined): void;
     CheckValidity(schemas: XmlSchemaSet, validationEventHandler: ValidationEventHandler): boolean;
     Clone(): XPathNavigator;
-    ComparePosition(nav: XPathNavigator): XmlNodeOrder;
+    ComparePosition(nav: XPathNavigator | undefined): XmlNodeOrder;
     Compile(xpath: string): XPathExpression;
-    CreateAttribute(prefix: string, localName: string, namespaceURI: string, value: string): void;
+    CreateAttribute(prefix: string | undefined, localName: string, namespaceURI: string | undefined, value: string | undefined): void;
     CreateAttributes(): XmlWriter;
     CreateNavigator(): XPathNavigator;
     DeleteRange(lastSiblingToDelete: XPathNavigator): void;
@@ -218,9 +218,9 @@ export interface XPathNavigator$instance extends XPathItem {
     InsertBefore(newSibling: string): void;
     InsertBefore(newSibling: XmlReader): void;
     InsertBefore(newSibling: XPathNavigator): void;
-    InsertElementAfter(prefix: string, localName: string, namespaceURI: string, value: string): void;
-    InsertElementBefore(prefix: string, localName: string, namespaceURI: string, value: string): void;
-    IsDescendant(nav: XPathNavigator): boolean;
+    InsertElementAfter(prefix: string | undefined, localName: string, namespaceURI: string | undefined, value: string | undefined): void;
+    InsertElementBefore(prefix: string | undefined, localName: string, namespaceURI: string | undefined, value: string | undefined): void;
+    IsDescendant(nav: XPathNavigator | undefined): boolean;
     IsSamePosition(other: XPathNavigator): boolean;
     LookupNamespace(prefix: string): string | undefined;
     LookupPrefix(namespaceURI: string): string | undefined;
@@ -238,7 +238,7 @@ export interface XPathNavigator$instance extends XPathItem {
     MoveToFollowing(localName: string, namespaceURI: string): boolean;
     MoveToFollowing(localName: string, namespaceURI: string, end: XPathNavigator | undefined): boolean;
     MoveToFollowing(type_: XPathNodeType): boolean;
-    MoveToFollowing(type_: XPathNodeType, end: XPathNavigator): boolean;
+    MoveToFollowing(type_: XPathNodeType, end: XPathNavigator | undefined): boolean;
     MoveToId(id: string): boolean;
     MoveToNamespace(name: string): boolean;
     MoveToNext(): boolean;
@@ -254,7 +254,7 @@ export interface XPathNavigator$instance extends XPathItem {
     PrependChild(newChild: string): void;
     PrependChild(newChild: XmlReader): void;
     PrependChild(newChild: XPathNavigator): void;
-    PrependChildElement(prefix: string, localName: string, namespaceURI: string, value: string): void;
+    PrependChildElement(prefix: string | undefined, localName: string, namespaceURI: string | undefined, value: string | undefined): void;
     ReadSubtree(): XmlReader;
     ReplaceRange(lastSiblingToReplace: XPathNavigator): XmlWriter;
     ReplaceSelf(newNode: string): void;
@@ -270,7 +270,7 @@ export interface XPathNavigator$instance extends XPathItem {
     SelectDescendants(type_: XPathNodeType, matchSelf: boolean): XPathNodeIterator;
     SelectDescendants(name: string, namespaceURI: string, matchSelf: boolean): XPathNodeIterator;
     SelectSingleNode(xpath: string): XPathNavigator | undefined;
-    SelectSingleNode(xpath: string, resolver: IXmlNamespaceResolver): XPathNavigator;
+    SelectSingleNode(xpath: string, resolver: IXmlNamespaceResolver | undefined): XPathNavigator | undefined;
     SelectSingleNode(expression: XPathExpression): XPathNavigator | undefined;
     SetTypedValue(typedValue: unknown): void;
     SetValue(value: string): void;

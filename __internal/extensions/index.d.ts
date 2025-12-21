@@ -342,60 +342,60 @@ export interface __Ext_ReadOnlyMemory_1<T extends System.IEquatable_1<T>> {
 }
 
 export interface __Ext_Tuple_1<T1> {
-  Deconstruct(item1: T1 | undefined): void;
+  Deconstruct(item1: T1): void;
   ToValueTuple(): System.ValueTuple_1<T1>;
 }
 
 export interface __Ext_Tuple_2<T1, T2> {
-  Deconstruct(item1: T1 | undefined, item2: T2 | undefined): void;
+  Deconstruct(item1: T1, item2: T2): void;
   ToValueTuple(): System.ValueTuple_2<T1, T2>;
 }
 
 export interface __Ext_Tuple_3<T1, T2, T3> {
-  Deconstruct(item1: T1 | undefined, item2: T2 | undefined, item3: T3 | undefined): void;
+  Deconstruct(item1: T1, item2: T2, item3: T3): void;
   ToValueTuple(): System.ValueTuple_3<T1, T2, T3>;
 }
 
 export interface __Ext_Tuple_4<T1, T2, T3, T4> {
-  Deconstruct(item1: T1 | undefined, item2: T2 | undefined, item3: T3 | undefined, item4: T4 | undefined): void;
+  Deconstruct(item1: T1, item2: T2, item3: T3, item4: T4): void;
   ToValueTuple(): System.ValueTuple_4<T1, T2, T3, T4>;
 }
 
 export interface __Ext_Tuple_5<T1, T2, T3, T4, T5> {
-  Deconstruct(item1: T1 | undefined, item2: T2 | undefined, item3: T3 | undefined, item4: T4 | undefined, item5: T5 | undefined): void;
+  Deconstruct(item1: T1, item2: T2, item3: T3, item4: T4, item5: T5): void;
   ToValueTuple(): System.ValueTuple_5<T1, T2, T3, T4, T5>;
 }
 
 export interface __Ext_Tuple_6<T1, T2, T3, T4, T5, T6> {
-  Deconstruct(item1: T1 | undefined, item2: T2 | undefined, item3: T3 | undefined, item4: T4 | undefined, item5: T5 | undefined, item6: T6 | undefined): void;
+  Deconstruct(item1: T1, item2: T2, item3: T3, item4: T4, item5: T5, item6: T6): void;
   ToValueTuple(): System.ValueTuple_6<T1, T2, T3, T4, T5, T6>;
 }
 
 export interface __Ext_Tuple_7<T1, T2, T3, T4, T5, T6, T7> {
-  Deconstruct(item1: T1 | undefined, item2: T2 | undefined, item3: T3 | undefined, item4: T4 | undefined, item5: T5 | undefined, item6: T6 | undefined, item7: T7 | undefined): void;
+  Deconstruct(item1: T1, item2: T2, item3: T3, item4: T4, item5: T5, item6: T6, item7: T7): void;
   ToValueTuple(): System.ValueTuple_7<T1, T2, T3, T4, T5, T6, T7>;
 }
 
 export interface __Ext_Tuple_8<T1, T2, T3, T4, T5, T6, T7, TRest> {
-  Deconstruct<T8>(item1: T1 | undefined, item2: T2 | undefined, item3: T3 | undefined, item4: T4 | undefined, item5: T5 | undefined, item6: T6 | undefined, item7: T7 | undefined, item8: T8 | undefined): void;
-  Deconstruct<T8, T9>(item1: T1 | undefined, item2: T2 | undefined, item3: T3 | undefined, item4: T4 | undefined, item5: T5 | undefined, item6: T6 | undefined, item7: T7 | undefined, item8: T8 | undefined, item9: T9 | undefined): void;
-  Deconstruct<T8, T9, T10>(item1: T1 | undefined, item2: T2 | undefined, item3: T3 | undefined, item4: T4 | undefined, item5: T5 | undefined, item6: T6 | undefined, item7: T7 | undefined, item8: T8 | undefined, item9: T9 | undefined, item10: T10 | undefined): void;
-  Deconstruct<T8, T9, T10, T11>(item1: T1 | undefined, item2: T2 | undefined, item3: T3 | undefined, item4: T4 | undefined, item5: T5 | undefined, item6: T6 | undefined, item7: T7 | undefined, item8: T8 | undefined, item9: T9 | undefined, item10: T10 | undefined, item11: T11 | undefined): void;
-  Deconstruct<T8, T9, T10, T11, T12>(item1: T1 | undefined, item2: T2 | undefined, item3: T3 | undefined, item4: T4 | undefined, item5: T5 | undefined, item6: T6 | undefined, item7: T7 | undefined, item8: T8 | undefined, item9: T9 | undefined, item10: T10 | undefined, item11: T11 | undefined, item12: T12 | undefined): void;
-  Deconstruct<T8, T9, T10, T11, T12, T13>(item1: T1 | undefined, item2: T2 | undefined, item3: T3 | undefined, item4: T4 | undefined, item5: T5 | undefined, item6: T6 | undefined, item7: T7 | undefined, item8: T8 | undefined, item9: T9 | undefined, item10: T10 | undefined, item11: T11 | undefined, item12: T12 | undefined, item13: T13 | undefined): void;
-  Deconstruct<T8, T9, T10, T11, T12, T13, T14>(item1: T1 | undefined, item2: T2 | undefined, item3: T3 | undefined, item4: T4 | undefined, item5: T5 | undefined, item6: T6 | undefined, item7: T7 | undefined, item8: T8 | undefined, item9: T9 | undefined, item10: T10 | undefined, item11: T11 | undefined, item12: T12 | undefined, item13: T13 | undefined, item14: T14 | undefined): void;
-  Deconstruct<T8, T9, T10, T11, T12, T13, T14, T15>(item1: T1 | undefined, item2: T2 | undefined, item3: T3 | undefined, item4: T4 | undefined, item5: T5 | undefined, item6: T6 | undefined, item7: T7 | undefined, item8: T8 | undefined, item9: T9 | undefined, item10: T10 | undefined, item11: T11 | undefined, item12: T12 | undefined, item13: T13 | undefined, item14: T14 | undefined, item15: T15 | undefined): void;
-  Deconstruct<T8, T9, T10, T11, T12, T13, T14, T15, T16>(item1: T1 | undefined, item2: T2 | undefined, item3: T3 | undefined, item4: T4 | undefined, item5: T5 | undefined, item6: T6 | undefined, item7: T7 | undefined, item8: T8 | undefined, item9: T9 | undefined, item10: T10 | undefined, item11: T11 | undefined, item12: T12 | undefined, item13: T13 | undefined, item14: T14 | undefined, item15: T15 | undefined, item16: T16 | undefined): void;
-  Deconstruct<T8, T9, T10, T11, T12, T13, T14, T15, T16, T17>(item1: T1 | undefined, item2: T2 | undefined, item3: T3 | undefined, item4: T4 | undefined, item5: T5 | undefined, item6: T6 | undefined, item7: T7 | undefined, item8: T8 | undefined, item9: T9 | undefined, item10: T10 | undefined, item11: T11 | undefined, item12: T12 | undefined, item13: T13 | undefined, item14: T14 | undefined, item15: T15 | undefined, item16: T16 | undefined, item17: T17 | undefined): void;
-  Deconstruct<T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18>(item1: T1 | undefined, item2: T2 | undefined, item3: T3 | undefined, item4: T4 | undefined, item5: T5 | undefined, item6: T6 | undefined, item7: T7 | undefined, item8: T8 | undefined, item9: T9 | undefined, item10: T10 | undefined, item11: T11 | undefined, item12: T12 | undefined, item13: T13 | undefined, item14: T14 | undefined, item15: T15 | undefined, item16: T16 | undefined, item17: T17 | undefined, item18: T18 | undefined): void;
-  Deconstruct<T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19>(item1: T1 | undefined, item2: T2 | undefined, item3: T3 | undefined, item4: T4 | undefined, item5: T5 | undefined, item6: T6 | undefined, item7: T7 | undefined, item8: T8 | undefined, item9: T9 | undefined, item10: T10 | undefined, item11: T11 | undefined, item12: T12 | undefined, item13: T13 | undefined, item14: T14 | undefined, item15: T15 | undefined, item16: T16 | undefined, item17: T17 | undefined, item18: T18 | undefined, item19: T19 | undefined): void;
-  Deconstruct<T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20>(item1: T1 | undefined, item2: T2 | undefined, item3: T3 | undefined, item4: T4 | undefined, item5: T5 | undefined, item6: T6 | undefined, item7: T7 | undefined, item8: T8 | undefined, item9: T9 | undefined, item10: T10 | undefined, item11: T11 | undefined, item12: T12 | undefined, item13: T13 | undefined, item14: T14 | undefined, item15: T15 | undefined, item16: T16 | undefined, item17: T17 | undefined, item18: T18 | undefined, item19: T19 | undefined, item20: T20 | undefined): void;
-  Deconstruct<T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21>(item1: T1 | undefined, item2: T2 | undefined, item3: T3 | undefined, item4: T4 | undefined, item5: T5 | undefined, item6: T6 | undefined, item7: T7 | undefined, item8: T8 | undefined, item9: T9 | undefined, item10: T10 | undefined, item11: T11 | undefined, item12: T12 | undefined, item13: T13 | undefined, item14: T14 | undefined, item15: T15 | undefined, item16: T16 | undefined, item17: T17 | undefined, item18: T18 | undefined, item19: T19 | undefined, item20: T20 | undefined, item21: T21 | undefined): void;
+  Deconstruct<T8>(item1: T1, item2: T2, item3: T3, item4: T4, item5: T5, item6: T6, item7: T7, item8: T8): void;
+  Deconstruct<T8, T9>(item1: T1, item2: T2, item3: T3, item4: T4, item5: T5, item6: T6, item7: T7, item8: T8, item9: T9): void;
+  Deconstruct<T8, T9, T10>(item1: T1, item2: T2, item3: T3, item4: T4, item5: T5, item6: T6, item7: T7, item8: T8, item9: T9, item10: T10): void;
+  Deconstruct<T8, T9, T10, T11>(item1: T1, item2: T2, item3: T3, item4: T4, item5: T5, item6: T6, item7: T7, item8: T8, item9: T9, item10: T10, item11: T11): void;
+  Deconstruct<T8, T9, T10, T11, T12>(item1: T1, item2: T2, item3: T3, item4: T4, item5: T5, item6: T6, item7: T7, item8: T8, item9: T9, item10: T10, item11: T11, item12: T12): void;
+  Deconstruct<T8, T9, T10, T11, T12, T13>(item1: T1, item2: T2, item3: T3, item4: T4, item5: T5, item6: T6, item7: T7, item8: T8, item9: T9, item10: T10, item11: T11, item12: T12, item13: T13): void;
+  Deconstruct<T8, T9, T10, T11, T12, T13, T14>(item1: T1, item2: T2, item3: T3, item4: T4, item5: T5, item6: T6, item7: T7, item8: T8, item9: T9, item10: T10, item11: T11, item12: T12, item13: T13, item14: T14): void;
+  Deconstruct<T8, T9, T10, T11, T12, T13, T14, T15>(item1: T1, item2: T2, item3: T3, item4: T4, item5: T5, item6: T6, item7: T7, item8: T8, item9: T9, item10: T10, item11: T11, item12: T12, item13: T13, item14: T14, item15: T15): void;
+  Deconstruct<T8, T9, T10, T11, T12, T13, T14, T15, T16>(item1: T1, item2: T2, item3: T3, item4: T4, item5: T5, item6: T6, item7: T7, item8: T8, item9: T9, item10: T10, item11: T11, item12: T12, item13: T13, item14: T14, item15: T15, item16: T16): void;
+  Deconstruct<T8, T9, T10, T11, T12, T13, T14, T15, T16, T17>(item1: T1, item2: T2, item3: T3, item4: T4, item5: T5, item6: T6, item7: T7, item8: T8, item9: T9, item10: T10, item11: T11, item12: T12, item13: T13, item14: T14, item15: T15, item16: T16, item17: T17): void;
+  Deconstruct<T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18>(item1: T1, item2: T2, item3: T3, item4: T4, item5: T5, item6: T6, item7: T7, item8: T8, item9: T9, item10: T10, item11: T11, item12: T12, item13: T13, item14: T14, item15: T15, item16: T16, item17: T17, item18: T18): void;
+  Deconstruct<T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19>(item1: T1, item2: T2, item3: T3, item4: T4, item5: T5, item6: T6, item7: T7, item8: T8, item9: T9, item10: T10, item11: T11, item12: T12, item13: T13, item14: T14, item15: T15, item16: T16, item17: T17, item18: T18, item19: T19): void;
+  Deconstruct<T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20>(item1: T1, item2: T2, item3: T3, item4: T4, item5: T5, item6: T6, item7: T7, item8: T8, item9: T9, item10: T10, item11: T11, item12: T12, item13: T13, item14: T14, item15: T15, item16: T16, item17: T17, item18: T18, item19: T19, item20: T20): void;
+  Deconstruct<T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21>(item1: T1, item2: T2, item3: T3, item4: T4, item5: T5, item6: T6, item7: T7, item8: T8, item9: T9, item10: T10, item11: T11, item12: T12, item13: T13, item14: T14, item15: T15, item16: T16, item17: T17, item18: T18, item19: T19, item20: T20, item21: T21): void;
   ToValueTuple<T8>(): System.ValueTuple_8<T1, T2, T3, T4, T5, T6, T7, System.ValueTuple_1<T8>>;
 }
 
 export interface __Ext_ValueTuple_1<T1> {
-  ToTuple(): System.Tuple_1<T1 | undefined> | undefined;
+  ToTuple(): System.Tuple_1<T1>;
 }
 
 export interface __Ext_ValueTuple_2<T1, T2> {
@@ -502,8 +502,8 @@ export interface __Ext_IEnumerable_1<T> {
   DistinctBy<TKey>(keySelector: System.Func_2<T, TKey>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Collections_Generic.IEnumerable_1<T>;
   ElementAt(index: int): T;
   ElementAt(index: System.Index): T;
-  ElementAtOrDefault(index: int): T;
-  ElementAtOrDefault(index: System.Index): T;
+  ElementAtOrDefault(index: int): T | undefined;
+  ElementAtOrDefault(index: System.Index): T | undefined;
   AsEnumerable(): System_Collections_Generic.IEnumerable_1<T>;
   Except(second: System_Collections_Generic.IEnumerable_1<T>): System_Collections_Generic.IEnumerable_1<T>;
   Except(second: System_Collections_Generic.IEnumerable_1<T>, comparer: System_Collections_Generic.IEqualityComparer_1<T> | undefined): System_Collections_Generic.IEnumerable_1<T>;
@@ -511,7 +511,7 @@ export interface __Ext_IEnumerable_1<T> {
   ExceptBy<TKey>(second: System_Collections_Generic.IEnumerable_1<TKey>, keySelector: System.Func_2<T, TKey>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Collections_Generic.IEnumerable_1<T>;
   First(): T;
   First(predicate: System.Func_2<T, System_Internal.Boolean>): T;
-  FirstOrDefault(): T;
+  FirstOrDefault(): T | undefined;
   FirstOrDefault(defaultValue: T): T;
   FirstOrDefault(predicate: System.Func_2<T, System_Internal.Boolean>): T | undefined;
   FirstOrDefault(predicate: System.Func_2<T, System_Internal.Boolean>, defaultValue: T): T;
@@ -534,7 +534,7 @@ export interface __Ext_IEnumerable_1<T> {
   Join<TInner, TKey, TResult>(inner: System_Collections_Generic.IEnumerable_1<TInner>, outerKeySelector: System.Func_2<T, TKey>, innerKeySelector: System.Func_2<TInner, TKey>, resultSelector: System.Func_3<T, TInner, TResult>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Collections_Generic.IEnumerable_1<TResult>;
   Last(): T;
   Last(predicate: System.Func_2<T, System_Internal.Boolean>): T;
-  LastOrDefault(): T;
+  LastOrDefault(): T | undefined;
   LastOrDefault(defaultValue: T): T;
   LastOrDefault(predicate: System.Func_2<T, System_Internal.Boolean>): T | undefined;
   LastOrDefault(predicate: System.Func_2<T, System_Internal.Boolean>, defaultValue: T): T;
@@ -554,10 +554,10 @@ export interface __Ext_IEnumerable_1<T> {
   Max(): System.Nullable_1<System_Internal.Single>;
   Max(): decimal;
   Max(): System.Nullable_1<System_Internal.Decimal>;
-  Max(): T;
-  Max(comparer: System_Collections_Generic.IComparer_1<T> | undefined): T;
-  MaxBy<TKey>(keySelector: System.Func_2<T, TKey>): T;
-  MaxBy<TKey>(keySelector: System.Func_2<T, TKey>, comparer: System_Collections_Generic.IComparer_1<TKey> | undefined): T;
+  Max(): T | undefined;
+  Max(comparer: System_Collections_Generic.IComparer_1<T> | undefined): T | undefined;
+  MaxBy<TKey>(keySelector: System.Func_2<T, TKey>): T | undefined;
+  MaxBy<TKey>(keySelector: System.Func_2<T, TKey>, comparer: System_Collections_Generic.IComparer_1<TKey> | undefined): T | undefined;
   Max(selector: System.Func_2<T, System_Internal.Int32>): int;
   Max(selector: System.Func_2<T, System.Nullable_1<System_Internal.Int32>>): System.Nullable_1<System_Internal.Int32>;
   Max(selector: System.Func_2<T, System_Internal.Int64>): long;
@@ -568,7 +568,7 @@ export interface __Ext_IEnumerable_1<T> {
   Max(selector: System.Func_2<T, System.Nullable_1<System_Internal.Double>>): System.Nullable_1<System_Internal.Double>;
   Max(selector: System.Func_2<T, System_Internal.Decimal>): decimal;
   Max(selector: System.Func_2<T, System.Nullable_1<System_Internal.Decimal>>): System.Nullable_1<System_Internal.Decimal>;
-  Max<TResult>(selector: System.Func_2<T, TResult>): TResult;
+  Max<TResult>(selector: System.Func_2<T, TResult>): TResult | undefined;
   Min(): int;
   Min(): long;
   Min(): System.Nullable_1<System_Internal.Int32>;
@@ -579,10 +579,10 @@ export interface __Ext_IEnumerable_1<T> {
   Min(): System.Nullable_1<System_Internal.Double>;
   Min(): decimal;
   Min(): System.Nullable_1<System_Internal.Decimal>;
-  Min(): T;
-  Min(comparer: System_Collections_Generic.IComparer_1<T> | undefined): T;
-  MinBy<TKey>(keySelector: System.Func_2<T, TKey>): T;
-  MinBy<TKey>(keySelector: System.Func_2<T, TKey>, comparer: System_Collections_Generic.IComparer_1<TKey> | undefined): T;
+  Min(): T | undefined;
+  Min(comparer: System_Collections_Generic.IComparer_1<T> | undefined): T | undefined;
+  MinBy<TKey>(keySelector: System.Func_2<T, TKey>): T | undefined;
+  MinBy<TKey>(keySelector: System.Func_2<T, TKey>, comparer: System_Collections_Generic.IComparer_1<TKey> | undefined): T | undefined;
   Min(selector: System.Func_2<T, System_Internal.Int32>): int;
   Min(selector: System.Func_2<T, System.Nullable_1<System_Internal.Int32>>): System.Nullable_1<System_Internal.Int32>;
   Min(selector: System.Func_2<T, System_Internal.Int64>): long;
@@ -593,7 +593,7 @@ export interface __Ext_IEnumerable_1<T> {
   Min(selector: System.Func_2<T, System.Nullable_1<System_Internal.Double>>): System.Nullable_1<System_Internal.Double>;
   Min(selector: System.Func_2<T, System_Internal.Decimal>): decimal;
   Min(selector: System.Func_2<T, System.Nullable_1<System_Internal.Decimal>>): System.Nullable_1<System_Internal.Decimal>;
-  Min<TResult>(selector: System.Func_2<T, TResult>): TResult;
+  Min<TResult>(selector: System.Func_2<T, TResult>): TResult | undefined;
   Order(): System_Linq.IOrderedEnumerable_1<T>;
   Order(comparer: System_Collections_Generic.IComparer_1<T> | undefined): System_Linq.IOrderedEnumerable_1<T>;
   OrderBy<TKey>(keySelector: System.Func_2<T, TKey>): System_Linq.IOrderedEnumerable_1<T>;
@@ -616,7 +616,7 @@ export interface __Ext_IEnumerable_1<T> {
   SequenceEqual(second: System_Collections_Generic.IEnumerable_1<T>, comparer: System_Collections_Generic.IEqualityComparer_1<T> | undefined): boolean;
   Single(): T;
   Single(predicate: System.Func_2<T, System_Internal.Boolean>): T;
-  SingleOrDefault(): T;
+  SingleOrDefault(): T | undefined;
   SingleOrDefault(defaultValue: T): T;
   SingleOrDefault(predicate: System.Func_2<T, System_Internal.Boolean>): T | undefined;
   SingleOrDefault(predicate: System.Func_2<T, System_Internal.Boolean>, defaultValue: T): T;
@@ -692,7 +692,7 @@ export interface __Ext_IEnumerable_1<T> {
 }
 
 export interface __Ext_IReadOnlyDictionary_2<TKey, TValue> {
-  GetValueOrDefault(key: TKey): TValue;
+  GetValueOrDefault(key: TKey): TValue | undefined;
   GetValueOrDefault(key: TKey, defaultValue: TValue): TValue;
 }
 
@@ -719,9 +719,9 @@ export interface __Ext_List_1<T> {
 export interface __Ext_ImmutableArray_1_Builder<T> {
   ToImmutableArray(): System_Collections_Immutable.ImmutableArray_1<T>;
   First(): T;
-  FirstOrDefault(): T;
+  FirstOrDefault(): T | undefined;
   Last(): T;
-  LastOrDefault(): T;
+  LastOrDefault(): T | undefined;
   Any(): boolean;
 }
 
@@ -739,23 +739,23 @@ export interface __Ext_ImmutableArray_1<T> {
   SequenceEqual<TDerived>(items: System_Collections_Immutable.ImmutableArray_1<TDerived>, comparer: System_Collections_Generic.IEqualityComparer_1<T> | undefined): boolean;
   SequenceEqual<TDerived>(items: System_Collections_Generic.IEnumerable_1<TDerived>, comparer: System_Collections_Generic.IEqualityComparer_1<T> | undefined): boolean;
   SequenceEqual<TDerived>(items: System_Collections_Immutable.ImmutableArray_1<TDerived>, predicate: System.Func_3<T, T, System_Internal.Boolean>): boolean;
-  Aggregate(func: System.Func_3<T, T, T>): T;
+  Aggregate(func: System.Func_3<T, T, T>): T | undefined;
   Aggregate<TAccumulate>(seed: TAccumulate, func: System.Func_3<TAccumulate, T, TAccumulate>): TAccumulate;
   Aggregate<TAccumulate, TResult>(seed: TAccumulate, func: System.Func_3<TAccumulate, T, TAccumulate>, resultSelector: System.Func_2<TAccumulate, TResult>): TResult;
   ElementAt(index: int): T;
-  ElementAtOrDefault(index: int): T;
+  ElementAtOrDefault(index: int): T | undefined;
   First(predicate: System.Func_2<T, System_Internal.Boolean>): T;
   First(): T;
-  FirstOrDefault(): T;
-  FirstOrDefault(predicate: System.Func_2<T, System_Internal.Boolean>): T;
+  FirstOrDefault(): T | undefined;
+  FirstOrDefault(predicate: System.Func_2<T, System_Internal.Boolean>): T | undefined;
   Last(): T;
   Last(predicate: System.Func_2<T, System_Internal.Boolean>): T;
-  LastOrDefault(): T;
-  LastOrDefault(predicate: System.Func_2<T, System_Internal.Boolean>): T;
+  LastOrDefault(): T | undefined;
+  LastOrDefault(predicate: System.Func_2<T, System_Internal.Boolean>): T | undefined;
   Single(): T;
   Single(predicate: System.Func_2<T, System_Internal.Boolean>): T;
-  SingleOrDefault(): T;
-  SingleOrDefault(predicate: System.Func_2<T, System_Internal.Boolean>): T;
+  SingleOrDefault(): T | undefined;
+  SingleOrDefault(predicate: System.Func_2<T, System_Internal.Boolean>): T | undefined;
   ToDictionary<TKey>(keySelector: System.Func_2<T, TKey>): System_Collections_Generic.Dictionary_2<TKey, T>;
   ToDictionary<TKey, TElement>(keySelector: System.Func_2<T, TKey>, elementSelector: System.Func_2<T, TElement>): System_Collections_Generic.Dictionary_2<TKey, TElement>;
   ToDictionary<TKey>(keySelector: System.Func_2<T, TKey>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Collections_Generic.Dictionary_2<TKey, T>;
@@ -845,11 +845,11 @@ export interface __Ext_DbDataReader {
 export interface __Ext_DataRow {
   Field<T>(columnName: string): T | undefined;
   Field<T>(column: System_Data.DataColumn): T | undefined;
-  Field<T>(columnIndex: int): T;
-  Field<T>(columnIndex: int, version: System_Data.DataRowVersion): T;
+  Field<T>(columnIndex: int): T | undefined;
+  Field<T>(columnIndex: int, version: System_Data.DataRowVersion): T | undefined;
   Field<T>(columnName: string, version: System_Data.DataRowVersion): T | undefined;
   Field<T>(column: System_Data.DataColumn, version: System_Data.DataRowVersion): T | undefined;
-  SetField<T>(columnIndex: int, value: T): void;
+  SetField<T>(columnIndex: int, value: T | undefined): void;
   SetField<T>(columnName: string, value: T | undefined): void;
   SetField<T>(column: System_Data.DataColumn, value: T | undefined): void;
 }
@@ -1235,7 +1235,7 @@ export interface __Ext_ParallelQuery_1<TSource> {
   Min(): System.Nullable_1<System_Internal.Double>;
   Min(): decimal;
   Min(): System.Nullable_1<System_Internal.Decimal>;
-  Min(): TSource;
+  Min(): TSource | undefined;
   Min(selector: System.Func_2<TSource, System_Internal.Int32>): int;
   Min(selector: System.Func_2<TSource, System.Nullable_1<System_Internal.Int32>>): System.Nullable_1<System_Internal.Int32>;
   Min(selector: System.Func_2<TSource, System_Internal.Int64>): long;
@@ -1246,7 +1246,7 @@ export interface __Ext_ParallelQuery_1<TSource> {
   Min(selector: System.Func_2<TSource, System.Nullable_1<System_Internal.Double>>): System.Nullable_1<System_Internal.Double>;
   Min(selector: System.Func_2<TSource, System_Internal.Decimal>): decimal;
   Min(selector: System.Func_2<TSource, System.Nullable_1<System_Internal.Decimal>>): System.Nullable_1<System_Internal.Decimal>;
-  Min<TResult>(selector: System.Func_2<TSource, TResult>): TResult;
+  Min<TResult>(selector: System.Func_2<TSource, TResult>): TResult | undefined;
   Max(): int;
   Max(): System.Nullable_1<System_Internal.Int32>;
   Max(): long;
@@ -1257,7 +1257,7 @@ export interface __Ext_ParallelQuery_1<TSource> {
   Max(): System.Nullable_1<System_Internal.Double>;
   Max(): decimal;
   Max(): System.Nullable_1<System_Internal.Decimal>;
-  Max(): TSource;
+  Max(): TSource | undefined;
   Max(selector: System.Func_2<TSource, System_Internal.Int32>): int;
   Max(selector: System.Func_2<TSource, System.Nullable_1<System_Internal.Int32>>): System.Nullable_1<System_Internal.Int32>;
   Max(selector: System.Func_2<TSource, System_Internal.Int64>): long;
@@ -1268,7 +1268,7 @@ export interface __Ext_ParallelQuery_1<TSource> {
   Max(selector: System.Func_2<TSource, System.Nullable_1<System_Internal.Double>>): System.Nullable_1<System_Internal.Double>;
   Max(selector: System.Func_2<TSource, System_Internal.Decimal>): decimal;
   Max(selector: System.Func_2<TSource, System.Nullable_1<System_Internal.Decimal>>): System.Nullable_1<System_Internal.Decimal>;
-  Max<TResult>(selector: System.Func_2<TSource, TResult>): TResult;
+  Max<TResult>(selector: System.Func_2<TSource, TResult>): TResult | undefined;
   Average(): double;
   Average(): System.Nullable_1<System_Internal.Double>;
   Average(): double;
@@ -1330,20 +1330,20 @@ export interface __Ext_ParallelQuery_1<TSource> {
   Reverse(): System_Linq.ParallelQuery_1<TSource>;
   First(): TSource;
   First(predicate: System.Func_2<TSource, System_Internal.Boolean>): TSource;
-  FirstOrDefault(): TSource;
+  FirstOrDefault(): TSource | undefined;
   FirstOrDefault(predicate: System.Func_2<TSource, System_Internal.Boolean>): TSource | undefined;
   Last(): TSource;
   Last(predicate: System.Func_2<TSource, System_Internal.Boolean>): TSource;
-  LastOrDefault(): TSource;
+  LastOrDefault(): TSource | undefined;
   LastOrDefault(predicate: System.Func_2<TSource, System_Internal.Boolean>): TSource | undefined;
   Single(): TSource;
   Single(predicate: System.Func_2<TSource, System_Internal.Boolean>): TSource;
-  SingleOrDefault(): TSource;
+  SingleOrDefault(): TSource | undefined;
   SingleOrDefault(predicate: System.Func_2<TSource, System_Internal.Boolean>): TSource | undefined;
   DefaultIfEmpty(): System_Linq.ParallelQuery_1<TSource | undefined>;
   DefaultIfEmpty(defaultValue: TSource): System_Linq.ParallelQuery_1<TSource>;
   ElementAt(index: int): TSource;
-  ElementAtOrDefault(index: int): TSource;
+  ElementAtOrDefault(index: int): TSource | undefined;
 }
 
 export interface __Ext_ParallelQuery {
@@ -1415,26 +1415,26 @@ export interface __Ext_IQueryable_1<T> {
   ExceptBy<TKey>(source2: System_Collections_Generic.IEnumerable_1<TKey>, keySelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TKey>>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Linq.IQueryable_1<T>;
   First(): T;
   First(predicate: System_Linq_Expressions.Expression_1<System.Func_2<T, System_Internal.Boolean>>): T;
-  FirstOrDefault(): T;
+  FirstOrDefault(): T | undefined;
   FirstOrDefault(defaultValue: T): T;
   FirstOrDefault(predicate: System_Linq_Expressions.Expression_1<System.Func_2<T, System_Internal.Boolean>>): T | undefined;
   FirstOrDefault(predicate: System_Linq_Expressions.Expression_1<System.Func_2<T, System_Internal.Boolean>>, defaultValue: T): T;
   Last(): T;
   Last(predicate: System_Linq_Expressions.Expression_1<System.Func_2<T, System_Internal.Boolean>>): T;
-  LastOrDefault(): T;
+  LastOrDefault(): T | undefined;
   LastOrDefault(defaultValue: T): T;
   LastOrDefault(predicate: System_Linq_Expressions.Expression_1<System.Func_2<T, System_Internal.Boolean>>): T | undefined;
   LastOrDefault(predicate: System_Linq_Expressions.Expression_1<System.Func_2<T, System_Internal.Boolean>>, defaultValue: T): T;
   Single(): T;
   Single(predicate: System_Linq_Expressions.Expression_1<System.Func_2<T, System_Internal.Boolean>>): T;
-  SingleOrDefault(): T;
+  SingleOrDefault(): T | undefined;
   SingleOrDefault(defaultValue: T): T;
   SingleOrDefault(predicate: System_Linq_Expressions.Expression_1<System.Func_2<T, System_Internal.Boolean>>): T | undefined;
   SingleOrDefault(predicate: System_Linq_Expressions.Expression_1<System.Func_2<T, System_Internal.Boolean>>, defaultValue: T): T;
   ElementAt(index: int): T;
   ElementAt(index: System.Index): T;
-  ElementAtOrDefault(index: int): T;
-  ElementAtOrDefault(index: System.Index): T;
+  ElementAtOrDefault(index: int): T | undefined;
+  ElementAtOrDefault(index: System.Index): T | undefined;
   DefaultIfEmpty(): System_Linq.IQueryable_1<T | undefined>;
   DefaultIfEmpty(defaultValue: T): System_Linq.IQueryable_1<T>;
   Contains(item: T): boolean;
@@ -1451,16 +1451,16 @@ export interface __Ext_IQueryable_1<T> {
   CountBy<TKey>(keySelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TKey>>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Linq.IQueryable_1<System_Collections_Generic.KeyValuePair_2<TKey, System_Internal.Int32>>;
   LongCount(): long;
   LongCount(predicate: System_Linq_Expressions.Expression_1<System.Func_2<T, System_Internal.Boolean>>): long;
-  Min(): T;
-  Min(comparer: System_Collections_Generic.IComparer_1<T> | undefined): T;
-  Min<TResult>(selector: System_Linq_Expressions.Expression_1<System.Func_2<T, TResult>>): TResult;
-  MinBy<TKey>(keySelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TKey>>): T;
-  MinBy<TKey>(keySelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TKey>>, comparer: System_Collections_Generic.IComparer_1<T> | undefined): T;
-  Max(): T;
-  Max(comparer: System_Collections_Generic.IComparer_1<T> | undefined): T;
-  Max<TResult>(selector: System_Linq_Expressions.Expression_1<System.Func_2<T, TResult>>): TResult;
-  MaxBy<TKey>(keySelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TKey>>): T;
-  MaxBy<TKey>(keySelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TKey>>, comparer: System_Collections_Generic.IComparer_1<T> | undefined): T;
+  Min(): T | undefined;
+  Min(comparer: System_Collections_Generic.IComparer_1<T> | undefined): T | undefined;
+  Min<TResult>(selector: System_Linq_Expressions.Expression_1<System.Func_2<T, TResult>>): TResult | undefined;
+  MinBy<TKey>(keySelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TKey>>): T | undefined;
+  MinBy<TKey>(keySelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TKey>>, comparer: System_Collections_Generic.IComparer_1<T> | undefined): T | undefined;
+  Max(): T | undefined;
+  Max(comparer: System_Collections_Generic.IComparer_1<T> | undefined): T | undefined;
+  Max<TResult>(selector: System_Linq_Expressions.Expression_1<System.Func_2<T, TResult>>): TResult | undefined;
+  MaxBy<TKey>(keySelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TKey>>): T | undefined;
+  MaxBy<TKey>(keySelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TKey>>, comparer: System_Collections_Generic.IComparer_1<T> | undefined): T | undefined;
   Sum(): int;
   Sum(): System.Nullable_1<System_Internal.Int32>;
   Sum(): long;
@@ -1521,36 +1521,36 @@ export interface __Ext_IOrderedQueryable_1<T> {
 }
 
 export interface __Ext_HttpClient {
-  GetFromJsonAsAsyncEnumerable<TValue>(requestUri: string, options: System_Text_Json.JsonSerializerOptions, cancellationToken: System_Threading.CancellationToken): System_Collections_Generic.IAsyncEnumerable_1<TValue | undefined>;
-  GetFromJsonAsAsyncEnumerable<TValue>(requestUri: System.Uri, options: System_Text_Json.JsonSerializerOptions, cancellationToken: System_Threading.CancellationToken): System_Collections_Generic.IAsyncEnumerable_1<TValue | undefined>;
+  GetFromJsonAsAsyncEnumerable<TValue>(requestUri: string | undefined, options: System_Text_Json.JsonSerializerOptions | undefined, cancellationToken: System_Threading.CancellationToken): System_Collections_Generic.IAsyncEnumerable_1<TValue | undefined>;
+  GetFromJsonAsAsyncEnumerable<TValue>(requestUri: System.Uri | undefined, options: System_Text_Json.JsonSerializerOptions | undefined, cancellationToken: System_Threading.CancellationToken): System_Collections_Generic.IAsyncEnumerable_1<TValue | undefined>;
   GetFromJsonAsAsyncEnumerable<TValue>(requestUri: string | undefined, jsonTypeInfo: System_Text_Json_Serialization_Metadata.JsonTypeInfo_1<TValue>, cancellationToken: System_Threading.CancellationToken): System_Collections_Generic.IAsyncEnumerable_1<TValue | undefined>;
   GetFromJsonAsAsyncEnumerable<TValue>(requestUri: System.Uri | undefined, jsonTypeInfo: System_Text_Json_Serialization_Metadata.JsonTypeInfo_1<TValue>, cancellationToken: System_Threading.CancellationToken): System_Collections_Generic.IAsyncEnumerable_1<TValue | undefined>;
-  GetFromJsonAsAsyncEnumerable<TValue>(requestUri: string, cancellationToken: System_Threading.CancellationToken): System_Collections_Generic.IAsyncEnumerable_1<TValue | undefined>;
-  GetFromJsonAsAsyncEnumerable<TValue>(requestUri: System.Uri, cancellationToken: System_Threading.CancellationToken): System_Collections_Generic.IAsyncEnumerable_1<TValue | undefined>;
+  GetFromJsonAsAsyncEnumerable<TValue>(requestUri: string | undefined, cancellationToken: System_Threading.CancellationToken): System_Collections_Generic.IAsyncEnumerable_1<TValue | undefined>;
+  GetFromJsonAsAsyncEnumerable<TValue>(requestUri: System.Uri | undefined, cancellationToken: System_Threading.CancellationToken): System_Collections_Generic.IAsyncEnumerable_1<TValue | undefined>;
   DeleteFromJsonAsync(requestUri: string | undefined, type_: System.Type, options: System_Text_Json.JsonSerializerOptions | undefined, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<unknown | undefined>;
   DeleteFromJsonAsync(requestUri: System.Uri | undefined, type_: System.Type, options: System_Text_Json.JsonSerializerOptions | undefined, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<unknown | undefined>;
-  DeleteFromJsonAsync<TValue>(requestUri: string, options: System_Text_Json.JsonSerializerOptions, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<TValue | undefined>;
-  DeleteFromJsonAsync<TValue>(requestUri: System.Uri, options: System_Text_Json.JsonSerializerOptions, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<TValue | undefined>;
+  DeleteFromJsonAsync<TValue>(requestUri: string | undefined, options: System_Text_Json.JsonSerializerOptions | undefined, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<TValue | undefined>;
+  DeleteFromJsonAsync<TValue>(requestUri: System.Uri | undefined, options: System_Text_Json.JsonSerializerOptions | undefined, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<TValue | undefined>;
   DeleteFromJsonAsync(requestUri: string | undefined, type_: System.Type, context: System_Text_Json_Serialization.JsonSerializerContext, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<unknown | undefined>;
   DeleteFromJsonAsync(requestUri: System.Uri | undefined, type_: System.Type, context: System_Text_Json_Serialization.JsonSerializerContext, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<unknown | undefined>;
   DeleteFromJsonAsync<TValue>(requestUri: string | undefined, jsonTypeInfo: System_Text_Json_Serialization_Metadata.JsonTypeInfo_1<TValue>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<TValue | undefined>;
   DeleteFromJsonAsync<TValue>(requestUri: System.Uri | undefined, jsonTypeInfo: System_Text_Json_Serialization_Metadata.JsonTypeInfo_1<TValue>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<TValue | undefined>;
   DeleteFromJsonAsync(requestUri: string | undefined, type_: System.Type, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<unknown | undefined>;
   DeleteFromJsonAsync(requestUri: System.Uri | undefined, type_: System.Type, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<unknown | undefined>;
-  DeleteFromJsonAsync<TValue>(requestUri: string, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<TValue | undefined>;
-  DeleteFromJsonAsync<TValue>(requestUri: System.Uri, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<TValue | undefined>;
+  DeleteFromJsonAsync<TValue>(requestUri: string | undefined, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<TValue | undefined>;
+  DeleteFromJsonAsync<TValue>(requestUri: System.Uri | undefined, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<TValue | undefined>;
   GetFromJsonAsync(requestUri: string | undefined, type_: System.Type, options: System_Text_Json.JsonSerializerOptions | undefined, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<unknown | undefined>;
   GetFromJsonAsync(requestUri: System.Uri | undefined, type_: System.Type, options: System_Text_Json.JsonSerializerOptions | undefined, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<unknown | undefined>;
-  GetFromJsonAsync<TValue>(requestUri: string, options: System_Text_Json.JsonSerializerOptions, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<TValue | undefined>;
-  GetFromJsonAsync<TValue>(requestUri: System.Uri, options: System_Text_Json.JsonSerializerOptions, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<TValue | undefined>;
+  GetFromJsonAsync<TValue>(requestUri: string | undefined, options: System_Text_Json.JsonSerializerOptions | undefined, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<TValue | undefined>;
+  GetFromJsonAsync<TValue>(requestUri: System.Uri | undefined, options: System_Text_Json.JsonSerializerOptions | undefined, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<TValue | undefined>;
   GetFromJsonAsync(requestUri: string | undefined, type_: System.Type, context: System_Text_Json_Serialization.JsonSerializerContext, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<unknown | undefined>;
   GetFromJsonAsync(requestUri: System.Uri | undefined, type_: System.Type, context: System_Text_Json_Serialization.JsonSerializerContext, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<unknown | undefined>;
   GetFromJsonAsync<TValue>(requestUri: string | undefined, jsonTypeInfo: System_Text_Json_Serialization_Metadata.JsonTypeInfo_1<TValue>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<TValue | undefined>;
   GetFromJsonAsync<TValue>(requestUri: System.Uri | undefined, jsonTypeInfo: System_Text_Json_Serialization_Metadata.JsonTypeInfo_1<TValue>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<TValue | undefined>;
   GetFromJsonAsync(requestUri: string | undefined, type_: System.Type, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<unknown | undefined>;
   GetFromJsonAsync(requestUri: System.Uri | undefined, type_: System.Type, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<unknown | undefined>;
-  GetFromJsonAsync<TValue>(requestUri: string, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<TValue | undefined>;
-  GetFromJsonAsync<TValue>(requestUri: System.Uri, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<TValue | undefined>;
+  GetFromJsonAsync<TValue>(requestUri: string | undefined, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<TValue | undefined>;
+  GetFromJsonAsync<TValue>(requestUri: System.Uri | undefined, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<TValue | undefined>;
   PostAsJsonAsync<TValue>(requestUri: string | undefined, value: TValue, options: System_Text_Json.JsonSerializerOptions | undefined, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<System_Net_Http.HttpResponseMessage>;
   PostAsJsonAsync<TValue>(requestUri: System.Uri | undefined, value: TValue, options: System_Text_Json.JsonSerializerOptions | undefined, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<System_Net_Http.HttpResponseMessage>;
   PostAsJsonAsync<TValue>(requestUri: string | undefined, value: TValue, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<System_Net_Http.HttpResponseMessage>;
@@ -1573,11 +1573,11 @@ export interface __Ext_HttpClient {
 
 export interface __Ext_HttpContent {
   ReadFromJsonAsAsyncEnumerable<TValue>(cancellationToken: System_Threading.CancellationToken): System_Collections_Generic.IAsyncEnumerable_1<TValue | undefined>;
-  ReadFromJsonAsAsyncEnumerable<TValue>(options: System_Text_Json.JsonSerializerOptions, cancellationToken: System_Threading.CancellationToken): System_Collections_Generic.IAsyncEnumerable_1<TValue | undefined>;
+  ReadFromJsonAsAsyncEnumerable<TValue>(options: System_Text_Json.JsonSerializerOptions | undefined, cancellationToken: System_Threading.CancellationToken): System_Collections_Generic.IAsyncEnumerable_1<TValue | undefined>;
   ReadFromJsonAsAsyncEnumerable<TValue>(jsonTypeInfo: System_Text_Json_Serialization_Metadata.JsonTypeInfo_1<TValue>, cancellationToken: System_Threading.CancellationToken): System_Collections_Generic.IAsyncEnumerable_1<TValue | undefined>;
   ReadFromJsonAsync(type_: System.Type, options: System_Text_Json.JsonSerializerOptions | undefined, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<unknown | undefined>;
   ReadFromJsonAsync(type_: System.Type, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<unknown | undefined>;
-  ReadFromJsonAsync<T>(options: System_Text_Json.JsonSerializerOptions, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<T | undefined>;
+  ReadFromJsonAsync<T>(options: System_Text_Json.JsonSerializerOptions | undefined, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<T | undefined>;
   ReadFromJsonAsync<T>(cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<T | undefined>;
   ReadFromJsonAsync(type_: System.Type, context: System_Text_Json_Serialization.JsonSerializerContext, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<unknown | undefined>;
   ReadFromJsonAsync<T>(jsonTypeInfo: System_Text_Json_Serialization_Metadata.JsonTypeInfo_1<T>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<T | undefined>;
@@ -2043,7 +2043,7 @@ export interface __Ext_Decoder {
 }
 
 export interface __Ext_JsonDocument {
-  Deserialize<TValue>(options: System_Text_Json.JsonSerializerOptions): TValue;
+  Deserialize<TValue>(options: System_Text_Json.JsonSerializerOptions | undefined): TValue | undefined;
   Deserialize(returnType: System.Type, options: System_Text_Json.JsonSerializerOptions | undefined): unknown | undefined;
   Deserialize<TValue>(jsonTypeInfo: System_Text_Json_Serialization_Metadata.JsonTypeInfo_1<TValue>): TValue | undefined;
   Deserialize(jsonTypeInfo: System_Text_Json_Serialization_Metadata.JsonTypeInfo): unknown | undefined;
@@ -2051,18 +2051,18 @@ export interface __Ext_JsonDocument {
 }
 
 export interface __Ext_JsonElement {
-  Deserialize<TValue>(options: System_Text_Json.JsonSerializerOptions): TValue;
-  Deserialize(returnType: System.Type, options: System_Text_Json.JsonSerializerOptions): unknown;
-  Deserialize<TValue>(jsonTypeInfo: System_Text_Json_Serialization_Metadata.JsonTypeInfo_1<TValue>): TValue;
+  Deserialize<TValue>(options: System_Text_Json.JsonSerializerOptions | undefined): TValue | undefined;
+  Deserialize(returnType: System.Type, options: System_Text_Json.JsonSerializerOptions | undefined): unknown | undefined;
+  Deserialize<TValue>(jsonTypeInfo: System_Text_Json_Serialization_Metadata.JsonTypeInfo_1<TValue>): TValue | undefined;
   Deserialize(jsonTypeInfo: System_Text_Json_Serialization_Metadata.JsonTypeInfo): unknown | undefined;
   Deserialize(returnType: System.Type, context: System_Text_Json_Serialization.JsonSerializerContext): unknown | undefined;
 }
 
 export interface __Ext_JsonNode {
-  Deserialize<TValue>(options: System_Text_Json.JsonSerializerOptions): TValue;
-  Deserialize(returnType: System.Type, options: System_Text_Json.JsonSerializerOptions): unknown;
-  Deserialize<TValue>(jsonTypeInfo: System_Text_Json_Serialization_Metadata.JsonTypeInfo_1<TValue>): TValue;
-  Deserialize(jsonTypeInfo: System_Text_Json_Serialization_Metadata.JsonTypeInfo): unknown;
+  Deserialize<TValue>(options: System_Text_Json.JsonSerializerOptions | undefined): TValue | undefined;
+  Deserialize(returnType: System.Type, options: System_Text_Json.JsonSerializerOptions | undefined): unknown | undefined;
+  Deserialize<TValue>(jsonTypeInfo: System_Text_Json_Serialization_Metadata.JsonTypeInfo_1<TValue>): TValue | undefined;
+  Deserialize(jsonTypeInfo: System_Text_Json_Serialization_Metadata.JsonTypeInfo): unknown | undefined;
   Deserialize(returnType: System.Type, context: System_Text_Json_Serialization.JsonSerializerContext): unknown | undefined;
 }
 

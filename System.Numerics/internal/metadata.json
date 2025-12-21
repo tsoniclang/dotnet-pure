@@ -1486,6 +1486,22 @@
           "isExtensionMethod": false
         },
         {
+          "stableId": "System.Private.CoreLib:System.Numerics.INumberBase\u00601::Abs(TSelf):TSelf",
+          "clrName": "Abs",
+          "tsEmitName": "Abs",
+          "normalizedSignature": "Abs|(TSelf):TSelf|static=true",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": true,
+          "isAbstract": true,
+          "isVirtual": true,
+          "isOverride": true,
+          "isSealed": false,
+          "arity": 0,
+          "parameterCount": 1,
+          "isExtensionMethod": false
+        },
+        {
           "stableId": "System.Private.CoreLib:System.Numerics.INumberBase\u00601::CreateChecked(TOther):TSelf",
           "clrName": "CreateChecked",
           "tsEmitName": "CreateChecked",
@@ -1498,6 +1514,22 @@
           "isOverride": true,
           "isSealed": false,
           "arity": 1,
+          "parameterCount": 1,
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.Private.CoreLib:System.Numerics.INumberBase\u00601::IsCanonical(TSelf):System.Boolean",
+          "clrName": "IsCanonical",
+          "tsEmitName": "IsCanonical",
+          "normalizedSignature": "IsCanonical|(TSelf):System.Boolean|static=true",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": true,
+          "isAbstract": true,
+          "isVirtual": true,
+          "isOverride": true,
+          "isSealed": false,
+          "arity": 0,
           "parameterCount": 1,
           "isExtensionMethod": false
         },
@@ -5986,6 +6018,22 @@
           "isExtensionMethod": false
         },
         {
+          "stableId": "System.Private.CoreLib:System.Numerics.INumberBase\u00601::MaxMagnitude(TSelf,TSelf):TSelf",
+          "clrName": "MaxMagnitude",
+          "tsEmitName": "MaxMagnitude",
+          "normalizedSignature": "MaxMagnitude|(TSelf,TSelf):TSelf|static=true",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": true,
+          "isAbstract": true,
+          "isVirtual": true,
+          "isOverride": true,
+          "isSealed": false,
+          "arity": 0,
+          "parameterCount": 2,
+          "isExtensionMethod": false
+        },
+        {
           "stableId": "System.Private.CoreLib:System.Numerics.INumberBase\u00601::MultiplyAddEstimate(TSelf,TSelf,TSelf):TSelf",
           "clrName": "MultiplyAddEstimate",
           "tsEmitName": "MultiplyAddEstimate",
@@ -6333,6 +6381,22 @@
           "isExtensionMethod": false
         },
         {
+          "stableId": "System.Private.CoreLib:System.Numerics.INumberBase\u00601::Abs(TSelf):TSelf",
+          "clrName": "Abs",
+          "tsEmitName": "Abs",
+          "normalizedSignature": "Abs|(TSelf):TSelf|static=true",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": true,
+          "isAbstract": true,
+          "isVirtual": true,
+          "isOverride": true,
+          "isSealed": false,
+          "arity": 0,
+          "parameterCount": 1,
+          "isExtensionMethod": false
+        },
+        {
           "stableId": "System.Private.CoreLib:System.Numerics.INumberBase\u00601::CreateChecked(TOther):TSelf",
           "clrName": "CreateChecked",
           "tsEmitName": "CreateChecked",
@@ -6362,6 +6426,22 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 1,
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.Private.CoreLib:System.Numerics.INumberBase\u00601::MaxMagnitude(TSelf,TSelf):TSelf",
+          "clrName": "MaxMagnitude",
+          "tsEmitName": "MaxMagnitude",
+          "normalizedSignature": "MaxMagnitude|(TSelf,TSelf):TSelf|static=true",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": true,
+          "isAbstract": true,
+          "isVirtual": true,
+          "isOverride": true,
+          "isSealed": false,
+          "arity": 0,
+          "parameterCount": 2,
           "isExtensionMethod": false
         },
         {

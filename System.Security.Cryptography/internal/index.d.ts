@@ -225,10 +225,10 @@ export type ICspAsymmetricAlgorithm = ICspAsymmetricAlgorithm$instance;
 export interface CngProperty$instance {
     readonly Name: string;
     readonly Options: CngPropertyOptions;
-    Equals(obj: unknown): boolean;
+    Equals(obj: unknown | undefined): boolean;
     Equals(other: CngProperty): boolean;
     GetHashCode(): int;
-    GetValue(): byte[];
+    GetValue(): byte[] | undefined;
 }
 
 
@@ -288,9 +288,9 @@ export interface ECCurve$instance {
 
 export const ECCurve: {
     new(): ECCurve;
-    CreateFromFriendlyName(oidFriendlyName: string | undefined): ECCurve;
-    CreateFromOid(curveOid: Oid | undefined): ECCurve;
-    CreateFromValue(oidValue: string | undefined): ECCurve;
+    CreateFromFriendlyName(oidFriendlyName: string): ECCurve;
+    CreateFromOid(curveOid: Oid): ECCurve;
+    CreateFromValue(oidValue: string): ECCurve;
 };
 
 
@@ -329,7 +329,7 @@ export interface HashAlgorithmName$instance {
     Equals(obj: unknown | undefined): boolean;
     Equals(other: HashAlgorithmName): boolean;
     GetHashCode(): int;
-    ToString(): string | undefined;
+    ToString(): string;
 }
 
 
@@ -343,8 +343,8 @@ export const HashAlgorithmName: {
     readonly SHA3_256: HashAlgorithmName;
     readonly SHA3_384: HashAlgorithmName;
     readonly SHA3_512: HashAlgorithmName;
-    FromOid(oidValue: string | undefined): HashAlgorithmName;
-    TryFromOid(oidValue: string | undefined, value: HashAlgorithmName): boolean;
+    FromOid(oidValue: string): HashAlgorithmName;
+    TryFromOid(oidValue: string, value: HashAlgorithmName): boolean;
 };
 
 
@@ -682,8 +682,8 @@ export type AsymmetricAlgorithm = AsymmetricAlgorithm$instance & __AsymmetricAlg
 
 export interface AsymmetricKeyExchangeDeformatter$instance {
     Parameters: string;
-    DecryptKeyExchange(rgb: byte[] | undefined): byte[] | undefined;
-    SetKey(key: AsymmetricAlgorithm | undefined): void;
+    DecryptKeyExchange(rgb: byte[]): byte[];
+    SetKey(key: AsymmetricAlgorithm): void;
 }
 
 
@@ -781,8 +781,8 @@ export type ChaCha20Poly1305 = ChaCha20Poly1305$instance & __ChaCha20Poly1305$vi
 
 export interface CngAlgorithm$instance {
     readonly Algorithm: string;
-    Equals(obj: unknown): boolean;
-    Equals(other: CngAlgorithm): boolean;
+    Equals(obj: unknown | undefined): boolean;
+    Equals(other: CngAlgorithm | undefined): boolean;
     GetHashCode(): int;
     ToString(): string;
 }
@@ -822,8 +822,8 @@ export type CngAlgorithm = CngAlgorithm$instance & __CngAlgorithm$views;
 
 export interface CngAlgorithmGroup$instance {
     readonly AlgorithmGroup: string;
-    Equals(obj: unknown): boolean;
-    Equals(other: CngAlgorithmGroup): boolean;
+    Equals(obj: unknown | undefined): boolean;
+    Equals(other: CngAlgorithmGroup | undefined): boolean;
     GetHashCode(): int;
     ToString(): string;
 }
@@ -904,8 +904,8 @@ export type CngKey = CngKey$instance & __CngKey$views;
 
 export interface CngKeyBlobFormat$instance {
     readonly Format: string;
-    Equals(obj: unknown): boolean;
-    Equals(other: CngKeyBlobFormat): boolean;
+    Equals(obj: unknown | undefined): boolean;
+    Equals(other: CngKeyBlobFormat | undefined): boolean;
     GetHashCode(): int;
     ToString(): string;
 }
@@ -997,8 +997,8 @@ export type CngPropertyCollection = CngPropertyCollection$instance & __CngProper
 
 export interface CngProvider$instance {
     readonly Provider: string;
-    Equals(obj: unknown): boolean;
-    Equals(other: CngProvider): boolean;
+    Equals(obj: unknown | undefined): boolean;
+    Equals(other: CngProvider | undefined): boolean;
     GetHashCode(): int;
     ToString(): string;
 }
@@ -1109,8 +1109,8 @@ export type CompositeMLDsa = CompositeMLDsa$instance & __CompositeMLDsa$views;
 export interface CompositeMLDsaAlgorithm$instance {
     readonly MaxSignatureSizeInBytes: int;
     readonly Name: string;
-    Equals(other: CompositeMLDsaAlgorithm): boolean;
-    Equals(obj: unknown): boolean;
+    Equals(other: CompositeMLDsaAlgorithm | undefined): boolean;
+    Equals(obj: unknown | undefined): boolean;
     GetHashCode(): int;
     ToString(): string;
 }
@@ -1176,7 +1176,7 @@ export const CryptoConfig: {
     readonly AllowOnlyFipsAlgorithms: boolean;
     AddAlgorithm(algorithm: Type, ...names: string[]): void;
     AddOID(oid: string, ...names: string[]): void;
-    CreateFromName(name: string, ...args: unknown[]): unknown;
+    CreateFromName(name: string, ...args: unknown[]): unknown | undefined;
     CreateFromName(name: string): unknown | undefined;
     EncodeOID(str: string): byte[];
     MapNameToOID(name: string): string | undefined;
@@ -1193,8 +1193,8 @@ export interface CryptographicException$instance extends SystemException {
 export const CryptographicException: {
     new(): CryptographicException;
     new(hr: int): CryptographicException;
-    new(message: string): CryptographicException;
-    new(message: string, inner: Exception): CryptographicException;
+    new(message: string | undefined): CryptographicException;
+    new(message: string | undefined, inner: Exception | undefined): CryptographicException;
     new(format: string, insert: string | undefined): CryptographicException;
 };
 
@@ -1213,8 +1213,8 @@ export interface CryptographicUnexpectedOperationException$instance extends Cryp
 
 export const CryptographicUnexpectedOperationException: {
     new(): CryptographicUnexpectedOperationException;
-    new(message: string): CryptographicUnexpectedOperationException;
-    new(message: string, inner: Exception): CryptographicUnexpectedOperationException;
+    new(message: string | undefined): CryptographicUnexpectedOperationException;
+    new(message: string | undefined, inner: Exception | undefined): CryptographicUnexpectedOperationException;
     new(format: string, insert: string | undefined): CryptographicUnexpectedOperationException;
 };
 
@@ -1688,7 +1688,7 @@ export interface ECDiffieHellman$instance extends ECAlgorithm$instance {
     DeriveKeyFromHash(otherPartyPublicKey: ECDiffieHellmanPublicKey, hashAlgorithm: HashAlgorithmName): byte[];
     DeriveKeyFromHash(otherPartyPublicKey: ECDiffieHellmanPublicKey, hashAlgorithm: HashAlgorithmName, secretPrepend: byte[] | undefined, secretAppend: byte[] | undefined): byte[];
     DeriveKeyFromHmac(otherPartyPublicKey: ECDiffieHellmanPublicKey, hashAlgorithm: HashAlgorithmName, hmacKey: byte[] | undefined): byte[];
-    DeriveKeyFromHmac(otherPartyPublicKey: ECDiffieHellmanPublicKey, hashAlgorithm: HashAlgorithmName, hmacKey: byte[], secretPrepend: byte[], secretAppend: byte[]): byte[];
+    DeriveKeyFromHmac(otherPartyPublicKey: ECDiffieHellmanPublicKey, hashAlgorithm: HashAlgorithmName, hmacKey: byte[] | undefined, secretPrepend: byte[] | undefined, secretAppend: byte[] | undefined): byte[];
     DeriveKeyMaterial(otherPartyPublicKey: ECDiffieHellmanPublicKey): byte[];
     DeriveKeyTls(otherPartyPublicKey: ECDiffieHellmanPublicKey, prfLabel: byte[], prfSeed: byte[]): byte[];
     DeriveRawSecretAgreement(otherPartyPublicKey: ECDiffieHellmanPublicKey): byte[];
@@ -1725,8 +1725,8 @@ export interface ECDiffieHellmanCng$instance extends ECDiffieHellman$instance {
     Seed: byte[] | undefined;
     readonly UseSecretAgreementAsHmacKey: boolean;
     DeriveKeyMaterial(otherPartyPublicKey: ECDiffieHellmanPublicKey): byte[];
-    DeriveSecretAgreementHandle(otherPartyPublicKey: CngKey | undefined): SafeNCryptSecretHandle | undefined;
-    DeriveSecretAgreementHandle(otherPartyPublicKey: ECDiffieHellmanPublicKey | undefined): SafeNCryptSecretHandle | undefined;
+    DeriveSecretAgreementHandle(otherPartyPublicKey: CngKey): SafeNCryptSecretHandle;
+    DeriveSecretAgreementHandle(otherPartyPublicKey: ECDiffieHellmanPublicKey): SafeNCryptSecretHandle;
     Dispose(): void;
     FromXmlString(xmlString: string): void;
     ToXmlString(includePrivateParameters: boolean): string;
@@ -1736,7 +1736,7 @@ export interface ECDiffieHellmanCng$instance extends ECDiffieHellman$instance {
 export const ECDiffieHellmanCng: {
     new(): ECDiffieHellmanCng;
     new(keySize: int): ECDiffieHellmanCng;
-    new(key: CngKey | undefined): ECDiffieHellmanCng;
+    new(key: CngKey): ECDiffieHellmanCng;
     new(curve: ECCurve): ECDiffieHellmanCng;
 };
 
@@ -1776,7 +1776,7 @@ export interface ECDiffieHellmanOpenSsl$instance extends ECDiffieHellman$instanc
     readonly PublicKey: ECDiffieHellmanPublicKey;
     DeriveKeyFromHash(otherPartyPublicKey: ECDiffieHellmanPublicKey, hashAlgorithm: HashAlgorithmName, secretPrepend: byte[] | undefined, secretAppend: byte[] | undefined): byte[];
     DeriveKeyFromHash(otherPartyPublicKey: ECDiffieHellmanPublicKey, hashAlgorithm: HashAlgorithmName): byte[];
-    DeriveKeyFromHmac(otherPartyPublicKey: ECDiffieHellmanPublicKey, hashAlgorithm: HashAlgorithmName, hmacKey: byte[], secretPrepend: byte[], secretAppend: byte[]): byte[];
+    DeriveKeyFromHmac(otherPartyPublicKey: ECDiffieHellmanPublicKey, hashAlgorithm: HashAlgorithmName, hmacKey: byte[] | undefined, secretPrepend: byte[] | undefined, secretAppend: byte[] | undefined): byte[];
     DeriveKeyFromHmac(otherPartyPublicKey: ECDiffieHellmanPublicKey, hashAlgorithm: HashAlgorithmName, hmacKey: byte[] | undefined): byte[];
     DeriveKeyMaterial(otherPartyPublicKey: ECDiffieHellmanPublicKey): byte[];
     DeriveKeyTls(otherPartyPublicKey: ECDiffieHellmanPublicKey, prfLabel: byte[], prfSeed: byte[]): byte[];
@@ -2715,8 +2715,8 @@ export interface MLDsaAlgorithm$instance {
     readonly PrivateSeedSizeInBytes: int;
     readonly PublicKeySizeInBytes: int;
     readonly SignatureSizeInBytes: int;
-    Equals(other: MLDsaAlgorithm): boolean;
-    Equals(obj: unknown): boolean;
+    Equals(other: MLDsaAlgorithm | undefined): boolean;
+    Equals(obj: unknown | undefined): boolean;
     GetHashCode(): int;
     ToString(): string;
 }
@@ -2848,8 +2848,8 @@ export interface MLKemAlgorithm$instance {
     readonly Name: string;
     readonly PrivateSeedSizeInBytes: int;
     readonly SharedSecretSizeInBytes: int;
-    Equals(other: MLKemAlgorithm): boolean;
-    Equals(obj: unknown): boolean;
+    Equals(other: MLKemAlgorithm | undefined): boolean;
+    Equals(obj: unknown | undefined): boolean;
     GetHashCode(): int;
     ToString(): string;
 }
@@ -2917,11 +2917,11 @@ export interface Oid$instance {
 
 export const Oid: {
     new(): Oid;
-    new(oid: string | undefined): Oid;
+    new(oid: string): Oid;
     new(value: string | undefined, friendlyName: string | undefined): Oid;
-    new(oid: Oid | undefined): Oid;
-    FromFriendlyName(friendlyName: string | undefined, group: OidGroup): Oid | undefined;
-    FromOidValue(oidValue: string | undefined, group: OidGroup): Oid | undefined;
+    new(oid: Oid): Oid;
+    FromFriendlyName(friendlyName: string, group: OidGroup): Oid;
+    FromOidValue(oidValue: string, group: OidGroup): Oid;
 };
 
 
@@ -2987,8 +2987,8 @@ export const PasswordDeriveBytes: {
     new(password: byte[], salt: byte[] | undefined): PasswordDeriveBytes;
     new(strPassword: string, rgbSalt: byte[] | undefined, strHashName: string, iterations: int): PasswordDeriveBytes;
     new(password: byte[], salt: byte[] | undefined, hashName: string, iterations: int): PasswordDeriveBytes;
-    new(strPassword: string, rgbSalt: byte[], cspParams: CspParameters): PasswordDeriveBytes;
-    new(password: byte[], salt: byte[], cspParams: CspParameters): PasswordDeriveBytes;
+    new(strPassword: string, rgbSalt: byte[] | undefined, cspParams: CspParameters | undefined): PasswordDeriveBytes;
+    new(password: byte[], salt: byte[] | undefined, cspParams: CspParameters | undefined): PasswordDeriveBytes;
     new(strPassword: string, rgbSalt: byte[] | undefined, strHashName: string, iterations: int, cspParams: CspParameters | undefined): PasswordDeriveBytes;
     new(password: byte[], salt: byte[] | undefined, hashName: string, iterations: int, cspParams: CspParameters | undefined): PasswordDeriveBytes;
 };
@@ -3214,7 +3214,7 @@ export const RNGCryptoServiceProvider: {
     new(): RNGCryptoServiceProvider;
     new(str: string): RNGCryptoServiceProvider;
     new(rgb: byte[]): RNGCryptoServiceProvider;
-    new(cspParams: CspParameters): RNGCryptoServiceProvider;
+    new(cspParams: CspParameters | undefined): RNGCryptoServiceProvider;
 };
 
 
@@ -3401,8 +3401,8 @@ export type RSACryptoServiceProvider = RSACryptoServiceProvider$instance & __RSA
 export interface RSAEncryptionPadding$instance {
     readonly Mode: RSAEncryptionPaddingMode;
     readonly OaepHashAlgorithm: HashAlgorithmName;
-    Equals(obj: unknown): boolean;
-    Equals(other: RSAEncryptionPadding): boolean;
+    Equals(obj: unknown | undefined): boolean;
+    Equals(other: RSAEncryptionPadding | undefined): boolean;
     GetHashCode(): int;
     ToString(): string;
 }
@@ -3451,15 +3451,15 @@ export interface RSAOAEPKeyExchangeFormatter$instance extends AsymmetricKeyExcha
     Parameter: byte[] | undefined;
     readonly Parameters: string;
     Rng: RandomNumberGenerator | undefined;
-    CreateKeyExchange(rgbData: byte[] | undefined, symAlgType: Type | undefined): byte[];
-    CreateKeyExchange(rgbData: byte[] | undefined): byte[];
-    SetKey(key: AsymmetricAlgorithm | undefined): void;
+    CreateKeyExchange(rgbData: byte[], symAlgType: Type | undefined): byte[];
+    CreateKeyExchange(rgbData: byte[]): byte[];
+    SetKey(key: AsymmetricAlgorithm): void;
 }
 
 
 export const RSAOAEPKeyExchangeFormatter: {
     new(): RSAOAEPKeyExchangeFormatter;
-    new(key: AsymmetricAlgorithm | undefined): RSAOAEPKeyExchangeFormatter;
+    new(key: AsymmetricAlgorithm): RSAOAEPKeyExchangeFormatter;
 };
 
 
@@ -3535,14 +3535,14 @@ export type RSAOpenSsl = RSAOpenSsl$instance & __RSAOpenSsl$views;
 export interface RSAPKCS1KeyExchangeDeformatter$instance extends AsymmetricKeyExchangeDeformatter {
     Parameters: string;
     RNG: RandomNumberGenerator | undefined;
-    DecryptKeyExchange(rgbIn: byte[] | undefined): byte[] | undefined;
-    SetKey(key: AsymmetricAlgorithm | undefined): void;
+    DecryptKeyExchange(rgbIn: byte[]): byte[];
+    SetKey(key: AsymmetricAlgorithm): void;
 }
 
 
 export const RSAPKCS1KeyExchangeDeformatter: {
     new(): RSAPKCS1KeyExchangeDeformatter;
-    new(key: AsymmetricAlgorithm | undefined): RSAPKCS1KeyExchangeDeformatter;
+    new(key: AsymmetricAlgorithm): RSAPKCS1KeyExchangeDeformatter;
 };
 
 
@@ -3599,8 +3599,8 @@ export type RSAPKCS1SignatureFormatter = RSAPKCS1SignatureFormatter$instance;
 
 export interface RSASignaturePadding$instance {
     readonly Mode: RSASignaturePaddingMode;
-    Equals(obj: unknown): boolean;
-    Equals(other: RSASignaturePadding): boolean;
+    Equals(obj: unknown | undefined): boolean;
+    Equals(other: RSASignaturePadding | undefined): boolean;
     GetHashCode(): int;
     ToString(): string;
 }
@@ -4100,15 +4100,15 @@ export interface SignatureDescription$instance {
     DigestAlgorithm: string | undefined;
     FormatterAlgorithm: string | undefined;
     KeyAlgorithm: string | undefined;
-    CreateDeformatter(key: AsymmetricAlgorithm | undefined): AsymmetricSignatureDeformatter | undefined;
+    CreateDeformatter(key: AsymmetricAlgorithm): AsymmetricSignatureDeformatter;
     CreateDigest(): HashAlgorithm | undefined;
-    CreateFormatter(key: AsymmetricAlgorithm | undefined): AsymmetricSignatureFormatter | undefined;
+    CreateFormatter(key: AsymmetricAlgorithm): AsymmetricSignatureFormatter;
 }
 
 
 export const SignatureDescription: {
     new(): SignatureDescription;
-    new(el: SecurityElement | undefined): SignatureDescription;
+    new(el: SecurityElement): SignatureDescription;
 };
 
 
@@ -4184,8 +4184,8 @@ export interface SlhDsaAlgorithm$instance {
     readonly PrivateKeySizeInBytes: int;
     readonly PublicKeySizeInBytes: int;
     readonly SignatureSizeInBytes: int;
-    Equals(other: SlhDsaAlgorithm): boolean;
-    Equals(obj: unknown): boolean;
+    Equals(other: SlhDsaAlgorithm | undefined): boolean;
+    Equals(obj: unknown | undefined): boolean;
     GetHashCode(): int;
     ToString(): string;
 }

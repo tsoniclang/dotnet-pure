@@ -97,7 +97,7 @@ export interface DataflowMessageHeader$instance {
     readonly Id: long;
     readonly IsValid: boolean;
     Equals(other: DataflowMessageHeader): boolean;
-    Equals(obj: unknown): boolean;
+    Equals(obj: unknown | undefined): boolean;
     GetHashCode(): int;
 }
 

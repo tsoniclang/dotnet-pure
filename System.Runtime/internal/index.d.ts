@@ -55,7 +55,7 @@ export type DependentHandle = DependentHandle$instance & __DependentHandle$views
 
 
 export interface AmbiguousImplementationException$instance extends Exception {
-    GetObjectData(info: SerializationInfo | undefined, context: StreamingContext): void;
+    GetObjectData(info: SerializationInfo, context: StreamingContext): void;
 }
 
 
@@ -143,7 +143,7 @@ export type JitInfo = JitInfo$instance;
 
 export abstract class ProfileOptimization$instance {
     static SetProfileRoot(directoryPath: string): void;
-    static StartProfile(profile: string): void;
+    static StartProfile(profile: string | undefined): void;
 }
 
 

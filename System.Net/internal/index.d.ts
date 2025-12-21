@@ -370,8 +370,8 @@ export type ICredentialsByHost = ICredentialsByHost$instance;
 
 export interface IWebProxy$instance {
     Credentials: ICredentials;
-    GetProxy(destination: Uri | undefined): Uri | undefined;
-    IsBypassed(host: Uri | undefined): boolean;
+    GetProxy(destination: Uri): Uri | undefined;
+    IsBypassed(host: Uri): boolean;
 }
 
 
@@ -398,9 +398,9 @@ export interface IPNetwork$instance {
     readonly PrefixLength: int;
     Contains(address: IPAddress): boolean;
     Equals(other: IPNetwork): boolean;
-    Equals(obj: unknown): boolean;
+    Equals(obj: unknown | undefined): boolean;
     GetHashCode(): int;
-    ToString(): string | undefined;
+    ToString(): string;
     TryFormat(destination: Span_1<System_Internal.Char>, charsWritten: int): boolean;
     TryFormat(utf8Destination: Span_1<System_Internal.Byte>, bytesWritten: int): boolean;
 }
@@ -413,7 +413,7 @@ export const IPNetwork: {
     Parse(s: string): IPNetwork;
     TryParse(utf8Text: ReadOnlySpan_1<System_Internal.Byte>, result: IPNetwork): boolean;
     TryParse(s: ReadOnlySpan_1<System_Internal.Char>, result: IPNetwork): boolean;
-    TryParse(s: string, result: IPNetwork): boolean;
+    TryParse(s: string | undefined, result: IPNetwork): boolean;
 };
 
 
@@ -488,7 +488,7 @@ export interface Cookie$instance {
     readonly TimeStamp: DateTime;
     Value: string;
     Version: int;
-    Equals(comparand: unknown): boolean;
+    Equals(comparand: unknown | undefined): boolean;
     GetHashCode(): int;
     ToString(): string;
 }
@@ -497,8 +497,8 @@ export interface Cookie$instance {
 export const Cookie: {
     new(): Cookie;
     new(name: string, value: string | undefined): Cookie;
-    new(name: string, value: string, path: string): Cookie;
-    new(name: string, value: string, path: string, domain: string): Cookie;
+    new(name: string, value: string | undefined, path: string | undefined): Cookie;
+    new(name: string, value: string | undefined, path: string | undefined, domain: string | undefined): Cookie;
 };
 
 
@@ -573,8 +573,8 @@ export interface CookieException$instance extends FormatException {
 
 export const CookieException: {
     new(): CookieException;
-    new(message: string): CookieException;
-    new(message: string, innerException: Exception): CookieException;
+    new(message: string | undefined): CookieException;
+    new(message: string | undefined, innerException: Exception | undefined): CookieException;
 };
 
 
@@ -591,8 +591,8 @@ export interface CredentialCache$instance {
     GetCredential(uriPrefix: Uri, authType: string): NetworkCredential;
     GetCredential(host: string, port: int, authenticationType: string): NetworkCredential;
     GetEnumerator(): IEnumerator;
-    Remove(uriPrefix: Uri, authType: string): void;
-    Remove(host: string, port: int, authenticationType: string): void;
+    Remove(uriPrefix: Uri | undefined, authType: string | undefined): void;
+    Remove(host: string | undefined, port: int, authenticationType: string | undefined): void;
 }
 
 
@@ -618,7 +618,7 @@ export interface DnsEndPoint$instance extends EndPoint {
     readonly AddressFamily: AddressFamily;
     readonly Host: string;
     readonly Port: int;
-    Equals(comparand: unknown): boolean;
+    Equals(comparand: unknown | undefined): boolean;
     GetHashCode(): int;
     ToString(): string;
 }
@@ -695,8 +695,8 @@ export interface FileWebRequest$instance extends WebRequest$instance {
     Timeout: int;
     UseDefaultCredentials: boolean;
     Abort(): void;
-    BeginGetRequestStream(callback: AsyncCallback, state: unknown): IAsyncResult;
-    BeginGetResponse(callback: AsyncCallback, state: unknown): IAsyncResult;
+    BeginGetRequestStream(callback: AsyncCallback | undefined, state: unknown | undefined): IAsyncResult;
+    BeginGetResponse(callback: AsyncCallback | undefined, state: unknown | undefined): IAsyncResult;
     EndGetRequestStream(asyncResult: IAsyncResult): Stream;
     EndGetResponse(asyncResult: IAsyncResult): WebResponse;
     GetObjectData(info: SerializationInfo, context: StreamingContext): void;
@@ -776,8 +776,8 @@ export interface FtpWebRequest$instance extends WebRequest$instance {
     Abort(): void;
     BeginGetRequestStream(callback: AsyncCallback | undefined, state: unknown | undefined): IAsyncResult;
     BeginGetResponse(callback: AsyncCallback | undefined, state: unknown | undefined): IAsyncResult;
-    EndGetRequestStream(asyncResult: IAsyncResult | undefined): Stream;
-    EndGetResponse(asyncResult: IAsyncResult | undefined): WebResponse;
+    EndGetRequestStream(asyncResult: IAsyncResult): Stream;
+    EndGetResponse(asyncResult: IAsyncResult): WebResponse;
     GetObjectData(info: SerializationInfo, context: StreamingContext): void;
     GetRequestStream(): Stream;
     GetResponse(): WebResponse;
@@ -858,7 +858,7 @@ export interface HttpListener$instance {
     readonly TimeoutManager: HttpListenerTimeoutManager;
     UnsafeConnectionNtlmAuthentication: boolean;
     Abort(): void;
-    BeginGetContext(callback: AsyncCallback, state: unknown): IAsyncResult;
+    BeginGetContext(callback: AsyncCallback | undefined, state: unknown | undefined): IAsyncResult;
     Close(): void;
     EndGetContext(asyncResult: IAsyncResult): HttpListenerContext;
     GetContext(): HttpListenerContext;
@@ -997,7 +997,7 @@ export interface HttpListenerRequest$instance {
     readonly UserHostName: string;
     readonly UserLanguages: string[] | undefined;
     BeginGetClientCertificate(requestCallback: AsyncCallback | undefined, state: unknown | undefined): IAsyncResult;
-    EndGetClientCertificate(asyncResult: IAsyncResult | undefined): X509Certificate2 | undefined;
+    EndGetClientCertificate(asyncResult: IAsyncResult): X509Certificate2 | undefined;
     GetClientCertificate(): X509Certificate2 | undefined;
     GetClientCertificateAsync(): Task_1<X509Certificate2 | undefined>;
 }
@@ -1114,14 +1114,14 @@ export interface HttpWebRequest$instance extends WebRequest$instance {
     AddRange(from_: long, to: long): void;
     AddRange(range: int): void;
     AddRange(range: long): void;
-    AddRange(rangeSpecifier: string | undefined, from_: int, to: int): void;
-    AddRange(rangeSpecifier: string | undefined, from_: long, to: long): void;
-    AddRange(rangeSpecifier: string | undefined, range: int): void;
-    AddRange(rangeSpecifier: string | undefined, range: long): void;
+    AddRange(rangeSpecifier: string, from_: int, to: int): void;
+    AddRange(rangeSpecifier: string, from_: long, to: long): void;
+    AddRange(rangeSpecifier: string, range: int): void;
+    AddRange(rangeSpecifier: string, range: long): void;
     BeginGetRequestStream(callback: AsyncCallback | undefined, state: unknown | undefined): IAsyncResult;
     BeginGetResponse(callback: AsyncCallback | undefined, state: unknown | undefined): IAsyncResult;
-    EndGetRequestStream(asyncResult: IAsyncResult | undefined): Stream;
-    EndGetResponse(asyncResult: IAsyncResult | undefined): WebResponse;
+    EndGetRequestStream(asyncResult: IAsyncResult): Stream;
+    EndGetResponse(asyncResult: IAsyncResult): WebResponse;
     GetObjectData(info: SerializationInfo, context: StreamingContext): void;
     GetRequestStream(): Stream;
     GetResponse(): WebResponse;
@@ -1194,12 +1194,12 @@ export interface IPAddress$instance {
     readonly IsIPv6Teredo: boolean;
     readonly IsIPv6UniqueLocal: boolean;
     ScopeId: long;
-    Equals(comparand: unknown): boolean;
+    Equals(comparand: unknown | undefined): boolean;
     GetAddressBytes(): byte[];
     GetHashCode(): int;
     MapToIPv4(): IPAddress;
     MapToIPv6(): IPAddress;
-    ToString(): string | undefined;
+    ToString(): string;
     TryFormat(destination: Span_1<System_Internal.Char>, charsWritten: int): boolean;
     TryFormat(utf8Destination: Span_1<System_Internal.Byte>, bytesWritten: int): boolean;
     TryWriteBytes(destination: Span_1<System_Internal.Byte>, bytesWritten: int): boolean;
@@ -1233,7 +1233,7 @@ export const IPAddress: {
     Parse(ipString: string): IPAddress;
     TryParse(utf8Text: ReadOnlySpan_1<System_Internal.Byte>, result: IPAddress | undefined): boolean;
     TryParse(ipSpan: ReadOnlySpan_1<System_Internal.Char>, address: IPAddress | undefined): boolean;
-    TryParse(ipString: string, address: IPAddress): boolean;
+    TryParse(ipString: string | undefined, address: IPAddress | undefined): boolean;
 };
 
 
@@ -1259,7 +1259,7 @@ export interface IPEndPoint$instance extends EndPoint {
     readonly AddressFamily: AddressFamily;
     Port: int;
     Create(socketAddress: SocketAddress): EndPoint;
-    Equals(comparand: unknown): boolean;
+    Equals(comparand: unknown | undefined): boolean;
     GetHashCode(): int;
     Serialize(): SocketAddress;
     ToString(): string;
@@ -1299,17 +1299,17 @@ export interface NetworkCredential$instance {
     Password: string;
     SecurePassword: SecureString;
     UserName: string;
-    GetCredential(uri: Uri, authenticationType: string): NetworkCredential;
-    GetCredential(host: string, port: int, authenticationType: string): NetworkCredential;
+    GetCredential(uri: Uri | undefined, authenticationType: string | undefined): NetworkCredential;
+    GetCredential(host: string | undefined, port: int, authenticationType: string | undefined): NetworkCredential;
 }
 
 
 export const NetworkCredential: {
     new(): NetworkCredential;
-    new(userName: string, password: string): NetworkCredential;
-    new(userName: string, password: string, domain: string): NetworkCredential;
-    new(userName: string, password: SecureString): NetworkCredential;
-    new(userName: string, password: SecureString, domain: string): NetworkCredential;
+    new(userName: string | undefined, password: string | undefined): NetworkCredential;
+    new(userName: string | undefined, password: string | undefined, domain: string | undefined): NetworkCredential;
+    new(userName: string | undefined, password: SecureString | undefined): NetworkCredential;
+    new(userName: string | undefined, password: SecureString | undefined, domain: string | undefined): NetworkCredential;
 };
 
 
@@ -1363,7 +1363,7 @@ export interface ProtocolViolationException$instance extends InvalidOperationExc
 
 export const ProtocolViolationException: {
     new(): ProtocolViolationException;
-    new(message: string): ProtocolViolationException;
+    new(message: string | undefined): ProtocolViolationException;
 };
 
 
@@ -1390,7 +1390,7 @@ export interface ServicePoint$instance {
     ReceiveBufferSize: int;
     readonly SupportsPipelining: boolean;
     UseNagleAlgorithm: boolean;
-    CloseConnectionGroup(connectionGroupName: string | undefined): boolean;
+    CloseConnectionGroup(connectionGroupName: string): boolean;
     SetTcpKeepAlive(enabled: boolean, keepAliveTime: int, keepAliveInterval: int): void;
 }
 
@@ -1422,9 +1422,9 @@ export const ServicePointManager: {
     ReusePort: boolean;
     CheckCertificateRevocationList: boolean;
     readonly EncryptionPolicy: EncryptionPolicy;
-    FindServicePoint(uriString: string | undefined, proxy: IWebProxy | undefined): ServicePoint | undefined;
-    FindServicePoint(address: Uri | undefined, proxy: IWebProxy | undefined): ServicePoint | undefined;
-    FindServicePoint(address: Uri | undefined): ServicePoint | undefined;
+    FindServicePoint(uriString: string, proxy: IWebProxy | undefined): ServicePoint;
+    FindServicePoint(address: Uri, proxy: IWebProxy | undefined): ServicePoint;
+    FindServicePoint(address: Uri): ServicePoint;
     SetTcpKeepAlive(enabled: boolean, keepAliveTime: int, keepAliveInterval: int): void;
 };
 
@@ -1436,10 +1436,10 @@ export interface SocketAddress$instance {
     readonly Family: AddressFamily;
     Item: byte;
     Size: int;
-    Equals(comparand: unknown): boolean;
-    Equals(comparand: SocketAddress): boolean;
+    Equals(comparand: unknown | undefined): boolean;
+    Equals(comparand: SocketAddress | undefined): boolean;
     GetHashCode(): int;
-    ToString(): string | undefined;
+    ToString(): string;
 }
 
 
@@ -1461,7 +1461,7 @@ export type SocketAddress = SocketAddress$instance & __SocketAddress$views;
 
 
 export interface TransportContext$instance {
-    GetChannelBinding(kind: ChannelBindingKind): ChannelBinding;
+    GetChannelBinding(kind: ChannelBindingKind): ChannelBinding | undefined;
 }
 
 
@@ -1579,7 +1579,7 @@ export interface WebClient$instance extends Component {
     OpenWrite(address: Uri, method: string | undefined): Stream;
     OpenWriteAsync(address: Uri): void;
     OpenWriteAsync(address: Uri, method: string | undefined): void;
-    OpenWriteAsync(address: Uri, method: string, userToken: unknown): void;
+    OpenWriteAsync(address: Uri, method: string | undefined, userToken: unknown | undefined): void;
     OpenWriteTaskAsync(address: string): Task_1<Stream>;
     OpenWriteTaskAsync(address: Uri): Task_1<Stream>;
     OpenWriteTaskAsync(address: string, method: string | undefined): Task_1<Stream>;
@@ -1649,7 +1649,7 @@ export type WebClient = WebClient$instance & __WebClient$views;
 export interface WebException$instance extends InvalidOperationException {
     readonly Response: WebResponse;
     readonly Status: WebExceptionStatus;
-    GetObjectData(serializationInfo: SerializationInfo | undefined, streamingContext: StreamingContext): void;
+    GetObjectData(serializationInfo: SerializationInfo, streamingContext: StreamingContext): void;
 }
 
 
@@ -1673,23 +1673,23 @@ export interface WebHeaderCollection$instance extends NameValueCollection {
     readonly AllKeys: (string | undefined)[] | string[];
     readonly Count: int;
     readonly Keys: NameObjectCollectionBase_KeysCollection;
-    Add(header: HttpResponseHeader, value: string): void;
+    Add(header: HttpResponseHeader, value: string | undefined): void;
     Add(name: string, value: string | undefined): void;
-    Add(c: NameValueCollection | undefined): void;
+    Add(c: NameValueCollection): void;
     Clear(): void;
-    CopyTo(dest: ClrArray | undefined, index: int): void;
-    Get(index: int): string;
-    Get(name: string): string;
+    CopyTo(dest: ClrArray, index: int): void;
+    Get(index: int): string | undefined;
+    Get(name: string | undefined): string | undefined;
     GetEnumerator(): IEnumerator;
     GetKey(index: int): string;
     GetObjectData(serializationInfo: SerializationInfo, streamingContext: StreamingContext): void;
     GetValues(index: int): string[] | undefined;
     GetValues(header: string): string[];
-    OnDeserialization(sender: unknown): void;
+    OnDeserialization(sender: unknown | undefined): void;
     Remove(header: HttpResponseHeader): void;
     Remove(name: string): void;
     Set(name: string, value: string | undefined): void;
-    Set(header: HttpResponseHeader, value: string): void;
+    Set(header: HttpResponseHeader, value: string | undefined): void;
     ToByteArray(): byte[];
     ToString(): string;
 }
@@ -1719,8 +1719,8 @@ export interface WebProxy$instance {
     BypassProxyOnLocal: boolean;
     Credentials: ICredentials;
     UseDefaultCredentials: boolean;
-    GetProxy(destination: Uri | undefined): Uri | undefined;
-    IsBypassed(host: Uri | undefined): boolean;
+    GetProxy(destination: Uri): Uri | undefined;
+    IsBypassed(host: Uri): boolean;
 }
 
 
@@ -1730,12 +1730,12 @@ export const WebProxy: {
     new(Address: Uri | undefined, BypassOnLocal: boolean): WebProxy;
     new(Address: Uri | undefined, BypassOnLocal: boolean, BypassList: string[] | undefined): WebProxy;
     new(Address: Uri | undefined, BypassOnLocal: boolean, BypassList: string[] | undefined, Credentials: ICredentials | undefined): WebProxy;
-    new(Host: string | undefined, Port: int): WebProxy;
+    new(Host: string, Port: int): WebProxy;
     new(Address: string | undefined): WebProxy;
     new(Address: string | undefined, BypassOnLocal: boolean): WebProxy;
     new(Address: string | undefined, BypassOnLocal: boolean, BypassList: string[] | undefined): WebProxy;
     new(Address: string | undefined, BypassOnLocal: boolean, BypassList: string[] | undefined, Credentials: ICredentials | undefined): WebProxy;
-    GetDefaultProxy(): WebProxy | undefined;
+    GetDefaultProxy(): WebProxy;
 };
 
 
@@ -1765,8 +1765,8 @@ export interface WebRequest$instance extends MarshalByRefObject {
     Timeout: int;
     UseDefaultCredentials: boolean;
     Abort(): void;
-    BeginGetRequestStream(callback: AsyncCallback, state: unknown): IAsyncResult;
-    BeginGetResponse(callback: AsyncCallback, state: unknown): IAsyncResult;
+    BeginGetRequestStream(callback: AsyncCallback | undefined, state: unknown | undefined): IAsyncResult;
+    BeginGetResponse(callback: AsyncCallback | undefined, state: unknown | undefined): IAsyncResult;
     EndGetRequestStream(asyncResult: IAsyncResult): Stream;
     EndGetResponse(asyncResult: IAsyncResult): WebResponse;
     GetRequestStream(): Stream;
@@ -1927,9 +1927,9 @@ export abstract class WebRequestMethods_Http$instance {
 export type WebRequestMethods_Http = WebRequestMethods_Http$instance;
 
 export abstract class WebUtility$instance {
-    static HtmlDecode(value: string | undefined, output: TextWriter | undefined): void;
+    static HtmlDecode(value: string | undefined, output: TextWriter): void;
     static HtmlDecode(value: string | undefined): string | undefined;
-    static HtmlEncode(value: string | undefined, output: TextWriter | undefined): void;
+    static HtmlEncode(value: string | undefined, output: TextWriter): void;
     static HtmlEncode(value: string | undefined): string | undefined;
     static UrlDecode(encodedValue: string | undefined): string | undefined;
     static UrlDecodeToBytes(encodedValue: byte[] | undefined, offset: int, count: int): byte[] | undefined;

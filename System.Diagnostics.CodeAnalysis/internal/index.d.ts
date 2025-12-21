@@ -124,11 +124,11 @@ export interface DynamicDependencyAttribute$instance extends Attribute {
 
 
 export const DynamicDependencyAttribute: {
-    new(memberSignature: string | undefined): DynamicDependencyAttribute;
-    new(memberSignature: string | undefined, type_: Type | undefined): DynamicDependencyAttribute;
-    new(memberSignature: string | undefined, typeName: string | undefined, assemblyName: string | undefined): DynamicDependencyAttribute;
-    new(memberTypes: DynamicallyAccessedMemberTypes, type_: Type | undefined): DynamicDependencyAttribute;
-    new(memberTypes: DynamicallyAccessedMemberTypes, typeName: string | undefined, assemblyName: string | undefined): DynamicDependencyAttribute;
+    new(memberSignature: string): DynamicDependencyAttribute;
+    new(memberSignature: string, type_: Type): DynamicDependencyAttribute;
+    new(memberSignature: string, typeName: string, assemblyName: string): DynamicDependencyAttribute;
+    new(memberTypes: DynamicallyAccessedMemberTypes, type_: Type): DynamicDependencyAttribute;
+    new(memberTypes: DynamicallyAccessedMemberTypes, typeName: string, assemblyName: string): DynamicDependencyAttribute;
 };
 
 
@@ -154,7 +154,7 @@ export interface ExperimentalAttribute$instance extends Attribute {
 
 
 export const ExperimentalAttribute: {
-    new(diagnosticId: string | undefined): ExperimentalAttribute;
+    new(diagnosticId: string): ExperimentalAttribute;
 };
 
 
@@ -277,7 +277,7 @@ export interface RequiresAssemblyFilesAttribute$instance extends Attribute {
 
 export const RequiresAssemblyFilesAttribute: {
     new(): RequiresAssemblyFilesAttribute;
-    new(message: string | undefined): RequiresAssemblyFilesAttribute;
+    new(message: string): RequiresAssemblyFilesAttribute;
 };
 
 
@@ -359,7 +359,7 @@ export interface SuppressMessageAttribute$instance extends Attribute {
 
 
 export const SuppressMessageAttribute: {
-    new(category: string | undefined, checkId: string | undefined): SuppressMessageAttribute;
+    new(category: string, checkId: string): SuppressMessageAttribute;
 };
 
 
@@ -376,7 +376,7 @@ export interface UnconditionalSuppressMessageAttribute$instance extends Attribut
 
 
 export const UnconditionalSuppressMessageAttribute: {
-    new(category: string | undefined, checkId: string | undefined): UnconditionalSuppressMessageAttribute;
+    new(category: string, checkId: string): UnconditionalSuppressMessageAttribute;
 };
 
 

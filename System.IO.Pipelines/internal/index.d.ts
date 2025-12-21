@@ -79,7 +79,7 @@ export interface PipeOptions$instance {
 
 
 export const PipeOptions: {
-    new(pool: MemoryPool_1<System_Internal.Byte>, readerScheduler: PipeScheduler, writerScheduler: PipeScheduler, pauseWriterThreshold: long, resumeWriterThreshold: long, minimumSegmentSize: int, useSynchronizationContext: boolean): PipeOptions;
+    new(pool: MemoryPool_1<System_Internal.Byte> | undefined, readerScheduler: PipeScheduler | undefined, writerScheduler: PipeScheduler | undefined, pauseWriterThreshold: long, resumeWriterThreshold: long, minimumSegmentSize: int, useSynchronizationContext: boolean): PipeOptions;
     readonly Default: PipeOptions;
 };
 
@@ -91,11 +91,11 @@ export interface PipeReader$instance {
     AdvanceTo(consumed: SequencePosition, examined: SequencePosition): void;
     AsStream(leaveOpen?: boolean): Stream;
     CancelPendingRead(): void;
-    Complete(exception?: Exception): void;
-    CompleteAsync(exception?: Exception): ValueTask;
+    Complete(exception?: Exception | undefined): void;
+    CompleteAsync(exception?: Exception | undefined): ValueTask;
     CopyToAsync(destination: PipeWriter, cancellationToken?: CancellationToken): Task;
     CopyToAsync(destination: Stream, cancellationToken?: CancellationToken): Task;
-    OnWriterCompleted(callback: Action_2<Exception | undefined, unknown | undefined>, state: unknown): void;
+    OnWriterCompleted(callback: Action_2<Exception | undefined, unknown | undefined>, state: unknown | undefined): void;
     ReadAsync(cancellationToken?: CancellationToken): ValueTask_1<ReadResult>;
     ReadAtLeastAsync(minimumSize: int, cancellationToken?: CancellationToken): ValueTask_1<ReadResult>;
     TryRead(result: ReadResult): boolean;
@@ -111,7 +111,7 @@ export const PipeReader: {
 export type PipeReader = PipeReader$instance;
 
 export interface PipeScheduler$instance {
-    Schedule(action: Action_1<unknown | undefined>, state: unknown): void;
+    Schedule(action: Action_1<unknown | undefined>, state: unknown | undefined): void;
 }
 
 
@@ -129,12 +129,12 @@ export interface PipeWriter$instance {
     Advance(bytes: int): void;
     AsStream(leaveOpen?: boolean): Stream;
     CancelPendingFlush(): void;
-    Complete(exception?: Exception): void;
-    CompleteAsync(exception?: Exception): ValueTask;
+    Complete(exception?: Exception | undefined): void;
+    CompleteAsync(exception?: Exception | undefined): ValueTask;
     FlushAsync(cancellationToken?: CancellationToken): ValueTask_1<FlushResult>;
     GetMemory(sizeHint?: int): Memory_1<System_Internal.Byte>;
     GetSpan(sizeHint?: int): Span_1<System_Internal.Byte>;
-    OnReaderCompleted(callback: Action_2<Exception | undefined, unknown | undefined>, state: unknown): void;
+    OnReaderCompleted(callback: Action_2<Exception | undefined, unknown | undefined>, state: unknown | undefined): void;
     WriteAsync(source: ReadOnlyMemory_1<System_Internal.Byte>, cancellationToken?: CancellationToken): ValueTask_1<FlushResult>;
 }
 
@@ -163,8 +163,8 @@ export interface StreamPipeReaderOptions$instance {
 
 
 export const StreamPipeReaderOptions: {
-    new(pool: MemoryPool_1<System_Internal.Byte>, bufferSize: int, minimumReadSize: int, leaveOpen: boolean): StreamPipeReaderOptions;
-    new(pool: MemoryPool_1<System_Internal.Byte>, bufferSize: int, minimumReadSize: int, leaveOpen: boolean, useZeroByteReads: boolean): StreamPipeReaderOptions;
+    new(pool: MemoryPool_1<System_Internal.Byte> | undefined, bufferSize: int, minimumReadSize: int, leaveOpen: boolean): StreamPipeReaderOptions;
+    new(pool: MemoryPool_1<System_Internal.Byte> | undefined, bufferSize: int, minimumReadSize: int, leaveOpen: boolean, useZeroByteReads: boolean): StreamPipeReaderOptions;
 };
 
 
@@ -178,7 +178,7 @@ export interface StreamPipeWriterOptions$instance {
 
 
 export const StreamPipeWriterOptions: {
-    new(pool: MemoryPool_1<System_Internal.Byte>, minimumBufferSize: int, leaveOpen: boolean): StreamPipeWriterOptions;
+    new(pool: MemoryPool_1<System_Internal.Byte> | undefined, minimumBufferSize: int, leaveOpen: boolean): StreamPipeWriterOptions;
 };
 
 

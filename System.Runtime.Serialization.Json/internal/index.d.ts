@@ -39,7 +39,7 @@ export interface DataContractJsonSerializer$instance extends XmlObjectSerializer
     readonly MaxItemsInObjectGraph: int;
     readonly SerializeReadOnlyTypes: boolean;
     readonly UseSimpleDictionaryFormat: boolean;
-    GetSerializationSurrogateProvider(): ISerializationSurrogateProvider;
+    GetSerializationSurrogateProvider(): ISerializationSurrogateProvider | undefined;
     IsStartObject(reader: XmlReader): boolean;
     IsStartObject(reader: XmlDictionaryReader): boolean;
     ReadObject(stream: Stream): unknown | undefined;
@@ -47,7 +47,7 @@ export interface DataContractJsonSerializer$instance extends XmlObjectSerializer
     ReadObject(reader: XmlReader, verifyObjectName: boolean): unknown | undefined;
     ReadObject(reader: XmlDictionaryReader): unknown | undefined;
     ReadObject(reader: XmlDictionaryReader, verifyObjectName: boolean): unknown | undefined;
-    SetSerializationSurrogateProvider(provider: ISerializationSurrogateProvider): void;
+    SetSerializationSurrogateProvider(provider: ISerializationSurrogateProvider | undefined): void;
     WriteEndObject(writer: XmlWriter): void;
     WriteEndObject(writer: XmlDictionaryWriter): void;
     WriteObject(stream: Stream, graph: unknown | undefined): void;

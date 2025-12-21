@@ -74,16 +74,16 @@ export enum ThreadState {
 }
 
 
-export type ContextCallback = (state: unknown) => void;
+export type ContextCallback = (state: unknown | undefined) => void;
 
 
 export type IOCompletionCallback = (errorCode: uint, numBytes: uint, pOVERLAP: ptr<NativeOverlapped>) => void;
 
 
-export type ParameterizedThreadStart = (obj: unknown) => void;
+export type ParameterizedThreadStart = (obj: unknown | undefined) => void;
 
 
-export type SendOrPostCallback = (state: unknown) => void;
+export type SendOrPostCallback = (state: unknown | undefined) => void;
 
 
 export type ThreadExceptionEventHandler = (sender: unknown, e: ThreadExceptionEventArgs) => void;
@@ -92,13 +92,13 @@ export type ThreadExceptionEventHandler = (sender: unknown, e: ThreadExceptionEv
 export type ThreadStart = () => void;
 
 
-export type TimerCallback = (state: unknown) => void;
+export type TimerCallback = (state: unknown | undefined) => void;
 
 
-export type WaitCallback = (state: unknown) => void;
+export type WaitCallback = (state: unknown | undefined) => void;
 
 
-export type WaitOrTimerCallback = (state: unknown, timedOut: boolean) => void;
+export type WaitOrTimerCallback = (state: unknown | undefined, timedOut: boolean) => void;
 
 
 export interface IThreadPoolWorkItem$instance {
@@ -121,7 +121,7 @@ export type ITimer = ITimer$instance;
 
 export interface AsyncFlowControl$instance {
     Dispose(): void;
-    Equals(obj: unknown): boolean;
+    Equals(obj: unknown | undefined): boolean;
     Equals(obj: AsyncFlowControl): boolean;
     GetHashCode(): int;
     Undo(): void;
@@ -167,8 +167,8 @@ export interface CancellationToken$instance {
     Equals(other: CancellationToken): boolean;
     Equals(other: unknown | undefined): boolean;
     GetHashCode(): int;
-    Register(callback: Action | undefined): CancellationTokenRegistration;
-    Register(callback: Action | undefined, useSynchronizationContext: boolean): CancellationTokenRegistration;
+    Register(callback: Action): CancellationTokenRegistration;
+    Register(callback: Action, useSynchronizationContext: boolean): CancellationTokenRegistration;
     Register(callback: Action_1<unknown | undefined>, state: unknown | undefined): CancellationTokenRegistration;
     Register(callback: Action_2<unknown | undefined, CancellationToken>, state: unknown | undefined): CancellationTokenRegistration;
     Register(callback: Action_1<unknown | undefined>, state: unknown | undefined, useSynchronizationContext: boolean): CancellationTokenRegistration;
@@ -198,7 +198,7 @@ export interface CancellationTokenRegistration$instance {
     readonly Token: CancellationToken;
     Dispose(): void;
     DisposeAsync(): ValueTask;
-    Equals(obj: unknown): boolean;
+    Equals(obj: unknown | undefined): boolean;
     Equals(other: CancellationTokenRegistration): boolean;
     GetHashCode(): int;
     Unregister(): boolean;
@@ -237,7 +237,7 @@ export const Lock_Scope: {
 export type Lock_Scope = Lock_Scope$instance;
 
 export interface LockCookie$instance {
-    Equals(obj: unknown): boolean;
+    Equals(obj: unknown | undefined): boolean;
     Equals(obj: LockCookie): boolean;
     GetHashCode(): int;
 }
@@ -414,7 +414,7 @@ export type Barrier = Barrier$instance & __Barrier$views;
 
 
 export interface BarrierPostPhaseException$instance extends Exception {
-    GetObjectData(info: SerializationInfo | undefined, context: StreamingContext): void;
+    GetObjectData(info: SerializationInfo, context: StreamingContext): void;
 }
 
 
@@ -536,10 +536,10 @@ export interface EventWaitHandle$instance extends WaitHandle$instance {
 
 export const EventWaitHandle: {
     new(initialState: boolean, mode: EventResetMode): EventWaitHandle;
-    new(initialState: boolean, mode: EventResetMode, name: string, options: NamedWaitHandleOptions): EventWaitHandle;
-    new(initialState: boolean, mode: EventResetMode, name: string): EventWaitHandle;
-    new(initialState: boolean, mode: EventResetMode, name: string, options: NamedWaitHandleOptions, createdNew: boolean): EventWaitHandle;
-    new(initialState: boolean, mode: EventResetMode, name: string, createdNew: boolean): EventWaitHandle;
+    new(initialState: boolean, mode: EventResetMode, name: string | undefined, options: NamedWaitHandleOptions): EventWaitHandle;
+    new(initialState: boolean, mode: EventResetMode, name: string | undefined): EventWaitHandle;
+    new(initialState: boolean, mode: EventResetMode, name: string | undefined, options: NamedWaitHandleOptions, createdNew: boolean): EventWaitHandle;
+    new(initialState: boolean, mode: EventResetMode, name: string | undefined, createdNew: boolean): EventWaitHandle;
     OpenExisting(name: string, options: NamedWaitHandleOptions): EventWaitHandle;
     OpenExisting(name: string): EventWaitHandle;
     TryOpenExisting(name: string, result: EventWaitHandle | undefined): boolean;
@@ -563,7 +563,7 @@ export interface ExecutionContext$instance {
 
 export const ExecutionContext: {
     new(): ExecutionContext;
-    Capture(): ExecutionContext;
+    Capture(): ExecutionContext | undefined;
     IsFlowSuppressed(): boolean;
     Restore(executionContext: ExecutionContext): void;
     RestoreFlow(): void;
@@ -603,7 +603,7 @@ export type HostExecutionContext = HostExecutionContext$instance & __HostExecuti
 
 
 export interface HostExecutionContextManager$instance {
-    Capture(): HostExecutionContext;
+    Capture(): HostExecutionContext | undefined;
     Revert(previousState: unknown): void;
     SetHostExecutionContext(hostExecutionContext: HostExecutionContext): unknown;
 }
@@ -635,7 +635,7 @@ export const Lock: {
 export type Lock = Lock$instance;
 
 export interface LockRecursionException$instance extends Exception {
-    GetObjectData(info: SerializationInfo | undefined, context: StreamingContext): void;
+    GetObjectData(info: SerializationInfo, context: StreamingContext): void;
 }
 
 
@@ -716,10 +716,10 @@ export const Mutex: {
     new(name: string | undefined, options: NamedWaitHandleOptions): Mutex;
     new(initiallyOwned: boolean): Mutex;
     new(): Mutex;
-    OpenExisting(name: string | undefined, options: NamedWaitHandleOptions): Mutex | undefined;
-    OpenExisting(name: string | undefined): Mutex | undefined;
-    TryOpenExisting(name: string | undefined, result: Mutex | undefined): boolean;
-    TryOpenExisting(name: string | undefined, options: NamedWaitHandleOptions, result: Mutex | undefined): boolean;
+    OpenExisting(name: string, options: NamedWaitHandleOptions): Mutex;
+    OpenExisting(name: string): Mutex;
+    TryOpenExisting(name: string, result: Mutex | undefined): boolean;
+    TryOpenExisting(name: string, options: NamedWaitHandleOptions, result: Mutex | undefined): boolean;
 };
 
 
@@ -737,16 +737,16 @@ export interface Overlapped$instance {
     OffsetHigh: int;
     OffsetLow: int;
     Pack(iocb: IOCompletionCallback | undefined): ptr<NativeOverlapped>;
-    Pack(iocb: IOCompletionCallback, userData: unknown): ptr<NativeOverlapped>;
+    Pack(iocb: IOCompletionCallback | undefined, userData: unknown | undefined): ptr<NativeOverlapped>;
     UnsafePack(iocb: IOCompletionCallback | undefined): ptr<NativeOverlapped>;
-    UnsafePack(iocb: IOCompletionCallback, userData: unknown): ptr<NativeOverlapped>;
+    UnsafePack(iocb: IOCompletionCallback | undefined, userData: unknown | undefined): ptr<NativeOverlapped>;
 }
 
 
 export const Overlapped: {
     new(): Overlapped;
-    new(offsetLo: int, offsetHi: int, hEvent: nint, ar: IAsyncResult): Overlapped;
-    new(offsetLo: int, offsetHi: int, hEvent: int, ar: IAsyncResult): Overlapped;
+    new(offsetLo: int, offsetHi: int, hEvent: nint, ar: IAsyncResult | undefined): Overlapped;
+    new(offsetLo: int, offsetHi: int, hEvent: int, ar: IAsyncResult | undefined): Overlapped;
     Free(nativeOverlappedPtr: ptr<NativeOverlapped>): void;
     Unpack(nativeOverlappedPtr: ptr<NativeOverlapped>): Overlapped;
 };
@@ -782,7 +782,7 @@ export interface PreAllocatedOverlapped$instance {
 
 
 export const PreAllocatedOverlapped: {
-    new(callback: IOCompletionCallback, state: unknown, pinData: unknown): PreAllocatedOverlapped;
+    new(callback: IOCompletionCallback, state: unknown | undefined, pinData: unknown | undefined): PreAllocatedOverlapped;
     UnsafeCreate(callback: IOCompletionCallback, state: unknown | undefined, pinData: unknown | undefined): PreAllocatedOverlapped;
 };
 
@@ -866,7 +866,7 @@ export type ReaderWriterLockSlim = ReaderWriterLockSlim$instance & __ReaderWrite
 
 
 export interface RegisteredWaitHandle$instance extends MarshalByRefObject {
-    Unregister(waitObject: WaitHandle | undefined): boolean;
+    Unregister(waitObject: WaitHandle): boolean;
 }
 
 
@@ -886,10 +886,10 @@ export interface Semaphore$instance extends WaitHandle$instance {
 
 export const Semaphore: {
     new(initialCount: int, maximumCount: int): Semaphore;
-    new(initialCount: int, maximumCount: int, name: string, options: NamedWaitHandleOptions): Semaphore;
-    new(initialCount: int, maximumCount: int, name: string): Semaphore;
-    new(initialCount: int, maximumCount: int, name: string, options: NamedWaitHandleOptions, createdNew: boolean): Semaphore;
-    new(initialCount: int, maximumCount: int, name: string, createdNew: boolean): Semaphore;
+    new(initialCount: int, maximumCount: int, name: string | undefined, options: NamedWaitHandleOptions): Semaphore;
+    new(initialCount: int, maximumCount: int, name: string | undefined): Semaphore;
+    new(initialCount: int, maximumCount: int, name: string | undefined, options: NamedWaitHandleOptions, createdNew: boolean): Semaphore;
+    new(initialCount: int, maximumCount: int, name: string | undefined, createdNew: boolean): Semaphore;
     OpenExisting(name: string, options: NamedWaitHandleOptions): Semaphore;
     OpenExisting(name: string): Semaphore;
     TryOpenExisting(name: string, options: NamedWaitHandleOptions, result: Semaphore | undefined): boolean;
@@ -973,7 +973,7 @@ export interface SynchronizationContext$instance {
 export const SynchronizationContext: {
     new(): SynchronizationContext;
     readonly Current: SynchronizationContext | undefined;
-    SetSynchronizationContext(syncContext: SynchronizationContext): void;
+    SetSynchronizationContext(syncContext: SynchronizationContext | undefined): void;
 };
 
 
@@ -1011,7 +1011,7 @@ export interface Thread$instance extends CriticalFinalizerObject {
     Priority: ThreadPriority;
     readonly ThreadState: ThreadState;
     Abort(): void;
-    Abort(stateInfo: unknown): void;
+    Abort(stateInfo: unknown | undefined): void;
     DisableComObjectEagerCleanup(): void;
     GetApartmentState(): ApartmentState;
     GetCompressedStack(): CompressedStack;
@@ -1023,11 +1023,11 @@ export interface Thread$instance extends CriticalFinalizerObject {
     Resume(): void;
     SetApartmentState(state: ApartmentState): void;
     SetCompressedStack(stack: CompressedStack): void;
-    Start(parameter: unknown): void;
+    Start(parameter: unknown | undefined): void;
     Start(): void;
     Suspend(): void;
     TrySetApartmentState(state: ApartmentState): boolean;
-    UnsafeStart(parameter: unknown): void;
+    UnsafeStart(parameter: unknown | undefined): void;
     UnsafeStart(): void;
 }
 
@@ -1063,7 +1063,7 @@ export const Thread: {
     VolatileRead(address: int): int;
     VolatileRead(address: long): long;
     VolatileRead(address: nint): nint;
-    VolatileRead(address: unknown): unknown;
+    VolatileRead(address: unknown | undefined): unknown | undefined;
     VolatileRead(address: sbyte): sbyte;
     VolatileRead(address: float): float;
     VolatileRead(address: ushort): ushort;
@@ -1076,7 +1076,7 @@ export const Thread: {
     VolatileWrite(address: int, value: int): void;
     VolatileWrite(address: long, value: long): void;
     VolatileWrite(address: nint, value: nint): void;
-    VolatileWrite(address: unknown, value: unknown): void;
+    VolatileWrite(address: unknown | undefined, value: unknown | undefined): void;
     VolatileWrite(address: sbyte, value: sbyte): void;
     VolatileWrite(address: float, value: float): void;
     VolatileWrite(address: ushort, value: ushort): void;
@@ -1143,7 +1143,7 @@ export interface ThreadLocal_1$instance<T> {
     Value: T;
     readonly Values: IList_1<T>;
     Dispose(): void;
-    ToString(): string;
+    ToString(): string | undefined;
 }
 
 
@@ -1166,11 +1166,11 @@ export type ThreadLocal_1<T> = ThreadLocal_1$instance<T> & __ThreadLocal_1$views
 
 export interface ThreadPoolBoundHandle$instance {
     readonly Handle: SafeHandle;
-    AllocateNativeOverlapped(callback: IOCompletionCallback, state: unknown, pinData: unknown): ptr<NativeOverlapped>;
+    AllocateNativeOverlapped(callback: IOCompletionCallback, state: unknown | undefined, pinData: unknown | undefined): ptr<NativeOverlapped>;
     AllocateNativeOverlapped(preAllocated: PreAllocatedOverlapped): ptr<NativeOverlapped>;
     Dispose(): void;
     FreeNativeOverlapped(overlapped: ptr<NativeOverlapped>): void;
-    UnsafeAllocateNativeOverlapped(callback: IOCompletionCallback, state: unknown, pinData: unknown): ptr<NativeOverlapped>;
+    UnsafeAllocateNativeOverlapped(callback: IOCompletionCallback, state: unknown | undefined, pinData: unknown | undefined): ptr<NativeOverlapped>;
 }
 
 
@@ -1316,7 +1316,7 @@ export type WaitHandleCannotBeOpenedException = WaitHandleCannotBeOpenedExceptio
 
 
 export abstract class EventWaitHandleAcl$instance {
-    static Create(initialState: boolean, mode: EventResetMode, name: string, createdNew: boolean, eventSecurity: EventWaitHandleSecurity): EventWaitHandle;
+    static Create(initialState: boolean, mode: EventResetMode, name: string | undefined, createdNew: boolean, eventSecurity: EventWaitHandleSecurity | undefined): EventWaitHandle;
     static OpenExisting(name: string, rights: EventWaitHandleRights): EventWaitHandle;
     static TryOpenExisting(name: string, rights: EventWaitHandleRights, result: EventWaitHandle | undefined): boolean;
 }
@@ -1339,7 +1339,7 @@ export abstract class Interlocked$instance {
     static CompareExchange(location1: int, value: int, comparand: int): int;
     static CompareExchange(location1: long, value: long, comparand: long): long;
     static CompareExchange(location1: nint, value: nint, comparand: nint): nint;
-    static CompareExchange(location1: unknown, value: unknown, comparand: unknown): unknown;
+    static CompareExchange(location1: unknown | undefined, value: unknown | undefined, comparand: unknown | undefined): unknown | undefined;
     static CompareExchange(location1: sbyte, value: sbyte, comparand: sbyte): sbyte;
     static CompareExchange(location1: float, value: float, comparand: float): float;
     static CompareExchange(location1: ushort, value: ushort, comparand: ushort): ushort;
@@ -1357,7 +1357,7 @@ export abstract class Interlocked$instance {
     static Exchange(location1: int, value: int): int;
     static Exchange(location1: long, value: long): long;
     static Exchange(location1: nint, value: nint): nint;
-    static Exchange(location1: unknown, value: unknown): unknown;
+    static Exchange(location1: unknown | undefined, value: unknown | undefined): unknown | undefined;
     static Exchange(location1: sbyte, value: sbyte): sbyte;
     static Exchange(location1: float, value: float): float;
     static Exchange(location1: ushort, value: ushort): ushort;
@@ -1418,7 +1418,7 @@ export abstract class Monitor$instance {
 export type Monitor = Monitor$instance;
 
 export abstract class MutexAcl$instance {
-    static Create(initiallyOwned: boolean, name: string, createdNew: boolean, mutexSecurity: MutexSecurity): Mutex;
+    static Create(initiallyOwned: boolean, name: string | undefined, createdNew: boolean, mutexSecurity: MutexSecurity | undefined): Mutex;
     static OpenExisting(name: string, rights: MutexRights): Mutex;
     static TryOpenExisting(name: string, rights: MutexRights, result: Mutex | undefined): boolean;
 }
@@ -1427,7 +1427,7 @@ export abstract class MutexAcl$instance {
 export type MutexAcl = MutexAcl$instance;
 
 export abstract class SemaphoreAcl$instance {
-    static Create(initialCount: int, maximumCount: int, name: string, createdNew: boolean, semaphoreSecurity: SemaphoreSecurity): Semaphore;
+    static Create(initialCount: int, maximumCount: int, name: string | undefined, createdNew: boolean, semaphoreSecurity: SemaphoreSecurity | undefined): Semaphore;
     static OpenExisting(name: string, rights: SemaphoreRights): Semaphore;
     static TryOpenExisting(name: string, rights: SemaphoreRights, result: Semaphore | undefined): boolean;
 }

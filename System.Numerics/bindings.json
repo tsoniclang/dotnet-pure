@@ -2106,6 +2106,20 @@
           "isExtensionMethod": false
         },
         {
+          "stableId": "System.Private.CoreLib:System.Numerics.INumberBase\u00601::Abs(TSelf):TSelf",
+          "clrName": "Abs",
+          "tsEmitName": "Abs",
+          "metadataToken": 100675930,
+          "canonicalSignature": "(TSelf):TSelf",
+          "normalizedSignature": "Abs|(TSelf):TSelf|static=true",
+          "emitScope": "ClassSurface",
+          "arity": 0,
+          "parameterCount": 1,
+          "declaringClrType": "System.Numerics.INumberBase\u00601",
+          "declaringAssemblyName": "System.Private.CoreLib",
+          "isExtensionMethod": false
+        },
+        {
           "stableId": "System.Private.CoreLib:System.Numerics.INumberBase\u00601::CreateChecked(TOther):TSelf",
           "clrName": "CreateChecked",
           "tsEmitName": "CreateChecked",
@@ -2114,6 +2128,20 @@
           "normalizedSignature": "CreateChecked|(TOther):TSelf|static=true",
           "emitScope": "ClassSurface",
           "arity": 1,
+          "parameterCount": 1,
+          "declaringClrType": "System.Numerics.INumberBase\u00601",
+          "declaringAssemblyName": "System.Private.CoreLib",
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.Private.CoreLib:System.Numerics.INumberBase\u00601::IsCanonical(TSelf):System.Boolean",
+          "clrName": "IsCanonical",
+          "tsEmitName": "IsCanonical",
+          "metadataToken": 100675934,
+          "canonicalSignature": "(TSelf):System.Boolean",
+          "normalizedSignature": "IsCanonical|(TSelf):System.Boolean|static=true",
+          "emitScope": "ClassSurface",
+          "arity": 0,
           "parameterCount": 1,
           "declaringClrType": "System.Numerics.INumberBase\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
@@ -2441,6 +2469,16 @@
           }
         },
         {
+          "tsName": "Abs",
+          "isStatic": true,
+          "tsSignatureId": "Abs|(TSelf):TSelf|static=true",
+          "target": {
+            "declaringClrType": "System.Numerics.INumberBase\u00601",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100675930
+          }
+        },
+        {
           "tsName": "CreateChecked",
           "isStatic": true,
           "tsSignatureId": "CreateChecked|(TOther):TSelf|static=true",
@@ -2448,6 +2486,16 @@
             "declaringClrType": "System.Numerics.INumberBase\u00601",
             "declaringAssemblyName": "System.Private.CoreLib",
             "metadataToken": 100675931
+          }
+        },
+        {
+          "tsName": "IsCanonical",
+          "isStatic": true,
+          "tsSignatureId": "IsCanonical|(TSelf):System.Boolean|static=true",
+          "target": {
+            "declaringClrType": "System.Numerics.INumberBase\u00601",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100675934
           }
         },
         {
@@ -8648,6 +8696,20 @@
           "isExtensionMethod": false
         },
         {
+          "stableId": "System.Private.CoreLib:System.Numerics.INumberBase\u00601::MaxMagnitude(TSelf,TSelf):TSelf",
+          "clrName": "MaxMagnitude",
+          "tsEmitName": "MaxMagnitude",
+          "metadataToken": 100675951,
+          "canonicalSignature": "(TSelf,TSelf):TSelf",
+          "normalizedSignature": "MaxMagnitude|(TSelf,TSelf):TSelf|static=true",
+          "emitScope": "ClassSurface",
+          "arity": 0,
+          "parameterCount": 2,
+          "declaringClrType": "System.Numerics.INumberBase\u00601",
+          "declaringAssemblyName": "System.Private.CoreLib",
+          "isExtensionMethod": false
+        },
+        {
           "stableId": "System.Private.CoreLib:System.Numerics.INumberBase\u00601::MultiplyAddEstimate(TSelf,TSelf,TSelf):TSelf",
           "clrName": "MultiplyAddEstimate",
           "tsEmitName": "MultiplyAddEstimate",
@@ -8949,6 +9011,16 @@
           }
         },
         {
+          "tsName": "MaxMagnitude",
+          "isStatic": true,
+          "tsSignatureId": "MaxMagnitude|(TSelf,TSelf):TSelf|static=true",
+          "target": {
+            "declaringClrType": "System.Numerics.INumberBase\u00601",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100675951
+          }
+        },
+        {
           "tsName": "MultiplyAddEstimate",
           "isStatic": true,
           "tsSignatureId": "MultiplyAddEstimate|(TSelf,TSelf,TSelf):TSelf|static=true",
@@ -9162,6 +9234,20 @@
           "isExtensionMethod": false
         },
         {
+          "stableId": "System.Private.CoreLib:System.Numerics.INumberBase\u00601::Abs(TSelf):TSelf",
+          "clrName": "Abs",
+          "tsEmitName": "Abs",
+          "metadataToken": 100675930,
+          "canonicalSignature": "(TSelf):TSelf",
+          "normalizedSignature": "Abs|(TSelf):TSelf|static=true",
+          "emitScope": "ClassSurface",
+          "arity": 0,
+          "parameterCount": 1,
+          "declaringClrType": "System.Numerics.INumberBase\u00601",
+          "declaringAssemblyName": "System.Private.CoreLib",
+          "isExtensionMethod": false
+        },
+        {
           "stableId": "System.Private.CoreLib:System.Numerics.INumberBase\u00601::CreateChecked(TOther):TSelf",
           "clrName": "CreateChecked",
           "tsEmitName": "CreateChecked",
@@ -9185,6 +9271,20 @@
           "emitScope": "ClassSurface",
           "arity": 0,
           "parameterCount": 1,
+          "declaringClrType": "System.Numerics.INumberBase\u00601",
+          "declaringAssemblyName": "System.Private.CoreLib",
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.Private.CoreLib:System.Numerics.INumberBase\u00601::MaxMagnitude(TSelf,TSelf):TSelf",
+          "clrName": "MaxMagnitude",
+          "tsEmitName": "MaxMagnitude",
+          "metadataToken": 100675951,
+          "canonicalSignature": "(TSelf,TSelf):TSelf",
+          "normalizedSignature": "MaxMagnitude|(TSelf,TSelf):TSelf|static=true",
+          "emitScope": "ClassSurface",
+          "arity": 0,
+          "parameterCount": 2,
           "declaringClrType": "System.Numerics.INumberBase\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
           "isExtensionMethod": false
@@ -9523,6 +9623,16 @@
           }
         },
         {
+          "tsName": "Abs",
+          "isStatic": true,
+          "tsSignatureId": "Abs|(TSelf):TSelf|static=true",
+          "target": {
+            "declaringClrType": "System.Numerics.INumberBase\u00601",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100675930
+          }
+        },
+        {
           "tsName": "CreateChecked",
           "isStatic": true,
           "tsSignatureId": "CreateChecked|(TOther):TSelf|static=true",
@@ -9540,6 +9650,16 @@
             "declaringClrType": "System.Numerics.INumberBase\u00601",
             "declaringAssemblyName": "System.Private.CoreLib",
             "metadataToken": 100675934
+          }
+        },
+        {
+          "tsName": "MaxMagnitude",
+          "isStatic": true,
+          "tsSignatureId": "MaxMagnitude|(TSelf,TSelf):TSelf|static=true",
+          "target": {
+            "declaringClrType": "System.Numerics.INumberBase\u00601",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100675951
           }
         },
         {

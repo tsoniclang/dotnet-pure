@@ -128,9 +128,9 @@ export type XComment = XComment$instance & __XComment$views;
 export interface XContainer$instance extends XNode$instance {
     readonly FirstNode: XNode | undefined;
     readonly LastNode: XNode | undefined;
-    Add(content: unknown): void;
+    Add(content: unknown | undefined): void;
     Add(...content: unknown[]): void;
-    AddFirst(content: unknown): void;
+    AddFirst(content: unknown | undefined): void;
     AddFirst(...content: unknown[]): void;
     CreateWriter(): XmlWriter;
     DescendantNodes(): IEnumerable_1<XNode>;
@@ -142,7 +142,7 @@ export interface XContainer$instance extends XNode$instance {
     HasLineInfo(): boolean;
     Nodes(): IEnumerable_1<XNode>;
     RemoveNodes(): void;
-    ReplaceNodes(content: unknown): void;
+    ReplaceNodes(content: unknown | undefined): void;
     ReplaceNodes(...content: unknown[]): void;
 }
 
@@ -162,13 +162,13 @@ export interface XDeclaration$instance {
     Encoding: string;
     Standalone: string;
     Version: string;
-    ToString(): string | undefined;
+    ToString(): string;
 }
 
 
 export const XDeclaration: {
     new(version: string | undefined, encoding: string | undefined, standalone: string | undefined): XDeclaration;
-    new(other: XDeclaration | undefined): XDeclaration;
+    new(other: XDeclaration): XDeclaration;
 };
 
 
@@ -198,7 +198,7 @@ export interface XDocument$instance extends XContainer$instance {
 export const XDocument: {
     new(): XDocument;
     new(content: unknown[]): XDocument;
-    new(declaration: XDeclaration, content: unknown[]): XDocument;
+    new(declaration: XDeclaration | undefined, content: unknown[]): XDocument;
     new(other: XDocument): XDocument;
     Load(stream: Stream, options: LoadOptions): XDocument;
     Load(stream: Stream): XDocument;
@@ -230,14 +230,14 @@ export interface XDocumentType$instance extends XNode$instance {
     PublicId: string;
     SystemId: string;
     HasLineInfo(): boolean;
-    WriteTo(writer: XmlWriter | undefined): void;
-    WriteToAsync(writer: XmlWriter | undefined, cancellationToken: CancellationToken): Task;
+    WriteTo(writer: XmlWriter): void;
+    WriteToAsync(writer: XmlWriter, cancellationToken: CancellationToken): Task;
 }
 
 
 export const XDocumentType: {
     new(name: string, publicId: string | undefined, systemId: string | undefined, internalSubset: string | undefined): XDocumentType;
-    new(other: XDocumentType | undefined): XDocumentType;
+    new(other: XDocumentType): XDocumentType;
 };
 
 
@@ -271,9 +271,9 @@ export interface XElement$instance extends XContainer$instance {
     HasLineInfo(): boolean;
     RemoveAll(): void;
     RemoveAttributes(): void;
-    ReplaceAll(content: unknown): void;
+    ReplaceAll(content: unknown | undefined): void;
     ReplaceAll(...content: unknown[]): void;
-    ReplaceAttributes(content: unknown): void;
+    ReplaceAttributes(content: unknown | undefined): void;
     ReplaceAttributes(...content: unknown[]): void;
     Save(fileName: string): void;
     Save(fileName: string, options: SaveOptions): void;
@@ -330,7 +330,7 @@ export interface XName$instance {
     readonly LocalName: string;
     readonly Namespace: XNamespace;
     readonly NamespaceName: string;
-    Equals(obj: unknown): boolean;
+    Equals(obj: unknown | undefined): boolean;
     GetHashCode(): int;
     ToString(): string;
 }
@@ -358,7 +358,7 @@ export type XName = XName$instance & __XName$views;
 
 export interface XNamespace$instance {
     readonly NamespaceName: string;
-    Equals(obj: unknown): boolean;
+    Equals(obj: unknown | undefined): boolean;
     GetHashCode(): int;
     GetName(localName: string): XName;
     ToString(): string;
@@ -379,9 +379,9 @@ export type XNamespace = XNamespace$instance;
 export interface XNode$instance extends XObject$instance {
     readonly NextNode: XNode | undefined;
     readonly PreviousNode: XNode | undefined;
-    AddAfterSelf(content: unknown): void;
+    AddAfterSelf(content: unknown | undefined): void;
     AddAfterSelf(...content: unknown[]): void;
-    AddBeforeSelf(content: unknown): void;
+    AddBeforeSelf(content: unknown | undefined): void;
     AddBeforeSelf(...content: unknown[]): void;
     Ancestors(): IEnumerable_1<XElement>;
     Ancestors(name: XName | undefined): IEnumerable_1<XElement>;
@@ -392,12 +392,12 @@ export interface XNode$instance extends XObject$instance {
     ElementsBeforeSelf(): IEnumerable_1<XElement>;
     ElementsBeforeSelf(name: XName | undefined): IEnumerable_1<XElement>;
     HasLineInfo(): boolean;
-    IsAfter(node: XNode): boolean;
-    IsBefore(node: XNode): boolean;
+    IsAfter(node: XNode | undefined): boolean;
+    IsBefore(node: XNode | undefined): boolean;
     NodesAfterSelf(): IEnumerable_1<XNode>;
     NodesBeforeSelf(): IEnumerable_1<XNode>;
     Remove(): void;
-    ReplaceWith(content: unknown): void;
+    ReplaceWith(content: unknown | undefined): void;
     ReplaceWith(...content: unknown[]): void;
     ToString(): string;
     ToString(options: SaveOptions): string;
@@ -409,8 +409,8 @@ export interface XNode$instance extends XObject$instance {
 export const XNode: {
     readonly DocumentOrderComparer: XNodeDocumentOrderComparer;
     readonly EqualityComparer: XNodeEqualityComparer;
-    CompareDocumentOrder(n1: XNode, n2: XNode): int;
-    DeepEquals(n1: XNode, n2: XNode): boolean;
+    CompareDocumentOrder(n1: XNode | undefined, n2: XNode | undefined): int;
+    DeepEquals(n1: XNode | undefined, n2: XNode | undefined): boolean;
     ReadFrom(reader: XmlReader): XNode;
     ReadFromAsync(reader: XmlReader, cancellationToken: CancellationToken): Task_1<XNode>;
 };
@@ -426,7 +426,7 @@ export type XNode = XNode$instance & __XNode$views;
 
 
 export interface XNodeDocumentOrderComparer$instance {
-    Compare(x: XNode, y: XNode): int;
+    Compare(x: XNode | undefined, y: XNode | undefined): int;
 }
 
 
@@ -440,13 +440,11 @@ export interface __XNodeDocumentOrderComparer$views {
     As_IComparer(): System_Collections_Internal.IComparer$instance;
 }
 
-export interface XNodeDocumentOrderComparer$instance extends System_Collections_Generic_Internal.IComparer_1$instance<XNode> {}
-
 export type XNodeDocumentOrderComparer = XNodeDocumentOrderComparer$instance & __XNodeDocumentOrderComparer$views;
 
 
 export interface XNodeEqualityComparer$instance {
-    Equals(x: XNode, y: XNode): boolean;
+    Equals(x: XNode | undefined, y: XNode | undefined): boolean;
     GetHashCode(obj: XNode): int;
 }
 
@@ -533,7 +531,7 @@ export type XProcessingInstruction = XProcessingInstruction$instance & __XProces
 
 export interface XStreamingElement$instance {
     Name: XName;
-    Add(content: unknown): void;
+    Add(content: unknown | undefined): void;
     Add(...content: unknown[]): void;
     Save(stream: Stream): void;
     Save(stream: Stream, options: SaveOptions): void;

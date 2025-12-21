@@ -168,15 +168,15 @@ export interface Attachment$instance extends AttachmentBase$instance {
 
 
 export const Attachment: {
-    new(fileName: string | undefined): Attachment;
-    new(fileName: string | undefined, mediaType: string | undefined): Attachment;
-    new(fileName: string | undefined, contentType: ContentType | undefined): Attachment;
-    new(contentStream: Stream | undefined, name: string | undefined): Attachment;
+    new(fileName: string): Attachment;
+    new(fileName: string, mediaType: string | undefined): Attachment;
+    new(fileName: string, contentType: ContentType): Attachment;
+    new(contentStream: Stream, name: string | undefined): Attachment;
     new(contentStream: Stream, name: string | undefined, mediaType: string | undefined): Attachment;
-    new(contentStream: Stream | undefined, contentType: ContentType | undefined): Attachment;
-    CreateAttachmentFromString(content: string | undefined, contentType: ContentType | undefined): Attachment | undefined;
+    new(contentStream: Stream, contentType: ContentType): Attachment;
+    CreateAttachmentFromString(content: string, contentType: ContentType): Attachment;
     CreateAttachmentFromString(content: string, name: string | undefined, contentEncoding: Encoding | undefined, mediaType: string | undefined): Attachment;
-    CreateAttachmentFromString(content: string | undefined, name: string | undefined): Attachment | undefined;
+    CreateAttachmentFromString(content: string, name: string | undefined): Attachment;
 };
 
 
@@ -322,7 +322,7 @@ export interface MailAddress$instance {
     readonly DisplayName: string;
     readonly Host: string;
     readonly User: string;
-    Equals(value: unknown): boolean;
+    Equals(value: unknown | undefined): boolean;
     GetHashCode(): int;
     ToString(): string;
 }
@@ -331,10 +331,10 @@ export interface MailAddress$instance {
 export const MailAddress: {
     new(address: string): MailAddress;
     new(address: string, displayName: string | undefined): MailAddress;
-    new(address: string, displayName: string, displayNameEncoding: Encoding): MailAddress;
-    TryCreate(address: string, result: MailAddress): boolean;
-    TryCreate(address: string, displayName: string, result: MailAddress): boolean;
-    TryCreate(address: string, displayName: string, displayNameEncoding: Encoding, result: MailAddress): boolean;
+    new(address: string, displayName: string | undefined, displayNameEncoding: Encoding | undefined): MailAddress;
+    TryCreate(address: string | undefined, result: MailAddress | undefined): boolean;
+    TryCreate(address: string | undefined, displayName: string | undefined, result: MailAddress | undefined): boolean;
+    TryCreate(address: string | undefined, displayName: string | undefined, displayNameEncoding: Encoding | undefined, result: MailAddress | undefined): boolean;
 };
 
 
@@ -433,15 +433,15 @@ export interface SmtpClient$instance {
     Timeout: int;
     UseDefaultCredentials: boolean;
     Dispose(): void;
-    Send(from_: string | undefined, recipients: string | undefined, subject: string | undefined, body: string | undefined): void;
-    Send(message: MailMessage | undefined): void;
+    Send(from_: string, recipients: string, subject: string | undefined, body: string | undefined): void;
+    Send(message: MailMessage): void;
     SendAsync(from_: string, recipients: string, subject: string | undefined, body: string | undefined, userToken: unknown | undefined): void;
-    SendAsync(message: MailMessage | undefined, userToken: unknown | undefined): void;
+    SendAsync(message: MailMessage, userToken: unknown | undefined): void;
     SendAsyncCancel(): void;
-    SendMailAsync(from_: string | undefined, recipients: string | undefined, subject: string | undefined, body: string | undefined): Task | undefined;
-    SendMailAsync(message: MailMessage | undefined): Task | undefined;
-    SendMailAsync(from_: string | undefined, recipients: string | undefined, subject: string | undefined, body: string | undefined, cancellationToken: CancellationToken): Task | undefined;
-    SendMailAsync(message: MailMessage | undefined, cancellationToken: CancellationToken): Task | undefined;
+    SendMailAsync(from_: string, recipients: string, subject: string | undefined, body: string | undefined): Task;
+    SendMailAsync(message: MailMessage): Task;
+    SendMailAsync(from_: string, recipients: string, subject: string | undefined, body: string | undefined, cancellationToken: CancellationToken): Task;
+    SendMailAsync(message: MailMessage, cancellationToken: CancellationToken): Task;
 }
 
 
@@ -463,7 +463,7 @@ export type SmtpClient = SmtpClient$instance & __SmtpClient$views;
 
 export interface SmtpException$instance extends Exception {
     StatusCode: SmtpStatusCode;
-    GetObjectData(serializationInfo: SerializationInfo | undefined, streamingContext: StreamingContext): void;
+    GetObjectData(serializationInfo: SerializationInfo, streamingContext: StreamingContext): void;
 }
 
 
@@ -485,7 +485,7 @@ export type SmtpException = SmtpException$instance & __SmtpException$views;
 
 export interface SmtpFailedRecipientException$instance extends SmtpException$instance {
     readonly FailedRecipient: string | undefined;
-    GetObjectData(serializationInfo: SerializationInfo | undefined, streamingContext: StreamingContext): void;
+    GetObjectData(serializationInfo: SerializationInfo, streamingContext: StreamingContext): void;
 }
 
 
@@ -514,8 +514,8 @@ export interface SmtpFailedRecipientsException$instance extends SmtpFailedRecipi
 
 export const SmtpFailedRecipientsException: {
     new(): SmtpFailedRecipientsException;
-    new(message: string): SmtpFailedRecipientsException;
-    new(message: string, innerException: Exception): SmtpFailedRecipientsException;
+    new(message: string | undefined): SmtpFailedRecipientsException;
+    new(message: string | undefined, innerException: Exception | undefined): SmtpFailedRecipientsException;
     new(message: string | undefined, innerExceptions: SmtpFailedRecipientException[]): SmtpFailedRecipientsException;
 };
 

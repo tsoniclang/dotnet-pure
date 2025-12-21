@@ -89,7 +89,7 @@ export interface ValueTask$instance {
     readonly IsFaulted: boolean;
     AsTask(): Task;
     ConfigureAwait(continueOnCapturedContext: boolean): ConfiguredValueTaskAwaitable;
-    Equals(obj: unknown): boolean;
+    Equals(obj: unknown | undefined): boolean;
     Equals(other: ValueTask): boolean;
     GetAwaiter(): ValueTaskAwaiter;
     GetHashCode(): int;
@@ -127,12 +127,12 @@ export interface ValueTask_1$instance<TResult> {
     readonly Result: TResult;
     AsTask(): Task_1<TResult>;
     ConfigureAwait(continueOnCapturedContext: boolean): ConfiguredValueTaskAwaitable_1<TResult>;
-    Equals(obj: unknown): boolean;
+    Equals(obj: unknown | undefined): boolean;
     Equals(other: ValueTask_1<TResult>): boolean;
     GetAwaiter(): ValueTaskAwaiter_1<TResult>;
     GetHashCode(): int;
     Preserve(): ValueTask_1<TResult>;
-    ToString(): string;
+    ToString(): string | undefined;
 }
 
 
@@ -229,10 +229,10 @@ export interface Task$instance {
     ContinueWith<TResult>(continuationFunction: Func_2<Task, TResult>, scheduler: TaskScheduler): Task_1<TResult>;
     ContinueWith<TResult>(continuationFunction: Func_2<Task, TResult>, continuationOptions: TaskContinuationOptions): Task_1<TResult>;
     ContinueWith<TResult>(continuationFunction: Func_2<Task, TResult>, cancellationToken: CancellationToken, continuationOptions: TaskContinuationOptions, scheduler: TaskScheduler): Task_1<TResult>;
-    ContinueWith<TResult>(continuationFunction: Func_3<Task, unknown | undefined, TResult>, state: unknown): Task_1<TResult>;
-    ContinueWith<TResult>(continuationFunction: Func_3<Task, unknown | undefined, TResult>, state: unknown, cancellationToken: CancellationToken): Task_1<TResult>;
+    ContinueWith<TResult>(continuationFunction: Func_3<Task, unknown | undefined, TResult>, state: unknown | undefined): Task_1<TResult>;
+    ContinueWith<TResult>(continuationFunction: Func_3<Task, unknown | undefined, TResult>, state: unknown | undefined, cancellationToken: CancellationToken): Task_1<TResult>;
     ContinueWith<TResult>(continuationFunction: Func_3<Task, unknown | undefined, TResult>, state: unknown | undefined, scheduler: TaskScheduler): Task_1<TResult>;
-    ContinueWith<TResult>(continuationFunction: Func_3<Task, unknown | undefined, TResult>, state: unknown, continuationOptions: TaskContinuationOptions): Task_1<TResult>;
+    ContinueWith<TResult>(continuationFunction: Func_3<Task, unknown | undefined, TResult>, state: unknown | undefined, continuationOptions: TaskContinuationOptions): Task_1<TResult>;
     ContinueWith<TResult>(continuationFunction: Func_3<Task, unknown | undefined, TResult>, state: unknown | undefined, cancellationToken: CancellationToken, continuationOptions: TaskContinuationOptions, scheduler: TaskScheduler): Task_1<TResult>;
     Dispose(): void;
     GetAwaiter(): TaskAwaiter;
@@ -259,10 +259,10 @@ export const Task: {
     new(action: Action, cancellationToken: CancellationToken): Task;
     new(action: Action, creationOptions: TaskCreationOptions): Task;
     new(action: Action, cancellationToken: CancellationToken, creationOptions: TaskCreationOptions): Task;
-    new(action: Action_1<unknown | undefined>, state: unknown): Task;
-    new(action: Action_1<unknown | undefined>, state: unknown, cancellationToken: CancellationToken): Task;
-    new(action: Action_1<unknown | undefined>, state: unknown, creationOptions: TaskCreationOptions): Task;
-    new(action: Action_1<unknown | undefined>, state: unknown, cancellationToken: CancellationToken, creationOptions: TaskCreationOptions): Task;
+    new(action: Action_1<unknown | undefined>, state: unknown | undefined): Task;
+    new(action: Action_1<unknown | undefined>, state: unknown | undefined, cancellationToken: CancellationToken): Task;
+    new(action: Action_1<unknown | undefined>, state: unknown | undefined, creationOptions: TaskCreationOptions): Task;
+    new(action: Action_1<unknown | undefined>, state: unknown | undefined, cancellationToken: CancellationToken, creationOptions: TaskCreationOptions): Task;
     readonly CurrentId: Nullable_1<System_Internal.Int32>;
     readonly Factory: TaskFactory;
     readonly CompletedTask: Task;
@@ -341,9 +341,9 @@ export interface Task_1$instance<TResult> extends Task$instance {
     ContinueWith(continuationAction: Action_2<Task_1<TResult>, unknown | undefined>, state: unknown | undefined, continuationOptions: TaskContinuationOptions): Task;
     ContinueWith<TNewResult>(continuationFunction: Func_2<Task_1<TResult>, TNewResult>, scheduler: TaskScheduler): Task_1<TNewResult>;
     ContinueWith<TNewResult>(continuationFunction: Func_2<Task_1<TResult>, TNewResult>, continuationOptions: TaskContinuationOptions): Task_1<TNewResult>;
-    ContinueWith<TNewResult>(continuationFunction: Func_3<Task_1<TResult>, unknown | undefined, TNewResult>, state: unknown): Task_1<TNewResult>;
+    ContinueWith<TNewResult>(continuationFunction: Func_3<Task_1<TResult>, unknown | undefined, TNewResult>, state: unknown | undefined): Task_1<TNewResult>;
     ContinueWith<TNewResult>(continuationFunction: Func_3<Task_1<TResult>, unknown | undefined, TNewResult>, state: unknown | undefined, scheduler: TaskScheduler): Task_1<TNewResult>;
-    ContinueWith<TNewResult>(continuationFunction: Func_3<Task_1<TResult>, unknown | undefined, TNewResult>, state: unknown, continuationOptions: TaskContinuationOptions): Task_1<TNewResult>;
+    ContinueWith<TNewResult>(continuationFunction: Func_3<Task_1<TResult>, unknown | undefined, TNewResult>, state: unknown | undefined, continuationOptions: TaskContinuationOptions): Task_1<TNewResult>;
     ContinueWith(continuationAction: Action_1<Task>): Task;
     ContinueWith(continuationAction: Action_1<Task>, cancellationToken: CancellationToken): Task;
     ContinueWith(continuationAction: Action_1<Task>, scheduler: TaskScheduler): Task;
@@ -359,10 +359,10 @@ export interface Task_1$instance<TResult> extends Task$instance {
     ContinueWith<TResult>(continuationFunction: Func_2<Task, TResult>, scheduler: TaskScheduler): Task_1<TResult>;
     ContinueWith<TResult>(continuationFunction: Func_2<Task, TResult>, continuationOptions: TaskContinuationOptions): Task_1<TResult>;
     ContinueWith<TResult>(continuationFunction: Func_2<Task, TResult>, cancellationToken: CancellationToken, continuationOptions: TaskContinuationOptions, scheduler: TaskScheduler): Task_1<TResult>;
-    ContinueWith<TResult>(continuationFunction: Func_3<Task, unknown | undefined, TResult>, state: unknown): Task_1<TResult>;
-    ContinueWith<TResult>(continuationFunction: Func_3<Task, unknown | undefined, TResult>, state: unknown, cancellationToken: CancellationToken): Task_1<TResult>;
+    ContinueWith<TResult>(continuationFunction: Func_3<Task, unknown | undefined, TResult>, state: unknown | undefined): Task_1<TResult>;
+    ContinueWith<TResult>(continuationFunction: Func_3<Task, unknown | undefined, TResult>, state: unknown | undefined, cancellationToken: CancellationToken): Task_1<TResult>;
     ContinueWith<TResult>(continuationFunction: Func_3<Task, unknown | undefined, TResult>, state: unknown | undefined, scheduler: TaskScheduler): Task_1<TResult>;
-    ContinueWith<TResult>(continuationFunction: Func_3<Task, unknown | undefined, TResult>, state: unknown, continuationOptions: TaskContinuationOptions): Task_1<TResult>;
+    ContinueWith<TResult>(continuationFunction: Func_3<Task, unknown | undefined, TResult>, state: unknown | undefined, continuationOptions: TaskContinuationOptions): Task_1<TResult>;
     ContinueWith<TResult>(continuationFunction: Func_3<Task, unknown | undefined, TResult>, state: unknown | undefined, cancellationToken: CancellationToken, continuationOptions: TaskContinuationOptions, scheduler: TaskScheduler): Task_1<TResult>;
     Dispose(): void;
     GetAwaiter(): TaskAwaiter;
@@ -381,10 +381,10 @@ export const Task_1: {
     new<TResult>(function_: Func_1<TResult>, cancellationToken: CancellationToken): Task_1<TResult>;
     new<TResult>(function_: Func_1<TResult>, creationOptions: TaskCreationOptions): Task_1<TResult>;
     new<TResult>(function_: Func_1<TResult>, cancellationToken: CancellationToken, creationOptions: TaskCreationOptions): Task_1<TResult>;
-    new<TResult>(function_: Func_2<unknown | undefined, TResult>, state: unknown): Task_1<TResult>;
-    new<TResult>(function_: Func_2<unknown | undefined, TResult>, state: unknown, cancellationToken: CancellationToken): Task_1<TResult>;
-    new<TResult>(function_: Func_2<unknown | undefined, TResult>, state: unknown, creationOptions: TaskCreationOptions): Task_1<TResult>;
-    new<TResult>(function_: Func_2<unknown | undefined, TResult>, state: unknown, cancellationToken: CancellationToken, creationOptions: TaskCreationOptions): Task_1<TResult>;
+    new<TResult>(function_: Func_2<unknown | undefined, TResult>, state: unknown | undefined): Task_1<TResult>;
+    new<TResult>(function_: Func_2<unknown | undefined, TResult>, state: unknown | undefined, cancellationToken: CancellationToken): Task_1<TResult>;
+    new<TResult>(function_: Func_2<unknown | undefined, TResult>, state: unknown | undefined, creationOptions: TaskCreationOptions): Task_1<TResult>;
+    new<TResult>(function_: Func_2<unknown | undefined, TResult>, state: unknown | undefined, cancellationToken: CancellationToken, creationOptions: TaskCreationOptions): Task_1<TResult>;
 };
 
 
@@ -440,8 +440,8 @@ export interface TaskCompletionSource$instance {
 export const TaskCompletionSource: {
     new(): TaskCompletionSource;
     new(creationOptions: TaskCreationOptions): TaskCompletionSource;
-    new(state: unknown): TaskCompletionSource;
-    new(state: unknown, creationOptions: TaskCreationOptions): TaskCompletionSource;
+    new(state: unknown | undefined): TaskCompletionSource;
+    new(state: unknown | undefined, creationOptions: TaskCreationOptions): TaskCompletionSource;
 };
 
 
@@ -467,8 +467,8 @@ export interface TaskCompletionSource_1$instance<TResult> {
 export const TaskCompletionSource_1: {
     new<TResult>(): TaskCompletionSource_1<TResult>;
     new<TResult>(creationOptions: TaskCreationOptions): TaskCompletionSource_1<TResult>;
-    new<TResult>(state: unknown): TaskCompletionSource_1<TResult>;
-    new<TResult>(state: unknown, creationOptions: TaskCreationOptions): TaskCompletionSource_1<TResult>;
+    new<TResult>(state: unknown | undefined): TaskCompletionSource_1<TResult>;
+    new<TResult>(state: unknown | undefined, creationOptions: TaskCreationOptions): TaskCompletionSource_1<TResult>;
 };
 
 
@@ -545,9 +545,9 @@ export interface TaskFactory$instance {
     StartNew<TResult>(function_: Func_1<TResult>, cancellationToken: CancellationToken): Task_1<TResult>;
     StartNew<TResult>(function_: Func_1<TResult>, creationOptions: TaskCreationOptions): Task_1<TResult>;
     StartNew<TResult>(function_: Func_1<TResult>, cancellationToken: CancellationToken, creationOptions: TaskCreationOptions, scheduler: TaskScheduler): Task_1<TResult>;
-    StartNew<TResult>(function_: Func_2<unknown | undefined, TResult>, state: unknown): Task_1<TResult>;
-    StartNew<TResult>(function_: Func_2<unknown | undefined, TResult>, state: unknown, cancellationToken: CancellationToken): Task_1<TResult>;
-    StartNew<TResult>(function_: Func_2<unknown | undefined, TResult>, state: unknown, creationOptions: TaskCreationOptions): Task_1<TResult>;
+    StartNew<TResult>(function_: Func_2<unknown | undefined, TResult>, state: unknown | undefined): Task_1<TResult>;
+    StartNew<TResult>(function_: Func_2<unknown | undefined, TResult>, state: unknown | undefined, cancellationToken: CancellationToken): Task_1<TResult>;
+    StartNew<TResult>(function_: Func_2<unknown | undefined, TResult>, state: unknown | undefined, creationOptions: TaskCreationOptions): Task_1<TResult>;
     StartNew<TResult>(function_: Func_2<unknown | undefined, TResult>, state: unknown | undefined, cancellationToken: CancellationToken, creationOptions: TaskCreationOptions, scheduler: TaskScheduler): Task_1<TResult>;
 }
 
@@ -555,9 +555,9 @@ export interface TaskFactory$instance {
 export const TaskFactory: {
     new(): TaskFactory;
     new(cancellationToken: CancellationToken): TaskFactory;
-    new(scheduler: TaskScheduler): TaskFactory;
+    new(scheduler: TaskScheduler | undefined): TaskFactory;
     new(creationOptions: TaskCreationOptions, continuationOptions: TaskContinuationOptions): TaskFactory;
-    new(cancellationToken: CancellationToken, creationOptions: TaskCreationOptions, continuationOptions: TaskContinuationOptions, scheduler: TaskScheduler): TaskFactory;
+    new(cancellationToken: CancellationToken, creationOptions: TaskCreationOptions, continuationOptions: TaskContinuationOptions, scheduler: TaskScheduler | undefined): TaskFactory;
 };
 
 
@@ -609,9 +609,9 @@ export interface TaskFactory_1$instance<TResult> {
 export const TaskFactory_1: {
     new<TResult>(): TaskFactory_1<TResult>;
     new<TResult>(cancellationToken: CancellationToken): TaskFactory_1<TResult>;
-    new<TResult>(scheduler: TaskScheduler): TaskFactory_1<TResult>;
+    new<TResult>(scheduler: TaskScheduler | undefined): TaskFactory_1<TResult>;
     new<TResult>(creationOptions: TaskCreationOptions, continuationOptions: TaskContinuationOptions): TaskFactory_1<TResult>;
-    new<TResult>(cancellationToken: CancellationToken, creationOptions: TaskCreationOptions, continuationOptions: TaskContinuationOptions, scheduler: TaskScheduler): TaskFactory_1<TResult>;
+    new<TResult>(cancellationToken: CancellationToken, creationOptions: TaskCreationOptions, continuationOptions: TaskContinuationOptions, scheduler: TaskScheduler | undefined): TaskFactory_1<TResult>;
 };
 
 
@@ -633,7 +633,7 @@ export const TaskScheduler: {
 export type TaskScheduler = TaskScheduler$instance;
 
 export interface TaskSchedulerException$instance extends Exception {
-    GetObjectData(info: SerializationInfo | undefined, context: StreamingContext): void;
+    GetObjectData(info: SerializationInfo, context: StreamingContext): void;
 }
 
 

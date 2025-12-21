@@ -40,14 +40,14 @@ export interface JsonArray$instance extends JsonNode {
     Clear(): void;
     Contains(item: JsonNode | undefined): boolean;
     GetEnumerator(): IEnumerator_1<JsonNode | undefined>;
-    GetValues<T>(): IEnumerable_1<T | undefined> | undefined;
+    GetValues<T>(): IEnumerable_1<T>;
     IndexOf(item: JsonNode | undefined): int;
     Insert(index: int, item: JsonNode | undefined): void;
     Remove(item: JsonNode | undefined): boolean;
     RemoveAll(match: Func_2<JsonNode | undefined, System_Internal.Boolean>): int;
     RemoveAt(index: int): void;
     RemoveRange(index: int, count: int): void;
-    WriteTo(writer: Utf8JsonWriter | undefined, options?: JsonSerializerOptions | undefined): void;
+    WriteTo(writer: Utf8JsonWriter, options?: JsonSerializerOptions | undefined): void;
 }
 
 
@@ -96,11 +96,11 @@ export interface JsonNode$instance {
 
 
 export const JsonNode: {
-    DeepEquals(node1: JsonNode, node2: JsonNode): boolean;
+    DeepEquals(node1: JsonNode | undefined, node2: JsonNode | undefined): boolean;
     Parse(utf8Json: Stream, nodeOptions?: Nullable_1<JsonNodeOptions>, documentOptions?: JsonDocumentOptions): JsonNode | undefined;
     Parse(utf8Json: ReadOnlySpan_1<System_Internal.Byte>, nodeOptions?: Nullable_1<JsonNodeOptions>, documentOptions?: JsonDocumentOptions): JsonNode | undefined;
     Parse(json: string, nodeOptions?: Nullable_1<JsonNodeOptions>, documentOptions?: JsonDocumentOptions): JsonNode | undefined;
-    Parse(reader: Utf8JsonReader, nodeOptions?: Nullable_1<JsonNodeOptions>): JsonNode;
+    Parse(reader: Utf8JsonReader, nodeOptions?: Nullable_1<JsonNodeOptions>): JsonNode | undefined;
     ParseAsync(utf8Json: Stream, nodeOptions?: Nullable_1<JsonNodeOptions>, documentOptions?: JsonDocumentOptions, cancellationToken?: CancellationToken): Task_1<JsonNode | undefined>;
 };
 
@@ -120,7 +120,7 @@ export interface JsonObject$instance extends JsonNode {
     Remove(propertyName: string): boolean;
     RemoveAt(index: int): void;
     SetAt(index: int, propertyName: string, value: JsonNode | undefined): void;
-    SetAt(index: int, value: JsonNode): void;
+    SetAt(index: int, value: JsonNode | undefined): void;
     TryAdd(propertyName: string, value: JsonNode | undefined): boolean;
     TryAdd(propertyName: string, value: JsonNode | undefined, index: int): boolean;
     TryGetPropertyValue(propertyName: string, jsonNode: JsonNode | undefined): boolean;
@@ -132,7 +132,7 @@ export interface JsonObject$instance extends JsonNode {
 export const JsonObject: {
     new(options: Nullable_1<JsonNodeOptions>): JsonObject;
     new(properties: IEnumerable_1<KeyValuePair_2<System_Internal.String, JsonNode>>, options: Nullable_1<JsonNodeOptions>): JsonObject;
-    Create(element: JsonElement, options?: Nullable_1<JsonNodeOptions>): JsonObject;
+    Create(element: JsonElement, options?: Nullable_1<JsonNodeOptions>): JsonObject | undefined;
 };
 
 
@@ -153,17 +153,17 @@ export interface JsonValue$instance extends JsonNode {
 
 
 export const JsonValue: {
-    Create(value: boolean, options?: Nullable_1<JsonNodeOptions>): JsonValue | undefined;
-    Create(value: byte, options?: Nullable_1<JsonNodeOptions>): JsonValue | undefined;
-    Create(value: char, options?: Nullable_1<JsonNodeOptions>): JsonValue | undefined;
-    Create(value: DateTime, options?: Nullable_1<JsonNodeOptions>): JsonValue | undefined;
-    Create(value: DateTimeOffset, options?: Nullable_1<JsonNodeOptions>): JsonValue | undefined;
-    Create(value: decimal, options?: Nullable_1<JsonNodeOptions>): JsonValue | undefined;
-    Create(value: double, options?: Nullable_1<JsonNodeOptions>): JsonValue | undefined;
-    Create(value: Guid, options?: Nullable_1<JsonNodeOptions>): JsonValue | undefined;
-    Create(value: short, options?: Nullable_1<JsonNodeOptions>): JsonValue | undefined;
-    Create(value: int, options?: Nullable_1<JsonNodeOptions>): JsonValue | undefined;
-    Create(value: long, options?: Nullable_1<JsonNodeOptions>): JsonValue | undefined;
+    Create(value: boolean, options?: Nullable_1<JsonNodeOptions>): JsonValue;
+    Create(value: byte, options?: Nullable_1<JsonNodeOptions>): JsonValue;
+    Create(value: char, options?: Nullable_1<JsonNodeOptions>): JsonValue;
+    Create(value: DateTime, options?: Nullable_1<JsonNodeOptions>): JsonValue;
+    Create(value: DateTimeOffset, options?: Nullable_1<JsonNodeOptions>): JsonValue;
+    Create(value: decimal, options?: Nullable_1<JsonNodeOptions>): JsonValue;
+    Create(value: double, options?: Nullable_1<JsonNodeOptions>): JsonValue;
+    Create(value: Guid, options?: Nullable_1<JsonNodeOptions>): JsonValue;
+    Create(value: short, options?: Nullable_1<JsonNodeOptions>): JsonValue;
+    Create(value: int, options?: Nullable_1<JsonNodeOptions>): JsonValue;
+    Create(value: long, options?: Nullable_1<JsonNodeOptions>): JsonValue;
     Create(value: Nullable_1<System_Internal.Boolean>, options?: Nullable_1<JsonNodeOptions>): JsonValue | undefined;
     Create(value: Nullable_1<System_Internal.Byte>, options?: Nullable_1<JsonNodeOptions>): JsonValue | undefined;
     Create(value: Nullable_1<System_Internal.Char>, options?: Nullable_1<JsonNodeOptions>): JsonValue | undefined;
@@ -181,13 +181,13 @@ export const JsonValue: {
     Create(value: Nullable_1<System_Internal.UInt16>, options?: Nullable_1<JsonNodeOptions>): JsonValue | undefined;
     Create(value: Nullable_1<System_Internal.UInt32>, options?: Nullable_1<JsonNodeOptions>): JsonValue | undefined;
     Create(value: Nullable_1<System_Internal.UInt64>, options?: Nullable_1<JsonNodeOptions>): JsonValue | undefined;
-    Create(value: sbyte, options?: Nullable_1<JsonNodeOptions>): JsonValue | undefined;
-    Create(value: float, options?: Nullable_1<JsonNodeOptions>): JsonValue | undefined;
+    Create(value: sbyte, options?: Nullable_1<JsonNodeOptions>): JsonValue;
+    Create(value: float, options?: Nullable_1<JsonNodeOptions>): JsonValue;
     Create(value: string | undefined, options?: Nullable_1<JsonNodeOptions>): JsonValue | undefined;
     Create(value: JsonElement, options?: Nullable_1<JsonNodeOptions>): JsonValue | undefined;
-    Create(value: ushort, options?: Nullable_1<JsonNodeOptions>): JsonValue | undefined;
-    Create(value: uint, options?: Nullable_1<JsonNodeOptions>): JsonValue | undefined;
-    Create(value: ulong, options?: Nullable_1<JsonNodeOptions>): JsonValue | undefined;
+    Create(value: ushort, options?: Nullable_1<JsonNodeOptions>): JsonValue;
+    Create(value: uint, options?: Nullable_1<JsonNodeOptions>): JsonValue;
+    Create(value: ulong, options?: Nullable_1<JsonNodeOptions>): JsonValue;
     Create<T>(value: T | undefined, jsonTypeInfo: JsonTypeInfo_1<T>, options?: Nullable_1<JsonNodeOptions>): JsonValue | undefined;
     Create<T>(value: T | undefined, options?: Nullable_1<JsonNodeOptions>): JsonValue | undefined;
 };

@@ -433,8 +433,8 @@ export type PrecedingSiblingIterator = PrecedingSiblingIterator$instance;
 export interface StringConcat$instance {
     Delimiter: string;
     Clear(): void;
-    Concat(value: string | undefined): void;
-    GetResult(): string | undefined;
+    Concat(value: string): void;
+    GetResult(): string;
 }
 
 
@@ -551,7 +551,7 @@ export const XPathPrecedingMergeIterator: {
 export type XPathPrecedingMergeIterator = XPathPrecedingMergeIterator$instance;
 
 export interface XmlCollation$instance {
-    Equals(obj: unknown): boolean;
+    Equals(obj: unknown | undefined): boolean;
     GetHashCode(): int;
 }
 
@@ -596,7 +596,7 @@ export interface XmlQueryContext$instance {
     readonly DefaultDataSource: XPathNavigator;
     readonly DefaultNameTable: XmlNameTable | undefined;
     readonly QueryNameTable: XmlNameTable;
-    GetDataSource(uriRelative: string, uriBase: string): XPathNavigator;
+    GetDataSource(uriRelative: string, uriBase: string | undefined): XPathNavigator | undefined;
     GetLateBoundObject(namespaceUri: string): unknown | undefined;
     GetParameter(localName: string, namespaceUri: string): unknown | undefined;
     InvokeXsltLateBoundFunction(name: string, namespaceUri: string, args: IList_1<XPathItem>[]): IList_1<XPathItem>;
@@ -709,12 +709,12 @@ export interface XmlQueryOutput$instance extends XmlWriter {
     StartElementContentUnchecked(): void;
     StartTree(rootType: XPathNodeType): void;
     WriteBase64(buffer: byte[], index: int, count: int): void;
-    WriteCData(text: string): void;
+    WriteCData(text: string | undefined): void;
     WriteCharEntity(ch: char): void;
     WriteChars(buffer: char[], index: int, count: int): void;
-    WriteComment(text: string): void;
-    WriteCommentString(text: string): void;
-    WriteDocType(name: string, pubid: string, sysid: string, subset: string): void;
+    WriteComment(text: string | undefined): void;
+    WriteCommentString(text: string | undefined): void;
+    WriteDocType(name: string, pubid: string | undefined, sysid: string | undefined, subset: string | undefined): void;
     WriteEndAttribute(): void;
     WriteEndAttributeUnchecked(): void;
     WriteEndComment(): void;
@@ -732,11 +732,11 @@ export interface XmlQueryOutput$instance extends XmlWriter {
     WriteNamespaceDeclarationUnchecked(prefix: string, ns: string): void;
     WriteNamespaceString(text: string): void;
     WriteProcessingInstruction(target: string, text: string | undefined): void;
-    WriteProcessingInstructionString(text: string): void;
+    WriteProcessingInstructionString(text: string | undefined): void;
     WriteRaw(buffer: char[], index: int, count: int): void;
     WriteRaw(data: string): void;
     WriteRawUnchecked(text: string): void;
-    WriteStartAttribute(prefix: string, localName: string, ns: string): void;
+    WriteStartAttribute(prefix: string | undefined, localName: string, ns: string | undefined): void;
     WriteStartAttribute(localName: string, ns: string | undefined): void;
     WriteStartAttribute(localName: string): void;
     WriteStartAttributeComputed(tagName: string, prefixMappingsIndex: int): void;
@@ -744,12 +744,12 @@ export interface XmlQueryOutput$instance extends XmlWriter {
     WriteStartAttributeComputed(navigator: XPathNavigator): void;
     WriteStartAttributeComputed(name: XmlQualifiedName): void;
     WriteStartAttributeLocalName(localName: string): void;
-    WriteStartAttributeUnchecked(prefix: string, localName: string, ns: string): void;
+    WriteStartAttributeUnchecked(prefix: string | undefined, localName: string, ns: string | undefined): void;
     WriteStartAttributeUnchecked(localName: string): void;
     WriteStartComment(): void;
     WriteStartDocument(): void;
     WriteStartDocument(standalone: boolean): void;
-    WriteStartElement(prefix: string, localName: string, ns: string): void;
+    WriteStartElement(prefix: string | undefined, localName: string, ns: string | undefined): void;
     WriteStartElement(localName: string, ns: string | undefined): void;
     WriteStartElement(localName: string): void;
     WriteStartElementComputed(tagName: string, prefixMappingsIndex: int): void;
@@ -762,10 +762,10 @@ export interface XmlQueryOutput$instance extends XmlWriter {
     WriteStartNamespace(prefix: string): void;
     WriteStartProcessingInstruction(target: string): void;
     WriteStartRoot(): void;
-    WriteString(text: string): void;
+    WriteString(text: string | undefined): void;
     WriteStringUnchecked(text: string): void;
     WriteSurrogateCharEntity(lowChar: char, highChar: char): void;
-    WriteWhitespace(ws: string): void;
+    WriteWhitespace(ws: string | undefined): void;
     XsltCopyOf(navigator: XPathNavigator): void;
 }
 
@@ -795,7 +795,7 @@ export interface XmlQueryRuntime$instance {
     CreateCollation(collation: string): XmlCollation | undefined;
     DebugGetGlobalNames(): string[] | undefined;
     DebugGetGlobalValue(name: string): IList | undefined;
-    DebugGetXsltValue(seq: IList): unknown;
+    DebugGetXsltValue(seq: IList | undefined): unknown | undefined;
     DebugSetGlobalValue(name: string, value: unknown): void;
     DocOrderDistinct(seq: IList_1<XPathNavigator>): IList_1<XPathNavigator>;
     EarlyBoundFunctionExists(name: string, namespaceUri: string): boolean;

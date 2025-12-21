@@ -72,7 +72,7 @@ export type BindingRestrictions = BindingRestrictions$instance;
 export interface CallInfo$instance {
     readonly ArgumentCount: int;
     readonly ArgumentNames: ReadOnlyCollection_1<System_Internal.String>;
-    Equals(obj: unknown): boolean;
+    Equals(obj: unknown | undefined): boolean;
     GetHashCode(): int;
 }
 
@@ -206,13 +206,13 @@ export interface DynamicObject$instance {
     GetMetaObject(parameter: Expression): DynamicMetaObject;
     TryBinaryOperation(binder: BinaryOperationBinder, arg: unknown, result: unknown | undefined): boolean;
     TryConvert(binder: ConvertBinder, result: unknown | undefined): boolean;
-    TryCreateInstance(binder: CreateInstanceBinder, args: unknown[], result: unknown): boolean;
+    TryCreateInstance(binder: CreateInstanceBinder, args: (unknown | undefined)[] | undefined, result: unknown | undefined): boolean;
     TryDeleteIndex(binder: DeleteIndexBinder, indexes: unknown[]): boolean;
     TryDeleteMember(binder: DeleteMemberBinder): boolean;
     TryGetIndex(binder: GetIndexBinder, indexes: unknown[], result: unknown | undefined): boolean;
     TryGetMember(binder: GetMemberBinder, result: unknown | undefined): boolean;
-    TryInvoke(binder: InvokeBinder, args: unknown[], result: unknown): boolean;
-    TryInvokeMember(binder: InvokeMemberBinder, args: unknown[], result: unknown): boolean;
+    TryInvoke(binder: InvokeBinder, args: (unknown | undefined)[] | undefined, result: unknown | undefined): boolean;
+    TryInvokeMember(binder: InvokeMemberBinder, args: (unknown | undefined)[] | undefined, result: unknown | undefined): boolean;
     TrySetIndex(binder: SetIndexBinder, indexes: unknown[], value: unknown | undefined): boolean;
     TrySetMember(binder: SetMemberBinder, value: unknown | undefined): boolean;
     TryUnaryOperation(binder: UnaryOperationBinder, result: unknown | undefined): boolean;

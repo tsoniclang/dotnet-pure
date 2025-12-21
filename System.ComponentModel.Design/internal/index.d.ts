@@ -83,7 +83,7 @@ export type ServiceCreatorCallback = (container: IServiceContainer, serviceType:
 
 
 export interface IComponentChangeService$instance {
-    OnComponentChanged(component: unknown, member: MemberDescriptor, oldValue: unknown, newValue: unknown): void;
+    OnComponentChanged(component: unknown, member: MemberDescriptor | undefined, oldValue: unknown | undefined, newValue: unknown | undefined): void;
     OnComponentChanging(component: unknown, member: MemberDescriptor | undefined): void;
 }
 
@@ -175,7 +175,7 @@ export interface IDesignerOptionService$instance {
 export type IDesignerOptionService = IDesignerOptionService$instance;
 
 export interface IDictionaryService$instance {
-    GetKey(value: unknown): unknown;
+    GetKey(value: unknown | undefined): unknown | undefined;
     SetValue(key: unknown, value: unknown | undefined): void;
 }
 
@@ -281,8 +281,8 @@ export interface ISelectionService$instance {
     readonly SelectionCount: int;
     GetComponentSelected(component: unknown): boolean;
     GetSelectedComponents(): ICollection;
-    SetSelectedComponents(components: ICollection, selectionType: SelectionTypes): void;
-    SetSelectedComponents(components: ICollection): void;
+    SetSelectedComponents(components: ICollection | undefined, selectionType: SelectionTypes): void;
+    SetSelectedComponents(components: ICollection | undefined): void;
 }
 
 
@@ -382,9 +382,9 @@ export type CheckoutException = CheckoutException$instance & __CheckoutException
 export interface CommandID$instance {
     readonly Guid: Guid;
     readonly ID: int;
-    Equals(obj: unknown): boolean;
+    Equals(obj: unknown | undefined): boolean;
     GetHashCode(): int;
-    ToString(): string | undefined;
+    ToString(): string;
 }
 
 
@@ -458,7 +458,7 @@ export interface DesignerCollection$instance {
 
 export const DesignerCollection: {
     new(designers: IDesignerHost[] | undefined): DesignerCollection;
-    new(designers: IList): DesignerCollection;
+    new(designers: IList | undefined): DesignerCollection;
 };
 
 
@@ -583,7 +583,7 @@ export interface DesignerVerbCollection$instance extends CollectionBase {
     Item: DesignerVerb;
     Add(value: unknown | undefined): int;
     AddRange(value: (DesignerVerb | undefined)[]): void;
-    AddRange(value: DesignerVerbCollection | undefined): void;
+    AddRange(value: DesignerVerbCollection): void;
     Clear(): void;
     Contains(value: unknown | undefined): boolean;
     CopyTo(array: ClrArray, index: int): void;
@@ -597,7 +597,7 @@ export interface DesignerVerbCollection$instance extends CollectionBase {
 
 export const DesignerVerbCollection: {
     new(): DesignerVerbCollection;
-    new(value: (DesignerVerb | undefined)[] | undefined): DesignerVerbCollection;
+    new(value: DesignerVerb[]): DesignerVerbCollection;
 };
 
 
@@ -612,7 +612,7 @@ export type DesignerVerbCollection = DesignerVerbCollection$instance & __Designe
 
 export interface DesigntimeLicenseContext$instance extends LicenseContext {
     readonly UsageMode: LicenseUsageMode;
-    GetSavedLicenseKey(type_: Type, resourceAssembly: Assembly): string;
+    GetSavedLicenseKey(type_: Type, resourceAssembly: Assembly | undefined): string | undefined;
     GetService(type_: Type): unknown | undefined;
     SetSavedLicenseKey(type_: Type, key: string): void;
 }
@@ -644,7 +644,7 @@ export type DesigntimeLicenseContextSerializer = DesigntimeLicenseContextSeriali
 
 export interface HelpKeywordAttribute$instance extends Attribute {
     readonly HelpKeyword: string | undefined;
-    Equals(obj: unknown): boolean;
+    Equals(obj: unknown | undefined): boolean;
     GetHashCode(): int;
     IsDefaultAttribute(): boolean;
 }
@@ -669,8 +669,8 @@ export interface MenuCommand$instance {
     Supported: boolean;
     Visible: boolean;
     Invoke(): void;
-    Invoke(arg: unknown | undefined): void;
-    ToString(): string | undefined;
+    Invoke(arg: unknown): void;
+    ToString(): string;
 }
 
 
@@ -695,7 +695,7 @@ export interface ServiceContainer$instance {
 
 export const ServiceContainer: {
     new(): ServiceContainer;
-    new(parentProvider: IServiceProvider): ServiceContainer;
+    new(parentProvider: IServiceProvider | undefined): ServiceContainer;
 };
 
 

@@ -422,10 +422,10 @@ export type ArrayWithOffset = ArrayWithOffset$instance & __ArrayWithOffset$views
 
 export interface CLong$instance {
     readonly Value: nint;
-    Equals(o: unknown): boolean;
+    Equals(o: unknown | undefined): boolean;
     Equals(other: CLong): boolean;
     GetHashCode(): int;
-    ToString(): string | undefined;
+    ToString(): string;
 }
 
 
@@ -473,10 +473,10 @@ export type ComWrappers_ComInterfaceEntry = ComWrappers_ComInterfaceEntry$instan
 
 export interface CULong$instance {
     readonly Value: nuint;
-    Equals(o: unknown): boolean;
+    Equals(o: unknown | undefined): boolean;
     Equals(other: CULong): boolean;
     GetHashCode(): int;
-    ToString(): string | undefined;
+    ToString(): string;
 }
 
 
@@ -530,7 +530,7 @@ export interface GCHandle_1$instance<T> {
     readonly IsAllocated: boolean;
     Target: T;
     Dispose(): void;
-    Equals(obj: unknown): boolean;
+    Equals(obj: unknown | undefined): boolean;
     Equals(other: GCHandle_1<T>): boolean;
     GetHashCode(): int;
 }
@@ -572,15 +572,15 @@ export type HandleRef = HandleRef$instance;
 
 export interface NFloat$instance extends IBitwiseOperators_3<NFloat, NFloat, NFloat>, IComparisonOperators_3<NFloat, NFloat, System_Internal.Boolean>, IEqualityOperators_3<NFloat, NFloat, System_Internal.Boolean>, IModulusOperators_3<NFloat, NFloat, NFloat>, IAdditionOperators_3<NFloat, NFloat, NFloat>, IDecrementOperators_1<NFloat>, IDivisionOperators_3<NFloat, NFloat, NFloat>, IIncrementOperators_1<NFloat>, IMultiplyOperators_3<NFloat, NFloat, NFloat>, ISubtractionOperators_3<NFloat, NFloat, NFloat>, IUnaryPlusOperators_2<NFloat, NFloat>, IUnaryNegationOperators_2<NFloat, NFloat> {
     readonly Value: double;
-    CompareTo(obj: unknown): int;
+    CompareTo(obj: unknown | undefined): int;
     CompareTo(other: NFloat): int;
-    Equals(obj: unknown): boolean;
+    Equals(obj: unknown | undefined): boolean;
     Equals(other: NFloat): boolean;
     GetHashCode(): int;
-    ToString(): string | undefined;
+    ToString(): string;
     ToString(format: string | undefined): string;
     ToString(provider: IFormatProvider | undefined): string;
-    ToString(format: string, provider: IFormatProvider): string;
+    ToString(format: string | undefined, provider: IFormatProvider | undefined): string;
     TryFormat(destination: Span_1<System_Internal.Char>, charsWritten: int, format?: ReadOnlySpan_1<System_Internal.Char>, provider?: IFormatProvider | undefined): boolean;
     TryFormat(utf8Destination: Span_1<System_Internal.Byte>, bytesWritten: int, format?: ReadOnlySpan_1<System_Internal.Char>, provider?: IFormatProvider | undefined): boolean;
 }
@@ -707,9 +707,9 @@ export const NFloat: {
     TryParse(s: ReadOnlySpan_1<System_Internal.Char>, style: NumberStyles, provider: IFormatProvider | undefined, result: NFloat): boolean;
     TryParse(s: ReadOnlySpan_1<System_Internal.Char>, provider: IFormatProvider | undefined, result: NFloat): boolean;
     TryParse(s: ReadOnlySpan_1<System_Internal.Char>, result: NFloat): boolean;
-    TryParse(s: string, style: NumberStyles, provider: IFormatProvider, result: NFloat): boolean;
-    TryParse(s: string, provider: IFormatProvider, result: NFloat): boolean;
-    TryParse(s: string, result: NFloat): boolean;
+    TryParse(s: string | undefined, style: NumberStyles, provider: IFormatProvider | undefined, result: NFloat): boolean;
+    TryParse(s: string | undefined, provider: IFormatProvider | undefined, result: NFloat): boolean;
+    TryParse(s: string | undefined, result: NFloat): boolean;
 };
 
 
@@ -751,7 +751,7 @@ export type NFloat = NFloat$instance & __NFloat$views;
 
 export interface OSPlatform$instance {
     Equals(other: OSPlatform): boolean;
-    Equals(obj: unknown): boolean;
+    Equals(obj: unknown | undefined): boolean;
     GetHashCode(): int;
     ToString(): string;
 }
@@ -781,7 +781,7 @@ export interface PinnedGCHandle_1$instance<T> {
     readonly IsAllocated: boolean;
     Target: T;
     Dispose(): void;
-    Equals(obj: unknown): boolean;
+    Equals(obj: unknown | undefined): boolean;
     Equals(other: PinnedGCHandle_1<T>): boolean;
     GetAddressOfObjectData(): ptr<void>;
     GetHashCode(): int;
@@ -814,13 +814,13 @@ export interface WeakGCHandle_1$instance<T> {
     Equals(obj: unknown | undefined): boolean;
     Equals(other: WeakGCHandle_1<T>): boolean;
     GetHashCode(): int;
-    SetTarget(target: T | undefined): void;
+    SetTarget(target: T): void;
     TryGetTarget(target: T | undefined): boolean;
 }
 
 
 export const WeakGCHandle_1: {
-    new<T>(target: T | undefined, trackResurrection: boolean): WeakGCHandle_1<T>;
+    new<T>(target: T, trackResurrection: boolean): WeakGCHandle_1<T>;
     FromIntPtr<T>(value: nint): WeakGCHandle_1<T>;
     ToIntPtr<T>(value: WeakGCHandle_1<T>): nint;
 };
@@ -933,17 +933,17 @@ export interface ComAwareEventInfo$instance extends EventInfo {
     readonly Name: string;
     readonly ReflectedType: Type | undefined;
     AddEventHandler(target: unknown, handler: Function): void;
-    GetAddMethod(nonPublic: boolean): MethodInfo;
+    GetAddMethod(nonPublic: boolean): MethodInfo | undefined;
     GetAddMethod(): MethodInfo | undefined;
     GetCustomAttributes(attributeType: Type, inherit: boolean): unknown[];
     GetCustomAttributes(inherit: boolean): unknown[];
     GetCustomAttributesData(): IList_1<CustomAttributeData>;
     GetCustomAttributesData(): IList_1<CustomAttributeData>;
     GetOtherMethods(nonPublic: boolean): MethodInfo[];
-    GetOtherMethods(): (MethodInfo | undefined)[] | undefined;
-    GetRaiseMethod(nonPublic: boolean): MethodInfo;
+    GetOtherMethods(): MethodInfo[];
+    GetRaiseMethod(nonPublic: boolean): MethodInfo | undefined;
     GetRaiseMethod(): MethodInfo | undefined;
-    GetRemoveMethod(nonPublic: boolean): MethodInfo;
+    GetRemoveMethod(nonPublic: boolean): MethodInfo | undefined;
     GetRemoveMethod(): MethodInfo | undefined;
     IsDefined(attributeType: Type, inherit: boolean): boolean;
     RemoveEventHandler(target: unknown, handler: Function): void;
@@ -1015,7 +1015,7 @@ export type ComEventInterfaceAttribute = ComEventInterfaceAttribute$instance;
 
 export interface COMException$instance extends ExternalException$instance {
     GetObjectData(info: SerializationInfo, context: StreamingContext): void;
-    ToString(): string | undefined;
+    ToString(): string;
 }
 
 
@@ -1109,7 +1109,7 @@ export const ComWrappers: {
     RegisterForMarshalling(instance: ComWrappers): void;
     RegisterForTrackerSupport(instance: ComWrappers): void;
     TryGetComInstance(obj: unknown, unknown_: nint): boolean;
-    TryGetObject(unknown_: nint, obj: unknown): boolean;
+    TryGetObject(unknown_: nint, obj: unknown | undefined): boolean;
 };
 
 
@@ -1258,7 +1258,7 @@ export type ErrorWrapper = ErrorWrapper$instance;
 export interface ExternalException$instance extends SystemException {
     readonly ErrorCode: int;
     GetObjectData(info: SerializationInfo, context: StreamingContext): void;
-    ToString(): string | undefined;
+    ToString(): string;
 }
 
 
@@ -1312,8 +1312,8 @@ export interface HandleCollector$instance {
 
 
 export const HandleCollector: {
-    new(name: string, initialThreshold: int): HandleCollector;
-    new(name: string, initialThreshold: int, maximumThreshold: int): HandleCollector;
+    new(name: string | undefined, initialThreshold: int): HandleCollector;
+    new(name: string | undefined, initialThreshold: int, maximumThreshold: int): HandleCollector;
 };
 
 
@@ -1415,7 +1415,7 @@ export interface LibraryImportAttribute$instance extends Attribute {
 
 
 export const LibraryImportAttribute: {
-    new(libraryName: string | undefined): LibraryImportAttribute;
+    new(libraryName: string): LibraryImportAttribute;
 };
 
 
@@ -1978,8 +1978,8 @@ export abstract class Marshal$instance {
     static Copy(source: float[], startIndex: int, destination: nint, length: int): void;
     static CreateAggregatedObject(pOuter: nint, o: unknown): nint;
     static CreateAggregatedObject<T>(pOuter: nint, o: T): nint;
-    static CreateWrapperOfType(o: unknown, t: Type): unknown;
-    static CreateWrapperOfType<T, TWrapper>(o: T): TWrapper;
+    static CreateWrapperOfType(o: unknown | undefined, t: Type): unknown | undefined;
+    static CreateWrapperOfType<T, TWrapper>(o: T | undefined): TWrapper;
     static DestroyStructure(ptr: nint, structuretype: Type): void;
     static DestroyStructure<T>(ptr: nint): void;
     static FinalReleaseComObject(o: unknown): int;
@@ -1996,14 +1996,14 @@ export abstract class Marshal$instance {
     static GetDelegateForFunctionPointer<TDelegate>(ptr: nint): TDelegate;
     static GetEndComSlot(t: Type): int;
     static GetExceptionCode(): int;
-    static GetExceptionForHR(errorCode: int, iid: Guid, pUnk: nint): Exception;
-    static GetExceptionForHR(errorCode: int, errorInfo: nint): Exception;
-    static GetExceptionForHR(errorCode: int): Exception;
+    static GetExceptionForHR(errorCode: int, iid: Guid, pUnk: nint): Exception | undefined;
+    static GetExceptionForHR(errorCode: int, errorInfo: nint): Exception | undefined;
+    static GetExceptionForHR(errorCode: int): Exception | undefined;
     static GetExceptionPointers(): nint;
     static GetFunctionPointerForDelegate(d: Function): nint;
     static GetFunctionPointerForDelegate<TDelegate>(d: TDelegate): nint;
     static GetHINSTANCE(m: Module): nint;
-    static GetHRForException(e: Exception): int;
+    static GetHRForException(e: Exception | undefined): int;
     static GetHRForLastWin32Error(): int;
     static GetIDispatchForObject(o: unknown): nint;
     static GetIUnknownForObject(o: unknown): nint;
@@ -2011,17 +2011,17 @@ export abstract class Marshal$instance {
     static GetLastPInvokeErrorMessage(): string;
     static GetLastSystemError(): int;
     static GetLastWin32Error(): int;
-    static GetNativeVariantForObject(obj: unknown, pDstNativeVariant: nint): void;
-    static GetNativeVariantForObject<T>(obj: T, pDstNativeVariant: nint): void;
+    static GetNativeVariantForObject(obj: unknown | undefined, pDstNativeVariant: nint): void;
+    static GetNativeVariantForObject<T>(obj: T | undefined, pDstNativeVariant: nint): void;
     static GetObjectForIUnknown(pUnk: nint): unknown;
-    static GetObjectForNativeVariant(pSrcNativeVariant: nint): unknown;
-    static GetObjectForNativeVariant<T>(pSrcNativeVariant: nint): T;
+    static GetObjectForNativeVariant(pSrcNativeVariant: nint): unknown | undefined;
+    static GetObjectForNativeVariant<T>(pSrcNativeVariant: nint): T | undefined;
     static GetObjectsForNativeVariants(aSrcNativeVariant: nint, cVars: int): (unknown | undefined)[];
     static GetObjectsForNativeVariants<T>(aSrcNativeVariant: nint, cVars: int): T[];
     static GetPInvokeErrorMessage(error: int): string;
     static GetStartComSlot(t: Type): int;
     static GetTypedObjectForIUnknown(pUnk: nint, t: Type): unknown;
-    static GetTypeFromCLSID(clsid: Guid): Type;
+    static GetTypeFromCLSID(clsid: Guid): Type | undefined;
     static GetTypeInfoName(typeInfo: ITypeInfo): string;
     static GetUniqueObjectForIUnknown(unknown_: nint): unknown;
     static InitHandle(safeHandle: SafeHandle, handle: nint): void;
@@ -2032,18 +2032,18 @@ export abstract class Marshal$instance {
     static Prelink(m: MethodInfo): void;
     static PrelinkAll(c: Type): void;
     static PtrToStringAnsi(ptr: nint, len: int): string;
-    static PtrToStringAnsi(ptr: nint): string;
-    static PtrToStringAuto(ptr: nint, len: int): string;
-    static PtrToStringAuto(ptr: nint): string;
+    static PtrToStringAnsi(ptr: nint): string | undefined;
+    static PtrToStringAuto(ptr: nint, len: int): string | undefined;
+    static PtrToStringAuto(ptr: nint): string | undefined;
     static PtrToStringBSTR(ptr: nint): string;
     static PtrToStringUni(ptr: nint, len: int): string;
-    static PtrToStringUni(ptr: nint): string;
+    static PtrToStringUni(ptr: nint): string | undefined;
     static PtrToStringUTF8(ptr: nint, byteLen: int): string;
-    static PtrToStringUTF8(ptr: nint): string;
+    static PtrToStringUTF8(ptr: nint): string | undefined;
     static PtrToStructure(ptr: nint, structure: unknown): void;
     static PtrToStructure(ptr: nint, structureType: Type): unknown | undefined;
     static PtrToStructure<T>(ptr: nint, structure: T): void;
-    static PtrToStructure<T>(ptr: nint): T;
+    static PtrToStructure<T>(ptr: nint): T | undefined;
     static QueryInterface(pUnk: nint, iid: Guid, ppv: nint): int;
     static ReadByte(ptr: nint, ofs: int): byte;
     static ReadByte(ptr: nint): byte;
@@ -2076,14 +2076,14 @@ export abstract class Marshal$instance {
     static SizeOf(structure: unknown): int;
     static SizeOf(t: Type): int;
     static SizeOf<T>(structure: T): int;
-    static StringToBSTR(s: string): nint;
-    static StringToCoTaskMemAnsi(s: string): nint;
-    static StringToCoTaskMemAuto(s: string): nint;
-    static StringToCoTaskMemUni(s: string): nint;
-    static StringToCoTaskMemUTF8(s: string): nint;
-    static StringToHGlobalAnsi(s: string): nint;
-    static StringToHGlobalAuto(s: string): nint;
-    static StringToHGlobalUni(s: string): nint;
+    static StringToBSTR(s: string | undefined): nint;
+    static StringToCoTaskMemAnsi(s: string | undefined): nint;
+    static StringToCoTaskMemAuto(s: string | undefined): nint;
+    static StringToCoTaskMemUni(s: string | undefined): nint;
+    static StringToCoTaskMemUTF8(s: string | undefined): nint;
+    static StringToHGlobalAnsi(s: string | undefined): nint;
+    static StringToHGlobalAuto(s: string | undefined): nint;
+    static StringToHGlobalUni(s: string | undefined): nint;
     static StructureToPtr(structure: unknown, ptr: nint, fDeleteOld: boolean): void;
     static StructureToPtr<T>(structure: T, ptr: nint, fDeleteOld: boolean): void;
     static ThrowExceptionForHR(errorCode: int, iid: Guid, pUnk: nint): void;
@@ -2140,8 +2140,8 @@ export abstract class MemoryMarshal$instance {
     static Read<T extends unknown>(source: ReadOnlySpan_1<System_Internal.Byte>): T;
     static ToEnumerable<T>(memory: ReadOnlyMemory_1<T>): IEnumerable_1<T>;
     static TryGetArray<T>(memory: ReadOnlyMemory_1<T>, segment: ArraySegment_1<T>): boolean;
-    static TryGetMemoryManager<T, TManager extends MemoryManager_1<T>>(memory: ReadOnlyMemory_1<T>, manager: TManager, start: int, length: int): boolean;
-    static TryGetMemoryManager<T, TManager extends MemoryManager_1<T>>(memory: ReadOnlyMemory_1<T>, manager: TManager): boolean;
+    static TryGetMemoryManager<T, TManager extends MemoryManager_1<T>>(memory: ReadOnlyMemory_1<T>, manager: TManager | undefined, start: int, length: int): boolean;
+    static TryGetMemoryManager<T, TManager extends MemoryManager_1<T>>(memory: ReadOnlyMemory_1<T>, manager: TManager | undefined): boolean;
     static TryGetString(memory: ReadOnlyMemory_1<System_Internal.Char>, text: string | undefined, start: int, length: int): boolean;
     static TryRead<T extends unknown>(source: ReadOnlySpan_1<System_Internal.Byte>, value: T): boolean;
     static TryWrite<T extends unknown>(destination: Span_1<System_Internal.Byte>, value: T): boolean;
