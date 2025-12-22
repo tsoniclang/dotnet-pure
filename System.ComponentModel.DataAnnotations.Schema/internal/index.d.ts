@@ -25,7 +25,7 @@ export interface ColumnAttribute$instance extends Attribute {
 
 export const ColumnAttribute: {
     new(): ColumnAttribute;
-    new(name: string | undefined): ColumnAttribute;
+    new(name: string): ColumnAttribute;
 };
 
 
@@ -91,7 +91,8 @@ export type NotMappedAttribute = NotMappedAttribute$instance;
 
 export interface TableAttribute$instance extends Attribute {
     readonly Name: string;
-    Schema: string | undefined;
+    get Schema(): string | undefined;
+    set Schema(value: string);
 }
 
 

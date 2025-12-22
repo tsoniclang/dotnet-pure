@@ -162,7 +162,7 @@ export interface OpCode$instance {
     readonly StackBehaviourPop: StackBehaviour;
     readonly StackBehaviourPush: StackBehaviour;
     readonly Value: short;
-    Equals(obj: unknown | undefined): boolean;
+    Equals(obj: unknown): boolean;
     Equals(obj: OpCode): boolean;
     GetHashCode(): int;
     ToString(): string | undefined;
@@ -209,7 +209,7 @@ export interface AssemblyBuilder$instance extends Assembly {
 
 
 export const AssemblyBuilder: {
-    DefineDynamicAssembly(name: AssemblyName, access: AssemblyBuilderAccess, assemblyAttributes: IEnumerable_1<CustomAttributeBuilder> | undefined): AssemblyBuilder;
+    DefineDynamicAssembly(name: AssemblyName, access: AssemblyBuilderAccess, assemblyAttributes: IEnumerable_1<CustomAttributeBuilder>): AssemblyBuilder;
     DefineDynamicAssembly(name: AssemblyName, access: AssemblyBuilderAccess): AssemblyBuilder;
 };
 
@@ -252,10 +252,10 @@ export interface CustomAttributeBuilder$instance {
 
 
 export const CustomAttributeBuilder: {
-    new(con: ConstructorInfo, constructorArgs: (unknown | undefined)[]): CustomAttributeBuilder;
-    new(con: ConstructorInfo, constructorArgs: (unknown | undefined)[], namedProperties: PropertyInfo[], propertyValues: (unknown | undefined)[]): CustomAttributeBuilder;
-    new(con: ConstructorInfo, constructorArgs: (unknown | undefined)[], namedFields: FieldInfo[], fieldValues: (unknown | undefined)[]): CustomAttributeBuilder;
-    new(con: ConstructorInfo, constructorArgs: (unknown | undefined)[], namedProperties: PropertyInfo[], propertyValues: (unknown | undefined)[], namedFields: FieldInfo[], fieldValues: (unknown | undefined)[]): CustomAttributeBuilder;
+    new(con: ConstructorInfo, constructorArgs: unknown[]): CustomAttributeBuilder;
+    new(con: ConstructorInfo, constructorArgs: unknown[], namedProperties: PropertyInfo[], propertyValues: unknown[]): CustomAttributeBuilder;
+    new(con: ConstructorInfo, constructorArgs: unknown[], namedFields: FieldInfo[], fieldValues: unknown[]): CustomAttributeBuilder;
+    new(con: ConstructorInfo, constructorArgs: unknown[], namedProperties: PropertyInfo[], propertyValues: unknown[], namedFields: FieldInfo[], fieldValues: unknown[]): CustomAttributeBuilder;
 };
 
 
@@ -303,9 +303,9 @@ export interface DynamicMethod$instance extends MethodInfo {
     readonly ReturnType: Type;
     readonly ReturnTypeCustomAttributes: ICustomAttributeProvider;
     CreateDelegate(delegateType: Type): Function;
-    CreateDelegate(delegateType: Type, target: unknown | undefined): Function;
+    CreateDelegate(delegateType: Type, target: unknown): Function;
     CreateDelegate<T extends Function>(): T;
-    CreateDelegate<T extends Function>(target: unknown | undefined): T;
+    CreateDelegate<T extends Function>(target: unknown): T;
     DefineParameter(position: int, attributes: ParameterAttributes, parameterName: string): ParameterBuilder;
     GetBaseDefinition(): MethodInfo;
     GetCustomAttributes(attributeType: Type, inherit: boolean): unknown[];
@@ -315,22 +315,22 @@ export interface DynamicMethod$instance extends MethodInfo {
     GetILGenerator(): ILGenerator;
     GetMethodImplementationFlags(): MethodImplAttributes;
     GetParameters(): ParameterInfo[];
-    Invoke(obj: unknown, invokeAttr: BindingFlags, binder: Binder, parameters: unknown[], culture: CultureInfo): unknown;
-    Invoke(obj: unknown | undefined, parameters: (unknown | undefined)[] | undefined): unknown | undefined;
+    Invoke(obj: unknown, invokeAttr: BindingFlags, binder: Binder, parameters: unknown[], culture: CultureInfo): unknown | undefined;
+    Invoke(obj: unknown, parameters: unknown[]): unknown | undefined;
     IsDefined(attributeType: Type, inherit: boolean): boolean;
     ToString(): string;
 }
 
 
 export const DynamicMethod: {
-    new(name: string, returnType: Type | undefined, parameterTypes: Type[] | undefined): DynamicMethod;
-    new(name: string, returnType: Type | undefined, parameterTypes: Type[] | undefined, restrictedSkipVisibility: boolean): DynamicMethod;
-    new(name: string, returnType: Type | undefined, parameterTypes: Type[] | undefined, m: Module): DynamicMethod;
-    new(name: string, returnType: Type | undefined, parameterTypes: Type[] | undefined, m: Module, skipVisibility: boolean): DynamicMethod;
-    new(name: string, attributes: MethodAttributes, callingConvention: CallingConventions, returnType: Type | undefined, parameterTypes: Type[] | undefined, m: Module, skipVisibility: boolean): DynamicMethod;
-    new(name: string, returnType: Type | undefined, parameterTypes: Type[] | undefined, owner: Type): DynamicMethod;
-    new(name: string, returnType: Type | undefined, parameterTypes: Type[] | undefined, owner: Type, skipVisibility: boolean): DynamicMethod;
-    new(name: string, attributes: MethodAttributes, callingConvention: CallingConventions, returnType: Type | undefined, parameterTypes: Type[] | undefined, owner: Type, skipVisibility: boolean): DynamicMethod;
+    new(name: string, returnType: Type, parameterTypes: Type[]): DynamicMethod;
+    new(name: string, returnType: Type, parameterTypes: Type[], restrictedSkipVisibility: boolean): DynamicMethod;
+    new(name: string, returnType: Type, parameterTypes: Type[], m: Module): DynamicMethod;
+    new(name: string, returnType: Type, parameterTypes: Type[], m: Module, skipVisibility: boolean): DynamicMethod;
+    new(name: string, attributes: MethodAttributes, callingConvention: CallingConventions, returnType: Type, parameterTypes: Type[], m: Module, skipVisibility: boolean): DynamicMethod;
+    new(name: string, returnType: Type, parameterTypes: Type[], owner: Type): DynamicMethod;
+    new(name: string, returnType: Type, parameterTypes: Type[], owner: Type, skipVisibility: boolean): DynamicMethod;
+    new(name: string, attributes: MethodAttributes, callingConvention: CallingConventions, returnType: Type, parameterTypes: Type[], owner: Type, skipVisibility: boolean): DynamicMethod;
 };
 
 
@@ -345,7 +345,7 @@ export interface EnumBuilder$instance extends TypeInfo {
     readonly UnderlyingField: FieldBuilder;
     CreateType(): Type;
     CreateTypeInfo(): TypeInfo;
-    DefineLiteral(literalName: string, literalValue: unknown | undefined): FieldBuilder;
+    DefineLiteral(literalName: string, literalValue: unknown): FieldBuilder;
     GetCustomAttributes(inherit: boolean): unknown[];
     GetCustomAttributes(attributeType: Type, inherit: boolean): unknown[];
     GetField3(name: string, bindingAttr: BindingFlags): FieldInfo | undefined;
@@ -357,33 +357,33 @@ export interface EnumBuilder$instance extends TypeInfo {
     GetMember(name: string, type_: MemberTypes, bindingAttr: BindingFlags): MemberInfo[];
     GetMembers3(bindingAttr: BindingFlags): MemberInfo[];
     GetMembers3(): MemberInfo[];
-    GetMethod(name: string, bindingAttr: BindingFlags, binder: Binder, types: Type[], modifiers: ParameterModifier[]): MethodInfo;
+    GetMethod(name: string, bindingAttr: BindingFlags, binder: Binder, types: Type[], modifiers: ParameterModifier[]): MethodInfo | undefined;
     GetMethod(name: string, bindingAttr: BindingFlags): MethodInfo | undefined;
     GetMethod(name: string): MethodInfo | undefined;
     GetMethod(name: string, bindingAttr: BindingFlags, types: Type[]): MethodInfo | undefined;
     GetMethod(name: string, types: Type[]): MethodInfo | undefined;
-    GetMethod(name: string, types: Type[], modifiers: ParameterModifier[] | undefined): MethodInfo | undefined;
-    GetMethod(name: string, bindingAttr: BindingFlags, binder: Binder, callConvention: CallingConventions, types: Type[], modifiers: ParameterModifier[]): MethodInfo;
+    GetMethod(name: string, types: Type[], modifiers: ParameterModifier[]): MethodInfo | undefined;
+    GetMethod(name: string, bindingAttr: BindingFlags, binder: Binder, callConvention: CallingConventions, types: Type[], modifiers: ParameterModifier[]): MethodInfo | undefined;
     GetMethod(name: string, genericParameterCount: int, types: Type[]): MethodInfo | undefined;
-    GetMethod(name: string, genericParameterCount: int, types: Type[], modifiers: ParameterModifier[] | undefined): MethodInfo | undefined;
+    GetMethod(name: string, genericParameterCount: int, types: Type[], modifiers: ParameterModifier[]): MethodInfo | undefined;
     GetMethod(name: string, genericParameterCount: int, bindingAttr: BindingFlags, types: Type[]): MethodInfo | undefined;
-    GetMethod(name: string, genericParameterCount: int, bindingAttr: BindingFlags, binder: Binder, types: Type[], modifiers: ParameterModifier[]): MethodInfo;
-    GetMethod(name: string, genericParameterCount: int, bindingAttr: BindingFlags, binder: Binder, callConvention: CallingConventions, types: Type[], modifiers: ParameterModifier[]): MethodInfo;
+    GetMethod(name: string, genericParameterCount: int, bindingAttr: BindingFlags, binder: Binder, types: Type[], modifiers: ParameterModifier[]): MethodInfo | undefined;
+    GetMethod(name: string, genericParameterCount: int, bindingAttr: BindingFlags, binder: Binder, callConvention: CallingConventions, types: Type[], modifiers: ParameterModifier[]): MethodInfo | undefined;
     GetMethods3(bindingAttr: BindingFlags): MethodInfo[];
     GetMethods3(): MethodInfo[];
     GetProperties3(bindingAttr: BindingFlags): PropertyInfo[];
     GetProperties3(): PropertyInfo[];
     GetProperty(name: string, bindingAttr: BindingFlags): PropertyInfo | undefined;
-    GetProperty(name: string, bindingAttr: BindingFlags, binder: Binder, returnType: Type, types: Type[], modifiers: ParameterModifier[]): PropertyInfo;
+    GetProperty(name: string, bindingAttr: BindingFlags, binder: Binder, returnType: Type, types: Type[], modifiers: ParameterModifier[]): PropertyInfo | undefined;
     GetProperty(name: string): PropertyInfo | undefined;
-    GetProperty(name: string, returnType: Type): PropertyInfo;
+    GetProperty(name: string, returnType: Type): PropertyInfo | undefined;
     GetProperty(name: string, types: Type[]): PropertyInfo | undefined;
-    GetProperty(name: string, returnType: Type | undefined, types: Type[]): PropertyInfo | undefined;
-    GetProperty(name: string, returnType: Type, types: Type[], modifiers: ParameterModifier[]): PropertyInfo;
+    GetProperty(name: string, returnType: Type, types: Type[]): PropertyInfo | undefined;
+    GetProperty(name: string, returnType: Type, types: Type[], modifiers: ParameterModifier[]): PropertyInfo | undefined;
     GetTypeInfo(): TypeInfo;
-    InvokeMember4(name: string, invokeAttr: BindingFlags, binder: Binder, target: unknown, args: unknown[], modifiers: ParameterModifier[], culture: CultureInfo, namedParameters: string[] | undefined): unknown;
-    InvokeMember4(name: string, invokeAttr: BindingFlags, binder: Binder, target: unknown, args: unknown[]): unknown;
-    InvokeMember4(name: string, invokeAttr: BindingFlags, binder: Binder, target: unknown, args: unknown[], culture: CultureInfo): unknown;
+    InvokeMember4(name: string, invokeAttr: BindingFlags, binder: Binder, target: unknown, args: unknown[], modifiers: ParameterModifier[], culture: CultureInfo, namedParameters: string[]): unknown | undefined;
+    InvokeMember4(name: string, invokeAttr: BindingFlags, binder: Binder, target: unknown, args: unknown[]): unknown | undefined;
+    InvokeMember4(name: string, invokeAttr: BindingFlags, binder: Binder, target: unknown, args: unknown[], culture: CultureInfo): unknown | undefined;
     IsDefined(attributeType: Type, inherit: boolean): boolean;
     MakeArrayType(): Type;
     MakeArrayType(rank: int): Type;
@@ -459,33 +459,33 @@ export interface GenericTypeParameterBuilder$instance extends TypeInfo {
     GetMember(name: string, type_: MemberTypes, bindingAttr: BindingFlags): MemberInfo[];
     GetMembers3(bindingAttr: BindingFlags): MemberInfo[];
     GetMembers3(): MemberInfo[];
-    GetMethod(name: string, bindingAttr: BindingFlags, binder: Binder, types: Type[], modifiers: ParameterModifier[]): MethodInfo;
+    GetMethod(name: string, bindingAttr: BindingFlags, binder: Binder, types: Type[], modifiers: ParameterModifier[]): MethodInfo | undefined;
     GetMethod(name: string, bindingAttr: BindingFlags): MethodInfo | undefined;
     GetMethod(name: string): MethodInfo | undefined;
     GetMethod(name: string, bindingAttr: BindingFlags, types: Type[]): MethodInfo | undefined;
     GetMethod(name: string, types: Type[]): MethodInfo | undefined;
-    GetMethod(name: string, types: Type[], modifiers: ParameterModifier[] | undefined): MethodInfo | undefined;
-    GetMethod(name: string, bindingAttr: BindingFlags, binder: Binder, callConvention: CallingConventions, types: Type[], modifiers: ParameterModifier[]): MethodInfo;
+    GetMethod(name: string, types: Type[], modifiers: ParameterModifier[]): MethodInfo | undefined;
+    GetMethod(name: string, bindingAttr: BindingFlags, binder: Binder, callConvention: CallingConventions, types: Type[], modifiers: ParameterModifier[]): MethodInfo | undefined;
     GetMethod(name: string, genericParameterCount: int, types: Type[]): MethodInfo | undefined;
-    GetMethod(name: string, genericParameterCount: int, types: Type[], modifiers: ParameterModifier[] | undefined): MethodInfo | undefined;
+    GetMethod(name: string, genericParameterCount: int, types: Type[], modifiers: ParameterModifier[]): MethodInfo | undefined;
     GetMethod(name: string, genericParameterCount: int, bindingAttr: BindingFlags, types: Type[]): MethodInfo | undefined;
-    GetMethod(name: string, genericParameterCount: int, bindingAttr: BindingFlags, binder: Binder, types: Type[], modifiers: ParameterModifier[]): MethodInfo;
-    GetMethod(name: string, genericParameterCount: int, bindingAttr: BindingFlags, binder: Binder, callConvention: CallingConventions, types: Type[], modifiers: ParameterModifier[]): MethodInfo;
+    GetMethod(name: string, genericParameterCount: int, bindingAttr: BindingFlags, binder: Binder, types: Type[], modifiers: ParameterModifier[]): MethodInfo | undefined;
+    GetMethod(name: string, genericParameterCount: int, bindingAttr: BindingFlags, binder: Binder, callConvention: CallingConventions, types: Type[], modifiers: ParameterModifier[]): MethodInfo | undefined;
     GetMethods3(bindingAttr: BindingFlags): MethodInfo[];
     GetMethods3(): MethodInfo[];
     GetProperties3(bindingAttr: BindingFlags): PropertyInfo[];
     GetProperties3(): PropertyInfo[];
     GetProperty(name: string, bindingAttr: BindingFlags): PropertyInfo | undefined;
-    GetProperty(name: string, bindingAttr: BindingFlags, binder: Binder, returnType: Type, types: Type[], modifiers: ParameterModifier[]): PropertyInfo;
+    GetProperty(name: string, bindingAttr: BindingFlags, binder: Binder, returnType: Type, types: Type[], modifiers: ParameterModifier[]): PropertyInfo | undefined;
     GetProperty(name: string): PropertyInfo | undefined;
-    GetProperty(name: string, returnType: Type): PropertyInfo;
+    GetProperty(name: string, returnType: Type): PropertyInfo | undefined;
     GetProperty(name: string, types: Type[]): PropertyInfo | undefined;
-    GetProperty(name: string, returnType: Type | undefined, types: Type[]): PropertyInfo | undefined;
-    GetProperty(name: string, returnType: Type, types: Type[], modifiers: ParameterModifier[]): PropertyInfo;
+    GetProperty(name: string, returnType: Type, types: Type[]): PropertyInfo | undefined;
+    GetProperty(name: string, returnType: Type, types: Type[], modifiers: ParameterModifier[]): PropertyInfo | undefined;
     GetTypeInfo(): TypeInfo;
-    InvokeMember4(name: string, invokeAttr: BindingFlags, binder: Binder, target: unknown, args: unknown[], modifiers: ParameterModifier[], culture: CultureInfo, namedParameters: string[] | undefined): unknown;
-    InvokeMember4(name: string, invokeAttr: BindingFlags, binder: Binder, target: unknown, args: unknown[]): unknown;
-    InvokeMember4(name: string, invokeAttr: BindingFlags, binder: Binder, target: unknown, args: unknown[], culture: CultureInfo): unknown;
+    InvokeMember4(name: string, invokeAttr: BindingFlags, binder: Binder, target: unknown, args: unknown[], modifiers: ParameterModifier[], culture: CultureInfo, namedParameters: string[]): unknown | undefined;
+    InvokeMember4(name: string, invokeAttr: BindingFlags, binder: Binder, target: unknown, args: unknown[]): unknown | undefined;
+    InvokeMember4(name: string, invokeAttr: BindingFlags, binder: Binder, target: unknown, args: unknown[], culture: CultureInfo): unknown | undefined;
     IsDefined(attributeType: Type, inherit: boolean): boolean;
     SetBaseTypeConstraint(baseTypeConstraint: Type): void;
     SetCustomAttribute(con: ConstructorInfo, binaryAttribute: byte[]): void;
@@ -538,9 +538,9 @@ export interface ILGenerator$instance {
     Emit(opcode: OpCode, str: string): void;
     Emit(opcode: OpCode, local: LocalBuilder): void;
     Emit(opcode: OpCode, arg: sbyte): void;
-    EmitCall(opcode: OpCode, methodInfo: MethodInfo, optionalParameterTypes: Type[] | undefined): void;
-    EmitCalli(opcode: OpCode, callingConvention: CallingConventions, returnType: Type, parameterTypes: Type[] | undefined, optionalParameterTypes: Type[] | undefined): void;
-    EmitCalli(opcode: OpCode, unmanagedCallConv: CallingConvention, returnType: Type, parameterTypes: Type[] | undefined): void;
+    EmitCall(opcode: OpCode, methodInfo: MethodInfo, optionalParameterTypes: Type[]): void;
+    EmitCalli(opcode: OpCode, callingConvention: CallingConventions, returnType: Type, parameterTypes: Type[], optionalParameterTypes: Type[]): void;
+    EmitCalli(opcode: OpCode, unmanagedCallConv: CallingConvention, returnType: Type, parameterTypes: Type[]): void;
     EmitWriteLine(value: string): void;
     EmitWriteLine(localBuilder: LocalBuilder): void;
     EmitWriteLine(fld: FieldInfo): void;
@@ -573,7 +573,7 @@ export type LocalBuilder = LocalBuilder$instance;
 export interface MethodBuilder$instance extends MethodInfo {
     InitLocals: boolean;
     DefineGenericParameters(...names: string[]): GenericTypeParameterBuilder[];
-    DefineParameter(position: int, attributes: ParameterAttributes, strParamName: string | undefined): ParameterBuilder;
+    DefineParameter(position: int, attributes: ParameterAttributes, strParamName: string): ParameterBuilder;
     GetCustomAttributes(inherit: boolean): unknown[];
     GetCustomAttributes(attributeType: Type, inherit: boolean): unknown[];
     GetILGenerator(): ILGenerator;
@@ -584,7 +584,7 @@ export interface MethodBuilder$instance extends MethodInfo {
     SetImplementationFlags(attributes: MethodImplAttributes): void;
     SetParameters(...parameterTypes: Type[]): void;
     SetReturnType(returnType: Type): void;
-    SetSignature(returnType: Type, returnTypeRequiredCustomModifiers: Type[] | undefined, returnTypeOptionalCustomModifiers: Type[] | undefined, parameterTypes: Type[] | undefined, parameterTypeRequiredCustomModifiers: Type[][] | undefined, parameterTypeOptionalCustomModifiers: Type[][] | undefined): void;
+    SetSignature(returnType: Type, returnTypeRequiredCustomModifiers: Type[], returnTypeOptionalCustomModifiers: Type[], parameterTypes: Type[], parameterTypeRequiredCustomModifiers: Type[][], parameterTypeOptionalCustomModifiers: Type[][]): void;
 }
 
 
@@ -604,21 +604,21 @@ export interface ModuleBuilder$instance extends Module {
     DefineDocument(url: string, language: Guid, languageVendor: Guid, documentType: Guid): ISymbolDocumentWriter;
     DefineDocument(url: string, language?: Guid): ISymbolDocumentWriter;
     DefineEnum(name: string, visibility: TypeAttributes, underlyingType: Type): EnumBuilder;
-    DefineGlobalMethod(name: string, attributes: MethodAttributes, returnType: Type | undefined, parameterTypes: Type[] | undefined): MethodBuilder;
-    DefineGlobalMethod(name: string, attributes: MethodAttributes, callingConvention: CallingConventions, returnType: Type | undefined, parameterTypes: Type[] | undefined): MethodBuilder;
-    DefineGlobalMethod(name: string, attributes: MethodAttributes, callingConvention: CallingConventions, returnType: Type | undefined, requiredReturnTypeCustomModifiers: Type[] | undefined, optionalReturnTypeCustomModifiers: Type[] | undefined, parameterTypes: Type[] | undefined, requiredParameterTypeCustomModifiers: Type[][] | undefined, optionalParameterTypeCustomModifiers: Type[][] | undefined): MethodBuilder;
+    DefineGlobalMethod(name: string, attributes: MethodAttributes, returnType: Type, parameterTypes: Type[]): MethodBuilder;
+    DefineGlobalMethod(name: string, attributes: MethodAttributes, callingConvention: CallingConventions, returnType: Type, parameterTypes: Type[]): MethodBuilder;
+    DefineGlobalMethod(name: string, attributes: MethodAttributes, callingConvention: CallingConventions, returnType: Type, requiredReturnTypeCustomModifiers: Type[], optionalReturnTypeCustomModifiers: Type[], parameterTypes: Type[], requiredParameterTypeCustomModifiers: Type[][], optionalParameterTypeCustomModifiers: Type[][]): MethodBuilder;
     DefineInitializedData(name: string, data: byte[], attributes: FieldAttributes): FieldBuilder;
-    DefinePInvokeMethod(name: string, dllName: string, attributes: MethodAttributes, callingConvention: CallingConventions, returnType: Type | undefined, parameterTypes: Type[] | undefined, nativeCallConv: CallingConvention, nativeCharSet: CharSet): MethodBuilder;
-    DefinePInvokeMethod(name: string, dllName: string, entryName: string, attributes: MethodAttributes, callingConvention: CallingConventions, returnType: Type | undefined, parameterTypes: Type[] | undefined, nativeCallConv: CallingConvention, nativeCharSet: CharSet): MethodBuilder;
+    DefinePInvokeMethod(name: string, dllName: string, attributes: MethodAttributes, callingConvention: CallingConventions, returnType: Type, parameterTypes: Type[], nativeCallConv: CallingConvention, nativeCharSet: CharSet): MethodBuilder;
+    DefinePInvokeMethod(name: string, dllName: string, entryName: string, attributes: MethodAttributes, callingConvention: CallingConventions, returnType: Type, parameterTypes: Type[], nativeCallConv: CallingConvention, nativeCharSet: CharSet): MethodBuilder;
     DefineType(name: string): TypeBuilder;
     DefineType(name: string, attr: TypeAttributes): TypeBuilder;
-    DefineType(name: string, attr: TypeAttributes, parent: Type | undefined): TypeBuilder;
-    DefineType(name: string, attr: TypeAttributes, parent: Type | undefined, interfaces: Type[] | undefined): TypeBuilder;
-    DefineType(name: string, attr: TypeAttributes, parent: Type | undefined, typesize: int): TypeBuilder;
-    DefineType(name: string, attr: TypeAttributes, parent: Type | undefined, packsize: PackingSize): TypeBuilder;
-    DefineType(name: string, attr: TypeAttributes, parent: Type | undefined, packingSize: PackingSize, typesize: int): TypeBuilder;
+    DefineType(name: string, attr: TypeAttributes, parent: Type): TypeBuilder;
+    DefineType(name: string, attr: TypeAttributes, parent: Type, interfaces: Type[]): TypeBuilder;
+    DefineType(name: string, attr: TypeAttributes, parent: Type, typesize: int): TypeBuilder;
+    DefineType(name: string, attr: TypeAttributes, parent: Type, packsize: PackingSize): TypeBuilder;
+    DefineType(name: string, attr: TypeAttributes, parent: Type, packingSize: PackingSize, typesize: int): TypeBuilder;
     DefineUninitializedData(name: string, size: int, attributes: FieldAttributes): FieldBuilder;
-    GetArrayMethod(arrayClass: Type, methodName: string, callingConvention: CallingConventions, returnType: Type | undefined, parameterTypes: Type[] | undefined): MethodInfo;
+    GetArrayMethod(arrayClass: Type, methodName: string, callingConvention: CallingConventions, returnType: Type, parameterTypes: Type[]): MethodInfo;
     GetCustomAttributes(inherit: boolean): unknown[];
     GetCustomAttributes(attributeType: Type, inherit: boolean): unknown[];
     GetFieldMetadataToken(field: FieldInfo): int;
@@ -891,9 +891,9 @@ export interface ParameterBuilder$instance {
     readonly IsOut: boolean;
     readonly Name: string;
     readonly Position: int;
-    SetConstant(defaultValue: unknown | undefined): void;
-    SetCustomAttribute(con: ConstructorInfo | undefined, binaryAttribute: byte[] | undefined): void;
-    SetCustomAttribute(customBuilder: CustomAttributeBuilder | undefined): void;
+    SetConstant(defaultValue: unknown): void;
+    SetCustomAttribute(con: ConstructorInfo, binaryAttribute: byte[]): void;
+    SetCustomAttribute(customBuilder: CustomAttributeBuilder): void;
 }
 
 
@@ -920,7 +920,7 @@ export interface PersistedAssemblyBuilder$instance extends AssemblyBuilder$insta
 
 
 export const PersistedAssemblyBuilder: {
-    new(name: AssemblyName, coreAssembly: Assembly, assemblyAttributes: IEnumerable_1<CustomAttributeBuilder> | undefined): PersistedAssemblyBuilder;
+    new(name: AssemblyName, coreAssembly: Assembly, assemblyAttributes: IEnumerable_1<CustomAttributeBuilder>): PersistedAssemblyBuilder;
 };
 
 
@@ -959,8 +959,8 @@ export type PropertyBuilder = PropertyBuilder$instance & __PropertyBuilder$views
 export interface SignatureHelper$instance {
     AddArgument(clsArgument: Type): void;
     AddArgument(argument: Type, pinned: boolean): void;
-    AddArgument(argument: Type, requiredCustomModifiers: Type[] | undefined, optionalCustomModifiers: Type[] | undefined): void;
-    AddArguments(arguments: Type[] | undefined, requiredCustomModifiers: Type[][] | undefined, optionalCustomModifiers: Type[][] | undefined): void;
+    AddArgument(argument: Type, requiredCustomModifiers: Type[], optionalCustomModifiers: Type[]): void;
+    AddArguments(arguments: Type[], requiredCustomModifiers: Type[][], optionalCustomModifiers: Type[][]): void;
     AddSentinel(): void;
     Equals(obj: unknown): boolean;
     GetHashCode(): int;
@@ -971,15 +971,15 @@ export interface SignatureHelper$instance {
 
 export const SignatureHelper: {
     new(): SignatureHelper;
-    GetFieldSigHelper(mod: Module | undefined): SignatureHelper;
+    GetFieldSigHelper(mod: Module): SignatureHelper;
     GetLocalVarSigHelper(): SignatureHelper;
-    GetLocalVarSigHelper(mod: Module | undefined): SignatureHelper;
-    GetMethodSigHelper(callingConvention: CallingConventions, returnType: Type | undefined): SignatureHelper;
+    GetLocalVarSigHelper(mod: Module): SignatureHelper;
+    GetMethodSigHelper(callingConvention: CallingConventions, returnType: Type): SignatureHelper;
     GetMethodSigHelper(mod: Module, callingConvention: CallingConventions, returnType: Type): SignatureHelper;
-    GetMethodSigHelper(mod: Module, returnType: Type, parameterTypes: Type[] | undefined): SignatureHelper;
-    GetPropertySigHelper(mod: Module, callingConvention: CallingConventions, returnType: Type, requiredReturnTypeCustomModifiers: Type[] | undefined, optionalReturnTypeCustomModifiers: Type[] | undefined, parameterTypes: Type[] | undefined, requiredParameterTypeCustomModifiers: Type[][] | undefined, optionalParameterTypeCustomModifiers: Type[][] | undefined): SignatureHelper;
-    GetPropertySigHelper(mod: Module, returnType: Type, requiredReturnTypeCustomModifiers: Type[] | undefined, optionalReturnTypeCustomModifiers: Type[] | undefined, parameterTypes: Type[] | undefined, requiredParameterTypeCustomModifiers: Type[][] | undefined, optionalParameterTypeCustomModifiers: Type[][] | undefined): SignatureHelper;
-    GetPropertySigHelper(mod: Module, returnType: Type, parameterTypes: Type[] | undefined): SignatureHelper;
+    GetMethodSigHelper(mod: Module, returnType: Type, parameterTypes: Type[]): SignatureHelper;
+    GetPropertySigHelper(mod: Module, callingConvention: CallingConventions, returnType: Type, requiredReturnTypeCustomModifiers: Type[], optionalReturnTypeCustomModifiers: Type[], parameterTypes: Type[], requiredParameterTypeCustomModifiers: Type[][], optionalParameterTypeCustomModifiers: Type[][]): SignatureHelper;
+    GetPropertySigHelper(mod: Module, returnType: Type, requiredReturnTypeCustomModifiers: Type[], optionalReturnTypeCustomModifiers: Type[], parameterTypes: Type[], requiredParameterTypeCustomModifiers: Type[][], optionalParameterTypeCustomModifiers: Type[][]): SignatureHelper;
+    GetPropertySigHelper(mod: Module, returnType: Type, parameterTypes: Type[]): SignatureHelper;
 };
 
 
@@ -991,34 +991,34 @@ export interface TypeBuilder$instance extends TypeInfo {
     AddInterfaceImplementation(interfaceType: Type): void;
     CreateType(): Type;
     CreateTypeInfo(): TypeInfo;
-    DefineConstructor(attributes: MethodAttributes, callingConvention: CallingConventions, parameterTypes: Type[] | undefined): ConstructorBuilder;
-    DefineConstructor(attributes: MethodAttributes, callingConvention: CallingConventions, parameterTypes: Type[] | undefined, requiredCustomModifiers: Type[][] | undefined, optionalCustomModifiers: Type[][] | undefined): ConstructorBuilder;
+    DefineConstructor(attributes: MethodAttributes, callingConvention: CallingConventions, parameterTypes: Type[]): ConstructorBuilder;
+    DefineConstructor(attributes: MethodAttributes, callingConvention: CallingConventions, parameterTypes: Type[], requiredCustomModifiers: Type[][], optionalCustomModifiers: Type[][]): ConstructorBuilder;
     DefineDefaultConstructor(attributes: MethodAttributes): ConstructorBuilder;
     DefineEvent(name: string, attributes: EventAttributes, eventtype: Type): EventBuilder;
     DefineField(fieldName: string, type_: Type, attributes: FieldAttributes): FieldBuilder;
-    DefineField(fieldName: string, type_: Type, requiredCustomModifiers: Type[] | undefined, optionalCustomModifiers: Type[] | undefined, attributes: FieldAttributes): FieldBuilder;
+    DefineField(fieldName: string, type_: Type, requiredCustomModifiers: Type[], optionalCustomModifiers: Type[], attributes: FieldAttributes): FieldBuilder;
     DefineGenericParameters(...names: string[]): GenericTypeParameterBuilder[];
     DefineInitializedData(name: string, data: byte[], attributes: FieldAttributes): FieldBuilder;
     DefineMethod(name: string, attributes: MethodAttributes): MethodBuilder;
     DefineMethod(name: string, attributes: MethodAttributes, callingConvention: CallingConventions): MethodBuilder;
-    DefineMethod(name: string, attributes: MethodAttributes, callingConvention: CallingConventions, returnType: Type | undefined, parameterTypes: Type[] | undefined): MethodBuilder;
-    DefineMethod(name: string, attributes: MethodAttributes, returnType: Type | undefined, parameterTypes: Type[] | undefined): MethodBuilder;
-    DefineMethod(name: string, attributes: MethodAttributes, callingConvention: CallingConventions, returnType: Type | undefined, returnTypeRequiredCustomModifiers: Type[] | undefined, returnTypeOptionalCustomModifiers: Type[] | undefined, parameterTypes: Type[] | undefined, parameterTypeRequiredCustomModifiers: Type[][] | undefined, parameterTypeOptionalCustomModifiers: Type[][] | undefined): MethodBuilder;
+    DefineMethod(name: string, attributes: MethodAttributes, callingConvention: CallingConventions, returnType: Type, parameterTypes: Type[]): MethodBuilder;
+    DefineMethod(name: string, attributes: MethodAttributes, returnType: Type, parameterTypes: Type[]): MethodBuilder;
+    DefineMethod(name: string, attributes: MethodAttributes, callingConvention: CallingConventions, returnType: Type, returnTypeRequiredCustomModifiers: Type[], returnTypeOptionalCustomModifiers: Type[], parameterTypes: Type[], parameterTypeRequiredCustomModifiers: Type[][], parameterTypeOptionalCustomModifiers: Type[][]): MethodBuilder;
     DefineMethodOverride(methodInfoBody: MethodInfo, methodInfoDeclaration: MethodInfo): void;
     DefineNestedType(name: string): TypeBuilder;
     DefineNestedType(name: string, attr: TypeAttributes): TypeBuilder;
-    DefineNestedType(name: string, attr: TypeAttributes, parent: Type | undefined): TypeBuilder;
-    DefineNestedType(name: string, attr: TypeAttributes, parent: Type | undefined, interfaces: Type[] | undefined): TypeBuilder;
-    DefineNestedType(name: string, attr: TypeAttributes, parent: Type | undefined, typeSize: int): TypeBuilder;
-    DefineNestedType(name: string, attr: TypeAttributes, parent: Type | undefined, packSize: PackingSize): TypeBuilder;
-    DefineNestedType(name: string, attr: TypeAttributes, parent: Type | undefined, packSize: PackingSize, typeSize: int): TypeBuilder;
-    DefinePInvokeMethod(name: string, dllName: string, attributes: MethodAttributes, callingConvention: CallingConventions, returnType: Type | undefined, parameterTypes: Type[] | undefined, nativeCallConv: CallingConvention, nativeCharSet: CharSet): MethodBuilder;
-    DefinePInvokeMethod(name: string, dllName: string, entryName: string, attributes: MethodAttributes, callingConvention: CallingConventions, returnType: Type | undefined, parameterTypes: Type[] | undefined, nativeCallConv: CallingConvention, nativeCharSet: CharSet): MethodBuilder;
-    DefinePInvokeMethod(name: string, dllName: string, entryName: string, attributes: MethodAttributes, callingConvention: CallingConventions, returnType: Type | undefined, returnTypeRequiredCustomModifiers: Type[] | undefined, returnTypeOptionalCustomModifiers: Type[] | undefined, parameterTypes: Type[] | undefined, parameterTypeRequiredCustomModifiers: Type[][] | undefined, parameterTypeOptionalCustomModifiers: Type[][] | undefined, nativeCallConv: CallingConvention, nativeCharSet: CharSet): MethodBuilder;
-    DefineProperty(name: string, attributes: PropertyAttributes, returnType: Type | undefined, parameterTypes: Type[] | undefined): PropertyBuilder;
-    DefineProperty(name: string, attributes: PropertyAttributes, callingConvention: CallingConventions, returnType: Type | undefined, parameterTypes: Type[] | undefined): PropertyBuilder;
-    DefineProperty(name: string, attributes: PropertyAttributes, returnType: Type | undefined, returnTypeRequiredCustomModifiers: Type[] | undefined, returnTypeOptionalCustomModifiers: Type[] | undefined, parameterTypes: Type[] | undefined, parameterTypeRequiredCustomModifiers: Type[][] | undefined, parameterTypeOptionalCustomModifiers: Type[][] | undefined): PropertyBuilder;
-    DefineProperty(name: string, attributes: PropertyAttributes, callingConvention: CallingConventions, returnType: Type | undefined, returnTypeRequiredCustomModifiers: Type[] | undefined, returnTypeOptionalCustomModifiers: Type[] | undefined, parameterTypes: Type[] | undefined, parameterTypeRequiredCustomModifiers: Type[][] | undefined, parameterTypeOptionalCustomModifiers: Type[][] | undefined): PropertyBuilder;
+    DefineNestedType(name: string, attr: TypeAttributes, parent: Type): TypeBuilder;
+    DefineNestedType(name: string, attr: TypeAttributes, parent: Type, interfaces: Type[]): TypeBuilder;
+    DefineNestedType(name: string, attr: TypeAttributes, parent: Type, typeSize: int): TypeBuilder;
+    DefineNestedType(name: string, attr: TypeAttributes, parent: Type, packSize: PackingSize): TypeBuilder;
+    DefineNestedType(name: string, attr: TypeAttributes, parent: Type, packSize: PackingSize, typeSize: int): TypeBuilder;
+    DefinePInvokeMethod(name: string, dllName: string, attributes: MethodAttributes, callingConvention: CallingConventions, returnType: Type, parameterTypes: Type[], nativeCallConv: CallingConvention, nativeCharSet: CharSet): MethodBuilder;
+    DefinePInvokeMethod(name: string, dllName: string, entryName: string, attributes: MethodAttributes, callingConvention: CallingConventions, returnType: Type, parameterTypes: Type[], nativeCallConv: CallingConvention, nativeCharSet: CharSet): MethodBuilder;
+    DefinePInvokeMethod(name: string, dllName: string, entryName: string, attributes: MethodAttributes, callingConvention: CallingConventions, returnType: Type, returnTypeRequiredCustomModifiers: Type[], returnTypeOptionalCustomModifiers: Type[], parameterTypes: Type[], parameterTypeRequiredCustomModifiers: Type[][], parameterTypeOptionalCustomModifiers: Type[][], nativeCallConv: CallingConvention, nativeCharSet: CharSet): MethodBuilder;
+    DefineProperty(name: string, attributes: PropertyAttributes, returnType: Type, parameterTypes: Type[]): PropertyBuilder;
+    DefineProperty(name: string, attributes: PropertyAttributes, callingConvention: CallingConventions, returnType: Type, parameterTypes: Type[]): PropertyBuilder;
+    DefineProperty(name: string, attributes: PropertyAttributes, returnType: Type, returnTypeRequiredCustomModifiers: Type[], returnTypeOptionalCustomModifiers: Type[], parameterTypes: Type[], parameterTypeRequiredCustomModifiers: Type[][], parameterTypeOptionalCustomModifiers: Type[][]): PropertyBuilder;
+    DefineProperty(name: string, attributes: PropertyAttributes, callingConvention: CallingConventions, returnType: Type, returnTypeRequiredCustomModifiers: Type[], returnTypeOptionalCustomModifiers: Type[], parameterTypes: Type[], parameterTypeRequiredCustomModifiers: Type[][], parameterTypeOptionalCustomModifiers: Type[][]): PropertyBuilder;
     DefineTypeInitializer(): ConstructorBuilder;
     DefineUninitializedData(name: string, size: int, attributes: FieldAttributes): FieldBuilder;
     GetCustomAttributes(inherit: boolean): unknown[];
@@ -1032,33 +1032,33 @@ export interface TypeBuilder$instance extends TypeInfo {
     GetMember(name: string, type_: MemberTypes, bindingAttr: BindingFlags): MemberInfo[];
     GetMembers3(bindingAttr: BindingFlags): MemberInfo[];
     GetMembers3(): MemberInfo[];
-    GetMethod(name: string, bindingAttr: BindingFlags, binder: Binder, types: Type[], modifiers: ParameterModifier[]): MethodInfo;
+    GetMethod(name: string, bindingAttr: BindingFlags, binder: Binder, types: Type[], modifiers: ParameterModifier[]): MethodInfo | undefined;
     GetMethod(name: string, bindingAttr: BindingFlags): MethodInfo | undefined;
     GetMethod(name: string): MethodInfo | undefined;
     GetMethod(name: string, bindingAttr: BindingFlags, types: Type[]): MethodInfo | undefined;
     GetMethod(name: string, types: Type[]): MethodInfo | undefined;
-    GetMethod(name: string, types: Type[], modifiers: ParameterModifier[] | undefined): MethodInfo | undefined;
-    GetMethod(name: string, bindingAttr: BindingFlags, binder: Binder, callConvention: CallingConventions, types: Type[], modifiers: ParameterModifier[]): MethodInfo;
+    GetMethod(name: string, types: Type[], modifiers: ParameterModifier[]): MethodInfo | undefined;
+    GetMethod(name: string, bindingAttr: BindingFlags, binder: Binder, callConvention: CallingConventions, types: Type[], modifiers: ParameterModifier[]): MethodInfo | undefined;
     GetMethod(name: string, genericParameterCount: int, types: Type[]): MethodInfo | undefined;
-    GetMethod(name: string, genericParameterCount: int, types: Type[], modifiers: ParameterModifier[] | undefined): MethodInfo | undefined;
+    GetMethod(name: string, genericParameterCount: int, types: Type[], modifiers: ParameterModifier[]): MethodInfo | undefined;
     GetMethod(name: string, genericParameterCount: int, bindingAttr: BindingFlags, types: Type[]): MethodInfo | undefined;
-    GetMethod(name: string, genericParameterCount: int, bindingAttr: BindingFlags, binder: Binder, types: Type[], modifiers: ParameterModifier[]): MethodInfo;
-    GetMethod(name: string, genericParameterCount: int, bindingAttr: BindingFlags, binder: Binder, callConvention: CallingConventions, types: Type[], modifiers: ParameterModifier[]): MethodInfo;
+    GetMethod(name: string, genericParameterCount: int, bindingAttr: BindingFlags, binder: Binder, types: Type[], modifiers: ParameterModifier[]): MethodInfo | undefined;
+    GetMethod(name: string, genericParameterCount: int, bindingAttr: BindingFlags, binder: Binder, callConvention: CallingConventions, types: Type[], modifiers: ParameterModifier[]): MethodInfo | undefined;
     GetMethods3(bindingAttr: BindingFlags): MethodInfo[];
     GetMethods3(): MethodInfo[];
     GetProperties3(bindingAttr: BindingFlags): PropertyInfo[];
     GetProperties3(): PropertyInfo[];
     GetProperty(name: string, bindingAttr: BindingFlags): PropertyInfo | undefined;
-    GetProperty(name: string, bindingAttr: BindingFlags, binder: Binder, returnType: Type, types: Type[], modifiers: ParameterModifier[]): PropertyInfo;
+    GetProperty(name: string, bindingAttr: BindingFlags, binder: Binder, returnType: Type, types: Type[], modifiers: ParameterModifier[]): PropertyInfo | undefined;
     GetProperty(name: string): PropertyInfo | undefined;
-    GetProperty(name: string, returnType: Type): PropertyInfo;
+    GetProperty(name: string, returnType: Type): PropertyInfo | undefined;
     GetProperty(name: string, types: Type[]): PropertyInfo | undefined;
-    GetProperty(name: string, returnType: Type | undefined, types: Type[]): PropertyInfo | undefined;
-    GetProperty(name: string, returnType: Type, types: Type[], modifiers: ParameterModifier[]): PropertyInfo;
+    GetProperty(name: string, returnType: Type, types: Type[]): PropertyInfo | undefined;
+    GetProperty(name: string, returnType: Type, types: Type[], modifiers: ParameterModifier[]): PropertyInfo | undefined;
     GetTypeInfo(): TypeInfo;
-    InvokeMember4(name: string, invokeAttr: BindingFlags, binder: Binder, target: unknown, args: unknown[], modifiers: ParameterModifier[], culture: CultureInfo, namedParameters: string[] | undefined): unknown;
-    InvokeMember4(name: string, invokeAttr: BindingFlags, binder: Binder, target: unknown, args: unknown[]): unknown;
-    InvokeMember4(name: string, invokeAttr: BindingFlags, binder: Binder, target: unknown, args: unknown[], culture: CultureInfo): unknown;
+    InvokeMember4(name: string, invokeAttr: BindingFlags, binder: Binder, target: unknown, args: unknown[], modifiers: ParameterModifier[], culture: CultureInfo, namedParameters: string[]): unknown | undefined;
+    InvokeMember4(name: string, invokeAttr: BindingFlags, binder: Binder, target: unknown, args: unknown[]): unknown | undefined;
+    InvokeMember4(name: string, invokeAttr: BindingFlags, binder: Binder, target: unknown, args: unknown[], culture: CultureInfo): unknown | undefined;
     IsCreated(): boolean;
     IsDefined(attributeType: Type, inherit: boolean): boolean;
     MakeArrayType(): Type;

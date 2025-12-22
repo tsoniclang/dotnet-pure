@@ -29,8 +29,10 @@ export enum TypeFilterLevel {
 
 
 export interface IFieldInfo$instance {
-    FieldNames: string[] | undefined;
-    FieldTypes: Type[] | undefined;
+    get FieldNames(): string[] | undefined;
+    set FieldNames(value: string[]);
+    get FieldTypes(): Type[] | undefined;
+    set FieldTypes(value: Type[]);
 }
 
 

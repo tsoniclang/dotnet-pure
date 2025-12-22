@@ -69,8 +69,8 @@ export interface RegistryKey$instance extends MarshalByRefObject {
     CreateSubKey(subkey: string): RegistryKey;
     CreateSubKey(subkey: string, permissionCheck: RegistryKeyPermissionCheck): RegistryKey;
     CreateSubKey(subkey: string, permissionCheck: RegistryKeyPermissionCheck, registryOptions: RegistryOptions): RegistryKey;
-    CreateSubKey(subkey: string, permissionCheck: RegistryKeyPermissionCheck, registryOptions: RegistryOptions, registrySecurity: RegistrySecurity | undefined): RegistryKey;
-    CreateSubKey(subkey: string, permissionCheck: RegistryKeyPermissionCheck, registrySecurity: RegistrySecurity | undefined): RegistryKey;
+    CreateSubKey(subkey: string, permissionCheck: RegistryKeyPermissionCheck, registryOptions: RegistryOptions, registrySecurity: RegistrySecurity): RegistryKey;
+    CreateSubKey(subkey: string, permissionCheck: RegistryKeyPermissionCheck, registrySecurity: RegistrySecurity): RegistryKey;
     CreateSubKey(subkey: string, writable: boolean): RegistryKey;
     CreateSubKey(subkey: string, writable: boolean, options: RegistryOptions): RegistryKey;
     DeleteSubKey(subkey: string): void;
@@ -84,9 +84,9 @@ export interface RegistryKey$instance extends MarshalByRefObject {
     GetAccessControl(): RegistrySecurity;
     GetAccessControl(includeSections: AccessControlSections): RegistrySecurity;
     GetSubKeyNames(): string[];
-    GetValue(name: string): unknown;
-    GetValue(name: string, defaultValue: unknown): unknown;
-    GetValue(name: string, defaultValue: unknown, options: RegistryValueOptions): unknown;
+    GetValue(name: string): unknown | undefined;
+    GetValue(name: string, defaultValue: unknown): unknown | undefined;
+    GetValue(name: string, defaultValue: unknown, options: RegistryValueOptions): unknown | undefined;
     GetValueKind(name: string): RegistryValueKind;
     GetValueNames(): string[];
     OpenSubKey(name: string): RegistryKey | undefined;
@@ -95,8 +95,8 @@ export interface RegistryKey$instance extends MarshalByRefObject {
     OpenSubKey(name: string, writable: boolean): RegistryKey | undefined;
     OpenSubKey(name: string, rights: RegistryRights): RegistryKey | undefined;
     SetAccessControl(registrySecurity: RegistrySecurity): void;
-    SetValue(name: string | undefined, value: unknown): void;
-    SetValue(name: string | undefined, value: unknown, valueKind: RegistryValueKind): void;
+    SetValue(name: string, value: unknown): void;
+    SetValue(name: string, value: unknown, valueKind: RegistryValueKind): void;
     ToString(): string;
 }
 
@@ -127,9 +127,9 @@ export abstract class Registry$instance {
     static readonly LocalMachine: RegistryKey;
     static readonly PerformanceData: RegistryKey;
     static readonly Users: RegistryKey;
-    static GetValue(keyName: string, valueName: string, defaultValue: unknown): unknown;
-    static SetValue(keyName: string, valueName: string | undefined, value: unknown, valueKind: RegistryValueKind): void;
-    static SetValue(keyName: string, valueName: string | undefined, value: unknown): void;
+    static GetValue(keyName: string, valueName: string, defaultValue: unknown): unknown | undefined;
+    static SetValue(keyName: string, valueName: string, value: unknown, valueKind: RegistryValueKind): void;
+    static SetValue(keyName: string, valueName: string, value: unknown): void;
 }
 
 

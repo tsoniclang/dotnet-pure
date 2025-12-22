@@ -101,7 +101,8 @@ export type PosixTarEntry = PosixTarEntry$instance;
 export interface TarEntry$instance {
     readonly Checksum: int;
     readonly DataOffset: long;
-    DataStream: Stream | undefined;
+    get DataStream(): Stream | undefined;
+    set DataStream(value: Stream);
     readonly EntryType: TarEntryType;
     readonly Format: TarEntryFormat;
     Gid: int;
@@ -126,7 +127,7 @@ export type TarEntry = TarEntry$instance;
 export interface TarReader$instance {
     Dispose(): void;
     DisposeAsync(): ValueTask;
-    GetNextEntry(copyData?: boolean): TarEntry;
+    GetNextEntry(copyData?: boolean): TarEntry | undefined;
     GetNextEntryAsync(copyData?: boolean, cancellationToken?: CancellationToken): ValueTask_1<TarEntry>;
 }
 
@@ -150,9 +151,9 @@ export interface TarWriter$instance {
     readonly Format: TarEntryFormat;
     Dispose(): void;
     DisposeAsync(): ValueTask;
-    WriteEntry(fileName: string, entryName: string | undefined): void;
+    WriteEntry(fileName: string, entryName: string): void;
     WriteEntry(entry: TarEntry): void;
-    WriteEntryAsync(fileName: string, entryName: string | undefined, cancellationToken?: CancellationToken): Task;
+    WriteEntryAsync(fileName: string, entryName: string, cancellationToken?: CancellationToken): Task;
     WriteEntryAsync(entry: TarEntry, cancellationToken?: CancellationToken): Task;
 }
 

@@ -194,7 +194,7 @@ export const DoubleType: {
 export type DoubleType = DoubleType$instance;
 
 export interface IncompleteInitialization$instance extends Exception {
-    GetObjectData(info: SerializationInfo | undefined, context: StreamingContext): void;
+    GetObjectData(info: SerializationInfo, context: StreamingContext): void;
 }
 
 

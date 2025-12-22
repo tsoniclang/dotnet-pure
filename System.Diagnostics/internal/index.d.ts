@@ -190,10 +190,10 @@ export enum TraceOptions {
 export type DataReceivedEventHandler = (sender: unknown, e: DataReceivedEventArgs) => void;
 
 
-export type DistributedContextPropagator_PropagatorGetterCallback = (carrier: unknown, fieldName: string, fieldValue: string, fieldValues: IEnumerable_1<System_Internal.String> | undefined) => void;
+export type DistributedContextPropagator_PropagatorGetterCallback = (carrier: unknown, fieldName: string, fieldValue: string, fieldValues: IEnumerable_1<System_Internal.String>) => void;
 
 
-export type DistributedContextPropagator_PropagatorSetterCallback = (carrier: unknown | undefined, fieldName: string, fieldValue: string) => void;
+export type DistributedContextPropagator_PropagatorSetterCallback = (carrier: unknown, fieldName: string, fieldValue: string) => void;
 
 
 export type ExceptionRecorder = (activity: Activity, exception: Exception, tags: TagList) => void;
@@ -218,7 +218,8 @@ export type Activity_Enumerator_1<T> = Activity_Enumerator_1$instance<T>;
 
 export interface ActivityChangedEventArgs$instance {
     Current: Activity;
-    Previous: Activity | undefined;
+    get Previous(): Activity | undefined;
+    set Previous(value: Activity);
 }
 
 
@@ -236,16 +237,16 @@ export interface ActivityContext$instance {
     readonly TraceId: ActivityTraceId;
     readonly TraceState: string | undefined;
     Equals(value: ActivityContext): boolean;
-    Equals(obj: unknown | undefined): boolean;
+    Equals(obj: unknown): boolean;
     GetHashCode(): int;
 }
 
 
 export const ActivityContext: {
-    new(traceId: ActivityTraceId, spanId: ActivitySpanId, traceFlags: ActivityTraceFlags, traceState: string | undefined, isRemote: boolean): ActivityContext;
-    Parse(traceParent: string | undefined, traceState: string | undefined): ActivityContext;
-    TryParse(traceParent: string | undefined, traceState: string | undefined, isRemote: boolean, context: ActivityContext): boolean;
-    TryParse(traceParent: string | undefined, traceState: string | undefined, context: ActivityContext): boolean;
+    new(traceId: ActivityTraceId, spanId: ActivitySpanId, traceFlags: ActivityTraceFlags, traceState: string, isRemote: boolean): ActivityContext;
+    Parse(traceParent: string, traceState: string): ActivityContext;
+    TryParse(traceParent: string, traceState: string, isRemote: boolean, context: ActivityContext): boolean;
+    TryParse(traceParent: string, traceState: string, context: ActivityContext): boolean;
 };
 
 
@@ -268,7 +269,8 @@ export interface ActivityCreationOptions_1$instance<T> {
     readonly Source: ActivitySource;
     readonly Tags: IEnumerable_1<KeyValuePair_2<System_Internal.String, unknown>>;
     readonly TraceId: ActivityTraceId;
-    TraceState: string | undefined;
+    get TraceState(): string | undefined;
+    set TraceState(value: string);
 }
 
 
@@ -289,7 +291,7 @@ export interface ActivityEvent$instance {
 
 export const ActivityEvent: {
     new(name: string): ActivityEvent;
-    new(name: string, timestamp: DateTimeOffset, tags: ActivityTagsCollection | undefined): ActivityEvent;
+    new(name: string, timestamp: DateTimeOffset, tags: ActivityTagsCollection): ActivityEvent;
 };
 
 
@@ -326,7 +328,7 @@ export interface ActivitySpanId$instance {
     Equals(obj: unknown): boolean;
     GetHashCode(): int;
     ToHexString(): string;
-    ToString(): string | undefined;
+    ToString(): string;
 }
 
 
@@ -376,7 +378,7 @@ export interface ActivityTraceId$instance {
     Equals(obj: unknown): boolean;
     GetHashCode(): int;
     ToHexString(): string;
-    ToString(): string | undefined;
+    ToString(): string;
 }
 
 
@@ -400,16 +402,16 @@ export type ActivityTraceId = ActivityTraceId$instance & __ActivityTraceId$views
 
 
 export interface Debug_AssertInterpolatedStringHandler$instance {
-    AppendFormatted<T>(value: T | undefined): void;
-    AppendFormatted<T>(value: T, format: string | undefined): void;
-    AppendFormatted<T>(value: T | undefined, alignment: int): void;
-    AppendFormatted<T>(value: T, alignment: int, format: string | undefined): void;
+    AppendFormatted<T>(value: T): void;
+    AppendFormatted<T>(value: T, format: string): void;
+    AppendFormatted<T>(value: T, alignment: int): void;
+    AppendFormatted<T>(value: T, alignment: int, format: string): void;
     AppendFormatted(value: ReadOnlySpan_1<System_Internal.Char>): void;
-    AppendFormatted(value: ReadOnlySpan_1<System_Internal.Char>, alignment?: int, format?: string | undefined): void;
-    AppendFormatted(value: string | undefined): void;
-    AppendFormatted(value: string | undefined, alignment?: int, format?: string | undefined): void;
-    AppendFormatted(value: unknown | undefined, alignment?: int, format?: string | undefined): void;
-    AppendLiteral(value: string | undefined): void;
+    AppendFormatted(value: ReadOnlySpan_1<System_Internal.Char>, alignment?: int, format?: string): void;
+    AppendFormatted(value: string): void;
+    AppendFormatted(value: string, alignment?: int, format?: string): void;
+    AppendFormatted(value: unknown, alignment?: int, format?: string): void;
+    AppendLiteral(value: string): void;
 }
 
 
@@ -421,16 +423,16 @@ export const Debug_AssertInterpolatedStringHandler: {
 export type Debug_AssertInterpolatedStringHandler = Debug_AssertInterpolatedStringHandler$instance;
 
 export interface Debug_WriteIfInterpolatedStringHandler$instance {
-    AppendFormatted<T>(value: T | undefined): void;
-    AppendFormatted<T>(value: T, format: string | undefined): void;
-    AppendFormatted<T>(value: T | undefined, alignment: int): void;
-    AppendFormatted<T>(value: T, alignment: int, format: string | undefined): void;
+    AppendFormatted<T>(value: T): void;
+    AppendFormatted<T>(value: T, format: string): void;
+    AppendFormatted<T>(value: T, alignment: int): void;
+    AppendFormatted<T>(value: T, alignment: int, format: string): void;
     AppendFormatted(value: ReadOnlySpan_1<System_Internal.Char>): void;
-    AppendFormatted(value: ReadOnlySpan_1<System_Internal.Char>, alignment?: int, format?: string | undefined): void;
-    AppendFormatted(value: string | undefined): void;
-    AppendFormatted(value: string | undefined, alignment?: int, format?: string | undefined): void;
-    AppendFormatted(value: unknown | undefined, alignment?: int, format?: string | undefined): void;
-    AppendLiteral(value: string | undefined): void;
+    AppendFormatted(value: ReadOnlySpan_1<System_Internal.Char>, alignment?: int, format?: string): void;
+    AppendFormatted(value: string): void;
+    AppendFormatted(value: string, alignment?: int, format?: string): void;
+    AppendFormatted(value: unknown, alignment?: int, format?: string): void;
+    AppendLiteral(value: string): void;
 }
 
 
@@ -445,7 +447,7 @@ export interface TagList$instance {
     readonly Count: int;
     readonly IsReadOnly: boolean;
     Item: KeyValuePair_2<System_Internal.String, unknown>;
-    Add(key: string, value: unknown | undefined): void;
+    Add(key: string, value: unknown): void;
     Add(tag: KeyValuePair_2<System_Internal.String, unknown>): void;
     Clear(): void;
     Contains(item: KeyValuePair_2<System_Internal.String, unknown>): boolean;
@@ -524,13 +526,14 @@ export interface Activity$instance {
     readonly TagObjects: IEnumerable_1<KeyValuePair_2<System_Internal.String, unknown>>;
     readonly Tags: IEnumerable_1<KeyValuePair_2<System_Internal.String, System_Internal.String>>;
     readonly TraceId: ActivityTraceId;
-    TraceStateString: string | undefined;
-    AddBaggage(key: string, value: string | undefined): Activity;
+    get TraceStateString(): string | undefined;
+    set TraceStateString(value: string);
+    AddBaggage(key: string, value: string): Activity;
     AddEvent(e: ActivityEvent): Activity;
     AddException(exception: Exception, tags?: TagList, timestamp?: DateTimeOffset): Activity;
     AddLink(link: ActivityLink): Activity;
-    AddTag(key: string, value: string | undefined): Activity;
-    AddTag(key: string, value: unknown | undefined): Activity;
+    AddTag(key: string, value: string): Activity;
+    AddTag(key: string, value: unknown): Activity;
     Dispose(): void;
     EnumerateEvents(): Activity_Enumerator_1<ActivityEvent>;
     EnumerateLinks(): Activity_Enumerator_1<ActivityLink>;
@@ -538,15 +541,15 @@ export interface Activity$instance {
     GetBaggageItem(key: string): string | undefined;
     GetCustomProperty(propertyName: string): unknown | undefined;
     GetTagItem(key: string): unknown | undefined;
-    SetBaggage(key: string, value: string | undefined): Activity;
-    SetCustomProperty(propertyName: string, propertyValue: unknown | undefined): void;
+    SetBaggage(key: string, value: string): Activity;
+    SetCustomProperty(propertyName: string, propertyValue: unknown): void;
     SetEndTime(endTimeUtc: DateTime): Activity;
     SetIdFormat(format: ActivityIdFormat): Activity;
     SetParentId(parentId: string): Activity;
     SetParentId(traceId: ActivityTraceId, spanId: ActivitySpanId, activityTraceFlags?: ActivityTraceFlags): Activity;
     SetStartTime(startTimeUtc: DateTime): Activity;
-    SetStatus(code: ActivityStatusCode, description?: string | undefined): Activity;
-    SetTag(key: string, value: unknown | undefined): Activity;
+    SetStatus(code: ActivityStatusCode, description?: string): Activity;
+    SetTag(key: string, value: unknown): Activity;
     Start(): Activity;
     Stop(): void;
 }
@@ -555,8 +558,10 @@ export interface Activity$instance {
 export const Activity: {
     new(operationName: string): Activity;
     ForceDefaultIdFormat: boolean;
-    Current: Activity | undefined;
-    TraceIdGenerator: Func_1<ActivityTraceId> | undefined;
+    get Current(): Activity | undefined;
+    set Current(value: Activity);
+    get TraceIdGenerator(): Func_1<ActivityTraceId> | undefined;
+    set TraceIdGenerator(value: Func_1<ActivityTraceId>);
     DefaultIdFormat: ActivityIdFormat;
 };
 
@@ -571,12 +576,18 @@ export type Activity = Activity$instance & __Activity$views;
 
 
 export interface ActivityListener$instance {
-    ActivityStarted: Action_1<Activity> | undefined;
-    ActivityStopped: Action_1<Activity> | undefined;
-    ExceptionRecorder: ExceptionRecorder | undefined;
-    Sample: SampleActivity_1<ActivityContext> | undefined;
-    SampleUsingParentId: SampleActivity_1<System_Internal.String> | undefined;
-    ShouldListenTo: Func_2<ActivitySource, System_Internal.Boolean> | undefined;
+    get ActivityStarted(): Action_1<Activity> | undefined;
+    set ActivityStarted(value: Action_1<Activity>);
+    get ActivityStopped(): Action_1<Activity> | undefined;
+    set ActivityStopped(value: Action_1<Activity>);
+    get ExceptionRecorder(): ExceptionRecorder | undefined;
+    set ExceptionRecorder(value: ExceptionRecorder);
+    get Sample(): SampleActivity_1<ActivityContext> | undefined;
+    set Sample(value: SampleActivity_1<ActivityContext>);
+    get SampleUsingParentId(): SampleActivity_1<System_Internal.String> | undefined;
+    set SampleUsingParentId(value: SampleActivity_1<System_Internal.String>);
+    get ShouldListenTo(): Func_2<ActivitySource, System_Internal.Boolean> | undefined;
+    set ShouldListenTo(value: Func_2<ActivitySource, System_Internal.Boolean>);
     Dispose(): void;
 }
 
@@ -601,21 +612,21 @@ export interface ActivitySource$instance {
     readonly TelemetrySchemaUrl: string | undefined;
     readonly Version: string;
     CreateActivity(name: string, kind: ActivityKind): Activity | undefined;
-    CreateActivity(name: string, kind: ActivityKind, parentContext: ActivityContext, tags?: IEnumerable_1<KeyValuePair_2<System_Internal.String, unknown>> | undefined, links?: IEnumerable_1<ActivityLink>, idFormat?: ActivityIdFormat): Activity;
-    CreateActivity(name: string, kind: ActivityKind, parentId: string, tags?: IEnumerable_1<KeyValuePair_2<System_Internal.String, unknown>> | undefined, links?: IEnumerable_1<ActivityLink>, idFormat?: ActivityIdFormat): Activity;
+    CreateActivity(name: string, kind: ActivityKind, parentContext: ActivityContext, tags?: IEnumerable_1<KeyValuePair_2<System_Internal.String, unknown>>, links?: IEnumerable_1<ActivityLink>, idFormat?: ActivityIdFormat): Activity | undefined;
+    CreateActivity(name: string, kind: ActivityKind, parentId: string, tags?: IEnumerable_1<KeyValuePair_2<System_Internal.String, unknown>>, links?: IEnumerable_1<ActivityLink>, idFormat?: ActivityIdFormat): Activity | undefined;
     Dispose(): void;
     HasListeners(): boolean;
     StartActivity(name?: string, kind?: ActivityKind): Activity | undefined;
-    StartActivity(name: string, kind: ActivityKind, parentContext: ActivityContext, tags?: IEnumerable_1<KeyValuePair_2<System_Internal.String, unknown>> | undefined, links?: IEnumerable_1<ActivityLink>, startTime?: DateTimeOffset): Activity;
-    StartActivity(name: string, kind: ActivityKind, parentId: string, tags?: IEnumerable_1<KeyValuePair_2<System_Internal.String, unknown>> | undefined, links?: IEnumerable_1<ActivityLink>, startTime?: DateTimeOffset): Activity;
-    StartActivity(kind: ActivityKind, parentContext?: ActivityContext, tags?: IEnumerable_1<KeyValuePair_2<System_Internal.String, unknown>> | undefined, links?: IEnumerable_1<ActivityLink>, startTime?: DateTimeOffset, name?: string): Activity;
+    StartActivity(name: string, kind: ActivityKind, parentContext: ActivityContext, tags?: IEnumerable_1<KeyValuePair_2<System_Internal.String, unknown>>, links?: IEnumerable_1<ActivityLink>, startTime?: DateTimeOffset): Activity | undefined;
+    StartActivity(name: string, kind: ActivityKind, parentId: string, tags?: IEnumerable_1<KeyValuePair_2<System_Internal.String, unknown>>, links?: IEnumerable_1<ActivityLink>, startTime?: DateTimeOffset): Activity | undefined;
+    StartActivity(kind: ActivityKind, parentContext?: ActivityContext, tags?: IEnumerable_1<KeyValuePair_2<System_Internal.String, unknown>>, links?: IEnumerable_1<ActivityLink>, startTime?: DateTimeOffset, name?: string): Activity | undefined;
 }
 
 
 export const ActivitySource: {
     new(name: string): ActivitySource;
-    new(name: string, version: string | undefined): ActivitySource;
-    new(name: string, version: string | undefined, tags: IEnumerable_1<KeyValuePair_2<System_Internal.String, unknown>> | undefined): ActivitySource;
+    new(name: string, version: string): ActivitySource;
+    new(name: string, version: string, tags: IEnumerable_1<KeyValuePair_2<System_Internal.String, unknown>>): ActivitySource;
     new(options: ActivitySourceOptions): ActivitySource;
     AddActivityListener(listener: ActivityListener): void;
 };
@@ -633,13 +644,14 @@ export type ActivitySource = ActivitySource$instance & __ActivitySource$views;
 export interface ActivitySourceOptions$instance {
     Name: string;
     Tags: IEnumerable_1<KeyValuePair_2<System_Internal.String, unknown>>;
-    TelemetrySchemaUrl: string | undefined;
+    get TelemetrySchemaUrl(): string | undefined;
+    set TelemetrySchemaUrl(value: string);
     Version: string;
 }
 
 
 export const ActivitySourceOptions: {
-    new(name: string | undefined): ActivitySourceOptions;
+    new(name: string): ActivitySourceOptions;
 };
 
 
@@ -651,7 +663,7 @@ export interface ActivityTagsCollection$instance {
     Item: unknown;
     readonly Keys: ICollection_1<System_Internal.String>;
     readonly Values: ICollection_1<unknown | undefined>;
-    Add(key: string, value: unknown | undefined): void;
+    Add(key: string, value: unknown): void;
     Add(item: KeyValuePair_2<System_Internal.String, unknown>): void;
     Clear(): void;
     Contains(item: KeyValuePair_2<System_Internal.String, unknown>): boolean;
@@ -660,7 +672,7 @@ export interface ActivityTagsCollection$instance {
     GetEnumerator(): ActivityTagsCollection_Enumerator;
     Remove(key: string): boolean;
     Remove(item: KeyValuePair_2<System_Internal.String, unknown>): boolean;
-    TryGetValue(key: string, value: unknown | undefined): boolean;
+    TryGetValue(key: string, value: unknown): boolean;
 }
 
 
@@ -686,8 +698,8 @@ export interface BooleanSwitch$instance extends Switch {
 
 
 export const BooleanSwitch: {
-    new(displayName: string, description: string | undefined): BooleanSwitch;
-    new(displayName: string, description: string | undefined, defaultSwitchValue: string): BooleanSwitch;
+    new(displayName: string, description: string): BooleanSwitch;
+    new(displayName: string, description: string, defaultSwitchValue: string): BooleanSwitch;
 };
 
 
@@ -793,14 +805,15 @@ export type DebuggerDisableUserUnhandledExceptionsAttribute = DebuggerDisableUse
 export interface DebuggerDisplayAttribute$instance extends Attribute {
     Name: string;
     Target: Type;
-    TargetTypeName: string | undefined;
+    get TargetTypeName(): string | undefined;
+    set TargetTypeName(value: string);
     Type: string;
     readonly Value: string;
 }
 
 
 export const DebuggerDisplayAttribute: {
-    new(value: string | undefined): DebuggerDisplayAttribute;
+    new(value: string): DebuggerDisplayAttribute;
 };
 
 
@@ -853,13 +866,14 @@ export type DebuggerStepThroughAttribute = DebuggerStepThroughAttribute$instance
 export interface DebuggerTypeProxyAttribute$instance extends Attribute {
     readonly ProxyTypeName: string;
     Target: Type;
-    TargetTypeName: string | undefined;
+    get TargetTypeName(): string | undefined;
+    set TargetTypeName(value: string);
 }
 
 
 export const DebuggerTypeProxyAttribute: {
-    new(type_: Type | undefined): DebuggerTypeProxyAttribute;
-    new(typeName: string | undefined): DebuggerTypeProxyAttribute;
+    new(type_: Type): DebuggerTypeProxyAttribute;
+    new(typeName: string): DebuggerTypeProxyAttribute;
 };
 
 
@@ -868,37 +882,38 @@ export type DebuggerTypeProxyAttribute = DebuggerTypeProxyAttribute$instance;
 export interface DebuggerVisualizerAttribute$instance extends Attribute {
     Description: string;
     Target: Type;
-    TargetTypeName: string | undefined;
+    get TargetTypeName(): string | undefined;
+    set TargetTypeName(value: string);
     readonly VisualizerObjectSourceTypeName: string | undefined;
     readonly VisualizerTypeName: string;
 }
 
 
 export const DebuggerVisualizerAttribute: {
-    new(visualizerTypeName: string | undefined): DebuggerVisualizerAttribute;
-    new(visualizerTypeName: string | undefined, visualizerObjectSourceTypeName: string | undefined): DebuggerVisualizerAttribute;
-    new(visualizerTypeName: string | undefined, visualizerObjectSource: Type | undefined): DebuggerVisualizerAttribute;
-    new(visualizer: Type | undefined): DebuggerVisualizerAttribute;
-    new(visualizer: Type | undefined, visualizerObjectSource: Type | undefined): DebuggerVisualizerAttribute;
-    new(visualizer: Type | undefined, visualizerObjectSourceTypeName: string | undefined): DebuggerVisualizerAttribute;
+    new(visualizerTypeName: string): DebuggerVisualizerAttribute;
+    new(visualizerTypeName: string, visualizerObjectSourceTypeName: string): DebuggerVisualizerAttribute;
+    new(visualizerTypeName: string, visualizerObjectSource: Type): DebuggerVisualizerAttribute;
+    new(visualizer: Type): DebuggerVisualizerAttribute;
+    new(visualizer: Type, visualizerObjectSource: Type): DebuggerVisualizerAttribute;
+    new(visualizer: Type, visualizerObjectSourceTypeName: string): DebuggerVisualizerAttribute;
 };
 
 
 export type DebuggerVisualizerAttribute = DebuggerVisualizerAttribute$instance;
 
 export interface DebugProvider$instance {
-    Fail(message: string | undefined, detailMessage: string | undefined): void;
+    Fail(message: string, detailMessage: string): void;
     OnIndentLevelChanged(indentLevel: int): void;
     OnIndentSizeChanged(indentSize: int): void;
-    Write(message: string | undefined): void;
-    WriteLine(message: string | undefined): void;
+    Write(message: string): void;
+    WriteLine(message: string): void;
 }
 
 
 export const DebugProvider: {
     new(): DebugProvider;
-    FailCore(stackTrace: string | undefined, message: string | undefined, detailMessage: string | undefined, errorSource: string | undefined): void;
-    WriteCore(message: string | undefined): void;
+    FailCore(stackTrace: string, message: string, detailMessage: string, errorSource: string): void;
+    WriteCore(message: string): void;
 };
 
 
@@ -906,18 +921,19 @@ export type DebugProvider = DebugProvider$instance;
 
 export interface DefaultTraceListener$instance extends TraceListener$instance {
     AssertUiEnabled: boolean;
-    LogFileName: string | undefined;
+    get LogFileName(): string | undefined;
+    set LogFileName(value: string);
     Dispose(): void;
-    Fail(message: string | undefined): void;
-    Fail(message: string | undefined, detailMessage: string | undefined): void;
-    Write(message: string | undefined): void;
-    Write(o: unknown | undefined): void;
-    Write(message: string | undefined, category: string | undefined): void;
-    Write(o: unknown | undefined, category: string | undefined): void;
-    WriteLine(message: string | undefined): void;
-    WriteLine(o: unknown | undefined): void;
-    WriteLine(message: string | undefined, category: string | undefined): void;
-    WriteLine(o: unknown | undefined, category: string | undefined): void;
+    Fail(message: string): void;
+    Fail(message: string, detailMessage: string): void;
+    Write(message: string): void;
+    Write(o: unknown): void;
+    Write(message: string, category: string): void;
+    Write(o: unknown, category: string): void;
+    WriteLine(message: string): void;
+    WriteLine(o: unknown): void;
+    WriteLine(message: string, category: string): void;
+    WriteLine(o: unknown, category: string): void;
 }
 
 
@@ -940,15 +956,15 @@ export interface DelimitedListTraceListener$instance extends TextWriterTraceList
     TraceData(eventCache: TraceEventCache, source: string, eventType: TraceEventType, id: int, ...data: unknown[]): void;
     TraceEvent(eventCache: TraceEventCache, source: string, eventType: TraceEventType, id: int, format: string, ...args: unknown[]): void;
     TraceEvent(eventCache: TraceEventCache, source: string, eventType: TraceEventType, id: int, message: string): void;
-    TraceEvent(eventCache: TraceEventCache | undefined, source: string | undefined, eventType: TraceEventType, id: int): void;
+    TraceEvent(eventCache: TraceEventCache, source: string, eventType: TraceEventType, id: int): void;
 }
 
 
 export const DelimitedListTraceListener: {
     new(stream: Stream): DelimitedListTraceListener;
-    new(stream: Stream, name: string | undefined): DelimitedListTraceListener;
+    new(stream: Stream, name: string): DelimitedListTraceListener;
     new(writer: TextWriter): DelimitedListTraceListener;
-    new(writer: TextWriter, name: string | undefined): DelimitedListTraceListener;
+    new(writer: TextWriter, name: string): DelimitedListTraceListener;
     new(fileName: string): DelimitedListTraceListener;
     new(fileName: string, name: string): DelimitedListTraceListener;
 };
@@ -966,14 +982,14 @@ export interface DiagnosticListener$instance extends DiagnosticSource {
     Dispose(): void;
     IsEnabled(name: string): boolean;
     IsEnabled(name: string, arg1: unknown, arg2?: unknown): boolean;
-    OnActivityExport(activity: Activity, payload: unknown | undefined): void;
-    OnActivityImport(activity: Activity, payload: unknown | undefined): void;
-    Subscribe(observer: IObserver_1<KeyValuePair_2<System_Internal.String, unknown>>, isEnabled: Func_4<System_Internal.String, unknown | undefined, unknown | undefined, System_Internal.Boolean> | undefined, onActivityImport?: Action_2<Activity, unknown | undefined> | undefined, onActivityExport?: Action_2<Activity, unknown | undefined> | undefined): IDisposable;
-    Subscribe(observer: IObserver_1<KeyValuePair_2<System_Internal.String, unknown>>, isEnabled: Predicate_1<System_Internal.String> | undefined): IDisposable;
-    Subscribe(observer: IObserver_1<KeyValuePair_2<System_Internal.String, unknown>>, isEnabled: Func_4<System_Internal.String, unknown | undefined, unknown | undefined, System_Internal.Boolean> | undefined): IDisposable;
+    OnActivityExport(activity: Activity, payload: unknown): void;
+    OnActivityImport(activity: Activity, payload: unknown): void;
+    Subscribe(observer: IObserver_1<KeyValuePair_2<System_Internal.String, unknown>>, isEnabled: Func_4<System_Internal.String, unknown, unknown, System_Internal.Boolean>, onActivityImport?: Action_2<Activity, unknown>, onActivityExport?: Action_2<Activity, unknown>): IDisposable;
+    Subscribe(observer: IObserver_1<KeyValuePair_2<System_Internal.String, unknown>>, isEnabled: Predicate_1<System_Internal.String>): IDisposable;
+    Subscribe(observer: IObserver_1<KeyValuePair_2<System_Internal.String, unknown>>, isEnabled: Func_4<System_Internal.String, unknown, unknown, System_Internal.Boolean>): IDisposable;
     Subscribe(observer: IObserver_1<KeyValuePair_2<System_Internal.String, unknown>>): IDisposable;
     ToString(): string;
-    Write(name: string, value: unknown | undefined): void;
+    Write(name: string, value: unknown): void;
     Write<T>(name: string, value: T): void;
 }
 
@@ -1013,13 +1029,13 @@ export type DiagnosticMethodInfo = DiagnosticMethodInfo$instance;
 export interface DiagnosticSource$instance {
     IsEnabled(name: string): boolean;
     IsEnabled(name: string, arg1: unknown, arg2?: unknown): boolean;
-    OnActivityExport(activity: Activity, payload: unknown | undefined): void;
-    OnActivityImport(activity: Activity, payload: unknown | undefined): void;
-    StartActivity(activity: Activity, args: unknown | undefined): Activity;
+    OnActivityExport(activity: Activity, payload: unknown): void;
+    OnActivityImport(activity: Activity, payload: unknown): void;
+    StartActivity(activity: Activity, args: unknown): Activity;
     StartActivity<T>(activity: Activity, args: T): Activity;
-    StopActivity(activity: Activity, args: unknown | undefined): void;
+    StopActivity(activity: Activity, args: unknown): void;
     StopActivity<T>(activity: Activity, args: T): void;
-    Write(name: string, value: unknown | undefined): void;
+    Write(name: string, value: unknown): void;
     Write<T>(name: string, value: T): void;
 }
 
@@ -1091,13 +1107,13 @@ export interface FileVersionInfo$instance {
     readonly ProductPrivatePart: int;
     readonly ProductVersion: string | undefined;
     readonly SpecialBuild: string | undefined;
-    ToString(): string | undefined;
+    ToString(): string;
 }
 
 
 export const FileVersionInfo: {
     new(): FileVersionInfo;
-    GetVersionInfo(fileName: string | undefined): FileVersionInfo | undefined;
+    GetVersionInfo(fileName: string): FileVersionInfo;
 };
 
 
@@ -1183,7 +1199,8 @@ export interface Process$instance extends Component {
     readonly StandardOutput: StreamReader;
     StartInfo: ProcessStartInfo;
     readonly StartTime: DateTime;
-    SynchronizingObject: ISynchronizeInvoke | undefined;
+    get SynchronizingObject(): ISynchronizeInvoke | undefined;
+    set SynchronizingObject(value: ISynchronizeInvoke);
     readonly Threads: ProcessThreadCollection;
     readonly TotalProcessorTime: TimeSpan;
     readonly UserProcessorTime: TimeSpan;
@@ -1221,8 +1238,8 @@ export const Process: {
     GetProcessById(processId: int): Process;
     GetProcesses(): Process[];
     GetProcesses(machineName: string): Process[];
-    GetProcessesByName(processName: string | undefined, machineName: string): Process[];
-    GetProcessesByName(processName: string | undefined): Process[];
+    GetProcessesByName(processName: string, machineName: string): Process[];
+    GetProcessesByName(processName: string): Process[];
     LeaveDebugMode(): void;
     Start(startInfo: ProcessStartInfo): Process | undefined;
     Start(fileName: string, arguments: IEnumerable_1<System_Internal.String>): Process;
@@ -1307,13 +1324,17 @@ export interface ProcessStartInfo$instance {
     FileName: string;
     LoadUserProfile: boolean;
     Password: SecureString;
-    PasswordInClearText: string | undefined;
+    get PasswordInClearText(): string | undefined;
+    set PasswordInClearText(value: string);
     RedirectStandardError: boolean;
     RedirectStandardInput: boolean;
     RedirectStandardOutput: boolean;
-    StandardErrorEncoding: Encoding | undefined;
-    StandardInputEncoding: Encoding | undefined;
-    StandardOutputEncoding: Encoding | undefined;
+    get StandardErrorEncoding(): Encoding | undefined;
+    set StandardErrorEncoding(value: Encoding);
+    get StandardInputEncoding(): Encoding | undefined;
+    set StandardInputEncoding(value: Encoding);
+    get StandardOutputEncoding(): Encoding | undefined;
+    set StandardOutputEncoding(value: Encoding);
     UseCredentialsForNetworkingOnly: boolean;
     UserName: string;
     UseShellExecute: boolean;
@@ -1430,7 +1451,7 @@ export interface StackFrame$instance {
     GetILOffset(): int;
     GetMethod(): MethodBase | undefined;
     GetNativeOffset(): int;
-    ToString(): string | undefined;
+    ToString(): string;
 }
 
 
@@ -1439,8 +1460,8 @@ export const StackFrame: {
     new(needFileInfo: boolean): StackFrame;
     new(skipFrames: int): StackFrame;
     new(skipFrames: int, needFileInfo: boolean): StackFrame;
-    new(fileName: string | undefined, lineNumber: int): StackFrame;
-    new(fileName: string | undefined, lineNumber: int, colNumber: int): StackFrame;
+    new(fileName: string, lineNumber: int): StackFrame;
+    new(fileName: string, lineNumber: int, colNumber: int): StackFrame;
     readonly OFFSET_UNKNOWN: int;
 };
 
@@ -1449,7 +1470,7 @@ export type StackFrame = StackFrame$instance;
 
 export interface StackTrace$instance {
     readonly FrameCount: int;
-    GetFrame(index: int): StackFrame;
+    GetFrame(index: int): StackFrame | undefined;
     GetFrames(): StackFrame[];
     ToString(): string;
 }
@@ -1526,7 +1547,8 @@ export const Switch: {
 export type Switch = Switch$instance;
 
 export interface SwitchAttribute$instance extends Attribute {
-    SwitchDescription: string | undefined;
+    get SwitchDescription(): string | undefined;
+    set SwitchDescription(value: string);
     SwitchName: string;
     SwitchType: Type;
 }
@@ -1557,25 +1579,25 @@ export interface TextWriterTraceListener$instance extends TraceListener$instance
     Close(): void;
     Dispose(): void;
     Flush(): void;
-    Write(message: string | undefined): void;
-    Write(o: unknown | undefined): void;
-    Write(message: string | undefined, category: string | undefined): void;
-    Write(o: unknown | undefined, category: string | undefined): void;
-    WriteLine(message: string | undefined): void;
-    WriteLine(o: unknown | undefined): void;
-    WriteLine(message: string | undefined, category: string | undefined): void;
-    WriteLine(o: unknown | undefined, category: string | undefined): void;
+    Write(message: string): void;
+    Write(o: unknown): void;
+    Write(message: string, category: string): void;
+    Write(o: unknown, category: string): void;
+    WriteLine(message: string): void;
+    WriteLine(o: unknown): void;
+    WriteLine(message: string, category: string): void;
+    WriteLine(o: unknown, category: string): void;
 }
 
 
 export const TextWriterTraceListener: {
     new(): TextWriterTraceListener;
-    new(stream: Stream | undefined): TextWriterTraceListener;
-    new(stream: Stream | undefined, name: string | undefined): TextWriterTraceListener;
-    new(writer: TextWriter | undefined): TextWriterTraceListener;
-    new(writer: TextWriter | undefined, name: string | undefined): TextWriterTraceListener;
-    new(fileName: string | undefined): TextWriterTraceListener;
-    new(fileName: string | undefined, name: string | undefined): TextWriterTraceListener;
+    new(stream: Stream): TextWriterTraceListener;
+    new(stream: Stream, name: string): TextWriterTraceListener;
+    new(writer: TextWriter): TextWriterTraceListener;
+    new(writer: TextWriter, name: string): TextWriterTraceListener;
+    new(fileName: string): TextWriterTraceListener;
+    new(fileName: string, name: string): TextWriterTraceListener;
 };
 
 
@@ -1598,38 +1620,38 @@ export const Trace: {
     UseGlobalLock: boolean;
     IndentLevel: int;
     IndentSize: int;
-    Assert(condition: boolean, message: string | undefined, detailMessage: string | undefined): void;
-    Assert(condition: boolean, message?: string | undefined): void;
+    Assert(condition: boolean, message: string, detailMessage: string): void;
+    Assert(condition: boolean, message?: string): void;
     Assert(condition: boolean): void;
     Close(): void;
-    Fail(message: string | undefined, detailMessage: string | undefined): void;
-    Fail(message: string | undefined): void;
+    Fail(message: string, detailMessage: string): void;
+    Fail(message: string): void;
     Flush(): void;
     Indent(): void;
     Refresh(): void;
-    TraceError(format: string | undefined, ...args: unknown[]): void;
-    TraceError(message: string | undefined): void;
-    TraceInformation(format: string | undefined, ...args: unknown[]): void;
-    TraceInformation(message: string | undefined): void;
-    TraceWarning(format: string | undefined, ...args: unknown[]): void;
-    TraceWarning(message: string | undefined): void;
+    TraceError(format: string, ...args: unknown[]): void;
+    TraceError(message: string): void;
+    TraceInformation(format: string, ...args: unknown[]): void;
+    TraceInformation(message: string): void;
+    TraceWarning(format: string, ...args: unknown[]): void;
+    TraceWarning(message: string): void;
     Unindent(): void;
-    Write(value: unknown | undefined, category: string | undefined): void;
-    Write(value: unknown | undefined): void;
-    Write(message: string | undefined, category: string | undefined): void;
-    Write(message: string | undefined): void;
-    WriteIf(condition: boolean, value: unknown | undefined, category: string | undefined): void;
-    WriteIf(condition: boolean, value: unknown | undefined): void;
-    WriteIf(condition: boolean, message: string | undefined, category: string | undefined): void;
-    WriteIf(condition: boolean, message: string | undefined): void;
-    WriteLine(value: unknown | undefined, category: string | undefined): void;
-    WriteLine(value: unknown | undefined): void;
-    WriteLine(message: string | undefined, category: string | undefined): void;
-    WriteLine(message: string | undefined): void;
-    WriteLineIf(condition: boolean, value: unknown | undefined, category: string | undefined): void;
-    WriteLineIf(condition: boolean, value: unknown | undefined): void;
-    WriteLineIf(condition: boolean, message: string | undefined, category: string | undefined): void;
-    WriteLineIf(condition: boolean, message: string | undefined): void;
+    Write(value: unknown, category: string): void;
+    Write(value: unknown): void;
+    Write(message: string, category: string): void;
+    Write(message: string): void;
+    WriteIf(condition: boolean, value: unknown, category: string): void;
+    WriteIf(condition: boolean, value: unknown): void;
+    WriteIf(condition: boolean, message: string, category: string): void;
+    WriteIf(condition: boolean, message: string): void;
+    WriteLine(value: unknown, category: string): void;
+    WriteLine(value: unknown): void;
+    WriteLine(message: string, category: string): void;
+    WriteLine(message: string): void;
+    WriteLineIf(condition: boolean, value: unknown, category: string): void;
+    WriteLineIf(condition: boolean, value: unknown): void;
+    WriteLineIf(condition: boolean, message: string, category: string): void;
+    WriteLineIf(condition: boolean, message: string): void;
 };
 
 
@@ -1673,23 +1695,23 @@ export interface TraceListener$instance extends MarshalByRefObject {
     TraceOutputOptions: TraceOptions;
     Close(): void;
     Dispose(): void;
-    Fail(message: string | undefined): void;
-    Fail(message: string | undefined, detailMessage: string | undefined): void;
+    Fail(message: string): void;
+    Fail(message: string, detailMessage: string): void;
     Flush(): void;
-    TraceData(eventCache: TraceEventCache | undefined, source: string, eventType: TraceEventType, id: int, data: unknown | undefined): void;
-    TraceData(eventCache: TraceEventCache | undefined, source: string, eventType: TraceEventType, id: int, ...data: unknown[]): void;
-    TraceEvent(eventCache: TraceEventCache | undefined, source: string | undefined, eventType: TraceEventType, id: int): void;
-    TraceEvent(eventCache: TraceEventCache | undefined, source: string, eventType: TraceEventType, id: int, message: string | undefined): void;
-    TraceEvent(eventCache: TraceEventCache | undefined, source: string, eventType: TraceEventType, id: int, format: string | undefined, ...args: unknown[]): void;
-    TraceTransfer(eventCache: TraceEventCache | undefined, source: string, id: int, message: string | undefined, relatedActivityId: Guid): void;
-    Write(message: string | undefined): void;
-    Write(o: unknown | undefined): void;
-    Write(message: string | undefined, category: string | undefined): void;
-    Write(o: unknown | undefined, category: string | undefined): void;
-    WriteLine(message: string | undefined): void;
-    WriteLine(o: unknown | undefined): void;
-    WriteLine(message: string | undefined, category: string | undefined): void;
-    WriteLine(o: unknown | undefined, category: string | undefined): void;
+    TraceData(eventCache: TraceEventCache, source: string, eventType: TraceEventType, id: int, data: unknown): void;
+    TraceData(eventCache: TraceEventCache, source: string, eventType: TraceEventType, id: int, ...data: unknown[]): void;
+    TraceEvent(eventCache: TraceEventCache, source: string, eventType: TraceEventType, id: int): void;
+    TraceEvent(eventCache: TraceEventCache, source: string, eventType: TraceEventType, id: int, message: string): void;
+    TraceEvent(eventCache: TraceEventCache, source: string, eventType: TraceEventType, id: int, format: string, ...args: unknown[]): void;
+    TraceTransfer(eventCache: TraceEventCache, source: string, id: int, message: string, relatedActivityId: Guid): void;
+    Write(message: string): void;
+    Write(o: unknown): void;
+    Write(message: string, category: string): void;
+    Write(o: unknown, category: string): void;
+    WriteLine(message: string): void;
+    WriteLine(o: unknown): void;
+    WriteLine(message: string, category: string): void;
+    WriteLine(o: unknown, category: string): void;
 }
 
 
@@ -1777,22 +1799,22 @@ export interface TraceSwitch$instance extends Switch {
 
 
 export const TraceSwitch: {
-    new(displayName: string, description: string | undefined): TraceSwitch;
-    new(displayName: string, description: string | undefined, defaultSwitchValue: string): TraceSwitch;
+    new(displayName: string, description: string): TraceSwitch;
+    new(displayName: string, description: string, defaultSwitchValue: string): TraceSwitch;
 };
 
 
 export type TraceSwitch = TraceSwitch$instance;
 
 export interface UnreachableException$instance extends Exception {
-    GetObjectData(info: SerializationInfo | undefined, context: StreamingContext): void;
+    GetObjectData(info: SerializationInfo, context: StreamingContext): void;
 }
 
 
 export const UnreachableException: {
     new(): UnreachableException;
-    new(message: string | undefined): UnreachableException;
-    new(message: string | undefined, innerException: Exception | undefined): UnreachableException;
+    new(message: string): UnreachableException;
+    new(message: string, innerException: Exception): UnreachableException;
 };
 
 
@@ -1806,32 +1828,32 @@ export type UnreachableException = UnreachableException$instance & __Unreachable
 export interface XmlWriterTraceListener$instance extends TextWriterTraceListener$instance {
     Close(): void;
     Dispose(): void;
-    Fail(message: string | undefined, detailMessage: string | undefined): void;
-    Fail(message: string | undefined): void;
-    TraceData(eventCache: TraceEventCache | undefined, source: string, eventType: TraceEventType, id: int, data: unknown | undefined): void;
-    TraceData(eventCache: TraceEventCache | undefined, source: string, eventType: TraceEventType, id: int, ...data: unknown[]): void;
-    TraceEvent(eventCache: TraceEventCache | undefined, source: string, eventType: TraceEventType, id: int, format: string | undefined, ...args: unknown[]): void;
-    TraceEvent(eventCache: TraceEventCache | undefined, source: string, eventType: TraceEventType, id: int, message: string | undefined): void;
-    TraceEvent(eventCache: TraceEventCache | undefined, source: string | undefined, eventType: TraceEventType, id: int): void;
-    TraceTransfer(eventCache: TraceEventCache | undefined, source: string, id: int, message: string | undefined, relatedActivityId: Guid): void;
-    Write(message: string | undefined): void;
-    Write(o: unknown | undefined): void;
-    Write(message: string | undefined, category: string | undefined): void;
-    Write(o: unknown | undefined, category: string | undefined): void;
-    WriteLine(message: string | undefined): void;
-    WriteLine(o: unknown | undefined): void;
-    WriteLine(message: string | undefined, category: string | undefined): void;
-    WriteLine(o: unknown | undefined, category: string | undefined): void;
+    Fail(message: string, detailMessage: string): void;
+    Fail(message: string): void;
+    TraceData(eventCache: TraceEventCache, source: string, eventType: TraceEventType, id: int, data: unknown): void;
+    TraceData(eventCache: TraceEventCache, source: string, eventType: TraceEventType, id: int, ...data: unknown[]): void;
+    TraceEvent(eventCache: TraceEventCache, source: string, eventType: TraceEventType, id: int, format: string, ...args: unknown[]): void;
+    TraceEvent(eventCache: TraceEventCache, source: string, eventType: TraceEventType, id: int, message: string): void;
+    TraceEvent(eventCache: TraceEventCache, source: string, eventType: TraceEventType, id: int): void;
+    TraceTransfer(eventCache: TraceEventCache, source: string, id: int, message: string, relatedActivityId: Guid): void;
+    Write(message: string): void;
+    Write(o: unknown): void;
+    Write(message: string, category: string): void;
+    Write(o: unknown, category: string): void;
+    WriteLine(message: string): void;
+    WriteLine(o: unknown): void;
+    WriteLine(message: string, category: string): void;
+    WriteLine(o: unknown, category: string): void;
 }
 
 
 export const XmlWriterTraceListener: {
-    new(stream: Stream | undefined): XmlWriterTraceListener;
-    new(stream: Stream | undefined, name: string | undefined): XmlWriterTraceListener;
-    new(writer: TextWriter | undefined): XmlWriterTraceListener;
-    new(writer: TextWriter | undefined, name: string | undefined): XmlWriterTraceListener;
-    new(filename: string | undefined): XmlWriterTraceListener;
-    new(filename: string | undefined, name: string | undefined): XmlWriterTraceListener;
+    new(stream: Stream): XmlWriterTraceListener;
+    new(stream: Stream, name: string): XmlWriterTraceListener;
+    new(writer: TextWriter): XmlWriterTraceListener;
+    new(writer: TextWriter, name: string): XmlWriterTraceListener;
+    new(filename: string): XmlWriterTraceListener;
+    new(filename: string, name: string): XmlWriterTraceListener;
 };
 
 
@@ -1848,40 +1870,40 @@ export abstract class Debug$instance {
     static IndentSize: int;
     static Assert(condition: boolean, message: Debug_AssertInterpolatedStringHandler, detailMessage: Debug_AssertInterpolatedStringHandler): void;
     static Assert(condition: boolean, message: Debug_AssertInterpolatedStringHandler): void;
-    static Assert(condition: boolean, message: string | undefined, detailMessageFormat: string | undefined, ...args: unknown[]): void;
-    static Assert(condition: boolean, message: string | undefined, detailMessage: string | undefined): void;
-    static Assert(condition: boolean, message?: string | undefined): void;
+    static Assert(condition: boolean, message: string, detailMessageFormat: string, ...args: unknown[]): void;
+    static Assert(condition: boolean, message: string, detailMessage: string): void;
+    static Assert(condition: boolean, message?: string): void;
     static Assert(condition: boolean): void;
     static Close(): void;
-    static Fail(message: string | undefined, detailMessage: string | undefined): void;
-    static Fail(message: string | undefined): void;
+    static Fail(message: string, detailMessage: string): void;
+    static Fail(message: string): void;
     static Flush(): void;
     static Indent(): void;
-    static Print(format: string | undefined, ...args: unknown[]): void;
-    static Print(message: string | undefined): void;
-    static SetProvider(provider: DebugProvider | undefined): DebugProvider | undefined;
+    static Print(format: string, ...args: unknown[]): void;
+    static Print(message: string): void;
+    static SetProvider(provider: DebugProvider): DebugProvider;
     static Unindent(): void;
-    static Write(value: unknown | undefined, category: string | undefined): void;
-    static Write(value: unknown | undefined): void;
-    static Write(message: string | undefined, category: string | undefined): void;
-    static Write(message: string | undefined): void;
-    static WriteIf(condition: boolean, message: Debug_WriteIfInterpolatedStringHandler, category: string | undefined): void;
+    static Write(value: unknown, category: string): void;
+    static Write(value: unknown): void;
+    static Write(message: string, category: string): void;
+    static Write(message: string): void;
+    static WriteIf(condition: boolean, message: Debug_WriteIfInterpolatedStringHandler, category: string): void;
     static WriteIf(condition: boolean, message: Debug_WriteIfInterpolatedStringHandler): void;
-    static WriteIf(condition: boolean, value: unknown | undefined, category: string | undefined): void;
-    static WriteIf(condition: boolean, value: unknown | undefined): void;
-    static WriteIf(condition: boolean, message: string | undefined, category: string | undefined): void;
-    static WriteIf(condition: boolean, message: string | undefined): void;
-    static WriteLine(value: unknown | undefined, category: string | undefined): void;
-    static WriteLine(value: unknown | undefined): void;
-    static WriteLine(format: string | undefined, ...args: unknown[]): void;
-    static WriteLine(message: string | undefined, category: string | undefined): void;
-    static WriteLine(message: string | undefined): void;
-    static WriteLineIf(condition: boolean, message: Debug_WriteIfInterpolatedStringHandler, category: string | undefined): void;
+    static WriteIf(condition: boolean, value: unknown, category: string): void;
+    static WriteIf(condition: boolean, value: unknown): void;
+    static WriteIf(condition: boolean, message: string, category: string): void;
+    static WriteIf(condition: boolean, message: string): void;
+    static WriteLine(value: unknown, category: string): void;
+    static WriteLine(value: unknown): void;
+    static WriteLine(format: string, ...args: unknown[]): void;
+    static WriteLine(message: string, category: string): void;
+    static WriteLine(message: string): void;
+    static WriteLineIf(condition: boolean, message: Debug_WriteIfInterpolatedStringHandler, category: string): void;
     static WriteLineIf(condition: boolean, message: Debug_WriteIfInterpolatedStringHandler): void;
-    static WriteLineIf(condition: boolean, value: unknown | undefined, category: string | undefined): void;
-    static WriteLineIf(condition: boolean, value: unknown | undefined): void;
-    static WriteLineIf(condition: boolean, message: string | undefined, category: string | undefined): void;
-    static WriteLineIf(condition: boolean, message: string | undefined): void;
+    static WriteLineIf(condition: boolean, value: unknown, category: string): void;
+    static WriteLineIf(condition: boolean, value: unknown): void;
+    static WriteLineIf(condition: boolean, message: string, category: string): void;
+    static WriteLineIf(condition: boolean, message: string): void;
 }
 
 
@@ -1891,10 +1913,10 @@ export abstract class Debugger$instance {
     static readonly DefaultCategory: string | undefined;
     static readonly IsAttached: boolean;
     static Break(): void;
-    static BreakForUserUnhandledException(exception: Exception | undefined): void;
+    static BreakForUserUnhandledException(exception: Exception): void;
     static IsLogging(): boolean;
     static Launch(): boolean;
-    static Log(level: int, category: string | undefined, message: string | undefined): void;
+    static Log(level: int, category: string, message: string): void;
     static NotifyOfCrossThreadDependency(): void;
 }
 

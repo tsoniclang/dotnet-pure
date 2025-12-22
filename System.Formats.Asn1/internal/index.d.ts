@@ -89,7 +89,7 @@ export interface Asn1Tag$instance {
     Equals(obj: unknown): boolean;
     GetHashCode(): int;
     HasSameClassAndValue(other: Asn1Tag): boolean;
-    ToString(): string | undefined;
+    ToString(): string;
     TryEncode(destination: Span_1<System_Internal.Byte>, bytesWritten: int): boolean;
 }
 
@@ -158,14 +158,14 @@ export type AsnWriter_Scope = AsnWriter_Scope$instance & __AsnWriter_Scope$views
 
 
 export interface AsnContentException$instance extends Exception {
-    GetObjectData(info: SerializationInfo | undefined, context: StreamingContext): void;
+    GetObjectData(info: SerializationInfo, context: StreamingContext): void;
 }
 
 
 export const AsnContentException: {
     new(): AsnContentException;
-    new(message: string | undefined): AsnContentException;
-    new(message: string | undefined, inner: Exception | undefined): AsnContentException;
+    new(message: string): AsnContentException;
+    new(message: string, inner: Exception): AsnContentException;
 };
 
 

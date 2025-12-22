@@ -324,7 +324,7 @@ export interface InstructionEncoder$instance {
 
 
 export const InstructionEncoder: {
-    new(codeBuilder: BlobBuilder, controlFlowBuilder: ControlFlowBuilder | undefined): InstructionEncoder;
+    new(codeBuilder: BlobBuilder, controlFlowBuilder: ControlFlowBuilder): InstructionEncoder;
 };
 
 
@@ -680,7 +680,7 @@ export interface MetadataAggregator$instance {
 
 export const MetadataAggregator: {
     new(baseReader: MetadataReader, deltaReaders: IReadOnlyList_1<MetadataReader>): MetadataAggregator;
-    new(baseTableRowCounts: IReadOnlyList_1<System_Internal.Int32>, baseHeapSizes: IReadOnlyList_1<System_Internal.Int32>, deltaReaders: IReadOnlyList_1<MetadataReader> | undefined): MetadataAggregator;
+    new(baseTableRowCounts: IReadOnlyList_1<System_Internal.Int32>, baseHeapSizes: IReadOnlyList_1<System_Internal.Int32>, deltaReaders: IReadOnlyList_1<MetadataReader>): MetadataAggregator;
 };
 
 
@@ -766,7 +766,7 @@ export interface MetadataRootBuilder$instance {
 
 
 export const MetadataRootBuilder: {
-    new(tablesAndHeaps: MetadataBuilder, metadataVersion: string | undefined, suppressValidation: boolean): MetadataRootBuilder;
+    new(tablesAndHeaps: MetadataBuilder, metadataVersion: string, suppressValidation: boolean): MetadataRootBuilder;
 };
 
 
@@ -796,7 +796,7 @@ export interface PortablePdbBuilder$instance {
 
 
 export const PortablePdbBuilder: {
-    new(tablesAndHeaps: MetadataBuilder, typeSystemRowCounts: ImmutableArray_1<System_Internal.Int32>, entryPoint: MethodDefinitionHandle, idProvider: Func_2<IEnumerable_1<Blob>, BlobContentId> | undefined): PortablePdbBuilder;
+    new(tablesAndHeaps: MetadataBuilder, typeSystemRowCounts: ImmutableArray_1<System_Internal.Int32>, entryPoint: MethodDefinitionHandle, idProvider: Func_2<IEnumerable_1<Blob>, BlobContentId>): PortablePdbBuilder;
 };
 
 

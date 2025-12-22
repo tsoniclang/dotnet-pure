@@ -58,7 +58,7 @@ export const AllowedValuesAttribute: {
 export type AllowedValuesAttribute = AllowedValuesAttribute$instance;
 
 export interface AssociatedMetadataTypeTypeDescriptionProvider$instance extends TypeDescriptionProvider {
-    GetTypeDescriptor(objectType: Type, instance: unknown | undefined): ICustomTypeDescriptor;
+    GetTypeDescriptor(objectType: Type, instance: unknown): ICustomTypeDescriptor;
     GetTypeDescriptor(objectType: Type): ICustomTypeDescriptor | undefined;
     GetTypeDescriptor(instance: unknown): ICustomTypeDescriptor | undefined;
 }
@@ -159,14 +159,14 @@ export interface DataTypeAttribute$instance extends ValidationAttribute {
     readonly CustomDataType: string | undefined;
     readonly DataType: DataType;
     readonly DisplayFormat: DisplayFormatAttribute | undefined;
-    GetDataTypeName(): string | undefined;
-    IsValid(value: unknown | undefined): boolean;
+    GetDataTypeName(): string;
+    IsValid(value: unknown): boolean;
 }
 
 
 export const DataTypeAttribute: {
     new(dataType: DataType): DataTypeAttribute;
-    new(customDataType: string | undefined): DataTypeAttribute;
+    new(customDataType: string): DataTypeAttribute;
 };
 
 
@@ -192,9 +192,12 @@ export interface DisplayAttribute$instance extends Attribute {
     GroupName: string;
     Name: string;
     Order: int;
-    Prompt: string | undefined;
-    ResourceType: Type | undefined;
-    ShortName: string | undefined;
+    get Prompt(): string | undefined;
+    set Prompt(value: string);
+    get ResourceType(): Type | undefined;
+    set ResourceType(value: Type);
+    get ShortName(): string | undefined;
+    set ShortName(value: string);
     GetAutoGenerateField(): Nullable_1<System_Internal.Boolean>;
     GetAutoGenerateFilter(): Nullable_1<System_Internal.Boolean>;
     GetDescription(): string | undefined;
@@ -222,8 +225,8 @@ export interface DisplayColumnAttribute$instance extends Attribute {
 
 export const DisplayColumnAttribute: {
     new(displayColumn: string): DisplayColumnAttribute;
-    new(displayColumn: string, sortColumn: string | undefined): DisplayColumnAttribute;
-    new(displayColumn: string, sortColumn: string | undefined, sortDescending: boolean): DisplayColumnAttribute;
+    new(displayColumn: string, sortColumn: string): DisplayColumnAttribute;
+    new(displayColumn: string, sortColumn: string, sortDescending: boolean): DisplayColumnAttribute;
 };
 
 
@@ -232,10 +235,13 @@ export type DisplayColumnAttribute = DisplayColumnAttribute$instance;
 export interface DisplayFormatAttribute$instance extends Attribute {
     ApplyFormatInEditMode: boolean;
     ConvertEmptyStringToNull: boolean;
-    DataFormatString: string | undefined;
+    get DataFormatString(): string | undefined;
+    set DataFormatString(value: string);
     HtmlEncode: boolean;
-    NullDisplayText: string | undefined;
-    NullDisplayTextResourceType: Type | undefined;
+    get NullDisplayText(): string | undefined;
+    set NullDisplayText(value: string);
+    get NullDisplayTextResourceType(): Type | undefined;
+    set NullDisplayTextResourceType(value: Type);
     GetNullDisplayText(): string | undefined;
 }
 
@@ -310,8 +316,8 @@ export interface FilterUIHintAttribute$instance extends Attribute {
 
 export const FilterUIHintAttribute: {
     new(filterUIHint: string): FilterUIHintAttribute;
-    new(filterUIHint: string, presentationLayer: string | undefined): FilterUIHintAttribute;
-    new(filterUIHint: string, presentationLayer: string | undefined, controlParameters: unknown[]): FilterUIHintAttribute;
+    new(filterUIHint: string, presentationLayer: string): FilterUIHintAttribute;
+    new(filterUIHint: string, presentationLayer: string, controlParameters: unknown[]): FilterUIHintAttribute;
 };
 
 
@@ -331,7 +337,7 @@ export type KeyAttribute = KeyAttribute$instance;
 export interface LengthAttribute$instance extends ValidationAttribute {
     readonly MaximumLength: int;
     readonly MinimumLength: int;
-    FormatErrorMessage(name: string): string | undefined;
+    FormatErrorMessage(name: string): string;
     IsValid(value: unknown): boolean;
 }
 
@@ -372,7 +378,7 @@ export type MetadataTypeAttribute = MetadataTypeAttribute$instance;
 
 export interface MinLengthAttribute$instance extends ValidationAttribute {
     readonly Length: int;
-    FormatErrorMessage(name: string): string | undefined;
+    FormatErrorMessage(name: string): string;
     IsValid(value: unknown): boolean;
 }
 
@@ -462,7 +468,7 @@ export type ScaffoldColumnAttribute = ScaffoldColumnAttribute$instance;
 export interface StringLengthAttribute$instance extends ValidationAttribute {
     readonly MaximumLength: int;
     MinimumLength: int;
-    FormatErrorMessage(name: string): string | undefined;
+    FormatErrorMessage(name: string): string;
     IsValid(value: unknown): boolean;
 }
 
@@ -496,7 +502,7 @@ export interface UIHintAttribute$instance extends Attribute {
 
 export const UIHintAttribute: {
     new(uiHint: string): UIHintAttribute;
-    new(uiHint: string, presentationLayer: string | undefined): UIHintAttribute;
+    new(uiHint: string, presentationLayer: string): UIHintAttribute;
     new(uiHint: string, presentationLayer: string, controlParameters: unknown[]): UIHintAttribute;
 };
 
@@ -516,15 +522,18 @@ export const UrlAttribute: {
 export type UrlAttribute = UrlAttribute$instance;
 
 export interface ValidationAttribute$instance extends Attribute {
-    ErrorMessage: string | undefined;
-    ErrorMessageResourceName: string | undefined;
-    ErrorMessageResourceType: Type | undefined;
+    get ErrorMessage(): string | undefined;
+    set ErrorMessage(value: string);
+    get ErrorMessageResourceName(): string | undefined;
+    set ErrorMessageResourceName(value: string);
+    get ErrorMessageResourceType(): Type | undefined;
+    set ErrorMessageResourceType(value: Type);
     readonly RequiresValidationContext: boolean;
-    FormatErrorMessage(name: string | undefined): string | undefined;
-    GetValidationResult(value: unknown | undefined, validationContext: ValidationContext): ValidationResult | undefined;
-    IsValid(value: unknown | undefined): boolean;
-    Validate(value: unknown | undefined, name: string | undefined): void;
-    Validate(value: unknown | undefined, validationContext: ValidationContext | undefined): void;
+    FormatErrorMessage(name: string): string;
+    GetValidationResult(value: unknown, validationContext: ValidationContext): ValidationResult | undefined;
+    IsValid(value: unknown): boolean;
+    Validate(value: unknown, name: string): void;
+    Validate(value: unknown, validationContext: ValidationContext): void;
 }
 
 
@@ -541,15 +550,15 @@ export interface ValidationContext$instance {
     readonly ObjectInstance: unknown;
     readonly ObjectType: Type;
     GetService(serviceType: Type): unknown | undefined;
-    InitializeServiceProvider(serviceProvider: Func_2<Type, unknown | undefined>): void;
+    InitializeServiceProvider(serviceProvider: Func_2<Type, unknown>): void;
 }
 
 
 export const ValidationContext: {
     new(instance: unknown): ValidationContext;
-    new(instance: unknown, items: IDictionary_2<unknown, unknown | undefined> | undefined): ValidationContext;
-    new(instance: unknown, serviceProvider: IServiceProvider | undefined, items: IDictionary_2<unknown, unknown | undefined> | undefined): ValidationContext;
-    new(instance: unknown, displayName: string, serviceProvider: IServiceProvider | undefined, items: IDictionary_2<unknown, unknown | undefined> | undefined): ValidationContext;
+    new(instance: unknown, items: IDictionary_2<unknown, unknown>): ValidationContext;
+    new(instance: unknown, serviceProvider: IServiceProvider, items: IDictionary_2<unknown, unknown>): ValidationContext;
+    new(instance: unknown, displayName: string, serviceProvider: IServiceProvider, items: IDictionary_2<unknown, unknown>): ValidationContext;
 };
 
 
@@ -566,16 +575,16 @@ export interface ValidationException$instance extends Exception {
     readonly ValidationAttribute: ValidationAttribute | undefined;
     readonly ValidationResult: ValidationResult;
     readonly Value: unknown;
-    GetObjectData(info: SerializationInfo | undefined, context: StreamingContext): void;
+    GetObjectData(info: SerializationInfo, context: StreamingContext): void;
 }
 
 
 export const ValidationException: {
-    new(validationResult: ValidationResult, validatingAttribute: ValidationAttribute | undefined, value: unknown | undefined): ValidationException;
-    new(errorMessage: string | undefined, validatingAttribute: ValidationAttribute | undefined, value: unknown | undefined): ValidationException;
+    new(validationResult: ValidationResult, validatingAttribute: ValidationAttribute, value: unknown): ValidationException;
+    new(errorMessage: string, validatingAttribute: ValidationAttribute, value: unknown): ValidationException;
     new(): ValidationException;
-    new(message: string | undefined): ValidationException;
-    new(message: string | undefined, innerException: Exception | undefined): ValidationException;
+    new(message: string): ValidationException;
+    new(message: string, innerException: Exception): ValidationException;
 };
 
 
@@ -587,15 +596,16 @@ export type ValidationException = ValidationException$instance & __ValidationExc
 
 
 export interface ValidationResult$instance {
-    ErrorMessage: string | undefined;
+    get ErrorMessage(): string | undefined;
+    set ErrorMessage(value: string);
     readonly MemberNames: IEnumerable_1<System_Internal.String>;
-    ToString(): string | undefined;
+    ToString(): string;
 }
 
 
 export const ValidationResult: {
-    new(errorMessage: string | undefined): ValidationResult;
-    new(errorMessage: string | undefined, memberNames: IEnumerable_1<System_Internal.String> | undefined): ValidationResult;
+    new(errorMessage: string): ValidationResult;
+    new(errorMessage: string, memberNames: IEnumerable_1<System_Internal.String>): ValidationResult;
     readonly Success: ValidationResult | undefined;
 };
 
@@ -603,14 +613,14 @@ export const ValidationResult: {
 export type ValidationResult = ValidationResult$instance;
 
 export abstract class Validator$instance {
-    static TryValidateObject(instance: unknown, validationContext: ValidationContext, validationResults: ICollection_1<ValidationResult> | undefined, validateAllProperties: boolean): boolean;
-    static TryValidateObject(instance: unknown, validationContext: ValidationContext, validationResults: ICollection_1<ValidationResult> | undefined): boolean;
-    static TryValidateProperty(value: unknown | undefined, validationContext: ValidationContext, validationResults: ICollection_1<ValidationResult> | undefined): boolean;
-    static TryValidateValue(value: unknown | undefined, validationContext: ValidationContext, validationResults: ICollection_1<ValidationResult> | undefined, validationAttributes: IEnumerable_1<ValidationAttribute>): boolean;
+    static TryValidateObject(instance: unknown, validationContext: ValidationContext, validationResults: ICollection_1<ValidationResult>, validateAllProperties: boolean): boolean;
+    static TryValidateObject(instance: unknown, validationContext: ValidationContext, validationResults: ICollection_1<ValidationResult>): boolean;
+    static TryValidateProperty(value: unknown, validationContext: ValidationContext, validationResults: ICollection_1<ValidationResult>): boolean;
+    static TryValidateValue(value: unknown, validationContext: ValidationContext, validationResults: ICollection_1<ValidationResult>, validationAttributes: IEnumerable_1<ValidationAttribute>): boolean;
     static ValidateObject(instance: unknown, validationContext: ValidationContext, validateAllProperties: boolean): void;
     static ValidateObject(instance: unknown, validationContext: ValidationContext): void;
-    static ValidateProperty(value: unknown | undefined, validationContext: ValidationContext): void;
-    static ValidateValue(value: unknown | undefined, validationContext: ValidationContext, validationAttributes: IEnumerable_1<ValidationAttribute>): void;
+    static ValidateProperty(value: unknown, validationContext: ValidationContext): void;
+    static ValidateValue(value: unknown, validationContext: ValidationContext, validationAttributes: IEnumerable_1<ValidationAttribute>): void;
 }
 
 

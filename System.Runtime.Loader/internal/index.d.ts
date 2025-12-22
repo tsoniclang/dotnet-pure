@@ -51,9 +51,9 @@ export interface AssemblyLoadContext$instance {
     EnterContextualReflection(): AssemblyLoadContext_ContextualReflectionScope;
     LoadFromAssemblyName(assemblyName: AssemblyName): Assembly;
     LoadFromAssemblyPath(assemblyPath: string): Assembly;
-    LoadFromNativeImagePath(nativeImagePath: string, assemblyPath: string | undefined): Assembly;
+    LoadFromNativeImagePath(nativeImagePath: string, assemblyPath: string): Assembly;
     LoadFromStream(assembly: Stream): Assembly;
-    LoadFromStream(assembly: Stream, assemblySymbols: Stream | undefined): Assembly;
+    LoadFromStream(assembly: Stream, assemblySymbols: Stream): Assembly;
     SetProfileOptimizationRoot(directoryPath: string): void;
     StartProfileOptimization(profile: string): void;
     ToString(): string;

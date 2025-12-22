@@ -64,7 +64,7 @@ export interface MemoryHandle$instance {
 
 
 export const MemoryHandle: {
-    new(pointer: ptr<void>, handle: GCHandle, pinnable: IPinnable | undefined): MemoryHandle;
+    new(pointer: ptr<void>, handle: GCHandle, pinnable: IPinnable): MemoryHandle;
 };
 
 
@@ -181,7 +181,7 @@ export interface StandardFormat$instance {
     Equals(obj: unknown): boolean;
     Equals(other: StandardFormat): boolean;
     GetHashCode(): int;
-    ToString(): string | undefined;
+    ToString(): string;
 }
 
 

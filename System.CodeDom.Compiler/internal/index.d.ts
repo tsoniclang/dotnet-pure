@@ -21,7 +21,7 @@ export interface GeneratedCodeAttribute$instance extends Attribute {
 
 
 export const GeneratedCodeAttribute: {
-    new(tool: string | undefined, version: string | undefined): GeneratedCodeAttribute;
+    new(tool: string, version: string): GeneratedCodeAttribute;
 };
 
 
@@ -48,7 +48,7 @@ export interface IndentedTextWriter$instance extends TextWriter {
     Write(value: int): void;
     Write(value: long): void;
     Write(value: unknown): void;
-    Write(format: string, arg0: unknown | undefined): void;
+    Write(format: string, arg0: unknown): void;
     Write(format: string, arg0: unknown, arg1: unknown): void;
     Write(format: string, ...arg: unknown[]): void;
     Write(format: string, arg: ReadOnlySpan_1<unknown>): void;
@@ -61,10 +61,10 @@ export interface IndentedTextWriter$instance extends TextWriter {
     Write(format: string, arg: ReadOnlySpan_1<unknown>): void;
     WriteAsync(value: char): Task;
     WriteAsync(buffer: char[], index: int, count: int): Task;
-    WriteAsync(value: string | undefined): Task;
+    WriteAsync(value: string): Task;
     WriteAsync(buffer: ReadOnlyMemory_1<System_Internal.Char>, cancellationToken?: CancellationToken): Task;
-    WriteAsync(value: StringBuilder | undefined, cancellationToken?: CancellationToken): Task;
-    WriteAsync(buffer: char[] | undefined): Task;
+    WriteAsync(value: StringBuilder, cancellationToken?: CancellationToken): Task;
+    WriteAsync(buffer: char[]): Task;
     WriteAsync(buffer: ReadOnlyMemory_1<System_Internal.Char>, cancellationToken?: CancellationToken): Task;
     WriteLine(s: string): void;
     WriteLine(): void;
@@ -77,7 +77,7 @@ export interface IndentedTextWriter$instance extends TextWriter {
     WriteLine(value: int): void;
     WriteLine(value: long): void;
     WriteLine(value: unknown): void;
-    WriteLine(format: string, arg0: unknown | undefined): void;
+    WriteLine(format: string, arg0: unknown): void;
     WriteLine(format: string, arg0: unknown, arg1: unknown): void;
     WriteLine(format: string, ...arg: unknown[]): void;
     WriteLine(format: string, arg: ReadOnlySpan_1<unknown>): void;
@@ -91,13 +91,13 @@ export interface IndentedTextWriter$instance extends TextWriter {
     WriteLineAsync(): Task;
     WriteLineAsync(value: char): Task;
     WriteLineAsync(buffer: char[], index: int, count: int): Task;
-    WriteLineAsync(value: string | undefined): Task;
+    WriteLineAsync(value: string): Task;
     WriteLineAsync(buffer: ReadOnlyMemory_1<System_Internal.Char>, cancellationToken?: CancellationToken): Task;
-    WriteLineAsync(value: StringBuilder | undefined, cancellationToken?: CancellationToken): Task;
-    WriteLineAsync(buffer: char[] | undefined): Task;
+    WriteLineAsync(value: StringBuilder, cancellationToken?: CancellationToken): Task;
+    WriteLineAsync(buffer: char[]): Task;
     WriteLineAsync(buffer: ReadOnlyMemory_1<System_Internal.Char>, cancellationToken?: CancellationToken): Task;
     WriteLineNoTabs(s: string): void;
-    WriteLineNoTabsAsync(s: string | undefined): Task;
+    WriteLineNoTabsAsync(s: string): Task;
 }
 
 

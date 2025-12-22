@@ -388,7 +388,7 @@ export interface Point$instance {
     GetHashCode(): int;
     Offset(dx: int, dy: int): void;
     Offset(p: Point): void;
-    ToString(): string | undefined;
+    ToString(): string;
 }
 
 
@@ -422,7 +422,7 @@ export interface PointF$instance {
     Equals(obj: unknown): boolean;
     Equals(other: PointF): boolean;
     GetHashCode(): int;
-    ToString(): string | undefined;
+    ToString(): string;
     ToVector2(): Vector2;
 }
 
@@ -472,7 +472,7 @@ export interface Rectangle$instance {
     IntersectsWith(rect: Rectangle): boolean;
     Offset(pos: Point): void;
     Offset(x: int, y: int): void;
-    ToString(): string | undefined;
+    ToString(): string;
 }
 
 
@@ -524,7 +524,7 @@ export interface RectangleF$instance {
     IntersectsWith(rect: RectangleF): boolean;
     Offset(pos: PointF): void;
     Offset(x: float, y: float): void;
-    ToString(): string | undefined;
+    ToString(): string;
     ToVector4(): Vector4;
 }
 
@@ -558,7 +558,7 @@ export interface Size$instance {
     Equals(obj: unknown): boolean;
     Equals(other: Size): boolean;
     GetHashCode(): int;
-    ToString(): string | undefined;
+    ToString(): string;
 }
 
 
@@ -593,7 +593,7 @@ export interface SizeF$instance {
     GetHashCode(): int;
     ToPointF(): PointF;
     ToSize(): Size;
-    ToString(): string | undefined;
+    ToString(): string;
     ToVector2(): Vector2;
 }
 
@@ -620,17 +620,17 @@ export type SizeF = SizeF$instance & __SizeF$views;
 
 
 export interface ColorConverter$instance extends TypeConverter {
-    CanConvertFrom(context: ITypeDescriptorContext | undefined, sourceType: Type | undefined): boolean;
-    CanConvertFrom(sourceType: Type | undefined): boolean;
-    CanConvertTo(context: ITypeDescriptorContext | undefined, destinationType: Type | undefined): boolean;
-    CanConvertTo(destinationType: Type | undefined): boolean;
-    ConvertFrom(context: ITypeDescriptorContext | undefined, culture: CultureInfo | undefined, value: unknown): unknown | undefined;
-    ConvertFrom(value: unknown | undefined): unknown | undefined;
-    ConvertTo(context: ITypeDescriptorContext | undefined, culture: CultureInfo | undefined, value: unknown | undefined, destinationType: Type): unknown | undefined;
-    ConvertTo(value: unknown | undefined, destinationType: Type): unknown | undefined;
-    GetStandardValues(context: ITypeDescriptorContext | undefined): TypeConverter_StandardValuesCollection | undefined;
+    CanConvertFrom(context: ITypeDescriptorContext, sourceType: Type): boolean;
+    CanConvertFrom(sourceType: Type): boolean;
+    CanConvertTo(context: ITypeDescriptorContext, destinationType: Type): boolean;
+    CanConvertTo(destinationType: Type): boolean;
+    ConvertFrom(context: ITypeDescriptorContext, culture: CultureInfo, value: unknown): unknown | undefined;
+    ConvertFrom(value: unknown): unknown | undefined;
+    ConvertTo(context: ITypeDescriptorContext, culture: CultureInfo, value: unknown, destinationType: Type): unknown | undefined;
+    ConvertTo(value: unknown, destinationType: Type): unknown | undefined;
+    GetStandardValues(context: ITypeDescriptorContext): TypeConverter_StandardValuesCollection;
     GetStandardValues(): ICollection | undefined;
-    GetStandardValuesSupported(context: ITypeDescriptorContext | undefined): boolean;
+    GetStandardValuesSupported(context: ITypeDescriptorContext): boolean;
     GetStandardValuesSupported(): boolean;
 }
 
@@ -643,22 +643,22 @@ export const ColorConverter: {
 export type ColorConverter = ColorConverter$instance;
 
 export interface PointConverter$instance extends TypeConverter {
-    CanConvertFrom(context: ITypeDescriptorContext | undefined, sourceType: Type | undefined): boolean;
-    CanConvertFrom(sourceType: Type | undefined): boolean;
-    CanConvertTo(context: ITypeDescriptorContext | undefined, destinationType: Type | undefined): boolean;
-    CanConvertTo(destinationType: Type | undefined): boolean;
-    ConvertFrom(context: ITypeDescriptorContext | undefined, culture: CultureInfo | undefined, value: unknown): unknown | undefined;
-    ConvertFrom(value: unknown | undefined): unknown | undefined;
-    ConvertTo(context: ITypeDescriptorContext | undefined, culture: CultureInfo | undefined, value: unknown | undefined, destinationType: Type): unknown | undefined;
-    ConvertTo(value: unknown | undefined, destinationType: Type): unknown | undefined;
-    CreateInstance(context: ITypeDescriptorContext | undefined, propertyValues: IDictionary | undefined): unknown | undefined;
-    CreateInstance(propertyValues: IDictionary | undefined): unknown | undefined;
-    GetCreateInstanceSupported(context: ITypeDescriptorContext | undefined): boolean;
+    CanConvertFrom(context: ITypeDescriptorContext, sourceType: Type): boolean;
+    CanConvertFrom(sourceType: Type): boolean;
+    CanConvertTo(context: ITypeDescriptorContext, destinationType: Type): boolean;
+    CanConvertTo(destinationType: Type): boolean;
+    ConvertFrom(context: ITypeDescriptorContext, culture: CultureInfo, value: unknown): unknown | undefined;
+    ConvertFrom(value: unknown): unknown | undefined;
+    ConvertTo(context: ITypeDescriptorContext, culture: CultureInfo, value: unknown, destinationType: Type): unknown | undefined;
+    ConvertTo(value: unknown, destinationType: Type): unknown | undefined;
+    CreateInstance(context: ITypeDescriptorContext, propertyValues: IDictionary): unknown;
+    CreateInstance(propertyValues: IDictionary): unknown | undefined;
+    GetCreateInstanceSupported(context: ITypeDescriptorContext): boolean;
     GetCreateInstanceSupported(): boolean;
-    GetProperties(context: ITypeDescriptorContext | undefined, value: unknown | undefined, attributes: Attribute[] | undefined): PropertyDescriptorCollection;
-    GetProperties(value: unknown | undefined): PropertyDescriptorCollection | undefined;
-    GetProperties(context: ITypeDescriptorContext | undefined, value: unknown): PropertyDescriptorCollection | undefined;
-    GetPropertiesSupported(context: ITypeDescriptorContext | undefined): boolean;
+    GetProperties(context: ITypeDescriptorContext, value: unknown, attributes: Attribute[]): PropertyDescriptorCollection;
+    GetProperties(value: unknown): PropertyDescriptorCollection | undefined;
+    GetProperties(context: ITypeDescriptorContext, value: unknown): PropertyDescriptorCollection | undefined;
+    GetPropertiesSupported(context: ITypeDescriptorContext): boolean;
     GetPropertiesSupported(): boolean;
 }
 
@@ -671,22 +671,22 @@ export const PointConverter: {
 export type PointConverter = PointConverter$instance;
 
 export interface RectangleConverter$instance extends TypeConverter {
-    CanConvertFrom(context: ITypeDescriptorContext | undefined, sourceType: Type | undefined): boolean;
-    CanConvertFrom(sourceType: Type | undefined): boolean;
-    CanConvertTo(context: ITypeDescriptorContext | undefined, destinationType: Type | undefined): boolean;
-    CanConvertTo(destinationType: Type | undefined): boolean;
-    ConvertFrom(context: ITypeDescriptorContext | undefined, culture: CultureInfo | undefined, value: unknown): unknown | undefined;
-    ConvertFrom(value: unknown | undefined): unknown | undefined;
-    ConvertTo(context: ITypeDescriptorContext | undefined, culture: CultureInfo | undefined, value: unknown | undefined, destinationType: Type): unknown | undefined;
-    ConvertTo(value: unknown | undefined, destinationType: Type): unknown | undefined;
-    CreateInstance(context: ITypeDescriptorContext | undefined, propertyValues: IDictionary | undefined): unknown | undefined;
-    CreateInstance(propertyValues: IDictionary | undefined): unknown | undefined;
-    GetCreateInstanceSupported(context: ITypeDescriptorContext | undefined): boolean;
+    CanConvertFrom(context: ITypeDescriptorContext, sourceType: Type): boolean;
+    CanConvertFrom(sourceType: Type): boolean;
+    CanConvertTo(context: ITypeDescriptorContext, destinationType: Type): boolean;
+    CanConvertTo(destinationType: Type): boolean;
+    ConvertFrom(context: ITypeDescriptorContext, culture: CultureInfo, value: unknown): unknown | undefined;
+    ConvertFrom(value: unknown): unknown | undefined;
+    ConvertTo(context: ITypeDescriptorContext, culture: CultureInfo, value: unknown, destinationType: Type): unknown | undefined;
+    ConvertTo(value: unknown, destinationType: Type): unknown | undefined;
+    CreateInstance(context: ITypeDescriptorContext, propertyValues: IDictionary): unknown;
+    CreateInstance(propertyValues: IDictionary): unknown | undefined;
+    GetCreateInstanceSupported(context: ITypeDescriptorContext): boolean;
     GetCreateInstanceSupported(): boolean;
-    GetProperties(context: ITypeDescriptorContext | undefined, value: unknown | undefined, attributes: Attribute[] | undefined): PropertyDescriptorCollection;
-    GetProperties(value: unknown | undefined): PropertyDescriptorCollection | undefined;
-    GetProperties(context: ITypeDescriptorContext | undefined, value: unknown): PropertyDescriptorCollection | undefined;
-    GetPropertiesSupported(context: ITypeDescriptorContext | undefined): boolean;
+    GetProperties(context: ITypeDescriptorContext, value: unknown, attributes: Attribute[]): PropertyDescriptorCollection;
+    GetProperties(value: unknown): PropertyDescriptorCollection | undefined;
+    GetProperties(context: ITypeDescriptorContext, value: unknown): PropertyDescriptorCollection | undefined;
+    GetPropertiesSupported(context: ITypeDescriptorContext): boolean;
     GetPropertiesSupported(): boolean;
 }
 
@@ -699,22 +699,22 @@ export const RectangleConverter: {
 export type RectangleConverter = RectangleConverter$instance;
 
 export interface SizeConverter$instance extends TypeConverter {
-    CanConvertFrom(context: ITypeDescriptorContext | undefined, sourceType: Type | undefined): boolean;
-    CanConvertFrom(sourceType: Type | undefined): boolean;
-    CanConvertTo(context: ITypeDescriptorContext | undefined, destinationType: Type | undefined): boolean;
-    CanConvertTo(destinationType: Type | undefined): boolean;
-    ConvertFrom(context: ITypeDescriptorContext | undefined, culture: CultureInfo | undefined, value: unknown): unknown | undefined;
-    ConvertFrom(value: unknown | undefined): unknown | undefined;
-    ConvertTo(context: ITypeDescriptorContext | undefined, culture: CultureInfo | undefined, value: unknown | undefined, destinationType: Type): unknown | undefined;
-    ConvertTo(value: unknown | undefined, destinationType: Type): unknown | undefined;
-    CreateInstance(context: ITypeDescriptorContext | undefined, propertyValues: IDictionary | undefined): unknown | undefined;
-    CreateInstance(propertyValues: IDictionary | undefined): unknown | undefined;
-    GetCreateInstanceSupported(context: ITypeDescriptorContext | undefined): boolean;
+    CanConvertFrom(context: ITypeDescriptorContext, sourceType: Type): boolean;
+    CanConvertFrom(sourceType: Type): boolean;
+    CanConvertTo(context: ITypeDescriptorContext, destinationType: Type): boolean;
+    CanConvertTo(destinationType: Type): boolean;
+    ConvertFrom(context: ITypeDescriptorContext, culture: CultureInfo, value: unknown): unknown | undefined;
+    ConvertFrom(value: unknown): unknown | undefined;
+    ConvertTo(context: ITypeDescriptorContext, culture: CultureInfo, value: unknown, destinationType: Type): unknown | undefined;
+    ConvertTo(value: unknown, destinationType: Type): unknown | undefined;
+    CreateInstance(context: ITypeDescriptorContext, propertyValues: IDictionary): unknown;
+    CreateInstance(propertyValues: IDictionary): unknown | undefined;
+    GetCreateInstanceSupported(context: ITypeDescriptorContext): boolean;
     GetCreateInstanceSupported(): boolean;
-    GetProperties(context: ITypeDescriptorContext | undefined, value: unknown | undefined, attributes: Attribute[] | undefined): PropertyDescriptorCollection | undefined;
-    GetProperties(value: unknown | undefined): PropertyDescriptorCollection | undefined;
-    GetProperties(context: ITypeDescriptorContext | undefined, value: unknown): PropertyDescriptorCollection | undefined;
-    GetPropertiesSupported(context: ITypeDescriptorContext | undefined): boolean;
+    GetProperties(context: ITypeDescriptorContext, value: unknown, attributes: Attribute[]): PropertyDescriptorCollection;
+    GetProperties(value: unknown): PropertyDescriptorCollection | undefined;
+    GetProperties(context: ITypeDescriptorContext, value: unknown): PropertyDescriptorCollection | undefined;
+    GetPropertiesSupported(context: ITypeDescriptorContext): boolean;
     GetPropertiesSupported(): boolean;
 }
 
@@ -727,22 +727,22 @@ export const SizeConverter: {
 export type SizeConverter = SizeConverter$instance;
 
 export interface SizeFConverter$instance extends TypeConverter {
-    CanConvertFrom(context: ITypeDescriptorContext | undefined, sourceType: Type | undefined): boolean;
-    CanConvertFrom(sourceType: Type | undefined): boolean;
-    CanConvertTo(context: ITypeDescriptorContext | undefined, destinationType: Type | undefined): boolean;
-    CanConvertTo(destinationType: Type | undefined): boolean;
-    ConvertFrom(context: ITypeDescriptorContext | undefined, culture: CultureInfo | undefined, value: unknown): unknown | undefined;
-    ConvertFrom(value: unknown | undefined): unknown | undefined;
-    ConvertTo(context: ITypeDescriptorContext | undefined, culture: CultureInfo | undefined, value: unknown | undefined, destinationType: Type): unknown | undefined;
-    ConvertTo(value: unknown | undefined, destinationType: Type): unknown | undefined;
-    CreateInstance(context: ITypeDescriptorContext | undefined, propertyValues: IDictionary | undefined): unknown | undefined;
-    CreateInstance(propertyValues: IDictionary | undefined): unknown | undefined;
-    GetCreateInstanceSupported(context: ITypeDescriptorContext | undefined): boolean;
+    CanConvertFrom(context: ITypeDescriptorContext, sourceType: Type): boolean;
+    CanConvertFrom(sourceType: Type): boolean;
+    CanConvertTo(context: ITypeDescriptorContext, destinationType: Type): boolean;
+    CanConvertTo(destinationType: Type): boolean;
+    ConvertFrom(context: ITypeDescriptorContext, culture: CultureInfo, value: unknown): unknown | undefined;
+    ConvertFrom(value: unknown): unknown | undefined;
+    ConvertTo(context: ITypeDescriptorContext, culture: CultureInfo, value: unknown, destinationType: Type): unknown | undefined;
+    ConvertTo(value: unknown, destinationType: Type): unknown | undefined;
+    CreateInstance(context: ITypeDescriptorContext, propertyValues: IDictionary): unknown;
+    CreateInstance(propertyValues: IDictionary): unknown | undefined;
+    GetCreateInstanceSupported(context: ITypeDescriptorContext): boolean;
     GetCreateInstanceSupported(): boolean;
-    GetProperties(context: ITypeDescriptorContext | undefined, value: unknown | undefined, attributes: Attribute[] | undefined): PropertyDescriptorCollection | undefined;
-    GetProperties(value: unknown | undefined): PropertyDescriptorCollection | undefined;
-    GetProperties(context: ITypeDescriptorContext | undefined, value: unknown): PropertyDescriptorCollection | undefined;
-    GetPropertiesSupported(context: ITypeDescriptorContext | undefined): boolean;
+    GetProperties(context: ITypeDescriptorContext, value: unknown, attributes: Attribute[]): PropertyDescriptorCollection;
+    GetProperties(value: unknown): PropertyDescriptorCollection | undefined;
+    GetProperties(context: ITypeDescriptorContext, value: unknown): PropertyDescriptorCollection | undefined;
+    GetPropertiesSupported(context: ITypeDescriptorContext): boolean;
     GetPropertiesSupported(): boolean;
 }
 

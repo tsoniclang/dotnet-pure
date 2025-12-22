@@ -367,7 +367,7 @@ export interface ManagedPEBuilder$instance extends PEBuilder {
 
 
 export const ManagedPEBuilder: {
-    new(header: PEHeaderBuilder, metadataRootBuilder: MetadataRootBuilder, ilStream: BlobBuilder, mappedFieldData: BlobBuilder, managedResources: BlobBuilder, nativeResources: ResourceSectionBuilder, debugDirectoryBuilder: DebugDirectoryBuilder, strongNameSignatureSize: int, entryPoint: MethodDefinitionHandle, flags: CorFlags, deterministicIdProvider: Func_2<IEnumerable_1<Blob>, BlobContentId> | undefined): ManagedPEBuilder;
+    new(header: PEHeaderBuilder, metadataRootBuilder: MetadataRootBuilder, ilStream: BlobBuilder, mappedFieldData: BlobBuilder, managedResources: BlobBuilder, nativeResources: ResourceSectionBuilder, debugDirectoryBuilder: DebugDirectoryBuilder, strongNameSignatureSize: int, entryPoint: MethodDefinitionHandle, flags: CorFlags, deterministicIdProvider: Func_2<IEnumerable_1<Blob>, BlobContentId>): ManagedPEBuilder;
     readonly ManagedResourcesDataAlignment: int;
     readonly MappedFieldDataAlignment: int;
 };
@@ -543,7 +543,7 @@ export interface PEReader$instance {
     ReadDebugDirectory(): ImmutableArray_1<DebugDirectoryEntry>;
     ReadEmbeddedPortablePdbDebugDirectoryData(entry: DebugDirectoryEntry): MetadataReaderProvider;
     ReadPdbChecksumDebugDirectoryData(entry: DebugDirectoryEntry): PdbChecksumDebugDirectoryData;
-    TryOpenAssociatedPortablePdb(peImagePath: string, pdbFileStreamProvider: Func_2<System_Internal.String, Stream | undefined>, pdbReaderProvider: MetadataReaderProvider, pdbPath: string): boolean;
+    TryOpenAssociatedPortablePdb(peImagePath: string, pdbFileStreamProvider: Func_2<System_Internal.String, Stream>, pdbReaderProvider: MetadataReaderProvider, pdbPath: string): boolean;
 }
 
 

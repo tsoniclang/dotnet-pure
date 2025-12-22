@@ -18,16 +18,17 @@ export interface BinaryFormatter$instance {
     Binder: SerializationBinder;
     Context: StreamingContext;
     FilterLevel: TypeFilterLevel;
-    SurrogateSelector: ISurrogateSelector | undefined;
+    get SurrogateSelector(): ISurrogateSelector | undefined;
+    set SurrogateSelector(value: ISurrogateSelector);
     TypeFormat: FormatterTypeStyle;
-    Deserialize(serializationStream: Stream | undefined): unknown;
-    Serialize(serializationStream: Stream | undefined, graph: unknown | undefined): void;
+    Deserialize(serializationStream: Stream): unknown;
+    Serialize(serializationStream: Stream, graph: unknown): void;
 }
 
 
 export const BinaryFormatter: {
     new(): BinaryFormatter;
-    new(selector: ISurrogateSelector | undefined, context: StreamingContext): BinaryFormatter;
+    new(selector: ISurrogateSelector, context: StreamingContext): BinaryFormatter;
 };
 
 

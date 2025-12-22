@@ -133,7 +133,7 @@ export type JsonConstructorAttribute = JsonConstructorAttribute$instance;
 
 export interface JsonConverter$instance {
     readonly Type: Type;
-    CanConvert(typeToConvert: Type | undefined): boolean;
+    CanConvert(typeToConvert: Type): boolean;
 }
 
 
@@ -175,7 +175,7 @@ export type JsonConverterAttribute = JsonConverterAttribute$instance;
 
 export interface JsonConverterFactory$instance extends JsonConverter {
     readonly Type: Type;
-    CreateConverter(typeToConvert: Type | undefined, options: JsonSerializerOptions | undefined): JsonConverter | undefined;
+    CreateConverter(typeToConvert: Type, options: JsonSerializerOptions): JsonConverter | undefined;
 }
 
 
@@ -322,12 +322,13 @@ export type JsonRequiredAttribute = JsonRequiredAttribute$instance;
 
 export interface JsonSerializableAttribute$instance extends JsonAttribute {
     GenerationMode: JsonSourceGenerationMode;
-    TypeInfoPropertyName: string | undefined;
+    get TypeInfoPropertyName(): string | undefined;
+    set TypeInfoPropertyName(value: string);
 }
 
 
 export const JsonSerializableAttribute: {
-    new(type_: Type | undefined): JsonSerializableAttribute;
+    new(type_: Type): JsonSerializableAttribute;
 };
 
 

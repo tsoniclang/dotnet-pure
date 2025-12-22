@@ -41,9 +41,9 @@ export interface IPermission$instance extends ISecurityEncodable {
     Copy(): IPermission;
     Demand(): void;
     FromXml(e: SecurityElement): void;
-    Intersect(target: IPermission | undefined): IPermission | undefined;
-    IsSubsetOf(target: IPermission | undefined): boolean;
-    ToXml(): SecurityElement;
+    Intersect(target: IPermission): IPermission | undefined;
+    IsSubsetOf(target: IPermission): boolean;
+    ToXml(): SecurityElement | undefined;
 }
 
 
@@ -53,7 +53,7 @@ export type IPermission = IPermission$instance;
 
 export interface ISecurityEncodable$instance {
     FromXml(e: SecurityElement): void;
-    ToXml(): SecurityElement;
+    ToXml(): SecurityElement | undefined;
 }
 
 
@@ -83,35 +83,35 @@ export interface PermissionSet$instance {
     readonly IsReadOnly: boolean;
     readonly IsSynchronized: boolean;
     readonly SyncRoot: unknown;
-    AddPermission(perm: IPermission | undefined): IPermission | undefined;
+    AddPermission(perm: IPermission): IPermission | undefined;
     Assert(): void;
     ContainsNonCodeAccessPermissions(): boolean;
     Copy(): PermissionSet;
-    CopyTo(array: ClrArray | undefined, index: int): void;
+    CopyTo(array: ClrArray, index: int): void;
     Demand(): void;
     Deny(): void;
-    Equals(o: unknown | undefined): boolean;
-    FromXml(et: SecurityElement | undefined): void;
+    Equals(o: unknown): boolean;
+    FromXml(et: SecurityElement): void;
     GetEnumerator(): IEnumerator;
     GetHashCode(): int;
-    GetPermission(permClass: Type | undefined): IPermission | undefined;
-    Intersect(other: PermissionSet | undefined): PermissionSet | undefined;
+    GetPermission(permClass: Type): IPermission | undefined;
+    Intersect(other: PermissionSet): PermissionSet | undefined;
     IsEmpty(): boolean;
-    IsSubsetOf(target: PermissionSet | undefined): boolean;
+    IsSubsetOf(target: PermissionSet): boolean;
     IsUnrestricted(): boolean;
     PermitOnly(): void;
-    RemovePermission(permClass: Type | undefined): IPermission | undefined;
-    SetPermission(perm: IPermission | undefined): IPermission | undefined;
-    ToString(): string | undefined;
-    ToXml(): SecurityElement;
-    Union(other: PermissionSet | undefined): PermissionSet | undefined;
+    RemovePermission(permClass: Type): IPermission | undefined;
+    SetPermission(perm: IPermission): IPermission | undefined;
+    ToString(): string;
+    ToXml(): SecurityElement | undefined;
+    Union(other: PermissionSet): PermissionSet | undefined;
 }
 
 
 export const PermissionSet: {
     new(state: PermissionState): PermissionSet;
-    new(permSet: PermissionSet | undefined): PermissionSet;
-    ConvertPermissionSet(inFormat: string | undefined, inData: byte[] | undefined, outFormat: string | undefined): byte[] | undefined;
+    new(permSet: PermissionSet): PermissionSet;
+    ConvertPermissionSet(inFormat: string, inData: byte[], outFormat: string): byte[];
     RevertAssert(): void;
 };
 
@@ -124,7 +124,7 @@ export interface __PermissionSet$views {
     As_IStackWalk(): IStackWalk$instance;
 }
 
-export interface PermissionSet$instance extends System_Runtime_Serialization_Internal.IDeserializationCallback$instance, IStackWalk$instance {}
+export interface PermissionSet$instance extends System_Runtime_Serialization_Internal.IDeserializationCallback$instance, ISecurityEncodable$instance, IStackWalk$instance {}
 
 export type PermissionSet = PermissionSet$instance & __PermissionSet$views;
 
@@ -173,56 +173,66 @@ export type SecurityCriticalAttribute = SecurityCriticalAttribute$instance;
 
 export interface SecurityElement$instance {
     Attributes: Hashtable;
-    Children: ArrayList | undefined;
+    get Children(): ArrayList | undefined;
+    set Children(value: ArrayList);
     Tag: string;
     Text: string;
-    AddAttribute(name: string | undefined, value: string | undefined): void;
-    AddChild(child: SecurityElement | undefined): void;
-    Attribute(name: string | undefined): string | undefined;
+    AddAttribute(name: string, value: string): void;
+    AddChild(child: SecurityElement): void;
+    Attribute(name: string): string | undefined;
     Copy(): SecurityElement;
-    Equal(other: SecurityElement | undefined): boolean;
-    SearchForChildByTag(tag: string | undefined): SecurityElement | undefined;
-    SearchForTextOfTag(tag: string | undefined): string | undefined;
-    ToString(): string | undefined;
+    Equal(other: SecurityElement): boolean;
+    SearchForChildByTag(tag: string): SecurityElement | undefined;
+    SearchForTextOfTag(tag: string): string | undefined;
+    ToString(): string;
 }
 
 
 export const SecurityElement: {
-    new(tag: string | undefined): SecurityElement;
-    new(tag: string | undefined, text: string | undefined): SecurityElement;
-    Escape(str: string | undefined): string | undefined;
-    FromString(xml: string | undefined): SecurityElement | undefined;
-    IsValidAttributeName(name: string | undefined): boolean;
-    IsValidAttributeValue(value: string | undefined): boolean;
-    IsValidTag(tag: string | undefined): boolean;
-    IsValidText(text: string | undefined): boolean;
+    new(tag: string): SecurityElement;
+    new(tag: string, text: string): SecurityElement;
+    Escape(str: string): string | undefined;
+    FromString(xml: string): SecurityElement | undefined;
+    IsValidAttributeName(name: string): boolean;
+    IsValidAttributeValue(value: string): boolean;
+    IsValidTag(tag: string): boolean;
+    IsValidText(text: string): boolean;
 };
 
 
 export type SecurityElement = SecurityElement$instance;
 
 export interface SecurityException$instance extends SystemException {
-    Demanded: unknown | undefined;
-    DenySetInstance: unknown | undefined;
-    FailedAssemblyInfo: AssemblyName | undefined;
-    GrantedSet: string | undefined;
+    get Demanded(): unknown | undefined;
+    set Demanded(value: unknown);
+    get DenySetInstance(): unknown | undefined;
+    set DenySetInstance(value: unknown);
+    get FailedAssemblyInfo(): AssemblyName | undefined;
+    set FailedAssemblyInfo(value: AssemblyName);
+    get GrantedSet(): string | undefined;
+    set GrantedSet(value: string);
     Method: MethodInfo;
-    PermissionState: string | undefined;
-    PermissionType: Type | undefined;
-    PermitOnlySetInstance: unknown | undefined;
-    RefusedSet: string | undefined;
-    Url: string | undefined;
-    GetObjectData(info: SerializationInfo | undefined, context: StreamingContext): void;
-    ToString(): string | undefined;
+    get PermissionState(): string | undefined;
+    set PermissionState(value: string);
+    get PermissionType(): Type | undefined;
+    set PermissionType(value: Type);
+    get PermitOnlySetInstance(): unknown | undefined;
+    set PermitOnlySetInstance(value: unknown);
+    get RefusedSet(): string | undefined;
+    set RefusedSet(value: string);
+    get Url(): string | undefined;
+    set Url(value: string);
+    GetObjectData(info: SerializationInfo, context: StreamingContext): void;
+    ToString(): string;
 }
 
 
 export const SecurityException: {
     new(): SecurityException;
-    new(message: string | undefined): SecurityException;
-    new(message: string | undefined, inner: Exception | undefined): SecurityException;
-    new(message: string | undefined, type_: Type | undefined): SecurityException;
-    new(message: string | undefined, type_: Type | undefined, state: string | undefined): SecurityException;
+    new(message: string): SecurityException;
+    new(message: string, inner: Exception): SecurityException;
+    new(message: string, type_: Type): SecurityException;
+    new(message: string, type_: Type, state: string): SecurityException;
 };
 
 
@@ -308,8 +318,8 @@ export interface VerificationException$instance extends SystemException {
 
 export const VerificationException: {
     new(): VerificationException;
-    new(message: string | undefined): VerificationException;
-    new(message: string | undefined, innerException: Exception | undefined): VerificationException;
+    new(message: string): VerificationException;
+    new(message: string, innerException: Exception): VerificationException;
 };
 
 

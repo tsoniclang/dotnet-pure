@@ -1984,20 +1984,6 @@
           "isExtensionMethod": false
         },
         {
-          "stableId": "System.Private.CoreLib:System.Collections.Generic.ICollection\u00601::Contains(T):System.Boolean",
-          "clrName": "Contains",
-          "tsEmitName": "Contains",
-          "metadataToken": 100704540,
-          "canonicalSignature": "(T):System.Boolean",
-          "normalizedSignature": "Contains|(T):System.Boolean|static=false",
-          "emitScope": "ClassSurface",
-          "arity": 0,
-          "parameterCount": 1,
-          "declaringClrType": "System.Collections.Generic.ICollection\u00601",
-          "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
-        },
-        {
           "stableId": "System.Private.CoreLib:System.Collections.Generic.ICollection\u00601::CopyTo(T[],System.Int32):System.Void",
           "clrName": "CopyTo",
           "tsEmitName": "CopyTo",
@@ -2122,16 +2108,6 @@
             "declaringClrType": "System.Collections.Generic.ICollection\u00601",
             "declaringAssemblyName": "System.Private.CoreLib",
             "metadataToken": 100704539
-          }
-        },
-        {
-          "tsName": "Contains",
-          "isStatic": false,
-          "tsSignatureId": "Contains|(T):System.Boolean|static=false",
-          "target": {
-            "declaringClrType": "System.Collections.Generic.ICollection\u00601",
-            "declaringAssemblyName": "System.Private.CoreLib",
-            "metadataToken": 100704540
           }
         },
         {
@@ -29317,20 +29293,6 @@
           "isExtensionMethod": false
         },
         {
-          "stableId": "System.Private.CoreLib:System.Collections.Generic.ICollection\u00601::Contains(T):System.Boolean",
-          "clrName": "Contains",
-          "tsEmitName": "Contains$view",
-          "metadataToken": 100704540,
-          "canonicalSignature": "(T):System.Boolean",
-          "normalizedSignature": "Contains|(T):System.Boolean|static=false",
-          "emitScope": "ViewOnly",
-          "arity": 0,
-          "parameterCount": 1,
-          "declaringClrType": "System.Collections.Generic.ICollection\u00601",
-          "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
-        },
-        {
           "stableId": "System.Private.CoreLib:System.Collections.Generic.ICollection\u00601::CopyTo(T[],System.Int32):System.Void",
           "clrName": "CopyTo",
           "tsEmitName": "CopyTo$view",
@@ -29340,6 +29302,20 @@
           "emitScope": "ViewOnly",
           "arity": 0,
           "parameterCount": 2,
+          "declaringClrType": "System.Collections.Generic.ICollection\u00601",
+          "declaringAssemblyName": "System.Private.CoreLib",
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.Private.CoreLib:System.Collections.Generic.ICollection\u00601::Contains(T):System.Boolean",
+          "clrName": "Contains",
+          "tsEmitName": "Contains$view",
+          "metadataToken": 100704540,
+          "canonicalSignature": "(T):System.Boolean",
+          "normalizedSignature": "Contains|(T):System.Boolean|static=false",
+          "emitScope": "ViewOnly",
+          "arity": 0,
+          "parameterCount": 1,
           "declaringClrType": "System.Collections.Generic.ICollection\u00601",
           "declaringAssemblyName": "System.Private.CoreLib",
           "isExtensionMethod": false
@@ -29901,16 +29877,6 @@
           }
         },
         {
-          "tsName": "Contains$view",
-          "isStatic": false,
-          "tsSignatureId": "Contains|(T):System.Boolean|static=false",
-          "target": {
-            "declaringClrType": "System.Collections.Generic.ICollection\u00601",
-            "declaringAssemblyName": "System.Private.CoreLib",
-            "metadataToken": 100704540
-          }
-        },
-        {
           "tsName": "CopyTo$view",
           "isStatic": false,
           "tsSignatureId": "CopyTo|(T[],System.Int32):System.Void|static=false",
@@ -29918,6 +29884,16 @@
             "declaringClrType": "System.Collections.Generic.ICollection\u00601",
             "declaringAssemblyName": "System.Private.CoreLib",
             "metadataToken": 100704541
+          }
+        },
+        {
+          "tsName": "Contains$view",
+          "isStatic": false,
+          "tsSignatureId": "Contains|(T):System.Boolean|static=false",
+          "target": {
+            "declaringClrType": "System.Collections.Generic.ICollection\u00601",
+            "declaringAssemblyName": "System.Private.CoreLib",
+            "metadataToken": 100704540
           }
         },
         {

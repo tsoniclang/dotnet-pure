@@ -186,7 +186,7 @@ export type IIdentity = IIdentity$instance;
 
 export interface IPrincipal$instance {
     readonly Identity: IIdentity | undefined;
-    IsInRole(role: string | undefined): boolean;
+    IsInRole(role: string): boolean;
 }
 
 
@@ -221,7 +221,7 @@ export interface GenericPrincipal$instance extends ClaimsPrincipal {
 
 
 export const GenericPrincipal: {
-    new(identity: IIdentity, roles: string[] | undefined): GenericPrincipal;
+    new(identity: IIdentity, roles: string[]): GenericPrincipal;
 };
 
 
@@ -386,7 +386,7 @@ export const WindowsIdentity: {
     readonly DefaultIssuer: string;
     GetAnonymous(): WindowsIdentity;
     GetCurrent(): WindowsIdentity;
-    GetCurrent(ifImpersonating: boolean): WindowsIdentity;
+    GetCurrent(ifImpersonating: boolean): WindowsIdentity | undefined;
     GetCurrent(desiredAccess: TokenAccessLevels): WindowsIdentity;
     RunImpersonated<T>(safeAccessTokenHandle: SafeAccessTokenHandle, func: Func_1<T>): T;
     RunImpersonated(safeAccessTokenHandle: SafeAccessTokenHandle, action: Action): void;

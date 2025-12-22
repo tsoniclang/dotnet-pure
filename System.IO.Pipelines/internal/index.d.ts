@@ -95,7 +95,7 @@ export interface PipeReader$instance {
     CompleteAsync(exception?: Exception): ValueTask;
     CopyToAsync(destination: PipeWriter, cancellationToken?: CancellationToken): Task;
     CopyToAsync(destination: Stream, cancellationToken?: CancellationToken): Task;
-    OnWriterCompleted(callback: Action_2<Exception | undefined, unknown | undefined>, state: unknown): void;
+    OnWriterCompleted(callback: Action_2<Exception, unknown>, state: unknown): void;
     ReadAsync(cancellationToken?: CancellationToken): ValueTask_1<ReadResult>;
     ReadAtLeastAsync(minimumSize: int, cancellationToken?: CancellationToken): ValueTask_1<ReadResult>;
     TryRead(result: ReadResult): boolean;
@@ -104,14 +104,14 @@ export interface PipeReader$instance {
 
 export const PipeReader: {
     Create(sequence: ReadOnlySequence_1<System_Internal.Byte>): PipeReader;
-    Create(stream: Stream, readerOptions?: StreamPipeReaderOptions | undefined): PipeReader;
+    Create(stream: Stream, readerOptions?: StreamPipeReaderOptions): PipeReader;
 };
 
 
 export type PipeReader = PipeReader$instance;
 
 export interface PipeScheduler$instance {
-    Schedule(action: Action_1<unknown | undefined>, state: unknown): void;
+    Schedule(action: Action_1<unknown>, state: unknown): void;
 }
 
 
@@ -134,13 +134,13 @@ export interface PipeWriter$instance {
     FlushAsync(cancellationToken?: CancellationToken): ValueTask_1<FlushResult>;
     GetMemory(sizeHint?: int): Memory_1<System_Internal.Byte>;
     GetSpan(sizeHint?: int): Span_1<System_Internal.Byte>;
-    OnReaderCompleted(callback: Action_2<Exception | undefined, unknown | undefined>, state: unknown): void;
+    OnReaderCompleted(callback: Action_2<Exception, unknown>, state: unknown): void;
     WriteAsync(source: ReadOnlyMemory_1<System_Internal.Byte>, cancellationToken?: CancellationToken): ValueTask_1<FlushResult>;
 }
 
 
 export const PipeWriter: {
-    Create(stream: Stream, writerOptions?: StreamPipeWriterOptions | undefined): PipeWriter;
+    Create(stream: Stream, writerOptions?: StreamPipeWriterOptions): PipeWriter;
 };
 
 

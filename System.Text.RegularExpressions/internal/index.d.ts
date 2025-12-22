@@ -134,7 +134,7 @@ export interface Capture$instance {
     readonly Length: int;
     readonly Value: string;
     readonly ValueSpan: ReadOnlySpan_1<System_Internal.Char>;
-    ToString(): string | undefined;
+    ToString(): string;
 }
 
 
@@ -222,7 +222,7 @@ export interface GroupCollection$instance {
     get_Item(groupnum: int): Group;
     get_Item(groupname: string): Group;
     GetEnumerator(): IEnumerator;
-    TryGetValue(key: string, value: Group | undefined): boolean;
+    TryGetValue(key: string, value: Group): boolean;
 }
 
 
@@ -334,8 +334,8 @@ export const Regex: {
     new(pattern: string, options: RegexOptions, matchTimeout: TimeSpan): Regex;
     readonly InfiniteMatchTimeout: TimeSpan;
     CacheSize: int;
-    CompileToAssembly(regexinfos: RegexCompilationInfo[], assemblyname: AssemblyName, attributes: CustomAttributeBuilder[] | undefined, resourceFile: string | undefined): void;
-    CompileToAssembly(regexinfos: RegexCompilationInfo[], assemblyname: AssemblyName, attributes: CustomAttributeBuilder[] | undefined): void;
+    CompileToAssembly(regexinfos: RegexCompilationInfo[], assemblyname: AssemblyName, attributes: CustomAttributeBuilder[], resourceFile: string): void;
+    CompileToAssembly(regexinfos: RegexCompilationInfo[], assemblyname: AssemblyName, attributes: CustomAttributeBuilder[]): void;
     CompileToAssembly(regexinfos: RegexCompilationInfo[], assemblyname: AssemblyName): void;
     Count(input: ReadOnlySpan_1<System_Internal.Char>, pattern: string, options: RegexOptions, matchTimeout: TimeSpan): int;
     Count(input: ReadOnlySpan_1<System_Internal.Char>, pattern: string, options: RegexOptions): int;
@@ -449,7 +449,7 @@ export interface RegexRunner$instance {
 
 
 export const RegexRunner: {
-    CharInClass(ch: char, charClass: string | undefined): boolean;
+    CharInClass(ch: char, charClass: string): boolean;
 };
 
 

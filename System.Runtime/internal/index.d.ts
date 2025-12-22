@@ -32,7 +32,8 @@ export enum GCLatencyMode {
 
 
 export interface DependentHandle$instance {
-    Dependent: unknown | undefined;
+    get Dependent(): unknown | undefined;
+    set Dependent(value: unknown);
     readonly IsAllocated: boolean;
     Target: unknown;
     readonly TargetAndDependent: ValueTuple_2<unknown, unknown>;
@@ -41,7 +42,7 @@ export interface DependentHandle$instance {
 
 
 export const DependentHandle: {
-    new(target: unknown | undefined, dependent: unknown | undefined): DependentHandle;
+    new(target: unknown, dependent: unknown): DependentHandle;
 };
 
 
@@ -55,14 +56,14 @@ export type DependentHandle = DependentHandle$instance & __DependentHandle$views
 
 
 export interface AmbiguousImplementationException$instance extends Exception {
-    GetObjectData(info: SerializationInfo | undefined, context: StreamingContext): void;
+    GetObjectData(info: SerializationInfo, context: StreamingContext): void;
 }
 
 
 export const AmbiguousImplementationException: {
     new(): AmbiguousImplementationException;
-    new(message: string | undefined): AmbiguousImplementationException;
-    new(message: string | undefined, innerException: Exception | undefined): AmbiguousImplementationException;
+    new(message: string): AmbiguousImplementationException;
+    new(message: string, innerException: Exception): AmbiguousImplementationException;
 };
 
 

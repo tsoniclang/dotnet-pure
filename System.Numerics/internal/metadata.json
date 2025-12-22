@@ -1486,6 +1486,22 @@
           "isExtensionMethod": false
         },
         {
+          "stableId": "System.Private.CoreLib:System.Numerics.INumberBase\u00601::Abs(TSelf):TSelf",
+          "clrName": "Abs",
+          "tsEmitName": "Abs",
+          "normalizedSignature": "Abs|(TSelf):TSelf|static=true",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": true,
+          "isAbstract": true,
+          "isVirtual": true,
+          "isOverride": true,
+          "isSealed": false,
+          "arity": 0,
+          "parameterCount": 1,
+          "isExtensionMethod": false
+        },
+        {
           "stableId": "System.Private.CoreLib:System.Numerics.INumberBase\u00601::CreateChecked(TOther):TSelf",
           "clrName": "CreateChecked",
           "tsEmitName": "CreateChecked",
@@ -3833,22 +3849,6 @@
           "isExtensionMethod": false
         },
         {
-          "stableId": "System.Private.CoreLib:System.Numerics.INumber\u00601::Sign(TSelf):System.Int32",
-          "clrName": "Sign",
-          "tsEmitName": "Sign",
-          "normalizedSignature": "Sign|(TSelf):System.Int32|static=true",
-          "provenance": "Original",
-          "emitScope": "ClassSurface",
-          "isStatic": true,
-          "isAbstract": false,
-          "isVirtual": true,
-          "isOverride": true,
-          "isSealed": false,
-          "arity": 0,
-          "parameterCount": 1,
-          "isExtensionMethod": false
-        },
-        {
           "stableId": "System.Private.CoreLib:System.IComparable::CompareTo(System.Object):System.Int32",
           "clrName": "CompareTo",
           "tsEmitName": "CompareTo",
@@ -5164,22 +5164,6 @@
           "isExtensionMethod": false
         },
         {
-          "stableId": "System.Private.CoreLib:System.IComparable\u00601::CompareTo(T):System.Int32",
-          "clrName": "CompareTo",
-          "tsEmitName": "CompareTo",
-          "normalizedSignature": "CompareTo|(T):System.Int32|static=false",
-          "provenance": "Original",
-          "emitScope": "ClassSurface",
-          "isStatic": false,
-          "isAbstract": true,
-          "isVirtual": true,
-          "isOverride": false,
-          "isSealed": false,
-          "arity": 0,
-          "parameterCount": 1,
-          "isExtensionMethod": false
-        },
-        {
           "stableId": "System.Private.CoreLib:System.Numerics.INumberBase\u00601::Abs(TSelf):TSelf",
           "clrName": "Abs",
           "tsEmitName": "Abs",
@@ -5699,22 +5683,6 @@
           ]
         },
         {
-          "stableId": "System.Private.CoreLib:System.IEquatable\u00601::Equals(T):System.Boolean",
-          "clrName": "Equals",
-          "tsEmitName": "Equals",
-          "normalizedSignature": "Equals|(T):System.Boolean|static=false",
-          "provenance": "Original",
-          "emitScope": "ClassSurface",
-          "isStatic": false,
-          "isAbstract": true,
-          "isVirtual": true,
-          "isOverride": false,
-          "isSealed": false,
-          "arity": 0,
-          "parameterCount": 1,
-          "isExtensionMethod": false
-        },
-        {
           "stableId": "System.Private.CoreLib:System.ISpanFormattable::TryFormat(System.Span_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Int32\u0026,System.ReadOnlySpan_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.IFormatProvider):System.Boolean",
           "clrName": "TryFormat",
           "tsEmitName": "TryFormat",
@@ -5983,6 +5951,22 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 1,
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.Private.CoreLib:System.Numerics.INumberBase\u00601::MaxMagnitude(TSelf,TSelf):TSelf",
+          "clrName": "MaxMagnitude",
+          "tsEmitName": "MaxMagnitude",
+          "normalizedSignature": "MaxMagnitude|(TSelf,TSelf):TSelf|static=true",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": true,
+          "isAbstract": true,
+          "isVirtual": true,
+          "isOverride": true,
+          "isSealed": false,
+          "arity": 0,
+          "parameterCount": 2,
           "isExtensionMethod": false
         },
         {
@@ -6333,6 +6317,22 @@
           "isExtensionMethod": false
         },
         {
+          "stableId": "System.Private.CoreLib:System.Numerics.INumberBase\u00601::Abs(TSelf):TSelf",
+          "clrName": "Abs",
+          "tsEmitName": "Abs",
+          "normalizedSignature": "Abs|(TSelf):TSelf|static=true",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": true,
+          "isAbstract": true,
+          "isVirtual": true,
+          "isOverride": true,
+          "isSealed": false,
+          "arity": 0,
+          "parameterCount": 1,
+          "isExtensionMethod": false
+        },
+        {
           "stableId": "System.Private.CoreLib:System.Numerics.INumberBase\u00601::CreateChecked(TOther):TSelf",
           "clrName": "CreateChecked",
           "tsEmitName": "CreateChecked",
@@ -6362,6 +6362,22 @@
           "isSealed": false,
           "arity": 0,
           "parameterCount": 1,
+          "isExtensionMethod": false
+        },
+        {
+          "stableId": "System.Private.CoreLib:System.Numerics.INumberBase\u00601::MaxMagnitude(TSelf,TSelf):TSelf",
+          "clrName": "MaxMagnitude",
+          "tsEmitName": "MaxMagnitude",
+          "normalizedSignature": "MaxMagnitude|(TSelf,TSelf):TSelf|static=true",
+          "provenance": "Original",
+          "emitScope": "ClassSurface",
+          "isStatic": true,
+          "isAbstract": true,
+          "isVirtual": true,
+          "isOverride": true,
+          "isSealed": false,
+          "arity": 0,
+          "parameterCount": 2,
           "isExtensionMethod": false
         },
         {
