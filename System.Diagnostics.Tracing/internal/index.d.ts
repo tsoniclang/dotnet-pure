@@ -157,7 +157,7 @@ export interface DiagnosticCounter$instance {
     DisplayUnits: string;
     readonly EventSource: EventSource;
     readonly Name: string;
-    AddMetadata(key: string, value: string | undefined): void;
+    AddMetadata(key: string, value: string): void;
     Dispose(): void;
 }
 
@@ -272,7 +272,7 @@ export interface EventListener$instance {
     Dispose(): void;
     EnableEvents(eventSource: EventSource, level: EventLevel): void;
     EnableEvents(eventSource: EventSource, level: EventLevel, matchAnyKeyword: EventKeywords): void;
-    EnableEvents(eventSource: EventSource, level: EventLevel, matchAnyKeyword: EventKeywords, arguments: IDictionary_2<System_Internal.String, string | undefined> | undefined): void;
+    EnableEvents(eventSource: EventSource, level: EventLevel, matchAnyKeyword: EventKeywords, arguments: IDictionary_2<System_Internal.String, System_Internal.String>): void;
 }
 
 
@@ -300,12 +300,12 @@ export interface EventSource$instance {
     IsEnabled(level: EventLevel, keywords: EventKeywords): boolean;
     IsEnabled(level: EventLevel, keywords: EventKeywords, channel: EventChannel): boolean;
     ToString(): string;
-    Write(eventName: string | undefined): void;
-    Write(eventName: string | undefined, options: EventSourceOptions): void;
-    Write<T>(eventName: string | undefined, data: T): void;
-    Write<T>(eventName: string | undefined, options: EventSourceOptions, data: T): void;
-    Write<T>(eventName: string | undefined, options: EventSourceOptions, data: T): void;
-    Write<T>(eventName: string | undefined, options: EventSourceOptions, activityId: Guid, relatedActivityId: Guid, data: T): void;
+    Write(eventName: string): void;
+    Write(eventName: string, options: EventSourceOptions): void;
+    Write<T>(eventName: string, data: T): void;
+    Write<T>(eventName: string, options: EventSourceOptions, data: T): void;
+    Write<T>(eventName: string, options: EventSourceOptions, data: T): void;
+    Write<T>(eventName: string, options: EventSourceOptions, activityId: Guid, relatedActivityId: Guid, data: T): void;
 }
 
 
@@ -314,12 +314,12 @@ export const EventSource: {
     new(eventSourceName: string, config: EventSourceSettings): EventSource;
     new(eventSourceName: string, config: EventSourceSettings, traits: string[]): EventSource;
     readonly CurrentThreadActivityId: Guid;
-    GenerateManifest(eventSourceType: Type, assemblyPathToIncludeInManifest: string | undefined, flags: EventManifestOptions): string | undefined;
-    GenerateManifest(eventSourceType: Type, assemblyPathToIncludeInManifest: string | undefined): string | undefined;
+    GenerateManifest(eventSourceType: Type, assemblyPathToIncludeInManifest: string, flags: EventManifestOptions): string | undefined;
+    GenerateManifest(eventSourceType: Type, assemblyPathToIncludeInManifest: string): string | undefined;
     GetGuid(eventSourceType: Type): Guid;
     GetName(eventSourceType: Type): string;
     GetSources(): IEnumerable_1<EventSource>;
-    SendCommand(eventSource: EventSource, command: EventCommand, commandArguments: IDictionary_2<System_Internal.String, string | undefined> | undefined): void;
+    SendCommand(eventSource: EventSource, command: EventCommand, commandArguments: IDictionary_2<System_Internal.String, System_Internal.String>): void;
     SetCurrentThreadActivityId(activityId: Guid, oldActivityThatWillContinue: Guid): void;
     SetCurrentThreadActivityId(activityId: Guid): void;
 };
@@ -335,8 +335,10 @@ export type EventSource = EventSource$instance & __EventSource$views;
 
 
 export interface EventSourceAttribute$instance extends Attribute {
-    Guid: string | undefined;
-    LocalizationResources: string | undefined;
+    get Guid(): string | undefined;
+    set Guid(value: string);
+    get LocalizationResources(): string | undefined;
+    set LocalizationResources(value: string);
     Name: string;
 }
 
@@ -367,8 +369,8 @@ export interface EventSourceException$instance extends Exception {
 
 export const EventSourceException: {
     new(): EventSourceException;
-    new(message: string | undefined): EventSourceException;
-    new(message: string | undefined, innerException: Exception | undefined): EventSourceException;
+    new(message: string): EventSourceException;
+    new(message: string, innerException: Exception): EventSourceException;
 };
 
 

@@ -27,7 +27,7 @@ export enum ValueTaskSourceStatus {
 export interface IValueTaskSource$instance {
     GetResult(token: short): void;
     GetStatus(token: short): ValueTaskSourceStatus;
-    OnCompleted(continuation: Action_1<unknown | undefined>, state: unknown | undefined, token: short, flags: ValueTaskSourceOnCompletedFlags): void;
+    OnCompleted(continuation: Action_1<unknown>, state: unknown, token: short, flags: ValueTaskSourceOnCompletedFlags): void;
 }
 
 
@@ -36,7 +36,7 @@ export type IValueTaskSource = IValueTaskSource$instance;
 export interface IValueTaskSource_1$instance<TResult> {
     GetResult(token: short): TResult;
     GetStatus(token: short): ValueTaskSourceStatus;
-    OnCompleted(continuation: Action_1<unknown | undefined>, state: unknown | undefined, token: short, flags: ValueTaskSourceOnCompletedFlags): void;
+    OnCompleted(continuation: Action_1<unknown>, state: unknown, token: short, flags: ValueTaskSourceOnCompletedFlags): void;
 }
 
 
@@ -47,7 +47,7 @@ export interface ManualResetValueTaskSourceCore_1$instance<TResult> {
     readonly Version: short;
     GetResult(token: short): TResult;
     GetStatus(token: short): ValueTaskSourceStatus;
-    OnCompleted(continuation: Action_1<unknown | undefined>, state: unknown | undefined, token: short, flags: ValueTaskSourceOnCompletedFlags): void;
+    OnCompleted(continuation: Action_1<unknown>, state: unknown, token: short, flags: ValueTaskSourceOnCompletedFlags): void;
     Reset(): void;
     SetException(error: Exception): void;
     SetResult(result: TResult): void;

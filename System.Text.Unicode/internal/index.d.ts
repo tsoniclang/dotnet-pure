@@ -15,23 +15,23 @@ import type { Boolean as ClrBoolean, Byte, Char, IFormatProvider, Int32, Object 
 
 export interface Utf8_TryWriteInterpolatedStringHandler$instance {
     AppendFormatted<T>(value: T): boolean;
-    AppendFormatted<T>(value: T, format: string | undefined): boolean;
+    AppendFormatted<T>(value: T, format: string): boolean;
     AppendFormatted<T>(value: T, alignment: int): boolean;
-    AppendFormatted<T>(value: T, alignment: int, format: string | undefined): boolean;
+    AppendFormatted<T>(value: T, alignment: int, format: string): boolean;
     AppendFormatted(value: ReadOnlySpan_1<System_Internal.Char>): boolean;
-    AppendFormatted(value: ReadOnlySpan_1<System_Internal.Char>, alignment?: int, format?: string | undefined): boolean;
+    AppendFormatted(value: ReadOnlySpan_1<System_Internal.Char>, alignment?: int, format?: string): boolean;
     AppendFormatted(utf8Value: ReadOnlySpan_1<System_Internal.Byte>): boolean;
-    AppendFormatted(utf8Value: ReadOnlySpan_1<System_Internal.Byte>, alignment?: int, format?: string | undefined): boolean;
-    AppendFormatted(value: string | undefined): boolean;
-    AppendFormatted(value: string | undefined, alignment?: int, format?: string | undefined): boolean;
-    AppendFormatted(value: unknown | undefined, alignment?: int, format?: string | undefined): boolean;
+    AppendFormatted(utf8Value: ReadOnlySpan_1<System_Internal.Byte>, alignment?: int, format?: string): boolean;
+    AppendFormatted(value: string): boolean;
+    AppendFormatted(value: string, alignment?: int, format?: string): boolean;
+    AppendFormatted(value: unknown, alignment?: int, format?: string): boolean;
     AppendLiteral(value: string): boolean;
 }
 
 
 export const Utf8_TryWriteInterpolatedStringHandler: {
     new(literalLength: int, formattedCount: int, destination: Span_1<System_Internal.Byte>, shouldAppend: boolean): Utf8_TryWriteInterpolatedStringHandler;
-    new(literalLength: int, formattedCount: int, destination: Span_1<System_Internal.Byte>, provider: IFormatProvider | undefined, shouldAppend: boolean): Utf8_TryWriteInterpolatedStringHandler;
+    new(literalLength: int, formattedCount: int, destination: Span_1<System_Internal.Byte>, provider: IFormatProvider, shouldAppend: boolean): Utf8_TryWriteInterpolatedStringHandler;
 };
 
 
@@ -223,7 +223,7 @@ export abstract class Utf8$instance {
     static FromUtf16(source: ReadOnlySpan_1<System_Internal.Char>, destination: Span_1<System_Internal.Byte>, charsRead: int, bytesWritten: int, replaceInvalidSequences?: boolean, isFinalBlock?: boolean): OperationStatus;
     static IsValid(value: ReadOnlySpan_1<System_Internal.Byte>): boolean;
     static ToUtf16(source: ReadOnlySpan_1<System_Internal.Byte>, destination: Span_1<System_Internal.Char>, bytesRead: int, charsWritten: int, replaceInvalidSequences?: boolean, isFinalBlock?: boolean): OperationStatus;
-    static TryWrite(destination: Span_1<System_Internal.Byte>, provider: IFormatProvider | undefined, handler: Utf8_TryWriteInterpolatedStringHandler, bytesWritten: int): boolean;
+    static TryWrite(destination: Span_1<System_Internal.Byte>, provider: IFormatProvider, handler: Utf8_TryWriteInterpolatedStringHandler, bytesWritten: int): boolean;
     static TryWrite(destination: Span_1<System_Internal.Byte>, handler: Utf8_TryWriteInterpolatedStringHandler, bytesWritten: int): boolean;
 }
 

@@ -122,7 +122,7 @@ export interface __Ext_Span_1<T extends System.IEquatable_1<T>> {
   LastIndexOfAny(value0: T, value1: T, value2: T): int;
   LastIndexOfAny(values: System.ReadOnlySpan_1<T>): int;
   LastIndexOfAny(values: System_Buffers.SearchValues_1<T>): int;
-  SequenceEqual(other: System.ReadOnlySpan_1<T>, comparer: System_Collections_Generic.IEqualityComparer_1<T> | undefined): boolean;
+  SequenceEqual(other: System.ReadOnlySpan_1<T>, comparer: System_Collections_Generic.IEqualityComparer_1<T>): boolean;
   StartsWith(value: System.ReadOnlySpan_1<T>): boolean;
   EndsWith(value: System.ReadOnlySpan_1<T>): boolean;
   Reverse(): void;
@@ -138,20 +138,20 @@ export interface __Ext_Span_1<T extends System.IEquatable_1<T>> {
   Sort<TValue, TComparer>(items: System.Span_1<TValue>, comparer: TComparer): void;
   Sort<TValue>(items: System.Span_1<TValue>, comparison: System.Comparison_1<T>): void;
   Replace(oldValue: T, newValue: T): void;
-  Replace(oldValue: T, newValue: T, comparer: System_Collections_Generic.IEqualityComparer_1<T> | undefined): void;
+  Replace(oldValue: T, newValue: T, comparer: System_Collections_Generic.IEqualityComparer_1<T>): void;
   ReplaceAny(values: System_Buffers.SearchValues_1<T>, newValue: T): void;
   ReplaceAnyExcept(values: System_Buffers.SearchValues_1<T>, newValue: T): void;
   CommonPrefixLength(other: System.ReadOnlySpan_1<T>): int;
-  CommonPrefixLength(other: System.ReadOnlySpan_1<T>, comparer: System_Collections_Generic.IEqualityComparer_1<T> | undefined): int;
+  CommonPrefixLength(other: System.ReadOnlySpan_1<T>, comparer: System_Collections_Generic.IEqualityComparer_1<T>): int;
   Count(value: T): int;
   Count(value: System.ReadOnlySpan_1<T>): int;
   TryWrite(handler: System.MemoryExtensions_TryWriteInterpolatedStringHandler, charsWritten: int): boolean;
-  TryWrite(provider: System.IFormatProvider | undefined, handler: System.MemoryExtensions_TryWriteInterpolatedStringHandler, charsWritten: int): boolean;
-  TryWrite<TArg0>(provider: System.IFormatProvider | undefined, format: System_Text.CompositeFormat, charsWritten: int, arg0: TArg0): boolean;
-  TryWrite<TArg0, TArg1>(provider: System.IFormatProvider | undefined, format: System_Text.CompositeFormat, charsWritten: int, arg0: TArg0, arg1: TArg1): boolean;
-  TryWrite<TArg0, TArg1, TArg2>(provider: System.IFormatProvider | undefined, format: System_Text.CompositeFormat, charsWritten: int, arg0: TArg0, arg1: TArg1, arg2: TArg2): boolean;
-  TryWrite(provider: System.IFormatProvider | undefined, format: System_Text.CompositeFormat, charsWritten: int, args: unknown[]): boolean;
-  TryWrite(provider: System.IFormatProvider | undefined, format: System_Text.CompositeFormat, charsWritten: int, args: System.ReadOnlySpan_1<unknown>): boolean;
+  TryWrite(provider: System.IFormatProvider, handler: System.MemoryExtensions_TryWriteInterpolatedStringHandler, charsWritten: int): boolean;
+  TryWrite<TArg0>(provider: System.IFormatProvider, format: System_Text.CompositeFormat, charsWritten: int, arg0: TArg0): boolean;
+  TryWrite<TArg0, TArg1>(provider: System.IFormatProvider, format: System_Text.CompositeFormat, charsWritten: int, arg0: TArg0, arg1: TArg1): boolean;
+  TryWrite<TArg0, TArg1, TArg2>(provider: System.IFormatProvider, format: System_Text.CompositeFormat, charsWritten: int, arg0: TArg0, arg1: TArg1, arg2: TArg2): boolean;
+  TryWrite(provider: System.IFormatProvider, format: System_Text.CompositeFormat, charsWritten: int, args: unknown[]): boolean;
+  TryWrite(provider: System.IFormatProvider, format: System_Text.CompositeFormat, charsWritten: int, args: System.ReadOnlySpan_1<unknown>): boolean;
   EnumerateRunes(): System_Text.SpanRuneEnumerator;
   EnumerateLines(): System_Text.SpanLineEnumerator;
   Trim(trimElement: T): System.Span_1<T>;
@@ -168,94 +168,94 @@ export interface __Ext_Span_1<T extends System.IEquatable_1<T>> {
 
 export interface __Ext_ReadOnlySpan_1<T extends System.IEquatable_1<T>> {
   Contains(value: T): boolean;
-  Contains(value: T, comparer: System_Collections_Generic.IEqualityComparer_1<T> | undefined): boolean;
+  Contains(value: T, comparer: System_Collections_Generic.IEqualityComparer_1<T>): boolean;
   ContainsAny(value0: T, value1: T): boolean;
-  ContainsAny(value0: T, value1: T, comparer: System_Collections_Generic.IEqualityComparer_1<T> | undefined): boolean;
+  ContainsAny(value0: T, value1: T, comparer: System_Collections_Generic.IEqualityComparer_1<T>): boolean;
   ContainsAny(value0: T, value1: T, value2: T): boolean;
-  ContainsAny(value0: T, value1: T, value2: T, comparer: System_Collections_Generic.IEqualityComparer_1<T> | undefined): boolean;
+  ContainsAny(value0: T, value1: T, value2: T, comparer: System_Collections_Generic.IEqualityComparer_1<T>): boolean;
   ContainsAny(values: System.ReadOnlySpan_1<T>): boolean;
-  ContainsAny(values: System.ReadOnlySpan_1<T>, comparer: System_Collections_Generic.IEqualityComparer_1<T> | undefined): boolean;
+  ContainsAny(values: System.ReadOnlySpan_1<T>, comparer: System_Collections_Generic.IEqualityComparer_1<T>): boolean;
   ContainsAny(values: System_Buffers.SearchValues_1<T>): boolean;
   ContainsAny(values: System_Buffers.SearchValues_1<System_Internal.String>): boolean;
   ContainsAnyExcept(value: T): boolean;
-  ContainsAnyExcept(value: T, comparer: System_Collections_Generic.IEqualityComparer_1<T> | undefined): boolean;
+  ContainsAnyExcept(value: T, comparer: System_Collections_Generic.IEqualityComparer_1<T>): boolean;
   ContainsAnyExcept(value0: T, value1: T): boolean;
-  ContainsAnyExcept(value0: T, value1: T, comparer: System_Collections_Generic.IEqualityComparer_1<T> | undefined): boolean;
+  ContainsAnyExcept(value0: T, value1: T, comparer: System_Collections_Generic.IEqualityComparer_1<T>): boolean;
   ContainsAnyExcept(value0: T, value1: T, value2: T): boolean;
-  ContainsAnyExcept(value0: T, value1: T, value2: T, comparer: System_Collections_Generic.IEqualityComparer_1<T> | undefined): boolean;
+  ContainsAnyExcept(value0: T, value1: T, value2: T, comparer: System_Collections_Generic.IEqualityComparer_1<T>): boolean;
   ContainsAnyExcept(values: System.ReadOnlySpan_1<T>): boolean;
-  ContainsAnyExcept(values: System.ReadOnlySpan_1<T>, comparer: System_Collections_Generic.IEqualityComparer_1<T> | undefined): boolean;
+  ContainsAnyExcept(values: System.ReadOnlySpan_1<T>, comparer: System_Collections_Generic.IEqualityComparer_1<T>): boolean;
   ContainsAnyExcept(values: System_Buffers.SearchValues_1<T>): boolean;
   ContainsAnyInRange(lowInclusive: T, highInclusive: T): boolean;
   ContainsAnyExceptInRange(lowInclusive: T, highInclusive: T): boolean;
   IndexOfAnyExcept(value: T): int;
-  IndexOfAnyExcept(value: T, comparer: System_Collections_Generic.IEqualityComparer_1<T> | undefined): int;
+  IndexOfAnyExcept(value: T, comparer: System_Collections_Generic.IEqualityComparer_1<T>): int;
   IndexOfAnyExcept(value0: T, value1: T): int;
-  IndexOfAnyExcept(value0: T, value1: T, comparer: System_Collections_Generic.IEqualityComparer_1<T> | undefined): int;
+  IndexOfAnyExcept(value0: T, value1: T, comparer: System_Collections_Generic.IEqualityComparer_1<T>): int;
   IndexOfAnyExcept(value0: T, value1: T, value2: T): int;
-  IndexOfAnyExcept(value0: T, value1: T, value2: T, comparer: System_Collections_Generic.IEqualityComparer_1<T> | undefined): int;
+  IndexOfAnyExcept(value0: T, value1: T, value2: T, comparer: System_Collections_Generic.IEqualityComparer_1<T>): int;
   IndexOfAnyExcept(values: System.ReadOnlySpan_1<T>): int;
-  IndexOfAnyExcept(values: System.ReadOnlySpan_1<T>, comparer: System_Collections_Generic.IEqualityComparer_1<T> | undefined): int;
+  IndexOfAnyExcept(values: System.ReadOnlySpan_1<T>, comparer: System_Collections_Generic.IEqualityComparer_1<T>): int;
   IndexOfAnyExcept(values: System_Buffers.SearchValues_1<T>): int;
   LastIndexOfAnyExcept(value: T): int;
-  LastIndexOfAnyExcept(value: T, comparer: System_Collections_Generic.IEqualityComparer_1<T> | undefined): int;
+  LastIndexOfAnyExcept(value: T, comparer: System_Collections_Generic.IEqualityComparer_1<T>): int;
   LastIndexOfAnyExcept(value0: T, value1: T): int;
-  LastIndexOfAnyExcept(value0: T, value1: T, comparer: System_Collections_Generic.IEqualityComparer_1<T> | undefined): int;
+  LastIndexOfAnyExcept(value0: T, value1: T, comparer: System_Collections_Generic.IEqualityComparer_1<T>): int;
   LastIndexOfAnyExcept(value0: T, value1: T, value2: T): int;
-  LastIndexOfAnyExcept(value0: T, value1: T, value2: T, comparer: System_Collections_Generic.IEqualityComparer_1<T> | undefined): int;
+  LastIndexOfAnyExcept(value0: T, value1: T, value2: T, comparer: System_Collections_Generic.IEqualityComparer_1<T>): int;
   LastIndexOfAnyExcept(values: System.ReadOnlySpan_1<T>): int;
-  LastIndexOfAnyExcept(values: System.ReadOnlySpan_1<T>, comparer: System_Collections_Generic.IEqualityComparer_1<T> | undefined): int;
+  LastIndexOfAnyExcept(values: System.ReadOnlySpan_1<T>, comparer: System_Collections_Generic.IEqualityComparer_1<T>): int;
   LastIndexOfAnyExcept(values: System_Buffers.SearchValues_1<T>): int;
   IndexOfAnyInRange(lowInclusive: T, highInclusive: T): int;
   IndexOfAnyExceptInRange(lowInclusive: T, highInclusive: T): int;
   LastIndexOfAnyInRange(lowInclusive: T, highInclusive: T): int;
   LastIndexOfAnyExceptInRange(lowInclusive: T, highInclusive: T): int;
   IndexOf(value: T): int;
-  IndexOf(value: T, comparer: System_Collections_Generic.IEqualityComparer_1<T> | undefined): int;
+  IndexOf(value: T, comparer: System_Collections_Generic.IEqualityComparer_1<T>): int;
   IndexOf(value: System.ReadOnlySpan_1<T>): int;
-  IndexOf(value: System.ReadOnlySpan_1<T>, comparer: System_Collections_Generic.IEqualityComparer_1<T> | undefined): int;
+  IndexOf(value: System.ReadOnlySpan_1<T>, comparer: System_Collections_Generic.IEqualityComparer_1<T>): int;
   LastIndexOf(value: T): int;
-  LastIndexOf(value: T, comparer: System_Collections_Generic.IEqualityComparer_1<T> | undefined): int;
+  LastIndexOf(value: T, comparer: System_Collections_Generic.IEqualityComparer_1<T>): int;
   LastIndexOf(value: System.ReadOnlySpan_1<T>): int;
-  LastIndexOf(value: System.ReadOnlySpan_1<T>, comparer: System_Collections_Generic.IEqualityComparer_1<T> | undefined): int;
+  LastIndexOf(value: System.ReadOnlySpan_1<T>, comparer: System_Collections_Generic.IEqualityComparer_1<T>): int;
   IndexOfAny(value0: T, value1: T): int;
-  IndexOfAny(value0: T, value1: T, comparer: System_Collections_Generic.IEqualityComparer_1<T> | undefined): int;
+  IndexOfAny(value0: T, value1: T, comparer: System_Collections_Generic.IEqualityComparer_1<T>): int;
   IndexOfAny(value0: T, value1: T, value2: T): int;
-  IndexOfAny(value0: T, value1: T, value2: T, comparer: System_Collections_Generic.IEqualityComparer_1<T> | undefined): int;
+  IndexOfAny(value0: T, value1: T, value2: T, comparer: System_Collections_Generic.IEqualityComparer_1<T>): int;
   IndexOfAny(values: System.ReadOnlySpan_1<T>): int;
-  IndexOfAny(values: System.ReadOnlySpan_1<T>, comparer: System_Collections_Generic.IEqualityComparer_1<T> | undefined): int;
+  IndexOfAny(values: System.ReadOnlySpan_1<T>, comparer: System_Collections_Generic.IEqualityComparer_1<T>): int;
   IndexOfAny(values: System_Buffers.SearchValues_1<T>): int;
   IndexOfAny(values: System_Buffers.SearchValues_1<System_Internal.String>): int;
   LastIndexOfAny(value0: T, value1: T): int;
-  LastIndexOfAny(value0: T, value1: T, comparer: System_Collections_Generic.IEqualityComparer_1<T> | undefined): int;
+  LastIndexOfAny(value0: T, value1: T, comparer: System_Collections_Generic.IEqualityComparer_1<T>): int;
   LastIndexOfAny(value0: T, value1: T, value2: T): int;
-  LastIndexOfAny(value0: T, value1: T, value2: T, comparer: System_Collections_Generic.IEqualityComparer_1<T> | undefined): int;
+  LastIndexOfAny(value0: T, value1: T, value2: T, comparer: System_Collections_Generic.IEqualityComparer_1<T>): int;
   LastIndexOfAny(values: System.ReadOnlySpan_1<T>): int;
-  LastIndexOfAny(values: System.ReadOnlySpan_1<T>, comparer: System_Collections_Generic.IEqualityComparer_1<T> | undefined): int;
+  LastIndexOfAny(values: System.ReadOnlySpan_1<T>, comparer: System_Collections_Generic.IEqualityComparer_1<T>): int;
   LastIndexOfAny(values: System_Buffers.SearchValues_1<T>): int;
   SequenceEqual(other: System.ReadOnlySpan_1<T>): boolean;
-  SequenceEqual(other: System.ReadOnlySpan_1<T>, comparer: System_Collections_Generic.IEqualityComparer_1<T> | undefined): boolean;
+  SequenceEqual(other: System.ReadOnlySpan_1<T>, comparer: System_Collections_Generic.IEqualityComparer_1<T>): boolean;
   SequenceCompareTo(other: System.ReadOnlySpan_1<T>): int;
-  SequenceCompareTo(other: System.ReadOnlySpan_1<T>, comparer: System_Collections_Generic.IComparer_1<T> | undefined): int;
+  SequenceCompareTo(other: System.ReadOnlySpan_1<T>, comparer: System_Collections_Generic.IComparer_1<T>): int;
   StartsWith(value: System.ReadOnlySpan_1<T>): boolean;
-  StartsWith(value: System.ReadOnlySpan_1<T>, comparer: System_Collections_Generic.IEqualityComparer_1<T> | undefined): boolean;
+  StartsWith(value: System.ReadOnlySpan_1<T>, comparer: System_Collections_Generic.IEqualityComparer_1<T>): boolean;
   EndsWith(value: System.ReadOnlySpan_1<T>): boolean;
-  EndsWith(value: System.ReadOnlySpan_1<T>, comparer: System_Collections_Generic.IEqualityComparer_1<T> | undefined): boolean;
+  EndsWith(value: System.ReadOnlySpan_1<T>, comparer: System_Collections_Generic.IEqualityComparer_1<T>): boolean;
   StartsWith(value: T): boolean;
-  StartsWith(value: T, comparer: System_Collections_Generic.IEqualityComparer_1<T> | undefined): boolean;
+  StartsWith(value: T, comparer: System_Collections_Generic.IEqualityComparer_1<T>): boolean;
   EndsWith(value: T): boolean;
-  EndsWith(value: T, comparer: System_Collections_Generic.IEqualityComparer_1<T> | undefined): boolean;
+  EndsWith(value: T, comparer: System_Collections_Generic.IEqualityComparer_1<T>): boolean;
   Overlaps(other: System.ReadOnlySpan_1<T>): boolean;
   Overlaps(other: System.ReadOnlySpan_1<T>, elementOffset: int): boolean;
   BinarySearch(comparable: System.IComparable_1<T>): int;
   BinarySearch<TComparable>(comparable: TComparable): int;
   BinarySearch<TComparer>(value: T, comparer: TComparer): int;
   Replace(destination: System.Span_1<T>, oldValue: T, newValue: T): void;
-  Replace(destination: System.Span_1<T>, oldValue: T, newValue: T, comparer: System_Collections_Generic.IEqualityComparer_1<T> | undefined): void;
+  Replace(destination: System.Span_1<T>, oldValue: T, newValue: T, comparer: System_Collections_Generic.IEqualityComparer_1<T>): void;
   ReplaceAny(destination: System.Span_1<T>, values: System_Buffers.SearchValues_1<T>, newValue: T): void;
   ReplaceAnyExcept(destination: System.Span_1<T>, values: System_Buffers.SearchValues_1<T>, newValue: T): void;
   CommonPrefixLength(other: System.ReadOnlySpan_1<T>): int;
-  CommonPrefixLength(other: System.ReadOnlySpan_1<T>, comparer: System_Collections_Generic.IEqualityComparer_1<T> | undefined): int;
+  CommonPrefixLength(other: System.ReadOnlySpan_1<T>, comparer: System_Collections_Generic.IEqualityComparer_1<T>): int;
   Split(separator: T): System.MemoryExtensions_SpanSplitEnumerator_1<T>;
   Split(separator: System.ReadOnlySpan_1<T>): System.MemoryExtensions_SpanSplitEnumerator_1<T>;
   SplitAny(separators: System.ReadOnlySpan_1<T>): System.MemoryExtensions_SpanSplitEnumerator_1<T>;
@@ -265,21 +265,21 @@ export interface __Ext_ReadOnlySpan_1<T extends System.IEquatable_1<T>> {
   SplitAny(destination: System.Span_1<System.Range>, separators: System.ReadOnlySpan_1<System_Internal.Char>, options: System.StringSplitOptions): int;
   SplitAny(destination: System.Span_1<System.Range>, separators: System.ReadOnlySpan_1<System_Internal.String>, options: System.StringSplitOptions): int;
   Count(value: T): int;
-  Count(value: T, comparer: System_Collections_Generic.IEqualityComparer_1<T> | undefined): int;
+  Count(value: T, comparer: System_Collections_Generic.IEqualityComparer_1<T>): int;
   Count(value: System.ReadOnlySpan_1<T>): int;
-  Count(value: System.ReadOnlySpan_1<T>, comparer: System_Collections_Generic.IEqualityComparer_1<T> | undefined): int;
+  Count(value: System.ReadOnlySpan_1<T>, comparer: System_Collections_Generic.IEqualityComparer_1<T>): int;
   CountAny(values: System_Buffers.SearchValues_1<T>): int;
   CountAny(values: System.ReadOnlySpan_1<T>): int;
-  CountAny(values: System.ReadOnlySpan_1<T>, comparer: System_Collections_Generic.IEqualityComparer_1<T> | undefined): int;
+  CountAny(values: System.ReadOnlySpan_1<T>, comparer: System_Collections_Generic.IEqualityComparer_1<T>): int;
   IsWhiteSpace(): boolean;
   Contains(value: System.ReadOnlySpan_1<System_Internal.Char>, comparisonType: System.StringComparison): boolean;
   Equals(other: System.ReadOnlySpan_1<System_Internal.Char>, comparisonType: System.StringComparison): boolean;
   CompareTo(other: System.ReadOnlySpan_1<System_Internal.Char>, comparisonType: System.StringComparison): int;
   IndexOf(value: System.ReadOnlySpan_1<System_Internal.Char>, comparisonType: System.StringComparison): int;
   LastIndexOf(value: System.ReadOnlySpan_1<System_Internal.Char>, comparisonType: System.StringComparison): int;
-  ToLower(destination: System.Span_1<System_Internal.Char>, culture: System_Globalization.CultureInfo | undefined): int;
+  ToLower(destination: System.Span_1<System_Internal.Char>, culture: System_Globalization.CultureInfo): int;
   ToLowerInvariant(destination: System.Span_1<System_Internal.Char>): int;
-  ToUpper(destination: System.Span_1<System_Internal.Char>, culture: System_Globalization.CultureInfo | undefined): int;
+  ToUpper(destination: System.Span_1<System_Internal.Char>, culture: System_Globalization.CultureInfo): int;
   ToUpperInvariant(destination: System.Span_1<System_Internal.Char>): int;
   EndsWith(value: System.ReadOnlySpan_1<System_Internal.Char>, comparisonType: System.StringComparison): boolean;
   StartsWith(value: System.ReadOnlySpan_1<System_Internal.Char>, comparisonType: System.StringComparison): boolean;
@@ -431,33 +431,33 @@ export interface __Ext_IBufferWriter_1<T> {
 }
 
 export interface __Ext_IEnumerable_1<T> {
-  ToFrozenDictionary<TKey, TValue>(comparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Collections_Frozen.FrozenDictionary_2<TKey, TValue>;
-  ToFrozenDictionary<TKey>(keySelector: System.Func_2<T, TKey>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Collections_Frozen.FrozenDictionary_2<TKey, T>;
-  ToFrozenDictionary<TKey, TElement>(keySelector: System.Func_2<T, TKey>, elementSelector: System.Func_2<T, TElement>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Collections_Frozen.FrozenDictionary_2<TKey, TElement>;
-  ToFrozenSet(comparer: System_Collections_Generic.IEqualityComparer_1<T> | undefined): System_Collections_Frozen.FrozenSet_1<T>;
+  ToFrozenDictionary<TKey, TValue>(comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Frozen.FrozenDictionary_2<TKey, TValue>;
+  ToFrozenDictionary<TKey>(keySelector: System.Func_2<T, TKey>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Frozen.FrozenDictionary_2<TKey, T>;
+  ToFrozenDictionary<TKey, TElement>(keySelector: System.Func_2<T, TKey>, elementSelector: System.Func_2<T, TElement>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Frozen.FrozenDictionary_2<TKey, TElement>;
+  ToFrozenSet(comparer: System_Collections_Generic.IEqualityComparer_1<T>): System_Collections_Frozen.FrozenSet_1<T>;
   ToImmutableArray(): System_Collections_Immutable.ImmutableArray_1<T>;
-  ToImmutableDictionary<TKey, TValue>(keySelector: System.Func_2<T, TKey>, elementSelector: System.Func_2<T, TValue>, keyComparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined, valueComparer: System_Collections_Generic.IEqualityComparer_1<TValue> | undefined): System_Collections_Immutable.ImmutableDictionary_2<TKey, TValue>;
-  ToImmutableDictionary<TKey, TValue>(keySelector: System.Func_2<T, TKey>, elementSelector: System.Func_2<T, TValue>, keyComparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Collections_Immutable.ImmutableDictionary_2<TKey, TValue>;
+  ToImmutableDictionary<TKey, TValue>(keySelector: System.Func_2<T, TKey>, elementSelector: System.Func_2<T, TValue>, keyComparer: System_Collections_Generic.IEqualityComparer_1<TKey>, valueComparer: System_Collections_Generic.IEqualityComparer_1<TValue>): System_Collections_Immutable.ImmutableDictionary_2<TKey, TValue>;
+  ToImmutableDictionary<TKey, TValue>(keySelector: System.Func_2<T, TKey>, elementSelector: System.Func_2<T, TValue>, keyComparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Immutable.ImmutableDictionary_2<TKey, TValue>;
   ToImmutableDictionary<TKey>(keySelector: System.Func_2<T, TKey>): System_Collections_Immutable.ImmutableDictionary_2<TKey, T>;
-  ToImmutableDictionary<TKey>(keySelector: System.Func_2<T, TKey>, keyComparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Collections_Immutable.ImmutableDictionary_2<TKey, T>;
+  ToImmutableDictionary<TKey>(keySelector: System.Func_2<T, TKey>, keyComparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Immutable.ImmutableDictionary_2<TKey, T>;
   ToImmutableDictionary<TKey, TValue>(keySelector: System.Func_2<T, TKey>, elementSelector: System.Func_2<T, TValue>): System_Collections_Immutable.ImmutableDictionary_2<TKey, TValue>;
-  ToImmutableDictionary<TKey, TValue>(keyComparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined, valueComparer: System_Collections_Generic.IEqualityComparer_1<TValue> | undefined): System_Collections_Immutable.ImmutableDictionary_2<TKey, TValue>;
-  ToImmutableDictionary<TKey, TValue>(keyComparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Collections_Immutable.ImmutableDictionary_2<TKey, TValue>;
+  ToImmutableDictionary<TKey, TValue>(keyComparer: System_Collections_Generic.IEqualityComparer_1<TKey>, valueComparer: System_Collections_Generic.IEqualityComparer_1<TValue>): System_Collections_Immutable.ImmutableDictionary_2<TKey, TValue>;
+  ToImmutableDictionary<TKey, TValue>(keyComparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Immutable.ImmutableDictionary_2<TKey, TValue>;
   ToImmutableDictionary<TKey, TValue>(): System_Collections_Immutable.ImmutableDictionary_2<TKey, TValue>;
-  ToImmutableHashSet(equalityComparer: System_Collections_Generic.IEqualityComparer_1<T> | undefined): System_Collections_Immutable.ImmutableHashSet_1<T>;
+  ToImmutableHashSet(equalityComparer: System_Collections_Generic.IEqualityComparer_1<T>): System_Collections_Immutable.ImmutableHashSet_1<T>;
   ToImmutableHashSet(): System_Collections_Immutable.ImmutableHashSet_1<T>;
   ToImmutableList(): System_Collections_Immutable.ImmutableList_1<T>;
-  ToImmutableSortedDictionary<TKey, TValue>(keySelector: System.Func_2<T, TKey>, elementSelector: System.Func_2<T, TValue>, keyComparer: System_Collections_Generic.IComparer_1<TKey> | undefined, valueComparer: System_Collections_Generic.IEqualityComparer_1<TValue> | undefined): System_Collections_Immutable.ImmutableSortedDictionary_2<TKey, TValue>;
-  ToImmutableSortedDictionary<TKey, TValue>(keySelector: System.Func_2<T, TKey>, elementSelector: System.Func_2<T, TValue>, keyComparer: System_Collections_Generic.IComparer_1<TKey> | undefined): System_Collections_Immutable.ImmutableSortedDictionary_2<TKey, TValue>;
+  ToImmutableSortedDictionary<TKey, TValue>(keySelector: System.Func_2<T, TKey>, elementSelector: System.Func_2<T, TValue>, keyComparer: System_Collections_Generic.IComparer_1<TKey>, valueComparer: System_Collections_Generic.IEqualityComparer_1<TValue>): System_Collections_Immutable.ImmutableSortedDictionary_2<TKey, TValue>;
+  ToImmutableSortedDictionary<TKey, TValue>(keySelector: System.Func_2<T, TKey>, elementSelector: System.Func_2<T, TValue>, keyComparer: System_Collections_Generic.IComparer_1<TKey>): System_Collections_Immutable.ImmutableSortedDictionary_2<TKey, TValue>;
   ToImmutableSortedDictionary<TKey, TValue>(keySelector: System.Func_2<T, TKey>, elementSelector: System.Func_2<T, TValue>): System_Collections_Immutable.ImmutableSortedDictionary_2<TKey, TValue>;
-  ToImmutableSortedDictionary<TKey, TValue>(keyComparer: System_Collections_Generic.IComparer_1<TKey> | undefined, valueComparer: System_Collections_Generic.IEqualityComparer_1<TValue> | undefined): System_Collections_Immutable.ImmutableSortedDictionary_2<TKey, TValue>;
-  ToImmutableSortedDictionary<TKey, TValue>(keyComparer: System_Collections_Generic.IComparer_1<TKey> | undefined): System_Collections_Immutable.ImmutableSortedDictionary_2<TKey, TValue>;
+  ToImmutableSortedDictionary<TKey, TValue>(keyComparer: System_Collections_Generic.IComparer_1<TKey>, valueComparer: System_Collections_Generic.IEqualityComparer_1<TValue>): System_Collections_Immutable.ImmutableSortedDictionary_2<TKey, TValue>;
+  ToImmutableSortedDictionary<TKey, TValue>(keyComparer: System_Collections_Generic.IComparer_1<TKey>): System_Collections_Immutable.ImmutableSortedDictionary_2<TKey, TValue>;
   ToImmutableSortedDictionary<TKey, TValue>(): System_Collections_Immutable.ImmutableSortedDictionary_2<TKey, TValue>;
-  ToImmutableSortedSet(comparer: System_Collections_Generic.IComparer_1<T> | undefined): System_Collections_Immutable.ImmutableSortedSet_1<T>;
+  ToImmutableSortedSet(comparer: System_Collections_Generic.IComparer_1<T>): System_Collections_Immutable.ImmutableSortedSet_1<T>;
   ToImmutableSortedSet(): System_Collections_Immutable.ImmutableSortedSet_1<T>;
   CopyToDataTable(): System_Data.DataTable;
   CopyToDataTable(table: System_Data.DataTable, options: System_Data.LoadOption): void;
-  CopyToDataTable(table: System_Data.DataTable, options: System_Data.LoadOption, errorHandler: System_Data.FillErrorEventHandler | undefined): void;
+  CopyToDataTable(table: System_Data.DataTable, options: System_Data.LoadOption, errorHandler: System_Data.FillErrorEventHandler): void;
   Aggregate(func: System.Func_3<T, T, T>): T;
   Aggregate<TAccumulate>(seed: TAccumulate, func: System.Func_3<TAccumulate, T, TAccumulate>): TAccumulate;
   Aggregate<TAccumulate, TResult>(seed: TAccumulate, func: System.Func_3<TAccumulate, T, TAccumulate>, resultSelector: System.Func_2<TAccumulate, TResult>): TResult;
@@ -485,10 +485,10 @@ export interface __Ext_IEnumerable_1<T> {
   Chunk(size: int): System_Collections_Generic.IEnumerable_1<T[]>;
   Concat(second: System_Collections_Generic.IEnumerable_1<T>): System_Collections_Generic.IEnumerable_1<T>;
   Contains(value: T): boolean;
-  Contains(value: T, comparer: System_Collections_Generic.IEqualityComparer_1<T> | undefined): boolean;
-  AggregateBy<TKey, TAccumulate>(keySelector: System.Func_2<T, TKey>, seed: TAccumulate, func: System.Func_3<TAccumulate, T, TAccumulate>, keyComparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Collections_Generic.IEnumerable_1<System_Collections_Generic.KeyValuePair_2<TKey, TAccumulate>>;
-  AggregateBy<TKey, TAccumulate>(keySelector: System.Func_2<T, TKey>, seedSelector: System.Func_2<TKey, TAccumulate>, func: System.Func_3<TAccumulate, T, TAccumulate>, keyComparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Collections_Generic.IEnumerable_1<System_Collections_Generic.KeyValuePair_2<TKey, TAccumulate>>;
-  CountBy<TKey>(keySelector: System.Func_2<T, TKey>, keyComparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Collections_Generic.IEnumerable_1<System_Collections_Generic.KeyValuePair_2<TKey, System_Internal.Int32>>;
+  Contains(value: T, comparer: System_Collections_Generic.IEqualityComparer_1<T>): boolean;
+  AggregateBy<TKey, TAccumulate>(keySelector: System.Func_2<T, TKey>, seed: TAccumulate, func: System.Func_3<TAccumulate, T, TAccumulate>, keyComparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.IEnumerable_1<System_Collections_Generic.KeyValuePair_2<TKey, TAccumulate>>;
+  AggregateBy<TKey, TAccumulate>(keySelector: System.Func_2<T, TKey>, seedSelector: System.Func_2<TKey, TAccumulate>, func: System.Func_3<TAccumulate, T, TAccumulate>, keyComparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.IEnumerable_1<System_Collections_Generic.KeyValuePair_2<TKey, TAccumulate>>;
+  CountBy<TKey>(keySelector: System.Func_2<T, TKey>, keyComparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.IEnumerable_1<System_Collections_Generic.KeyValuePair_2<TKey, System_Internal.Int32>>;
   Count(): int;
   Count(predicate: System.Func_2<T, System_Internal.Boolean>): int;
   TryGetNonEnumeratedCount(count: int): boolean;
@@ -497,18 +497,18 @@ export interface __Ext_IEnumerable_1<T> {
   DefaultIfEmpty(): System_Collections_Generic.IEnumerable_1<T | undefined>;
   DefaultIfEmpty(defaultValue: T): System_Collections_Generic.IEnumerable_1<T>;
   Distinct(): System_Collections_Generic.IEnumerable_1<T>;
-  Distinct(comparer: System_Collections_Generic.IEqualityComparer_1<T> | undefined): System_Collections_Generic.IEnumerable_1<T>;
+  Distinct(comparer: System_Collections_Generic.IEqualityComparer_1<T>): System_Collections_Generic.IEnumerable_1<T>;
   DistinctBy<TKey>(keySelector: System.Func_2<T, TKey>): System_Collections_Generic.IEnumerable_1<T>;
-  DistinctBy<TKey>(keySelector: System.Func_2<T, TKey>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Collections_Generic.IEnumerable_1<T>;
+  DistinctBy<TKey>(keySelector: System.Func_2<T, TKey>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.IEnumerable_1<T>;
   ElementAt(index: int): T;
   ElementAt(index: System.Index): T;
   ElementAtOrDefault(index: int): T | undefined;
   ElementAtOrDefault(index: System.Index): T | undefined;
   AsEnumerable(): System_Collections_Generic.IEnumerable_1<T>;
   Except(second: System_Collections_Generic.IEnumerable_1<T>): System_Collections_Generic.IEnumerable_1<T>;
-  Except(second: System_Collections_Generic.IEnumerable_1<T>, comparer: System_Collections_Generic.IEqualityComparer_1<T> | undefined): System_Collections_Generic.IEnumerable_1<T>;
+  Except(second: System_Collections_Generic.IEnumerable_1<T>, comparer: System_Collections_Generic.IEqualityComparer_1<T>): System_Collections_Generic.IEnumerable_1<T>;
   ExceptBy<TKey>(second: System_Collections_Generic.IEnumerable_1<TKey>, keySelector: System.Func_2<T, TKey>): System_Collections_Generic.IEnumerable_1<T>;
-  ExceptBy<TKey>(second: System_Collections_Generic.IEnumerable_1<TKey>, keySelector: System.Func_2<T, TKey>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Collections_Generic.IEnumerable_1<T>;
+  ExceptBy<TKey>(second: System_Collections_Generic.IEnumerable_1<TKey>, keySelector: System.Func_2<T, TKey>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.IEnumerable_1<T>;
   First(): T;
   First(predicate: System.Func_2<T, System_Internal.Boolean>): T;
   FirstOrDefault(): T | undefined;
@@ -516,34 +516,34 @@ export interface __Ext_IEnumerable_1<T> {
   FirstOrDefault(predicate: System.Func_2<T, System_Internal.Boolean>): T | undefined;
   FirstOrDefault(predicate: System.Func_2<T, System_Internal.Boolean>, defaultValue: T): T;
   GroupBy<TKey>(keySelector: System.Func_2<T, TKey>): System_Collections_Generic.IEnumerable_1<System_Linq.IGrouping_2<TKey, T>>;
-  GroupBy<TKey>(keySelector: System.Func_2<T, TKey>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Collections_Generic.IEnumerable_1<System_Linq.IGrouping_2<TKey, T>>;
+  GroupBy<TKey>(keySelector: System.Func_2<T, TKey>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.IEnumerable_1<System_Linq.IGrouping_2<TKey, T>>;
   GroupBy<TKey, TElement>(keySelector: System.Func_2<T, TKey>, elementSelector: System.Func_2<T, TElement>): System_Collections_Generic.IEnumerable_1<System_Linq.IGrouping_2<TKey, TElement>>;
-  GroupBy<TKey, TElement>(keySelector: System.Func_2<T, TKey>, elementSelector: System.Func_2<T, TElement>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Collections_Generic.IEnumerable_1<System_Linq.IGrouping_2<TKey, TElement>>;
+  GroupBy<TKey, TElement>(keySelector: System.Func_2<T, TKey>, elementSelector: System.Func_2<T, TElement>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.IEnumerable_1<System_Linq.IGrouping_2<TKey, TElement>>;
   GroupBy<TKey, TResult>(keySelector: System.Func_2<T, TKey>, resultSelector: System.Func_3<TKey, System_Collections_Generic.IEnumerable_1<T>, TResult>): System_Collections_Generic.IEnumerable_1<TResult>;
-  GroupBy<TKey, TResult>(keySelector: System.Func_2<T, TKey>, resultSelector: System.Func_3<TKey, System_Collections_Generic.IEnumerable_1<T>, TResult>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Collections_Generic.IEnumerable_1<TResult>;
+  GroupBy<TKey, TResult>(keySelector: System.Func_2<T, TKey>, resultSelector: System.Func_3<TKey, System_Collections_Generic.IEnumerable_1<T>, TResult>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.IEnumerable_1<TResult>;
   GroupBy<TKey, TElement, TResult>(keySelector: System.Func_2<T, TKey>, elementSelector: System.Func_2<T, TElement>, resultSelector: System.Func_3<TKey, System_Collections_Generic.IEnumerable_1<TElement>, TResult>): System_Collections_Generic.IEnumerable_1<TResult>;
-  GroupBy<TKey, TElement, TResult>(keySelector: System.Func_2<T, TKey>, elementSelector: System.Func_2<T, TElement>, resultSelector: System.Func_3<TKey, System_Collections_Generic.IEnumerable_1<TElement>, TResult>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Collections_Generic.IEnumerable_1<TResult>;
+  GroupBy<TKey, TElement, TResult>(keySelector: System.Func_2<T, TKey>, elementSelector: System.Func_2<T, TElement>, resultSelector: System.Func_3<TKey, System_Collections_Generic.IEnumerable_1<TElement>, TResult>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.IEnumerable_1<TResult>;
   GroupJoin<TInner, TKey, TResult>(inner: System_Collections_Generic.IEnumerable_1<TInner>, outerKeySelector: System.Func_2<T, TKey>, innerKeySelector: System.Func_2<TInner, TKey>, resultSelector: System.Func_3<T, System_Collections_Generic.IEnumerable_1<TInner>, TResult>): System_Collections_Generic.IEnumerable_1<TResult>;
-  GroupJoin<TInner, TKey, TResult>(inner: System_Collections_Generic.IEnumerable_1<TInner>, outerKeySelector: System.Func_2<T, TKey>, innerKeySelector: System.Func_2<TInner, TKey>, resultSelector: System.Func_3<T, System_Collections_Generic.IEnumerable_1<TInner>, TResult>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Collections_Generic.IEnumerable_1<TResult>;
+  GroupJoin<TInner, TKey, TResult>(inner: System_Collections_Generic.IEnumerable_1<TInner>, outerKeySelector: System.Func_2<T, TKey>, innerKeySelector: System.Func_2<TInner, TKey>, resultSelector: System.Func_3<T, System_Collections_Generic.IEnumerable_1<TInner>, TResult>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.IEnumerable_1<TResult>;
   Index(): System_Collections_Generic.IEnumerable_1<System.ValueTuple_2<System_Internal.Int32, T>>;
   Intersect(second: System_Collections_Generic.IEnumerable_1<T>): System_Collections_Generic.IEnumerable_1<T>;
-  Intersect(second: System_Collections_Generic.IEnumerable_1<T>, comparer: System_Collections_Generic.IEqualityComparer_1<T> | undefined): System_Collections_Generic.IEnumerable_1<T>;
+  Intersect(second: System_Collections_Generic.IEnumerable_1<T>, comparer: System_Collections_Generic.IEqualityComparer_1<T>): System_Collections_Generic.IEnumerable_1<T>;
   IntersectBy<TKey>(second: System_Collections_Generic.IEnumerable_1<TKey>, keySelector: System.Func_2<T, TKey>): System_Collections_Generic.IEnumerable_1<T>;
-  IntersectBy<TKey>(second: System_Collections_Generic.IEnumerable_1<TKey>, keySelector: System.Func_2<T, TKey>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Collections_Generic.IEnumerable_1<T>;
+  IntersectBy<TKey>(second: System_Collections_Generic.IEnumerable_1<TKey>, keySelector: System.Func_2<T, TKey>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.IEnumerable_1<T>;
   Join<TInner, TKey, TResult>(inner: System_Collections_Generic.IEnumerable_1<TInner>, outerKeySelector: System.Func_2<T, TKey>, innerKeySelector: System.Func_2<TInner, TKey>, resultSelector: System.Func_3<T, TInner, TResult>): System_Collections_Generic.IEnumerable_1<TResult>;
-  Join<TInner, TKey, TResult>(inner: System_Collections_Generic.IEnumerable_1<TInner>, outerKeySelector: System.Func_2<T, TKey>, innerKeySelector: System.Func_2<TInner, TKey>, resultSelector: System.Func_3<T, TInner, TResult>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Collections_Generic.IEnumerable_1<TResult>;
+  Join<TInner, TKey, TResult>(inner: System_Collections_Generic.IEnumerable_1<TInner>, outerKeySelector: System.Func_2<T, TKey>, innerKeySelector: System.Func_2<TInner, TKey>, resultSelector: System.Func_3<T, TInner, TResult>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.IEnumerable_1<TResult>;
   Last(): T;
   Last(predicate: System.Func_2<T, System_Internal.Boolean>): T;
   LastOrDefault(): T | undefined;
   LastOrDefault(defaultValue: T): T;
   LastOrDefault(predicate: System.Func_2<T, System_Internal.Boolean>): T | undefined;
   LastOrDefault(predicate: System.Func_2<T, System_Internal.Boolean>, defaultValue: T): T;
-  LeftJoin<TInner, TKey, TResult>(inner: System_Collections_Generic.IEnumerable_1<TInner>, outerKeySelector: System.Func_2<T, TKey>, innerKeySelector: System.Func_2<TInner, TKey>, resultSelector: System.Func_3<T, TInner | undefined, TResult>): System_Collections_Generic.IEnumerable_1<TResult>;
-  LeftJoin<TInner, TKey, TResult>(inner: System_Collections_Generic.IEnumerable_1<TInner>, outerKeySelector: System.Func_2<T, TKey>, innerKeySelector: System.Func_2<TInner, TKey>, resultSelector: System.Func_3<T, TInner | undefined, TResult>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Collections_Generic.IEnumerable_1<TResult>;
+  LeftJoin<TInner, TKey, TResult>(inner: System_Collections_Generic.IEnumerable_1<TInner>, outerKeySelector: System.Func_2<T, TKey>, innerKeySelector: System.Func_2<TInner, TKey>, resultSelector: System.Func_3<T, TInner, TResult>): System_Collections_Generic.IEnumerable_1<TResult>;
+  LeftJoin<TInner, TKey, TResult>(inner: System_Collections_Generic.IEnumerable_1<TInner>, outerKeySelector: System.Func_2<T, TKey>, innerKeySelector: System.Func_2<TInner, TKey>, resultSelector: System.Func_3<T, TInner, TResult>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.IEnumerable_1<TResult>;
   ToLookup<TKey>(keySelector: System.Func_2<T, TKey>): System_Linq.ILookup_2<TKey, T>;
-  ToLookup<TKey>(keySelector: System.Func_2<T, TKey>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Linq.ILookup_2<TKey, T>;
+  ToLookup<TKey>(keySelector: System.Func_2<T, TKey>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Linq.ILookup_2<TKey, T>;
   ToLookup<TKey, TElement>(keySelector: System.Func_2<T, TKey>, elementSelector: System.Func_2<T, TElement>): System_Linq.ILookup_2<TKey, TElement>;
-  ToLookup<TKey, TElement>(keySelector: System.Func_2<T, TKey>, elementSelector: System.Func_2<T, TElement>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Linq.ILookup_2<TKey, TElement>;
+  ToLookup<TKey, TElement>(keySelector: System.Func_2<T, TKey>, elementSelector: System.Func_2<T, TElement>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Linq.ILookup_2<TKey, TElement>;
   Max(): int;
   Max(): long;
   Max(): System.Nullable_1<System_Internal.Int32>;
@@ -555,9 +555,9 @@ export interface __Ext_IEnumerable_1<T> {
   Max(): decimal;
   Max(): System.Nullable_1<System_Internal.Decimal>;
   Max(): T | undefined;
-  Max(comparer: System_Collections_Generic.IComparer_1<T> | undefined): T | undefined;
+  Max(comparer: System_Collections_Generic.IComparer_1<T>): T | undefined;
   MaxBy<TKey>(keySelector: System.Func_2<T, TKey>): T | undefined;
-  MaxBy<TKey>(keySelector: System.Func_2<T, TKey>, comparer: System_Collections_Generic.IComparer_1<TKey> | undefined): T | undefined;
+  MaxBy<TKey>(keySelector: System.Func_2<T, TKey>, comparer: System_Collections_Generic.IComparer_1<TKey>): T | undefined;
   Max(selector: System.Func_2<T, System_Internal.Int32>): int;
   Max(selector: System.Func_2<T, System.Nullable_1<System_Internal.Int32>>): System.Nullable_1<System_Internal.Int32>;
   Max(selector: System.Func_2<T, System_Internal.Int64>): long;
@@ -580,9 +580,9 @@ export interface __Ext_IEnumerable_1<T> {
   Min(): decimal;
   Min(): System.Nullable_1<System_Internal.Decimal>;
   Min(): T | undefined;
-  Min(comparer: System_Collections_Generic.IComparer_1<T> | undefined): T | undefined;
+  Min(comparer: System_Collections_Generic.IComparer_1<T>): T | undefined;
   MinBy<TKey>(keySelector: System.Func_2<T, TKey>): T | undefined;
-  MinBy<TKey>(keySelector: System.Func_2<T, TKey>, comparer: System_Collections_Generic.IComparer_1<TKey> | undefined): T | undefined;
+  MinBy<TKey>(keySelector: System.Func_2<T, TKey>, comparer: System_Collections_Generic.IComparer_1<TKey>): T | undefined;
   Min(selector: System.Func_2<T, System_Internal.Int32>): int;
   Min(selector: System.Func_2<T, System.Nullable_1<System_Internal.Int32>>): System.Nullable_1<System_Internal.Int32>;
   Min(selector: System.Func_2<T, System_Internal.Int64>): long;
@@ -595,17 +595,17 @@ export interface __Ext_IEnumerable_1<T> {
   Min(selector: System.Func_2<T, System.Nullable_1<System_Internal.Decimal>>): System.Nullable_1<System_Internal.Decimal>;
   Min<TResult>(selector: System.Func_2<T, TResult>): TResult | undefined;
   Order(): System_Linq.IOrderedEnumerable_1<T>;
-  Order(comparer: System_Collections_Generic.IComparer_1<T> | undefined): System_Linq.IOrderedEnumerable_1<T>;
+  Order(comparer: System_Collections_Generic.IComparer_1<T>): System_Linq.IOrderedEnumerable_1<T>;
   OrderBy<TKey>(keySelector: System.Func_2<T, TKey>): System_Linq.IOrderedEnumerable_1<T>;
-  OrderBy<TKey>(keySelector: System.Func_2<T, TKey>, comparer: System_Collections_Generic.IComparer_1<TKey> | undefined): System_Linq.IOrderedEnumerable_1<T>;
+  OrderBy<TKey>(keySelector: System.Func_2<T, TKey>, comparer: System_Collections_Generic.IComparer_1<TKey>): System_Linq.IOrderedEnumerable_1<T>;
   OrderDescending(): System_Linq.IOrderedEnumerable_1<T>;
-  OrderDescending(comparer: System_Collections_Generic.IComparer_1<T> | undefined): System_Linq.IOrderedEnumerable_1<T>;
+  OrderDescending(comparer: System_Collections_Generic.IComparer_1<T>): System_Linq.IOrderedEnumerable_1<T>;
   OrderByDescending<TKey>(keySelector: System.Func_2<T, TKey>): System_Linq.IOrderedEnumerable_1<T>;
-  OrderByDescending<TKey>(keySelector: System.Func_2<T, TKey>, comparer: System_Collections_Generic.IComparer_1<TKey> | undefined): System_Linq.IOrderedEnumerable_1<T>;
+  OrderByDescending<TKey>(keySelector: System.Func_2<T, TKey>, comparer: System_Collections_Generic.IComparer_1<TKey>): System_Linq.IOrderedEnumerable_1<T>;
   Shuffle(): System_Collections_Generic.IEnumerable_1<T>;
   Reverse(): System_Collections_Generic.IEnumerable_1<T>;
-  RightJoin<TInner, TKey, TResult>(inner: System_Collections_Generic.IEnumerable_1<TInner>, outerKeySelector: System.Func_2<T, TKey>, innerKeySelector: System.Func_2<TInner, TKey>, resultSelector: System.Func_3<T | undefined, TInner, TResult>): System_Collections_Generic.IEnumerable_1<TResult>;
-  RightJoin<TInner, TKey, TResult>(inner: System_Collections_Generic.IEnumerable_1<TInner>, outerKeySelector: System.Func_2<T, TKey>, innerKeySelector: System.Func_2<TInner, TKey>, resultSelector: System.Func_3<T | undefined, TInner, TResult>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Collections_Generic.IEnumerable_1<TResult>;
+  RightJoin<TInner, TKey, TResult>(inner: System_Collections_Generic.IEnumerable_1<TInner>, outerKeySelector: System.Func_2<T, TKey>, innerKeySelector: System.Func_2<TInner, TKey>, resultSelector: System.Func_3<T, TInner, TResult>): System_Collections_Generic.IEnumerable_1<TResult>;
+  RightJoin<TInner, TKey, TResult>(inner: System_Collections_Generic.IEnumerable_1<TInner>, outerKeySelector: System.Func_2<T, TKey>, innerKeySelector: System.Func_2<TInner, TKey>, resultSelector: System.Func_3<T, TInner, TResult>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.IEnumerable_1<TResult>;
   Select<TResult>(selector: System.Func_2<T, TResult>): System_Collections_Generic.IEnumerable_1<TResult>;
   Select<TResult>(selector: System.Func_3<T, System_Internal.Int32, TResult>): System_Collections_Generic.IEnumerable_1<TResult>;
   SelectMany<TResult>(selector: System.Func_2<T, System_Collections_Generic.IEnumerable_1<TResult>>): System_Collections_Generic.IEnumerable_1<TResult>;
@@ -613,7 +613,7 @@ export interface __Ext_IEnumerable_1<T> {
   SelectMany<TCollection, TResult>(collectionSelector: System.Func_3<T, System_Internal.Int32, System_Collections_Generic.IEnumerable_1<TCollection>>, resultSelector: System.Func_3<T, TCollection, TResult>): System_Collections_Generic.IEnumerable_1<TResult>;
   SelectMany<TCollection, TResult>(collectionSelector: System.Func_2<T, System_Collections_Generic.IEnumerable_1<TCollection>>, resultSelector: System.Func_3<T, TCollection, TResult>): System_Collections_Generic.IEnumerable_1<TResult>;
   SequenceEqual(second: System_Collections_Generic.IEnumerable_1<T>): boolean;
-  SequenceEqual(second: System_Collections_Generic.IEnumerable_1<T>, comparer: System_Collections_Generic.IEqualityComparer_1<T> | undefined): boolean;
+  SequenceEqual(second: System_Collections_Generic.IEnumerable_1<T>, comparer: System_Collections_Generic.IEqualityComparer_1<T>): boolean;
   Single(): T;
   Single(predicate: System.Func_2<T, System_Internal.Boolean>): T;
   SingleOrDefault(): T | undefined;
@@ -652,17 +652,17 @@ export interface __Ext_IEnumerable_1<T> {
   ToArray(): T[];
   ToList(): System_Collections_Generic.List_1<T>;
   ToDictionary<TKey, TValue>(): System_Collections_Generic.Dictionary_2<TKey, TValue>;
-  ToDictionary<TKey, TValue>(comparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Collections_Generic.Dictionary_2<TKey, TValue>;
+  ToDictionary<TKey, TValue>(comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.Dictionary_2<TKey, TValue>;
   ToDictionary<TKey>(keySelector: System.Func_2<T, TKey>): System_Collections_Generic.Dictionary_2<TKey, T>;
-  ToDictionary<TKey>(keySelector: System.Func_2<T, TKey>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Collections_Generic.Dictionary_2<TKey, T>;
+  ToDictionary<TKey>(keySelector: System.Func_2<T, TKey>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.Dictionary_2<TKey, T>;
   ToDictionary<TKey, TElement>(keySelector: System.Func_2<T, TKey>, elementSelector: System.Func_2<T, TElement>): System_Collections_Generic.Dictionary_2<TKey, TElement>;
-  ToDictionary<TKey, TElement>(keySelector: System.Func_2<T, TKey>, elementSelector: System.Func_2<T, TElement>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Collections_Generic.Dictionary_2<TKey, TElement>;
+  ToDictionary<TKey, TElement>(keySelector: System.Func_2<T, TKey>, elementSelector: System.Func_2<T, TElement>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.Dictionary_2<TKey, TElement>;
   ToHashSet(): System_Collections_Generic.HashSet_1<T>;
-  ToHashSet(comparer: System_Collections_Generic.IEqualityComparer_1<T> | undefined): System_Collections_Generic.HashSet_1<T>;
+  ToHashSet(comparer: System_Collections_Generic.IEqualityComparer_1<T>): System_Collections_Generic.HashSet_1<T>;
   Union(second: System_Collections_Generic.IEnumerable_1<T>): System_Collections_Generic.IEnumerable_1<T>;
-  Union(second: System_Collections_Generic.IEnumerable_1<T>, comparer: System_Collections_Generic.IEqualityComparer_1<T> | undefined): System_Collections_Generic.IEnumerable_1<T>;
+  Union(second: System_Collections_Generic.IEnumerable_1<T>, comparer: System_Collections_Generic.IEqualityComparer_1<T>): System_Collections_Generic.IEnumerable_1<T>;
   UnionBy<TKey>(second: System_Collections_Generic.IEnumerable_1<T>, keySelector: System.Func_2<T, TKey>): System_Collections_Generic.IEnumerable_1<T>;
-  UnionBy<TKey>(second: System_Collections_Generic.IEnumerable_1<T>, keySelector: System.Func_2<T, TKey>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Collections_Generic.IEnumerable_1<T>;
+  UnionBy<TKey>(second: System_Collections_Generic.IEnumerable_1<T>, keySelector: System.Func_2<T, TKey>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.IEnumerable_1<T>;
   Where(predicate: System.Func_2<T, System_Internal.Boolean>): System_Collections_Generic.IEnumerable_1<T>;
   Where(predicate: System.Func_3<T, System_Internal.Int32, System_Internal.Boolean>): System_Collections_Generic.IEnumerable_1<T>;
   Zip<TSecond, TResult>(second: System_Collections_Generic.IEnumerable_1<TSecond>, resultSelector: System.Func_3<T, TSecond, TResult>): System_Collections_Generic.IEnumerable_1<TResult>;
@@ -672,20 +672,20 @@ export interface __Ext_IEnumerable_1<T> {
   AsParallel(): System_Linq.ParallelQuery_1<T>;
   AsQueryable(): System_Linq.IQueryable_1<T>;
   Attributes(): System_Collections_Generic.IEnumerable_1<System_Xml_Linq.XAttribute>;
-  Attributes(name: System_Xml_Linq.XName | undefined): System_Collections_Generic.IEnumerable_1<System_Xml_Linq.XAttribute>;
+  Attributes(name: System_Xml_Linq.XName): System_Collections_Generic.IEnumerable_1<System_Xml_Linq.XAttribute>;
   Ancestors(): System_Collections_Generic.IEnumerable_1<System_Xml_Linq.XElement>;
-  Ancestors(name: System_Xml_Linq.XName | undefined): System_Collections_Generic.IEnumerable_1<System_Xml_Linq.XElement>;
+  Ancestors(name: System_Xml_Linq.XName): System_Collections_Generic.IEnumerable_1<System_Xml_Linq.XElement>;
   AncestorsAndSelf(): System_Collections_Generic.IEnumerable_1<System_Xml_Linq.XElement>;
-  AncestorsAndSelf(name: System_Xml_Linq.XName | undefined): System_Collections_Generic.IEnumerable_1<System_Xml_Linq.XElement>;
+  AncestorsAndSelf(name: System_Xml_Linq.XName): System_Collections_Generic.IEnumerable_1<System_Xml_Linq.XElement>;
   Nodes(): System_Collections_Generic.IEnumerable_1<System_Xml_Linq.XNode>;
   DescendantNodes(): System_Collections_Generic.IEnumerable_1<System_Xml_Linq.XNode>;
   Descendants(): System_Collections_Generic.IEnumerable_1<System_Xml_Linq.XElement>;
-  Descendants(name: System_Xml_Linq.XName | undefined): System_Collections_Generic.IEnumerable_1<System_Xml_Linq.XElement>;
+  Descendants(name: System_Xml_Linq.XName): System_Collections_Generic.IEnumerable_1<System_Xml_Linq.XElement>;
   DescendantNodesAndSelf(): System_Collections_Generic.IEnumerable_1<System_Xml_Linq.XNode>;
   DescendantsAndSelf(): System_Collections_Generic.IEnumerable_1<System_Xml_Linq.XElement>;
-  DescendantsAndSelf(name: System_Xml_Linq.XName | undefined): System_Collections_Generic.IEnumerable_1<System_Xml_Linq.XElement>;
+  DescendantsAndSelf(name: System_Xml_Linq.XName): System_Collections_Generic.IEnumerable_1<System_Xml_Linq.XElement>;
   Elements(): System_Collections_Generic.IEnumerable_1<System_Xml_Linq.XElement>;
-  Elements(name: System_Xml_Linq.XName | undefined): System_Collections_Generic.IEnumerable_1<System_Xml_Linq.XElement>;
+  Elements(name: System_Xml_Linq.XName): System_Collections_Generic.IEnumerable_1<System_Xml_Linq.XElement>;
   InDocumentOrder(): System_Collections_Generic.IEnumerable_1<T>;
   Remove(): void;
   Remove(): void;
@@ -727,17 +727,17 @@ export interface __Ext_ImmutableArray_1_Builder<T> {
 
 export interface __Ext_ImmutableArray_1<T> {
   BinarySearch(value: T): int;
-  BinarySearch(value: T, comparer: System_Collections_Generic.IComparer_1<T> | undefined): int;
+  BinarySearch(value: T, comparer: System_Collections_Generic.IComparer_1<T>): int;
   BinarySearch(index: int, length: int, value: T): int;
-  BinarySearch(index: int, length: int, value: T, comparer: System_Collections_Generic.IComparer_1<T> | undefined): int;
+  BinarySearch(index: int, length: int, value: T, comparer: System_Collections_Generic.IComparer_1<T>): int;
   Select<TResult>(selector: System.Func_2<T, TResult>): System_Collections_Generic.IEnumerable_1<TResult>;
   SelectMany<TCollection, TResult>(collectionSelector: System.Func_2<T, System_Collections_Generic.IEnumerable_1<TCollection>>, resultSelector: System.Func_3<T, TCollection, TResult>): System_Collections_Generic.IEnumerable_1<TResult>;
   Where(predicate: System.Func_2<T, System_Internal.Boolean>): System_Collections_Generic.IEnumerable_1<T>;
   Any(): boolean;
   Any(predicate: System.Func_2<T, System_Internal.Boolean>): boolean;
   All(predicate: System.Func_2<T, System_Internal.Boolean>): boolean;
-  SequenceEqual<TDerived>(items: System_Collections_Immutable.ImmutableArray_1<TDerived>, comparer: System_Collections_Generic.IEqualityComparer_1<T> | undefined): boolean;
-  SequenceEqual<TDerived>(items: System_Collections_Generic.IEnumerable_1<TDerived>, comparer: System_Collections_Generic.IEqualityComparer_1<T> | undefined): boolean;
+  SequenceEqual<TDerived>(items: System_Collections_Immutable.ImmutableArray_1<TDerived>, comparer: System_Collections_Generic.IEqualityComparer_1<T>): boolean;
+  SequenceEqual<TDerived>(items: System_Collections_Generic.IEnumerable_1<TDerived>, comparer: System_Collections_Generic.IEqualityComparer_1<T>): boolean;
   SequenceEqual<TDerived>(items: System_Collections_Immutable.ImmutableArray_1<TDerived>, predicate: System.Func_3<T, T, System_Internal.Boolean>): boolean;
   Aggregate(func: System.Func_3<T, T, T>): T | undefined;
   Aggregate<TAccumulate>(seed: TAccumulate, func: System.Func_3<TAccumulate, T, TAccumulate>): TAccumulate;
@@ -758,8 +758,8 @@ export interface __Ext_ImmutableArray_1<T> {
   SingleOrDefault(predicate: System.Func_2<T, System_Internal.Boolean>): T | undefined;
   ToDictionary<TKey>(keySelector: System.Func_2<T, TKey>): System_Collections_Generic.Dictionary_2<TKey, T>;
   ToDictionary<TKey, TElement>(keySelector: System.Func_2<T, TKey>, elementSelector: System.Func_2<T, TElement>): System_Collections_Generic.Dictionary_2<TKey, TElement>;
-  ToDictionary<TKey>(keySelector: System.Func_2<T, TKey>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Collections_Generic.Dictionary_2<TKey, T>;
-  ToDictionary<TKey, TElement>(keySelector: System.Func_2<T, TKey>, elementSelector: System.Func_2<T, TElement>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Collections_Generic.Dictionary_2<TKey, TElement>;
+  ToDictionary<TKey>(keySelector: System.Func_2<T, TKey>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.Dictionary_2<TKey, T>;
+  ToDictionary<TKey, TElement>(keySelector: System.Func_2<T, TKey>, elementSelector: System.Func_2<T, TElement>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.Dictionary_2<TKey, TElement>;
   ToArray(): T[];
 }
 
@@ -786,11 +786,11 @@ export interface __Ext_IImmutableList_1<T> {
   Remove(value: T): System_Collections_Immutable.IImmutableList_1<T>;
   RemoveRange(items: System_Collections_Generic.IEnumerable_1<T>): System_Collections_Immutable.IImmutableList_1<T>;
   IndexOf(item: T): int;
-  IndexOf(item: T, equalityComparer: System_Collections_Generic.IEqualityComparer_1<T> | undefined): int;
+  IndexOf(item: T, equalityComparer: System_Collections_Generic.IEqualityComparer_1<T>): int;
   IndexOf(item: T, startIndex: int): int;
   IndexOf(item: T, startIndex: int, count: int): int;
   LastIndexOf(item: T): int;
-  LastIndexOf(item: T, equalityComparer: System_Collections_Generic.IEqualityComparer_1<T> | undefined): int;
+  LastIndexOf(item: T, equalityComparer: System_Collections_Generic.IEqualityComparer_1<T>): int;
   LastIndexOf(item: T, startIndex: int): int;
   LastIndexOf(item: T, startIndex: int, count: int): int;
 }
@@ -849,9 +849,9 @@ export interface __Ext_DataRow {
   Field<T>(columnIndex: int, version: System_Data.DataRowVersion): T | undefined;
   Field<T>(columnName: string, version: System_Data.DataRowVersion): T | undefined;
   Field<T>(column: System_Data.DataColumn, version: System_Data.DataRowVersion): T | undefined;
-  SetField<T>(columnIndex: int, value: T | undefined): void;
-  SetField<T>(columnName: string, value: T | undefined): void;
-  SetField<T>(column: System_Data.DataColumn, value: T | undefined): void;
+  SetField<T>(columnIndex: int, value: T): void;
+  SetField<T>(columnName: string, value: T): void;
+  SetField<T>(column: System_Data.DataColumn, value: T): void;
 }
 
 export interface __Ext_DataTable {
@@ -901,7 +901,7 @@ export interface __Ext_StackFrame {
 }
 
 export interface __Ext_IMeterFactory {
-  Create(name: string, version: string | undefined, tags: System_Collections_Generic.IEnumerable_1<System_Collections_Generic.KeyValuePair_2<System_Internal.String, unknown>> | undefined): System_Diagnostics_Metrics.Meter;
+  Create(name: string, version: string, tags: System_Collections_Generic.IEnumerable_1<System_Collections_Generic.KeyValuePair_2<System_Internal.String, unknown>>): System_Diagnostics_Metrics.Meter;
 }
 
 export interface __Ext_CompareInfo {
@@ -916,7 +916,7 @@ export interface __Ext_DirectoryInfo {
 }
 
 export interface __Ext_FileInfo {
-  Create(mode: System_IO.FileMode, rights: System_Security_AccessControl.FileSystemRights, share: System_IO.FileShare, bufferSize: int, options: System_IO.FileOptions, fileSecurity: System_Security_AccessControl.FileSecurity | undefined): System_IO.FileStream;
+  Create(mode: System_IO.FileMode, rights: System_Security_AccessControl.FileSystemRights, share: System_IO.FileShare, bufferSize: int, options: System_IO.FileOptions, fileSecurity: System_Security_AccessControl.FileSecurity): System_IO.FileStream;
   GetAccessControl(): System_Security_AccessControl.FileSecurity;
   GetAccessControl(includeSections: System_Security_AccessControl.AccessControlSections): System_Security_AccessControl.FileSecurity;
   SetAccessControl(fileSecurity: System_Security_AccessControl.FileSecurity): void;
@@ -967,9 +967,9 @@ export interface __Ext_IEnumerable {
 
 export interface __Ext_IOrderedEnumerable_1<TElement> {
   ThenBy<TKey>(keySelector: System.Func_2<TElement, TKey>): System_Linq.IOrderedEnumerable_1<TElement>;
-  ThenBy<TKey>(keySelector: System.Func_2<TElement, TKey>, comparer: System_Collections_Generic.IComparer_1<TKey> | undefined): System_Linq.IOrderedEnumerable_1<TElement>;
+  ThenBy<TKey>(keySelector: System.Func_2<TElement, TKey>, comparer: System_Collections_Generic.IComparer_1<TKey>): System_Linq.IOrderedEnumerable_1<TElement>;
   ThenByDescending<TKey>(keySelector: System.Func_2<TElement, TKey>): System_Linq.IOrderedEnumerable_1<TElement>;
-  ThenByDescending<TKey>(keySelector: System.Func_2<TElement, TKey>, comparer: System_Collections_Generic.IComparer_1<TKey> | undefined): System_Linq.IOrderedEnumerable_1<TElement>;
+  ThenByDescending<TKey>(keySelector: System.Func_2<TElement, TKey>, comparer: System_Collections_Generic.IComparer_1<TKey>): System_Linq.IOrderedEnumerable_1<TElement>;
 }
 
 export interface __Ext_IAsyncEnumerable_1<T> {
@@ -979,10 +979,10 @@ export interface __Ext_IAsyncEnumerable_1<T> {
   AggregateAsync<TAccumulate>(seed: TAccumulate, func: System.Func_4<TAccumulate, T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TAccumulate>>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<TAccumulate>;
   AggregateAsync<TAccumulate, TResult>(seed: TAccumulate, func: System.Func_3<TAccumulate, T, TAccumulate>, resultSelector: System.Func_2<TAccumulate, TResult>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<TResult>;
   AggregateAsync<TAccumulate, TResult>(seed: TAccumulate, func: System.Func_4<TAccumulate, T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TAccumulate>>, resultSelector: System.Func_3<TAccumulate, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TResult>>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<TResult>;
-  AggregateBy<TKey, TAccumulate>(keySelector: System.Func_2<T, TKey>, seed: TAccumulate, func: System.Func_3<TAccumulate, T, TAccumulate>, keyComparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Collections_Generic.IAsyncEnumerable_1<System_Collections_Generic.KeyValuePair_2<TKey, TAccumulate>>;
-  AggregateBy<TKey, TAccumulate>(keySelector: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TKey>>, seed: TAccumulate, func: System.Func_4<TAccumulate, T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TAccumulate>>, keyComparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Collections_Generic.IAsyncEnumerable_1<System_Collections_Generic.KeyValuePair_2<TKey, TAccumulate>>;
-  AggregateBy<TKey, TAccumulate>(keySelector: System.Func_2<T, TKey>, seedSelector: System.Func_2<TKey, TAccumulate>, func: System.Func_3<TAccumulate, T, TAccumulate>, keyComparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Collections_Generic.IAsyncEnumerable_1<System_Collections_Generic.KeyValuePair_2<TKey, TAccumulate>>;
-  AggregateBy<TKey, TAccumulate>(keySelector: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TKey>>, seedSelector: System.Func_3<TKey, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TAccumulate>>, func: System.Func_4<TAccumulate, T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TAccumulate>>, keyComparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Collections_Generic.IAsyncEnumerable_1<System_Collections_Generic.KeyValuePair_2<TKey, TAccumulate>>;
+  AggregateBy<TKey, TAccumulate>(keySelector: System.Func_2<T, TKey>, seed: TAccumulate, func: System.Func_3<TAccumulate, T, TAccumulate>, keyComparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.IAsyncEnumerable_1<System_Collections_Generic.KeyValuePair_2<TKey, TAccumulate>>;
+  AggregateBy<TKey, TAccumulate>(keySelector: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TKey>>, seed: TAccumulate, func: System.Func_4<TAccumulate, T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TAccumulate>>, keyComparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.IAsyncEnumerable_1<System_Collections_Generic.KeyValuePair_2<TKey, TAccumulate>>;
+  AggregateBy<TKey, TAccumulate>(keySelector: System.Func_2<T, TKey>, seedSelector: System.Func_2<TKey, TAccumulate>, func: System.Func_3<TAccumulate, T, TAccumulate>, keyComparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.IAsyncEnumerable_1<System_Collections_Generic.KeyValuePair_2<TKey, TAccumulate>>;
+  AggregateBy<TKey, TAccumulate>(keySelector: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TKey>>, seedSelector: System.Func_3<TKey, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TAccumulate>>, func: System.Func_4<TAccumulate, T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TAccumulate>>, keyComparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.IAsyncEnumerable_1<System_Collections_Generic.KeyValuePair_2<TKey, TAccumulate>>;
   AllAsync(predicate: System.Func_2<T, System_Internal.Boolean>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<System_Internal.Boolean>;
   AllAsync(predicate: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<System_Internal.Boolean>>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<System_Internal.Boolean>;
   AnyAsync(cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<System_Internal.Boolean>;
@@ -1002,27 +1002,27 @@ export interface __Ext_IAsyncEnumerable_1<T> {
   Cast<TResult>(): System_Collections_Generic.IAsyncEnumerable_1<TResult>;
   Chunk(size: int): System_Collections_Generic.IAsyncEnumerable_1<T[]>;
   Concat(second: System_Collections_Generic.IAsyncEnumerable_1<T>): System_Collections_Generic.IAsyncEnumerable_1<T>;
-  ContainsAsync(value: T, comparer: System_Collections_Generic.IEqualityComparer_1<T> | undefined, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<System_Internal.Boolean>;
+  ContainsAsync(value: T, comparer: System_Collections_Generic.IEqualityComparer_1<T>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<System_Internal.Boolean>;
   CountAsync(cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<System_Internal.Int32>;
   CountAsync(predicate: System.Func_2<T, System_Internal.Boolean>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<System_Internal.Int32>;
   CountAsync(predicate: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<System_Internal.Boolean>>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<System_Internal.Int32>;
   LongCountAsync(cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<System_Internal.Int64>;
   LongCountAsync(predicate: System.Func_2<T, System_Internal.Boolean>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<System_Internal.Int64>;
   LongCountAsync(predicate: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<System_Internal.Boolean>>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<System_Internal.Int64>;
-  CountBy<TKey>(keySelector: System.Func_2<T, TKey>, keyComparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Collections_Generic.IAsyncEnumerable_1<System_Collections_Generic.KeyValuePair_2<TKey, System_Internal.Int32>>;
-  CountBy<TKey>(keySelector: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TKey>>, keyComparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Collections_Generic.IAsyncEnumerable_1<System_Collections_Generic.KeyValuePair_2<TKey, System_Internal.Int32>>;
+  CountBy<TKey>(keySelector: System.Func_2<T, TKey>, keyComparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.IAsyncEnumerable_1<System_Collections_Generic.KeyValuePair_2<TKey, System_Internal.Int32>>;
+  CountBy<TKey>(keySelector: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TKey>>, keyComparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.IAsyncEnumerable_1<System_Collections_Generic.KeyValuePair_2<TKey, System_Internal.Int32>>;
   DefaultIfEmpty(): System_Collections_Generic.IAsyncEnumerable_1<T | undefined>;
   DefaultIfEmpty(defaultValue: T): System_Collections_Generic.IAsyncEnumerable_1<T>;
-  Distinct(comparer: System_Collections_Generic.IEqualityComparer_1<T> | undefined): System_Collections_Generic.IAsyncEnumerable_1<T>;
-  DistinctBy<TKey>(keySelector: System.Func_2<T, TKey>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Collections_Generic.IAsyncEnumerable_1<T>;
-  DistinctBy<TKey>(keySelector: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TKey>>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Collections_Generic.IAsyncEnumerable_1<T>;
+  Distinct(comparer: System_Collections_Generic.IEqualityComparer_1<T>): System_Collections_Generic.IAsyncEnumerable_1<T>;
+  DistinctBy<TKey>(keySelector: System.Func_2<T, TKey>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.IAsyncEnumerable_1<T>;
+  DistinctBy<TKey>(keySelector: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TKey>>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.IAsyncEnumerable_1<T>;
   ElementAtAsync(index: int, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<T>;
   ElementAtOrDefaultAsync(index: int, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<T>;
   ElementAtAsync(index: System.Index, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<T>;
   ElementAtOrDefaultAsync(index: System.Index, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<T>;
-  Except(second: System_Collections_Generic.IAsyncEnumerable_1<T>, comparer: System_Collections_Generic.IEqualityComparer_1<T> | undefined): System_Collections_Generic.IAsyncEnumerable_1<T>;
-  ExceptBy<TKey>(second: System_Collections_Generic.IAsyncEnumerable_1<TKey>, keySelector: System.Func_2<T, TKey>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Collections_Generic.IAsyncEnumerable_1<T>;
-  ExceptBy<TKey>(second: System_Collections_Generic.IAsyncEnumerable_1<TKey>, keySelector: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TKey>>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Collections_Generic.IAsyncEnumerable_1<T>;
+  Except(second: System_Collections_Generic.IAsyncEnumerable_1<T>, comparer: System_Collections_Generic.IEqualityComparer_1<T>): System_Collections_Generic.IAsyncEnumerable_1<T>;
+  ExceptBy<TKey>(second: System_Collections_Generic.IAsyncEnumerable_1<TKey>, keySelector: System.Func_2<T, TKey>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.IAsyncEnumerable_1<T>;
+  ExceptBy<TKey>(second: System_Collections_Generic.IAsyncEnumerable_1<TKey>, keySelector: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TKey>>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.IAsyncEnumerable_1<T>;
   FirstAsync(cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<T>;
   FirstAsync(predicate: System.Func_2<T, System_Internal.Boolean>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<T>;
   FirstAsync(predicate: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<System_Internal.Boolean>>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<T>;
@@ -1032,22 +1032,22 @@ export interface __Ext_IAsyncEnumerable_1<T> {
   FirstOrDefaultAsync(predicate: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<System_Internal.Boolean>>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<T>;
   FirstOrDefaultAsync(predicate: System.Func_2<T, System_Internal.Boolean>, defaultValue: T, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<T>;
   FirstOrDefaultAsync(predicate: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<System_Internal.Boolean>>, defaultValue: T, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<T>;
-  GroupBy<TKey>(keySelector: System.Func_2<T, TKey>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Collections_Generic.IAsyncEnumerable_1<System_Linq.IGrouping_2<TKey, T>>;
-  GroupBy<TKey>(keySelector: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TKey>>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Collections_Generic.IAsyncEnumerable_1<System_Linq.IGrouping_2<TKey, T>>;
-  GroupBy<TKey, TElement>(keySelector: System.Func_2<T, TKey>, elementSelector: System.Func_2<T, TElement>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Collections_Generic.IAsyncEnumerable_1<System_Linq.IGrouping_2<TKey, TElement>>;
-  GroupBy<TKey, TElement>(keySelector: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TKey>>, elementSelector: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TElement>>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Collections_Generic.IAsyncEnumerable_1<System_Linq.IGrouping_2<TKey, TElement>>;
-  GroupBy<TKey, TResult>(keySelector: System.Func_2<T, TKey>, resultSelector: System.Func_3<TKey, System_Collections_Generic.IEnumerable_1<T>, TResult>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Collections_Generic.IAsyncEnumerable_1<TResult>;
-  GroupBy<TKey, TResult>(keySelector: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TKey>>, resultSelector: System.Func_4<TKey, System_Collections_Generic.IEnumerable_1<T>, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TResult>>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Collections_Generic.IAsyncEnumerable_1<TResult>;
-  GroupBy<TKey, TElement, TResult>(keySelector: System.Func_2<T, TKey>, elementSelector: System.Func_2<T, TElement>, resultSelector: System.Func_3<TKey, System_Collections_Generic.IEnumerable_1<TElement>, TResult>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Collections_Generic.IAsyncEnumerable_1<TResult>;
-  GroupBy<TKey, TElement, TResult>(keySelector: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TKey>>, elementSelector: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TElement>>, resultSelector: System.Func_4<TKey, System_Collections_Generic.IEnumerable_1<TElement>, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TResult>>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Collections_Generic.IAsyncEnumerable_1<TResult>;
-  GroupJoin<TInner, TKey, TResult>(inner: System_Collections_Generic.IAsyncEnumerable_1<TInner>, outerKeySelector: System.Func_2<T, TKey>, innerKeySelector: System.Func_2<TInner, TKey>, resultSelector: System.Func_3<T, System_Collections_Generic.IEnumerable_1<TInner>, TResult>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Collections_Generic.IAsyncEnumerable_1<TResult>;
-  GroupJoin<TInner, TKey, TResult>(inner: System_Collections_Generic.IAsyncEnumerable_1<TInner>, outerKeySelector: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TKey>>, innerKeySelector: System.Func_3<TInner, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TKey>>, resultSelector: System.Func_4<T, System_Collections_Generic.IEnumerable_1<TInner>, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TResult>>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Collections_Generic.IAsyncEnumerable_1<TResult>;
+  GroupBy<TKey>(keySelector: System.Func_2<T, TKey>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.IAsyncEnumerable_1<System_Linq.IGrouping_2<TKey, T>>;
+  GroupBy<TKey>(keySelector: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TKey>>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.IAsyncEnumerable_1<System_Linq.IGrouping_2<TKey, T>>;
+  GroupBy<TKey, TElement>(keySelector: System.Func_2<T, TKey>, elementSelector: System.Func_2<T, TElement>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.IAsyncEnumerable_1<System_Linq.IGrouping_2<TKey, TElement>>;
+  GroupBy<TKey, TElement>(keySelector: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TKey>>, elementSelector: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TElement>>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.IAsyncEnumerable_1<System_Linq.IGrouping_2<TKey, TElement>>;
+  GroupBy<TKey, TResult>(keySelector: System.Func_2<T, TKey>, resultSelector: System.Func_3<TKey, System_Collections_Generic.IEnumerable_1<T>, TResult>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.IAsyncEnumerable_1<TResult>;
+  GroupBy<TKey, TResult>(keySelector: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TKey>>, resultSelector: System.Func_4<TKey, System_Collections_Generic.IEnumerable_1<T>, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TResult>>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.IAsyncEnumerable_1<TResult>;
+  GroupBy<TKey, TElement, TResult>(keySelector: System.Func_2<T, TKey>, elementSelector: System.Func_2<T, TElement>, resultSelector: System.Func_3<TKey, System_Collections_Generic.IEnumerable_1<TElement>, TResult>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.IAsyncEnumerable_1<TResult>;
+  GroupBy<TKey, TElement, TResult>(keySelector: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TKey>>, elementSelector: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TElement>>, resultSelector: System.Func_4<TKey, System_Collections_Generic.IEnumerable_1<TElement>, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TResult>>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.IAsyncEnumerable_1<TResult>;
+  GroupJoin<TInner, TKey, TResult>(inner: System_Collections_Generic.IAsyncEnumerable_1<TInner>, outerKeySelector: System.Func_2<T, TKey>, innerKeySelector: System.Func_2<TInner, TKey>, resultSelector: System.Func_3<T, System_Collections_Generic.IEnumerable_1<TInner>, TResult>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.IAsyncEnumerable_1<TResult>;
+  GroupJoin<TInner, TKey, TResult>(inner: System_Collections_Generic.IAsyncEnumerable_1<TInner>, outerKeySelector: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TKey>>, innerKeySelector: System.Func_3<TInner, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TKey>>, resultSelector: System.Func_4<T, System_Collections_Generic.IEnumerable_1<TInner>, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TResult>>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.IAsyncEnumerable_1<TResult>;
   Index(): System_Collections_Generic.IAsyncEnumerable_1<System.ValueTuple_2<System_Internal.Int32, T>>;
-  Intersect(second: System_Collections_Generic.IAsyncEnumerable_1<T>, comparer: System_Collections_Generic.IEqualityComparer_1<T> | undefined): System_Collections_Generic.IAsyncEnumerable_1<T>;
-  IntersectBy<TKey>(second: System_Collections_Generic.IAsyncEnumerable_1<TKey>, keySelector: System.Func_2<T, TKey>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Collections_Generic.IAsyncEnumerable_1<T>;
-  IntersectBy<TKey>(second: System_Collections_Generic.IAsyncEnumerable_1<TKey>, keySelector: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TKey>>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Collections_Generic.IAsyncEnumerable_1<T>;
-  Join<TInner, TKey, TResult>(inner: System_Collections_Generic.IAsyncEnumerable_1<TInner>, outerKeySelector: System.Func_2<T, TKey>, innerKeySelector: System.Func_2<TInner, TKey>, resultSelector: System.Func_3<T, TInner, TResult>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Collections_Generic.IAsyncEnumerable_1<TResult>;
-  Join<TInner, TKey, TResult>(inner: System_Collections_Generic.IAsyncEnumerable_1<TInner>, outerKeySelector: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TKey>>, innerKeySelector: System.Func_3<TInner, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TKey>>, resultSelector: System.Func_4<T, TInner, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TResult>>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Collections_Generic.IAsyncEnumerable_1<TResult>;
+  Intersect(second: System_Collections_Generic.IAsyncEnumerable_1<T>, comparer: System_Collections_Generic.IEqualityComparer_1<T>): System_Collections_Generic.IAsyncEnumerable_1<T>;
+  IntersectBy<TKey>(second: System_Collections_Generic.IAsyncEnumerable_1<TKey>, keySelector: System.Func_2<T, TKey>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.IAsyncEnumerable_1<T>;
+  IntersectBy<TKey>(second: System_Collections_Generic.IAsyncEnumerable_1<TKey>, keySelector: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TKey>>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.IAsyncEnumerable_1<T>;
+  Join<TInner, TKey, TResult>(inner: System_Collections_Generic.IAsyncEnumerable_1<TInner>, outerKeySelector: System.Func_2<T, TKey>, innerKeySelector: System.Func_2<TInner, TKey>, resultSelector: System.Func_3<T, TInner, TResult>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.IAsyncEnumerable_1<TResult>;
+  Join<TInner, TKey, TResult>(inner: System_Collections_Generic.IAsyncEnumerable_1<TInner>, outerKeySelector: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TKey>>, innerKeySelector: System.Func_3<TInner, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TKey>>, resultSelector: System.Func_4<T, TInner, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TResult>>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.IAsyncEnumerable_1<TResult>;
   LastAsync(cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<T>;
   LastAsync(predicate: System.Func_2<T, System_Internal.Boolean>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<T>;
   LastAsync(predicate: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<System_Internal.Boolean>>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<T>;
@@ -1057,25 +1057,25 @@ export interface __Ext_IAsyncEnumerable_1<T> {
   LastOrDefaultAsync(predicate: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<System_Internal.Boolean>>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<T>;
   LastOrDefaultAsync(predicate: System.Func_2<T, System_Internal.Boolean>, defaultValue: T, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<T>;
   LastOrDefaultAsync(predicate: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<System_Internal.Boolean>>, defaultValue: T, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<T>;
-  LeftJoin<TInner, TKey, TResult>(inner: System_Collections_Generic.IAsyncEnumerable_1<TInner>, outerKeySelector: System.Func_2<T, TKey>, innerKeySelector: System.Func_2<TInner, TKey>, resultSelector: System.Func_3<T, TInner | undefined, TResult>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Collections_Generic.IAsyncEnumerable_1<TResult>;
-  LeftJoin<TInner, TKey, TResult>(inner: System_Collections_Generic.IAsyncEnumerable_1<TInner>, outerKeySelector: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TKey>>, innerKeySelector: System.Func_3<TInner, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TKey>>, resultSelector: System.Func_4<T, TInner, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TResult>>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Collections_Generic.IAsyncEnumerable_1<TResult>;
-  MaxAsync(comparer: System_Collections_Generic.IComparer_1<T> | undefined, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<T>;
-  MaxByAsync<TKey>(keySelector: System.Func_2<T, TKey>, comparer: System_Collections_Generic.IComparer_1<TKey> | undefined, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<T>;
-  MaxByAsync<TKey>(keySelector: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TKey>>, comparer: System_Collections_Generic.IComparer_1<TKey> | undefined, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<T>;
-  MinAsync(comparer: System_Collections_Generic.IComparer_1<T> | undefined, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<T>;
-  MinByAsync<TKey>(keySelector: System.Func_2<T, TKey>, comparer: System_Collections_Generic.IComparer_1<TKey> | undefined, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<T>;
-  MinByAsync<TKey>(keySelector: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TKey>>, comparer: System_Collections_Generic.IComparer_1<TKey> | undefined, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<T>;
+  LeftJoin<TInner, TKey, TResult>(inner: System_Collections_Generic.IAsyncEnumerable_1<TInner>, outerKeySelector: System.Func_2<T, TKey>, innerKeySelector: System.Func_2<TInner, TKey>, resultSelector: System.Func_3<T, TInner, TResult>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.IAsyncEnumerable_1<TResult>;
+  LeftJoin<TInner, TKey, TResult>(inner: System_Collections_Generic.IAsyncEnumerable_1<TInner>, outerKeySelector: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TKey>>, innerKeySelector: System.Func_3<TInner, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TKey>>, resultSelector: System.Func_4<T, TInner, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TResult>>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.IAsyncEnumerable_1<TResult>;
+  MaxAsync(comparer: System_Collections_Generic.IComparer_1<T>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<T>;
+  MaxByAsync<TKey>(keySelector: System.Func_2<T, TKey>, comparer: System_Collections_Generic.IComparer_1<TKey>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<T>;
+  MaxByAsync<TKey>(keySelector: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TKey>>, comparer: System_Collections_Generic.IComparer_1<TKey>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<T>;
+  MinAsync(comparer: System_Collections_Generic.IComparer_1<T>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<T>;
+  MinByAsync<TKey>(keySelector: System.Func_2<T, TKey>, comparer: System_Collections_Generic.IComparer_1<TKey>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<T>;
+  MinByAsync<TKey>(keySelector: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TKey>>, comparer: System_Collections_Generic.IComparer_1<TKey>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<T>;
   OfType<TResult>(): System_Collections_Generic.IAsyncEnumerable_1<TResult>;
-  Order(comparer: System_Collections_Generic.IComparer_1<T> | undefined): System_Linq.IOrderedAsyncEnumerable_1<T>;
-  OrderBy<TKey>(keySelector: System.Func_2<T, TKey>, comparer: System_Collections_Generic.IComparer_1<TKey> | undefined): System_Linq.IOrderedAsyncEnumerable_1<T>;
-  OrderBy<TKey>(keySelector: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TKey>>, comparer: System_Collections_Generic.IComparer_1<TKey> | undefined): System_Linq.IOrderedAsyncEnumerable_1<T>;
-  OrderDescending(comparer: System_Collections_Generic.IComparer_1<T> | undefined): System_Linq.IOrderedAsyncEnumerable_1<T>;
-  OrderByDescending<TKey>(keySelector: System.Func_2<T, TKey>, comparer: System_Collections_Generic.IComparer_1<TKey> | undefined): System_Linq.IOrderedAsyncEnumerable_1<T>;
-  OrderByDescending<TKey>(keySelector: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TKey>>, comparer: System_Collections_Generic.IComparer_1<TKey> | undefined): System_Linq.IOrderedAsyncEnumerable_1<T>;
+  Order(comparer: System_Collections_Generic.IComparer_1<T>): System_Linq.IOrderedAsyncEnumerable_1<T>;
+  OrderBy<TKey>(keySelector: System.Func_2<T, TKey>, comparer: System_Collections_Generic.IComparer_1<TKey>): System_Linq.IOrderedAsyncEnumerable_1<T>;
+  OrderBy<TKey>(keySelector: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TKey>>, comparer: System_Collections_Generic.IComparer_1<TKey>): System_Linq.IOrderedAsyncEnumerable_1<T>;
+  OrderDescending(comparer: System_Collections_Generic.IComparer_1<T>): System_Linq.IOrderedAsyncEnumerable_1<T>;
+  OrderByDescending<TKey>(keySelector: System.Func_2<T, TKey>, comparer: System_Collections_Generic.IComparer_1<TKey>): System_Linq.IOrderedAsyncEnumerable_1<T>;
+  OrderByDescending<TKey>(keySelector: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TKey>>, comparer: System_Collections_Generic.IComparer_1<TKey>): System_Linq.IOrderedAsyncEnumerable_1<T>;
   Prepend(element: T): System_Collections_Generic.IAsyncEnumerable_1<T>;
   Reverse(): System_Collections_Generic.IAsyncEnumerable_1<T>;
-  RightJoin<TInner, TKey, TResult>(inner: System_Collections_Generic.IAsyncEnumerable_1<TInner>, outerKeySelector: System.Func_2<T, TKey>, innerKeySelector: System.Func_2<TInner, TKey>, resultSelector: System.Func_3<T | undefined, TInner, TResult>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Collections_Generic.IAsyncEnumerable_1<TResult>;
-  RightJoin<TInner, TKey, TResult>(inner: System_Collections_Generic.IAsyncEnumerable_1<TInner>, outerKeySelector: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TKey>>, innerKeySelector: System.Func_3<TInner, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TKey>>, resultSelector: System.Func_4<T, TInner, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TResult>>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Collections_Generic.IAsyncEnumerable_1<TResult>;
+  RightJoin<TInner, TKey, TResult>(inner: System_Collections_Generic.IAsyncEnumerable_1<TInner>, outerKeySelector: System.Func_2<T, TKey>, innerKeySelector: System.Func_2<TInner, TKey>, resultSelector: System.Func_3<T, TInner, TResult>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.IAsyncEnumerable_1<TResult>;
+  RightJoin<TInner, TKey, TResult>(inner: System_Collections_Generic.IAsyncEnumerable_1<TInner>, outerKeySelector: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TKey>>, innerKeySelector: System.Func_3<TInner, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TKey>>, resultSelector: System.Func_4<T, TInner, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TResult>>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.IAsyncEnumerable_1<TResult>;
   Select<TResult>(selector: System.Func_2<T, TResult>): System_Collections_Generic.IAsyncEnumerable_1<TResult>;
   Select<TResult>(selector: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TResult>>): System_Collections_Generic.IAsyncEnumerable_1<TResult>;
   Select<TResult>(selector: System.Func_4<T, System_Internal.Int32, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TResult>>): System_Collections_Generic.IAsyncEnumerable_1<TResult>;
@@ -1087,7 +1087,7 @@ export interface __Ext_IAsyncEnumerable_1<T> {
   SelectMany<TCollection, TResult>(collectionSelector: System.Func_2<T, System_Collections_Generic.IAsyncEnumerable_1<TCollection>>, resultSelector: System.Func_4<T, TCollection, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TResult>>): System_Collections_Generic.IAsyncEnumerable_1<TResult>;
   SelectMany<TCollection, TResult>(collectionSelector: System.Func_3<T, System_Internal.Int32, System_Collections_Generic.IEnumerable_1<TCollection>>, resultSelector: System.Func_3<T, TCollection, TResult>): System_Collections_Generic.IAsyncEnumerable_1<TResult>;
   SelectMany<TCollection, TResult>(collectionSelector: System.Func_4<T, System_Internal.Int32, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<System_Collections_Generic.IEnumerable_1<TCollection>>>, resultSelector: System.Func_4<T, TCollection, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TResult>>): System_Collections_Generic.IAsyncEnumerable_1<TResult>;
-  SequenceEqualAsync(second: System_Collections_Generic.IAsyncEnumerable_1<T>, comparer: System_Collections_Generic.IEqualityComparer_1<T> | undefined, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<System_Internal.Boolean>;
+  SequenceEqualAsync(second: System_Collections_Generic.IAsyncEnumerable_1<T>, comparer: System_Collections_Generic.IEqualityComparer_1<T>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<System_Internal.Boolean>;
   Shuffle(): System_Collections_Generic.IAsyncEnumerable_1<T>;
   SingleAsync(cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<T>;
   SingleAsync(predicate: System.Func_2<T, System_Internal.Boolean>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<T>;
@@ -1120,20 +1120,20 @@ export interface __Ext_IAsyncEnumerable_1<T> {
   TakeWhile(predicate: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<System_Internal.Boolean>>): System_Collections_Generic.IAsyncEnumerable_1<T>;
   TakeWhile(predicate: System.Func_4<T, System_Internal.Int32, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<System_Internal.Boolean>>): System_Collections_Generic.IAsyncEnumerable_1<T>;
   ToArrayAsync(cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<T[]>;
-  ToDictionaryAsync<TKey, TValue>(comparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<System_Collections_Generic.Dictionary_2<TKey, TValue>>;
-  ToDictionaryAsync<TKey>(keySelector: System.Func_2<T, TKey>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<System_Collections_Generic.Dictionary_2<TKey, T>>;
-  ToDictionaryAsync<TKey>(keySelector: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TKey>>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<System_Collections_Generic.Dictionary_2<TKey, T>>;
-  ToDictionaryAsync<TKey, TElement>(keySelector: System.Func_2<T, TKey>, elementSelector: System.Func_2<T, TElement>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<System_Collections_Generic.Dictionary_2<TKey, TElement>>;
-  ToDictionaryAsync<TKey, TElement>(keySelector: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TKey>>, elementSelector: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TElement>>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<System_Collections_Generic.Dictionary_2<TKey, TElement>>;
-  ToHashSetAsync(comparer: System_Collections_Generic.IEqualityComparer_1<T> | undefined, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<System_Collections_Generic.HashSet_1<T>>;
+  ToDictionaryAsync<TKey, TValue>(comparer: System_Collections_Generic.IEqualityComparer_1<TKey>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<System_Collections_Generic.Dictionary_2<TKey, TValue>>;
+  ToDictionaryAsync<TKey>(keySelector: System.Func_2<T, TKey>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<System_Collections_Generic.Dictionary_2<TKey, T>>;
+  ToDictionaryAsync<TKey>(keySelector: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TKey>>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<System_Collections_Generic.Dictionary_2<TKey, T>>;
+  ToDictionaryAsync<TKey, TElement>(keySelector: System.Func_2<T, TKey>, elementSelector: System.Func_2<T, TElement>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<System_Collections_Generic.Dictionary_2<TKey, TElement>>;
+  ToDictionaryAsync<TKey, TElement>(keySelector: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TKey>>, elementSelector: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TElement>>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<System_Collections_Generic.Dictionary_2<TKey, TElement>>;
+  ToHashSetAsync(comparer: System_Collections_Generic.IEqualityComparer_1<T>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<System_Collections_Generic.HashSet_1<T>>;
   ToListAsync(cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<System_Collections_Generic.List_1<T>>;
-  ToLookupAsync<TKey>(keySelector: System.Func_2<T, TKey>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<System_Linq.ILookup_2<TKey, T>>;
-  ToLookupAsync<TKey>(keySelector: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TKey>>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<System_Linq.ILookup_2<TKey, T>>;
-  ToLookupAsync<TKey, TElement>(keySelector: System.Func_2<T, TKey>, elementSelector: System.Func_2<T, TElement>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<System_Linq.ILookup_2<TKey, TElement>>;
-  ToLookupAsync<TKey, TElement>(keySelector: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TKey>>, elementSelector: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TElement>>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<System_Linq.ILookup_2<TKey, TElement>>;
-  Union(second: System_Collections_Generic.IAsyncEnumerable_1<T>, comparer: System_Collections_Generic.IEqualityComparer_1<T> | undefined): System_Collections_Generic.IAsyncEnumerable_1<T>;
-  UnionBy<TKey>(second: System_Collections_Generic.IAsyncEnumerable_1<T>, keySelector: System.Func_2<T, TKey>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Collections_Generic.IAsyncEnumerable_1<T>;
-  UnionBy<TKey>(second: System_Collections_Generic.IAsyncEnumerable_1<T>, keySelector: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TKey>>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Collections_Generic.IAsyncEnumerable_1<T>;
+  ToLookupAsync<TKey>(keySelector: System.Func_2<T, TKey>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<System_Linq.ILookup_2<TKey, T>>;
+  ToLookupAsync<TKey>(keySelector: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TKey>>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<System_Linq.ILookup_2<TKey, T>>;
+  ToLookupAsync<TKey, TElement>(keySelector: System.Func_2<T, TKey>, elementSelector: System.Func_2<T, TElement>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<System_Linq.ILookup_2<TKey, TElement>>;
+  ToLookupAsync<TKey, TElement>(keySelector: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TKey>>, elementSelector: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TElement>>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask_1<System_Linq.ILookup_2<TKey, TElement>>;
+  Union(second: System_Collections_Generic.IAsyncEnumerable_1<T>, comparer: System_Collections_Generic.IEqualityComparer_1<T>): System_Collections_Generic.IAsyncEnumerable_1<T>;
+  UnionBy<TKey>(second: System_Collections_Generic.IAsyncEnumerable_1<T>, keySelector: System.Func_2<T, TKey>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.IAsyncEnumerable_1<T>;
+  UnionBy<TKey>(second: System_Collections_Generic.IAsyncEnumerable_1<T>, keySelector: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TKey>>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.IAsyncEnumerable_1<T>;
   Where(predicate: System.Func_2<T, System_Internal.Boolean>): System_Collections_Generic.IAsyncEnumerable_1<T>;
   Where(predicate: System.Func_3<T, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<System_Internal.Boolean>>): System_Collections_Generic.IAsyncEnumerable_1<T>;
   Where(predicate: System.Func_4<T, System_Internal.Int32, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<System_Internal.Boolean>>): System_Collections_Generic.IAsyncEnumerable_1<T>;
@@ -1147,10 +1147,10 @@ export interface __Ext_IAsyncEnumerable_1<T> {
 }
 
 export interface __Ext_IOrderedAsyncEnumerable_1<TElement> {
-  ThenBy<TKey>(keySelector: System.Func_2<TElement, TKey>, comparer: System_Collections_Generic.IComparer_1<TKey> | undefined): System_Linq.IOrderedAsyncEnumerable_1<TElement>;
-  ThenBy<TKey>(keySelector: System.Func_3<TElement, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TKey>>, comparer: System_Collections_Generic.IComparer_1<TKey> | undefined): System_Linq.IOrderedAsyncEnumerable_1<TElement>;
-  ThenByDescending<TKey>(keySelector: System.Func_2<TElement, TKey>, comparer: System_Collections_Generic.IComparer_1<TKey> | undefined): System_Linq.IOrderedAsyncEnumerable_1<TElement>;
-  ThenByDescending<TKey>(keySelector: System.Func_3<TElement, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TKey>>, comparer: System_Collections_Generic.IComparer_1<TKey> | undefined): System_Linq.IOrderedAsyncEnumerable_1<TElement>;
+  ThenBy<TKey>(keySelector: System.Func_2<TElement, TKey>, comparer: System_Collections_Generic.IComparer_1<TKey>): System_Linq.IOrderedAsyncEnumerable_1<TElement>;
+  ThenBy<TKey>(keySelector: System.Func_3<TElement, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TKey>>, comparer: System_Collections_Generic.IComparer_1<TKey>): System_Linq.IOrderedAsyncEnumerable_1<TElement>;
+  ThenByDescending<TKey>(keySelector: System.Func_2<TElement, TKey>, comparer: System_Collections_Generic.IComparer_1<TKey>): System_Linq.IOrderedAsyncEnumerable_1<TElement>;
+  ThenByDescending<TKey>(keySelector: System.Func_3<TElement, System_Threading.CancellationToken, System_Threading_Tasks.ValueTask_1<TKey>>, comparer: System_Collections_Generic.IComparer_1<TKey>): System_Linq.IOrderedAsyncEnumerable_1<TElement>;
 }
 
 export interface __Ext_Partitioner_1<TSource> {
@@ -1174,28 +1174,28 @@ export interface __Ext_ParallelQuery_1<TSource> {
   Zip<TSecond, TResult>(second: System_Collections_Generic.IEnumerable_1<TSecond>, resultSelector: System.Func_3<TSource, TSecond, TResult>): System_Linq.ParallelQuery_1<TResult>;
   Join<TInner, TKey, TResult>(inner: System_Linq.ParallelQuery_1<TInner>, outerKeySelector: System.Func_2<TSource, TKey>, innerKeySelector: System.Func_2<TInner, TKey>, resultSelector: System.Func_3<TSource, TInner, TResult>): System_Linq.ParallelQuery_1<TResult>;
   Join<TInner, TKey, TResult>(inner: System_Collections_Generic.IEnumerable_1<TInner>, outerKeySelector: System.Func_2<TSource, TKey>, innerKeySelector: System.Func_2<TInner, TKey>, resultSelector: System.Func_3<TSource, TInner, TResult>): System_Linq.ParallelQuery_1<TResult>;
-  Join<TInner, TKey, TResult>(inner: System_Linq.ParallelQuery_1<TInner>, outerKeySelector: System.Func_2<TSource, TKey>, innerKeySelector: System.Func_2<TInner, TKey>, resultSelector: System.Func_3<TSource, TInner, TResult>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Linq.ParallelQuery_1<TResult>;
-  Join<TInner, TKey, TResult>(inner: System_Collections_Generic.IEnumerable_1<TInner>, outerKeySelector: System.Func_2<TSource, TKey>, innerKeySelector: System.Func_2<TInner, TKey>, resultSelector: System.Func_3<TSource, TInner, TResult>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Linq.ParallelQuery_1<TResult>;
+  Join<TInner, TKey, TResult>(inner: System_Linq.ParallelQuery_1<TInner>, outerKeySelector: System.Func_2<TSource, TKey>, innerKeySelector: System.Func_2<TInner, TKey>, resultSelector: System.Func_3<TSource, TInner, TResult>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Linq.ParallelQuery_1<TResult>;
+  Join<TInner, TKey, TResult>(inner: System_Collections_Generic.IEnumerable_1<TInner>, outerKeySelector: System.Func_2<TSource, TKey>, innerKeySelector: System.Func_2<TInner, TKey>, resultSelector: System.Func_3<TSource, TInner, TResult>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Linq.ParallelQuery_1<TResult>;
   GroupJoin<TInner, TKey, TResult>(inner: System_Linq.ParallelQuery_1<TInner>, outerKeySelector: System.Func_2<TSource, TKey>, innerKeySelector: System.Func_2<TInner, TKey>, resultSelector: System.Func_3<TSource, System_Collections_Generic.IEnumerable_1<TInner>, TResult>): System_Linq.ParallelQuery_1<TResult>;
   GroupJoin<TInner, TKey, TResult>(inner: System_Collections_Generic.IEnumerable_1<TInner>, outerKeySelector: System.Func_2<TSource, TKey>, innerKeySelector: System.Func_2<TInner, TKey>, resultSelector: System.Func_3<TSource, System_Collections_Generic.IEnumerable_1<TInner>, TResult>): System_Linq.ParallelQuery_1<TResult>;
-  GroupJoin<TInner, TKey, TResult>(inner: System_Linq.ParallelQuery_1<TInner>, outerKeySelector: System.Func_2<TSource, TKey>, innerKeySelector: System.Func_2<TInner, TKey>, resultSelector: System.Func_3<TSource, System_Collections_Generic.IEnumerable_1<TInner>, TResult>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Linq.ParallelQuery_1<TResult>;
-  GroupJoin<TInner, TKey, TResult>(inner: System_Collections_Generic.IEnumerable_1<TInner>, outerKeySelector: System.Func_2<TSource, TKey>, innerKeySelector: System.Func_2<TInner, TKey>, resultSelector: System.Func_3<TSource, System_Collections_Generic.IEnumerable_1<TInner>, TResult>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Linq.ParallelQuery_1<TResult>;
+  GroupJoin<TInner, TKey, TResult>(inner: System_Linq.ParallelQuery_1<TInner>, outerKeySelector: System.Func_2<TSource, TKey>, innerKeySelector: System.Func_2<TInner, TKey>, resultSelector: System.Func_3<TSource, System_Collections_Generic.IEnumerable_1<TInner>, TResult>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Linq.ParallelQuery_1<TResult>;
+  GroupJoin<TInner, TKey, TResult>(inner: System_Collections_Generic.IEnumerable_1<TInner>, outerKeySelector: System.Func_2<TSource, TKey>, innerKeySelector: System.Func_2<TInner, TKey>, resultSelector: System.Func_3<TSource, System_Collections_Generic.IEnumerable_1<TInner>, TResult>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Linq.ParallelQuery_1<TResult>;
   SelectMany<TResult>(selector: System.Func_2<TSource, System_Collections_Generic.IEnumerable_1<TResult>>): System_Linq.ParallelQuery_1<TResult>;
   SelectMany<TResult>(selector: System.Func_3<TSource, System_Internal.Int32, System_Collections_Generic.IEnumerable_1<TResult>>): System_Linq.ParallelQuery_1<TResult>;
   SelectMany<TCollection, TResult>(collectionSelector: System.Func_2<TSource, System_Collections_Generic.IEnumerable_1<TCollection>>, resultSelector: System.Func_3<TSource, TCollection, TResult>): System_Linq.ParallelQuery_1<TResult>;
   SelectMany<TCollection, TResult>(collectionSelector: System.Func_3<TSource, System_Internal.Int32, System_Collections_Generic.IEnumerable_1<TCollection>>, resultSelector: System.Func_3<TSource, TCollection, TResult>): System_Linq.ParallelQuery_1<TResult>;
   OrderBy<TKey>(keySelector: System.Func_2<TSource, TKey>): System_Linq.OrderedParallelQuery_1<TSource>;
-  OrderBy<TKey>(keySelector: System.Func_2<TSource, TKey>, comparer: System_Collections_Generic.IComparer_1<TKey> | undefined): System_Linq.OrderedParallelQuery_1<TSource>;
+  OrderBy<TKey>(keySelector: System.Func_2<TSource, TKey>, comparer: System_Collections_Generic.IComparer_1<TKey>): System_Linq.OrderedParallelQuery_1<TSource>;
   OrderByDescending<TKey>(keySelector: System.Func_2<TSource, TKey>): System_Linq.OrderedParallelQuery_1<TSource>;
-  OrderByDescending<TKey>(keySelector: System.Func_2<TSource, TKey>, comparer: System_Collections_Generic.IComparer_1<TKey> | undefined): System_Linq.OrderedParallelQuery_1<TSource>;
+  OrderByDescending<TKey>(keySelector: System.Func_2<TSource, TKey>, comparer: System_Collections_Generic.IComparer_1<TKey>): System_Linq.OrderedParallelQuery_1<TSource>;
   GroupBy<TKey>(keySelector: System.Func_2<TSource, TKey>): System_Linq.ParallelQuery_1<System_Linq.IGrouping_2<TKey, TSource>>;
-  GroupBy<TKey>(keySelector: System.Func_2<TSource, TKey>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Linq.ParallelQuery_1<System_Linq.IGrouping_2<TKey, TSource>>;
+  GroupBy<TKey>(keySelector: System.Func_2<TSource, TKey>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Linq.ParallelQuery_1<System_Linq.IGrouping_2<TKey, TSource>>;
   GroupBy<TKey, TElement>(keySelector: System.Func_2<TSource, TKey>, elementSelector: System.Func_2<TSource, TElement>): System_Linq.ParallelQuery_1<System_Linq.IGrouping_2<TKey, TElement>>;
-  GroupBy<TKey, TElement>(keySelector: System.Func_2<TSource, TKey>, elementSelector: System.Func_2<TSource, TElement>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Linq.ParallelQuery_1<System_Linq.IGrouping_2<TKey, TElement>>;
+  GroupBy<TKey, TElement>(keySelector: System.Func_2<TSource, TKey>, elementSelector: System.Func_2<TSource, TElement>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Linq.ParallelQuery_1<System_Linq.IGrouping_2<TKey, TElement>>;
   GroupBy<TKey, TResult>(keySelector: System.Func_2<TSource, TKey>, resultSelector: System.Func_3<TKey, System_Collections_Generic.IEnumerable_1<TSource>, TResult>): System_Linq.ParallelQuery_1<TResult>;
-  GroupBy<TKey, TResult>(keySelector: System.Func_2<TSource, TKey>, resultSelector: System.Func_3<TKey, System_Collections_Generic.IEnumerable_1<TSource>, TResult>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Linq.ParallelQuery_1<TResult>;
+  GroupBy<TKey, TResult>(keySelector: System.Func_2<TSource, TKey>, resultSelector: System.Func_3<TKey, System_Collections_Generic.IEnumerable_1<TSource>, TResult>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Linq.ParallelQuery_1<TResult>;
   GroupBy<TKey, TElement, TResult>(keySelector: System.Func_2<TSource, TKey>, elementSelector: System.Func_2<TSource, TElement>, resultSelector: System.Func_3<TKey, System_Collections_Generic.IEnumerable_1<TElement>, TResult>): System_Linq.ParallelQuery_1<TResult>;
-  GroupBy<TKey, TElement, TResult>(keySelector: System.Func_2<TSource, TKey>, elementSelector: System.Func_2<TSource, TElement>, resultSelector: System.Func_3<TKey, System_Collections_Generic.IEnumerable_1<TElement>, TResult>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Linq.ParallelQuery_1<TResult>;
+  GroupBy<TKey, TElement, TResult>(keySelector: System.Func_2<TSource, TKey>, elementSelector: System.Func_2<TSource, TElement>, resultSelector: System.Func_3<TKey, System_Collections_Generic.IEnumerable_1<TElement>, TResult>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Linq.ParallelQuery_1<TResult>;
   Aggregate(func: System.Func_3<TSource, TSource, TSource>): TSource;
   Aggregate<TAccumulate>(seed: TAccumulate, func: System.Func_3<TAccumulate, TSource, TAccumulate>): TAccumulate;
   Aggregate<TAccumulate, TResult>(seed: TAccumulate, func: System.Func_3<TAccumulate, TSource, TAccumulate>, resultSelector: System.Func_2<TAccumulate, TResult>): TResult;
@@ -1289,7 +1289,7 @@ export interface __Ext_ParallelQuery_1<TSource> {
   Any(): boolean;
   All(predicate: System.Func_2<TSource, System_Internal.Boolean>): boolean;
   Contains(value: TSource): boolean;
-  Contains(value: TSource, comparer: System_Collections_Generic.IEqualityComparer_1<TSource> | undefined): boolean;
+  Contains(value: TSource, comparer: System_Collections_Generic.IEqualityComparer_1<TSource>): boolean;
   Take(count: int): System_Linq.ParallelQuery_1<TSource>;
   TakeWhile(predicate: System.Func_2<TSource, System_Internal.Boolean>): System_Linq.ParallelQuery_1<TSource>;
   TakeWhile(predicate: System.Func_3<TSource, System_Internal.Int32, System_Internal.Boolean>): System_Linq.ParallelQuery_1<TSource>;
@@ -1300,33 +1300,33 @@ export interface __Ext_ParallelQuery_1<TSource> {
   Concat(second: System_Collections_Generic.IEnumerable_1<TSource>): System_Linq.ParallelQuery_1<TSource>;
   SequenceEqual(second: System_Linq.ParallelQuery_1<TSource>): boolean;
   SequenceEqual(second: System_Collections_Generic.IEnumerable_1<TSource>): boolean;
-  SequenceEqual(second: System_Linq.ParallelQuery_1<TSource>, comparer: System_Collections_Generic.IEqualityComparer_1<TSource> | undefined): boolean;
-  SequenceEqual(second: System_Collections_Generic.IEnumerable_1<TSource>, comparer: System_Collections_Generic.IEqualityComparer_1<TSource> | undefined): boolean;
+  SequenceEqual(second: System_Linq.ParallelQuery_1<TSource>, comparer: System_Collections_Generic.IEqualityComparer_1<TSource>): boolean;
+  SequenceEqual(second: System_Collections_Generic.IEnumerable_1<TSource>, comparer: System_Collections_Generic.IEqualityComparer_1<TSource>): boolean;
   Distinct(): System_Linq.ParallelQuery_1<TSource>;
-  Distinct(comparer: System_Collections_Generic.IEqualityComparer_1<TSource> | undefined): System_Linq.ParallelQuery_1<TSource>;
+  Distinct(comparer: System_Collections_Generic.IEqualityComparer_1<TSource>): System_Linq.ParallelQuery_1<TSource>;
   Union(second: System_Linq.ParallelQuery_1<TSource>): System_Linq.ParallelQuery_1<TSource>;
   Union(second: System_Collections_Generic.IEnumerable_1<TSource>): System_Linq.ParallelQuery_1<TSource>;
-  Union(second: System_Linq.ParallelQuery_1<TSource>, comparer: System_Collections_Generic.IEqualityComparer_1<TSource> | undefined): System_Linq.ParallelQuery_1<TSource>;
-  Union(second: System_Collections_Generic.IEnumerable_1<TSource>, comparer: System_Collections_Generic.IEqualityComparer_1<TSource> | undefined): System_Linq.ParallelQuery_1<TSource>;
+  Union(second: System_Linq.ParallelQuery_1<TSource>, comparer: System_Collections_Generic.IEqualityComparer_1<TSource>): System_Linq.ParallelQuery_1<TSource>;
+  Union(second: System_Collections_Generic.IEnumerable_1<TSource>, comparer: System_Collections_Generic.IEqualityComparer_1<TSource>): System_Linq.ParallelQuery_1<TSource>;
   Intersect(second: System_Linq.ParallelQuery_1<TSource>): System_Linq.ParallelQuery_1<TSource>;
   Intersect(second: System_Collections_Generic.IEnumerable_1<TSource>): System_Linq.ParallelQuery_1<TSource>;
-  Intersect(second: System_Linq.ParallelQuery_1<TSource>, comparer: System_Collections_Generic.IEqualityComparer_1<TSource> | undefined): System_Linq.ParallelQuery_1<TSource>;
-  Intersect(second: System_Collections_Generic.IEnumerable_1<TSource>, comparer: System_Collections_Generic.IEqualityComparer_1<TSource> | undefined): System_Linq.ParallelQuery_1<TSource>;
+  Intersect(second: System_Linq.ParallelQuery_1<TSource>, comparer: System_Collections_Generic.IEqualityComparer_1<TSource>): System_Linq.ParallelQuery_1<TSource>;
+  Intersect(second: System_Collections_Generic.IEnumerable_1<TSource>, comparer: System_Collections_Generic.IEqualityComparer_1<TSource>): System_Linq.ParallelQuery_1<TSource>;
   Except(second: System_Linq.ParallelQuery_1<TSource>): System_Linq.ParallelQuery_1<TSource>;
   Except(second: System_Collections_Generic.IEnumerable_1<TSource>): System_Linq.ParallelQuery_1<TSource>;
-  Except(second: System_Linq.ParallelQuery_1<TSource>, comparer: System_Collections_Generic.IEqualityComparer_1<TSource> | undefined): System_Linq.ParallelQuery_1<TSource>;
-  Except(second: System_Collections_Generic.IEnumerable_1<TSource>, comparer: System_Collections_Generic.IEqualityComparer_1<TSource> | undefined): System_Linq.ParallelQuery_1<TSource>;
+  Except(second: System_Linq.ParallelQuery_1<TSource>, comparer: System_Collections_Generic.IEqualityComparer_1<TSource>): System_Linq.ParallelQuery_1<TSource>;
+  Except(second: System_Collections_Generic.IEnumerable_1<TSource>, comparer: System_Collections_Generic.IEqualityComparer_1<TSource>): System_Linq.ParallelQuery_1<TSource>;
   AsEnumerable(): System_Collections_Generic.IEnumerable_1<TSource>;
   ToArray(): TSource[];
   ToList(): System_Collections_Generic.List_1<TSource>;
   ToDictionary<TKey>(keySelector: System.Func_2<TSource, TKey>): System_Collections_Generic.Dictionary_2<TKey, TSource>;
-  ToDictionary<TKey>(keySelector: System.Func_2<TSource, TKey>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Collections_Generic.Dictionary_2<TKey, TSource>;
+  ToDictionary<TKey>(keySelector: System.Func_2<TSource, TKey>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.Dictionary_2<TKey, TSource>;
   ToDictionary<TKey, TElement>(keySelector: System.Func_2<TSource, TKey>, elementSelector: System.Func_2<TSource, TElement>): System_Collections_Generic.Dictionary_2<TKey, TElement>;
-  ToDictionary<TKey, TElement>(keySelector: System.Func_2<TSource, TKey>, elementSelector: System.Func_2<TSource, TElement>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Collections_Generic.Dictionary_2<TKey, TElement>;
+  ToDictionary<TKey, TElement>(keySelector: System.Func_2<TSource, TKey>, elementSelector: System.Func_2<TSource, TElement>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Collections_Generic.Dictionary_2<TKey, TElement>;
   ToLookup<TKey>(keySelector: System.Func_2<TSource, TKey>): System_Linq.ILookup_2<TKey, TSource>;
-  ToLookup<TKey>(keySelector: System.Func_2<TSource, TKey>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Linq.ILookup_2<TKey, TSource>;
+  ToLookup<TKey>(keySelector: System.Func_2<TSource, TKey>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Linq.ILookup_2<TKey, TSource>;
   ToLookup<TKey, TElement>(keySelector: System.Func_2<TSource, TKey>, elementSelector: System.Func_2<TSource, TElement>): System_Linq.ILookup_2<TKey, TElement>;
-  ToLookup<TKey, TElement>(keySelector: System.Func_2<TSource, TKey>, elementSelector: System.Func_2<TSource, TElement>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Linq.ILookup_2<TKey, TElement>;
+  ToLookup<TKey, TElement>(keySelector: System.Func_2<TSource, TKey>, elementSelector: System.Func_2<TSource, TElement>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Linq.ILookup_2<TKey, TElement>;
   Reverse(): System_Linq.ParallelQuery_1<TSource>;
   First(): TSource;
   First(predicate: System.Func_2<TSource, System_Internal.Boolean>): TSource;
@@ -1354,9 +1354,9 @@ export interface __Ext_ParallelQuery {
 
 export interface __Ext_OrderedParallelQuery_1<TSource> {
   ThenBy<TKey>(keySelector: System.Func_2<TSource, TKey>): System_Linq.OrderedParallelQuery_1<TSource>;
-  ThenBy<TKey>(keySelector: System.Func_2<TSource, TKey>, comparer: System_Collections_Generic.IComparer_1<TKey> | undefined): System_Linq.OrderedParallelQuery_1<TSource>;
+  ThenBy<TKey>(keySelector: System.Func_2<TSource, TKey>, comparer: System_Collections_Generic.IComparer_1<TKey>): System_Linq.OrderedParallelQuery_1<TSource>;
   ThenByDescending<TKey>(keySelector: System.Func_2<TSource, TKey>): System_Linq.OrderedParallelQuery_1<TSource>;
-  ThenByDescending<TKey>(keySelector: System.Func_2<TSource, TKey>, comparer: System_Collections_Generic.IComparer_1<TKey> | undefined): System_Linq.OrderedParallelQuery_1<TSource>;
+  ThenByDescending<TKey>(keySelector: System.Func_2<TSource, TKey>, comparer: System_Collections_Generic.IComparer_1<TKey>): System_Linq.OrderedParallelQuery_1<TSource>;
 }
 
 export interface __Ext_IQueryable_1<T> {
@@ -1365,21 +1365,21 @@ export interface __Ext_IQueryable_1<T> {
   SelectMany<TResult>(selector: System_Linq_Expressions.Expression_1<System.Func_2<T, System_Collections_Generic.IEnumerable_1<TResult>>>): System_Linq.IQueryable_1<TResult>;
   SelectMany<TCollection, TResult>(collectionSelector: System_Linq_Expressions.Expression_1<System.Func_3<T, System_Internal.Int32, System_Collections_Generic.IEnumerable_1<TCollection>>>, resultSelector: System_Linq_Expressions.Expression_1<System.Func_3<T, TCollection, TResult>>): System_Linq.IQueryable_1<TResult>;
   Join<TInner, TKey, TResult>(inner: System_Collections_Generic.IEnumerable_1<TInner>, outerKeySelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TKey>>, innerKeySelector: System_Linq_Expressions.Expression_1<System.Func_2<TInner, TKey>>, resultSelector: System_Linq_Expressions.Expression_1<System.Func_3<T, TInner, TResult>>): System_Linq.IQueryable_1<TResult>;
-  Join<TInner, TKey, TResult>(inner: System_Collections_Generic.IEnumerable_1<TInner>, outerKeySelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TKey>>, innerKeySelector: System_Linq_Expressions.Expression_1<System.Func_2<TInner, TKey>>, resultSelector: System_Linq_Expressions.Expression_1<System.Func_3<T, TInner, TResult>>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Linq.IQueryable_1<TResult>;
+  Join<TInner, TKey, TResult>(inner: System_Collections_Generic.IEnumerable_1<TInner>, outerKeySelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TKey>>, innerKeySelector: System_Linq_Expressions.Expression_1<System.Func_2<TInner, TKey>>, resultSelector: System_Linq_Expressions.Expression_1<System.Func_3<T, TInner, TResult>>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Linq.IQueryable_1<TResult>;
   GroupJoin<TInner, TKey, TResult>(inner: System_Collections_Generic.IEnumerable_1<TInner>, outerKeySelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TKey>>, innerKeySelector: System_Linq_Expressions.Expression_1<System.Func_2<TInner, TKey>>, resultSelector: System_Linq_Expressions.Expression_1<System.Func_3<T, System_Collections_Generic.IEnumerable_1<TInner>, TResult>>): System_Linq.IQueryable_1<TResult>;
-  GroupJoin<TInner, TKey, TResult>(inner: System_Collections_Generic.IEnumerable_1<TInner>, outerKeySelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TKey>>, innerKeySelector: System_Linq_Expressions.Expression_1<System.Func_2<TInner, TKey>>, resultSelector: System_Linq_Expressions.Expression_1<System.Func_3<T, System_Collections_Generic.IEnumerable_1<TInner>, TResult>>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Linq.IQueryable_1<TResult>;
-  LeftJoin<TInner, TKey, TResult>(inner: System_Collections_Generic.IEnumerable_1<TInner>, outerKeySelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TKey>>, innerKeySelector: System_Linq_Expressions.Expression_1<System.Func_2<TInner, TKey>>, resultSelector: System_Linq_Expressions.Expression_1<System.Func_3<T, TInner | undefined, TResult>>): System_Linq.IQueryable_1<TResult>;
-  LeftJoin<TInner, TKey, TResult>(inner: System_Collections_Generic.IEnumerable_1<TInner>, outerKeySelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TKey>>, innerKeySelector: System_Linq_Expressions.Expression_1<System.Func_2<TInner, TKey>>, resultSelector: System_Linq_Expressions.Expression_1<System.Func_3<T, TInner | undefined, TResult>>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Linq.IQueryable_1<TResult>;
+  GroupJoin<TInner, TKey, TResult>(inner: System_Collections_Generic.IEnumerable_1<TInner>, outerKeySelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TKey>>, innerKeySelector: System_Linq_Expressions.Expression_1<System.Func_2<TInner, TKey>>, resultSelector: System_Linq_Expressions.Expression_1<System.Func_3<T, System_Collections_Generic.IEnumerable_1<TInner>, TResult>>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Linq.IQueryable_1<TResult>;
+  LeftJoin<TInner, TKey, TResult>(inner: System_Collections_Generic.IEnumerable_1<TInner>, outerKeySelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TKey>>, innerKeySelector: System_Linq_Expressions.Expression_1<System.Func_2<TInner, TKey>>, resultSelector: System_Linq_Expressions.Expression_1<System.Func_3<T, TInner, TResult>>): System_Linq.IQueryable_1<TResult>;
+  LeftJoin<TInner, TKey, TResult>(inner: System_Collections_Generic.IEnumerable_1<TInner>, outerKeySelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TKey>>, innerKeySelector: System_Linq_Expressions.Expression_1<System.Func_2<TInner, TKey>>, resultSelector: System_Linq_Expressions.Expression_1<System.Func_3<T, TInner, TResult>>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Linq.IQueryable_1<TResult>;
   Order(): System_Linq.IOrderedQueryable_1<T>;
   Order(comparer: System_Collections_Generic.IComparer_1<T>): System_Linq.IOrderedQueryable_1<T>;
   OrderBy<TKey>(keySelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TKey>>): System_Linq.IOrderedQueryable_1<T>;
-  OrderBy<TKey>(keySelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TKey>>, comparer: System_Collections_Generic.IComparer_1<TKey> | undefined): System_Linq.IOrderedQueryable_1<T>;
+  OrderBy<TKey>(keySelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TKey>>, comparer: System_Collections_Generic.IComparer_1<TKey>): System_Linq.IOrderedQueryable_1<T>;
   OrderDescending(): System_Linq.IOrderedQueryable_1<T>;
   OrderDescending(comparer: System_Collections_Generic.IComparer_1<T>): System_Linq.IOrderedQueryable_1<T>;
   OrderByDescending<TKey>(keySelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TKey>>): System_Linq.IOrderedQueryable_1<T>;
-  OrderByDescending<TKey>(keySelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TKey>>, comparer: System_Collections_Generic.IComparer_1<TKey> | undefined): System_Linq.IOrderedQueryable_1<T>;
-  RightJoin<TInner, TKey, TResult>(inner: System_Collections_Generic.IEnumerable_1<TInner>, outerKeySelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TKey>>, innerKeySelector: System_Linq_Expressions.Expression_1<System.Func_2<TInner, TKey>>, resultSelector: System_Linq_Expressions.Expression_1<System.Func_3<T | undefined, TInner, TResult>>): System_Linq.IQueryable_1<TResult>;
-  RightJoin<TInner, TKey, TResult>(inner: System_Collections_Generic.IEnumerable_1<TInner>, outerKeySelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TKey>>, innerKeySelector: System_Linq_Expressions.Expression_1<System.Func_2<TInner, TKey>>, resultSelector: System_Linq_Expressions.Expression_1<System.Func_3<T | undefined, TInner, TResult>>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Linq.IQueryable_1<TResult>;
+  OrderByDescending<TKey>(keySelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TKey>>, comparer: System_Collections_Generic.IComparer_1<TKey>): System_Linq.IOrderedQueryable_1<T>;
+  RightJoin<TInner, TKey, TResult>(inner: System_Collections_Generic.IEnumerable_1<TInner>, outerKeySelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TKey>>, innerKeySelector: System_Linq_Expressions.Expression_1<System.Func_2<TInner, TKey>>, resultSelector: System_Linq_Expressions.Expression_1<System.Func_3<T, TInner, TResult>>): System_Linq.IQueryable_1<TResult>;
+  RightJoin<TInner, TKey, TResult>(inner: System_Collections_Generic.IEnumerable_1<TInner>, outerKeySelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TKey>>, innerKeySelector: System_Linq_Expressions.Expression_1<System.Func_2<TInner, TKey>>, resultSelector: System_Linq_Expressions.Expression_1<System.Func_3<T, TInner, TResult>>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Linq.IQueryable_1<TResult>;
   Take(count: int): System_Linq.IQueryable_1<T>;
   Take(range: System.Range): System_Linq.IQueryable_1<T>;
   TakeWhile(predicate: System_Linq_Expressions.Expression_1<System.Func_2<T, System_Internal.Boolean>>): System_Linq.IQueryable_1<T>;
@@ -1387,32 +1387,32 @@ export interface __Ext_IQueryable_1<T> {
   SkipWhile(predicate: System_Linq_Expressions.Expression_1<System.Func_2<T, System_Internal.Boolean>>): System_Linq.IQueryable_1<T>;
   GroupBy<TKey>(keySelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TKey>>): System_Linq.IQueryable_1<System_Linq.IGrouping_2<TKey, T>>;
   GroupBy<TKey, TElement>(keySelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TKey>>, elementSelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TElement>>): System_Linq.IQueryable_1<System_Linq.IGrouping_2<TKey, TElement>>;
-  GroupBy<TKey>(keySelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TKey>>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Linq.IQueryable_1<System_Linq.IGrouping_2<TKey, T>>;
-  GroupBy<TKey, TElement>(keySelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TKey>>, elementSelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TElement>>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Linq.IQueryable_1<System_Linq.IGrouping_2<TKey, TElement>>;
+  GroupBy<TKey>(keySelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TKey>>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Linq.IQueryable_1<System_Linq.IGrouping_2<TKey, T>>;
+  GroupBy<TKey, TElement>(keySelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TKey>>, elementSelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TElement>>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Linq.IQueryable_1<System_Linq.IGrouping_2<TKey, TElement>>;
   GroupBy<TKey, TElement, TResult>(keySelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TKey>>, elementSelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TElement>>, resultSelector: System_Linq_Expressions.Expression_1<System.Func_3<TKey, System_Collections_Generic.IEnumerable_1<TElement>, TResult>>): System_Linq.IQueryable_1<TResult>;
-  GroupBy<TKey, TElement, TResult>(keySelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TKey>>, elementSelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TElement>>, resultSelector: System_Linq_Expressions.Expression_1<System.Func_3<TKey, System_Collections_Generic.IEnumerable_1<TElement>, TResult>>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Linq.IQueryable_1<TResult>;
+  GroupBy<TKey, TElement, TResult>(keySelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TKey>>, elementSelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TElement>>, resultSelector: System_Linq_Expressions.Expression_1<System.Func_3<TKey, System_Collections_Generic.IEnumerable_1<TElement>, TResult>>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Linq.IQueryable_1<TResult>;
   Distinct(): System_Linq.IQueryable_1<T>;
-  Distinct(comparer: System_Collections_Generic.IEqualityComparer_1<T> | undefined): System_Linq.IQueryable_1<T>;
+  Distinct(comparer: System_Collections_Generic.IEqualityComparer_1<T>): System_Linq.IQueryable_1<T>;
   DistinctBy<TKey>(keySelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TKey>>): System_Linq.IQueryable_1<T>;
-  DistinctBy<TKey>(keySelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TKey>>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Linq.IQueryable_1<T>;
+  DistinctBy<TKey>(keySelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TKey>>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Linq.IQueryable_1<T>;
   Chunk(size: int): System_Linq.IQueryable_1<T[]>;
   Concat(source2: System_Collections_Generic.IEnumerable_1<T>): System_Linq.IQueryable_1<T>;
   Zip<TSecond>(source2: System_Collections_Generic.IEnumerable_1<TSecond>): System_Linq.IQueryable_1<System.ValueTuple_2<T, TSecond>>;
   Zip<TSecond, TResult>(source2: System_Collections_Generic.IEnumerable_1<TSecond>, resultSelector: System_Linq_Expressions.Expression_1<System.Func_3<T, TSecond, TResult>>): System_Linq.IQueryable_1<TResult>;
   Zip<TSecond, TThird>(source2: System_Collections_Generic.IEnumerable_1<TSecond>, source3: System_Collections_Generic.IEnumerable_1<TThird>): System_Linq.IQueryable_1<System.ValueTuple_3<T, TSecond, TThird>>;
   Union(source2: System_Collections_Generic.IEnumerable_1<T>): System_Linq.IQueryable_1<T>;
-  Union(source2: System_Collections_Generic.IEnumerable_1<T>, comparer: System_Collections_Generic.IEqualityComparer_1<T> | undefined): System_Linq.IQueryable_1<T>;
+  Union(source2: System_Collections_Generic.IEnumerable_1<T>, comparer: System_Collections_Generic.IEqualityComparer_1<T>): System_Linq.IQueryable_1<T>;
   UnionBy<TKey>(source2: System_Collections_Generic.IEnumerable_1<T>, keySelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TKey>>): System_Linq.IQueryable_1<T>;
-  UnionBy<TKey>(source2: System_Collections_Generic.IEnumerable_1<T>, keySelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TKey>>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Linq.IQueryable_1<T>;
+  UnionBy<TKey>(source2: System_Collections_Generic.IEnumerable_1<T>, keySelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TKey>>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Linq.IQueryable_1<T>;
   Index(): System_Linq.IQueryable_1<System.ValueTuple_2<System_Internal.Int32, T>>;
   Intersect(source2: System_Collections_Generic.IEnumerable_1<T>): System_Linq.IQueryable_1<T>;
-  Intersect(source2: System_Collections_Generic.IEnumerable_1<T>, comparer: System_Collections_Generic.IEqualityComparer_1<T> | undefined): System_Linq.IQueryable_1<T>;
+  Intersect(source2: System_Collections_Generic.IEnumerable_1<T>, comparer: System_Collections_Generic.IEqualityComparer_1<T>): System_Linq.IQueryable_1<T>;
   IntersectBy<TKey>(source2: System_Collections_Generic.IEnumerable_1<TKey>, keySelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TKey>>): System_Linq.IQueryable_1<T>;
-  IntersectBy<TKey>(source2: System_Collections_Generic.IEnumerable_1<TKey>, keySelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TKey>>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Linq.IQueryable_1<T>;
+  IntersectBy<TKey>(source2: System_Collections_Generic.IEnumerable_1<TKey>, keySelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TKey>>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Linq.IQueryable_1<T>;
   Except(source2: System_Collections_Generic.IEnumerable_1<T>): System_Linq.IQueryable_1<T>;
-  Except(source2: System_Collections_Generic.IEnumerable_1<T>, comparer: System_Collections_Generic.IEqualityComparer_1<T> | undefined): System_Linq.IQueryable_1<T>;
+  Except(source2: System_Collections_Generic.IEnumerable_1<T>, comparer: System_Collections_Generic.IEqualityComparer_1<T>): System_Linq.IQueryable_1<T>;
   ExceptBy<TKey>(source2: System_Collections_Generic.IEnumerable_1<TKey>, keySelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TKey>>): System_Linq.IQueryable_1<T>;
-  ExceptBy<TKey>(source2: System_Collections_Generic.IEnumerable_1<TKey>, keySelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TKey>>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Linq.IQueryable_1<T>;
+  ExceptBy<TKey>(source2: System_Collections_Generic.IEnumerable_1<TKey>, keySelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TKey>>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Linq.IQueryable_1<T>;
   First(): T;
   First(predicate: System_Linq_Expressions.Expression_1<System.Func_2<T, System_Internal.Boolean>>): T;
   FirstOrDefault(): T | undefined;
@@ -1438,29 +1438,29 @@ export interface __Ext_IQueryable_1<T> {
   DefaultIfEmpty(): System_Linq.IQueryable_1<T | undefined>;
   DefaultIfEmpty(defaultValue: T): System_Linq.IQueryable_1<T>;
   Contains(item: T): boolean;
-  Contains(item: T, comparer: System_Collections_Generic.IEqualityComparer_1<T> | undefined): boolean;
+  Contains(item: T, comparer: System_Collections_Generic.IEqualityComparer_1<T>): boolean;
   Reverse(): System_Linq.IQueryable_1<T>;
   SequenceEqual(source2: System_Collections_Generic.IEnumerable_1<T>): boolean;
-  SequenceEqual(source2: System_Collections_Generic.IEnumerable_1<T>, comparer: System_Collections_Generic.IEqualityComparer_1<T> | undefined): boolean;
+  SequenceEqual(source2: System_Collections_Generic.IEnumerable_1<T>, comparer: System_Collections_Generic.IEqualityComparer_1<T>): boolean;
   Shuffle(): System_Linq.IQueryable_1<T>;
   Any(): boolean;
   Any(predicate: System_Linq_Expressions.Expression_1<System.Func_2<T, System_Internal.Boolean>>): boolean;
   All(predicate: System_Linq_Expressions.Expression_1<System.Func_2<T, System_Internal.Boolean>>): boolean;
   Count(): int;
   Count(predicate: System_Linq_Expressions.Expression_1<System.Func_2<T, System_Internal.Boolean>>): int;
-  CountBy<TKey>(keySelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TKey>>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Linq.IQueryable_1<System_Collections_Generic.KeyValuePair_2<TKey, System_Internal.Int32>>;
+  CountBy<TKey>(keySelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TKey>>, comparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Linq.IQueryable_1<System_Collections_Generic.KeyValuePair_2<TKey, System_Internal.Int32>>;
   LongCount(): long;
   LongCount(predicate: System_Linq_Expressions.Expression_1<System.Func_2<T, System_Internal.Boolean>>): long;
   Min(): T | undefined;
-  Min(comparer: System_Collections_Generic.IComparer_1<T> | undefined): T | undefined;
+  Min(comparer: System_Collections_Generic.IComparer_1<T>): T | undefined;
   Min<TResult>(selector: System_Linq_Expressions.Expression_1<System.Func_2<T, TResult>>): TResult | undefined;
   MinBy<TKey>(keySelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TKey>>): T | undefined;
-  MinBy<TKey>(keySelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TKey>>, comparer: System_Collections_Generic.IComparer_1<T> | undefined): T | undefined;
+  MinBy<TKey>(keySelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TKey>>, comparer: System_Collections_Generic.IComparer_1<T>): T | undefined;
   Max(): T | undefined;
-  Max(comparer: System_Collections_Generic.IComparer_1<T> | undefined): T | undefined;
+  Max(comparer: System_Collections_Generic.IComparer_1<T>): T | undefined;
   Max<TResult>(selector: System_Linq_Expressions.Expression_1<System.Func_2<T, TResult>>): TResult | undefined;
   MaxBy<TKey>(keySelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TKey>>): T | undefined;
-  MaxBy<TKey>(keySelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TKey>>, comparer: System_Collections_Generic.IComparer_1<T> | undefined): T | undefined;
+  MaxBy<TKey>(keySelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TKey>>, comparer: System_Collections_Generic.IComparer_1<T>): T | undefined;
   Sum(): int;
   Sum(): System.Nullable_1<System_Internal.Int32>;
   Sum(): long;
@@ -1500,8 +1500,8 @@ export interface __Ext_IQueryable_1<T> {
   Aggregate(func: System_Linq_Expressions.Expression_1<System.Func_3<T, T, T>>): T;
   Aggregate<TAccumulate>(seed: TAccumulate, func: System_Linq_Expressions.Expression_1<System.Func_3<TAccumulate, T, TAccumulate>>): TAccumulate;
   Aggregate<TAccumulate, TResult>(seed: TAccumulate, func: System_Linq_Expressions.Expression_1<System.Func_3<TAccumulate, T, TAccumulate>>, selector: System_Linq_Expressions.Expression_1<System.Func_2<TAccumulate, TResult>>): TResult;
-  AggregateBy<TKey, TAccumulate>(keySelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TKey>>, seed: TAccumulate, func: System_Linq_Expressions.Expression_1<System.Func_3<TAccumulate, T, TAccumulate>>, keyComparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Linq.IQueryable_1<System_Collections_Generic.KeyValuePair_2<TKey, TAccumulate>>;
-  AggregateBy<TKey, TAccumulate>(keySelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TKey>>, seedSelector: System_Linq_Expressions.Expression_1<System.Func_2<TKey, TAccumulate>>, func: System_Linq_Expressions.Expression_1<System.Func_3<TAccumulate, T, TAccumulate>>, keyComparer: System_Collections_Generic.IEqualityComparer_1<TKey> | undefined): System_Linq.IQueryable_1<System_Collections_Generic.KeyValuePair_2<TKey, TAccumulate>>;
+  AggregateBy<TKey, TAccumulate>(keySelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TKey>>, seed: TAccumulate, func: System_Linq_Expressions.Expression_1<System.Func_3<TAccumulate, T, TAccumulate>>, keyComparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Linq.IQueryable_1<System_Collections_Generic.KeyValuePair_2<TKey, TAccumulate>>;
+  AggregateBy<TKey, TAccumulate>(keySelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TKey>>, seedSelector: System_Linq_Expressions.Expression_1<System.Func_2<TKey, TAccumulate>>, func: System_Linq_Expressions.Expression_1<System.Func_3<TAccumulate, T, TAccumulate>>, keyComparer: System_Collections_Generic.IEqualityComparer_1<TKey>): System_Linq.IQueryable_1<System_Collections_Generic.KeyValuePair_2<TKey, TAccumulate>>;
   SkipLast(count: int): System_Linq.IQueryable_1<T>;
   TakeLast(count: int): System_Linq.IQueryable_1<T>;
   Append(element: T): System_Linq.IQueryable_1<T>;
@@ -1515,69 +1515,69 @@ export interface __Ext_IQueryable {
 
 export interface __Ext_IOrderedQueryable_1<T> {
   ThenBy<TKey>(keySelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TKey>>): System_Linq.IOrderedQueryable_1<T>;
-  ThenBy<TKey>(keySelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TKey>>, comparer: System_Collections_Generic.IComparer_1<TKey> | undefined): System_Linq.IOrderedQueryable_1<T>;
+  ThenBy<TKey>(keySelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TKey>>, comparer: System_Collections_Generic.IComparer_1<TKey>): System_Linq.IOrderedQueryable_1<T>;
   ThenByDescending<TKey>(keySelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TKey>>): System_Linq.IOrderedQueryable_1<T>;
-  ThenByDescending<TKey>(keySelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TKey>>, comparer: System_Collections_Generic.IComparer_1<TKey> | undefined): System_Linq.IOrderedQueryable_1<T>;
+  ThenByDescending<TKey>(keySelector: System_Linq_Expressions.Expression_1<System.Func_2<T, TKey>>, comparer: System_Collections_Generic.IComparer_1<TKey>): System_Linq.IOrderedQueryable_1<T>;
 }
 
 export interface __Ext_HttpClient {
-  GetFromJsonAsAsyncEnumerable<TValue>(requestUri: string | undefined, options: System_Text_Json.JsonSerializerOptions | undefined, cancellationToken: System_Threading.CancellationToken): System_Collections_Generic.IAsyncEnumerable_1<TValue | undefined>;
-  GetFromJsonAsAsyncEnumerable<TValue>(requestUri: System.Uri | undefined, options: System_Text_Json.JsonSerializerOptions | undefined, cancellationToken: System_Threading.CancellationToken): System_Collections_Generic.IAsyncEnumerable_1<TValue | undefined>;
-  GetFromJsonAsAsyncEnumerable<TValue>(requestUri: string | undefined, jsonTypeInfo: System_Text_Json_Serialization_Metadata.JsonTypeInfo_1<TValue>, cancellationToken: System_Threading.CancellationToken): System_Collections_Generic.IAsyncEnumerable_1<TValue | undefined>;
-  GetFromJsonAsAsyncEnumerable<TValue>(requestUri: System.Uri | undefined, jsonTypeInfo: System_Text_Json_Serialization_Metadata.JsonTypeInfo_1<TValue>, cancellationToken: System_Threading.CancellationToken): System_Collections_Generic.IAsyncEnumerable_1<TValue | undefined>;
-  GetFromJsonAsAsyncEnumerable<TValue>(requestUri: string | undefined, cancellationToken: System_Threading.CancellationToken): System_Collections_Generic.IAsyncEnumerable_1<TValue | undefined>;
-  GetFromJsonAsAsyncEnumerable<TValue>(requestUri: System.Uri | undefined, cancellationToken: System_Threading.CancellationToken): System_Collections_Generic.IAsyncEnumerable_1<TValue | undefined>;
-  DeleteFromJsonAsync(requestUri: string | undefined, type_: System.Type, options: System_Text_Json.JsonSerializerOptions | undefined, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<unknown | undefined>;
-  DeleteFromJsonAsync(requestUri: System.Uri | undefined, type_: System.Type, options: System_Text_Json.JsonSerializerOptions | undefined, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<unknown | undefined>;
-  DeleteFromJsonAsync<TValue>(requestUri: string | undefined, options: System_Text_Json.JsonSerializerOptions | undefined, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<TValue | undefined>;
-  DeleteFromJsonAsync<TValue>(requestUri: System.Uri | undefined, options: System_Text_Json.JsonSerializerOptions | undefined, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<TValue | undefined>;
-  DeleteFromJsonAsync(requestUri: string | undefined, type_: System.Type, context: System_Text_Json_Serialization.JsonSerializerContext, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<unknown | undefined>;
-  DeleteFromJsonAsync(requestUri: System.Uri | undefined, type_: System.Type, context: System_Text_Json_Serialization.JsonSerializerContext, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<unknown | undefined>;
-  DeleteFromJsonAsync<TValue>(requestUri: string | undefined, jsonTypeInfo: System_Text_Json_Serialization_Metadata.JsonTypeInfo_1<TValue>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<TValue | undefined>;
-  DeleteFromJsonAsync<TValue>(requestUri: System.Uri | undefined, jsonTypeInfo: System_Text_Json_Serialization_Metadata.JsonTypeInfo_1<TValue>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<TValue | undefined>;
-  DeleteFromJsonAsync(requestUri: string | undefined, type_: System.Type, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<unknown | undefined>;
-  DeleteFromJsonAsync(requestUri: System.Uri | undefined, type_: System.Type, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<unknown | undefined>;
-  DeleteFromJsonAsync<TValue>(requestUri: string | undefined, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<TValue | undefined>;
-  DeleteFromJsonAsync<TValue>(requestUri: System.Uri | undefined, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<TValue | undefined>;
-  GetFromJsonAsync(requestUri: string | undefined, type_: System.Type, options: System_Text_Json.JsonSerializerOptions | undefined, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<unknown | undefined>;
-  GetFromJsonAsync(requestUri: System.Uri | undefined, type_: System.Type, options: System_Text_Json.JsonSerializerOptions | undefined, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<unknown | undefined>;
-  GetFromJsonAsync<TValue>(requestUri: string | undefined, options: System_Text_Json.JsonSerializerOptions | undefined, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<TValue | undefined>;
-  GetFromJsonAsync<TValue>(requestUri: System.Uri | undefined, options: System_Text_Json.JsonSerializerOptions | undefined, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<TValue | undefined>;
-  GetFromJsonAsync(requestUri: string | undefined, type_: System.Type, context: System_Text_Json_Serialization.JsonSerializerContext, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<unknown | undefined>;
-  GetFromJsonAsync(requestUri: System.Uri | undefined, type_: System.Type, context: System_Text_Json_Serialization.JsonSerializerContext, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<unknown | undefined>;
-  GetFromJsonAsync<TValue>(requestUri: string | undefined, jsonTypeInfo: System_Text_Json_Serialization_Metadata.JsonTypeInfo_1<TValue>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<TValue | undefined>;
-  GetFromJsonAsync<TValue>(requestUri: System.Uri | undefined, jsonTypeInfo: System_Text_Json_Serialization_Metadata.JsonTypeInfo_1<TValue>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<TValue | undefined>;
-  GetFromJsonAsync(requestUri: string | undefined, type_: System.Type, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<unknown | undefined>;
-  GetFromJsonAsync(requestUri: System.Uri | undefined, type_: System.Type, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<unknown | undefined>;
-  GetFromJsonAsync<TValue>(requestUri: string | undefined, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<TValue | undefined>;
-  GetFromJsonAsync<TValue>(requestUri: System.Uri | undefined, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<TValue | undefined>;
-  PostAsJsonAsync<TValue>(requestUri: string | undefined, value: TValue, options: System_Text_Json.JsonSerializerOptions | undefined, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<System_Net_Http.HttpResponseMessage>;
-  PostAsJsonAsync<TValue>(requestUri: System.Uri | undefined, value: TValue, options: System_Text_Json.JsonSerializerOptions | undefined, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<System_Net_Http.HttpResponseMessage>;
-  PostAsJsonAsync<TValue>(requestUri: string | undefined, value: TValue, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<System_Net_Http.HttpResponseMessage>;
-  PostAsJsonAsync<TValue>(requestUri: System.Uri | undefined, value: TValue, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<System_Net_Http.HttpResponseMessage>;
-  PostAsJsonAsync<TValue>(requestUri: string | undefined, value: TValue, jsonTypeInfo: System_Text_Json_Serialization_Metadata.JsonTypeInfo_1<TValue>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<System_Net_Http.HttpResponseMessage>;
-  PostAsJsonAsync<TValue>(requestUri: System.Uri | undefined, value: TValue, jsonTypeInfo: System_Text_Json_Serialization_Metadata.JsonTypeInfo_1<TValue>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<System_Net_Http.HttpResponseMessage>;
-  PutAsJsonAsync<TValue>(requestUri: string | undefined, value: TValue, options: System_Text_Json.JsonSerializerOptions | undefined, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<System_Net_Http.HttpResponseMessage>;
-  PutAsJsonAsync<TValue>(requestUri: System.Uri | undefined, value: TValue, options: System_Text_Json.JsonSerializerOptions | undefined, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<System_Net_Http.HttpResponseMessage>;
-  PutAsJsonAsync<TValue>(requestUri: string | undefined, value: TValue, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<System_Net_Http.HttpResponseMessage>;
-  PutAsJsonAsync<TValue>(requestUri: System.Uri | undefined, value: TValue, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<System_Net_Http.HttpResponseMessage>;
-  PutAsJsonAsync<TValue>(requestUri: string | undefined, value: TValue, jsonTypeInfo: System_Text_Json_Serialization_Metadata.JsonTypeInfo_1<TValue>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<System_Net_Http.HttpResponseMessage>;
-  PutAsJsonAsync<TValue>(requestUri: System.Uri | undefined, value: TValue, jsonTypeInfo: System_Text_Json_Serialization_Metadata.JsonTypeInfo_1<TValue>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<System_Net_Http.HttpResponseMessage>;
-  PatchAsJsonAsync<TValue>(requestUri: string | undefined, value: TValue, options: System_Text_Json.JsonSerializerOptions | undefined, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<System_Net_Http.HttpResponseMessage>;
-  PatchAsJsonAsync<TValue>(requestUri: System.Uri | undefined, value: TValue, options: System_Text_Json.JsonSerializerOptions | undefined, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<System_Net_Http.HttpResponseMessage>;
-  PatchAsJsonAsync<TValue>(requestUri: string | undefined, value: TValue, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<System_Net_Http.HttpResponseMessage>;
-  PatchAsJsonAsync<TValue>(requestUri: System.Uri | undefined, value: TValue, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<System_Net_Http.HttpResponseMessage>;
-  PatchAsJsonAsync<TValue>(requestUri: string | undefined, value: TValue, jsonTypeInfo: System_Text_Json_Serialization_Metadata.JsonTypeInfo_1<TValue>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<System_Net_Http.HttpResponseMessage>;
-  PatchAsJsonAsync<TValue>(requestUri: System.Uri | undefined, value: TValue, jsonTypeInfo: System_Text_Json_Serialization_Metadata.JsonTypeInfo_1<TValue>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<System_Net_Http.HttpResponseMessage>;
+  GetFromJsonAsAsyncEnumerable<TValue>(requestUri: string, options: System_Text_Json.JsonSerializerOptions, cancellationToken: System_Threading.CancellationToken): System_Collections_Generic.IAsyncEnumerable_1<TValue | undefined>;
+  GetFromJsonAsAsyncEnumerable<TValue>(requestUri: System.Uri, options: System_Text_Json.JsonSerializerOptions, cancellationToken: System_Threading.CancellationToken): System_Collections_Generic.IAsyncEnumerable_1<TValue | undefined>;
+  GetFromJsonAsAsyncEnumerable<TValue>(requestUri: string, jsonTypeInfo: System_Text_Json_Serialization_Metadata.JsonTypeInfo_1<TValue>, cancellationToken: System_Threading.CancellationToken): System_Collections_Generic.IAsyncEnumerable_1<TValue | undefined>;
+  GetFromJsonAsAsyncEnumerable<TValue>(requestUri: System.Uri, jsonTypeInfo: System_Text_Json_Serialization_Metadata.JsonTypeInfo_1<TValue>, cancellationToken: System_Threading.CancellationToken): System_Collections_Generic.IAsyncEnumerable_1<TValue | undefined>;
+  GetFromJsonAsAsyncEnumerable<TValue>(requestUri: string, cancellationToken: System_Threading.CancellationToken): System_Collections_Generic.IAsyncEnumerable_1<TValue | undefined>;
+  GetFromJsonAsAsyncEnumerable<TValue>(requestUri: System.Uri, cancellationToken: System_Threading.CancellationToken): System_Collections_Generic.IAsyncEnumerable_1<TValue | undefined>;
+  DeleteFromJsonAsync(requestUri: string, type_: System.Type, options: System_Text_Json.JsonSerializerOptions, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<unknown | undefined>;
+  DeleteFromJsonAsync(requestUri: System.Uri, type_: System.Type, options: System_Text_Json.JsonSerializerOptions, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<unknown | undefined>;
+  DeleteFromJsonAsync<TValue>(requestUri: string, options: System_Text_Json.JsonSerializerOptions, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<TValue | undefined>;
+  DeleteFromJsonAsync<TValue>(requestUri: System.Uri, options: System_Text_Json.JsonSerializerOptions, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<TValue | undefined>;
+  DeleteFromJsonAsync(requestUri: string, type_: System.Type, context: System_Text_Json_Serialization.JsonSerializerContext, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<unknown | undefined>;
+  DeleteFromJsonAsync(requestUri: System.Uri, type_: System.Type, context: System_Text_Json_Serialization.JsonSerializerContext, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<unknown | undefined>;
+  DeleteFromJsonAsync<TValue>(requestUri: string, jsonTypeInfo: System_Text_Json_Serialization_Metadata.JsonTypeInfo_1<TValue>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<TValue | undefined>;
+  DeleteFromJsonAsync<TValue>(requestUri: System.Uri, jsonTypeInfo: System_Text_Json_Serialization_Metadata.JsonTypeInfo_1<TValue>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<TValue | undefined>;
+  DeleteFromJsonAsync(requestUri: string, type_: System.Type, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<unknown | undefined>;
+  DeleteFromJsonAsync(requestUri: System.Uri, type_: System.Type, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<unknown | undefined>;
+  DeleteFromJsonAsync<TValue>(requestUri: string, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<TValue | undefined>;
+  DeleteFromJsonAsync<TValue>(requestUri: System.Uri, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<TValue | undefined>;
+  GetFromJsonAsync(requestUri: string, type_: System.Type, options: System_Text_Json.JsonSerializerOptions, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<unknown | undefined>;
+  GetFromJsonAsync(requestUri: System.Uri, type_: System.Type, options: System_Text_Json.JsonSerializerOptions, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<unknown | undefined>;
+  GetFromJsonAsync<TValue>(requestUri: string, options: System_Text_Json.JsonSerializerOptions, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<TValue | undefined>;
+  GetFromJsonAsync<TValue>(requestUri: System.Uri, options: System_Text_Json.JsonSerializerOptions, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<TValue | undefined>;
+  GetFromJsonAsync(requestUri: string, type_: System.Type, context: System_Text_Json_Serialization.JsonSerializerContext, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<unknown | undefined>;
+  GetFromJsonAsync(requestUri: System.Uri, type_: System.Type, context: System_Text_Json_Serialization.JsonSerializerContext, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<unknown | undefined>;
+  GetFromJsonAsync<TValue>(requestUri: string, jsonTypeInfo: System_Text_Json_Serialization_Metadata.JsonTypeInfo_1<TValue>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<TValue | undefined>;
+  GetFromJsonAsync<TValue>(requestUri: System.Uri, jsonTypeInfo: System_Text_Json_Serialization_Metadata.JsonTypeInfo_1<TValue>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<TValue | undefined>;
+  GetFromJsonAsync(requestUri: string, type_: System.Type, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<unknown | undefined>;
+  GetFromJsonAsync(requestUri: System.Uri, type_: System.Type, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<unknown | undefined>;
+  GetFromJsonAsync<TValue>(requestUri: string, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<TValue | undefined>;
+  GetFromJsonAsync<TValue>(requestUri: System.Uri, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<TValue | undefined>;
+  PostAsJsonAsync<TValue>(requestUri: string, value: TValue, options: System_Text_Json.JsonSerializerOptions, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<System_Net_Http.HttpResponseMessage>;
+  PostAsJsonAsync<TValue>(requestUri: System.Uri, value: TValue, options: System_Text_Json.JsonSerializerOptions, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<System_Net_Http.HttpResponseMessage>;
+  PostAsJsonAsync<TValue>(requestUri: string, value: TValue, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<System_Net_Http.HttpResponseMessage>;
+  PostAsJsonAsync<TValue>(requestUri: System.Uri, value: TValue, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<System_Net_Http.HttpResponseMessage>;
+  PostAsJsonAsync<TValue>(requestUri: string, value: TValue, jsonTypeInfo: System_Text_Json_Serialization_Metadata.JsonTypeInfo_1<TValue>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<System_Net_Http.HttpResponseMessage>;
+  PostAsJsonAsync<TValue>(requestUri: System.Uri, value: TValue, jsonTypeInfo: System_Text_Json_Serialization_Metadata.JsonTypeInfo_1<TValue>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<System_Net_Http.HttpResponseMessage>;
+  PutAsJsonAsync<TValue>(requestUri: string, value: TValue, options: System_Text_Json.JsonSerializerOptions, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<System_Net_Http.HttpResponseMessage>;
+  PutAsJsonAsync<TValue>(requestUri: System.Uri, value: TValue, options: System_Text_Json.JsonSerializerOptions, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<System_Net_Http.HttpResponseMessage>;
+  PutAsJsonAsync<TValue>(requestUri: string, value: TValue, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<System_Net_Http.HttpResponseMessage>;
+  PutAsJsonAsync<TValue>(requestUri: System.Uri, value: TValue, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<System_Net_Http.HttpResponseMessage>;
+  PutAsJsonAsync<TValue>(requestUri: string, value: TValue, jsonTypeInfo: System_Text_Json_Serialization_Metadata.JsonTypeInfo_1<TValue>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<System_Net_Http.HttpResponseMessage>;
+  PutAsJsonAsync<TValue>(requestUri: System.Uri, value: TValue, jsonTypeInfo: System_Text_Json_Serialization_Metadata.JsonTypeInfo_1<TValue>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<System_Net_Http.HttpResponseMessage>;
+  PatchAsJsonAsync<TValue>(requestUri: string, value: TValue, options: System_Text_Json.JsonSerializerOptions, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<System_Net_Http.HttpResponseMessage>;
+  PatchAsJsonAsync<TValue>(requestUri: System.Uri, value: TValue, options: System_Text_Json.JsonSerializerOptions, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<System_Net_Http.HttpResponseMessage>;
+  PatchAsJsonAsync<TValue>(requestUri: string, value: TValue, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<System_Net_Http.HttpResponseMessage>;
+  PatchAsJsonAsync<TValue>(requestUri: System.Uri, value: TValue, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<System_Net_Http.HttpResponseMessage>;
+  PatchAsJsonAsync<TValue>(requestUri: string, value: TValue, jsonTypeInfo: System_Text_Json_Serialization_Metadata.JsonTypeInfo_1<TValue>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<System_Net_Http.HttpResponseMessage>;
+  PatchAsJsonAsync<TValue>(requestUri: System.Uri, value: TValue, jsonTypeInfo: System_Text_Json_Serialization_Metadata.JsonTypeInfo_1<TValue>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<System_Net_Http.HttpResponseMessage>;
 }
 
 export interface __Ext_HttpContent {
   ReadFromJsonAsAsyncEnumerable<TValue>(cancellationToken: System_Threading.CancellationToken): System_Collections_Generic.IAsyncEnumerable_1<TValue | undefined>;
-  ReadFromJsonAsAsyncEnumerable<TValue>(options: System_Text_Json.JsonSerializerOptions | undefined, cancellationToken: System_Threading.CancellationToken): System_Collections_Generic.IAsyncEnumerable_1<TValue | undefined>;
+  ReadFromJsonAsAsyncEnumerable<TValue>(options: System_Text_Json.JsonSerializerOptions, cancellationToken: System_Threading.CancellationToken): System_Collections_Generic.IAsyncEnumerable_1<TValue | undefined>;
   ReadFromJsonAsAsyncEnumerable<TValue>(jsonTypeInfo: System_Text_Json_Serialization_Metadata.JsonTypeInfo_1<TValue>, cancellationToken: System_Threading.CancellationToken): System_Collections_Generic.IAsyncEnumerable_1<TValue | undefined>;
-  ReadFromJsonAsync(type_: System.Type, options: System_Text_Json.JsonSerializerOptions | undefined, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<unknown | undefined>;
+  ReadFromJsonAsync(type_: System.Type, options: System_Text_Json.JsonSerializerOptions, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<unknown | undefined>;
   ReadFromJsonAsync(type_: System.Type, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<unknown | undefined>;
-  ReadFromJsonAsync<T>(options: System_Text_Json.JsonSerializerOptions | undefined, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<T | undefined>;
+  ReadFromJsonAsync<T>(options: System_Text_Json.JsonSerializerOptions, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<T | undefined>;
   ReadFromJsonAsync<T>(cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<T | undefined>;
   ReadFromJsonAsync(type_: System.Type, context: System_Text_Json_Serialization.JsonSerializerContext, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<unknown | undefined>;
   ReadFromJsonAsync<T>(jsonTypeInfo: System_Text_Json_Serialization_Metadata.JsonTypeInfo_1<T>, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.Task_1<T | undefined>;
@@ -1585,7 +1585,7 @@ export interface __Ext_HttpContent {
 
 export interface __Ext_Socket {
   AcceptAsync(): System_Threading_Tasks.Task_1<System_Net_Sockets.Socket>;
-  AcceptAsync(acceptSocket: System_Net_Sockets.Socket | undefined): System_Threading_Tasks.Task_1<System_Net_Sockets.Socket>;
+  AcceptAsync(acceptSocket: System_Net_Sockets.Socket): System_Threading_Tasks.Task_1<System_Net_Sockets.Socket>;
   ConnectAsync(remoteEP: System_Net.EndPoint): System_Threading_Tasks.Task;
   ConnectAsync(remoteEP: System_Net.EndPoint, cancellationToken: System_Threading.CancellationToken): System_Threading_Tasks.ValueTask;
   ConnectAsync(address: System_Net.IPAddress, port: int): System_Threading_Tasks.Task;
@@ -1777,10 +1777,10 @@ export interface __Ext_Type {
   GetProperties(bindingAttr: System_Reflection.BindingFlags): System_Reflection.PropertyInfo[];
   GetProperty(name: string): System_Reflection.PropertyInfo | undefined;
   GetProperty(name: string, bindingAttr: System_Reflection.BindingFlags): System_Reflection.PropertyInfo | undefined;
-  GetProperty(name: string, returnType: System.Type | undefined): System_Reflection.PropertyInfo | undefined;
-  GetProperty(name: string, returnType: System.Type | undefined, types: System.Type[]): System_Reflection.PropertyInfo | undefined;
-  IsAssignableFrom(c: System.Type | undefined): boolean;
-  IsInstanceOfType(o: unknown | undefined): boolean;
+  GetProperty(name: string, returnType: System.Type): System_Reflection.PropertyInfo | undefined;
+  GetProperty(name: string, returnType: System.Type, types: System.Type[]): System_Reflection.PropertyInfo | undefined;
+  IsAssignableFrom(c: System.Type): boolean;
+  IsInstanceOfType(o: unknown): boolean;
 }
 
 export interface __Ext_MethodInfo {
@@ -1825,7 +1825,7 @@ export interface __Ext_PEReader {
   GetMethodBody(relativeVirtualAddress: int): System_Reflection_Metadata.MethodBodyBlock;
   GetMetadataReader(): System_Reflection_Metadata.MetadataReader;
   GetMetadataReader(options: System_Reflection_Metadata.MetadataReaderOptions): System_Reflection_Metadata.MetadataReader;
-  GetMetadataReader(options: System_Reflection_Metadata.MetadataReaderOptions, utf8Decoder: System_Reflection_Metadata.MetadataStringDecoder | undefined): System_Reflection_Metadata.MetadataReader;
+  GetMetadataReader(options: System_Reflection_Metadata.MetadataReaderOptions, utf8Decoder: System_Reflection_Metadata.MetadataStringDecoder): System_Reflection_Metadata.MetadataReader;
 }
 
 export interface __Ext_ExportedType {
@@ -2001,12 +2001,12 @@ export interface __Ext_Vector64_1<T> {
 
 export interface __Ext_DataContractSerializer {
   GetSerializationSurrogateProvider(): System_Runtime_Serialization.ISerializationSurrogateProvider | undefined;
-  SetSerializationSurrogateProvider(provider: System_Runtime_Serialization.ISerializationSurrogateProvider | undefined): void;
+  SetSerializationSurrogateProvider(provider: System_Runtime_Serialization.ISerializationSurrogateProvider): void;
 }
 
 export interface __Ext_DataContractJsonSerializer {
   GetSerializationSurrogateProvider(): System_Runtime_Serialization.ISerializationSurrogateProvider | undefined;
-  SetSerializationSurrogateProvider(provider: System_Runtime_Serialization.ISerializationSurrogateProvider | undefined): void;
+  SetSerializationSurrogateProvider(provider: System_Runtime_Serialization.ISerializationSurrogateProvider): void;
 }
 
 export interface __Ext_X509Certificate2 {
@@ -2043,35 +2043,35 @@ export interface __Ext_Decoder {
 }
 
 export interface __Ext_JsonDocument {
-  Deserialize<TValue>(options: System_Text_Json.JsonSerializerOptions | undefined): TValue | undefined;
-  Deserialize(returnType: System.Type, options: System_Text_Json.JsonSerializerOptions | undefined): unknown | undefined;
+  Deserialize<TValue>(options: System_Text_Json.JsonSerializerOptions): TValue | undefined;
+  Deserialize(returnType: System.Type, options: System_Text_Json.JsonSerializerOptions): unknown | undefined;
   Deserialize<TValue>(jsonTypeInfo: System_Text_Json_Serialization_Metadata.JsonTypeInfo_1<TValue>): TValue | undefined;
   Deserialize(jsonTypeInfo: System_Text_Json_Serialization_Metadata.JsonTypeInfo): unknown | undefined;
   Deserialize(returnType: System.Type, context: System_Text_Json_Serialization.JsonSerializerContext): unknown | undefined;
 }
 
 export interface __Ext_JsonElement {
-  Deserialize<TValue>(options: System_Text_Json.JsonSerializerOptions | undefined): TValue | undefined;
-  Deserialize(returnType: System.Type, options: System_Text_Json.JsonSerializerOptions | undefined): unknown | undefined;
+  Deserialize<TValue>(options: System_Text_Json.JsonSerializerOptions): TValue | undefined;
+  Deserialize(returnType: System.Type, options: System_Text_Json.JsonSerializerOptions): unknown | undefined;
   Deserialize<TValue>(jsonTypeInfo: System_Text_Json_Serialization_Metadata.JsonTypeInfo_1<TValue>): TValue | undefined;
   Deserialize(jsonTypeInfo: System_Text_Json_Serialization_Metadata.JsonTypeInfo): unknown | undefined;
   Deserialize(returnType: System.Type, context: System_Text_Json_Serialization.JsonSerializerContext): unknown | undefined;
 }
 
 export interface __Ext_JsonNode {
-  Deserialize<TValue>(options: System_Text_Json.JsonSerializerOptions | undefined): TValue | undefined;
-  Deserialize(returnType: System.Type, options: System_Text_Json.JsonSerializerOptions | undefined): unknown | undefined;
+  Deserialize<TValue>(options: System_Text_Json.JsonSerializerOptions): TValue | undefined;
+  Deserialize(returnType: System.Type, options: System_Text_Json.JsonSerializerOptions): unknown | undefined;
   Deserialize<TValue>(jsonTypeInfo: System_Text_Json_Serialization_Metadata.JsonTypeInfo_1<TValue>): TValue | undefined;
   Deserialize(jsonTypeInfo: System_Text_Json_Serialization_Metadata.JsonTypeInfo): unknown | undefined;
   Deserialize(returnType: System.Type, context: System_Text_Json_Serialization.JsonSerializerContext): unknown | undefined;
 }
 
 export interface __Ext_JsonSerializerOptions {
-  GetJsonSchemaAsNode(type_: System.Type, exporterOptions: System_Text_Json_Schema.JsonSchemaExporterOptions | undefined): System_Text_Json_Nodes.JsonNode;
+  GetJsonSchemaAsNode(type_: System.Type, exporterOptions: System_Text_Json_Schema.JsonSchemaExporterOptions): System_Text_Json_Nodes.JsonNode;
 }
 
 export interface __Ext_JsonTypeInfo {
-  GetJsonSchemaAsNode(exporterOptions: System_Text_Json_Schema.JsonSchemaExporterOptions | undefined): System_Text_Json_Nodes.JsonNode;
+  GetJsonSchemaAsNode(exporterOptions: System_Text_Json_Schema.JsonSchemaExporterOptions): System_Text_Json_Nodes.JsonNode;
 }
 
 export interface __Ext_IJsonTypeInfoResolver {
@@ -2080,7 +2080,7 @@ export interface __Ext_IJsonTypeInfoResolver {
 
 export interface __Ext_WaitHandle {
   GetSafeWaitHandle(): Microsoft_Win32_SafeHandles.SafeWaitHandle;
-  SetSafeWaitHandle(value: Microsoft_Win32_SafeHandles.SafeWaitHandle | undefined): void;
+  SetSafeWaitHandle(value: Microsoft_Win32_SafeHandles.SafeWaitHandle): void;
 }
 
 export interface __Ext_EventWaitHandle {
@@ -2138,30 +2138,30 @@ export interface __Ext_IReceivableSourceBlock_1<TOutput> {
 
 export interface __Ext_XElement {
   GetSchemaInfo(): System_Xml_Schema.IXmlSchemaInfo | undefined;
-  Validate(partialValidationType: System_Xml_Schema.XmlSchemaObject, schemas: System_Xml_Schema.XmlSchemaSet, validationEventHandler: System_Xml_Schema.ValidationEventHandler | undefined): void;
-  Validate(partialValidationType: System_Xml_Schema.XmlSchemaObject, schemas: System_Xml_Schema.XmlSchemaSet, validationEventHandler: System_Xml_Schema.ValidationEventHandler | undefined, addSchemaInfo: boolean): void;
+  Validate(partialValidationType: System_Xml_Schema.XmlSchemaObject, schemas: System_Xml_Schema.XmlSchemaSet, validationEventHandler: System_Xml_Schema.ValidationEventHandler): void;
+  Validate(partialValidationType: System_Xml_Schema.XmlSchemaObject, schemas: System_Xml_Schema.XmlSchemaSet, validationEventHandler: System_Xml_Schema.ValidationEventHandler, addSchemaInfo: boolean): void;
 }
 
 export interface __Ext_XAttribute {
   GetSchemaInfo(): System_Xml_Schema.IXmlSchemaInfo | undefined;
-  Validate(partialValidationType: System_Xml_Schema.XmlSchemaObject, schemas: System_Xml_Schema.XmlSchemaSet, validationEventHandler: System_Xml_Schema.ValidationEventHandler | undefined): void;
-  Validate(partialValidationType: System_Xml_Schema.XmlSchemaObject, schemas: System_Xml_Schema.XmlSchemaSet, validationEventHandler: System_Xml_Schema.ValidationEventHandler | undefined, addSchemaInfo: boolean): void;
+  Validate(partialValidationType: System_Xml_Schema.XmlSchemaObject, schemas: System_Xml_Schema.XmlSchemaSet, validationEventHandler: System_Xml_Schema.ValidationEventHandler): void;
+  Validate(partialValidationType: System_Xml_Schema.XmlSchemaObject, schemas: System_Xml_Schema.XmlSchemaSet, validationEventHandler: System_Xml_Schema.ValidationEventHandler, addSchemaInfo: boolean): void;
 }
 
 export interface __Ext_XDocument {
-  Validate(schemas: System_Xml_Schema.XmlSchemaSet, validationEventHandler: System_Xml_Schema.ValidationEventHandler | undefined): void;
-  Validate(schemas: System_Xml_Schema.XmlSchemaSet, validationEventHandler: System_Xml_Schema.ValidationEventHandler | undefined, addSchemaInfo: boolean): void;
+  Validate(schemas: System_Xml_Schema.XmlSchemaSet, validationEventHandler: System_Xml_Schema.ValidationEventHandler): void;
+  Validate(schemas: System_Xml_Schema.XmlSchemaSet, validationEventHandler: System_Xml_Schema.ValidationEventHandler, addSchemaInfo: boolean): void;
 }
 
 export interface __Ext_XNode {
   CreateNavigator(): System_Xml_XPath.XPathNavigator;
-  CreateNavigator(nameTable: System_Xml.XmlNameTable | undefined): System_Xml_XPath.XPathNavigator;
+  CreateNavigator(nameTable: System_Xml.XmlNameTable): System_Xml_XPath.XPathNavigator;
   XPathEvaluate(expression: string): unknown;
-  XPathEvaluate(expression: string, resolver: System_Xml.IXmlNamespaceResolver | undefined): unknown;
+  XPathEvaluate(expression: string, resolver: System_Xml.IXmlNamespaceResolver): unknown;
   XPathSelectElement(expression: string): System_Xml_Linq.XElement | undefined;
-  XPathSelectElement(expression: string, resolver: System_Xml.IXmlNamespaceResolver | undefined): System_Xml_Linq.XElement | undefined;
+  XPathSelectElement(expression: string, resolver: System_Xml.IXmlNamespaceResolver): System_Xml_Linq.XElement | undefined;
   XPathSelectElements(expression: string): System_Collections_Generic.IEnumerable_1<System_Xml_Linq.XElement>;
-  XPathSelectElements(expression: string, resolver: System_Xml.IXmlNamespaceResolver | undefined): System_Collections_Generic.IEnumerable_1<System_Xml_Linq.XElement>;
+  XPathSelectElements(expression: string, resolver: System_Xml.IXmlNamespaceResolver): System_Collections_Generic.IEnumerable_1<System_Xml_Linq.XElement>;
   ToXPathNavigable(): System_Xml_XPath.IXPathNavigable;
 }
 

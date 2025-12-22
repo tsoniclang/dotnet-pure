@@ -64,8 +64,8 @@ export interface IsolatedStorageException$instance extends Exception {
 
 export const IsolatedStorageException: {
     new(): IsolatedStorageException;
-    new(message: string | undefined): IsolatedStorageException;
-    new(message: string | undefined, inner: Exception | undefined): IsolatedStorageException;
+    new(message: string): IsolatedStorageException;
+    new(message: string, inner: Exception): IsolatedStorageException;
 };
 
 
@@ -116,10 +116,10 @@ export const IsolatedStorageFile: {
     GetMachineStoreForApplication(): IsolatedStorageFile;
     GetMachineStoreForAssembly(): IsolatedStorageFile;
     GetMachineStoreForDomain(): IsolatedStorageFile;
-    GetStore(scope: IsolatedStorageScope, domainIdentity: unknown | undefined, assemblyIdentity: unknown | undefined): IsolatedStorageFile;
-    GetStore(scope: IsolatedStorageScope, applicationIdentity: unknown | undefined): IsolatedStorageFile;
-    GetStore(scope: IsolatedStorageScope, domainEvidenceType: Type | undefined, assemblyEvidenceType: Type | undefined): IsolatedStorageFile;
-    GetStore(scope: IsolatedStorageScope, applicationEvidenceType: Type | undefined): IsolatedStorageFile;
+    GetStore(scope: IsolatedStorageScope, domainIdentity: unknown, assemblyIdentity: unknown): IsolatedStorageFile;
+    GetStore(scope: IsolatedStorageScope, applicationIdentity: unknown): IsolatedStorageFile;
+    GetStore(scope: IsolatedStorageScope, domainEvidenceType: Type, assemblyEvidenceType: Type): IsolatedStorageFile;
+    GetStore(scope: IsolatedStorageScope, applicationEvidenceType: Type): IsolatedStorageFile;
     GetUserStoreForApplication(): IsolatedStorageFile;
     GetUserStoreForAssembly(): IsolatedStorageFile;
     GetUserStoreForDomain(): IsolatedStorageFile;
@@ -146,8 +146,8 @@ export interface IsolatedStorageFileStream$instance extends FileStream {
     readonly Length: long;
     Position: long;
     readonly SafeFileHandle: SafeFileHandle;
-    BeginRead(array: byte[], offset: int, numBytes: int, userCallback: AsyncCallback | undefined, stateObject: unknown | undefined): IAsyncResult;
-    BeginWrite(array: byte[], offset: int, numBytes: int, userCallback: AsyncCallback | undefined, stateObject: unknown | undefined): IAsyncResult;
+    BeginRead(array: byte[], offset: int, numBytes: int, userCallback: AsyncCallback, stateObject: unknown): IAsyncResult;
+    BeginWrite(array: byte[], offset: int, numBytes: int, userCallback: AsyncCallback, stateObject: unknown): IAsyncResult;
     Dispose(): void;
     DisposeAsync(): ValueTask;
     EndRead(asyncResult: IAsyncResult): int;
@@ -182,13 +182,13 @@ export interface IsolatedStorageFileStream$instance extends FileStream {
 
 export const IsolatedStorageFileStream: {
     new(path: string, mode: FileMode): IsolatedStorageFileStream;
-    new(path: string, mode: FileMode, isf: IsolatedStorageFile | undefined): IsolatedStorageFileStream;
+    new(path: string, mode: FileMode, isf: IsolatedStorageFile): IsolatedStorageFileStream;
     new(path: string, mode: FileMode, access: FileAccess): IsolatedStorageFileStream;
-    new(path: string, mode: FileMode, access: FileAccess, isf: IsolatedStorageFile | undefined): IsolatedStorageFileStream;
+    new(path: string, mode: FileMode, access: FileAccess, isf: IsolatedStorageFile): IsolatedStorageFileStream;
     new(path: string, mode: FileMode, access: FileAccess, share: FileShare): IsolatedStorageFileStream;
-    new(path: string, mode: FileMode, access: FileAccess, share: FileShare, isf: IsolatedStorageFile | undefined): IsolatedStorageFileStream;
+    new(path: string, mode: FileMode, access: FileAccess, share: FileShare, isf: IsolatedStorageFile): IsolatedStorageFileStream;
     new(path: string, mode: FileMode, access: FileAccess, share: FileShare, bufferSize: int): IsolatedStorageFileStream;
-    new(path: string, mode: FileMode, access: FileAccess, share: FileShare, bufferSize: int, isf: IsolatedStorageFile | undefined): IsolatedStorageFileStream;
+    new(path: string, mode: FileMode, access: FileAccess, share: FileShare, bufferSize: int, isf: IsolatedStorageFile): IsolatedStorageFileStream;
 };
 
 

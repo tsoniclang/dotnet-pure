@@ -2134,20 +2134,6 @@
           "isExtensionMethod": false
         },
         {
-          "stableId": "System.Private.CoreLib:System.Numerics.INumberBase\u00601::IsCanonical(TSelf):System.Boolean",
-          "clrName": "IsCanonical",
-          "tsEmitName": "IsCanonical",
-          "metadataToken": 100675934,
-          "canonicalSignature": "(TSelf):System.Boolean",
-          "normalizedSignature": "IsCanonical|(TSelf):System.Boolean|static=true",
-          "emitScope": "ClassSurface",
-          "arity": 0,
-          "parameterCount": 1,
-          "declaringClrType": "System.Numerics.INumberBase\u00601",
-          "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
-        },
-        {
           "stableId": "System.Private.CoreLib:System.Numerics.INumberBase\u00601::Parse(System.String,System.Globalization.NumberStyles,System.IFormatProvider):TSelf",
           "clrName": "Parse",
           "tsEmitName": "Parse",
@@ -2486,16 +2472,6 @@
             "declaringClrType": "System.Numerics.INumberBase\u00601",
             "declaringAssemblyName": "System.Private.CoreLib",
             "metadataToken": 100675931
-          }
-        },
-        {
-          "tsName": "IsCanonical",
-          "isStatic": true,
-          "tsSignatureId": "IsCanonical|(TSelf):System.Boolean|static=true",
-          "target": {
-            "declaringClrType": "System.Numerics.INumberBase\u00601",
-            "declaringAssemblyName": "System.Private.CoreLib",
-            "metadataToken": 100675934
           }
         },
         {
@@ -5314,20 +5290,6 @@
           "isExtensionMethod": false
         },
         {
-          "stableId": "System.Private.CoreLib:System.Numerics.INumber\u00601::Sign(TSelf):System.Int32",
-          "clrName": "Sign",
-          "tsEmitName": "Sign",
-          "metadataToken": 100675926,
-          "canonicalSignature": "(TSelf):System.Int32",
-          "normalizedSignature": "Sign|(TSelf):System.Int32|static=true",
-          "emitScope": "ClassSurface",
-          "arity": 0,
-          "parameterCount": 1,
-          "declaringClrType": "System.Numerics.INumber\u00601",
-          "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
-        },
-        {
           "stableId": "System.Private.CoreLib:System.IComparable::CompareTo(System.Object):System.Int32",
           "clrName": "CompareTo",
           "tsEmitName": "CompareTo",
@@ -5846,16 +5808,6 @@
             "declaringClrType": "System.Numerics.IFloatingPoint\u00601",
             "declaringAssemblyName": "System.Private.CoreLib",
             "metadataToken": 100675867
-          }
-        },
-        {
-          "tsName": "Sign",
-          "isStatic": true,
-          "tsSignatureId": "Sign|(TSelf):System.Int32|static=true",
-          "target": {
-            "declaringClrType": "System.Numerics.INumber\u00601",
-            "declaringAssemblyName": "System.Private.CoreLib",
-            "metadataToken": 100675926
           }
         },
         {
@@ -7496,20 +7448,6 @@
           "isExtensionMethod": false
         },
         {
-          "stableId": "System.Private.CoreLib:System.IComparable\u00601::CompareTo(T):System.Int32",
-          "clrName": "CompareTo",
-          "tsEmitName": "CompareTo",
-          "metadataToken": 100668511,
-          "canonicalSignature": "(T):System.Int32",
-          "normalizedSignature": "CompareTo|(T):System.Int32|static=false",
-          "emitScope": "ClassSurface",
-          "arity": 0,
-          "parameterCount": 1,
-          "declaringClrType": "System.IComparable\u00601",
-          "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
-        },
-        {
           "stableId": "System.Private.CoreLib:System.Numerics.INumberBase\u00601::Abs(TSelf):TSelf",
           "clrName": "Abs",
           "tsEmitName": "Abs",
@@ -7867,16 +7805,6 @@
           }
         },
         {
-          "tsName": "CompareTo",
-          "isStatic": false,
-          "tsSignatureId": "CompareTo|(T):System.Int32|static=false",
-          "target": {
-            "declaringClrType": "System.IComparable\u00601",
-            "declaringAssemblyName": "System.Private.CoreLib",
-            "metadataToken": 100668511
-          }
-        },
-        {
           "tsName": "Abs",
           "isStatic": true,
           "tsSignatureId": "Abs|(TSelf):TSelf|static=true",
@@ -8226,20 +8154,6 @@
           ]
         },
         {
-          "stableId": "System.Private.CoreLib:System.IEquatable\u00601::Equals(T):System.Boolean",
-          "clrName": "Equals",
-          "tsEmitName": "Equals",
-          "metadataToken": 100668531,
-          "canonicalSignature": "(T):System.Boolean",
-          "normalizedSignature": "Equals|(T):System.Boolean|static=false",
-          "emitScope": "ClassSurface",
-          "arity": 0,
-          "parameterCount": 1,
-          "declaringClrType": "System.IEquatable\u00601",
-          "declaringAssemblyName": "System.Private.CoreLib",
-          "isExtensionMethod": false
-        },
-        {
           "stableId": "System.Private.CoreLib:System.ISpanFormattable::TryFormat(System.Span_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.Int32\u0026,System.ReadOnlySpan_1[[System.Char,System.Private.CoreLib,Version=10.0.0.0,Culture=neutral,PublicKeyToken=7cec85d7bea7798e]],System.IFormatProvider):System.Boolean",
           "clrName": "TryFormat",
           "tsEmitName": "TryFormat",
@@ -8506,16 +8420,6 @@
             "declaringClrType": "System.Numerics.INumberBase\u00601",
             "declaringAssemblyName": "System.Private.CoreLib",
             "metadataToken": 100675966
-          }
-        },
-        {
-          "tsName": "Equals",
-          "isStatic": false,
-          "tsSignatureId": "Equals|(T):System.Boolean|static=false",
-          "target": {
-            "declaringClrType": "System.IEquatable\u00601",
-            "declaringAssemblyName": "System.Private.CoreLib",
-            "metadataToken": 100668531
           }
         },
         {

@@ -38,9 +38,9 @@ export interface IResourceReader$instance extends System_Collections_Internal.IE
 export type IResourceReader = IResourceReader$instance;
 
 export interface IResourceWriter$instance extends IDisposable {
-    AddResource(name: string, value: byte[] | undefined): void;
-    AddResource(name: string, value: unknown | undefined): void;
-    AddResource(name: string, value: string | undefined): void;
+    AddResource(name: string, value: byte[]): void;
+    AddResource(name: string, value: unknown): void;
+    AddResource(name: string, value: string): void;
     Close(): void;
     Dispose(): void;
 }
@@ -57,8 +57,8 @@ export interface MissingManifestResourceException$instance extends SystemExcepti
 
 export const MissingManifestResourceException: {
     new(): MissingManifestResourceException;
-    new(message: string | undefined): MissingManifestResourceException;
-    new(message: string | undefined, inner: Exception | undefined): MissingManifestResourceException;
+    new(message: string): MissingManifestResourceException;
+    new(message: string, inner: Exception): MissingManifestResourceException;
 };
 
 
@@ -77,9 +77,9 @@ export interface MissingSatelliteAssemblyException$instance extends SystemExcept
 
 export const MissingSatelliteAssemblyException: {
     new(): MissingSatelliteAssemblyException;
-    new(message: string | undefined): MissingSatelliteAssemblyException;
-    new(message: string | undefined, cultureName: string | undefined): MissingSatelliteAssemblyException;
-    new(message: string | undefined, inner: Exception | undefined): MissingSatelliteAssemblyException;
+    new(message: string): MissingSatelliteAssemblyException;
+    new(message: string, cultureName: string): MissingSatelliteAssemblyException;
+    new(message: string, inner: Exception): MissingSatelliteAssemblyException;
 };
 
 
@@ -109,23 +109,23 @@ export interface ResourceManager$instance {
     IgnoreCase: boolean;
     readonly ResourceSetType: Type;
     GetObject(name: string): unknown | undefined;
-    GetObject(name: string, culture: CultureInfo | undefined): unknown | undefined;
+    GetObject(name: string, culture: CultureInfo): unknown | undefined;
     GetResourceSet(culture: CultureInfo, createIfNotExists: boolean, tryParents: boolean): ResourceSet | undefined;
     GetStream(name: string): UnmanagedMemoryStream | undefined;
-    GetStream(name: string, culture: CultureInfo | undefined): UnmanagedMemoryStream | undefined;
+    GetStream(name: string, culture: CultureInfo): UnmanagedMemoryStream | undefined;
     GetString(name: string): string | undefined;
-    GetString(name: string, culture: CultureInfo | undefined): string | undefined;
+    GetString(name: string, culture: CultureInfo): string | undefined;
     ReleaseAllResources(): void;
 }
 
 
 export const ResourceManager: {
     new(baseName: string, assembly: Assembly): ResourceManager;
-    new(baseName: string, assembly: Assembly, usingResourceSet: Type | undefined): ResourceManager;
+    new(baseName: string, assembly: Assembly, usingResourceSet: Type): ResourceManager;
     new(resourceSource: Type): ResourceManager;
     readonly MagicNumber: int;
     readonly HeaderVersionNumber: int;
-    CreateFileBasedResourceManager(baseName: string, resourceDir: string, usingResourceSet: Type | undefined): ResourceManager;
+    CreateFileBasedResourceManager(baseName: string, resourceDir: string, usingResourceSet: Type): ResourceManager;
 };
 
 
@@ -185,12 +185,13 @@ export type ResourceSet = ResourceSet$instance & __ResourceSet$views;
 
 
 export interface ResourceWriter$instance {
-    TypeNameConverter: Func_2<Type, System_Internal.String> | undefined;
-    AddResource(name: string, value: Stream | undefined): void;
-    AddResource(name: string, value: string | undefined): void;
-    AddResource(name: string, value: unknown | undefined): void;
-    AddResource(name: string, value: Stream | undefined, closeAfterWrite?: boolean): void;
-    AddResource(name: string, value: byte[] | undefined): void;
+    get TypeNameConverter(): Func_2<Type, System_Internal.String> | undefined;
+    set TypeNameConverter(value: Func_2<Type, System_Internal.String>);
+    AddResource(name: string, value: Stream): void;
+    AddResource(name: string, value: string): void;
+    AddResource(name: string, value: unknown): void;
+    AddResource(name: string, value: Stream, closeAfterWrite?: boolean): void;
+    AddResource(name: string, value: byte[]): void;
     AddResourceData(name: string, typeName: string, serializedData: byte[]): void;
     Close(): void;
     Dispose(): void;

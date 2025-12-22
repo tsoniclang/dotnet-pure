@@ -89,7 +89,7 @@ export interface ValueTask$instance {
     readonly IsFaulted: boolean;
     AsTask(): Task;
     ConfigureAwait(continueOnCapturedContext: boolean): ConfiguredValueTaskAwaitable;
-    Equals(obj: unknown | undefined): boolean;
+    Equals(obj: unknown): boolean;
     Equals(other: ValueTask): boolean;
     GetAwaiter(): ValueTaskAwaiter;
     GetHashCode(): int;
@@ -127,7 +127,7 @@ export interface ValueTask_1$instance<TResult> {
     readonly Result: TResult;
     AsTask(): Task_1<TResult>;
     ConfigureAwait(continueOnCapturedContext: boolean): ConfiguredValueTaskAwaitable_1<TResult>;
-    Equals(obj: unknown | undefined): boolean;
+    Equals(obj: unknown): boolean;
     Equals(other: ValueTask_1<TResult>): boolean;
     GetAwaiter(): ValueTaskAwaiter_1<TResult>;
     GetHashCode(): int;
@@ -219,21 +219,21 @@ export interface Task$instance {
     ContinueWith(continuationAction: Action_1<Task>, scheduler: TaskScheduler): Task;
     ContinueWith(continuationAction: Action_1<Task>, continuationOptions: TaskContinuationOptions): Task;
     ContinueWith(continuationAction: Action_1<Task>, cancellationToken: CancellationToken, continuationOptions: TaskContinuationOptions, scheduler: TaskScheduler): Task;
-    ContinueWith(continuationAction: Action_2<Task, unknown | undefined>, state: unknown | undefined): Task;
-    ContinueWith(continuationAction: Action_2<Task, unknown | undefined>, state: unknown | undefined, cancellationToken: CancellationToken): Task;
-    ContinueWith(continuationAction: Action_2<Task, unknown | undefined>, state: unknown | undefined, scheduler: TaskScheduler): Task;
-    ContinueWith(continuationAction: Action_2<Task, unknown | undefined>, state: unknown | undefined, continuationOptions: TaskContinuationOptions): Task;
-    ContinueWith(continuationAction: Action_2<Task, unknown | undefined>, state: unknown | undefined, cancellationToken: CancellationToken, continuationOptions: TaskContinuationOptions, scheduler: TaskScheduler): Task;
+    ContinueWith(continuationAction: Action_2<Task, unknown>, state: unknown): Task;
+    ContinueWith(continuationAction: Action_2<Task, unknown>, state: unknown, cancellationToken: CancellationToken): Task;
+    ContinueWith(continuationAction: Action_2<Task, unknown>, state: unknown, scheduler: TaskScheduler): Task;
+    ContinueWith(continuationAction: Action_2<Task, unknown>, state: unknown, continuationOptions: TaskContinuationOptions): Task;
+    ContinueWith(continuationAction: Action_2<Task, unknown>, state: unknown, cancellationToken: CancellationToken, continuationOptions: TaskContinuationOptions, scheduler: TaskScheduler): Task;
     ContinueWith<TResult>(continuationFunction: Func_2<Task, TResult>): Task_1<TResult>;
     ContinueWith<TResult>(continuationFunction: Func_2<Task, TResult>, cancellationToken: CancellationToken): Task_1<TResult>;
     ContinueWith<TResult>(continuationFunction: Func_2<Task, TResult>, scheduler: TaskScheduler): Task_1<TResult>;
     ContinueWith<TResult>(continuationFunction: Func_2<Task, TResult>, continuationOptions: TaskContinuationOptions): Task_1<TResult>;
     ContinueWith<TResult>(continuationFunction: Func_2<Task, TResult>, cancellationToken: CancellationToken, continuationOptions: TaskContinuationOptions, scheduler: TaskScheduler): Task_1<TResult>;
-    ContinueWith<TResult>(continuationFunction: Func_3<Task, unknown | undefined, TResult>, state: unknown | undefined): Task_1<TResult>;
-    ContinueWith<TResult>(continuationFunction: Func_3<Task, unknown | undefined, TResult>, state: unknown | undefined, cancellationToken: CancellationToken): Task_1<TResult>;
-    ContinueWith<TResult>(continuationFunction: Func_3<Task, unknown | undefined, TResult>, state: unknown | undefined, scheduler: TaskScheduler): Task_1<TResult>;
-    ContinueWith<TResult>(continuationFunction: Func_3<Task, unknown | undefined, TResult>, state: unknown | undefined, continuationOptions: TaskContinuationOptions): Task_1<TResult>;
-    ContinueWith<TResult>(continuationFunction: Func_3<Task, unknown | undefined, TResult>, state: unknown | undefined, cancellationToken: CancellationToken, continuationOptions: TaskContinuationOptions, scheduler: TaskScheduler): Task_1<TResult>;
+    ContinueWith<TResult>(continuationFunction: Func_3<Task, unknown, TResult>, state: unknown): Task_1<TResult>;
+    ContinueWith<TResult>(continuationFunction: Func_3<Task, unknown, TResult>, state: unknown, cancellationToken: CancellationToken): Task_1<TResult>;
+    ContinueWith<TResult>(continuationFunction: Func_3<Task, unknown, TResult>, state: unknown, scheduler: TaskScheduler): Task_1<TResult>;
+    ContinueWith<TResult>(continuationFunction: Func_3<Task, unknown, TResult>, state: unknown, continuationOptions: TaskContinuationOptions): Task_1<TResult>;
+    ContinueWith<TResult>(continuationFunction: Func_3<Task, unknown, TResult>, state: unknown, cancellationToken: CancellationToken, continuationOptions: TaskContinuationOptions, scheduler: TaskScheduler): Task_1<TResult>;
     Dispose(): void;
     GetAwaiter(): TaskAwaiter;
     RunSynchronously(): void;
@@ -259,10 +259,10 @@ export const Task: {
     new(action: Action, cancellationToken: CancellationToken): Task;
     new(action: Action, creationOptions: TaskCreationOptions): Task;
     new(action: Action, cancellationToken: CancellationToken, creationOptions: TaskCreationOptions): Task;
-    new(action: Action_1<unknown | undefined>, state: unknown | undefined): Task;
-    new(action: Action_1<unknown | undefined>, state: unknown | undefined, cancellationToken: CancellationToken): Task;
-    new(action: Action_1<unknown | undefined>, state: unknown | undefined, creationOptions: TaskCreationOptions): Task;
-    new(action: Action_1<unknown | undefined>, state: unknown | undefined, cancellationToken: CancellationToken, creationOptions: TaskCreationOptions): Task;
+    new(action: Action_1<unknown>, state: unknown): Task;
+    new(action: Action_1<unknown>, state: unknown, cancellationToken: CancellationToken): Task;
+    new(action: Action_1<unknown>, state: unknown, creationOptions: TaskCreationOptions): Task;
+    new(action: Action_1<unknown>, state: unknown, cancellationToken: CancellationToken, creationOptions: TaskCreationOptions): Task;
     readonly CurrentId: Nullable_1<System_Internal.Int32>;
     readonly Factory: TaskFactory;
     readonly CompletedTask: Task;
@@ -281,8 +281,8 @@ export const Task: {
     Run<TResult>(function_: Func_1<TResult>): Task_1<TResult>;
     Run(action: Action, cancellationToken: CancellationToken): Task;
     Run(action: Action): Task;
-    Run(function_: Func_1<Task | undefined>, cancellationToken: CancellationToken): Task;
-    Run(function_: Func_1<Task | undefined>): Task;
+    Run(function_: Func_1<Task>, cancellationToken: CancellationToken): Task;
+    Run(function_: Func_1<Task>): Task;
     WaitAll(tasks: IEnumerable_1<Task>, cancellationToken?: CancellationToken): void;
     WaitAll(tasks: ReadOnlySpan_1<Task>): void;
     WaitAll(tasks: Task[], millisecondsTimeout: int, cancellationToken: CancellationToken): boolean;
@@ -336,34 +336,34 @@ export interface Task_1$instance<TResult> extends Task$instance {
     ConfigureAwait(options: ConfigureAwaitOptions): ConfiguredTaskAwaitable;
     ContinueWith(continuationAction: Action_1<Task_1<TResult>>, scheduler: TaskScheduler): Task;
     ContinueWith(continuationAction: Action_1<Task_1<TResult>>, continuationOptions: TaskContinuationOptions): Task;
-    ContinueWith(continuationAction: Action_2<Task_1<TResult>, unknown | undefined>, state: unknown | undefined): Task;
-    ContinueWith(continuationAction: Action_2<Task_1<TResult>, unknown | undefined>, state: unknown | undefined, scheduler: TaskScheduler): Task;
-    ContinueWith(continuationAction: Action_2<Task_1<TResult>, unknown | undefined>, state: unknown | undefined, continuationOptions: TaskContinuationOptions): Task;
+    ContinueWith(continuationAction: Action_2<Task_1<TResult>, unknown>, state: unknown): Task;
+    ContinueWith(continuationAction: Action_2<Task_1<TResult>, unknown>, state: unknown, scheduler: TaskScheduler): Task;
+    ContinueWith(continuationAction: Action_2<Task_1<TResult>, unknown>, state: unknown, continuationOptions: TaskContinuationOptions): Task;
     ContinueWith<TNewResult>(continuationFunction: Func_2<Task_1<TResult>, TNewResult>, scheduler: TaskScheduler): Task_1<TNewResult>;
     ContinueWith<TNewResult>(continuationFunction: Func_2<Task_1<TResult>, TNewResult>, continuationOptions: TaskContinuationOptions): Task_1<TNewResult>;
-    ContinueWith<TNewResult>(continuationFunction: Func_3<Task_1<TResult>, unknown | undefined, TNewResult>, state: unknown | undefined): Task_1<TNewResult>;
-    ContinueWith<TNewResult>(continuationFunction: Func_3<Task_1<TResult>, unknown | undefined, TNewResult>, state: unknown | undefined, scheduler: TaskScheduler): Task_1<TNewResult>;
-    ContinueWith<TNewResult>(continuationFunction: Func_3<Task_1<TResult>, unknown | undefined, TNewResult>, state: unknown | undefined, continuationOptions: TaskContinuationOptions): Task_1<TNewResult>;
+    ContinueWith<TNewResult>(continuationFunction: Func_3<Task_1<TResult>, unknown, TNewResult>, state: unknown): Task_1<TNewResult>;
+    ContinueWith<TNewResult>(continuationFunction: Func_3<Task_1<TResult>, unknown, TNewResult>, state: unknown, scheduler: TaskScheduler): Task_1<TNewResult>;
+    ContinueWith<TNewResult>(continuationFunction: Func_3<Task_1<TResult>, unknown, TNewResult>, state: unknown, continuationOptions: TaskContinuationOptions): Task_1<TNewResult>;
     ContinueWith(continuationAction: Action_1<Task>): Task;
     ContinueWith(continuationAction: Action_1<Task>, cancellationToken: CancellationToken): Task;
     ContinueWith(continuationAction: Action_1<Task>, scheduler: TaskScheduler): Task;
     ContinueWith(continuationAction: Action_1<Task>, continuationOptions: TaskContinuationOptions): Task;
     ContinueWith(continuationAction: Action_1<Task>, cancellationToken: CancellationToken, continuationOptions: TaskContinuationOptions, scheduler: TaskScheduler): Task;
-    ContinueWith(continuationAction: Action_2<Task, unknown | undefined>, state: unknown | undefined): Task;
-    ContinueWith(continuationAction: Action_2<Task, unknown | undefined>, state: unknown | undefined, cancellationToken: CancellationToken): Task;
-    ContinueWith(continuationAction: Action_2<Task, unknown | undefined>, state: unknown | undefined, scheduler: TaskScheduler): Task;
-    ContinueWith(continuationAction: Action_2<Task, unknown | undefined>, state: unknown | undefined, continuationOptions: TaskContinuationOptions): Task;
-    ContinueWith(continuationAction: Action_2<Task, unknown | undefined>, state: unknown | undefined, cancellationToken: CancellationToken, continuationOptions: TaskContinuationOptions, scheduler: TaskScheduler): Task;
+    ContinueWith(continuationAction: Action_2<Task, unknown>, state: unknown): Task;
+    ContinueWith(continuationAction: Action_2<Task, unknown>, state: unknown, cancellationToken: CancellationToken): Task;
+    ContinueWith(continuationAction: Action_2<Task, unknown>, state: unknown, scheduler: TaskScheduler): Task;
+    ContinueWith(continuationAction: Action_2<Task, unknown>, state: unknown, continuationOptions: TaskContinuationOptions): Task;
+    ContinueWith(continuationAction: Action_2<Task, unknown>, state: unknown, cancellationToken: CancellationToken, continuationOptions: TaskContinuationOptions, scheduler: TaskScheduler): Task;
     ContinueWith<TResult>(continuationFunction: Func_2<Task, TResult>): Task_1<TResult>;
     ContinueWith<TResult>(continuationFunction: Func_2<Task, TResult>, cancellationToken: CancellationToken): Task_1<TResult>;
     ContinueWith<TResult>(continuationFunction: Func_2<Task, TResult>, scheduler: TaskScheduler): Task_1<TResult>;
     ContinueWith<TResult>(continuationFunction: Func_2<Task, TResult>, continuationOptions: TaskContinuationOptions): Task_1<TResult>;
     ContinueWith<TResult>(continuationFunction: Func_2<Task, TResult>, cancellationToken: CancellationToken, continuationOptions: TaskContinuationOptions, scheduler: TaskScheduler): Task_1<TResult>;
-    ContinueWith<TResult>(continuationFunction: Func_3<Task, unknown | undefined, TResult>, state: unknown | undefined): Task_1<TResult>;
-    ContinueWith<TResult>(continuationFunction: Func_3<Task, unknown | undefined, TResult>, state: unknown | undefined, cancellationToken: CancellationToken): Task_1<TResult>;
-    ContinueWith<TResult>(continuationFunction: Func_3<Task, unknown | undefined, TResult>, state: unknown | undefined, scheduler: TaskScheduler): Task_1<TResult>;
-    ContinueWith<TResult>(continuationFunction: Func_3<Task, unknown | undefined, TResult>, state: unknown | undefined, continuationOptions: TaskContinuationOptions): Task_1<TResult>;
-    ContinueWith<TResult>(continuationFunction: Func_3<Task, unknown | undefined, TResult>, state: unknown | undefined, cancellationToken: CancellationToken, continuationOptions: TaskContinuationOptions, scheduler: TaskScheduler): Task_1<TResult>;
+    ContinueWith<TResult>(continuationFunction: Func_3<Task, unknown, TResult>, state: unknown): Task_1<TResult>;
+    ContinueWith<TResult>(continuationFunction: Func_3<Task, unknown, TResult>, state: unknown, cancellationToken: CancellationToken): Task_1<TResult>;
+    ContinueWith<TResult>(continuationFunction: Func_3<Task, unknown, TResult>, state: unknown, scheduler: TaskScheduler): Task_1<TResult>;
+    ContinueWith<TResult>(continuationFunction: Func_3<Task, unknown, TResult>, state: unknown, continuationOptions: TaskContinuationOptions): Task_1<TResult>;
+    ContinueWith<TResult>(continuationFunction: Func_3<Task, unknown, TResult>, state: unknown, cancellationToken: CancellationToken, continuationOptions: TaskContinuationOptions, scheduler: TaskScheduler): Task_1<TResult>;
     Dispose(): void;
     GetAwaiter(): TaskAwaiter;
     WaitAsync(timeout: TimeSpan): Task_1<TResult>;
@@ -381,10 +381,10 @@ export const Task_1: {
     new<TResult>(function_: Func_1<TResult>, cancellationToken: CancellationToken): Task_1<TResult>;
     new<TResult>(function_: Func_1<TResult>, creationOptions: TaskCreationOptions): Task_1<TResult>;
     new<TResult>(function_: Func_1<TResult>, cancellationToken: CancellationToken, creationOptions: TaskCreationOptions): Task_1<TResult>;
-    new<TResult>(function_: Func_2<unknown | undefined, TResult>, state: unknown | undefined): Task_1<TResult>;
-    new<TResult>(function_: Func_2<unknown | undefined, TResult>, state: unknown | undefined, cancellationToken: CancellationToken): Task_1<TResult>;
-    new<TResult>(function_: Func_2<unknown | undefined, TResult>, state: unknown | undefined, creationOptions: TaskCreationOptions): Task_1<TResult>;
-    new<TResult>(function_: Func_2<unknown | undefined, TResult>, state: unknown | undefined, cancellationToken: CancellationToken, creationOptions: TaskCreationOptions): Task_1<TResult>;
+    new<TResult>(function_: Func_2<unknown, TResult>, state: unknown): Task_1<TResult>;
+    new<TResult>(function_: Func_2<unknown, TResult>, state: unknown, cancellationToken: CancellationToken): Task_1<TResult>;
+    new<TResult>(function_: Func_2<unknown, TResult>, state: unknown, creationOptions: TaskCreationOptions): Task_1<TResult>;
+    new<TResult>(function_: Func_2<unknown, TResult>, state: unknown, cancellationToken: CancellationToken, creationOptions: TaskCreationOptions): Task_1<TResult>;
 };
 
 
@@ -406,10 +406,10 @@ export interface TaskCanceledException$instance extends OperationCanceledExcepti
 
 export const TaskCanceledException: {
     new(): TaskCanceledException;
-    new(message: string | undefined): TaskCanceledException;
-    new(message: string | undefined, innerException: Exception | undefined): TaskCanceledException;
-    new(message: string | undefined, innerException: Exception | undefined, token: CancellationToken): TaskCanceledException;
-    new(task: Task | undefined): TaskCanceledException;
+    new(message: string): TaskCanceledException;
+    new(message: string, innerException: Exception): TaskCanceledException;
+    new(message: string, innerException: Exception, token: CancellationToken): TaskCanceledException;
+    new(task: Task): TaskCanceledException;
 };
 
 
@@ -440,8 +440,8 @@ export interface TaskCompletionSource$instance {
 export const TaskCompletionSource: {
     new(): TaskCompletionSource;
     new(creationOptions: TaskCreationOptions): TaskCompletionSource;
-    new(state: unknown | undefined): TaskCompletionSource;
-    new(state: unknown | undefined, creationOptions: TaskCreationOptions): TaskCompletionSource;
+    new(state: unknown): TaskCompletionSource;
+    new(state: unknown, creationOptions: TaskCreationOptions): TaskCompletionSource;
 };
 
 
@@ -467,8 +467,8 @@ export interface TaskCompletionSource_1$instance<TResult> {
 export const TaskCompletionSource_1: {
     new<TResult>(): TaskCompletionSource_1<TResult>;
     new<TResult>(creationOptions: TaskCreationOptions): TaskCompletionSource_1<TResult>;
-    new<TResult>(state: unknown | undefined): TaskCompletionSource_1<TResult>;
-    new<TResult>(state: unknown | undefined, creationOptions: TaskCreationOptions): TaskCompletionSource_1<TResult>;
+    new<TResult>(state: unknown): TaskCompletionSource_1<TResult>;
+    new<TResult>(state: unknown, creationOptions: TaskCreationOptions): TaskCompletionSource_1<TResult>;
 };
 
 
@@ -514,50 +514,50 @@ export interface TaskFactory$instance {
     FromAsync(asyncResult: IAsyncResult, endMethod: Action_1<IAsyncResult>): Task;
     FromAsync(asyncResult: IAsyncResult, endMethod: Action_1<IAsyncResult>, creationOptions: TaskCreationOptions): Task;
     FromAsync(asyncResult: IAsyncResult, endMethod: Action_1<IAsyncResult>, creationOptions: TaskCreationOptions, scheduler: TaskScheduler): Task;
-    FromAsync(beginMethod: Func_3<AsyncCallback, unknown | undefined, IAsyncResult>, endMethod: Action_1<IAsyncResult>, state: unknown | undefined): Task;
-    FromAsync(beginMethod: Func_3<AsyncCallback, unknown | undefined, IAsyncResult>, endMethod: Action_1<IAsyncResult>, state: unknown | undefined, creationOptions: TaskCreationOptions): Task;
-    FromAsync<TArg1>(beginMethod: Func_4<TArg1, AsyncCallback, unknown | undefined, IAsyncResult>, endMethod: Action_1<IAsyncResult>, arg1: TArg1, state: unknown | undefined): Task;
-    FromAsync<TArg1>(beginMethod: Func_4<TArg1, AsyncCallback, unknown | undefined, IAsyncResult>, endMethod: Action_1<IAsyncResult>, arg1: TArg1, state: unknown | undefined, creationOptions: TaskCreationOptions): Task;
-    FromAsync<TArg1, TArg2>(beginMethod: Func_5<TArg1, TArg2, AsyncCallback, unknown | undefined, IAsyncResult>, endMethod: Action_1<IAsyncResult>, arg1: TArg1, arg2: TArg2, state: unknown | undefined): Task;
-    FromAsync<TArg1, TArg2>(beginMethod: Func_5<TArg1, TArg2, AsyncCallback, unknown | undefined, IAsyncResult>, endMethod: Action_1<IAsyncResult>, arg1: TArg1, arg2: TArg2, state: unknown | undefined, creationOptions: TaskCreationOptions): Task;
-    FromAsync<TArg1, TArg2, TArg3>(beginMethod: Func_6<TArg1, TArg2, TArg3, AsyncCallback, unknown | undefined, IAsyncResult>, endMethod: Action_1<IAsyncResult>, arg1: TArg1, arg2: TArg2, arg3: TArg3, state: unknown | undefined): Task;
-    FromAsync<TArg1, TArg2, TArg3>(beginMethod: Func_6<TArg1, TArg2, TArg3, AsyncCallback, unknown | undefined, IAsyncResult>, endMethod: Action_1<IAsyncResult>, arg1: TArg1, arg2: TArg2, arg3: TArg3, state: unknown | undefined, creationOptions: TaskCreationOptions): Task;
+    FromAsync(beginMethod: Func_3<AsyncCallback, unknown, IAsyncResult>, endMethod: Action_1<IAsyncResult>, state: unknown): Task;
+    FromAsync(beginMethod: Func_3<AsyncCallback, unknown, IAsyncResult>, endMethod: Action_1<IAsyncResult>, state: unknown, creationOptions: TaskCreationOptions): Task;
+    FromAsync<TArg1>(beginMethod: Func_4<TArg1, AsyncCallback, unknown, IAsyncResult>, endMethod: Action_1<IAsyncResult>, arg1: TArg1, state: unknown): Task;
+    FromAsync<TArg1>(beginMethod: Func_4<TArg1, AsyncCallback, unknown, IAsyncResult>, endMethod: Action_1<IAsyncResult>, arg1: TArg1, state: unknown, creationOptions: TaskCreationOptions): Task;
+    FromAsync<TArg1, TArg2>(beginMethod: Func_5<TArg1, TArg2, AsyncCallback, unknown, IAsyncResult>, endMethod: Action_1<IAsyncResult>, arg1: TArg1, arg2: TArg2, state: unknown): Task;
+    FromAsync<TArg1, TArg2>(beginMethod: Func_5<TArg1, TArg2, AsyncCallback, unknown, IAsyncResult>, endMethod: Action_1<IAsyncResult>, arg1: TArg1, arg2: TArg2, state: unknown, creationOptions: TaskCreationOptions): Task;
+    FromAsync<TArg1, TArg2, TArg3>(beginMethod: Func_6<TArg1, TArg2, TArg3, AsyncCallback, unknown, IAsyncResult>, endMethod: Action_1<IAsyncResult>, arg1: TArg1, arg2: TArg2, arg3: TArg3, state: unknown): Task;
+    FromAsync<TArg1, TArg2, TArg3>(beginMethod: Func_6<TArg1, TArg2, TArg3, AsyncCallback, unknown, IAsyncResult>, endMethod: Action_1<IAsyncResult>, arg1: TArg1, arg2: TArg2, arg3: TArg3, state: unknown, creationOptions: TaskCreationOptions): Task;
     FromAsync<TResult>(asyncResult: IAsyncResult, endMethod: Func_2<IAsyncResult, TResult>): Task_1<TResult>;
     FromAsync<TResult>(asyncResult: IAsyncResult, endMethod: Func_2<IAsyncResult, TResult>, creationOptions: TaskCreationOptions): Task_1<TResult>;
     FromAsync<TResult>(asyncResult: IAsyncResult, endMethod: Func_2<IAsyncResult, TResult>, creationOptions: TaskCreationOptions, scheduler: TaskScheduler): Task_1<TResult>;
-    FromAsync<TResult>(beginMethod: Func_3<AsyncCallback, unknown | undefined, IAsyncResult>, endMethod: Func_2<IAsyncResult, TResult>, state: unknown | undefined): Task_1<TResult>;
-    FromAsync<TResult>(beginMethod: Func_3<AsyncCallback, unknown | undefined, IAsyncResult>, endMethod: Func_2<IAsyncResult, TResult>, state: unknown | undefined, creationOptions: TaskCreationOptions): Task_1<TResult>;
-    FromAsync<TArg1, TResult>(beginMethod: Func_4<TArg1, AsyncCallback, unknown | undefined, IAsyncResult>, endMethod: Func_2<IAsyncResult, TResult>, arg1: TArg1, state: unknown | undefined): Task_1<TResult>;
-    FromAsync<TArg1, TResult>(beginMethod: Func_4<TArg1, AsyncCallback, unknown | undefined, IAsyncResult>, endMethod: Func_2<IAsyncResult, TResult>, arg1: TArg1, state: unknown | undefined, creationOptions: TaskCreationOptions): Task_1<TResult>;
-    FromAsync<TArg1, TArg2, TResult>(beginMethod: Func_5<TArg1, TArg2, AsyncCallback, unknown | undefined, IAsyncResult>, endMethod: Func_2<IAsyncResult, TResult>, arg1: TArg1, arg2: TArg2, state: unknown | undefined): Task_1<TResult>;
-    FromAsync<TArg1, TArg2, TResult>(beginMethod: Func_5<TArg1, TArg2, AsyncCallback, unknown | undefined, IAsyncResult>, endMethod: Func_2<IAsyncResult, TResult>, arg1: TArg1, arg2: TArg2, state: unknown | undefined, creationOptions: TaskCreationOptions): Task_1<TResult>;
-    FromAsync<TArg1, TArg2, TArg3, TResult>(beginMethod: Func_6<TArg1, TArg2, TArg3, AsyncCallback, unknown | undefined, IAsyncResult>, endMethod: Func_2<IAsyncResult, TResult>, arg1: TArg1, arg2: TArg2, arg3: TArg3, state: unknown | undefined): Task_1<TResult>;
-    FromAsync<TArg1, TArg2, TArg3, TResult>(beginMethod: Func_6<TArg1, TArg2, TArg3, AsyncCallback, unknown | undefined, IAsyncResult>, endMethod: Func_2<IAsyncResult, TResult>, arg1: TArg1, arg2: TArg2, arg3: TArg3, state: unknown | undefined, creationOptions: TaskCreationOptions): Task_1<TResult>;
+    FromAsync<TResult>(beginMethod: Func_3<AsyncCallback, unknown, IAsyncResult>, endMethod: Func_2<IAsyncResult, TResult>, state: unknown): Task_1<TResult>;
+    FromAsync<TResult>(beginMethod: Func_3<AsyncCallback, unknown, IAsyncResult>, endMethod: Func_2<IAsyncResult, TResult>, state: unknown, creationOptions: TaskCreationOptions): Task_1<TResult>;
+    FromAsync<TArg1, TResult>(beginMethod: Func_4<TArg1, AsyncCallback, unknown, IAsyncResult>, endMethod: Func_2<IAsyncResult, TResult>, arg1: TArg1, state: unknown): Task_1<TResult>;
+    FromAsync<TArg1, TResult>(beginMethod: Func_4<TArg1, AsyncCallback, unknown, IAsyncResult>, endMethod: Func_2<IAsyncResult, TResult>, arg1: TArg1, state: unknown, creationOptions: TaskCreationOptions): Task_1<TResult>;
+    FromAsync<TArg1, TArg2, TResult>(beginMethod: Func_5<TArg1, TArg2, AsyncCallback, unknown, IAsyncResult>, endMethod: Func_2<IAsyncResult, TResult>, arg1: TArg1, arg2: TArg2, state: unknown): Task_1<TResult>;
+    FromAsync<TArg1, TArg2, TResult>(beginMethod: Func_5<TArg1, TArg2, AsyncCallback, unknown, IAsyncResult>, endMethod: Func_2<IAsyncResult, TResult>, arg1: TArg1, arg2: TArg2, state: unknown, creationOptions: TaskCreationOptions): Task_1<TResult>;
+    FromAsync<TArg1, TArg2, TArg3, TResult>(beginMethod: Func_6<TArg1, TArg2, TArg3, AsyncCallback, unknown, IAsyncResult>, endMethod: Func_2<IAsyncResult, TResult>, arg1: TArg1, arg2: TArg2, arg3: TArg3, state: unknown): Task_1<TResult>;
+    FromAsync<TArg1, TArg2, TArg3, TResult>(beginMethod: Func_6<TArg1, TArg2, TArg3, AsyncCallback, unknown, IAsyncResult>, endMethod: Func_2<IAsyncResult, TResult>, arg1: TArg1, arg2: TArg2, arg3: TArg3, state: unknown, creationOptions: TaskCreationOptions): Task_1<TResult>;
     StartNew(action: Action): Task;
     StartNew(action: Action, cancellationToken: CancellationToken): Task;
     StartNew(action: Action, creationOptions: TaskCreationOptions): Task;
     StartNew(action: Action, cancellationToken: CancellationToken, creationOptions: TaskCreationOptions, scheduler: TaskScheduler): Task;
-    StartNew(action: Action_1<unknown | undefined>, state: unknown | undefined): Task;
-    StartNew(action: Action_1<unknown | undefined>, state: unknown | undefined, cancellationToken: CancellationToken): Task;
-    StartNew(action: Action_1<unknown | undefined>, state: unknown | undefined, creationOptions: TaskCreationOptions): Task;
-    StartNew(action: Action_1<unknown | undefined>, state: unknown | undefined, cancellationToken: CancellationToken, creationOptions: TaskCreationOptions, scheduler: TaskScheduler): Task;
+    StartNew(action: Action_1<unknown>, state: unknown): Task;
+    StartNew(action: Action_1<unknown>, state: unknown, cancellationToken: CancellationToken): Task;
+    StartNew(action: Action_1<unknown>, state: unknown, creationOptions: TaskCreationOptions): Task;
+    StartNew(action: Action_1<unknown>, state: unknown, cancellationToken: CancellationToken, creationOptions: TaskCreationOptions, scheduler: TaskScheduler): Task;
     StartNew<TResult>(function_: Func_1<TResult>): Task_1<TResult>;
     StartNew<TResult>(function_: Func_1<TResult>, cancellationToken: CancellationToken): Task_1<TResult>;
     StartNew<TResult>(function_: Func_1<TResult>, creationOptions: TaskCreationOptions): Task_1<TResult>;
     StartNew<TResult>(function_: Func_1<TResult>, cancellationToken: CancellationToken, creationOptions: TaskCreationOptions, scheduler: TaskScheduler): Task_1<TResult>;
-    StartNew<TResult>(function_: Func_2<unknown | undefined, TResult>, state: unknown | undefined): Task_1<TResult>;
-    StartNew<TResult>(function_: Func_2<unknown | undefined, TResult>, state: unknown | undefined, cancellationToken: CancellationToken): Task_1<TResult>;
-    StartNew<TResult>(function_: Func_2<unknown | undefined, TResult>, state: unknown | undefined, creationOptions: TaskCreationOptions): Task_1<TResult>;
-    StartNew<TResult>(function_: Func_2<unknown | undefined, TResult>, state: unknown | undefined, cancellationToken: CancellationToken, creationOptions: TaskCreationOptions, scheduler: TaskScheduler): Task_1<TResult>;
+    StartNew<TResult>(function_: Func_2<unknown, TResult>, state: unknown): Task_1<TResult>;
+    StartNew<TResult>(function_: Func_2<unknown, TResult>, state: unknown, cancellationToken: CancellationToken): Task_1<TResult>;
+    StartNew<TResult>(function_: Func_2<unknown, TResult>, state: unknown, creationOptions: TaskCreationOptions): Task_1<TResult>;
+    StartNew<TResult>(function_: Func_2<unknown, TResult>, state: unknown, cancellationToken: CancellationToken, creationOptions: TaskCreationOptions, scheduler: TaskScheduler): Task_1<TResult>;
 }
 
 
 export const TaskFactory: {
     new(): TaskFactory;
     new(cancellationToken: CancellationToken): TaskFactory;
-    new(scheduler: TaskScheduler | undefined): TaskFactory;
+    new(scheduler: TaskScheduler): TaskFactory;
     new(creationOptions: TaskCreationOptions, continuationOptions: TaskContinuationOptions): TaskFactory;
-    new(cancellationToken: CancellationToken, creationOptions: TaskCreationOptions, continuationOptions: TaskContinuationOptions, scheduler: TaskScheduler | undefined): TaskFactory;
+    new(cancellationToken: CancellationToken, creationOptions: TaskCreationOptions, continuationOptions: TaskContinuationOptions, scheduler: TaskScheduler): TaskFactory;
 };
 
 
@@ -587,31 +587,31 @@ export interface TaskFactory_1$instance<TResult> {
     FromAsync(asyncResult: IAsyncResult, endMethod: Func_2<IAsyncResult, TResult>): Task_1<TResult>;
     FromAsync(asyncResult: IAsyncResult, endMethod: Func_2<IAsyncResult, TResult>, creationOptions: TaskCreationOptions): Task_1<TResult>;
     FromAsync(asyncResult: IAsyncResult, endMethod: Func_2<IAsyncResult, TResult>, creationOptions: TaskCreationOptions, scheduler: TaskScheduler): Task_1<TResult>;
-    FromAsync(beginMethod: Func_3<AsyncCallback, unknown | undefined, IAsyncResult>, endMethod: Func_2<IAsyncResult, TResult>, state: unknown | undefined): Task_1<TResult>;
-    FromAsync(beginMethod: Func_3<AsyncCallback, unknown | undefined, IAsyncResult>, endMethod: Func_2<IAsyncResult, TResult>, state: unknown | undefined, creationOptions: TaskCreationOptions): Task_1<TResult>;
-    FromAsync<TArg1>(beginMethod: Func_4<TArg1, AsyncCallback, unknown | undefined, IAsyncResult>, endMethod: Func_2<IAsyncResult, TResult>, arg1: TArg1, state: unknown | undefined): Task_1<TResult>;
-    FromAsync<TArg1>(beginMethod: Func_4<TArg1, AsyncCallback, unknown | undefined, IAsyncResult>, endMethod: Func_2<IAsyncResult, TResult>, arg1: TArg1, state: unknown | undefined, creationOptions: TaskCreationOptions): Task_1<TResult>;
-    FromAsync<TArg1, TArg2>(beginMethod: Func_5<TArg1, TArg2, AsyncCallback, unknown | undefined, IAsyncResult>, endMethod: Func_2<IAsyncResult, TResult>, arg1: TArg1, arg2: TArg2, state: unknown | undefined): Task_1<TResult>;
-    FromAsync<TArg1, TArg2>(beginMethod: Func_5<TArg1, TArg2, AsyncCallback, unknown | undefined, IAsyncResult>, endMethod: Func_2<IAsyncResult, TResult>, arg1: TArg1, arg2: TArg2, state: unknown | undefined, creationOptions: TaskCreationOptions): Task_1<TResult>;
-    FromAsync<TArg1, TArg2, TArg3>(beginMethod: Func_6<TArg1, TArg2, TArg3, AsyncCallback, unknown | undefined, IAsyncResult>, endMethod: Func_2<IAsyncResult, TResult>, arg1: TArg1, arg2: TArg2, arg3: TArg3, state: unknown | undefined): Task_1<TResult>;
-    FromAsync<TArg1, TArg2, TArg3>(beginMethod: Func_6<TArg1, TArg2, TArg3, AsyncCallback, unknown | undefined, IAsyncResult>, endMethod: Func_2<IAsyncResult, TResult>, arg1: TArg1, arg2: TArg2, arg3: TArg3, state: unknown | undefined, creationOptions: TaskCreationOptions): Task_1<TResult>;
+    FromAsync(beginMethod: Func_3<AsyncCallback, unknown, IAsyncResult>, endMethod: Func_2<IAsyncResult, TResult>, state: unknown): Task_1<TResult>;
+    FromAsync(beginMethod: Func_3<AsyncCallback, unknown, IAsyncResult>, endMethod: Func_2<IAsyncResult, TResult>, state: unknown, creationOptions: TaskCreationOptions): Task_1<TResult>;
+    FromAsync<TArg1>(beginMethod: Func_4<TArg1, AsyncCallback, unknown, IAsyncResult>, endMethod: Func_2<IAsyncResult, TResult>, arg1: TArg1, state: unknown): Task_1<TResult>;
+    FromAsync<TArg1>(beginMethod: Func_4<TArg1, AsyncCallback, unknown, IAsyncResult>, endMethod: Func_2<IAsyncResult, TResult>, arg1: TArg1, state: unknown, creationOptions: TaskCreationOptions): Task_1<TResult>;
+    FromAsync<TArg1, TArg2>(beginMethod: Func_5<TArg1, TArg2, AsyncCallback, unknown, IAsyncResult>, endMethod: Func_2<IAsyncResult, TResult>, arg1: TArg1, arg2: TArg2, state: unknown): Task_1<TResult>;
+    FromAsync<TArg1, TArg2>(beginMethod: Func_5<TArg1, TArg2, AsyncCallback, unknown, IAsyncResult>, endMethod: Func_2<IAsyncResult, TResult>, arg1: TArg1, arg2: TArg2, state: unknown, creationOptions: TaskCreationOptions): Task_1<TResult>;
+    FromAsync<TArg1, TArg2, TArg3>(beginMethod: Func_6<TArg1, TArg2, TArg3, AsyncCallback, unknown, IAsyncResult>, endMethod: Func_2<IAsyncResult, TResult>, arg1: TArg1, arg2: TArg2, arg3: TArg3, state: unknown): Task_1<TResult>;
+    FromAsync<TArg1, TArg2, TArg3>(beginMethod: Func_6<TArg1, TArg2, TArg3, AsyncCallback, unknown, IAsyncResult>, endMethod: Func_2<IAsyncResult, TResult>, arg1: TArg1, arg2: TArg2, arg3: TArg3, state: unknown, creationOptions: TaskCreationOptions): Task_1<TResult>;
     StartNew(function_: Func_1<TResult>): Task_1<TResult>;
     StartNew(function_: Func_1<TResult>, cancellationToken: CancellationToken): Task_1<TResult>;
     StartNew(function_: Func_1<TResult>, creationOptions: TaskCreationOptions): Task_1<TResult>;
     StartNew(function_: Func_1<TResult>, cancellationToken: CancellationToken, creationOptions: TaskCreationOptions, scheduler: TaskScheduler): Task_1<TResult>;
-    StartNew(function_: Func_2<unknown | undefined, TResult>, state: unknown | undefined): Task_1<TResult>;
-    StartNew(function_: Func_2<unknown | undefined, TResult>, state: unknown | undefined, cancellationToken: CancellationToken): Task_1<TResult>;
-    StartNew(function_: Func_2<unknown | undefined, TResult>, state: unknown | undefined, creationOptions: TaskCreationOptions): Task_1<TResult>;
-    StartNew(function_: Func_2<unknown | undefined, TResult>, state: unknown | undefined, cancellationToken: CancellationToken, creationOptions: TaskCreationOptions, scheduler: TaskScheduler): Task_1<TResult>;
+    StartNew(function_: Func_2<unknown, TResult>, state: unknown): Task_1<TResult>;
+    StartNew(function_: Func_2<unknown, TResult>, state: unknown, cancellationToken: CancellationToken): Task_1<TResult>;
+    StartNew(function_: Func_2<unknown, TResult>, state: unknown, creationOptions: TaskCreationOptions): Task_1<TResult>;
+    StartNew(function_: Func_2<unknown, TResult>, state: unknown, cancellationToken: CancellationToken, creationOptions: TaskCreationOptions, scheduler: TaskScheduler): Task_1<TResult>;
 }
 
 
 export const TaskFactory_1: {
     new<TResult>(): TaskFactory_1<TResult>;
     new<TResult>(cancellationToken: CancellationToken): TaskFactory_1<TResult>;
-    new<TResult>(scheduler: TaskScheduler | undefined): TaskFactory_1<TResult>;
+    new<TResult>(scheduler: TaskScheduler): TaskFactory_1<TResult>;
     new<TResult>(creationOptions: TaskCreationOptions, continuationOptions: TaskContinuationOptions): TaskFactory_1<TResult>;
-    new<TResult>(cancellationToken: CancellationToken, creationOptions: TaskCreationOptions, continuationOptions: TaskContinuationOptions, scheduler: TaskScheduler | undefined): TaskFactory_1<TResult>;
+    new<TResult>(cancellationToken: CancellationToken, creationOptions: TaskCreationOptions, continuationOptions: TaskContinuationOptions, scheduler: TaskScheduler): TaskFactory_1<TResult>;
 };
 
 
@@ -639,9 +639,9 @@ export interface TaskSchedulerException$instance extends Exception {
 
 export const TaskSchedulerException: {
     new(): TaskSchedulerException;
-    new(message: string | undefined): TaskSchedulerException;
-    new(innerException: Exception | undefined): TaskSchedulerException;
-    new(message: string | undefined, innerException: Exception | undefined): TaskSchedulerException;
+    new(message: string): TaskSchedulerException;
+    new(innerException: Exception): TaskSchedulerException;
+    new(message: string, innerException: Exception): TaskSchedulerException;
 };
 
 
@@ -734,7 +734,7 @@ export abstract class TaskExtensions$instance {
 export type TaskExtensions = TaskExtensions$instance;
 
 export abstract class TaskToAsyncResult$instance {
-    static Begin(task: Task, callback: AsyncCallback | undefined, state: unknown | undefined): IAsyncResult;
+    static Begin(task: Task, callback: AsyncCallback, state: unknown): IAsyncResult;
     static End(asyncResult: IAsyncResult): void;
     static End<TResult>(asyncResult: IAsyncResult): TResult;
     static Unwrap(asyncResult: IAsyncResult): Task;

@@ -47,7 +47,7 @@ export interface CSharpArgumentInfo$instance {
 
 export const CSharpArgumentInfo: {
     new(): CSharpArgumentInfo;
-    Create(flags: CSharpArgumentInfoFlags, name: string | undefined): CSharpArgumentInfo;
+    Create(flags: CSharpArgumentInfoFlags, name: string): CSharpArgumentInfo;
 };
 
 
@@ -60,8 +60,8 @@ export interface RuntimeBinderException$instance extends Exception {
 
 export const RuntimeBinderException: {
     new(): RuntimeBinderException;
-    new(message: string | undefined): RuntimeBinderException;
-    new(message: string | undefined, innerException: Exception | undefined): RuntimeBinderException;
+    new(message: string): RuntimeBinderException;
+    new(message: string, innerException: Exception): RuntimeBinderException;
 };
 
 
@@ -79,8 +79,8 @@ export interface RuntimeBinderInternalCompilerException$instance extends Excepti
 
 export const RuntimeBinderInternalCompilerException: {
     new(): RuntimeBinderInternalCompilerException;
-    new(message: string | undefined): RuntimeBinderInternalCompilerException;
-    new(message: string | undefined, innerException: Exception | undefined): RuntimeBinderInternalCompilerException;
+    new(message: string): RuntimeBinderInternalCompilerException;
+    new(message: string, innerException: Exception): RuntimeBinderInternalCompilerException;
 };
 
 
@@ -92,17 +92,17 @@ export type RuntimeBinderInternalCompilerException = RuntimeBinderInternalCompil
 
 
 export abstract class Binder$instance {
-    static BinaryOperation(flags: CSharpBinderFlags, operation: ExpressionType, context: Type | undefined, argumentInfo: IEnumerable_1<CSharpArgumentInfo> | undefined): CallSiteBinder;
-    static Convert(flags: CSharpBinderFlags, type_: Type, context: Type | undefined): CallSiteBinder;
-    static GetIndex(flags: CSharpBinderFlags, context: Type | undefined, argumentInfo: IEnumerable_1<CSharpArgumentInfo> | undefined): CallSiteBinder;
-    static GetMember(flags: CSharpBinderFlags, name: string, context: Type | undefined, argumentInfo: IEnumerable_1<CSharpArgumentInfo> | undefined): CallSiteBinder;
-    static Invoke(flags: CSharpBinderFlags, context: Type | undefined, argumentInfo: IEnumerable_1<CSharpArgumentInfo> | undefined): CallSiteBinder;
-    static InvokeConstructor(flags: CSharpBinderFlags, context: Type | undefined, argumentInfo: IEnumerable_1<CSharpArgumentInfo> | undefined): CallSiteBinder;
-    static InvokeMember(flags: CSharpBinderFlags, name: string, typeArguments: IEnumerable_1<Type> | undefined, context: Type | undefined, argumentInfo: IEnumerable_1<CSharpArgumentInfo> | undefined): CallSiteBinder;
-    static IsEvent(flags: CSharpBinderFlags, name: string, context: Type | undefined): CallSiteBinder;
-    static SetIndex(flags: CSharpBinderFlags, context: Type | undefined, argumentInfo: IEnumerable_1<CSharpArgumentInfo> | undefined): CallSiteBinder;
-    static SetMember(flags: CSharpBinderFlags, name: string, context: Type | undefined, argumentInfo: IEnumerable_1<CSharpArgumentInfo> | undefined): CallSiteBinder;
-    static UnaryOperation(flags: CSharpBinderFlags, operation: ExpressionType, context: Type | undefined, argumentInfo: IEnumerable_1<CSharpArgumentInfo> | undefined): CallSiteBinder;
+    static BinaryOperation(flags: CSharpBinderFlags, operation: ExpressionType, context: Type, argumentInfo: IEnumerable_1<CSharpArgumentInfo>): CallSiteBinder;
+    static Convert(flags: CSharpBinderFlags, type_: Type, context: Type): CallSiteBinder;
+    static GetIndex(flags: CSharpBinderFlags, context: Type, argumentInfo: IEnumerable_1<CSharpArgumentInfo>): CallSiteBinder;
+    static GetMember(flags: CSharpBinderFlags, name: string, context: Type, argumentInfo: IEnumerable_1<CSharpArgumentInfo>): CallSiteBinder;
+    static Invoke(flags: CSharpBinderFlags, context: Type, argumentInfo: IEnumerable_1<CSharpArgumentInfo>): CallSiteBinder;
+    static InvokeConstructor(flags: CSharpBinderFlags, context: Type, argumentInfo: IEnumerable_1<CSharpArgumentInfo>): CallSiteBinder;
+    static InvokeMember(flags: CSharpBinderFlags, name: string, typeArguments: IEnumerable_1<Type>, context: Type, argumentInfo: IEnumerable_1<CSharpArgumentInfo>): CallSiteBinder;
+    static IsEvent(flags: CSharpBinderFlags, name: string, context: Type): CallSiteBinder;
+    static SetIndex(flags: CSharpBinderFlags, context: Type, argumentInfo: IEnumerable_1<CSharpArgumentInfo>): CallSiteBinder;
+    static SetMember(flags: CSharpBinderFlags, name: string, context: Type, argumentInfo: IEnumerable_1<CSharpArgumentInfo>): CallSiteBinder;
+    static UnaryOperation(flags: CSharpBinderFlags, operation: ExpressionType, context: Type, argumentInfo: IEnumerable_1<CSharpArgumentInfo>): CallSiteBinder;
 }
 
 

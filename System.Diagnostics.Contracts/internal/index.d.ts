@@ -83,7 +83,7 @@ export interface ContractException$instance extends Exception {
 
 
 export const ContractException: {
-    new(kind: ContractFailureKind, failure: string | undefined, userMessage: string | undefined, condition: string | undefined, innerException: Exception | undefined): ContractException;
+    new(kind: ContractFailureKind, failure: string, userMessage: string, condition: string, innerException: Exception): ContractException;
 };
 
 
@@ -107,7 +107,7 @@ export interface ContractFailedEventArgs$instance extends EventArgs {
 
 
 export const ContractFailedEventArgs: {
-    new(failureKind: ContractFailureKind, message: string | undefined, condition: string | undefined, originalException: Exception | undefined): ContractFailedEventArgs;
+    new(failureKind: ContractFailureKind, message: string, condition: string, originalException: Exception): ContractFailedEventArgs;
 };
 
 
@@ -198,23 +198,23 @@ export const PureAttribute: {
 export type PureAttribute = PureAttribute$instance;
 
 export abstract class Contract$instance {
-    static Assert(condition: boolean, userMessage: string | undefined): void;
+    static Assert(condition: boolean, userMessage: string): void;
     static Assert(condition: boolean): void;
-    static Assume(condition: boolean, userMessage: string | undefined): void;
+    static Assume(condition: boolean, userMessage: string): void;
     static Assume(condition: boolean): void;
     static EndContractBlock(): void;
-    static Ensures(condition: boolean, userMessage: string | undefined): void;
+    static Ensures(condition: boolean, userMessage: string): void;
     static Ensures(condition: boolean): void;
-    static EnsuresOnThrow<TException extends Exception>(condition: boolean, userMessage: string | undefined): void;
+    static EnsuresOnThrow<TException extends Exception>(condition: boolean, userMessage: string): void;
     static EnsuresOnThrow<TException extends Exception>(condition: boolean): void;
     static Exists<T>(collection: IEnumerable_1<T>, predicate: Predicate_1<T>): boolean;
     static Exists(fromInclusive: int, toExclusive: int, predicate: Predicate_1<System_Internal.Int32>): boolean;
     static ForAll<T>(collection: IEnumerable_1<T>, predicate: Predicate_1<T>): boolean;
     static ForAll(fromInclusive: int, toExclusive: int, predicate: Predicate_1<System_Internal.Int32>): boolean;
-    static Invariant(condition: boolean, userMessage: string | undefined): void;
+    static Invariant(condition: boolean, userMessage: string): void;
     static Invariant(condition: boolean): void;
     static OldValue<T>(value: T): T;
-    static Requires(condition: boolean, userMessage: string | undefined): void;
+    static Requires(condition: boolean, userMessage: string): void;
     static Requires(condition: boolean): void;
     static Result<T>(): T;
     static ValueAtReturn<T>(value: T): T;

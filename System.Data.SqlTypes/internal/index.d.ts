@@ -49,9 +49,9 @@ export interface SqlBinary$instance {
     readonly Item: byte;
     readonly Length: int;
     readonly Value: byte[];
-    CompareTo(value: unknown | undefined): int;
+    CompareTo(value: unknown): int;
     CompareTo(value: SqlBinary): int;
-    Equals(value: unknown | undefined): boolean;
+    Equals(value: unknown): boolean;
     Equals(other: SqlBinary): boolean;
     GetHashCode(): int;
     ToSqlGuid(): SqlGuid;
@@ -60,7 +60,7 @@ export interface SqlBinary$instance {
 
 
 export const SqlBinary: {
-    new(value: byte[] | undefined): SqlBinary;
+    new(value: byte[]): SqlBinary;
     readonly Null: SqlBinary;
     Add(x: SqlBinary, y: SqlBinary): SqlBinary;
     Concat(x: SqlBinary, y: SqlBinary): SqlBinary;
@@ -97,9 +97,9 @@ export interface SqlBoolean$instance {
     readonly IsNull: boolean;
     readonly IsTrue: boolean;
     readonly Value: boolean;
-    CompareTo(value: unknown | undefined): int;
+    CompareTo(value: unknown): int;
     CompareTo(value: SqlBoolean): int;
-    Equals(value: unknown | undefined): boolean;
+    Equals(value: unknown): boolean;
     Equals(other: SqlBoolean): boolean;
     GetHashCode(): int;
     ToSqlByte(): SqlByte;
@@ -157,9 +157,9 @@ export type SqlBoolean = SqlBoolean$instance & __SqlBoolean$views;
 export interface SqlByte$instance {
     readonly IsNull: boolean;
     readonly Value: byte;
-    CompareTo(value: unknown | undefined): int;
+    CompareTo(value: unknown): int;
     CompareTo(value: SqlByte): int;
-    Equals(value: unknown | undefined): boolean;
+    Equals(value: unknown): boolean;
     Equals(other: SqlByte): boolean;
     GetHashCode(): int;
     ToSqlBoolean(): SqlBoolean;
@@ -223,9 +223,9 @@ export interface SqlDateTime$instance {
     readonly IsNull: boolean;
     readonly TimeTicks: int;
     readonly Value: DateTime;
-    CompareTo(value: unknown | undefined): int;
+    CompareTo(value: unknown): int;
     CompareTo(value: SqlDateTime): int;
-    Equals(value: unknown | undefined): boolean;
+    Equals(value: unknown): boolean;
     Equals(other: SqlDateTime): boolean;
     GetHashCode(): int;
     ToSqlString(): SqlString;
@@ -283,9 +283,9 @@ export interface SqlDecimal$instance {
     readonly Precision: byte;
     readonly Scale: byte;
     readonly Value: decimal;
-    CompareTo(value: unknown | undefined): int;
+    CompareTo(value: unknown): int;
     CompareTo(value: SqlDecimal): int;
-    Equals(value: unknown | undefined): boolean;
+    Equals(value: unknown): boolean;
     Equals(other: SqlDecimal): boolean;
     GetHashCode(): int;
     ToDouble(): double;
@@ -358,9 +358,9 @@ export type SqlDecimal = SqlDecimal$instance & __SqlDecimal$views;
 export interface SqlDouble$instance {
     readonly IsNull: boolean;
     readonly Value: double;
-    CompareTo(value: unknown | undefined): int;
+    CompareTo(value: unknown): int;
     CompareTo(value: SqlDouble): int;
-    Equals(value: unknown | undefined): boolean;
+    Equals(value: unknown): boolean;
     Equals(other: SqlDouble): boolean;
     GetHashCode(): int;
     ToSqlBoolean(): SqlBoolean;
@@ -416,9 +416,9 @@ export type SqlDouble = SqlDouble$instance & __SqlDouble$views;
 export interface SqlGuid$instance {
     readonly IsNull: boolean;
     readonly Value: Guid;
-    CompareTo(value: unknown | undefined): int;
+    CompareTo(value: unknown): int;
     CompareTo(value: SqlGuid): int;
-    Equals(value: unknown | undefined): boolean;
+    Equals(value: unknown): boolean;
     Equals(other: SqlGuid): boolean;
     GetHashCode(): int;
     ToByteArray(): byte[];
@@ -465,9 +465,9 @@ export type SqlGuid = SqlGuid$instance & __SqlGuid$views;
 export interface SqlInt16$instance {
     readonly IsNull: boolean;
     readonly Value: short;
-    CompareTo(value: unknown | undefined): int;
+    CompareTo(value: unknown): int;
     CompareTo(value: SqlInt16): int;
-    Equals(value: unknown | undefined): boolean;
+    Equals(value: unknown): boolean;
     Equals(other: SqlInt16): boolean;
     GetHashCode(): int;
     ToSqlBoolean(): SqlBoolean;
@@ -529,9 +529,9 @@ export type SqlInt16 = SqlInt16$instance & __SqlInt16$views;
 export interface SqlInt32$instance {
     readonly IsNull: boolean;
     readonly Value: int;
-    CompareTo(value: unknown | undefined): int;
+    CompareTo(value: unknown): int;
     CompareTo(value: SqlInt32): int;
-    Equals(value: unknown | undefined): boolean;
+    Equals(value: unknown): boolean;
     Equals(other: SqlInt32): boolean;
     GetHashCode(): int;
     ToSqlBoolean(): SqlBoolean;
@@ -593,9 +593,9 @@ export type SqlInt32 = SqlInt32$instance & __SqlInt32$views;
 export interface SqlInt64$instance {
     readonly IsNull: boolean;
     readonly Value: long;
-    CompareTo(value: unknown | undefined): int;
+    CompareTo(value: unknown): int;
     CompareTo(value: SqlInt64): int;
-    Equals(value: unknown | undefined): boolean;
+    Equals(value: unknown): boolean;
     Equals(other: SqlInt64): boolean;
     GetHashCode(): int;
     ToSqlBoolean(): SqlBoolean;
@@ -657,9 +657,9 @@ export type SqlInt64 = SqlInt64$instance & __SqlInt64$views;
 export interface SqlMoney$instance {
     readonly IsNull: boolean;
     readonly Value: decimal;
-    CompareTo(value: unknown | undefined): int;
+    CompareTo(value: unknown): int;
     CompareTo(value: SqlMoney): int;
-    Equals(value: unknown | undefined): boolean;
+    Equals(value: unknown): boolean;
     Equals(other: SqlMoney): boolean;
     GetHashCode(): int;
     GetTdsValue(): long;
@@ -724,9 +724,9 @@ export type SqlMoney = SqlMoney$instance & __SqlMoney$views;
 export interface SqlSingle$instance {
     readonly IsNull: boolean;
     readonly Value: float;
-    CompareTo(value: unknown | undefined): int;
+    CompareTo(value: unknown): int;
     CompareTo(value: SqlSingle): int;
-    Equals(value: unknown | undefined): boolean;
+    Equals(value: unknown): boolean;
     Equals(other: SqlSingle): boolean;
     GetHashCode(): int;
     ToSqlBoolean(): SqlBoolean;
@@ -788,9 +788,9 @@ export interface SqlString$instance {
     readonly SqlCompareOptions: SqlCompareOptions;
     readonly Value: string;
     Clone(): SqlString;
-    CompareTo(value: unknown | undefined): int;
+    CompareTo(value: unknown): int;
     CompareTo(value: SqlString): int;
-    Equals(value: unknown | undefined): boolean;
+    Equals(value: unknown): boolean;
     Equals(other: SqlString): boolean;
     GetHashCode(): int;
     GetNonUnicodeBytes(): byte[] | undefined;
@@ -811,13 +811,13 @@ export interface SqlString$instance {
 
 
 export const SqlString: {
-    new(lcid: int, compareOptions: SqlCompareOptions, data: byte[] | undefined, index: int, count: int, fUnicode: boolean): SqlString;
+    new(lcid: int, compareOptions: SqlCompareOptions, data: byte[], index: int, count: int, fUnicode: boolean): SqlString;
     new(lcid: int, compareOptions: SqlCompareOptions, data: byte[], fUnicode: boolean): SqlString;
-    new(lcid: int, compareOptions: SqlCompareOptions, data: byte[] | undefined, index: int, count: int): SqlString;
+    new(lcid: int, compareOptions: SqlCompareOptions, data: byte[], index: int, count: int): SqlString;
     new(lcid: int, compareOptions: SqlCompareOptions, data: byte[]): SqlString;
-    new(data: string | undefined, lcid: int, compareOptions: SqlCompareOptions): SqlString;
-    new(data: string | undefined, lcid: int): SqlString;
-    new(data: string | undefined): SqlString;
+    new(data: string, lcid: int, compareOptions: SqlCompareOptions): SqlString;
+    new(data: string, lcid: int): SqlString;
+    new(data: string): SqlString;
     readonly Null: SqlString;
     readonly IgnoreCase: int;
     readonly IgnoreWidth: int;
@@ -861,8 +861,8 @@ export interface SqlAlreadyFilledException$instance extends SqlTypeException$ins
 
 export const SqlAlreadyFilledException: {
     new(): SqlAlreadyFilledException;
-    new(message: string | undefined): SqlAlreadyFilledException;
-    new(message: string | undefined, e: Exception | undefined): SqlAlreadyFilledException;
+    new(message: string): SqlAlreadyFilledException;
+    new(message: string, e: Exception): SqlAlreadyFilledException;
 };
 
 
@@ -892,9 +892,9 @@ export interface SqlBytes$instance {
 
 export const SqlBytes: {
     new(): SqlBytes;
-    new(buffer: byte[] | undefined): SqlBytes;
+    new(buffer: byte[]): SqlBytes;
     new(value: SqlBinary): SqlBytes;
-    new(s: Stream | undefined): SqlBytes;
+    new(s: Stream): SqlBytes;
     readonly Null: SqlBytes;
     GetXsdType(schemaSet: XmlSchemaSet): XmlQualifiedName;
 };
@@ -929,7 +929,7 @@ export interface SqlChars$instance {
 
 export const SqlChars: {
     new(): SqlChars;
-    new(buffer: char[] | undefined): SqlChars;
+    new(buffer: char[]): SqlChars;
     new(value: SqlString): SqlChars;
     readonly Null: SqlChars;
     GetXsdType(schemaSet: XmlSchemaSet): XmlQualifiedName;
@@ -954,8 +954,8 @@ export interface SqlNotFilledException$instance extends SqlTypeException$instanc
 
 export const SqlNotFilledException: {
     new(): SqlNotFilledException;
-    new(message: string | undefined): SqlNotFilledException;
-    new(message: string | undefined, e: Exception | undefined): SqlNotFilledException;
+    new(message: string): SqlNotFilledException;
+    new(message: string, e: Exception): SqlNotFilledException;
 };
 
 
@@ -973,8 +973,8 @@ export interface SqlNullValueException$instance extends SqlTypeException$instanc
 
 export const SqlNullValueException: {
     new(): SqlNullValueException;
-    new(message: string | undefined): SqlNullValueException;
-    new(message: string | undefined, e: Exception | undefined): SqlNullValueException;
+    new(message: string): SqlNullValueException;
+    new(message: string, e: Exception): SqlNullValueException;
 };
 
 
@@ -992,8 +992,8 @@ export interface SqlTruncateException$instance extends SqlTypeException$instance
 
 export const SqlTruncateException: {
     new(): SqlTruncateException;
-    new(message: string | undefined): SqlTruncateException;
-    new(message: string | undefined, e: Exception | undefined): SqlTruncateException;
+    new(message: string): SqlTruncateException;
+    new(message: string, e: Exception): SqlTruncateException;
 };
 
 
@@ -1011,8 +1011,8 @@ export interface SqlTypeException$instance extends SystemException {
 
 export const SqlTypeException: {
     new(): SqlTypeException;
-    new(message: string | undefined): SqlTypeException;
-    new(message: string | undefined, e: Exception | undefined): SqlTypeException;
+    new(message: string): SqlTypeException;
+    new(message: string, e: Exception): SqlTypeException;
 };
 
 
@@ -1032,8 +1032,8 @@ export interface SqlXml$instance {
 
 export const SqlXml: {
     new(): SqlXml;
-    new(value: XmlReader | undefined): SqlXml;
-    new(value: Stream | undefined): SqlXml;
+    new(value: XmlReader): SqlXml;
+    new(value: Stream): SqlXml;
     readonly Null: SqlXml;
     GetXsdType(schemaSet: XmlSchemaSet): XmlQualifiedName;
 };

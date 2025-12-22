@@ -55,8 +55,10 @@ export const AllowNullAttribute: {
 export type AllowNullAttribute = AllowNullAttribute$instance;
 
 export interface ConstantExpectedAttribute$instance extends Attribute {
-    Max: unknown | undefined;
-    Min: unknown | undefined;
+    get Max(): unknown | undefined;
+    set Max(value: unknown);
+    get Min(): unknown | undefined;
+    set Min(value: unknown);
 }
 
 
@@ -115,7 +117,8 @@ export type DynamicallyAccessedMembersAttribute = DynamicallyAccessedMembersAttr
 
 export interface DynamicDependencyAttribute$instance extends Attribute {
     readonly AssemblyName: string;
-    Condition: string | undefined;
+    get Condition(): string | undefined;
+    set Condition(value: string);
     readonly MemberSignature: string | undefined;
     readonly MemberTypes: DynamicallyAccessedMemberTypes;
     readonly Type: Type;
@@ -135,7 +138,8 @@ export const DynamicDependencyAttribute: {
 export type DynamicDependencyAttribute = DynamicDependencyAttribute$instance;
 
 export interface ExcludeFromCodeCoverageAttribute$instance extends Attribute {
-    Justification: string | undefined;
+    get Justification(): string | undefined;
+    set Justification(value: string);
 }
 
 
@@ -149,7 +153,8 @@ export type ExcludeFromCodeCoverageAttribute = ExcludeFromCodeCoverageAttribute$
 export interface ExperimentalAttribute$instance extends Attribute {
     readonly DiagnosticId: string;
     Message: string;
-    UrlFormat: string | undefined;
+    get UrlFormat(): string | undefined;
+    set UrlFormat(value: string);
 }
 
 
@@ -271,7 +276,8 @@ export type NotNullWhenAttribute = NotNullWhenAttribute$instance;
 
 export interface RequiresAssemblyFilesAttribute$instance extends Attribute {
     readonly Message: string;
-    Url: string | undefined;
+    get Url(): string | undefined;
+    set Url(value: string);
 }
 
 
@@ -286,7 +292,8 @@ export type RequiresAssemblyFilesAttribute = RequiresAssemblyFilesAttribute$inst
 export interface RequiresDynamicCodeAttribute$instance extends Attribute {
     ExcludeStatics: boolean;
     readonly Message: string;
-    Url: string | undefined;
+    get Url(): string | undefined;
+    set Url(value: string);
 }
 
 
@@ -300,7 +307,8 @@ export type RequiresDynamicCodeAttribute = RequiresDynamicCodeAttribute$instance
 export interface RequiresUnreferencedCodeAttribute$instance extends Attribute {
     ExcludeStatics: boolean;
     readonly Message: string;
-    Url: string | undefined;
+    get Url(): string | undefined;
+    set Url(value: string);
 }
 
 
@@ -351,9 +359,12 @@ export type StringSyntaxAttribute = StringSyntaxAttribute$instance;
 export interface SuppressMessageAttribute$instance extends Attribute {
     readonly Category: string;
     readonly CheckId: string;
-    Justification: string | undefined;
-    MessageId: string | undefined;
-    Scope: string | undefined;
+    get Justification(): string | undefined;
+    set Justification(value: string);
+    get MessageId(): string | undefined;
+    set MessageId(value: string);
+    get Scope(): string | undefined;
+    set Scope(value: string);
     Target: string;
 }
 
@@ -368,9 +379,12 @@ export type SuppressMessageAttribute = SuppressMessageAttribute$instance;
 export interface UnconditionalSuppressMessageAttribute$instance extends Attribute {
     readonly Category: string;
     readonly CheckId: string;
-    Justification: string | undefined;
-    MessageId: string | undefined;
-    Scope: string | undefined;
+    get Justification(): string | undefined;
+    set Justification(value: string);
+    get MessageId(): string | undefined;
+    set MessageId(value: string);
+    get Scope(): string | undefined;
+    set Scope(value: string);
     Target: string;
 }
 

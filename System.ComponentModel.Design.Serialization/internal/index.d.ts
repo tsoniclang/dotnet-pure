@@ -17,7 +17,7 @@ import type { ISerializable, SerializationInfo, StreamingContext } from "../../S
 import * as System_Internal from "../../System/internal/index.js";
 import type { AsyncCallback, Attribute, Boolean as ClrBoolean, Delegate, EventArgs, EventHandler, IAsyncResult, ICloneable, IDisposable, IEquatable_1, Int32, IntPtr, IServiceProvider, MulticastDelegate, Object as ClrObject, String as ClrString, Type, ValueType, Void } from "../../System/internal/index.js";
 
-export type ResolveNameEventHandler = (sender: unknown | undefined, e: ResolveNameEventArgs) => void;
+export type ResolveNameEventHandler = (sender: unknown, e: ResolveNameEventArgs) => void;
 
 
 export interface IDesignerLoaderHost$instance extends IDesignerHost, IServiceContainer, IServiceProvider {
@@ -36,7 +36,7 @@ export interface IDesignerLoaderHost$instance extends IDesignerHost, IServiceCon
     CreateTransaction(): DesignerTransaction;
     CreateTransaction(description: string): DesignerTransaction;
     DestroyComponent(component: IComponent): void;
-    EndLoad(baseClassName: string, successful: boolean, errorCollection: ICollection | undefined): void;
+    EndLoad(baseClassName: string, successful: boolean, errorCollection: ICollection): void;
     GetDesigner(component: IComponent): IDesigner | undefined;
     GetService(serviceType: Type): unknown | undefined;
     GetType(typeName: string): Type | undefined;
@@ -67,7 +67,7 @@ export interface IDesignerLoaderHost2$instance extends IDesignerLoaderHost, IDes
     CreateTransaction(): DesignerTransaction;
     CreateTransaction(description: string): DesignerTransaction;
     DestroyComponent(component: IComponent): void;
-    EndLoad(baseClassName: string, successful: boolean, errorCollection: ICollection | undefined): void;
+    EndLoad(baseClassName: string, successful: boolean, errorCollection: ICollection): void;
     GetDesigner(component: IComponent): IDesigner | undefined;
     GetService(serviceType: Type): unknown | undefined;
     GetType(typeName: string): Type | undefined;
@@ -82,7 +82,7 @@ export type IDesignerLoaderHost2 = IDesignerLoaderHost2$instance;
 
 export interface IDesignerLoaderService$instance {
     AddLoadDependency(): void;
-    DependentLoadComplete(successful: boolean, errorCollection: ICollection | undefined): void;
+    DependentLoadComplete(successful: boolean, errorCollection: ICollection): void;
     Reload(): boolean;
 }
 
@@ -93,10 +93,10 @@ export interface IDesignerSerializationManager$instance extends IServiceProvider
     readonly Context: ContextStack;
     readonly Properties: PropertyDescriptorCollection;
     AddSerializationProvider(provider: IDesignerSerializationProvider): void;
-    CreateInstance(type_: Type, arguments: ICollection | undefined, name: string | undefined, addToContainer: boolean): unknown;
+    CreateInstance(type_: Type, arguments: ICollection, name: string, addToContainer: boolean): unknown;
     GetInstance(name: string): unknown | undefined;
     GetName(value: unknown): string | undefined;
-    GetSerializer(objectType: Type | undefined, serializerType: Type): unknown | undefined;
+    GetSerializer(objectType: Type, serializerType: Type): unknown | undefined;
     GetService(serviceType: Type): unknown | undefined;
     GetType(typeName: string): Type | undefined;
     ReportError(errorInformation: unknown): void;
@@ -109,7 +109,7 @@ export interface IDesignerSerializationManager$instance extends System_Internal.
 export type IDesignerSerializationManager = IDesignerSerializationManager$instance;
 
 export interface IDesignerSerializationProvider$instance {
-    GetSerializer(manager: IDesignerSerializationManager, currentSerializer: unknown | undefined, objectType: Type | undefined, serializerType: Type): unknown | undefined;
+    GetSerializer(manager: IDesignerSerializationManager, currentSerializer: unknown, objectType: Type, serializerType: Type): unknown | undefined;
 }
 
 
@@ -124,7 +124,7 @@ export interface IDesignerSerializationService$instance {
 export type IDesignerSerializationService = IDesignerSerializationService$instance;
 
 export interface INameCreationService$instance {
-    CreateName(container: IContainer | undefined, dataType: Type): string;
+    CreateName(container: IContainer, dataType: Type): string;
     IsValidName(name: string): boolean;
     ValidateName(name: string): void;
 }
@@ -136,7 +136,7 @@ export interface MemberRelationship$instance {
     readonly IsEmpty: boolean;
     readonly Member: MemberDescriptor;
     readonly Owner: unknown;
-    Equals(obj: unknown | undefined): boolean;
+    Equals(obj: unknown): boolean;
     Equals(other: MemberRelationship): boolean;
     GetHashCode(): int;
 }
@@ -232,8 +232,8 @@ export interface DesignerSerializerAttribute$instance extends Attribute {
 
 export const DesignerSerializerAttribute: {
     new(serializerType: Type, baseSerializerType: Type): DesignerSerializerAttribute;
-    new(serializerTypeName: string | undefined, baseSerializerType: Type): DesignerSerializerAttribute;
-    new(serializerTypeName: string | undefined, baseSerializerTypeName: string | undefined): DesignerSerializerAttribute;
+    new(serializerTypeName: string, baseSerializerType: Type): DesignerSerializerAttribute;
+    new(serializerTypeName: string, baseSerializerTypeName: string): DesignerSerializerAttribute;
 };
 
 
@@ -248,8 +248,8 @@ export interface InstanceDescriptor$instance {
 
 
 export const InstanceDescriptor: {
-    new(member: MemberInfo | undefined, arguments: ICollection | undefined): InstanceDescriptor;
-    new(member: MemberInfo | undefined, arguments: ICollection | undefined, isComplete: boolean): InstanceDescriptor;
+    new(member: MemberInfo, arguments: ICollection): InstanceDescriptor;
+    new(member: MemberInfo, arguments: ICollection, isComplete: boolean): InstanceDescriptor;
 };
 
 
@@ -277,7 +277,7 @@ export interface ResolveNameEventArgs$instance extends EventArgs {
 
 
 export const ResolveNameEventArgs: {
-    new(name: string | undefined): ResolveNameEventArgs;
+    new(name: string): ResolveNameEventArgs;
 };
 
 
@@ -294,7 +294,7 @@ export interface RootDesignerSerializerAttribute$instance extends Attribute {
 export const RootDesignerSerializerAttribute: {
     new(serializerType: Type, baseSerializerType: Type, reloadable: boolean): RootDesignerSerializerAttribute;
     new(serializerTypeName: string, baseSerializerType: Type, reloadable: boolean): RootDesignerSerializerAttribute;
-    new(serializerTypeName: string | undefined, baseSerializerTypeName: string | undefined, reloadable: boolean): RootDesignerSerializerAttribute;
+    new(serializerTypeName: string, baseSerializerTypeName: string, reloadable: boolean): RootDesignerSerializerAttribute;
 };
 
 

@@ -35,19 +35,19 @@ export type JsonNodeOptions = JsonNodeOptions$instance;
 
 export interface JsonArray$instance extends JsonNode {
     readonly Count: int;
-    Add<T>(value: T | undefined): void;
-    Add(item: JsonNode | undefined): void;
+    Add<T>(value: T): void;
+    Add(item: JsonNode): void;
     Clear(): void;
-    Contains(item: JsonNode | undefined): boolean;
+    Contains(item: JsonNode): boolean;
     GetEnumerator(): IEnumerator_1<JsonNode | undefined>;
     GetValues<T>(): IEnumerable_1<T>;
-    IndexOf(item: JsonNode | undefined): int;
-    Insert(index: int, item: JsonNode | undefined): void;
-    Remove(item: JsonNode | undefined): boolean;
-    RemoveAll(match: Func_2<JsonNode | undefined, System_Internal.Boolean>): int;
+    IndexOf(item: JsonNode): int;
+    Insert(index: int, item: JsonNode): void;
+    Remove(item: JsonNode): boolean;
+    RemoveAll(match: Func_2<JsonNode, System_Internal.Boolean>): int;
     RemoveAt(index: int): void;
     RemoveRange(index: int, count: int): void;
-    WriteTo(writer: Utf8JsonWriter, options?: JsonSerializerOptions | undefined): void;
+    WriteTo(writer: Utf8JsonWriter, options?: JsonSerializerOptions): void;
 }
 
 
@@ -89,14 +89,14 @@ export interface JsonNode$instance {
     ReplaceWith<T>(value: T): void;
     set_Item(index: int, value: JsonNode | undefined): void;
     set_Item(propertyName: string, value: JsonNode | undefined): void;
-    ToJsonString(options?: JsonSerializerOptions | undefined): string;
+    ToJsonString(options?: JsonSerializerOptions): string;
     ToString(): string;
-    WriteTo(writer: Utf8JsonWriter, options?: JsonSerializerOptions | undefined): void;
+    WriteTo(writer: Utf8JsonWriter, options?: JsonSerializerOptions): void;
 }
 
 
 export const JsonNode: {
-    DeepEquals(node1: JsonNode | undefined, node2: JsonNode | undefined): boolean;
+    DeepEquals(node1: JsonNode, node2: JsonNode): boolean;
     Parse(utf8Json: Stream, nodeOptions?: Nullable_1<JsonNodeOptions>, documentOptions?: JsonDocumentOptions): JsonNode | undefined;
     Parse(utf8Json: ReadOnlySpan_1<System_Internal.Byte>, nodeOptions?: Nullable_1<JsonNodeOptions>, documentOptions?: JsonDocumentOptions): JsonNode | undefined;
     Parse(json: string, nodeOptions?: Nullable_1<JsonNodeOptions>, documentOptions?: JsonDocumentOptions): JsonNode | undefined;
@@ -109,23 +109,23 @@ export type JsonNode = JsonNode$instance;
 
 export interface JsonObject$instance extends JsonNode {
     readonly Count: int;
-    Add(propertyName: string, value: JsonNode | undefined): void;
+    Add(propertyName: string, value: JsonNode): void;
     Add(property: KeyValuePair_2<System_Internal.String, JsonNode>): void;
     Clear(): void;
     ContainsKey(propertyName: string): boolean;
     GetAt(index: int): KeyValuePair_2<System_Internal.String, JsonNode>;
     GetEnumerator(): IEnumerator_1<KeyValuePair_2<System_Internal.String, JsonNode>>;
     IndexOf(propertyName: string): int;
-    Insert(index: int, propertyName: string, value: JsonNode | undefined): void;
+    Insert(index: int, propertyName: string, value: JsonNode): void;
     Remove(propertyName: string): boolean;
     RemoveAt(index: int): void;
-    SetAt(index: int, propertyName: string, value: JsonNode | undefined): void;
-    SetAt(index: int, value: JsonNode | undefined): void;
-    TryAdd(propertyName: string, value: JsonNode | undefined): boolean;
-    TryAdd(propertyName: string, value: JsonNode | undefined, index: int): boolean;
-    TryGetPropertyValue(propertyName: string, jsonNode: JsonNode | undefined): boolean;
-    TryGetPropertyValue(propertyName: string, jsonNode: JsonNode | undefined, index: int): boolean;
-    WriteTo(writer: Utf8JsonWriter, options?: JsonSerializerOptions | undefined): void;
+    SetAt(index: int, propertyName: string, value: JsonNode): void;
+    SetAt(index: int, value: JsonNode): void;
+    TryAdd(propertyName: string, value: JsonNode): boolean;
+    TryAdd(propertyName: string, value: JsonNode, index: int): boolean;
+    TryGetPropertyValue(propertyName: string, jsonNode: JsonNode): boolean;
+    TryGetPropertyValue(propertyName: string, jsonNode: JsonNode, index: int): boolean;
+    WriteTo(writer: Utf8JsonWriter, options?: JsonSerializerOptions): void;
 }
 
 
@@ -148,7 +148,7 @@ export type JsonObject = JsonObject$instance & __JsonObject$views;
 
 
 export interface JsonValue$instance extends JsonNode {
-    TryGetValue<T>(value: T | undefined): boolean;
+    TryGetValue<T>(value: T): boolean;
 }
 
 
@@ -183,13 +183,13 @@ export const JsonValue: {
     Create(value: Nullable_1<System_Internal.UInt64>, options?: Nullable_1<JsonNodeOptions>): JsonValue | undefined;
     Create(value: sbyte, options?: Nullable_1<JsonNodeOptions>): JsonValue;
     Create(value: float, options?: Nullable_1<JsonNodeOptions>): JsonValue;
-    Create(value: string | undefined, options?: Nullable_1<JsonNodeOptions>): JsonValue | undefined;
+    Create(value: string, options?: Nullable_1<JsonNodeOptions>): JsonValue | undefined;
     Create(value: JsonElement, options?: Nullable_1<JsonNodeOptions>): JsonValue | undefined;
     Create(value: ushort, options?: Nullable_1<JsonNodeOptions>): JsonValue;
     Create(value: uint, options?: Nullable_1<JsonNodeOptions>): JsonValue;
     Create(value: ulong, options?: Nullable_1<JsonNodeOptions>): JsonValue;
-    Create<T>(value: T | undefined, jsonTypeInfo: JsonTypeInfo_1<T>, options?: Nullable_1<JsonNodeOptions>): JsonValue | undefined;
-    Create<T>(value: T | undefined, options?: Nullable_1<JsonNodeOptions>): JsonValue | undefined;
+    Create<T>(value: T, jsonTypeInfo: JsonTypeInfo_1<T>, options?: Nullable_1<JsonNodeOptions>): JsonValue | undefined;
+    Create<T>(value: T, options?: Nullable_1<JsonNodeOptions>): JsonValue | undefined;
 };
 
 

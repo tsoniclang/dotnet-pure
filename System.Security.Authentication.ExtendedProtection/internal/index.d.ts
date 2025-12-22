@@ -65,8 +65,8 @@ export interface ExtendedProtectionPolicy$instance {
 
 
 export const ExtendedProtectionPolicy: {
-    new(policyEnforcement: PolicyEnforcement, protectionScenario: ProtectionScenario, customServiceNames: ServiceNameCollection | undefined): ExtendedProtectionPolicy;
-    new(policyEnforcement: PolicyEnforcement, protectionScenario: ProtectionScenario, customServiceNames: ICollection | undefined): ExtendedProtectionPolicy;
+    new(policyEnforcement: PolicyEnforcement, protectionScenario: ProtectionScenario, customServiceNames: ServiceNameCollection): ExtendedProtectionPolicy;
+    new(policyEnforcement: PolicyEnforcement, protectionScenario: ProtectionScenario, customServiceNames: ICollection): ExtendedProtectionPolicy;
     new(policyEnforcement: PolicyEnforcement, customChannelBinding: ChannelBinding): ExtendedProtectionPolicy;
     new(policyEnforcement: PolicyEnforcement): ExtendedProtectionPolicy;
     readonly OSSupportsExtendedProtection: boolean;
@@ -83,10 +83,10 @@ export type ExtendedProtectionPolicy = ExtendedProtectionPolicy$instance & __Ext
 
 
 export interface ExtendedProtectionPolicyTypeConverter$instance extends TypeConverter {
-    CanConvertTo(context: ITypeDescriptorContext | undefined, destinationType: Type | undefined): boolean;
-    CanConvertTo(destinationType: Type | undefined): boolean;
-    ConvertTo(context: ITypeDescriptorContext | undefined, culture: CultureInfo | undefined, value: unknown | undefined, destinationType: Type): unknown | undefined;
-    ConvertTo(value: unknown | undefined, destinationType: Type): unknown | undefined;
+    CanConvertTo(context: ITypeDescriptorContext, destinationType: Type): boolean;
+    CanConvertTo(destinationType: Type): boolean;
+    ConvertTo(context: ITypeDescriptorContext, culture: CultureInfo, value: unknown, destinationType: Type): unknown | undefined;
+    ConvertTo(value: unknown, destinationType: Type): unknown | undefined;
 }
 
 
@@ -98,7 +98,7 @@ export const ExtendedProtectionPolicyTypeConverter: {
 export type ExtendedProtectionPolicyTypeConverter = ExtendedProtectionPolicyTypeConverter$instance;
 
 export interface ServiceNameCollection$instance extends ReadOnlyCollectionBase {
-    Contains(searchServiceName: string | undefined): boolean;
+    Contains(searchServiceName: string): boolean;
     CopyTo(array: ClrArray, index: int): void;
     GetEnumerator(): IEnumerator;
     Merge(serviceName: string): ServiceNameCollection;

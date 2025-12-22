@@ -322,7 +322,8 @@ export type JsonRequiredAttribute = JsonRequiredAttribute$instance;
 
 export interface JsonSerializableAttribute$instance extends JsonAttribute {
     GenerationMode: JsonSourceGenerationMode;
-    TypeInfoPropertyName: string | undefined;
+    get TypeInfoPropertyName(): string | undefined;
+    set TypeInfoPropertyName(value: string);
 }
 
 
@@ -397,7 +398,7 @@ export interface JsonStringEnumConverter$instance extends JsonConverterFactory {
 
 export const JsonStringEnumConverter: {
     new(): JsonStringEnumConverter;
-    new(namingPolicy: JsonNamingPolicy | undefined, allowIntegerValues: boolean): JsonStringEnumConverter;
+    new(namingPolicy: JsonNamingPolicy, allowIntegerValues: boolean): JsonStringEnumConverter;
 };
 
 
@@ -411,7 +412,7 @@ export interface JsonStringEnumConverter_1$instance<TEnum extends number> extend
 
 export const JsonStringEnumConverter_1: {
     new<TEnum extends number>(): JsonStringEnumConverter_1<TEnum>;
-    new<TEnum extends number>(namingPolicy: JsonNamingPolicy | undefined, allowIntegerValues: boolean): JsonStringEnumConverter_1<TEnum>;
+    new<TEnum extends number>(namingPolicy: JsonNamingPolicy, allowIntegerValues: boolean): JsonStringEnumConverter_1<TEnum>;
 };
 
 

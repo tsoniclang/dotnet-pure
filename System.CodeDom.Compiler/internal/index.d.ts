@@ -21,7 +21,7 @@ export interface GeneratedCodeAttribute$instance extends Attribute {
 
 
 export const GeneratedCodeAttribute: {
-    new(tool: string | undefined, version: string | undefined): GeneratedCodeAttribute;
+    new(tool: string, version: string): GeneratedCodeAttribute;
 };
 
 
@@ -38,66 +38,66 @@ export interface IndentedTextWriter$instance extends TextWriter {
     Flush(): void;
     FlushAsync(): Task;
     FlushAsync(cancellationToken: CancellationToken): Task;
-    Write(s: string | undefined): void;
+    Write(s: string): void;
     Write(value: boolean): void;
     Write(value: char): void;
-    Write(buffer: char[] | undefined): void;
+    Write(buffer: char[]): void;
     Write(buffer: char[], index: int, count: int): void;
     Write(value: double): void;
     Write(value: float): void;
     Write(value: int): void;
     Write(value: long): void;
-    Write(value: unknown | undefined): void;
-    Write(format: string, arg0: unknown | undefined): void;
-    Write(format: string, arg0: unknown | undefined, arg1: unknown | undefined): void;
+    Write(value: unknown): void;
+    Write(format: string, arg0: unknown): void;
+    Write(format: string, arg0: unknown, arg1: unknown): void;
     Write(format: string, ...arg: unknown[]): void;
     Write(format: string, arg: ReadOnlySpan_1<unknown>): void;
     Write(buffer: ReadOnlySpan_1<System_Internal.Char>): void;
     Write(value: uint): void;
     Write(value: ulong): void;
     Write(value: decimal): void;
-    Write(value: StringBuilder | undefined): void;
-    Write(format: string, arg0: unknown | undefined, arg1: unknown | undefined, arg2: unknown | undefined): void;
+    Write(value: StringBuilder): void;
+    Write(format: string, arg0: unknown, arg1: unknown, arg2: unknown): void;
     Write(format: string, arg: ReadOnlySpan_1<unknown>): void;
     WriteAsync(value: char): Task;
     WriteAsync(buffer: char[], index: int, count: int): Task;
-    WriteAsync(value: string | undefined): Task;
+    WriteAsync(value: string): Task;
     WriteAsync(buffer: ReadOnlyMemory_1<System_Internal.Char>, cancellationToken?: CancellationToken): Task;
-    WriteAsync(value: StringBuilder | undefined, cancellationToken?: CancellationToken): Task;
-    WriteAsync(buffer: char[] | undefined): Task;
+    WriteAsync(value: StringBuilder, cancellationToken?: CancellationToken): Task;
+    WriteAsync(buffer: char[]): Task;
     WriteAsync(buffer: ReadOnlyMemory_1<System_Internal.Char>, cancellationToken?: CancellationToken): Task;
-    WriteLine(s: string | undefined): void;
+    WriteLine(s: string): void;
     WriteLine(): void;
     WriteLine(value: boolean): void;
     WriteLine(value: char): void;
-    WriteLine(buffer: char[] | undefined): void;
+    WriteLine(buffer: char[]): void;
     WriteLine(buffer: char[], index: int, count: int): void;
     WriteLine(value: double): void;
     WriteLine(value: float): void;
     WriteLine(value: int): void;
     WriteLine(value: long): void;
-    WriteLine(value: unknown | undefined): void;
-    WriteLine(format: string, arg0: unknown | undefined): void;
-    WriteLine(format: string, arg0: unknown | undefined, arg1: unknown | undefined): void;
+    WriteLine(value: unknown): void;
+    WriteLine(format: string, arg0: unknown): void;
+    WriteLine(format: string, arg0: unknown, arg1: unknown): void;
     WriteLine(format: string, ...arg: unknown[]): void;
     WriteLine(format: string, arg: ReadOnlySpan_1<unknown>): void;
     WriteLine(value: uint): void;
     WriteLine(buffer: ReadOnlySpan_1<System_Internal.Char>): void;
     WriteLine(value: ulong): void;
     WriteLine(value: decimal): void;
-    WriteLine(value: StringBuilder | undefined): void;
-    WriteLine(format: string, arg0: unknown | undefined, arg1: unknown | undefined, arg2: unknown | undefined): void;
+    WriteLine(value: StringBuilder): void;
+    WriteLine(format: string, arg0: unknown, arg1: unknown, arg2: unknown): void;
     WriteLine(format: string, arg: ReadOnlySpan_1<unknown>): void;
     WriteLineAsync(): Task;
     WriteLineAsync(value: char): Task;
     WriteLineAsync(buffer: char[], index: int, count: int): Task;
-    WriteLineAsync(value: string | undefined): Task;
+    WriteLineAsync(value: string): Task;
     WriteLineAsync(buffer: ReadOnlyMemory_1<System_Internal.Char>, cancellationToken?: CancellationToken): Task;
-    WriteLineAsync(value: StringBuilder | undefined, cancellationToken?: CancellationToken): Task;
-    WriteLineAsync(buffer: char[] | undefined): Task;
+    WriteLineAsync(value: StringBuilder, cancellationToken?: CancellationToken): Task;
+    WriteLineAsync(buffer: char[]): Task;
     WriteLineAsync(buffer: ReadOnlyMemory_1<System_Internal.Char>, cancellationToken?: CancellationToken): Task;
-    WriteLineNoTabs(s: string | undefined): void;
-    WriteLineNoTabsAsync(s: string | undefined): Task;
+    WriteLineNoTabs(s: string): void;
+    WriteLineNoTabsAsync(s: string): Task;
 }
 
 

@@ -106,7 +106,7 @@ export type HttpHeadersNonValidated_Enumerator = HttpHeadersNonValidated_Enumera
 export interface AuthenticationHeaderValue$instance {
     readonly Parameter: string | undefined;
     readonly Scheme: string;
-    Equals(obj: unknown | undefined): boolean;
+    Equals(obj: unknown): boolean;
     GetHashCode(): int;
     ToString(): string;
 }
@@ -114,9 +114,9 @@ export interface AuthenticationHeaderValue$instance {
 
 export const AuthenticationHeaderValue: {
     new(scheme: string): AuthenticationHeaderValue;
-    new(scheme: string, parameter: string | undefined): AuthenticationHeaderValue;
+    new(scheme: string, parameter: string): AuthenticationHeaderValue;
     Parse(input: string): AuthenticationHeaderValue;
-    TryParse(input: string | undefined, parsedValue: AuthenticationHeaderValue | undefined): boolean;
+    TryParse(input: string, parsedValue: AuthenticationHeaderValue): boolean;
 };
 
 
@@ -146,7 +146,7 @@ export interface CacheControlHeaderValue$instance {
     ProxyRevalidate: boolean;
     Public: boolean;
     SharedMaxAge: Nullable_1<TimeSpan>;
-    Equals(obj: unknown | undefined): boolean;
+    Equals(obj: unknown): boolean;
     GetHashCode(): int;
     ToString(): string;
 }
@@ -154,8 +154,8 @@ export interface CacheControlHeaderValue$instance {
 
 export const CacheControlHeaderValue: {
     new(): CacheControlHeaderValue;
-    Parse(input: string | undefined): CacheControlHeaderValue;
-    TryParse(input: string | undefined, parsedValue: CacheControlHeaderValue | undefined): boolean;
+    Parse(input: string): CacheControlHeaderValue;
+    TryParse(input: string, parsedValue: CacheControlHeaderValue): boolean;
 };
 
 
@@ -172,13 +172,14 @@ export interface ContentDispositionHeaderValue$instance {
     CreationDate: Nullable_1<DateTimeOffset>;
     DispositionType: string;
     FileName: string;
-    FileNameStar: string | undefined;
+    get FileNameStar(): string | undefined;
+    set FileNameStar(value: string);
     ModificationDate: Nullable_1<DateTimeOffset>;
     Name: string;
     readonly Parameters: ICollection_1<NameValueHeaderValue>;
     ReadDate: Nullable_1<DateTimeOffset>;
     Size: Nullable_1<System_Internal.Int64>;
-    Equals(obj: unknown | undefined): boolean;
+    Equals(obj: unknown): boolean;
     GetHashCode(): int;
     ToString(): string;
 }
@@ -187,7 +188,7 @@ export interface ContentDispositionHeaderValue$instance {
 export const ContentDispositionHeaderValue: {
     new(dispositionType: string): ContentDispositionHeaderValue;
     Parse(input: string): ContentDispositionHeaderValue;
-    TryParse(input: string | undefined, parsedValue: ContentDispositionHeaderValue | undefined): boolean;
+    TryParse(input: string, parsedValue: ContentDispositionHeaderValue): boolean;
 };
 
 
@@ -207,7 +208,7 @@ export interface ContentRangeHeaderValue$instance {
     readonly Length: Nullable_1<System_Internal.Int64>;
     readonly To: Nullable_1<System_Internal.Int64>;
     Unit: string;
-    Equals(obj: unknown | undefined): boolean;
+    Equals(obj: unknown): boolean;
     GetHashCode(): int;
     ToString(): string;
 }
@@ -218,7 +219,7 @@ export const ContentRangeHeaderValue: {
     new(length: long): ContentRangeHeaderValue;
     new(from_: long, to: long): ContentRangeHeaderValue;
     Parse(input: string): ContentRangeHeaderValue;
-    TryParse(input: string | undefined, parsedValue: ContentRangeHeaderValue | undefined): boolean;
+    TryParse(input: string, parsedValue: ContentRangeHeaderValue): boolean;
 };
 
 
@@ -234,7 +235,7 @@ export type ContentRangeHeaderValue = ContentRangeHeaderValue$instance & __Conte
 export interface EntityTagHeaderValue$instance {
     readonly IsWeak: boolean;
     readonly Tag: string;
-    Equals(obj: unknown | undefined): boolean;
+    Equals(obj: unknown): boolean;
     GetHashCode(): int;
     ToString(): string;
 }
@@ -245,7 +246,7 @@ export const EntityTagHeaderValue: {
     new(tag: string, isWeak: boolean): EntityTagHeaderValue;
     readonly Any: EntityTagHeaderValue;
     Parse(input: string): EntityTagHeaderValue;
-    TryParse(input: string | undefined, parsedValue: EntityTagHeaderValue | undefined): boolean;
+    TryParse(input: string, parsedValue: EntityTagHeaderValue): boolean;
 };
 
 
@@ -260,13 +261,17 @@ export type EntityTagHeaderValue = EntityTagHeaderValue$instance & __EntityTagHe
 
 export interface HttpContentHeaders$instance extends HttpHeaders$instance {
     readonly Allow: ICollection_1<System_Internal.String>;
-    ContentDisposition: ContentDispositionHeaderValue | undefined;
+    get ContentDisposition(): ContentDispositionHeaderValue | undefined;
+    set ContentDisposition(value: ContentDispositionHeaderValue);
     readonly ContentEncoding: ICollection_1<System_Internal.String>;
     readonly ContentLanguage: ICollection_1<System_Internal.String>;
     ContentLength: Nullable_1<System_Internal.Int64>;
-    ContentLocation: Uri | undefined;
-    ContentMD5: byte[] | undefined;
-    ContentRange: ContentRangeHeaderValue | undefined;
+    get ContentLocation(): Uri | undefined;
+    set ContentLocation(value: Uri);
+    get ContentMD5(): byte[] | undefined;
+    set ContentMD5(value: byte[]);
+    get ContentRange(): ContentRangeHeaderValue | undefined;
+    set ContentRange(value: ContentRangeHeaderValue);
     ContentType: MediaTypeHeaderValue;
     Expires: Nullable_1<DateTimeOffset>;
     LastModified: Nullable_1<DateTimeOffset>;
@@ -290,17 +295,17 @@ export type HttpContentHeaders = HttpContentHeaders$instance & __HttpContentHead
 
 export interface HttpHeaders$instance {
     readonly NonValidated: HttpHeadersNonValidated;
-    Add(name: string, value: string | undefined): void;
-    Add(name: string, values: IEnumerable_1<string | undefined>): void;
+    Add(name: string, value: string): void;
+    Add(name: string, values: IEnumerable_1<System_Internal.String>): void;
     Clear(): void;
     Contains(name: string): boolean;
     GetEnumerator(): IEnumerator_1<KeyValuePair_2<System_Internal.String, IEnumerable_1<System_Internal.String>>>;
     GetValues(name: string): IEnumerable_1<System_Internal.String>;
     Remove(name: string): boolean;
     ToString(): string;
-    TryAddWithoutValidation(name: string, value: string | undefined): boolean;
-    TryAddWithoutValidation(name: string, values: IEnumerable_1<string | undefined>): boolean;
-    TryGetValues(name: string, values: IEnumerable_1<System_Internal.String> | undefined): boolean;
+    TryAddWithoutValidation(name: string, value: string): boolean;
+    TryAddWithoutValidation(name: string, values: IEnumerable_1<System_Internal.String>): boolean;
+    TryGetValues(name: string, values: IEnumerable_1<System_Internal.String>): boolean;
 }
 
 
@@ -324,10 +329,10 @@ export interface HttpHeaderValueCollection_1$instance<T> {
     Contains(item: T): boolean;
     CopyTo(array: T[], arrayIndex: int): void;
     GetEnumerator(): IEnumerator_1<T>;
-    ParseAdd(input: string | undefined): void;
+    ParseAdd(input: string): void;
     Remove(item: T): boolean;
     ToString(): string;
-    TryParseAdd(input: string | undefined): boolean;
+    TryParseAdd(input: string): boolean;
 }
 
 
@@ -350,26 +355,34 @@ export interface HttpRequestHeaders$instance extends HttpHeaders$instance {
     readonly AcceptCharset: HttpHeaderValueCollection_1<StringWithQualityHeaderValue>;
     readonly AcceptEncoding: HttpHeaderValueCollection_1<StringWithQualityHeaderValue>;
     readonly AcceptLanguage: HttpHeaderValueCollection_1<StringWithQualityHeaderValue>;
-    Authorization: AuthenticationHeaderValue | undefined;
-    CacheControl: CacheControlHeaderValue | undefined;
+    get Authorization(): AuthenticationHeaderValue | undefined;
+    set Authorization(value: AuthenticationHeaderValue);
+    get CacheControl(): CacheControlHeaderValue | undefined;
+    set CacheControl(value: CacheControlHeaderValue);
     readonly Connection: HttpHeaderValueCollection_1<System_Internal.String>;
     ConnectionClose: Nullable_1<System_Internal.Boolean>;
     Date: Nullable_1<DateTimeOffset>;
     readonly Expect: HttpHeaderValueCollection_1<NameValueWithParametersHeaderValue>;
     ExpectContinue: Nullable_1<System_Internal.Boolean>;
-    From: string | undefined;
+    get From(): string | undefined;
+    set From(value: string);
     Host: string;
     readonly IfMatch: HttpHeaderValueCollection_1<EntityTagHeaderValue>;
     IfModifiedSince: Nullable_1<DateTimeOffset>;
     readonly IfNoneMatch: HttpHeaderValueCollection_1<EntityTagHeaderValue>;
-    IfRange: RangeConditionHeaderValue | undefined;
+    get IfRange(): RangeConditionHeaderValue | undefined;
+    set IfRange(value: RangeConditionHeaderValue);
     IfUnmodifiedSince: Nullable_1<DateTimeOffset>;
     MaxForwards: Nullable_1<System_Internal.Int32>;
     readonly Pragma: HttpHeaderValueCollection_1<NameValueHeaderValue>;
-    Protocol: string | undefined;
-    ProxyAuthorization: AuthenticationHeaderValue | undefined;
-    Range: RangeHeaderValue | undefined;
-    Referrer: Uri | undefined;
+    get Protocol(): string | undefined;
+    set Protocol(value: string);
+    get ProxyAuthorization(): AuthenticationHeaderValue | undefined;
+    set ProxyAuthorization(value: AuthenticationHeaderValue);
+    get Range(): RangeHeaderValue | undefined;
+    set Range(value: RangeHeaderValue);
+    get Referrer(): Uri | undefined;
+    set Referrer(value: Uri);
     readonly TE: HttpHeaderValueCollection_1<TransferCodingWithQualityHeaderValue>;
     readonly Trailer: HttpHeaderValueCollection_1<System_Internal.String>;
     readonly TransferEncoding: HttpHeaderValueCollection_1<TransferCodingHeaderValue>;
@@ -399,15 +412,18 @@ export type HttpRequestHeaders = HttpRequestHeaders$instance & __HttpRequestHead
 export interface HttpResponseHeaders$instance extends HttpHeaders$instance {
     readonly AcceptRanges: HttpHeaderValueCollection_1<System_Internal.String>;
     Age: Nullable_1<TimeSpan>;
-    CacheControl: CacheControlHeaderValue | undefined;
+    get CacheControl(): CacheControlHeaderValue | undefined;
+    set CacheControl(value: CacheControlHeaderValue);
     readonly Connection: HttpHeaderValueCollection_1<System_Internal.String>;
     ConnectionClose: Nullable_1<System_Internal.Boolean>;
     Date: Nullable_1<DateTimeOffset>;
-    ETag: EntityTagHeaderValue | undefined;
+    get ETag(): EntityTagHeaderValue | undefined;
+    set ETag(value: EntityTagHeaderValue);
     Location: Uri;
     readonly Pragma: HttpHeaderValueCollection_1<NameValueHeaderValue>;
     readonly ProxyAuthenticate: HttpHeaderValueCollection_1<AuthenticationHeaderValue>;
-    RetryAfter: RetryConditionHeaderValue | undefined;
+    get RetryAfter(): RetryConditionHeaderValue | undefined;
+    set RetryAfter(value: RetryConditionHeaderValue);
     readonly Server: HttpHeaderValueCollection_1<ProductInfoHeaderValue>;
     readonly Trailer: HttpHeaderValueCollection_1<System_Internal.String>;
     readonly TransferEncoding: HttpHeaderValueCollection_1<TransferCodingHeaderValue>;
@@ -436,10 +452,11 @@ export type HttpResponseHeaders = HttpResponseHeaders$instance & __HttpResponseH
 
 
 export interface MediaTypeHeaderValue$instance {
-    CharSet: string | undefined;
+    get CharSet(): string | undefined;
+    set CharSet(value: string);
     MediaType: string;
     readonly Parameters: ICollection_1<NameValueHeaderValue>;
-    Equals(obj: unknown | undefined): boolean;
+    Equals(obj: unknown): boolean;
     GetHashCode(): int;
     ToString(): string;
 }
@@ -447,9 +464,9 @@ export interface MediaTypeHeaderValue$instance {
 
 export const MediaTypeHeaderValue: {
     new(mediaType: string): MediaTypeHeaderValue;
-    new(mediaType: string, charSet: string | undefined): MediaTypeHeaderValue;
+    new(mediaType: string, charSet: string): MediaTypeHeaderValue;
     Parse(input: string): MediaTypeHeaderValue;
-    TryParse(input: string | undefined, parsedValue: MediaTypeHeaderValue | undefined): boolean;
+    TryParse(input: string, parsedValue: MediaTypeHeaderValue): boolean;
 };
 
 
@@ -486,7 +503,7 @@ export type MediaTypeWithQualityHeaderValue = MediaTypeWithQualityHeaderValue$in
 export interface NameValueHeaderValue$instance {
     readonly Name: string;
     Value: string;
-    Equals(obj: unknown | undefined): boolean;
+    Equals(obj: unknown): boolean;
     GetHashCode(): int;
     ToString(): string;
 }
@@ -494,9 +511,9 @@ export interface NameValueHeaderValue$instance {
 
 export const NameValueHeaderValue: {
     new(name: string): NameValueHeaderValue;
-    new(name: string, value: string | undefined): NameValueHeaderValue;
+    new(name: string, value: string): NameValueHeaderValue;
     Parse(input: string): NameValueHeaderValue;
-    TryParse(input: string | undefined, parsedValue: NameValueHeaderValue | undefined): boolean;
+    TryParse(input: string, parsedValue: NameValueHeaderValue): boolean;
 };
 
 
@@ -512,7 +529,7 @@ export type NameValueHeaderValue = NameValueHeaderValue$instance & __NameValueHe
 export interface NameValueWithParametersHeaderValue$instance extends NameValueHeaderValue$instance {
     readonly Parameters: ICollection_1<NameValueHeaderValue>;
     Clone(): unknown;
-    Equals(obj: unknown | undefined): boolean;
+    Equals(obj: unknown): boolean;
     GetHashCode(): int;
     ToString(): string;
 }
@@ -520,7 +537,7 @@ export interface NameValueWithParametersHeaderValue$instance extends NameValueHe
 
 export const NameValueWithParametersHeaderValue: {
     new(name: string): NameValueWithParametersHeaderValue;
-    new(name: string, value: string | undefined): NameValueWithParametersHeaderValue;
+    new(name: string, value: string): NameValueWithParametersHeaderValue;
 };
 
 
@@ -536,7 +553,7 @@ export type NameValueWithParametersHeaderValue = NameValueWithParametersHeaderVa
 export interface ProductHeaderValue$instance {
     readonly Name: string;
     readonly Version: string;
-    Equals(obj: unknown | undefined): boolean;
+    Equals(obj: unknown): boolean;
     GetHashCode(): int;
     ToString(): string;
 }
@@ -544,9 +561,9 @@ export interface ProductHeaderValue$instance {
 
 export const ProductHeaderValue: {
     new(name: string): ProductHeaderValue;
-    new(name: string, version: string | undefined): ProductHeaderValue;
+    new(name: string, version: string): ProductHeaderValue;
     Parse(input: string): ProductHeaderValue;
-    TryParse(input: string | undefined, parsedValue: ProductHeaderValue | undefined): boolean;
+    TryParse(input: string, parsedValue: ProductHeaderValue): boolean;
 };
 
 
@@ -562,18 +579,18 @@ export type ProductHeaderValue = ProductHeaderValue$instance & __ProductHeaderVa
 export interface ProductInfoHeaderValue$instance {
     readonly Comment: string;
     readonly Product: ProductHeaderValue;
-    Equals(obj: unknown | undefined): boolean;
+    Equals(obj: unknown): boolean;
     GetHashCode(): int;
     ToString(): string;
 }
 
 
 export const ProductInfoHeaderValue: {
-    new(productName: string, productVersion: string | undefined): ProductInfoHeaderValue;
+    new(productName: string, productVersion: string): ProductInfoHeaderValue;
     new(product: ProductHeaderValue): ProductInfoHeaderValue;
     new(comment: string): ProductInfoHeaderValue;
     Parse(input: string): ProductInfoHeaderValue;
-    TryParse(input: string, parsedValue: ProductInfoHeaderValue | undefined): boolean;
+    TryParse(input: string, parsedValue: ProductInfoHeaderValue): boolean;
 };
 
 
@@ -589,7 +606,7 @@ export type ProductInfoHeaderValue = ProductInfoHeaderValue$instance & __Product
 export interface RangeConditionHeaderValue$instance {
     readonly Date: Nullable_1<DateTimeOffset>;
     readonly EntityTag: EntityTagHeaderValue | undefined;
-    Equals(obj: unknown | undefined): boolean;
+    Equals(obj: unknown): boolean;
     GetHashCode(): int;
     ToString(): string;
 }
@@ -600,7 +617,7 @@ export const RangeConditionHeaderValue: {
     new(entityTag: EntityTagHeaderValue): RangeConditionHeaderValue;
     new(entityTag: string): RangeConditionHeaderValue;
     Parse(input: string): RangeConditionHeaderValue;
-    TryParse(input: string | undefined, parsedValue: RangeConditionHeaderValue | undefined): boolean;
+    TryParse(input: string, parsedValue: RangeConditionHeaderValue): boolean;
 };
 
 
@@ -616,7 +633,7 @@ export type RangeConditionHeaderValue = RangeConditionHeaderValue$instance & __R
 export interface RangeHeaderValue$instance {
     readonly Ranges: ICollection_1<RangeItemHeaderValue>;
     Unit: string;
-    Equals(obj: unknown | undefined): boolean;
+    Equals(obj: unknown): boolean;
     GetHashCode(): int;
     ToString(): string;
 }
@@ -626,7 +643,7 @@ export const RangeHeaderValue: {
     new(): RangeHeaderValue;
     new(from_: Nullable_1<System_Internal.Int64>, to: Nullable_1<System_Internal.Int64>): RangeHeaderValue;
     Parse(input: string): RangeHeaderValue;
-    TryParse(input: string | undefined, parsedValue: RangeHeaderValue | undefined): boolean;
+    TryParse(input: string, parsedValue: RangeHeaderValue): boolean;
 };
 
 
@@ -642,7 +659,7 @@ export type RangeHeaderValue = RangeHeaderValue$instance & __RangeHeaderValue$vi
 export interface RangeItemHeaderValue$instance {
     readonly From: Nullable_1<System_Internal.Int64>;
     readonly To: Nullable_1<System_Internal.Int64>;
-    Equals(obj: unknown | undefined): boolean;
+    Equals(obj: unknown): boolean;
     GetHashCode(): int;
     ToString(): string;
 }
@@ -665,7 +682,7 @@ export type RangeItemHeaderValue = RangeItemHeaderValue$instance & __RangeItemHe
 export interface RetryConditionHeaderValue$instance {
     readonly Date: Nullable_1<DateTimeOffset>;
     readonly Delta: Nullable_1<TimeSpan>;
-    Equals(obj: unknown | undefined): boolean;
+    Equals(obj: unknown): boolean;
     GetHashCode(): int;
     ToString(): string;
 }
@@ -675,7 +692,7 @@ export const RetryConditionHeaderValue: {
     new(date: DateTimeOffset): RetryConditionHeaderValue;
     new(delta: TimeSpan): RetryConditionHeaderValue;
     Parse(input: string): RetryConditionHeaderValue;
-    TryParse(input: string | undefined, parsedValue: RetryConditionHeaderValue | undefined): boolean;
+    TryParse(input: string, parsedValue: RetryConditionHeaderValue): boolean;
 };
 
 
@@ -691,7 +708,7 @@ export type RetryConditionHeaderValue = RetryConditionHeaderValue$instance & __R
 export interface StringWithQualityHeaderValue$instance {
     readonly Quality: Nullable_1<System_Internal.Double>;
     readonly Value: string;
-    Equals(obj: unknown | undefined): boolean;
+    Equals(obj: unknown): boolean;
     GetHashCode(): int;
     ToString(): string;
 }
@@ -701,7 +718,7 @@ export const StringWithQualityHeaderValue: {
     new(value: string): StringWithQualityHeaderValue;
     new(value: string, quality: double): StringWithQualityHeaderValue;
     Parse(input: string): StringWithQualityHeaderValue;
-    TryParse(input: string | undefined, parsedValue: StringWithQualityHeaderValue | undefined): boolean;
+    TryParse(input: string, parsedValue: StringWithQualityHeaderValue): boolean;
 };
 
 
@@ -717,7 +734,7 @@ export type StringWithQualityHeaderValue = StringWithQualityHeaderValue$instance
 export interface TransferCodingHeaderValue$instance {
     readonly Parameters: ICollection_1<NameValueHeaderValue>;
     readonly Value: string;
-    Equals(obj: unknown | undefined): boolean;
+    Equals(obj: unknown): boolean;
     GetHashCode(): int;
     ToString(): string;
 }
@@ -726,7 +743,7 @@ export interface TransferCodingHeaderValue$instance {
 export const TransferCodingHeaderValue: {
     new(value: string): TransferCodingHeaderValue;
     Parse(input: string): TransferCodingHeaderValue;
-    TryParse(input: string | undefined, parsedValue: TransferCodingHeaderValue | undefined): boolean;
+    TryParse(input: string, parsedValue: TransferCodingHeaderValue): boolean;
 };
 
 
@@ -765,7 +782,7 @@ export interface ViaHeaderValue$instance {
     readonly ProtocolName: string | undefined;
     readonly ProtocolVersion: string;
     readonly ReceivedBy: string;
-    Equals(obj: unknown | undefined): boolean;
+    Equals(obj: unknown): boolean;
     GetHashCode(): int;
     ToString(): string;
 }
@@ -773,10 +790,10 @@ export interface ViaHeaderValue$instance {
 
 export const ViaHeaderValue: {
     new(protocolVersion: string, receivedBy: string): ViaHeaderValue;
-    new(protocolVersion: string, receivedBy: string, protocolName: string | undefined): ViaHeaderValue;
-    new(protocolVersion: string, receivedBy: string, protocolName: string | undefined, comment: string | undefined): ViaHeaderValue;
+    new(protocolVersion: string, receivedBy: string, protocolName: string): ViaHeaderValue;
+    new(protocolVersion: string, receivedBy: string, protocolName: string, comment: string): ViaHeaderValue;
     Parse(input: string): ViaHeaderValue;
-    TryParse(input: string | undefined, parsedValue: ViaHeaderValue | undefined): boolean;
+    TryParse(input: string, parsedValue: ViaHeaderValue): boolean;
 };
 
 
@@ -794,7 +811,7 @@ export interface WarningHeaderValue$instance {
     readonly Code: int;
     readonly Date: Nullable_1<DateTimeOffset>;
     readonly Text: string;
-    Equals(obj: unknown | undefined): boolean;
+    Equals(obj: unknown): boolean;
     GetHashCode(): int;
     ToString(): string;
 }
@@ -804,7 +821,7 @@ export const WarningHeaderValue: {
     new(code: int, agent: string, text: string): WarningHeaderValue;
     new(code: int, agent: string, text: string, date: DateTimeOffset): WarningHeaderValue;
     Parse(input: string): WarningHeaderValue;
-    TryParse(input: string | undefined, parsedValue: WarningHeaderValue | undefined): boolean;
+    TryParse(input: string, parsedValue: WarningHeaderValue): boolean;
 };
 
 

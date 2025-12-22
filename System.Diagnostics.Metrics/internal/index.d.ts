@@ -17,7 +17,7 @@ import type { ISerializable, SerializationInfo, StreamingContext } from "../../S
 import * as System_Internal from "../../System/internal/index.js";
 import type { Action_2, AsyncCallback, Boolean as ClrBoolean, Delegate, Func_1, IAsyncResult, ICloneable, IDisposable, Int32, IntPtr, MulticastDelegate, Object as ClrObject, ReadOnlySpan_1, String as ClrString, Type, ValueType, Void } from "../../System/internal/index.js";
 
-export type MeasurementCallback_1<T extends unknown> = (instrument: Instrument, measurement: T, tags: ReadOnlySpan_1<KeyValuePair_2<System_Internal.String, unknown>>, state: unknown | undefined) => void;
+export type MeasurementCallback_1<T extends unknown> = (instrument: Instrument, measurement: T, tags: ReadOnlySpan_1<KeyValuePair_2<System_Internal.String, unknown>>, state: unknown) => void;
 
 
 export interface IMeterFactory$instance extends IDisposable {
@@ -38,7 +38,7 @@ export interface Measurement_1$instance<T extends unknown> {
 
 export const Measurement_1: {
     new<T extends unknown>(value: T): Measurement_1<T>;
-    new<T extends unknown>(value: T, tags: IEnumerable_1<KeyValuePair_2<System_Internal.String, unknown>> | undefined): Measurement_1<T>;
+    new<T extends unknown>(value: T, tags: IEnumerable_1<KeyValuePair_2<System_Internal.String, unknown>>): Measurement_1<T>;
     new<T extends unknown>(value: T, tags: KeyValuePair_2<System_Internal.String, unknown>[]): Measurement_1<T>;
     new<T extends unknown>(value: T, tags: ReadOnlySpan_1<KeyValuePair_2<System_Internal.String, unknown>>): Measurement_1<T>;
     new<T extends unknown>(value: T, tags: TagList): Measurement_1<T>;
@@ -130,7 +130,8 @@ export const Instrument_1: {
 export type Instrument_1<T> = Instrument_1$instance<T>;
 
 export interface InstrumentAdvice_1$instance<T extends unknown> {
-    HistogramBucketBoundaries: IReadOnlyList_1<T> | undefined;
+    get HistogramBucketBoundaries(): IReadOnlyList_1<T> | undefined;
+    set HistogramBucketBoundaries(value: IReadOnlyList_1<T>);
 }
 
 
@@ -147,22 +148,22 @@ export interface Meter$instance {
     readonly Tags: IEnumerable_1<KeyValuePair_2<System_Internal.String, unknown>>;
     readonly TelemetrySchemaUrl: string | undefined;
     readonly Version: string;
-    CreateCounter<T extends unknown>(name: string, unit?: string | undefined, description?: string | undefined): Counter_1<T>;
-    CreateCounter<T extends unknown>(name: string, unit: string | undefined, description: string | undefined, tags: IEnumerable_1<KeyValuePair_2<System_Internal.String, unknown>> | undefined): Counter_1<T>;
+    CreateCounter<T extends unknown>(name: string, unit?: string, description?: string): Counter_1<T>;
+    CreateCounter<T extends unknown>(name: string, unit: string, description: string, tags: IEnumerable_1<KeyValuePair_2<System_Internal.String, unknown>>): Counter_1<T>;
     CreateGauge<T extends unknown>(name: string): Gauge_1<T>;
-    CreateGauge<T extends unknown>(name: string, unit?: string | undefined, description?: string | undefined, tags?: IEnumerable_1<KeyValuePair_2<System_Internal.String, unknown>> | undefined): Gauge_1<T>;
+    CreateGauge<T extends unknown>(name: string, unit?: string, description?: string, tags?: IEnumerable_1<KeyValuePair_2<System_Internal.String, unknown>>): Gauge_1<T>;
     CreateHistogram<T extends unknown>(name: string): Histogram_1<T>;
-    CreateHistogram<T extends unknown>(name: string, unit: string | undefined, description: string | undefined): Histogram_1<T>;
-    CreateHistogram<T extends unknown>(name: string, unit: string | undefined, description: string | undefined, tags: IEnumerable_1<KeyValuePair_2<System_Internal.String, unknown>> | undefined): Histogram_1<T>;
-    CreateHistogram<T extends unknown>(name: string, unit?: string | undefined, description?: string | undefined, tags?: IEnumerable_1<KeyValuePair_2<System_Internal.String, unknown>> | undefined, advice?: InstrumentAdvice_1<T> | undefined): Histogram_1<T>;
-    CreateObservableCounter<T extends unknown>(name: string, observeValue: Func_1<T>, unit?: string | undefined, description?: string | undefined): ObservableCounter_1<T>;
-    CreateObservableCounter<T extends unknown>(name: string, observeValue: Func_1<T>, unit: string | undefined, description: string | undefined, tags: IEnumerable_1<KeyValuePair_2<System_Internal.String, unknown>> | undefined): ObservableCounter_1<T>;
-    CreateObservableGauge<T extends unknown>(name: string, observeValue: Func_1<T>, unit?: string | undefined, description?: string | undefined): ObservableGauge_1<T>;
-    CreateObservableGauge<T extends unknown>(name: string, observeValue: Func_1<T>, unit: string | undefined, description: string | undefined, tags: IEnumerable_1<KeyValuePair_2<System_Internal.String, unknown>> | undefined): ObservableGauge_1<T>;
-    CreateObservableUpDownCounter<T extends unknown>(name: string, observeValue: Func_1<T>, unit?: string | undefined, description?: string | undefined): ObservableUpDownCounter_1<T>;
-    CreateObservableUpDownCounter<T extends unknown>(name: string, observeValue: Func_1<T>, unit: string | undefined, description: string | undefined, tags: IEnumerable_1<KeyValuePair_2<System_Internal.String, unknown>> | undefined): ObservableUpDownCounter_1<T>;
-    CreateUpDownCounter<T extends unknown>(name: string, unit?: string | undefined, description?: string | undefined): UpDownCounter_1<T>;
-    CreateUpDownCounter<T extends unknown>(name: string, unit: string | undefined, description: string | undefined, tags: IEnumerable_1<KeyValuePair_2<System_Internal.String, unknown>> | undefined): UpDownCounter_1<T>;
+    CreateHistogram<T extends unknown>(name: string, unit: string, description: string): Histogram_1<T>;
+    CreateHistogram<T extends unknown>(name: string, unit: string, description: string, tags: IEnumerable_1<KeyValuePair_2<System_Internal.String, unknown>>): Histogram_1<T>;
+    CreateHistogram<T extends unknown>(name: string, unit?: string, description?: string, tags?: IEnumerable_1<KeyValuePair_2<System_Internal.String, unknown>>, advice?: InstrumentAdvice_1<T>): Histogram_1<T>;
+    CreateObservableCounter<T extends unknown>(name: string, observeValue: Func_1<T>, unit?: string, description?: string): ObservableCounter_1<T>;
+    CreateObservableCounter<T extends unknown>(name: string, observeValue: Func_1<T>, unit: string, description: string, tags: IEnumerable_1<KeyValuePair_2<System_Internal.String, unknown>>): ObservableCounter_1<T>;
+    CreateObservableGauge<T extends unknown>(name: string, observeValue: Func_1<T>, unit?: string, description?: string): ObservableGauge_1<T>;
+    CreateObservableGauge<T extends unknown>(name: string, observeValue: Func_1<T>, unit: string, description: string, tags: IEnumerable_1<KeyValuePair_2<System_Internal.String, unknown>>): ObservableGauge_1<T>;
+    CreateObservableUpDownCounter<T extends unknown>(name: string, observeValue: Func_1<T>, unit?: string, description?: string): ObservableUpDownCounter_1<T>;
+    CreateObservableUpDownCounter<T extends unknown>(name: string, observeValue: Func_1<T>, unit: string, description: string, tags: IEnumerable_1<KeyValuePair_2<System_Internal.String, unknown>>): ObservableUpDownCounter_1<T>;
+    CreateUpDownCounter<T extends unknown>(name: string, unit?: string, description?: string): UpDownCounter_1<T>;
+    CreateUpDownCounter<T extends unknown>(name: string, unit: string, description: string, tags: IEnumerable_1<KeyValuePair_2<System_Internal.String, unknown>>): UpDownCounter_1<T>;
     Dispose(): void;
 }
 
@@ -170,8 +171,8 @@ export interface Meter$instance {
 export const Meter: {
     new(options: MeterOptions): Meter;
     new(name: string): Meter;
-    new(name: string, version: string | undefined): Meter;
-    new(name: string, version: string | undefined, tags: IEnumerable_1<KeyValuePair_2<System_Internal.String, unknown>> | undefined, scope: unknown | undefined): Meter;
+    new(name: string, version: string): Meter;
+    new(name: string, version: string, tags: IEnumerable_1<KeyValuePair_2<System_Internal.String, unknown>>, scope: unknown): Meter;
 };
 
 
@@ -185,13 +186,15 @@ export type Meter = Meter$instance & __Meter$views;
 
 
 export interface MeterListener$instance {
-    InstrumentPublished: Action_2<Instrument, MeterListener> | undefined;
-    MeasurementsCompleted: Action_2<Instrument, unknown | undefined> | undefined;
+    get InstrumentPublished(): Action_2<Instrument, MeterListener> | undefined;
+    set InstrumentPublished(value: Action_2<Instrument, MeterListener>);
+    get MeasurementsCompleted(): Action_2<Instrument, unknown | undefined> | undefined;
+    set MeasurementsCompleted(value: Action_2<Instrument, unknown | undefined>);
     DisableMeasurementEvents(instrument: Instrument): unknown | undefined;
     Dispose(): void;
-    EnableMeasurementEvents(instrument: Instrument, state?: unknown | undefined): void;
+    EnableMeasurementEvents(instrument: Instrument, state?: unknown): void;
     RecordObservableInstruments(): void;
-    SetMeasurementEventCallback<T extends unknown>(measurementCallback: MeasurementCallback_1<T> | undefined): void;
+    SetMeasurementEventCallback<T extends unknown>(measurementCallback: MeasurementCallback_1<T>): void;
     Start(): void;
 }
 
@@ -212,9 +215,11 @@ export type MeterListener = MeterListener$instance & __MeterListener$views;
 
 export interface MeterOptions$instance {
     Name: string;
-    Scope: unknown | undefined;
+    get Scope(): unknown | undefined;
+    set Scope(value: unknown);
     Tags: IEnumerable_1<KeyValuePair_2<System_Internal.String, unknown>>;
-    TelemetrySchemaUrl: string | undefined;
+    get TelemetrySchemaUrl(): string | undefined;
+    set TelemetrySchemaUrl(value: string);
     Version: string;
 }
 
@@ -289,7 +294,7 @@ export const UpDownCounter_1: {
 export type UpDownCounter_1<T> = UpDownCounter_1$instance<T>;
 
 export abstract class MeterFactoryExtensions$instance {
-    static Create(meterFactory: IMeterFactory, name: string, version?: string | undefined, tags?: IEnumerable_1<KeyValuePair_2<System_Internal.String, unknown>> | undefined): Meter;
+    static Create(meterFactory: IMeterFactory, name: string, version?: string, tags?: IEnumerable_1<KeyValuePair_2<System_Internal.String, unknown>>): Meter;
 }
 
 

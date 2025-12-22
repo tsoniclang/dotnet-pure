@@ -106,7 +106,8 @@ export type ByteArrayContent = ByteArrayContent$instance & __ByteArrayContent$vi
 
 
 export interface DelegatingHandler$instance extends HttpMessageHandler$instance {
-    InnerHandler: HttpMessageHandler | undefined;
+    get InnerHandler(): HttpMessageHandler | undefined;
+    set InnerHandler(value: HttpMessageHandler);
     Dispose(): void;
 }
 
@@ -147,43 +148,43 @@ export interface HttpClient$instance extends HttpMessageInvoker$instance {
     MaxResponseContentBufferSize: long;
     Timeout: TimeSpan;
     CancelPendingRequests(): void;
-    DeleteAsync(requestUri: string | undefined): Task_1<HttpResponseMessage>;
-    DeleteAsync(requestUri: Uri | undefined): Task_1<HttpResponseMessage>;
-    DeleteAsync(requestUri: string | undefined, cancellationToken: CancellationToken): Task_1<HttpResponseMessage>;
-    DeleteAsync(requestUri: Uri | undefined, cancellationToken: CancellationToken): Task_1<HttpResponseMessage>;
+    DeleteAsync(requestUri: string): Task_1<HttpResponseMessage>;
+    DeleteAsync(requestUri: Uri): Task_1<HttpResponseMessage>;
+    DeleteAsync(requestUri: string, cancellationToken: CancellationToken): Task_1<HttpResponseMessage>;
+    DeleteAsync(requestUri: Uri, cancellationToken: CancellationToken): Task_1<HttpResponseMessage>;
     Dispose(): void;
-    GetAsync(requestUri: string | undefined): Task_1<HttpResponseMessage>;
-    GetAsync(requestUri: Uri | undefined): Task_1<HttpResponseMessage>;
-    GetAsync(requestUri: string | undefined, completionOption: HttpCompletionOption): Task_1<HttpResponseMessage>;
-    GetAsync(requestUri: Uri | undefined, completionOption: HttpCompletionOption): Task_1<HttpResponseMessage>;
-    GetAsync(requestUri: string | undefined, cancellationToken: CancellationToken): Task_1<HttpResponseMessage>;
-    GetAsync(requestUri: Uri | undefined, cancellationToken: CancellationToken): Task_1<HttpResponseMessage>;
-    GetAsync(requestUri: string | undefined, completionOption: HttpCompletionOption, cancellationToken: CancellationToken): Task_1<HttpResponseMessage>;
-    GetAsync(requestUri: Uri | undefined, completionOption: HttpCompletionOption, cancellationToken: CancellationToken): Task_1<HttpResponseMessage>;
-    GetByteArrayAsync(requestUri: string | undefined): Task_1<byte[]>;
-    GetByteArrayAsync(requestUri: Uri | undefined): Task_1<byte[]>;
-    GetByteArrayAsync(requestUri: string | undefined, cancellationToken: CancellationToken): Task_1<byte[]>;
-    GetByteArrayAsync(requestUri: Uri | undefined, cancellationToken: CancellationToken): Task_1<byte[]>;
-    GetStreamAsync(requestUri: string | undefined): Task_1<Stream>;
-    GetStreamAsync(requestUri: string | undefined, cancellationToken: CancellationToken): Task_1<Stream>;
-    GetStreamAsync(requestUri: Uri | undefined): Task_1<Stream>;
-    GetStreamAsync(requestUri: Uri | undefined, cancellationToken: CancellationToken): Task_1<Stream>;
-    GetStringAsync(requestUri: string | undefined): Task_1<System_Internal.String>;
-    GetStringAsync(requestUri: Uri | undefined): Task_1<System_Internal.String>;
-    GetStringAsync(requestUri: string | undefined, cancellationToken: CancellationToken): Task_1<System_Internal.String>;
-    GetStringAsync(requestUri: Uri | undefined, cancellationToken: CancellationToken): Task_1<System_Internal.String>;
-    PatchAsync(requestUri: string | undefined, content: HttpContent | undefined): Task_1<HttpResponseMessage>;
-    PatchAsync(requestUri: Uri | undefined, content: HttpContent | undefined): Task_1<HttpResponseMessage>;
-    PatchAsync(requestUri: string | undefined, content: HttpContent | undefined, cancellationToken: CancellationToken): Task_1<HttpResponseMessage>;
-    PatchAsync(requestUri: Uri | undefined, content: HttpContent | undefined, cancellationToken: CancellationToken): Task_1<HttpResponseMessage>;
-    PostAsync(requestUri: string | undefined, content: HttpContent | undefined): Task_1<HttpResponseMessage>;
-    PostAsync(requestUri: Uri | undefined, content: HttpContent | undefined): Task_1<HttpResponseMessage>;
-    PostAsync(requestUri: string | undefined, content: HttpContent | undefined, cancellationToken: CancellationToken): Task_1<HttpResponseMessage>;
-    PostAsync(requestUri: Uri | undefined, content: HttpContent | undefined, cancellationToken: CancellationToken): Task_1<HttpResponseMessage>;
-    PutAsync(requestUri: string | undefined, content: HttpContent | undefined): Task_1<HttpResponseMessage>;
-    PutAsync(requestUri: Uri | undefined, content: HttpContent | undefined): Task_1<HttpResponseMessage>;
-    PutAsync(requestUri: string | undefined, content: HttpContent | undefined, cancellationToken: CancellationToken): Task_1<HttpResponseMessage>;
-    PutAsync(requestUri: Uri | undefined, content: HttpContent | undefined, cancellationToken: CancellationToken): Task_1<HttpResponseMessage>;
+    GetAsync(requestUri: string): Task_1<HttpResponseMessage>;
+    GetAsync(requestUri: Uri): Task_1<HttpResponseMessage>;
+    GetAsync(requestUri: string, completionOption: HttpCompletionOption): Task_1<HttpResponseMessage>;
+    GetAsync(requestUri: Uri, completionOption: HttpCompletionOption): Task_1<HttpResponseMessage>;
+    GetAsync(requestUri: string, cancellationToken: CancellationToken): Task_1<HttpResponseMessage>;
+    GetAsync(requestUri: Uri, cancellationToken: CancellationToken): Task_1<HttpResponseMessage>;
+    GetAsync(requestUri: string, completionOption: HttpCompletionOption, cancellationToken: CancellationToken): Task_1<HttpResponseMessage>;
+    GetAsync(requestUri: Uri, completionOption: HttpCompletionOption, cancellationToken: CancellationToken): Task_1<HttpResponseMessage>;
+    GetByteArrayAsync(requestUri: string): Task_1<byte[]>;
+    GetByteArrayAsync(requestUri: Uri): Task_1<byte[]>;
+    GetByteArrayAsync(requestUri: string, cancellationToken: CancellationToken): Task_1<byte[]>;
+    GetByteArrayAsync(requestUri: Uri, cancellationToken: CancellationToken): Task_1<byte[]>;
+    GetStreamAsync(requestUri: string): Task_1<Stream>;
+    GetStreamAsync(requestUri: string, cancellationToken: CancellationToken): Task_1<Stream>;
+    GetStreamAsync(requestUri: Uri): Task_1<Stream>;
+    GetStreamAsync(requestUri: Uri, cancellationToken: CancellationToken): Task_1<Stream>;
+    GetStringAsync(requestUri: string): Task_1<System_Internal.String>;
+    GetStringAsync(requestUri: Uri): Task_1<System_Internal.String>;
+    GetStringAsync(requestUri: string, cancellationToken: CancellationToken): Task_1<System_Internal.String>;
+    GetStringAsync(requestUri: Uri, cancellationToken: CancellationToken): Task_1<System_Internal.String>;
+    PatchAsync(requestUri: string, content: HttpContent): Task_1<HttpResponseMessage>;
+    PatchAsync(requestUri: Uri, content: HttpContent): Task_1<HttpResponseMessage>;
+    PatchAsync(requestUri: string, content: HttpContent, cancellationToken: CancellationToken): Task_1<HttpResponseMessage>;
+    PatchAsync(requestUri: Uri, content: HttpContent, cancellationToken: CancellationToken): Task_1<HttpResponseMessage>;
+    PostAsync(requestUri: string, content: HttpContent): Task_1<HttpResponseMessage>;
+    PostAsync(requestUri: Uri, content: HttpContent): Task_1<HttpResponseMessage>;
+    PostAsync(requestUri: string, content: HttpContent, cancellationToken: CancellationToken): Task_1<HttpResponseMessage>;
+    PostAsync(requestUri: Uri, content: HttpContent, cancellationToken: CancellationToken): Task_1<HttpResponseMessage>;
+    PutAsync(requestUri: string, content: HttpContent): Task_1<HttpResponseMessage>;
+    PutAsync(requestUri: Uri, content: HttpContent): Task_1<HttpResponseMessage>;
+    PutAsync(requestUri: string, content: HttpContent, cancellationToken: CancellationToken): Task_1<HttpResponseMessage>;
+    PutAsync(requestUri: Uri, content: HttpContent, cancellationToken: CancellationToken): Task_1<HttpResponseMessage>;
     Send(request: HttpRequestMessage, cancellationToken: CancellationToken): HttpResponseMessage;
     SendAsync(request: HttpRequestMessage, cancellationToken: CancellationToken): Task_1<HttpResponseMessage>;
     SendAsync(request: HttpRequestMessage, cancellationToken: CancellationToken): Task_1<HttpResponseMessage>;
@@ -213,16 +214,20 @@ export interface HttpClientHandler$instance extends HttpMessageHandler$instance 
     readonly ClientCertificates: X509CertificateCollection;
     CookieContainer: CookieContainer;
     Credentials: ICredentials;
-    DefaultProxyCredentials: ICredentials | undefined;
+    get DefaultProxyCredentials(): ICredentials | undefined;
+    set DefaultProxyCredentials(value: ICredentials);
     MaxAutomaticRedirections: int;
     MaxConnectionsPerServer: int;
     MaxRequestContentBufferSize: long;
     MaxResponseHeadersLength: int;
-    MeterFactory: IMeterFactory | undefined;
+    get MeterFactory(): IMeterFactory | undefined;
+    set MeterFactory(value: IMeterFactory);
     PreAuthenticate: boolean;
     readonly Properties: IDictionary_2<System_Internal.String, unknown | undefined>;
-    Proxy: IWebProxy | undefined;
-    ServerCertificateCustomValidationCallback: Func_5<HttpRequestMessage, X509Certificate2 | undefined, X509Chain | undefined, SslPolicyErrors, System_Internal.Boolean> | undefined;
+    get Proxy(): IWebProxy | undefined;
+    set Proxy(value: IWebProxy);
+    get ServerCertificateCustomValidationCallback(): Func_5<HttpRequestMessage, X509Certificate2 | undefined, X509Chain | undefined, SslPolicyErrors, System_Internal.Boolean> | undefined;
+    set ServerCertificateCustomValidationCallback(value: Func_5<HttpRequestMessage, X509Certificate2 | undefined, X509Chain | undefined, SslPolicyErrors, System_Internal.Boolean>);
     SslProtocols: SslProtocols;
     readonly SupportsAutomaticDecompression: boolean;
     readonly SupportsProxy: boolean;
@@ -249,11 +254,11 @@ export type HttpClientHandler = HttpClientHandler$instance & __HttpClientHandler
 
 export interface HttpContent$instance {
     readonly Headers: HttpContentHeaders;
-    CopyTo(stream: Stream, context: TransportContext | undefined, cancellationToken: CancellationToken): void;
+    CopyTo(stream: Stream, context: TransportContext, cancellationToken: CancellationToken): void;
     CopyToAsync(stream: Stream): Task;
     CopyToAsync(stream: Stream, cancellationToken: CancellationToken): Task;
-    CopyToAsync(stream: Stream, context: TransportContext | undefined): Task;
-    CopyToAsync(stream: Stream, context: TransportContext | undefined, cancellationToken: CancellationToken): Task;
+    CopyToAsync(stream: Stream, context: TransportContext): Task;
+    CopyToAsync(stream: Stream, context: TransportContext, cancellationToken: CancellationToken): Task;
     Dispose(): void;
     LoadIntoBufferAsync(): Task;
     LoadIntoBufferAsync(maxBufferSize: long): Task;
@@ -291,7 +296,7 @@ export interface HttpIOException$instance extends IOException {
 
 
 export const HttpIOException: {
-    new(httpRequestError: HttpRequestError, message: string | undefined, innerException: Exception | undefined): HttpIOException;
+    new(httpRequestError: HttpRequestError, message: string, innerException: Exception): HttpIOException;
 };
 
 
@@ -344,8 +349,8 @@ export type HttpMessageInvoker = HttpMessageInvoker$instance & __HttpMessageInvo
 
 export interface HttpMethod$instance {
     readonly Method: string;
-    Equals(other: HttpMethod | undefined): boolean;
-    Equals(obj: unknown | undefined): boolean;
+    Equals(other: HttpMethod): boolean;
+    Equals(obj: unknown): boolean;
     GetHashCode(): int;
     ToString(): string;
 }
@@ -384,7 +389,7 @@ export interface HttpProtocolException$instance extends HttpIOException$instance
 
 
 export const HttpProtocolException: {
-    new(errorCode: long, message: string, innerException: Exception | undefined): HttpProtocolException;
+    new(errorCode: long, message: string, innerException: Exception): HttpProtocolException;
 };
 
 
@@ -404,10 +409,10 @@ export interface HttpRequestException$instance extends Exception {
 
 export const HttpRequestException: {
     new(): HttpRequestException;
-    new(message: string | undefined): HttpRequestException;
-    new(message: string | undefined, inner: Exception | undefined): HttpRequestException;
-    new(message: string | undefined, inner: Exception | undefined, statusCode: Nullable_1<HttpStatusCode>): HttpRequestException;
-    new(httpRequestError: HttpRequestError, message: string | undefined, inner: Exception | undefined, statusCode: Nullable_1<HttpStatusCode>): HttpRequestException;
+    new(message: string): HttpRequestException;
+    new(message: string, inner: Exception): HttpRequestException;
+    new(message: string, inner: Exception, statusCode: Nullable_1<HttpStatusCode>): HttpRequestException;
+    new(httpRequestError: HttpRequestError, message: string, inner: Exception, statusCode: Nullable_1<HttpStatusCode>): HttpRequestException;
 };
 
 
@@ -434,8 +439,8 @@ export interface HttpRequestMessage$instance {
 
 export const HttpRequestMessage: {
     new(): HttpRequestMessage;
-    new(method: HttpMethod, requestUri: Uri | undefined): HttpRequestMessage;
-    new(method: HttpMethod, requestUri: string | undefined): HttpRequestMessage;
+    new(method: HttpMethod, requestUri: Uri): HttpRequestMessage;
+    new(method: HttpMethod, requestUri: string): HttpRequestMessage;
 };
 
 
@@ -475,8 +480,10 @@ export interface HttpResponseMessage$instance {
     Content: HttpContent;
     readonly Headers: HttpResponseHeaders;
     readonly IsSuccessStatusCode: boolean;
-    ReasonPhrase: string | undefined;
-    RequestMessage: HttpRequestMessage | undefined;
+    get ReasonPhrase(): string | undefined;
+    set ReasonPhrase(value: string);
+    get RequestMessage(): HttpRequestMessage | undefined;
+    set RequestMessage(value: HttpRequestMessage);
     StatusCode: HttpStatusCode;
     readonly TrailingHeaders: HttpResponseHeaders;
     Version: Version;
@@ -518,7 +525,8 @@ export type MessageProcessingHandler = MessageProcessingHandler$instance & __Mes
 
 
 export interface MultipartContent$instance extends HttpContent$instance {
-    HeaderEncodingSelector: HeaderEncodingSelector_1<HttpContent> | undefined;
+    get HeaderEncodingSelector(): HeaderEncodingSelector_1<HttpContent> | undefined;
+    set HeaderEncodingSelector(value: HeaderEncodingSelector_1<HttpContent>);
     Add(content: HttpContent): void;
     Dispose(): void;
     GetEnumerator(): IEnumerator_1<HttpContent>;
@@ -595,14 +603,17 @@ export const SocketsHttpConnectionContext: {
 export type SocketsHttpConnectionContext = SocketsHttpConnectionContext$instance;
 
 export interface SocketsHttpHandler$instance extends HttpMessageHandler$instance {
-    ActivityHeadersPropagator: DistributedContextPropagator | undefined;
+    get ActivityHeadersPropagator(): DistributedContextPropagator | undefined;
+    set ActivityHeadersPropagator(value: DistributedContextPropagator);
     AllowAutoRedirect: boolean;
     AutomaticDecompression: DecompressionMethods;
-    ConnectCallback: Func_3<SocketsHttpConnectionContext | undefined, CancellationToken, ValueTask_1<Stream>> | undefined;
+    get ConnectCallback(): Func_3<SocketsHttpConnectionContext | undefined, CancellationToken, ValueTask_1<Stream>> | undefined;
+    set ConnectCallback(value: Func_3<SocketsHttpConnectionContext | undefined, CancellationToken, ValueTask_1<Stream>>);
     ConnectTimeout: TimeSpan;
     CookieContainer: CookieContainer;
     Credentials: ICredentials;
-    DefaultProxyCredentials: ICredentials | undefined;
+    get DefaultProxyCredentials(): ICredentials | undefined;
+    set DefaultProxyCredentials(value: ICredentials);
     EnableMultipleHttp2Connections: boolean;
     EnableMultipleHttp3Connections: boolean;
     Expect100ContinueTimeout: TimeSpan;
@@ -614,16 +625,21 @@ export interface SocketsHttpHandler$instance extends HttpMessageHandler$instance
     MaxConnectionsPerServer: int;
     MaxResponseDrainSize: int;
     MaxResponseHeadersLength: int;
-    MeterFactory: IMeterFactory | undefined;
-    PlaintextStreamFilter: Func_3<SocketsHttpPlaintextStreamFilterContext | undefined, CancellationToken, ValueTask_1<Stream>> | undefined;
+    get MeterFactory(): IMeterFactory | undefined;
+    set MeterFactory(value: IMeterFactory);
+    get PlaintextStreamFilter(): Func_3<SocketsHttpPlaintextStreamFilterContext | undefined, CancellationToken, ValueTask_1<Stream>> | undefined;
+    set PlaintextStreamFilter(value: Func_3<SocketsHttpPlaintextStreamFilterContext | undefined, CancellationToken, ValueTask_1<Stream>>);
     PooledConnectionIdleTimeout: TimeSpan;
     PooledConnectionLifetime: TimeSpan;
     PreAuthenticate: boolean;
     readonly Properties: IDictionary_2<System_Internal.String, unknown | undefined>;
-    Proxy: IWebProxy | undefined;
-    RequestHeaderEncodingSelector: HeaderEncodingSelector_1<HttpRequestMessage> | undefined;
+    get Proxy(): IWebProxy | undefined;
+    set Proxy(value: IWebProxy);
+    get RequestHeaderEncodingSelector(): HeaderEncodingSelector_1<HttpRequestMessage> | undefined;
+    set RequestHeaderEncodingSelector(value: HeaderEncodingSelector_1<HttpRequestMessage>);
     ResponseDrainTimeout: TimeSpan;
-    ResponseHeaderEncodingSelector: HeaderEncodingSelector_1<HttpRequestMessage> | undefined;
+    get ResponseHeaderEncodingSelector(): HeaderEncodingSelector_1<HttpRequestMessage> | undefined;
+    set ResponseHeaderEncodingSelector(value: HeaderEncodingSelector_1<HttpRequestMessage>);
     SslOptions: SslClientAuthenticationOptions;
     UseCookies: boolean;
     UseProxy: boolean;
@@ -683,10 +699,10 @@ export interface StringContent$instance extends ByteArrayContent$instance {
 
 export const StringContent: {
     new(content: string): StringContent;
-    new(content: string, mediaType: MediaTypeHeaderValue | undefined): StringContent;
-    new(content: string, encoding: Encoding | undefined): StringContent;
-    new(content: string, encoding: Encoding | undefined, mediaType: string | undefined): StringContent;
-    new(content: string, encoding: Encoding | undefined, mediaType: MediaTypeHeaderValue | undefined): StringContent;
+    new(content: string, mediaType: MediaTypeHeaderValue): StringContent;
+    new(content: string, encoding: Encoding): StringContent;
+    new(content: string, encoding: Encoding, mediaType: string): StringContent;
+    new(content: string, encoding: Encoding, mediaType: MediaTypeHeaderValue): StringContent;
 };
 
 

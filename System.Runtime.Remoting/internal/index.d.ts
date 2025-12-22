@@ -15,7 +15,7 @@ export interface ObjectHandle$instance extends MarshalByRefObject {
 
 
 export const ObjectHandle: {
-    new(o: unknown | undefined): ObjectHandle;
+    new(o: unknown): ObjectHandle;
 };
 
 

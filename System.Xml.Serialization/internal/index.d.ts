@@ -38,19 +38,19 @@ export enum XmlMappingAccess {
 }
 
 
-export type UnreferencedObjectEventHandler = (sender: unknown | undefined, e: UnreferencedObjectEventArgs) => void;
+export type UnreferencedObjectEventHandler = (sender: unknown, e: UnreferencedObjectEventArgs) => void;
 
 
-export type XmlAttributeEventHandler = (sender: unknown | undefined, e: XmlAttributeEventArgs) => void;
+export type XmlAttributeEventHandler = (sender: unknown, e: XmlAttributeEventArgs) => void;
 
 
-export type XmlElementEventHandler = (sender: unknown | undefined, e: XmlElementEventArgs) => void;
+export type XmlElementEventHandler = (sender: unknown, e: XmlElementEventArgs) => void;
 
 
-export type XmlNodeEventHandler = (sender: unknown | undefined, e: XmlNodeEventArgs) => void;
+export type XmlNodeEventHandler = (sender: unknown, e: XmlNodeEventArgs) => void;
 
 
-export type XmlSerializationCollectionFixupCallback = (collection: unknown | undefined, collectionItems: unknown | undefined) => void;
+export type XmlSerializationCollectionFixupCallback = (collection: unknown, collectionItems: unknown) => void;
 
 
 export type XmlSerializationFixupCallback = (fixup: unknown) => void;
@@ -80,10 +80,14 @@ export interface IXmlTextParser$instance {
 export type IXmlTextParser = IXmlTextParser$instance;
 
 export interface XmlDeserializationEvents$instance {
-    OnUnknownAttribute: XmlAttributeEventHandler | undefined;
-    OnUnknownElement: XmlElementEventHandler | undefined;
-    OnUnknownNode: XmlNodeEventHandler | undefined;
-    OnUnreferencedObject: UnreferencedObjectEventHandler | undefined;
+    get OnUnknownAttribute(): XmlAttributeEventHandler | undefined;
+    set OnUnknownAttribute(value: XmlAttributeEventHandler);
+    get OnUnknownElement(): XmlElementEventHandler | undefined;
+    set OnUnknownElement(value: XmlElementEventHandler);
+    get OnUnknownNode(): XmlNodeEventHandler | undefined;
+    set OnUnknownNode(value: XmlNodeEventHandler);
+    get OnUnreferencedObject(): UnreferencedObjectEventHandler | undefined;
+    set OnUnreferencedObject(value: UnreferencedObjectEventHandler);
 }
 
 
@@ -110,9 +114,9 @@ export type CodeIdentifier = CodeIdentifier$instance;
 
 export interface CodeIdentifiers$instance {
     UseCamelCasing: boolean;
-    Add(identifier: string, value: unknown | undefined): void;
+    Add(identifier: string, value: unknown): void;
     AddReserved(identifier: string): void;
-    AddUnique(identifier: string, value: unknown | undefined): string;
+    AddUnique(identifier: string, value: unknown): string;
     Clear(): void;
     IsInUse(identifier: string): boolean;
     MakeRightCase(identifier: string): string;
@@ -139,7 +143,7 @@ export interface ImportContext$instance {
 
 
 export const ImportContext: {
-    new(identifiers: CodeIdentifiers | undefined, shareTypes: boolean): ImportContext;
+    new(identifiers: CodeIdentifiers, shareTypes: boolean): ImportContext;
 };
 
 
@@ -171,8 +175,8 @@ export const SoapAttributeAttribute: {
 export type SoapAttributeAttribute = SoapAttributeAttribute$instance;
 
 export interface SoapAttributeOverrides$instance {
-    Add(type_: Type, attributes: SoapAttributes | undefined): void;
-    Add(type_: Type, member: string, attributes: SoapAttributes | undefined): void;
+    Add(type_: Type, attributes: SoapAttributes): void;
+    Add(type_: Type, member: string, attributes: SoapAttributes): void;
     get_Item(type_: Type): SoapAttributes | undefined;
     get_Item(type_: Type, member: string): SoapAttributes | undefined;
 }
@@ -186,12 +190,17 @@ export const SoapAttributeOverrides: {
 export type SoapAttributeOverrides = SoapAttributeOverrides$instance;
 
 export interface SoapAttributes$instance {
-    SoapAttribute: SoapAttributeAttribute | undefined;
-    SoapDefaultValue: unknown | undefined;
-    SoapElement: SoapElementAttribute | undefined;
-    SoapEnum: SoapEnumAttribute | undefined;
+    get SoapAttribute(): SoapAttributeAttribute | undefined;
+    set SoapAttribute(value: SoapAttributeAttribute);
+    get SoapDefaultValue(): unknown | undefined;
+    set SoapDefaultValue(value: unknown);
+    get SoapElement(): SoapElementAttribute | undefined;
+    set SoapElement(value: SoapElementAttribute);
+    get SoapEnum(): SoapEnumAttribute | undefined;
+    set SoapEnum(value: SoapEnumAttribute);
     SoapIgnore: boolean;
-    SoapType: SoapTypeAttribute | undefined;
+    get SoapType(): SoapTypeAttribute | undefined;
+    set SoapType(value: SoapTypeAttribute);
 }
 
 
@@ -212,7 +221,7 @@ export interface SoapElementAttribute$instance extends Attribute {
 
 export const SoapElementAttribute: {
     new(): SoapElementAttribute;
-    new(elementName: string | undefined): SoapElementAttribute;
+    new(elementName: string): SoapElementAttribute;
 };
 
 
@@ -255,12 +264,12 @@ export const SoapIncludeAttribute: {
 export type SoapIncludeAttribute = SoapIncludeAttribute$instance;
 
 export interface SoapReflectionImporter$instance {
-    ImportMembersMapping(elementName: string | undefined, ns: string | undefined, members: XmlReflectionMember[]): XmlMembersMapping;
-    ImportMembersMapping(elementName: string | undefined, ns: string | undefined, members: XmlReflectionMember[], hasWrapperElement: boolean, writeAccessors: boolean): XmlMembersMapping;
-    ImportMembersMapping(elementName: string | undefined, ns: string | undefined, members: XmlReflectionMember[], hasWrapperElement: boolean, writeAccessors: boolean, validate: boolean): XmlMembersMapping;
-    ImportMembersMapping(elementName: string | undefined, ns: string | undefined, members: XmlReflectionMember[], hasWrapperElement: boolean, writeAccessors: boolean, validate: boolean, access: XmlMappingAccess): XmlMembersMapping;
+    ImportMembersMapping(elementName: string, ns: string, members: XmlReflectionMember[]): XmlMembersMapping;
+    ImportMembersMapping(elementName: string, ns: string, members: XmlReflectionMember[], hasWrapperElement: boolean, writeAccessors: boolean): XmlMembersMapping;
+    ImportMembersMapping(elementName: string, ns: string, members: XmlReflectionMember[], hasWrapperElement: boolean, writeAccessors: boolean, validate: boolean): XmlMembersMapping;
+    ImportMembersMapping(elementName: string, ns: string, members: XmlReflectionMember[], hasWrapperElement: boolean, writeAccessors: boolean, validate: boolean, access: XmlMappingAccess): XmlMembersMapping;
     ImportTypeMapping(type_: Type): XmlTypeMapping;
-    ImportTypeMapping(type_: Type, defaultNamespace: string | undefined): XmlTypeMapping;
+    ImportTypeMapping(type_: Type, defaultNamespace: string): XmlTypeMapping;
     IncludeType(type_: Type): void;
     IncludeTypes(provider: ICustomAttributeProvider): void;
 }
@@ -268,9 +277,9 @@ export interface SoapReflectionImporter$instance {
 
 export const SoapReflectionImporter: {
     new(): SoapReflectionImporter;
-    new(defaultNamespace: string | undefined): SoapReflectionImporter;
-    new(attributeOverrides: SoapAttributeOverrides | undefined): SoapReflectionImporter;
-    new(attributeOverrides: SoapAttributeOverrides | undefined, defaultNamespace: string | undefined): SoapReflectionImporter;
+    new(defaultNamespace: string): SoapReflectionImporter;
+    new(attributeOverrides: SoapAttributeOverrides): SoapReflectionImporter;
+    new(attributeOverrides: SoapAttributeOverrides, defaultNamespace: string): SoapReflectionImporter;
 };
 
 
@@ -278,7 +287,8 @@ export type SoapReflectionImporter = SoapReflectionImporter$instance;
 
 export interface SoapSchemaMember$instance {
     MemberName: string;
-    MemberType: XmlQualifiedName | undefined;
+    get MemberType(): XmlQualifiedName | undefined;
+    set MemberType(value: XmlQualifiedName);
 }
 
 
@@ -298,8 +308,8 @@ export interface SoapTypeAttribute$instance extends Attribute {
 
 export const SoapTypeAttribute: {
     new(): SoapTypeAttribute;
-    new(typeName: string | undefined): SoapTypeAttribute;
-    new(typeName: string | undefined, ns: string | undefined): SoapTypeAttribute;
+    new(typeName: string): SoapTypeAttribute;
+    new(typeName: string, ns: string): SoapTypeAttribute;
 };
 
 
@@ -312,7 +322,7 @@ export interface UnreferencedObjectEventArgs$instance extends EventArgs {
 
 
 export const UnreferencedObjectEventArgs: {
-    new(o: unknown | undefined, id: string | undefined): UnreferencedObjectEventArgs;
+    new(o: unknown, id: string): UnreferencedObjectEventArgs;
 };
 
 
@@ -338,8 +348,8 @@ export interface XmlAnyElementAttribute$instance extends Attribute {
 
 export const XmlAnyElementAttribute: {
     new(): XmlAnyElementAttribute;
-    new(name: string | undefined): XmlAnyElementAttribute;
-    new(name: string | undefined, ns: string | undefined): XmlAnyElementAttribute;
+    new(name: string): XmlAnyElementAttribute;
+    new(name: string, ns: string): XmlAnyElementAttribute;
 };
 
 
@@ -347,14 +357,14 @@ export type XmlAnyElementAttribute = XmlAnyElementAttribute$instance;
 
 export interface XmlAnyElementAttributes$instance extends CollectionBase {
     Item: XmlAnyElementAttribute;
-    Add(value: unknown | undefined): int;
+    Add(value: unknown): int;
     Clear(): void;
-    Contains(value: unknown | undefined): boolean;
+    Contains(value: unknown): boolean;
     CopyTo(array: ClrArray, index: int): void;
     GetEnumerator(): IEnumerator;
-    IndexOf(attribute: XmlAnyElementAttribute | undefined): int;
-    Insert(index: int, value: unknown | undefined): void;
-    Remove(value: unknown | undefined): void;
+    IndexOf(attribute: XmlAnyElementAttribute): int;
+    Insert(index: int, value: unknown): void;
+    Remove(value: unknown): void;
     RemoveAt(index: int): void;
 }
 
@@ -384,7 +394,7 @@ export interface XmlArrayAttribute$instance extends Attribute {
 
 export const XmlArrayAttribute: {
     new(): XmlArrayAttribute;
-    new(elementName: string | undefined): XmlArrayAttribute;
+    new(elementName: string): XmlArrayAttribute;
 };
 
 
@@ -403,9 +413,9 @@ export interface XmlArrayItemAttribute$instance extends Attribute {
 
 export const XmlArrayItemAttribute: {
     new(): XmlArrayItemAttribute;
-    new(elementName: string | undefined): XmlArrayItemAttribute;
-    new(type_: Type | undefined): XmlArrayItemAttribute;
-    new(elementName: string | undefined, type_: Type | undefined): XmlArrayItemAttribute;
+    new(elementName: string): XmlArrayItemAttribute;
+    new(type_: Type): XmlArrayItemAttribute;
+    new(elementName: string, type_: Type): XmlArrayItemAttribute;
 };
 
 
@@ -413,14 +423,14 @@ export type XmlArrayItemAttribute = XmlArrayItemAttribute$instance;
 
 export interface XmlArrayItemAttributes$instance extends CollectionBase {
     Item: XmlArrayItemAttribute;
-    Add(value: unknown | undefined): int;
+    Add(value: unknown): int;
     Clear(): void;
-    Contains(value: unknown | undefined): boolean;
+    Contains(value: unknown): boolean;
     CopyTo(array: ClrArray, index: int): void;
     GetEnumerator(): IEnumerator;
-    IndexOf(attribute: XmlArrayItemAttribute | undefined): int;
-    Insert(index: int, value: unknown | undefined): void;
-    Remove(value: unknown | undefined): void;
+    IndexOf(attribute: XmlArrayItemAttribute): int;
+    Insert(index: int, value: unknown): void;
+    Remove(value: unknown): void;
     RemoveAt(index: int): void;
 }
 
@@ -450,9 +460,9 @@ export interface XmlAttributeAttribute$instance extends Attribute {
 
 export const XmlAttributeAttribute: {
     new(): XmlAttributeAttribute;
-    new(attributeName: string | undefined): XmlAttributeAttribute;
-    new(type_: Type | undefined): XmlAttributeAttribute;
-    new(attributeName: string | undefined, type_: Type | undefined): XmlAttributeAttribute;
+    new(attributeName: string): XmlAttributeAttribute;
+    new(type_: Type): XmlAttributeAttribute;
+    new(attributeName: string, type_: Type): XmlAttributeAttribute;
 };
 
 
@@ -476,7 +486,7 @@ export type XmlAttributeEventArgs = XmlAttributeEventArgs$instance;
 
 export interface XmlAttributeOverrides$instance {
     Add(type_: Type, attributes: XmlAttributes): void;
-    Add(type_: Type, member: string, attributes: XmlAttributes | undefined): void;
+    Add(type_: Type, member: string, attributes: XmlAttributes): void;
     get_Item(type_: Type): XmlAttributes | undefined;
     get_Item(type_: Type, member: string): XmlAttributes | undefined;
 }
@@ -490,20 +500,28 @@ export const XmlAttributeOverrides: {
 export type XmlAttributeOverrides = XmlAttributeOverrides$instance;
 
 export interface XmlAttributes$instance {
-    XmlAnyAttribute: XmlAnyAttributeAttribute | undefined;
+    get XmlAnyAttribute(): XmlAnyAttributeAttribute | undefined;
+    set XmlAnyAttribute(value: XmlAnyAttributeAttribute);
     readonly XmlAnyElements: XmlAnyElementAttributes;
-    XmlArray: XmlArrayAttribute | undefined;
+    get XmlArray(): XmlArrayAttribute | undefined;
+    set XmlArray(value: XmlArrayAttribute);
     readonly XmlArrayItems: XmlArrayItemAttributes;
-    XmlAttribute: XmlAttributeAttribute | undefined;
+    get XmlAttribute(): XmlAttributeAttribute | undefined;
+    set XmlAttribute(value: XmlAttributeAttribute);
     readonly XmlChoiceIdentifier: XmlChoiceIdentifierAttribute | undefined;
-    XmlDefaultValue: unknown | undefined;
+    get XmlDefaultValue(): unknown | undefined;
+    set XmlDefaultValue(value: unknown);
     readonly XmlElements: XmlElementAttributes;
-    XmlEnum: XmlEnumAttribute | undefined;
+    get XmlEnum(): XmlEnumAttribute | undefined;
+    set XmlEnum(value: XmlEnumAttribute);
     XmlIgnore: boolean;
     Xmlns: boolean;
-    XmlRoot: XmlRootAttribute | undefined;
-    XmlText: XmlTextAttribute | undefined;
-    XmlType: XmlTypeAttribute | undefined;
+    get XmlRoot(): XmlRootAttribute | undefined;
+    set XmlRoot(value: XmlRootAttribute);
+    get XmlText(): XmlTextAttribute | undefined;
+    set XmlText(value: XmlTextAttribute);
+    get XmlType(): XmlTypeAttribute | undefined;
+    set XmlType(value: XmlTypeAttribute);
 }
 
 
@@ -522,7 +540,7 @@ export interface XmlChoiceIdentifierAttribute$instance extends Attribute {
 
 export const XmlChoiceIdentifierAttribute: {
     new(): XmlChoiceIdentifierAttribute;
-    new(name: string | undefined): XmlChoiceIdentifierAttribute;
+    new(name: string): XmlChoiceIdentifierAttribute;
 };
 
 
@@ -541,9 +559,9 @@ export interface XmlElementAttribute$instance extends Attribute {
 
 export const XmlElementAttribute: {
     new(): XmlElementAttribute;
-    new(elementName: string | undefined): XmlElementAttribute;
-    new(type_: Type | undefined): XmlElementAttribute;
-    new(elementName: string | undefined, type_: Type | undefined): XmlElementAttribute;
+    new(elementName: string): XmlElementAttribute;
+    new(type_: Type): XmlElementAttribute;
+    new(elementName: string, type_: Type): XmlElementAttribute;
 };
 
 
@@ -551,14 +569,14 @@ export type XmlElementAttribute = XmlElementAttribute$instance;
 
 export interface XmlElementAttributes$instance extends CollectionBase {
     Item: XmlElementAttribute;
-    Add(value: unknown | undefined): int;
+    Add(value: unknown): int;
     Clear(): void;
-    Contains(value: unknown | undefined): boolean;
+    Contains(value: unknown): boolean;
     CopyTo(array: ClrArray, index: int): void;
     GetEnumerator(): IEnumerator;
-    IndexOf(attribute: XmlElementAttribute | undefined): int;
-    Insert(index: int, value: unknown | undefined): void;
-    Remove(value: unknown | undefined): void;
+    IndexOf(attribute: XmlElementAttribute): int;
+    Insert(index: int, value: unknown): void;
+    Remove(value: unknown): void;
     RemoveAt(index: int): void;
 }
 
@@ -600,7 +618,7 @@ export interface XmlEnumAttribute$instance extends Attribute {
 
 export const XmlEnumAttribute: {
     new(): XmlEnumAttribute;
-    new(name: string | undefined): XmlEnumAttribute;
+    new(name: string): XmlEnumAttribute;
 };
 
 
@@ -623,7 +641,7 @@ export interface XmlIncludeAttribute$instance extends Attribute {
 
 
 export const XmlIncludeAttribute: {
-    new(type_: Type | undefined): XmlIncludeAttribute;
+    new(type_: Type): XmlIncludeAttribute;
 };
 
 
@@ -633,7 +651,7 @@ export interface XmlMapping$instance {
     readonly ElementName: string;
     readonly Namespace: string;
     readonly XsdElementName: string;
-    SetKey(key: string | undefined): void;
+    SetKey(key: string): void;
 }
 
 
@@ -709,14 +727,14 @@ export const XmlNodeEventArgs: {
 export type XmlNodeEventArgs = XmlNodeEventArgs$instance;
 
 export interface XmlReflectionImporter$instance {
-    ImportMembersMapping(elementName: string | undefined, ns: string | undefined, members: XmlReflectionMember[], hasWrapperElement: boolean): XmlMembersMapping;
-    ImportMembersMapping(elementName: string | undefined, ns: string | undefined, members: XmlReflectionMember[], hasWrapperElement: boolean, rpc: boolean): XmlMembersMapping;
-    ImportMembersMapping(elementName: string | undefined, ns: string | undefined, members: XmlReflectionMember[], hasWrapperElement: boolean, rpc: boolean, openModel: boolean): XmlMembersMapping;
-    ImportMembersMapping(elementName: string | undefined, ns: string | undefined, members: XmlReflectionMember[], hasWrapperElement: boolean, rpc: boolean, openModel: boolean, access: XmlMappingAccess): XmlMembersMapping;
+    ImportMembersMapping(elementName: string, ns: string, members: XmlReflectionMember[], hasWrapperElement: boolean): XmlMembersMapping;
+    ImportMembersMapping(elementName: string, ns: string, members: XmlReflectionMember[], hasWrapperElement: boolean, rpc: boolean): XmlMembersMapping;
+    ImportMembersMapping(elementName: string, ns: string, members: XmlReflectionMember[], hasWrapperElement: boolean, rpc: boolean, openModel: boolean): XmlMembersMapping;
+    ImportMembersMapping(elementName: string, ns: string, members: XmlReflectionMember[], hasWrapperElement: boolean, rpc: boolean, openModel: boolean, access: XmlMappingAccess): XmlMembersMapping;
     ImportTypeMapping(type_: Type): XmlTypeMapping;
-    ImportTypeMapping(type_: Type, defaultNamespace: string | undefined): XmlTypeMapping;
-    ImportTypeMapping(type_: Type, root: XmlRootAttribute | undefined): XmlTypeMapping;
-    ImportTypeMapping(type_: Type, root: XmlRootAttribute | undefined, defaultNamespace: string | undefined): XmlTypeMapping;
+    ImportTypeMapping(type_: Type, defaultNamespace: string): XmlTypeMapping;
+    ImportTypeMapping(type_: Type, root: XmlRootAttribute): XmlTypeMapping;
+    ImportTypeMapping(type_: Type, root: XmlRootAttribute, defaultNamespace: string): XmlTypeMapping;
     IncludeType(type_: Type): void;
     IncludeTypes(provider: ICustomAttributeProvider): void;
 }
@@ -724,9 +742,9 @@ export interface XmlReflectionImporter$instance {
 
 export const XmlReflectionImporter: {
     new(): XmlReflectionImporter;
-    new(defaultNamespace: string | undefined): XmlReflectionImporter;
-    new(attributeOverrides: XmlAttributeOverrides | undefined): XmlReflectionImporter;
-    new(attributeOverrides: XmlAttributeOverrides | undefined, defaultNamespace: string | undefined): XmlReflectionImporter;
+    new(defaultNamespace: string): XmlReflectionImporter;
+    new(attributeOverrides: XmlAttributeOverrides): XmlReflectionImporter;
+    new(attributeOverrides: XmlAttributeOverrides, defaultNamespace: string): XmlReflectionImporter;
 };
 
 
@@ -735,7 +753,8 @@ export type XmlReflectionImporter = XmlReflectionImporter$instance;
 export interface XmlReflectionMember$instance {
     IsReturnValue: boolean;
     MemberName: string;
-    MemberType: Type | undefined;
+    get MemberType(): Type | undefined;
+    set MemberType(value: Type);
     OverrideIsNullable: boolean;
     SoapAttributes: SoapAttributes;
     XmlAttributes: XmlAttributes;
@@ -787,7 +806,7 @@ export type XmlSchemaEnumerator = XmlSchemaEnumerator$instance & __XmlSchemaEnum
 
 
 export interface XmlSchemaExporter$instance {
-    ExportAnyType(ns: string | undefined): string;
+    ExportAnyType(ns: string): string;
     ExportAnyType(members: XmlMembersMapping): string | undefined;
     ExportMembersMapping(xmlMembersMapping: XmlMembersMapping): void;
     ExportMembersMapping(xmlMembersMapping: XmlMembersMapping, exportEnclosingType: boolean): void;
@@ -805,22 +824,22 @@ export type XmlSchemaExporter = XmlSchemaExporter$instance;
 
 export interface XmlSchemaImporter$instance extends SchemaImporter {
     ImportAnyType(typeName: XmlQualifiedName, elementName: string): XmlMembersMapping | undefined;
-    ImportDerivedTypeMapping(name: XmlQualifiedName, baseType: Type | undefined): XmlTypeMapping;
-    ImportDerivedTypeMapping(name: XmlQualifiedName, baseType: Type | undefined, baseTypeCanBeIndirect: boolean): XmlTypeMapping;
+    ImportDerivedTypeMapping(name: XmlQualifiedName, baseType: Type): XmlTypeMapping;
+    ImportDerivedTypeMapping(name: XmlQualifiedName, baseType: Type, baseTypeCanBeIndirect: boolean): XmlTypeMapping;
     ImportMembersMapping(name: XmlQualifiedName): XmlMembersMapping;
     ImportMembersMapping(names: XmlQualifiedName[]): XmlMembersMapping;
-    ImportMembersMapping(names: XmlQualifiedName[], baseType: Type | undefined, baseTypeCanBeIndirect: boolean): XmlMembersMapping;
-    ImportMembersMapping(name: string, ns: string | undefined, members: SoapSchemaMember[]): XmlMembersMapping;
+    ImportMembersMapping(names: XmlQualifiedName[], baseType: Type, baseTypeCanBeIndirect: boolean): XmlMembersMapping;
+    ImportMembersMapping(name: string, ns: string, members: SoapSchemaMember[]): XmlMembersMapping;
     ImportSchemaType(typeName: XmlQualifiedName): XmlTypeMapping;
-    ImportSchemaType(typeName: XmlQualifiedName, baseType: Type | undefined): XmlTypeMapping;
-    ImportSchemaType(typeName: XmlQualifiedName, baseType: Type | undefined, baseTypeCanBeIndirect: boolean): XmlTypeMapping;
+    ImportSchemaType(typeName: XmlQualifiedName, baseType: Type): XmlTypeMapping;
+    ImportSchemaType(typeName: XmlQualifiedName, baseType: Type, baseTypeCanBeIndirect: boolean): XmlTypeMapping;
     ImportTypeMapping(name: XmlQualifiedName): XmlTypeMapping;
 }
 
 
 export const XmlSchemaImporter: {
     new(schemas: XmlSchemas): XmlSchemaImporter;
-    new(schemas: XmlSchemas, typeIdentifiers: CodeIdentifiers | undefined): XmlSchemaImporter;
+    new(schemas: XmlSchemas, typeIdentifiers: CodeIdentifiers): XmlSchemaImporter;
 };
 
 
@@ -833,7 +852,7 @@ export interface XmlSchemaProviderAttribute$instance extends Attribute {
 
 
 export const XmlSchemaProviderAttribute: {
-    new(methodName: string | undefined): XmlSchemaProviderAttribute;
+    new(methodName: string): XmlSchemaProviderAttribute;
 };
 
 
@@ -842,21 +861,21 @@ export type XmlSchemaProviderAttribute = XmlSchemaProviderAttribute$instance;
 export interface XmlSchemas$instance extends CollectionBase {
     readonly IsCompiled: boolean;
     Add(schemas: XmlSchemas): void;
-    Add(value: unknown | undefined): int;
+    Add(value: unknown): int;
     AddReference(schema: XmlSchema): void;
     Clear(): void;
-    Compile(handler: ValidationEventHandler | undefined, fullCompile: boolean): void;
+    Compile(handler: ValidationEventHandler, fullCompile: boolean): void;
     Contains(schema: XmlSchema): boolean;
-    Contains(value: unknown | undefined): boolean;
+    Contains(value: unknown): boolean;
     CopyTo(array: ClrArray, index: int): void;
     Find(name: XmlQualifiedName, type_: Type): unknown | undefined;
     get_Item(index: int): XmlSchema;
-    get_Item(ns: string | undefined): XmlSchema;
+    get_Item(ns: string): XmlSchema;
     GetEnumerator(): IEnumerator;
-    GetSchemas(ns: string | undefined): IList;
+    GetSchemas(ns: string): IList;
     IndexOf(schema: XmlSchema): int;
-    Insert(index: int, value: unknown | undefined): void;
-    Remove(value: unknown | undefined): void;
+    Insert(index: int, value: unknown): void;
+    Remove(value: unknown): void;
     RemoveAt(index: int): void;
     set_Item(index: int, value: XmlSchema): void;
 }
@@ -914,32 +933,32 @@ export interface XmlSerializer$instance {
     Deserialize(textReader: TextReader): unknown | undefined;
     Deserialize(xmlReader: XmlReader): unknown | undefined;
     Deserialize(xmlReader: XmlReader, events: XmlDeserializationEvents): unknown | undefined;
-    Deserialize(xmlReader: XmlReader, encodingStyle: string | undefined): unknown | undefined;
-    Deserialize(xmlReader: XmlReader, encodingStyle: string | undefined, events: XmlDeserializationEvents): unknown | undefined;
-    Serialize(textWriter: TextWriter, o: unknown | undefined): void;
-    Serialize(textWriter: TextWriter, o: unknown | undefined, namespaces: XmlSerializerNamespaces | undefined): void;
-    Serialize(stream: Stream, o: unknown | undefined): void;
-    Serialize(stream: Stream, o: unknown | undefined, namespaces: XmlSerializerNamespaces | undefined): void;
-    Serialize(xmlWriter: XmlWriter, o: unknown | undefined): void;
-    Serialize(xmlWriter: XmlWriter, o: unknown | undefined, namespaces: XmlSerializerNamespaces | undefined): void;
-    Serialize(xmlWriter: XmlWriter, o: unknown | undefined, namespaces: XmlSerializerNamespaces | undefined, encodingStyle: string | undefined): void;
-    Serialize(xmlWriter: XmlWriter, o: unknown | undefined, namespaces: XmlSerializerNamespaces | undefined, encodingStyle: string | undefined, id: string | undefined): void;
+    Deserialize(xmlReader: XmlReader, encodingStyle: string): unknown | undefined;
+    Deserialize(xmlReader: XmlReader, encodingStyle: string, events: XmlDeserializationEvents): unknown | undefined;
+    Serialize(textWriter: TextWriter, o: unknown): void;
+    Serialize(textWriter: TextWriter, o: unknown, namespaces: XmlSerializerNamespaces): void;
+    Serialize(stream: Stream, o: unknown): void;
+    Serialize(stream: Stream, o: unknown, namespaces: XmlSerializerNamespaces): void;
+    Serialize(xmlWriter: XmlWriter, o: unknown): void;
+    Serialize(xmlWriter: XmlWriter, o: unknown, namespaces: XmlSerializerNamespaces): void;
+    Serialize(xmlWriter: XmlWriter, o: unknown, namespaces: XmlSerializerNamespaces, encodingStyle: string): void;
+    Serialize(xmlWriter: XmlWriter, o: unknown, namespaces: XmlSerializerNamespaces, encodingStyle: string, id: string): void;
 }
 
 
 export const XmlSerializer: {
-    new(type_: Type, overrides: XmlAttributeOverrides | undefined, extraTypes: Type[] | undefined, root: XmlRootAttribute | undefined, defaultNamespace: string | undefined): XmlSerializer;
-    new(type_: Type, root: XmlRootAttribute | undefined): XmlSerializer;
-    new(type_: Type, extraTypes: Type[] | undefined): XmlSerializer;
-    new(type_: Type, overrides: XmlAttributeOverrides | undefined): XmlSerializer;
+    new(type_: Type, overrides: XmlAttributeOverrides, extraTypes: Type[], root: XmlRootAttribute, defaultNamespace: string): XmlSerializer;
+    new(type_: Type, root: XmlRootAttribute): XmlSerializer;
+    new(type_: Type, extraTypes: Type[]): XmlSerializer;
+    new(type_: Type, overrides: XmlAttributeOverrides): XmlSerializer;
     new(xmlTypeMapping: XmlTypeMapping): XmlSerializer;
     new(type_: Type): XmlSerializer;
-    new(type_: Type, defaultNamespace: string | undefined): XmlSerializer;
-    new(type_: Type, overrides: XmlAttributeOverrides | undefined, extraTypes: Type[] | undefined, root: XmlRootAttribute | undefined, defaultNamespace: string | undefined, location: string | undefined): XmlSerializer;
-    FromMappings(mappings: XmlMapping[] | undefined, type_: Type | undefined): (XmlSerializer | undefined)[];
-    FromMappings(mappings: XmlMapping[] | undefined): (XmlSerializer | undefined)[];
-    FromTypes(types: Type[] | undefined): (XmlSerializer | undefined)[];
-    GetXmlSerializerAssemblyName(type_: Type, defaultNamespace: string | undefined): string;
+    new(type_: Type, defaultNamespace: string): XmlSerializer;
+    new(type_: Type, overrides: XmlAttributeOverrides, extraTypes: Type[], root: XmlRootAttribute, defaultNamespace: string, location: string): XmlSerializer;
+    FromMappings(mappings: XmlMapping[], type_: Type): (XmlSerializer | undefined)[];
+    FromMappings(mappings: XmlMapping[]): (XmlSerializer | undefined)[];
+    FromTypes(types: Type[]): (XmlSerializer | undefined)[];
+    GetXmlSerializerAssemblyName(type_: Type, defaultNamespace: string): string;
     GetXmlSerializerAssemblyName(type_: Type): string;
 };
 
@@ -948,28 +967,29 @@ export type XmlSerializer = XmlSerializer$instance;
 
 export interface XmlSerializerAssemblyAttribute$instance extends Attribute {
     AssemblyName: string;
-    CodeBase: string | undefined;
+    get CodeBase(): string | undefined;
+    set CodeBase(value: string);
 }
 
 
 export const XmlSerializerAssemblyAttribute: {
     new(): XmlSerializerAssemblyAttribute;
-    new(assemblyName: string | undefined): XmlSerializerAssemblyAttribute;
-    new(assemblyName: string | undefined, codeBase: string | undefined): XmlSerializerAssemblyAttribute;
+    new(assemblyName: string): XmlSerializerAssemblyAttribute;
+    new(assemblyName: string, codeBase: string): XmlSerializerAssemblyAttribute;
 };
 
 
 export type XmlSerializerAssemblyAttribute = XmlSerializerAssemblyAttribute$instance;
 
 export interface XmlSerializerFactory$instance {
-    CreateSerializer(type_: Type, overrides: XmlAttributeOverrides | undefined, extraTypes: Type[] | undefined, root: XmlRootAttribute | undefined, defaultNamespace: string | undefined): XmlSerializer;
-    CreateSerializer(type_: Type, root: XmlRootAttribute | undefined): XmlSerializer;
-    CreateSerializer(type_: Type, extraTypes: Type[] | undefined): XmlSerializer;
-    CreateSerializer(type_: Type, overrides: XmlAttributeOverrides | undefined): XmlSerializer;
+    CreateSerializer(type_: Type, overrides: XmlAttributeOverrides, extraTypes: Type[], root: XmlRootAttribute, defaultNamespace: string): XmlSerializer;
+    CreateSerializer(type_: Type, root: XmlRootAttribute): XmlSerializer;
+    CreateSerializer(type_: Type, extraTypes: Type[]): XmlSerializer;
+    CreateSerializer(type_: Type, overrides: XmlAttributeOverrides): XmlSerializer;
     CreateSerializer(xmlTypeMapping: XmlTypeMapping): XmlSerializer;
     CreateSerializer(type_: Type): XmlSerializer;
-    CreateSerializer(type_: Type, defaultNamespace: string | undefined): XmlSerializer;
-    CreateSerializer(type_: Type, overrides: XmlAttributeOverrides | undefined, extraTypes: Type[] | undefined, root: XmlRootAttribute | undefined, defaultNamespace: string | undefined, location: string | undefined): XmlSerializer;
+    CreateSerializer(type_: Type, defaultNamespace: string): XmlSerializer;
+    CreateSerializer(type_: Type, overrides: XmlAttributeOverrides, extraTypes: Type[], root: XmlRootAttribute, defaultNamespace: string, location: string): XmlSerializer;
 }
 
 
@@ -999,7 +1019,7 @@ export type XmlSerializerImplementation = XmlSerializerImplementation$instance;
 
 export interface XmlSerializerNamespaces$instance {
     readonly Count: int;
-    Add(prefix: string, ns: string | undefined): void;
+    Add(prefix: string, ns: string): void;
     ToArray(): XmlQualifiedName[];
 }
 
@@ -1015,7 +1035,8 @@ export type XmlSerializerNamespaces = XmlSerializerNamespaces$instance;
 
 export interface XmlSerializerVersionAttribute$instance extends Attribute {
     Namespace: string;
-    ParentAssemblyId: string | undefined;
+    get ParentAssemblyId(): string | undefined;
+    set ParentAssemblyId(value: string);
     Type: Type;
     Version: string;
 }
@@ -1023,7 +1044,7 @@ export interface XmlSerializerVersionAttribute$instance extends Attribute {
 
 export const XmlSerializerVersionAttribute: {
     new(): XmlSerializerVersionAttribute;
-    new(type_: Type | undefined): XmlSerializerVersionAttribute;
+    new(type_: Type): XmlSerializerVersionAttribute;
 };
 
 
@@ -1037,7 +1058,7 @@ export interface XmlTextAttribute$instance extends Attribute {
 
 export const XmlTextAttribute: {
     new(): XmlTextAttribute;
-    new(type_: Type | undefined): XmlTextAttribute;
+    new(type_: Type): XmlTextAttribute;
 };
 
 
@@ -1053,7 +1074,7 @@ export interface XmlTypeAttribute$instance extends Attribute {
 
 export const XmlTypeAttribute: {
     new(): XmlTypeAttribute;
-    new(typeName: string | undefined): XmlTypeAttribute;
+    new(typeName: string): XmlTypeAttribute;
 };
 
 

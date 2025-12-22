@@ -51,22 +51,22 @@ export interface AssemblyLoadContext$instance {
     EnterContextualReflection(): AssemblyLoadContext_ContextualReflectionScope;
     LoadFromAssemblyName(assemblyName: AssemblyName): Assembly;
     LoadFromAssemblyPath(assemblyPath: string): Assembly;
-    LoadFromNativeImagePath(nativeImagePath: string, assemblyPath: string | undefined): Assembly;
+    LoadFromNativeImagePath(nativeImagePath: string, assemblyPath: string): Assembly;
     LoadFromStream(assembly: Stream): Assembly;
-    LoadFromStream(assembly: Stream, assemblySymbols: Stream | undefined): Assembly;
+    LoadFromStream(assembly: Stream, assemblySymbols: Stream): Assembly;
     SetProfileOptimizationRoot(directoryPath: string): void;
-    StartProfileOptimization(profile: string | undefined): void;
+    StartProfileOptimization(profile: string): void;
     ToString(): string;
     Unload(): void;
 }
 
 
 export const AssemblyLoadContext: {
-    new(name: string | undefined, isCollectible: boolean): AssemblyLoadContext;
+    new(name: string, isCollectible: boolean): AssemblyLoadContext;
     readonly Default: AssemblyLoadContext;
     readonly All: IEnumerable_1<AssemblyLoadContext>;
     readonly CurrentContextualReflectionContext: AssemblyLoadContext | undefined;
-    EnterContextualReflection(activating: Assembly | undefined): AssemblyLoadContext_ContextualReflectionScope;
+    EnterContextualReflection(activating: Assembly): AssemblyLoadContext_ContextualReflectionScope;
     GetAssemblyName(assemblyPath: string): AssemblyName;
     GetLoadContext(assembly: Assembly): AssemblyLoadContext | undefined;
 };

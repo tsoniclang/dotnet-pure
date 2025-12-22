@@ -32,10 +32,10 @@ export interface DataContract$instance {
     readonly TopLevelElementNamespace: XmlDictionaryString | undefined;
     readonly UnderlyingType: Type;
     readonly XmlName: XmlQualifiedName;
-    Equals(obj: unknown | undefined): boolean;
+    Equals(obj: unknown): boolean;
     GetArrayTypeName(isNullable: boolean): XmlQualifiedName;
     GetHashCode(): int;
-    IsDictionaryLike(keyName: string | undefined, valueName: string | undefined, itemName: string | undefined): boolean;
+    IsDictionaryLike(keyName: string, valueName: string, itemName: string): boolean;
 }
 
 
@@ -54,14 +54,14 @@ export interface DataContractSet$instance {
     readonly SurrogateData: Hashtable;
     GetDataContract(type_: Type): DataContract;
     GetDataContract(key: XmlQualifiedName): DataContract | undefined;
-    GetReferencedType(xmlName: XmlQualifiedName, dataContract: DataContract, referencedContract: DataContract | undefined, genericParameters: unknown[] | undefined, supportGenericTypes?: Nullable_1<System_Internal.Boolean>): Type | undefined;
-    ImportSchemaSet(schemaSet: XmlSchemaSet, typeNames: IEnumerable_1<XmlQualifiedName> | undefined, importXmlDataType: boolean): void;
+    GetReferencedType(xmlName: XmlQualifiedName, dataContract: DataContract, referencedContract: DataContract, genericParameters: unknown[], supportGenericTypes?: Nullable_1<System_Internal.Boolean>): Type | undefined;
+    ImportSchemaSet(schemaSet: XmlSchemaSet, typeNames: IEnumerable_1<XmlQualifiedName>, importXmlDataType: boolean): void;
     ImportSchemaSet(schemaSet: XmlSchemaSet, elements: IEnumerable_1<XmlSchemaElement>, importXmlDataType: boolean): List_1<XmlQualifiedName>;
 }
 
 
 export const DataContractSet: {
-    new(dataContractSurrogate: ISerializationSurrogateProvider | undefined, referencedTypes: IEnumerable_1<Type> | undefined, referencedCollectionTypes: IEnumerable_1<Type> | undefined): DataContractSet;
+    new(dataContractSurrogate: ISerializationSurrogateProvider, referencedTypes: IEnumerable_1<Type>, referencedCollectionTypes: IEnumerable_1<Type>): DataContractSet;
     new(dataContractSet: DataContractSet): DataContractSet;
 };
 
