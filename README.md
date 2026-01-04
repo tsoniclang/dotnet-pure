@@ -21,7 +21,7 @@ npm install @tsonic/dotnet-pure @tsonic/core
 ## Usage
 
 ```typescript
-import type { List } from "@tsonic/dotnet-pure/System.Collections.Generic";
+import type { List } from "@tsonic/dotnet-pure/System.Collections.Generic.js";
 import type { int } from "@tsonic/core/types.js";
 
 const list: List<int> = null!;
