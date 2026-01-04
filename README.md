@@ -9,20 +9,20 @@ TypeScript type definitions for .NET 10 BCL (Base Class Library) with **CLR nami
 - **Complete .NET 10 BCL coverage** - 130 namespaces, 4,296 types, 50,675 members
 - **CLR naming conventions** - PascalCase members matching .NET exactly
 - **Friendly generic aliases** - Use `List<T>` instead of `List_1<T>`
-- **Branded primitive types** - Typed numbers via `@tsonic/types` (int, long, decimal, etc.)
+- **Primitive aliases** - `int`, `long`, `decimal`, etc. via `@tsonic/core`
 - **Full type safety** - Zero TypeScript errors
 
 ## Installation
 
 ```bash
-npm install @tsonic/dotnet-pure @tsonic/types
+npm install @tsonic/dotnet-pure @tsonic/core
 ```
 
 ## Usage
 
 ```typescript
 import type { List } from "@tsonic/dotnet-pure/System.Collections.Generic";
-import type { int } from "@tsonic/types";
+import type { int } from "@tsonic/core/types.js";
 
 const list: List<int> = null!;
 list.Add(42 as int);           // PascalCase: Add, not add
