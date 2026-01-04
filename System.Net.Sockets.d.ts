@@ -53,3 +53,6 @@ export { UnixDomainSocketEndPoint as UnixDomainSocketEndPoint } from './System.N
 export { ProtocolFamily as ProtocolFamily } from './System.Net.Sockets/internal/index.js';
 export { ProtocolType as ProtocolType } from './System.Net.Sockets/internal/index.js';
 export { SocketType as SocketType } from './System.Net.Sockets/internal/index.js';
+// Extension methods (C# using semantics)
+export type { ExtensionMethods_System_Net_Sockets as ExtensionMethods } from './__internal/extensions/index.js';
+

@@ -24,3 +24,6 @@ export { ReadResult as ReadResult } from './System.IO.Pipelines/internal/index.j
 export { StreamPipeExtensions$instance as StreamPipeExtensions } from './System.IO.Pipelines/internal/index.js';
 export { StreamPipeReaderOptions as StreamPipeReaderOptions } from './System.IO.Pipelines/internal/index.js';
 export { StreamPipeWriterOptions as StreamPipeWriterOptions } from './System.IO.Pipelines/internal/index.js';
+// Extension methods (C# using semantics)
+export type { ExtensionMethods_System_IO_Pipelines as ExtensionMethods } from './__internal/extensions/index.js';
+

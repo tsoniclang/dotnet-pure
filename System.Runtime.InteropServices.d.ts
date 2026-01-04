@@ -160,3 +160,6 @@ export type GCHandle<
   [T1] extends [__] ? Internal.GCHandle :
   Internal.GCHandle_1<T1>;
 
+// Extension methods (C# using semantics)
+export type { ExtensionMethods_System_Runtime_InteropServices as ExtensionMethods } from './__internal/extensions/index.js';
+

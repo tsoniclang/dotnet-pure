@@ -60,3 +60,6 @@ export { MetadataReaderExtensions$instance as MetadataReaderExtensions } from '.
 export { MetadataTokens$instance as MetadataTokens } from './System.Reflection.Metadata.Ecma335/internal/index.js';
 export { TableIndex as TableIndex } from './System.Reflection.Metadata.Ecma335/internal/index.js';
 export { MetadataAggregator as MetadataAggregator } from './System.Reflection.Metadata.Ecma335/internal/index.js';
+// Extension methods (C# using semantics)
+export type { ExtensionMethods_System_Reflection_Metadata_Ecma335 as ExtensionMethods } from './__internal/extensions/index.js';
+

@@ -59,3 +59,6 @@ export { List_1 as List } from './System.Collections.Generic/internal/index.js';
 export { Queue_1 as Queue } from './System.Collections.Generic/internal/index.js';
 export { ReferenceEqualityComparer as ReferenceEqualityComparer } from './System.Collections.Generic/internal/index.js';
 export { NonRandomizedStringEqualityComparer as NonRandomizedStringEqualityComparer } from './System.Collections.Generic/internal/index.js';
+// Extension methods (C# using semantics)
+export type { ExtensionMethods_System_Collections_Generic as ExtensionMethods } from './__internal/extensions/index.js';
+

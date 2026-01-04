@@ -33,3 +33,6 @@ export { ImmutableSortedSet$instance as ImmutableSortedSet_0 } from './System.Co
 export { ImmutableSortedSet_1 as ImmutableSortedSet } from './System.Collections.Immutable/internal/index.js';
 export { ImmutableStack$instance as ImmutableStack_0 } from './System.Collections.Immutable/internal/index.js';
 export { ImmutableStack_1 as ImmutableStack } from './System.Collections.Immutable/internal/index.js';
+// Extension methods (C# using semantics)
+export type { ExtensionMethods_System_Collections_Immutable as ExtensionMethods } from './__internal/extensions/index.js';
+

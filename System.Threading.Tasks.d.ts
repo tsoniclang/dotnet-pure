@@ -63,3 +63,6 @@ export type ValueTask<
   [T1] extends [__] ? Internal.ValueTask :
   Internal.ValueTask_1<T1>;
 
+// Extension methods (C# using semantics)
+export type { ExtensionMethods_System_Threading_Tasks as ExtensionMethods } from './__internal/extensions/index.js';
+

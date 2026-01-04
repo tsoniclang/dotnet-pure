@@ -40,3 +40,6 @@ export type SearchValues<
   [T1] extends [__] ? Internal.SearchValues :
   [T1] extends [IEquatable_1<T1>] ? Internal.SearchValues_1<T1> : never;
 
+// Extension methods (C# using semantics)
+export type { ExtensionMethods_System_Buffers as ExtensionMethods } from './__internal/extensions/index.js';
+

@@ -97,3 +97,6 @@ export { EventWaitHandleAcl$instance as EventWaitHandleAcl } from './System.Thre
 export { MutexAcl$instance as MutexAcl } from './System.Threading/internal/index.js';
 export { SemaphoreAcl$instance as SemaphoreAcl } from './System.Threading/internal/index.js';
 export { ThreadingAclExtensions$instance as ThreadingAclExtensions } from './System.Threading/internal/index.js';
+// Extension methods (C# using semantics)
+export type { ExtensionMethods_System_Threading as ExtensionMethods } from './__internal/extensions/index.js';
+

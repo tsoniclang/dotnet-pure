@@ -429,3 +429,6 @@ export type { Decimal$instance } from './System/internal/index.js';
 export type { Char$instance } from './System/internal/index.js';
 export type { Boolean$instance } from './System/internal/index.js';
 export type { String$instance } from './System/internal/index.js';
+// Extension methods (C# using semantics)
+export type { ExtensionMethods_System as ExtensionMethods } from './__internal/extensions/index.js';
+

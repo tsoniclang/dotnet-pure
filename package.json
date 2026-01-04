@@ -1,6 +1,6 @@
 {
   "name": "@tsonic/dotnet-pure",
-  "version": "0.8.3",
+  "version": "0.8.4",
   "description": "TypeScript type definitions for .NET 10 BCL (Base Class Library) - CLR naming",
   "type": "module",
   "keywords": [
@@ -19,6 +19,6 @@
     "url": "https://github.com/tsoniclang/dotnet-pure.git"
   },
   "peerDependencies": {
-    "@tsonic/core": "*"
+    "@tsonic/core": "^0.6.0"
   }
 }

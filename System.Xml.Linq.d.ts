@@ -41,3 +41,6 @@ export { XObjectChangeEventArgs as XObjectChangeEventArgs } from './System.Xml.L
 export { XProcessingInstruction as XProcessingInstruction } from './System.Xml.Linq/internal/index.js';
 export { XStreamingElement as XStreamingElement } from './System.Xml.Linq/internal/index.js';
 export { XText as XText } from './System.Xml.Linq/internal/index.js';
+// Extension methods (C# using semantics)
+export type { ExtensionMethods_System_Xml_Linq as ExtensionMethods } from './__internal/extensions/index.js';
+

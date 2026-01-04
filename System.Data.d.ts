@@ -144,3 +144,6 @@ export type EnumerableRowCollection<
   [T1] extends [__] ? Internal.EnumerableRowCollection :
   Internal.EnumerableRowCollection_1<T1>;
 
+// Extension methods (C# using semantics)
+export type { ExtensionMethods_System_Data as ExtensionMethods } from './__internal/extensions/index.js';
+

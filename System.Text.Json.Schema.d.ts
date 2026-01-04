@@ -15,3 +15,6 @@ import type { Boolean as ClrBoolean, Func_3, Int32, Object as ClrObject, ReadOnl
 export { JsonSchemaExporter$instance as JsonSchemaExporter } from './System.Text.Json.Schema/internal/index.js';
 export { JsonSchemaExporterOptions as JsonSchemaExporterOptions } from './System.Text.Json.Schema/internal/index.js';
 export { JsonSchemaExporterContext as JsonSchemaExporterContext } from './System.Text.Json.Schema/internal/index.js';
+// Extension methods (C# using semantics)
+export type { ExtensionMethods_System_Text_Json_Schema as ExtensionMethods } from './__internal/extensions/index.js';
+

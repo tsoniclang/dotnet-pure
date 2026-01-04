@@ -22,3 +22,6 @@ import type { Boolean as ClrBoolean, Byte, IDisposable, Int32, Int64, Object as 
 export { HttpClientJsonExtensions$instance as HttpClientJsonExtensions } from './System.Net.Http.Json/internal/index.js';
 export { HttpContentJsonExtensions$instance as HttpContentJsonExtensions } from './System.Net.Http.Json/internal/index.js';
 export { JsonContent as JsonContent } from './System.Net.Http.Json/internal/index.js';
+// Extension methods (C# using semantics)
+export type { ExtensionMethods_System_Net_Http_Json as ExtensionMethods } from './__internal/extensions/index.js';
+

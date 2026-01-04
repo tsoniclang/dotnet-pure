@@ -116,3 +116,6 @@ export { StackFrameExtensions$instance as StackFrameExtensions } from './System.
 export { StackTraceHiddenAttribute as StackTraceHiddenAttribute } from './System.Diagnostics/internal/index.js';
 export { Stopwatch as Stopwatch } from './System.Diagnostics/internal/index.js';
 export { UnreachableException as UnreachableException } from './System.Diagnostics/internal/index.js';
+// Extension methods (C# using semantics)
+export type { ExtensionMethods_System_Diagnostics as ExtensionMethods } from './__internal/extensions/index.js';
+

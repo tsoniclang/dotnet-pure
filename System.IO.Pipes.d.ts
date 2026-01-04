@@ -33,3 +33,6 @@ export { PipeAccessRule as PipeAccessRule } from './System.IO.Pipes/internal/ind
 export { PipeAuditRule as PipeAuditRule } from './System.IO.Pipes/internal/index.js';
 export { PipeSecurity as PipeSecurity } from './System.IO.Pipes/internal/index.js';
 export { PipesAclExtensions$instance as PipesAclExtensions } from './System.IO.Pipes/internal/index.js';
+// Extension methods (C# using semantics)
+export type { ExtensionMethods_System_IO_Pipes as ExtensionMethods } from './__internal/extensions/index.js';
+
