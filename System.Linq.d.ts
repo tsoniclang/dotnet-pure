@@ -66,3 +66,6 @@ export type ParallelQuery<
   [T1] extends [__] ? Internal.ParallelQuery :
   Internal.ParallelQuery_1<T1>;
 
+// Extension methods (C# using semantics)
+export type { ExtensionMethods_System_Linq as ExtensionMethods } from './__internal/extensions/index.js';
+

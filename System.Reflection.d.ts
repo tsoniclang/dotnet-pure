@@ -122,3 +122,6 @@ export { MemberInfoExtensions$instance as MemberInfoExtensions } from './System.
 export { MethodInfoExtensions$instance as MethodInfoExtensions } from './System.Reflection/internal/index.js';
 export { ModuleExtensions$instance as ModuleExtensions } from './System.Reflection/internal/index.js';
 export { PropertyInfoExtensions$instance as PropertyInfoExtensions } from './System.Reflection/internal/index.js';
+// Extension methods (C# using semantics)
+export type { ExtensionMethods_System_Reflection as ExtensionMethods } from './__internal/extensions/index.js';
+

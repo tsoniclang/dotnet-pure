@@ -206,3 +206,6 @@ export { TypeDefinition as TypeDefinition } from './System.Reflection.Metadata/i
 export { TypeLayout as TypeLayout } from './System.Reflection.Metadata/internal/index.js';
 export { TypeReference as TypeReference } from './System.Reflection.Metadata/internal/index.js';
 export { TypeSpecification as TypeSpecification } from './System.Reflection.Metadata/internal/index.js';
+// Extension methods (C# using semantics)
+export type { ExtensionMethods_System_Reflection_Metadata as ExtensionMethods } from './__internal/extensions/index.js';
+

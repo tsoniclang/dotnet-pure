@@ -77,3 +77,6 @@ export { TextWriter as TextWriter } from './System.IO/internal/index.js';
 export { UnixFileMode as UnixFileMode } from './System.IO/internal/index.js';
 export { UnmanagedMemoryAccessor as UnmanagedMemoryAccessor } from './System.IO/internal/index.js';
 export { UnmanagedMemoryStream as UnmanagedMemoryStream } from './System.IO/internal/index.js';
+// Extension methods (C# using semantics)
+export type { ExtensionMethods_System_IO as ExtensionMethods } from './__internal/extensions/index.js';
+

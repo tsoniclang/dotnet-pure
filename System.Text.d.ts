@@ -52,3 +52,6 @@ export { UTF32Encoding as UTF32Encoding } from './System.Text/internal/index.js'
 export { UTF7Encoding as UTF7Encoding } from './System.Text/internal/index.js';
 export { UTF8Encoding as UTF8Encoding } from './System.Text/internal/index.js';
 export { CodePagesEncodingProvider as CodePagesEncodingProvider } from './System.Text/internal/index.js';
+// Extension methods (C# using semantics)
+export type { ExtensionMethods_System_Text as ExtensionMethods } from './__internal/extensions/index.js';
+

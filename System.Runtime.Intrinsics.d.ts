@@ -39,3 +39,6 @@ export type Vector64<
   [T1] extends [__] ? Internal.Vector64 :
   Internal.Vector64_1<T1>;
 
+// Extension methods (C# using semantics)
+export type { ExtensionMethods_System_Runtime_Intrinsics as ExtensionMethods } from './__internal/extensions/index.js';
+

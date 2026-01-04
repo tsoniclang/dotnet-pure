@@ -21,3 +21,6 @@ export { DataContractJsonSerializerSettings as DataContractJsonSerializerSetting
 export type IXmlJsonReaderInitializer = Internal.IXmlJsonReaderInitializer;
 export type IXmlJsonWriterInitializer = Internal.IXmlJsonWriterInitializer;
 export { JsonReaderWriterFactory$instance as JsonReaderWriterFactory } from './System.Runtime.Serialization.Json/internal/index.js';
+// Extension methods (C# using semantics)
+export type { ExtensionMethods_System_Runtime_Serialization_Json as ExtensionMethods } from './__internal/extensions/index.js';
+

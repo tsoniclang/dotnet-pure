@@ -52,3 +52,6 @@ export type JoinBlock<
   [T3] extends [__] ? Internal.JoinBlock_2<T1, T2> :
   Internal.JoinBlock_3<T1, T2, T3>;
 
+// Extension methods (C# using semantics)
+export type { ExtensionMethods_System_Threading_Tasks_Dataflow as ExtensionMethods } from './__internal/extensions/index.js';
+

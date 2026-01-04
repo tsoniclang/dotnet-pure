@@ -16,3 +16,6 @@ export { FrozenDictionary$instance as FrozenDictionary_0 } from './System.Collec
 export { FrozenDictionary_2 as FrozenDictionary } from './System.Collections.Frozen/internal/index.js';
 export { FrozenSet$instance as FrozenSet_0 } from './System.Collections.Frozen/internal/index.js';
 export { FrozenSet_1 as FrozenSet } from './System.Collections.Frozen/internal/index.js';
+// Extension methods (C# using semantics)
+export type { ExtensionMethods_System_Collections_Frozen as ExtensionMethods } from './__internal/extensions/index.js';
+

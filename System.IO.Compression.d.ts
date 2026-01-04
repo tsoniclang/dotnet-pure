@@ -35,3 +35,6 @@ export { BrotliDecoder as BrotliDecoder } from './System.IO.Compression/internal
 export { BrotliEncoder as BrotliEncoder } from './System.IO.Compression/internal/index.js';
 export { ZipFile$instance as ZipFile } from './System.IO.Compression/internal/index.js';
 export { ZipFileExtensions$instance as ZipFileExtensions } from './System.IO.Compression/internal/index.js';
+// Extension methods (C# using semantics)
+export type { ExtensionMethods_System_IO_Compression as ExtensionMethods } from './__internal/extensions/index.js';
+

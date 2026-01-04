@@ -55,3 +55,6 @@ export { ThaiBuddhistCalendar as ThaiBuddhistCalendar } from './System.Globaliza
 export { TimeSpanStyles as TimeSpanStyles } from './System.Globalization/internal/index.js';
 export { UmAlQuraCalendar as UmAlQuraCalendar } from './System.Globalization/internal/index.js';
 export { UnicodeCategory as UnicodeCategory } from './System.Globalization/internal/index.js';
+// Extension methods (C# using semantics)
+export type { ExtensionMethods_System_Globalization as ExtensionMethods } from './__internal/extensions/index.js';
+

@@ -106,3 +106,6 @@ export { XmlSchemaInference as XmlSchemaInference } from './System.Xml.Schema/in
 export { XmlSchemaInference_InferenceOption as XmlSchemaInference_InferenceOption } from './System.Xml.Schema/internal/index.js';
 export { XmlSchemaInferenceException as XmlSchemaInferenceException } from './System.Xml.Schema/internal/index.js';
 export { Extensions$instance as Extensions } from './System.Xml.Schema/internal/index.js';
+// Extension methods (C# using semantics)
+export type { ExtensionMethods_System_Xml_Schema as ExtensionMethods } from './__internal/extensions/index.js';
+

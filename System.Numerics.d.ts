@@ -65,3 +65,6 @@ export type Vector<
   [T1] extends [__] ? Internal.Vector :
   Internal.Vector_1<T1>;
 
+// Extension methods (C# using semantics)
+export type { ExtensionMethods_System_Numerics as ExtensionMethods } from './__internal/extensions/index.js';
+

@@ -32,3 +32,6 @@ export { XPathNodeIterator as XPathNodeIterator } from './System.Xml.XPath/inter
 export { XPathNodeType as XPathNodeType } from './System.Xml.XPath/internal/index.js';
 export { Extensions$instance as Extensions } from './System.Xml.XPath/internal/index.js';
 export { XDocumentExtensions$instance as XDocumentExtensions } from './System.Xml.XPath/internal/index.js';
+// Extension methods (C# using semantics)
+export type { ExtensionMethods_System_Xml_XPath as ExtensionMethods } from './__internal/extensions/index.js';
+

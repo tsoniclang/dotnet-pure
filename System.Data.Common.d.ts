@@ -60,3 +60,6 @@ export { RowUpdatingEventArgs as RowUpdatingEventArgs } from './System.Data.Comm
 export { SchemaTableColumn$instance as SchemaTableColumn } from './System.Data.Common/internal/index.js';
 export { SchemaTableOptionalColumn$instance as SchemaTableOptionalColumn } from './System.Data.Common/internal/index.js';
 export { SupportedJoinOperators as SupportedJoinOperators } from './System.Data.Common/internal/index.js';
+// Extension methods (C# using semantics)
+export type { ExtensionMethods_System_Data_Common as ExtensionMethods } from './__internal/extensions/index.js';
+

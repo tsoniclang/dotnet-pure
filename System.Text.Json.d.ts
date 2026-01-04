@@ -42,3 +42,6 @@ export { JsonSerializer$instance as JsonSerializer } from './System.Text.Json/in
 export { Utf8JsonWriter as Utf8JsonWriter } from './System.Text.Json/internal/index.js';
 export { JsonSerializerOptions as JsonSerializerOptions } from './System.Text.Json/internal/index.js';
 export { JsonWriterOptions as JsonWriterOptions } from './System.Text.Json/internal/index.js';
+// Extension methods (C# using semantics)
+export type { ExtensionMethods_System_Text_Json as ExtensionMethods } from './__internal/extensions/index.js';
+

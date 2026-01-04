@@ -76,3 +76,6 @@ export { X509SubjectAlternativeNameExtension as X509SubjectAlternativeNameExtens
 export { X509SubjectKeyIdentifierExtension as X509SubjectKeyIdentifierExtension } from './System.Security.Cryptography.X509Certificates/internal/index.js';
 export { X509SubjectKeyIdentifierHashAlgorithm as X509SubjectKeyIdentifierHashAlgorithm } from './System.Security.Cryptography.X509Certificates/internal/index.js';
 export { X509VerificationFlags as X509VerificationFlags } from './System.Security.Cryptography.X509Certificates/internal/index.js';
+// Extension methods (C# using semantics)
+export type { ExtensionMethods_System_Security_Cryptography_X509Certificates as ExtensionMethods } from './__internal/extensions/index.js';
+
