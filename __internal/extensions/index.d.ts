@@ -2382,6 +2382,7 @@ export type ExtensionMethods_System_IO_Pipes<TShape> =
   );
 
 // Generic helper type for extension methods in namespace: System.Linq
+type __TsonicPreferExt<A, B> = Omit<A, keyof B> & B;
 export type ExtensionMethods_System_Linq<TShape> =
   TShape extends null | undefined ? TShape
   : TShape extends void ? void
@@ -2389,14 +2390,14 @@ export type ExtensionMethods_System_Linq<TShape> =
     (TShape extends System_Collections.IEnumerable ? __Ext_System_Linq_IEnumerable : {}) &
     (TShape extends System_Collections_Concurrent.Partitioner_1<infer T0> ? __Ext_System_Linq_Partitioner_1<T0> : {}) &
     (TShape extends System_Collections_Generic.IAsyncEnumerable_1<infer T0> ? __Ext_System_Linq_IAsyncEnumerable_1<T0> : {}) &
-    (TShape extends System_Collections_Generic.IEnumerable_1<infer T0> ? __Ext_System_Linq_IEnumerable_1<T0> : {}) &
+    (TShape extends System_Collections_Generic.IEnumerable_1<infer T0> ? (TShape extends System_Linq.IQueryable ? {} : __Ext_System_Linq_IEnumerable_1<T0>) : {}) &
     (TShape extends System_Collections_Immutable.ImmutableArray_1<infer T0> ? __Ext_System_Linq_ImmutableArray_1<T0> : {}) &
     (TShape extends System_Collections_Immutable.ImmutableArray_1_Builder<infer T0> ? __Ext_System_Linq_ImmutableArray_1_Builder<T0> : {}) &
     (TShape extends System_Linq.IOrderedAsyncEnumerable_1<infer T0> ? __Ext_System_Linq_IOrderedAsyncEnumerable_1<T0> : {}) &
     (TShape extends System_Linq.IOrderedEnumerable_1<infer T0> ? __Ext_System_Linq_IOrderedEnumerable_1<T0> : {}) &
     (TShape extends System_Linq.IOrderedQueryable_1<infer T0> ? __Ext_System_Linq_IOrderedQueryable_1<T0> : {}) &
     (TShape extends System_Linq.IQueryable ? __Ext_System_Linq_IQueryable : {}) &
-    (TShape extends System_Linq.IQueryable_1<infer T0> ? __Ext_System_Linq_IQueryable_1<T0> : {}) &
+    (TShape extends System_Linq.IQueryable_1<infer T0> ? __TsonicPreferExt<__Ext_System_Linq_IEnumerable_1<T0>, __Ext_System_Linq_IQueryable_1<T0>> : {}) &
     (TShape extends System_Linq.OrderedParallelQuery_1<infer T0> ? __Ext_System_Linq_OrderedParallelQuery_1<T0> : {}) &
     (TShape extends System_Linq.ParallelQuery ? __Ext_System_Linq_ParallelQuery : {}) &
     (TShape extends System_Linq.ParallelQuery_1<infer T0> ? __Ext_System_Linq_ParallelQuery_1<T0> : {}) &
@@ -2612,4 +2613,3 @@ export type ExtensionMethods_System_Xml_XPath<TShape> =
   : TShape & (
     (TShape extends System_Xml_Linq.XNode ? __Ext_System_Xml_XPath_XNode : {})
   );
-
