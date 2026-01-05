@@ -11,7 +11,7 @@ import type { ICollection_1, IDictionary_2, IEnumerable_1, IEnumerator_1, IList_
 import type { Collection_1 } from './System.Collections.ObjectModel/internal/index.js';
 import type { StringDictionary } from './System.Collections.Specialized/internal/index.js';
 import type { ICollection, IDictionary, IEnumerable, IEnumerator, IList, ReadOnlyCollectionBase, Stack } from './System.Collections/internal/index.js';
-import type { Component, DescriptionAttribute, IComponent, IContainer, ISite, ISynchronizeInvoke } from './System.ComponentModel/internal/index.js';
+import type { Component, DescriptionAttribute, IComponent, IContainer, ISite, ISupportInitialize, ISynchronizeInvoke } from './System.ComponentModel/internal/index.js';
 import type { Stream, StreamReader, StreamWriter, TextWriter } from './System.IO/internal/index.js';
 import type { Assembly, MethodBase, MethodInfo } from './System.Reflection/internal/index.js';
 import type { ISerializable, SerializationInfo, StreamingContext } from './System.Runtime.Serialization/internal/index.js';
@@ -19,7 +19,7 @@ import type { SecureString } from './System.Security/internal/index.js';
 import type { Encoding } from './System.Text/internal/index.js';
 import type { Task } from './System.Threading.Tasks/internal/index.js';
 import type { CancellationToken } from './System.Threading/internal/index.js';
-import type { Action_1, Action_2, Array as ClrArray, AsyncCallback, Attribute, Boolean as ClrBoolean, Byte, Char, DateTime, DateTimeOffset, Delegate, Enum, EventArgs, EventHandler, EventHandler_1, Exception, Func_1, Func_2, Func_4, Guid, IAsyncResult, ICloneable, IComparable, IConvertible, IDisposable, IEquatable_1, IFormatProvider, IFormattable, Int32, Int64, IntPtr, IObservable_1, IObserver_1, ISpanFormattable, MarshalByRefObject, MulticastDelegate, Object as ClrObject, Predicate_1, ReadOnlySpan_1, Span_1, String as ClrString, TimeSpan, Type, TypeCode, ValueType, Void } from './System/internal/index.js';
+import type { Action_1, Action_2, Array as ClrArray, AsyncCallback, Attribute, Boolean as ClrBoolean, Byte, Char, DateTime, DateTimeOffset, Delegate, Enum, EventArgs, EventHandler, EventHandler_1, Exception, Func_1, Func_2, Func_4, Guid, IAsyncResult, ICloneable, IComparable, IConvertible, IDisposable, IEquatable_1, IFormatProvider, IFormattable, Int16, Int32, Int64, IntPtr, IObservable_1, IObserver_1, ISpanFormattable, MarshalByRefObject, MulticastDelegate, Object as ClrObject, Predicate_1, ReadOnlySpan_1, Span_1, String as ClrString, TimeSpan, Type, TypeCode, ValueType, Void } from './System/internal/index.js';
 
 // Public API exports (curated - no internal $instance/$views leakage)
 export { ActivityChangedEventArgs as ActivityChangedEventArgs } from './System.Diagnostics/internal/index.js';
@@ -50,6 +50,16 @@ export type DistributedContextPropagator_PropagatorGetterCallback = Internal.Dis
 export type DistributedContextPropagator_PropagatorSetterCallback = Internal.DistributedContextPropagator_PropagatorSetterCallback;
 export { TagList as TagList } from './System.Diagnostics/internal/index.js';
 export { TagList_Enumerator as TagList_Enumerator } from './System.Diagnostics/internal/index.js';
+export { EntryWrittenEventArgs as EntryWrittenEventArgs } from './System.Diagnostics/internal/index.js';
+export type EntryWrittenEventHandler = Internal.EntryWrittenEventHandler;
+export { EventInstance as EventInstance } from './System.Diagnostics/internal/index.js';
+export { EventLog as EventLog } from './System.Diagnostics/internal/index.js';
+export { EventLogEntry as EventLogEntry } from './System.Diagnostics/internal/index.js';
+export { EventLogEntryCollection as EventLogEntryCollection } from './System.Diagnostics/internal/index.js';
+export { EventLogEntryType as EventLogEntryType } from './System.Diagnostics/internal/index.js';
+export { EventLogTraceListener as EventLogTraceListener } from './System.Diagnostics/internal/index.js';
+export { EventSourceCreationData as EventSourceCreationData } from './System.Diagnostics/internal/index.js';
+export { OverflowAction as OverflowAction } from './System.Diagnostics/internal/index.js';
 export { FileVersionInfo as FileVersionInfo } from './System.Diagnostics/internal/index.js';
 export type DataReceivedEventHandler = Internal.DataReceivedEventHandler;
 export { DataReceivedEventArgs as DataReceivedEventArgs } from './System.Diagnostics/internal/index.js';
