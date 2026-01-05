@@ -674,7 +674,7 @@ export const Expression_1: {
 };
 
 
-export type Expression_1<TDelegate> = Expression_1$instance<TDelegate>;
+export type Expression_1<TDelegate> = TDelegate | Expression_1$instance<TDelegate>;
 
 export interface ExpressionVisitor$instance {
     Visit(node: Expression): Expression | undefined;
@@ -1128,4 +1128,3 @@ export const UnaryExpression: {
 
 
 export type UnaryExpression = UnaryExpression$instance;
-
