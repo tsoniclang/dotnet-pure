@@ -189,3 +189,6 @@ export { RC2CryptoServiceProvider as RC2CryptoServiceProvider } from './System.S
 export { RSACryptoServiceProvider as RSACryptoServiceProvider } from './System.Security.Cryptography/internal/index.js';
 export { SafeEvpPKeyHandle as SafeEvpPKeyHandle } from './System.Security.Cryptography/internal/index.js';
 export { TripleDESCryptoServiceProvider as TripleDESCryptoServiceProvider } from './System.Security.Cryptography/internal/index.js';
+export { CryptographicAttributeObject as CryptographicAttributeObject } from './System.Security.Cryptography/internal/index.js';
+export { CryptographicAttributeObjectCollection as CryptographicAttributeObjectCollection } from './System.Security.Cryptography/internal/index.js';
+export { CryptographicAttributeObjectEnumerator as CryptographicAttributeObjectEnumerator } from './System.Security.Cryptography/internal/index.js';
