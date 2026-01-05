@@ -21,7 +21,6 @@ TSBINDGEN_DIR="$PROJECT_DIR/../tsbindgen"
 DOTNET_VERSION="${DOTNET_VERSION:-10.0.1}"
 DOTNET_HOME="${DOTNET_HOME:-$HOME/.dotnet}"
 DOTNET_RUNTIME_PATH="$DOTNET_HOME/shared/Microsoft.NETCore.App/$DOTNET_VERSION"
-ASPNET_RUNTIME_PATH="$DOTNET_HOME/shared/Microsoft.AspNetCore.App/$DOTNET_VERSION"
 
 echo "================================================================"
 echo "Generating .NET BCL TypeScript Declarations (CLR naming)"
@@ -29,7 +28,6 @@ echo "================================================================"
 echo ""
 echo "Configuration:"
 echo "  .NET Runtime: $DOTNET_RUNTIME_PATH"
-echo "  ASP.NET:      $ASPNET_RUNTIME_PATH"
 echo "  tsbindgen:    $TSBINDGEN_DIR"
 echo "  Output:       $PROJECT_DIR"
 echo "  Naming:       CLR (PascalCase - no JS transformations)"
@@ -38,12 +36,6 @@ echo ""
 # Verify prerequisites
 if [ ! -d "$DOTNET_RUNTIME_PATH" ]; then
     echo "ERROR: .NET runtime not found at $DOTNET_RUNTIME_PATH"
-    echo "Set DOTNET_HOME or DOTNET_VERSION environment variables"
-    exit 1
-fi
-
-if [ ! -d "$ASPNET_RUNTIME_PATH" ]; then
-    echo "ERROR: ASP.NET runtime not found at $ASPNET_RUNTIME_PATH"
     echo "Set DOTNET_HOME or DOTNET_VERSION environment variables"
     exit 1
 fi
@@ -81,21 +73,8 @@ echo "  Done"
 
 # Generate types with CLR naming (no --naming js flag)
 echo "[3/3] Generating TypeScript declarations..."
-#
-# NOTE: Microsoft.AspNetCore.App ships several System.* assemblies that are not
-# in Microsoft.NETCore.App, but contribute to existing System.* namespaces.
-# Include them here so System.* namespaces are never split across packages.
-
-EXTRA_SYS_DLLS=( "$ASPNET_RUNTIME_PATH"/System.*.dll )
-EXTRA_ARGS=()
-for dll in "${EXTRA_SYS_DLLS[@]}"; do
-    if [ -f "$dll" ]; then
-        EXTRA_ARGS+=( -a "$dll" )
-    fi
-done
-
 dotnet run --project src/tsbindgen/tsbindgen.csproj --no-build -c Release -- \
-    generate -d "$DOTNET_RUNTIME_PATH" -o "$PROJECT_DIR" "${EXTRA_ARGS[@]}"
+    generate -d "$DOTNET_RUNTIME_PATH" -o "$PROJECT_DIR"
 
 echo ""
 echo "================================================================"

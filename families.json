@@ -307,27 +307,6 @@
     "maxArity": 2,
     "isDelegate": false
   },
-  "System.Threading.RateLimiting.MetadataName": {
-    "stem": "MetadataName",
-    "namespace": "System.Threading.RateLimiting",
-    "minArity": 0,
-    "maxArity": 1,
-    "isDelegate": false
-  },
-  "System.Threading.RateLimiting.PartitionedRateLimiter": {
-    "stem": "PartitionedRateLimiter",
-    "namespace": "System.Threading.RateLimiting",
-    "minArity": 0,
-    "maxArity": 1,
-    "isDelegate": false
-  },
-  "System.Threading.RateLimiting.RateLimitPartition": {
-    "stem": "RateLimitPartition",
-    "namespace": "System.Threading.RateLimiting",
-    "minArity": 0,
-    "maxArity": 1,
-    "isDelegate": false
-  },
   "System.Threading.Tasks.Task": {
     "stem": "Task",
     "namespace": "System.Threading.Tasks",
