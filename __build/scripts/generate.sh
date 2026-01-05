@@ -18,8 +18,8 @@ PROJECT_DIR="$(cd "$SCRIPT_DIR/../.." && pwd)"
 TSBINDGEN_DIR="$PROJECT_DIR/../tsbindgen"
 
 # .NET runtime path
-DOTNET_VERSION="${DOTNET_VERSION:-10.0.0-rc.1.25451.107}"
-DOTNET_HOME="${DOTNET_HOME:-$HOME/dotnet}"
+DOTNET_VERSION="${DOTNET_VERSION:-10.0.1}"
+DOTNET_HOME="${DOTNET_HOME:-$HOME/.dotnet}"
 DOTNET_RUNTIME_PATH="$DOTNET_HOME/shared/Microsoft.NETCore.App/$DOTNET_VERSION"
 
 echo "================================================================"
@@ -59,8 +59,9 @@ find . -maxdepth 1 -type d \
     ! -name '__build' \
     -exec rm -rf {} \; 2>/dev/null || true
 
-# Also remove internal/ and Internal/ at root level
-rm -rf internal Internal 2>/dev/null || true
+# Remove generated files at root
+rm -f *.d.ts *.js families.json 2>/dev/null || true
+rm -rf __internal Internal internal 2>/dev/null || true
 
 echo "  Done"
 
