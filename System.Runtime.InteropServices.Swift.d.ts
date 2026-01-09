@@ -12,6 +12,9 @@ import type { Boolean as ClrBoolean, Int32, Object as ClrObject, String as ClrSt
 export { SwiftError as SwiftError } from './System.Runtime.InteropServices.Swift/internal/index.js';
 export { SwiftIndirectResult as SwiftIndirectResult } from './System.Runtime.InteropServices.Swift/internal/index.js';
 
+// Multi-arity family value exports (arity-0 constructors/static namespaces)
+export const SwiftSelf: typeof Internal.SwiftSelf;
+
 // Multi-arity family sentinel (detects unspecified type parameters)
 declare const __unspecified: unique symbol;
 export type __ = typeof __unspecified;

@@ -40,6 +40,9 @@ export { JSType_Any as JSType_Any } from './System.Runtime.InteropServices.JavaS
 export type JSMarshalerArgument_ArgumentToManagedCallback<T> = Internal.JSMarshalerArgument_ArgumentToManagedCallback_1<T>;
 export type JSMarshalerArgument_ArgumentToJSCallback<T> = Internal.JSMarshalerArgument_ArgumentToJSCallback_1<T>;
 
+// Multi-arity family value exports (arity-0 constructors/static namespaces)
+export const JSType_Function: typeof Internal.JSType_Function;
+
 // Multi-arity family sentinel (detects unspecified type parameters)
 declare const __unspecified: unique symbol;
 export type __ = typeof __unspecified;

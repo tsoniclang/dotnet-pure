@@ -32,6 +32,11 @@ export { ParallelExecutionMode as ParallelExecutionMode } from './System.Linq/in
 export { ParallelMergeOptions as ParallelMergeOptions } from './System.Linq/internal/index.js';
 export { Queryable$instance as Queryable } from './System.Linq/internal/index.js';
 
+// Multi-arity family value exports (arity-0 constructors/static namespaces)
+export const EnumerableExecutor: typeof Internal.EnumerableExecutor;
+export const EnumerableQuery: typeof Internal.EnumerableQuery;
+export const ParallelQuery: typeof Internal.ParallelQuery;
+
 // Multi-arity family sentinel (detects unspecified type parameters)
 declare const __unspecified: unique symbol;
 export type __ = typeof __unspecified;

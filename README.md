@@ -56,7 +56,7 @@ const enumerator = list.GetEnumerator();  // PascalCase: GetEnumerator
 - `tsbindgen` repository cloned at `../tsbindgen`
 
 **Environment variables:**
-- `DOTNET_VERSION` - .NET runtime version (default: `10.0.0`)
+- `DOTNET_VERSION` - .NET runtime version (default: `10.0.1`)
 - `DOTNET_HOME` - .NET installation directory (default: `$HOME/.dotnet`)
 
 ## License

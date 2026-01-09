@@ -55,6 +55,9 @@ export type IUnsignedNumber<TSelf extends Internal.IUnsignedNumber_1<TSelf>> = I
 export { BigInteger as BigInteger } from './System.Numerics/internal/index.js';
 export { Complex as Complex } from './System.Numerics/internal/index.js';
 
+// Multi-arity family value exports (arity-0 constructors/static namespaces)
+export const Vector: typeof Internal.Vector$instance;
+
 // Multi-arity family sentinel (detects unspecified type parameters)
 declare const __unspecified: unique symbol;
 export type __ = typeof __unspecified;

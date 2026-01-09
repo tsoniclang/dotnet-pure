@@ -150,6 +150,9 @@ export { TypeLibVarFlags as TypeLibVarFlags } from './System.Runtime.InteropServ
 export { TypeLibVersionAttribute as TypeLibVersionAttribute } from './System.Runtime.InteropServices/internal/index.js';
 export { JsonMarshal$instance as JsonMarshal } from './System.Runtime.InteropServices/internal/index.js';
 
+// Multi-arity family value exports (arity-0 constructors/static namespaces)
+export const GCHandle: typeof Internal.GCHandle;
+
 // Multi-arity family sentinel (detects unspecified type parameters)
 declare const __unspecified: unique symbol;
 export type __ = typeof __unspecified;

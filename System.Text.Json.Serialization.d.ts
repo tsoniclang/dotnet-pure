@@ -46,6 +46,11 @@ export { JsonConverterFactory as JsonConverterFactory } from './System.Text.Json
 export { JsonStringEnumMemberNameAttribute as JsonStringEnumMemberNameAttribute } from './System.Text.Json.Serialization/internal/index.js';
 export { ReferenceResolver as ReferenceResolver } from './System.Text.Json.Serialization/internal/index.js';
 
+// Multi-arity family value exports (arity-0 constructors/static namespaces)
+export const JsonConverter: typeof Internal.JsonConverter;
+export const JsonStringEnumConverter: typeof Internal.JsonStringEnumConverter;
+export const ReferenceHandler: typeof Internal.ReferenceHandler;
+
 // Multi-arity family sentinel (detects unspecified type parameters)
 declare const __unspecified: unique symbol;
 export type __ = typeof __unspecified;

@@ -24,6 +24,9 @@ export { ChannelReader_1 as ChannelReader } from './System.Threading.Channels/in
 export { ChannelWriter_1 as ChannelWriter } from './System.Threading.Channels/internal/index.js';
 export { UnboundedPrioritizedChannelOptions_1 as UnboundedPrioritizedChannelOptions } from './System.Threading.Channels/internal/index.js';
 
+// Multi-arity family value exports (arity-0 constructors/static namespaces)
+export const Channel: typeof Internal.Channel$instance;
+
 // Multi-arity family sentinel (detects unspecified type parameters)
 declare const __unspecified: unique symbol;
 export type __ = typeof __unspecified;

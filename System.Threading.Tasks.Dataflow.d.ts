@@ -32,6 +32,8 @@ export { TransformBlock_2 as TransformBlock } from './System.Threading.Tasks.Dat
 export { TransformManyBlock_2 as TransformManyBlock } from './System.Threading.Tasks.Dataflow/internal/index.js';
 export { WriteOnceBlock_1 as WriteOnceBlock } from './System.Threading.Tasks.Dataflow/internal/index.js';
 
+// Multi-arity family value exports (arity-0 constructors/static namespaces)
+
 // Multi-arity family sentinel (detects unspecified type parameters)
 declare const __unspecified: unique symbol;
 export type __ = typeof __unspecified;

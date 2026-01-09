@@ -30,6 +30,9 @@ export { ObservableInstrument_1 as ObservableInstrument } from './System.Diagnos
 export { ObservableUpDownCounter_1 as ObservableUpDownCounter } from './System.Diagnostics.Metrics/internal/index.js';
 export { UpDownCounter_1 as UpDownCounter } from './System.Diagnostics.Metrics/internal/index.js';
 
+// Multi-arity family value exports (arity-0 constructors/static namespaces)
+export const Instrument: typeof Internal.Instrument;
+
 // Multi-arity family sentinel (detects unspecified type parameters)
 declare const __unspecified: unique symbol;
 export type __ = typeof __unspecified;
