@@ -30,6 +30,9 @@ export { MemoryManager_1 as MemoryManager } from './System.Buffers/internal/inde
 export { OperationStatus as OperationStatus } from './System.Buffers/internal/index.js';
 export { StandardFormat as StandardFormat } from './System.Buffers/internal/index.js';
 
+// Multi-arity family value exports (arity-0 constructors/static namespaces)
+export const SearchValues: typeof Internal.SearchValues$instance;
+
 // Multi-arity family sentinel (detects unspecified type parameters)
 declare const __unspecified: unique symbol;
 export type __ = typeof __unspecified;

@@ -172,6 +172,14 @@ export { CompilerMarshalOverride$instance as CompilerMarshalOverride } from './S
 export { IDispatchConstantAttribute as IDispatchConstantAttribute } from './System.Runtime.CompilerServices/internal/index.js';
 export { IUnknownConstantAttribute as IUnknownConstantAttribute } from './System.Runtime.CompilerServices/internal/index.js';
 
+// Multi-arity family value exports (arity-0 constructors/static namespaces)
+export const AsyncTaskMethodBuilder: typeof Internal.AsyncTaskMethodBuilder;
+export const AsyncValueTaskMethodBuilder: typeof Internal.AsyncValueTaskMethodBuilder;
+export const CallSite: typeof Internal.CallSite;
+export const PoolingAsyncValueTaskMethodBuilder: typeof Internal.PoolingAsyncValueTaskMethodBuilder;
+export const TaskAwaiter: typeof Internal.TaskAwaiter;
+export const ValueTaskAwaiter: typeof Internal.ValueTaskAwaiter;
+
 // Multi-arity family sentinel (detects unspecified type parameters)
 declare const __unspecified: unique symbol;
 export type __ = typeof __unspecified;

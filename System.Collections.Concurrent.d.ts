@@ -21,6 +21,9 @@ export { EnumerablePartitionerOptions as EnumerablePartitionerOptions } from './
 export { ConcurrentQueue_1 as ConcurrentQueue } from './System.Collections.Concurrent/internal/index.js';
 export type IProducerConsumerCollection<T> = Internal.IProducerConsumerCollection_1<T>;
 
+// Multi-arity family value exports (arity-0 constructors/static namespaces)
+export const Partitioner: typeof Internal.Partitioner$instance;
+
 // Multi-arity family sentinel (detects unspecified type parameters)
 declare const __unspecified: unique symbol;
 export type __ = typeof __unspecified;

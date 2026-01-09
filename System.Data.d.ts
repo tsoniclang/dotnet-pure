@@ -128,6 +128,10 @@ export { InvalidExpressionException as InvalidExpressionException } from './Syst
 export { EvaluateException as EvaluateException } from './System.Data/internal/index.js';
 export { SyntaxErrorException as SyntaxErrorException } from './System.Data/internal/index.js';
 
+// Multi-arity family value exports (arity-0 constructors/static namespaces)
+export const DataRowComparer: typeof Internal.DataRowComparer$instance;
+export const EnumerableRowCollection: typeof Internal.EnumerableRowCollection;
+
 // Multi-arity family sentinel (detects unspecified type parameters)
 declare const __unspecified: unique symbol;
 export type __ = typeof __unspecified;

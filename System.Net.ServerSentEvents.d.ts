@@ -20,6 +20,9 @@ export { SseFormatter$instance as SseFormatter } from './System.Net.ServerSentEv
 export { SseItem_1 as SseItem } from './System.Net.ServerSentEvents/internal/index.js';
 export type SseItemParser<T> = Internal.SseItemParser_1<T>;
 
+// Multi-arity family value exports (arity-0 constructors/static namespaces)
+export const SseParser: typeof Internal.SseParser$instance;
+
 // Multi-arity family sentinel (detects unspecified type parameters)
 declare const __unspecified: unique symbol;
 export type __ = typeof __unspecified;

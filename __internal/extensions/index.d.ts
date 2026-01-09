@@ -2227,7 +2227,7 @@ export type ExtensionMethods_System<TShape> =
     (TShape extends System.ReadOnlyMemory_1<infer T0 extends System.IEquatable_1<T0>> ? __Ext_System_ReadOnlyMemory_1<T0> : {}) &
     (TShape extends System.ReadOnlySpan_1<infer T0 extends System.IEquatable_1<T0>> ? __Ext_System_ReadOnlySpan_1<T0> : {}) &
     (TShape extends System.Span_1<infer T0 extends System.IEquatable_1<T0>> ? __Ext_System_Span_1<T0> : {}) &
-    (TShape extends System.String ? __Ext_System_String : {}) &
+    (TShape extends string ? __Ext_System_String : {}) &
     (TShape extends System.Tuple_1<infer T0> ? __Ext_System_Tuple_1<T0> : {}) &
     (TShape extends System.Tuple_2<infer T0, infer T1> ? __Ext_System_Tuple_2<T0, T1> : {}) &
     (TShape extends System.Tuple_3<infer T0, infer T1, infer T2> ? __Ext_System_Tuple_3<T0, T1, T2> : {}) &
@@ -2613,3 +2613,4 @@ export type ExtensionMethods_System_Xml_XPath<TShape> =
   : TShape & (
     (TShape extends System_Xml_Linq.XNode ? __Ext_System_Xml_XPath_XNode : {})
   );
+

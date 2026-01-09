@@ -30,6 +30,9 @@ export { JsonParameterInfo as JsonParameterInfo } from './System.Text.Json.Seria
 export { JsonPropertyInfo as JsonPropertyInfo } from './System.Text.Json.Serialization.Metadata/internal/index.js';
 export { JsonPropertyInfoValues_1 as JsonPropertyInfoValues } from './System.Text.Json.Serialization.Metadata/internal/index.js';
 
+// Multi-arity family value exports (arity-0 constructors/static namespaces)
+export const JsonTypeInfo: typeof Internal.JsonTypeInfo;
+
 // Multi-arity family sentinel (detects unspecified type parameters)
 declare const __unspecified: unique symbol;
 export type __ = typeof __unspecified;

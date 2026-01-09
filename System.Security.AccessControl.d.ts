@@ -75,6 +75,11 @@ export { SemaphoreAuditRule as SemaphoreAuditRule } from './System.Security.Acce
 export { SemaphoreRights as SemaphoreRights } from './System.Security.AccessControl/internal/index.js';
 export { SemaphoreSecurity as SemaphoreSecurity } from './System.Security.AccessControl/internal/index.js';
 
+// Multi-arity family value exports (arity-0 constructors/static namespaces)
+export const AccessRule: typeof Internal.AccessRule;
+export const AuditRule: typeof Internal.AuditRule;
+export const ObjectSecurity: typeof Internal.ObjectSecurity;
+
 // Multi-arity family sentinel (detects unspecified type parameters)
 declare const __unspecified: unique symbol;
 export type __ = typeof __unspecified;

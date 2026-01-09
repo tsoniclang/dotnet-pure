@@ -13,6 +13,8 @@ export { ValueTaskSourceOnCompletedFlags as ValueTaskSourceOnCompletedFlags } fr
 export { ValueTaskSourceStatus as ValueTaskSourceStatus } from './System.Threading.Tasks.Sources/internal/index.js';
 export { ManualResetValueTaskSourceCore_1 as ManualResetValueTaskSourceCore } from './System.Threading.Tasks.Sources/internal/index.js';
 
+// Multi-arity family value exports (arity-0 constructors/static namespaces)
+
 // Multi-arity family sentinel (detects unspecified type parameters)
 declare const __unspecified: unique symbol;
 export type __ = typeof __unspecified;

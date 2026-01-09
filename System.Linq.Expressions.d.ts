@@ -55,6 +55,9 @@ export { UnaryExpression as UnaryExpression } from './System.Linq.Expressions/in
 export { DynamicExpressionVisitor as DynamicExpressionVisitor } from './System.Linq.Expressions/internal/index.js';
 export { DynamicExpression as DynamicExpression } from './System.Linq.Expressions/internal/index.js';
 
+// Multi-arity family value exports (arity-0 constructors/static namespaces)
+export const Expression: typeof Internal.Expression;
+
 // Multi-arity family sentinel (detects unspecified type parameters)
 declare const __unspecified: unique symbol;
 export type __ = typeof __unspecified;

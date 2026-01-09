@@ -35,6 +35,12 @@ export { Parallel$instance as Parallel } from './System.Threading.Tasks/internal
 export { ParallelLoopState as ParallelLoopState } from './System.Threading.Tasks/internal/index.js';
 export { ParallelLoopResult as ParallelLoopResult } from './System.Threading.Tasks/internal/index.js';
 
+// Multi-arity family value exports (arity-0 constructors/static namespaces)
+export const Task: typeof Internal.Task;
+export const TaskCompletionSource: typeof Internal.TaskCompletionSource;
+export const TaskFactory: typeof Internal.TaskFactory;
+export const ValueTask: typeof Internal.ValueTask;
+
 // Multi-arity family sentinel (detects unspecified type parameters)
 declare const __unspecified: unique symbol;
 export type __ = typeof __unspecified;

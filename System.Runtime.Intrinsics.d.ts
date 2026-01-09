@@ -11,6 +11,12 @@ import type { Boolean as ClrBoolean, Byte, Double, IEquatable_1, Int16, Int32, I
 
 // Public API exports (curated - no internal $instance/$views leakage)
 
+// Multi-arity family value exports (arity-0 constructors/static namespaces)
+export const Vector128: typeof Internal.Vector128$instance;
+export const Vector256: typeof Internal.Vector256$instance;
+export const Vector512: typeof Internal.Vector512$instance;
+export const Vector64: typeof Internal.Vector64$instance;
+
 // Multi-arity family sentinel (detects unspecified type parameters)
 declare const __unspecified: unique symbol;
 export type __ = typeof __unspecified;

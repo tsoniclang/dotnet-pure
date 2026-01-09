@@ -20,6 +20,9 @@ export { Collection_1 as Collection } from './System.Collections.ObjectModel/int
 export { ReadOnlyDictionary_2 as ReadOnlyDictionary } from './System.Collections.ObjectModel/internal/index.js';
 export { ReadOnlySet_1 as ReadOnlySet } from './System.Collections.ObjectModel/internal/index.js';
 
+// Multi-arity family value exports (arity-0 constructors/static namespaces)
+export const ReadOnlyCollection: typeof Internal.ReadOnlyCollection$instance;
+
 // Multi-arity family sentinel (detects unspecified type parameters)
 declare const __unspecified: unique symbol;
 export type __ = typeof __unspecified;

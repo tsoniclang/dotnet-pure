@@ -258,6 +258,12 @@ export { NetTcpStyleUriParser as NetTcpStyleUriParser } from './System/internal/
 export { UriPartial as UriPartial } from './System/internal/index.js';
 export { UriParser as UriParser } from './System/internal/index.js';
 
+// Multi-arity family value exports (arity-0 constructors/static namespaces)
+export const Nullable: typeof Internal.Nullable$instance;
+export const Tuple: typeof Internal.Tuple$instance;
+export const ValueTuple: typeof Internal.ValueTuple;
+export const WeakReference: typeof Internal.WeakReference;
+
 // Multi-arity family sentinel (detects unspecified type parameters)
 declare const __unspecified: unique symbol;
 export type __ = typeof __unspecified;
