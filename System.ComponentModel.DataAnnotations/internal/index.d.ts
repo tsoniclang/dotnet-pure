@@ -65,8 +65,8 @@ export interface AssociatedMetadataTypeTypeDescriptionProvider$instance extends 
 
 
 export const AssociatedMetadataTypeTypeDescriptionProvider: {
-    new(type_: Type): AssociatedMetadataTypeTypeDescriptionProvider;
-    new(type_: Type, associatedMetadataType: Type): AssociatedMetadataTypeTypeDescriptionProvider;
+    new(type: Type): AssociatedMetadataTypeTypeDescriptionProvider;
+    new(type: Type, associatedMetadataType: Type): AssociatedMetadataTypeTypeDescriptionProvider;
 };
 
 
@@ -418,7 +418,7 @@ export interface RangeAttribute$instance extends ValidationAttribute {
 export const RangeAttribute: {
     new(minimum: int, maximum: int): RangeAttribute;
     new(minimum: double, maximum: double): RangeAttribute;
-    new(type_: Type, minimum: string, maximum: string): RangeAttribute;
+    new(type: Type, minimum: string, maximum: string): RangeAttribute;
 };
 
 

@@ -412,9 +412,9 @@ export interface MailMessage$instance {
 
 export const MailMessage: {
     new(): MailMessage;
-    new(from_: string, to: string): MailMessage;
-    new(from_: string, to: string, subject: string, body: string): MailMessage;
-    new(from_: MailAddress, to: MailAddress): MailMessage;
+    new(from: string, to: string): MailMessage;
+    new(from: string, to: string, subject: string, body: string): MailMessage;
+    new(from: MailAddress, to: MailAddress): MailMessage;
 };
 
 
@@ -443,14 +443,14 @@ export interface SmtpClient$instance {
     Timeout: int;
     UseDefaultCredentials: boolean;
     Dispose(): void;
-    Send(from_: string, recipients: string, subject: string, body: string): void;
+    Send(from: string, recipients: string, subject: string, body: string): void;
     Send(message: MailMessage): void;
-    SendAsync(from_: string, recipients: string, subject: string, body: string, userToken: unknown): void;
+    SendAsync(from: string, recipients: string, subject: string, body: string, userToken: unknown): void;
     SendAsync(message: MailMessage, userToken: unknown): void;
     SendAsyncCancel(): void;
-    SendMailAsync(from_: string, recipients: string, subject: string, body: string): Task;
+    SendMailAsync(from: string, recipients: string, subject: string, body: string): Task;
     SendMailAsync(message: MailMessage): Task;
-    SendMailAsync(from_: string, recipients: string, subject: string, body: string, cancellationToken: CancellationToken): Task;
+    SendMailAsync(from: string, recipients: string, subject: string, body: string, cancellationToken: CancellationToken): Task;
     SendMailAsync(message: MailMessage, cancellationToken: CancellationToken): Task;
 }
 

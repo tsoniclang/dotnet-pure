@@ -231,8 +231,8 @@ export const SecurityException: {
     new(): SecurityException;
     new(message: string): SecurityException;
     new(message: string, inner: Exception): SecurityException;
-    new(message: string, type_: Type): SecurityException;
-    new(message: string, type_: Type, state: string): SecurityException;
+    new(message: string, type: Type): SecurityException;
+    new(message: string, type: Type, state: string): SecurityException;
 };
 
 

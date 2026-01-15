@@ -522,8 +522,8 @@ export interface ICustomAttributeTypeProvider_1$instance<TType> extends ISimpleT
     GetTypeFromDefinition(reader: MetadataReader, handle: TypeDefinitionHandle, rawTypeKind: byte): TType;
     GetTypeFromReference(reader: MetadataReader, handle: TypeReferenceHandle, rawTypeKind: byte): TType;
     GetTypeFromSerializedName(name: string): TType;
-    GetUnderlyingEnumType(type_: TType): PrimitiveTypeCode;
-    IsSystemType(type_: TType): boolean;
+    GetUnderlyingEnumType(type: TType): PrimitiveTypeCode;
+    IsSystemType(type: TType): boolean;
 }
 
 
@@ -1111,7 +1111,7 @@ export interface CustomAttributeNamedArgument_1$instance<TType> {
 
 
 export const CustomAttributeNamedArgument_1: {
-    new<TType>(name: string, kind: CustomAttributeNamedArgumentKind, type_: TType, value: unknown): CustomAttributeNamedArgument_1<TType>;
+    new<TType>(name: string, kind: CustomAttributeNamedArgumentKind, type: TType, value: unknown): CustomAttributeNamedArgument_1<TType>;
 };
 
 
@@ -1124,7 +1124,7 @@ export interface CustomAttributeTypedArgument_1$instance<TType> {
 
 
 export const CustomAttributeTypedArgument_1: {
-    new<TType>(type_: TType, value: unknown): CustomAttributeTypedArgument_1<TType>;
+    new<TType>(type: TType, value: unknown): CustomAttributeTypedArgument_1<TType>;
 };
 
 

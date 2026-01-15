@@ -294,7 +294,7 @@ export interface ReadOnlySet_1$instance<T> {
 
 
 export const ReadOnlySet_1: {
-    new<T>(set_: ISet_1<T>): ReadOnlySet_1<T>;
+    new<T>(set: ISet_1<T>): ReadOnlySet_1<T>;
     readonly Empty: unknown;
 };
 

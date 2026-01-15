@@ -19902,7 +19902,7 @@
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.ComTypes.STATSTG::typeSystem.Int32",
           "clrName": "type",
-          "tsEmitName": "type_",
+          "tsEmitName": "type",
           "metadataToken": 67113986,
           "normalizedSignature": "type|System.Int32|static=false|const=false",
           "isStatic": false,
@@ -20086,7 +20086,7 @@
           }
         },
         {
-          "tsName": "type_",
+          "tsName": "type",
           "isStatic": false,
           "tsSignatureId": "type|System.Int32|static=false|const=false",
           "target": {

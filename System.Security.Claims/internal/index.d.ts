@@ -31,11 +31,11 @@ export interface Claim$instance {
 export const Claim: {
     new(reader: BinaryReader): Claim;
     new(reader: BinaryReader, subject: ClaimsIdentity): Claim;
-    new(type_: string, value: string): Claim;
-    new(type_: string, value: string, valueType: string): Claim;
-    new(type_: string, value: string, valueType: string, issuer: string): Claim;
-    new(type_: string, value: string, valueType: string, issuer: string, originalIssuer: string): Claim;
-    new(type_: string, value: string, valueType: string, issuer: string, originalIssuer: string, subject: ClaimsIdentity): Claim;
+    new(type: string, value: string): Claim;
+    new(type: string, value: string, valueType: string): Claim;
+    new(type: string, value: string, valueType: string, issuer: string): Claim;
+    new(type: string, value: string, valueType: string, issuer: string, originalIssuer: string): Claim;
+    new(type: string, value: string, valueType: string, issuer: string, originalIssuer: string, subject: ClaimsIdentity): Claim;
 };
 
 
@@ -58,11 +58,11 @@ export interface ClaimsIdentity$instance {
     AddClaims(claims: IEnumerable_1<Claim>): void;
     Clone(): ClaimsIdentity;
     FindAll(match: Predicate_1<Claim>): IEnumerable_1<Claim>;
-    FindAll(type_: string): IEnumerable_1<Claim>;
+    FindAll(type: string): IEnumerable_1<Claim>;
     FindFirst(match: Predicate_1<Claim>): Claim | undefined;
-    FindFirst(type_: string): Claim | undefined;
+    FindFirst(type: string): Claim | undefined;
     HasClaim(match: Predicate_1<Claim>): boolean;
-    HasClaim(type_: string, value: string): boolean;
+    HasClaim(type: string, value: string): boolean;
     RemoveClaim(claim: Claim): void;
     TryRemoveClaim(claim: Claim): boolean;
     WriteTo(writer: BinaryWriter): void;
@@ -105,11 +105,11 @@ export interface ClaimsPrincipal$instance {
     AddIdentity(identity: ClaimsIdentity): void;
     Clone(): ClaimsPrincipal;
     FindAll(match: Predicate_1<Claim>): IEnumerable_1<Claim>;
-    FindAll(type_: string): IEnumerable_1<Claim>;
+    FindAll(type: string): IEnumerable_1<Claim>;
     FindFirst(match: Predicate_1<Claim>): Claim | undefined;
-    FindFirst(type_: string): Claim | undefined;
+    FindFirst(type: string): Claim | undefined;
     HasClaim(match: Predicate_1<Claim>): boolean;
-    HasClaim(type_: string, value: string): boolean;
+    HasClaim(type: string, value: string): boolean;
     IsInRole(role: string): boolean;
     WriteTo(writer: BinaryWriter): void;
 }

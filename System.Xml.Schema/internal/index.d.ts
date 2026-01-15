@@ -204,7 +204,7 @@ export interface XmlAtomicValue$instance extends XPathItem {
     readonly XmlType: XmlSchemaType | XmlSchemaType | undefined;
     Clone(): XmlAtomicValue;
     ToString(): string;
-    ValueAs(type_: Type, nsResolver: IXmlNamespaceResolver): unknown;
+    ValueAs(type: Type, nsResolver: IXmlNamespaceResolver): unknown;
     ValueAs(returnType: Type): unknown;
 }
 

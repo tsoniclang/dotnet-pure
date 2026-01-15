@@ -467,10 +467,10 @@ export interface JsonSerializerOptions$instance {
     WriteIndented: boolean;
     AddContext<TContext extends JsonSerializerContext>(): void;
     GetConverter(typeToConvert: Type): JsonConverter;
-    GetTypeInfo(type_: Type): JsonTypeInfo;
+    GetTypeInfo(type: Type): JsonTypeInfo;
     MakeReadOnly(): void;
     MakeReadOnly(populateMissingResolver: boolean): void;
-    TryGetTypeInfo(type_: Type, typeInfo: JsonTypeInfo): boolean;
+    TryGetTypeInfo(type: Type, typeInfo: JsonTypeInfo): boolean;
 }
 
 

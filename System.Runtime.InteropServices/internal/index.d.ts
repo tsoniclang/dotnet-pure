@@ -509,7 +509,7 @@ export interface GCHandle$instance {
 
 export const GCHandle: {
     new(): GCHandle;
-    Alloc(value: unknown, type_: GCHandleType): GCHandle;
+    Alloc(value: unknown, type: GCHandleType): GCHandle;
     Alloc(value: unknown): GCHandle;
     FromIntPtr(value: nint): GCHandle;
     ToIntPtr(value: GCHandle): nint;
@@ -951,7 +951,7 @@ export interface ComAwareEventInfo$instance extends EventInfo {
 
 
 export const ComAwareEventInfo: {
-    new(type_: Type, eventName: string): ComAwareEventInfo;
+    new(type: Type, eventName: string): ComAwareEventInfo;
 };
 
 
@@ -1108,8 +1108,8 @@ export const ComWrappers: {
     GetIUnknownImpl(fpQueryInterface: nint, fpAddRef: nint, fpRelease: nint): void;
     RegisterForMarshalling(instance: ComWrappers): void;
     RegisterForTrackerSupport(instance: ComWrappers): void;
-    TryGetComInstance(obj: unknown, unknown_: nint): boolean;
-    TryGetObject(unknown_: nint, obj: unknown): boolean;
+    TryGetComInstance(obj: unknown, unknown: nint): boolean;
+    TryGetObject(unknown: nint, obj: unknown): boolean;
 };
 
 
@@ -1988,8 +1988,8 @@ export abstract class Marshal$instance {
     static FreeBSTR(ptr: nint): void;
     static FreeCoTaskMem(ptr: nint): void;
     static FreeHGlobal(hglobal: nint): void;
-    static GenerateGuidForType(type_: Type): Guid;
-    static GenerateProgIdForType(type_: Type): string | undefined;
+    static GenerateGuidForType(type: Type): Guid;
+    static GenerateProgIdForType(type: Type): string | undefined;
     static GetComInterfaceForObject(o: unknown, T: Type, mode: CustomQueryInterfaceMode): nint;
     static GetComInterfaceForObject(o: unknown, T: Type): nint;
     static GetComInterfaceForObject<T, TInterface>(o: T): nint;
@@ -2025,7 +2025,7 @@ export abstract class Marshal$instance {
     static GetTypedObjectForIUnknown(pUnk: nint, t: Type): unknown;
     static GetTypeFromCLSID(clsid: Guid): Type | undefined;
     static GetTypeInfoName(typeInfo: ITypeInfo): string;
-    static GetUniqueObjectForIUnknown(unknown_: nint): unknown;
+    static GetUniqueObjectForIUnknown(unknown: nint): unknown;
     static InitHandle(safeHandle: SafeHandle, handle: nint): void;
     static IsComObject(o: unknown): boolean;
     static IsTypeVisibleFromCom(t: Type): boolean;

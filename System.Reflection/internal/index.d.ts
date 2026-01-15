@@ -557,7 +557,7 @@ export interface Assembly$instance {
     GetManifestResourceInfo(resourceName: string): ManifestResourceInfo | undefined;
     GetManifestResourceNames(): string[];
     GetManifestResourceStream(name: string): Stream | undefined;
-    GetManifestResourceStream(type_: Type, name: string): Stream | undefined;
+    GetManifestResourceStream(type: Type, name: string): Stream | undefined;
     GetModule(name: string): Module | undefined;
     GetModules(): Module[];
     GetModules(getResourceModules: boolean): Module[];
@@ -580,7 +580,7 @@ export interface Assembly$instance {
 
 export const Assembly: {
     CreateQualifiedName(assemblyName: string, typeName: string): string;
-    GetAssembly(type_: Type): Assembly | undefined;
+    GetAssembly(type: Type): Assembly | undefined;
     GetCallingAssembly(): Assembly;
     GetEntryAssembly(): Assembly | undefined;
     GetExecutingAssembly(): Assembly;
@@ -905,7 +905,7 @@ export type AssemblyVersionAttribute = AssemblyVersionAttribute$instance;
 export interface Binder$instance {
     BindToField(bindingAttr: BindingFlags, match: FieldInfo[], value: unknown, culture: CultureInfo): FieldInfo;
     BindToMethod(bindingAttr: BindingFlags, match: MethodBase[], args: unknown[], modifiers: ParameterModifier[], culture: CultureInfo, names: string[], state: unknown): MethodBase;
-    ChangeType(value: unknown, type_: Type, culture: CultureInfo): unknown;
+    ChangeType(value: unknown, type: Type, culture: CultureInfo): unknown;
     ReorderArgumentArray(args: unknown[], state: unknown): void;
     SelectMethod(bindingAttr: BindingFlags, match: MethodBase[], types: Type[], modifiers: ParameterModifier[]): MethodBase | undefined;
     SelectProperty(bindingAttr: BindingFlags, match: PropertyInfo[], returnType: Type, indexes: Type[], modifiers: ParameterModifier[]): PropertyInfo | undefined;
@@ -955,7 +955,7 @@ export interface ConstructorInvoker$instance {
 
 export const ConstructorInvoker: {
     new(): ConstructorInvoker;
-    Create(constructor_: ConstructorInfo): ConstructorInvoker;
+    Create(constructor: ConstructorInfo): ConstructorInvoker;
 };
 
 
@@ -1524,7 +1524,7 @@ export interface Pointer$instance {
 
 export const Pointer: {
     new(): Pointer;
-    Box(ptr: ptr<void>, type_: Type): unknown;
+    Box(ptr: ptr<void>, type: Type): unknown;
     Unbox(ptr: unknown): ptr<void>;
 };
 
@@ -1587,7 +1587,7 @@ export type PropertyInfo = PropertyInfo$instance & __PropertyInfo$views;
 export interface ReflectionContext$instance {
     GetTypeForObject(value: unknown): TypeInfo;
     MapAssembly(assembly: Assembly): Assembly;
-    MapType(type_: TypeInfo): TypeInfo;
+    MapType(type: TypeInfo): TypeInfo;
 }
 
 
@@ -1740,7 +1740,7 @@ export interface TypeDelegator$instance extends TypeInfo$instance {
     GetInterface(name: string): Type | undefined;
     GetInterfaceMap(interfaceType: Type): InterfaceMapping;
     GetInterfaces(): Type[];
-    GetMember(name: string, type_: MemberTypes, bindingAttr: BindingFlags): MemberInfo[];
+    GetMember(name: string, type: MemberTypes, bindingAttr: BindingFlags): MemberInfo[];
     GetMember(name: string, bindingAttr: BindingFlags): MemberInfo[];
     GetMember(name: string): MemberInfo[];
     GetMembers(bindingAttr: BindingFlags): MemberInfo[];
@@ -1824,7 +1824,7 @@ export interface TypeInfo$instance extends Type {
     GetFields(bindingAttr: BindingFlags): FieldInfo[];
     GetMember(name: string): MemberInfo[];
     GetMember(name: string, bindingAttr: BindingFlags): MemberInfo[];
-    GetMember(name: string, type_: MemberTypes, bindingAttr: BindingFlags): MemberInfo[];
+    GetMember(name: string, type: MemberTypes, bindingAttr: BindingFlags): MemberInfo[];
     GetMembers(): MemberInfo[];
     GetMembers(bindingAttr: BindingFlags): MemberInfo[];
     GetMethod(name: string): MethodInfo | undefined;
@@ -1937,7 +1937,7 @@ export abstract class EventInfoExtensions$instance {
 export type EventInfoExtensions = EventInfoExtensions$instance;
 
 export abstract class IntrospectionExtensions$instance {
-    static GetTypeInfo(type_: Type): TypeInfo;
+    static GetTypeInfo(type: Type): TypeInfo;
 }
 
 
@@ -1959,8 +1959,8 @@ export abstract class MethodInfoExtensions$instance {
 export type MethodInfoExtensions = MethodInfoExtensions$instance;
 
 export abstract class ModuleExtensions$instance {
-    static GetModuleVersionId(module_: Module): Guid;
-    static HasModuleVersionId(module_: Module): boolean;
+    static GetModuleVersionId(module: Module): Guid;
+    static HasModuleVersionId(module: Module): boolean;
 }
 
 
@@ -1981,54 +1981,54 @@ export type PropertyInfoExtensions = PropertyInfoExtensions$instance;
 export abstract class RuntimeReflectionExtensions$instance {
     static GetMethodInfo(del: Function): MethodInfo;
     static GetRuntimeBaseDefinition(method: MethodInfo): MethodInfo | undefined;
-    static GetRuntimeEvent(type_: Type, name: string): EventInfo | undefined;
-    static GetRuntimeEvents(type_: Type): IEnumerable_1<EventInfo>;
-    static GetRuntimeField(type_: Type, name: string): FieldInfo | undefined;
-    static GetRuntimeFields(type_: Type): IEnumerable_1<FieldInfo>;
+    static GetRuntimeEvent(type: Type, name: string): EventInfo | undefined;
+    static GetRuntimeEvents(type: Type): IEnumerable_1<EventInfo>;
+    static GetRuntimeField(type: Type, name: string): FieldInfo | undefined;
+    static GetRuntimeFields(type: Type): IEnumerable_1<FieldInfo>;
     static GetRuntimeInterfaceMap(typeInfo: TypeInfo, interfaceType: Type): InterfaceMapping;
-    static GetRuntimeMethod(type_: Type, name: string, parameters: Type[]): MethodInfo | undefined;
-    static GetRuntimeMethods(type_: Type): IEnumerable_1<MethodInfo>;
-    static GetRuntimeProperties(type_: Type): IEnumerable_1<PropertyInfo>;
-    static GetRuntimeProperty(type_: Type, name: string): PropertyInfo | undefined;
+    static GetRuntimeMethod(type: Type, name: string, parameters: Type[]): MethodInfo | undefined;
+    static GetRuntimeMethods(type: Type): IEnumerable_1<MethodInfo>;
+    static GetRuntimeProperties(type: Type): IEnumerable_1<PropertyInfo>;
+    static GetRuntimeProperty(type: Type, name: string): PropertyInfo | undefined;
 }
 
 
 export type RuntimeReflectionExtensions = RuntimeReflectionExtensions$instance;
 
 export abstract class TypeExtensions$instance {
-    static GetConstructor(type_: Type, types: Type[]): ConstructorInfo | undefined;
-    static GetConstructors(type_: Type, bindingAttr: BindingFlags): ConstructorInfo[];
-    static GetConstructors(type_: Type): ConstructorInfo[];
-    static GetDefaultMembers(type_: Type): MemberInfo[];
-    static GetEvent(type_: Type, name: string, bindingAttr: BindingFlags): EventInfo | undefined;
-    static GetEvent(type_: Type, name: string): EventInfo | undefined;
-    static GetEvents(type_: Type, bindingAttr: BindingFlags): EventInfo[];
-    static GetEvents(type_: Type): EventInfo[];
-    static GetField(type_: Type, name: string, bindingAttr: BindingFlags): FieldInfo | undefined;
-    static GetField(type_: Type, name: string): FieldInfo | undefined;
-    static GetFields(type_: Type, bindingAttr: BindingFlags): FieldInfo[];
-    static GetFields(type_: Type): FieldInfo[];
-    static GetGenericArguments(type_: Type): Type[];
-    static GetInterfaces(type_: Type): Type[];
-    static GetMember(type_: Type, name: string, bindingAttr: BindingFlags): MemberInfo[];
-    static GetMember(type_: Type, name: string): MemberInfo[];
-    static GetMembers(type_: Type, bindingAttr: BindingFlags): MemberInfo[];
-    static GetMembers(type_: Type): MemberInfo[];
-    static GetMethod(type_: Type, name: string, bindingAttr: BindingFlags): MethodInfo | undefined;
-    static GetMethod(type_: Type, name: string, types: Type[]): MethodInfo | undefined;
-    static GetMethod(type_: Type, name: string): MethodInfo | undefined;
-    static GetMethods(type_: Type, bindingAttr: BindingFlags): MethodInfo[];
-    static GetMethods(type_: Type): MethodInfo[];
-    static GetNestedType(type_: Type, name: string, bindingAttr: BindingFlags): Type | undefined;
-    static GetNestedTypes(type_: Type, bindingAttr: BindingFlags): Type[];
-    static GetProperties(type_: Type, bindingAttr: BindingFlags): PropertyInfo[];
-    static GetProperties(type_: Type): PropertyInfo[];
-    static GetProperty(type_: Type, name: string, bindingAttr: BindingFlags): PropertyInfo | undefined;
-    static GetProperty(type_: Type, name: string, returnType: Type, types: Type[]): PropertyInfo | undefined;
-    static GetProperty(type_: Type, name: string, returnType: Type): PropertyInfo | undefined;
-    static GetProperty(type_: Type, name: string): PropertyInfo | undefined;
-    static IsAssignableFrom(type_: Type, c: Type): boolean;
-    static IsInstanceOfType(type_: Type, o: unknown): boolean;
+    static GetConstructor(type: Type, types: Type[]): ConstructorInfo | undefined;
+    static GetConstructors(type: Type, bindingAttr: BindingFlags): ConstructorInfo[];
+    static GetConstructors(type: Type): ConstructorInfo[];
+    static GetDefaultMembers(type: Type): MemberInfo[];
+    static GetEvent(type: Type, name: string, bindingAttr: BindingFlags): EventInfo | undefined;
+    static GetEvent(type: Type, name: string): EventInfo | undefined;
+    static GetEvents(type: Type, bindingAttr: BindingFlags): EventInfo[];
+    static GetEvents(type: Type): EventInfo[];
+    static GetField(type: Type, name: string, bindingAttr: BindingFlags): FieldInfo | undefined;
+    static GetField(type: Type, name: string): FieldInfo | undefined;
+    static GetFields(type: Type, bindingAttr: BindingFlags): FieldInfo[];
+    static GetFields(type: Type): FieldInfo[];
+    static GetGenericArguments(type: Type): Type[];
+    static GetInterfaces(type: Type): Type[];
+    static GetMember(type: Type, name: string, bindingAttr: BindingFlags): MemberInfo[];
+    static GetMember(type: Type, name: string): MemberInfo[];
+    static GetMembers(type: Type, bindingAttr: BindingFlags): MemberInfo[];
+    static GetMembers(type: Type): MemberInfo[];
+    static GetMethod(type: Type, name: string, bindingAttr: BindingFlags): MethodInfo | undefined;
+    static GetMethod(type: Type, name: string, types: Type[]): MethodInfo | undefined;
+    static GetMethod(type: Type, name: string): MethodInfo | undefined;
+    static GetMethods(type: Type, bindingAttr: BindingFlags): MethodInfo[];
+    static GetMethods(type: Type): MethodInfo[];
+    static GetNestedType(type: Type, name: string, bindingAttr: BindingFlags): Type | undefined;
+    static GetNestedTypes(type: Type, bindingAttr: BindingFlags): Type[];
+    static GetProperties(type: Type, bindingAttr: BindingFlags): PropertyInfo[];
+    static GetProperties(type: Type): PropertyInfo[];
+    static GetProperty(type: Type, name: string, bindingAttr: BindingFlags): PropertyInfo | undefined;
+    static GetProperty(type: Type, name: string, returnType: Type, types: Type[]): PropertyInfo | undefined;
+    static GetProperty(type: Type, name: string, returnType: Type): PropertyInfo | undefined;
+    static GetProperty(type: Type, name: string): PropertyInfo | undefined;
+    static IsAssignableFrom(type: Type, c: Type): boolean;
+    static IsInstanceOfType(type: Type, o: unknown): boolean;
 }
 
 

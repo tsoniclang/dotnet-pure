@@ -61,13 +61,13 @@ export interface DataContractJsonSerializer$instance extends XmlObjectSerializer
 
 
 export const DataContractJsonSerializer: {
-    new(type_: Type): DataContractJsonSerializer;
-    new(type_: Type, rootName: string): DataContractJsonSerializer;
-    new(type_: Type, rootName: XmlDictionaryString): DataContractJsonSerializer;
-    new(type_: Type, knownTypes: IEnumerable_1<Type>): DataContractJsonSerializer;
-    new(type_: Type, rootName: string, knownTypes: IEnumerable_1<Type>): DataContractJsonSerializer;
-    new(type_: Type, rootName: XmlDictionaryString, knownTypes: IEnumerable_1<Type>): DataContractJsonSerializer;
-    new(type_: Type, settings: DataContractJsonSerializerSettings): DataContractJsonSerializer;
+    new(type: Type): DataContractJsonSerializer;
+    new(type: Type, rootName: string): DataContractJsonSerializer;
+    new(type: Type, rootName: XmlDictionaryString): DataContractJsonSerializer;
+    new(type: Type, knownTypes: IEnumerable_1<Type>): DataContractJsonSerializer;
+    new(type: Type, rootName: string, knownTypes: IEnumerable_1<Type>): DataContractJsonSerializer;
+    new(type: Type, rootName: XmlDictionaryString, knownTypes: IEnumerable_1<Type>): DataContractJsonSerializer;
+    new(type: Type, settings: DataContractJsonSerializerSettings): DataContractJsonSerializer;
 };
 
 

@@ -572,7 +572,7 @@ export interface GregorianCalendar$instance extends Calendar$instance {
 
 export const GregorianCalendar: {
     new(): GregorianCalendar;
-    new(type_: GregorianCalendarTypes): GregorianCalendar;
+    new(type: GregorianCalendarTypes): GregorianCalendar;
     readonly ADEra: int;
 };
 

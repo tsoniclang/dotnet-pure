@@ -514,7 +514,7 @@ export interface AmbientValueAttribute$instance extends Attribute {
 
 
 export const AmbientValueAttribute: {
-    new(type_: Type, value: string): AmbientValueAttribute;
+    new(type: Type, value: string): AmbientValueAttribute;
     new(value: char): AmbientValueAttribute;
     new(value: byte): AmbientValueAttribute;
     new(value: short): AmbientValueAttribute;
@@ -615,7 +615,7 @@ export interface AttributeProviderAttribute$instance extends Attribute {
 export const AttributeProviderAttribute: {
     new(typeName: string): AttributeProviderAttribute;
     new(typeName: string, propertyName: string): AttributeProviderAttribute;
-    new(type_: Type): AttributeProviderAttribute;
+    new(type: Type): AttributeProviderAttribute;
 };
 
 
@@ -954,7 +954,7 @@ export interface ComponentConverter$instance extends ReferenceConverter {
 
 
 export const ComponentConverter: {
-    new(type_: Type): ComponentConverter;
+    new(type: Type): ComponentConverter;
 };
 
 
@@ -1272,7 +1272,7 @@ export interface DefaultValueAttribute$instance extends Attribute {
 
 
 export const DefaultValueAttribute: {
-    new(type_: Type, value: string): DefaultValueAttribute;
+    new(type: Type, value: string): DefaultValueAttribute;
     new(value: char): DefaultValueAttribute;
     new(value: byte): DefaultValueAttribute;
     new(value: short): DefaultValueAttribute;
@@ -1460,7 +1460,7 @@ export const EditorAttribute: {
     new(): EditorAttribute;
     new(typeName: string, baseTypeName: string): EditorAttribute;
     new(typeName: string, baseType: Type): EditorAttribute;
-    new(type_: Type, baseType: Type): EditorAttribute;
+    new(type: Type, baseType: Type): EditorAttribute;
 };
 
 
@@ -1502,7 +1502,7 @@ export interface EnumConverter$instance extends TypeConverter {
 
 
 export const EnumConverter: {
-    new(type_: Type): EnumConverter;
+    new(type: Type): EnumConverter;
 };
 
 
@@ -1841,9 +1841,9 @@ export type License = License$instance & __License$views;
 
 export interface LicenseContext$instance {
     readonly UsageMode: LicenseUsageMode;
-    GetSavedLicenseKey(type_: Type, resourceAssembly: Assembly): string | undefined;
-    GetService(type_: Type): unknown | undefined;
-    SetSavedLicenseKey(type_: Type, key: string): void;
+    GetSavedLicenseKey(type: Type, resourceAssembly: Assembly): string | undefined;
+    GetService(type: Type): unknown | undefined;
+    SetSavedLicenseKey(type: Type, key: string): void;
 }
 
 
@@ -1868,10 +1868,10 @@ export interface LicenseException$instance extends SystemException {
 
 
 export const LicenseException: {
-    new(type_: Type): LicenseException;
-    new(type_: Type, instance: unknown): LicenseException;
-    new(type_: Type, instance: unknown, message: string): LicenseException;
-    new(type_: Type, instance: unknown, message: string, innerException: Exception): LicenseException;
+    new(type: Type): LicenseException;
+    new(type: Type, instance: unknown): LicenseException;
+    new(type: Type, instance: unknown, message: string): LicenseException;
+    new(type: Type, instance: unknown, message: string, innerException: Exception): LicenseException;
 };
 
 
@@ -1890,22 +1890,22 @@ export const LicenseManager: {
     new(): LicenseManager;
     CurrentContext: LicenseContext;
     readonly UsageMode: LicenseUsageMode;
-    CreateWithContext(type_: Type, creationContext: LicenseContext, args: unknown[]): unknown | undefined;
-    CreateWithContext(type_: Type, creationContext: LicenseContext): unknown | undefined;
-    IsLicensed(type_: Type): boolean;
-    IsValid(type_: Type, instance: unknown, license: License): boolean;
-    IsValid(type_: Type): boolean;
+    CreateWithContext(type: Type, creationContext: LicenseContext, args: unknown[]): unknown | undefined;
+    CreateWithContext(type: Type, creationContext: LicenseContext): unknown | undefined;
+    IsLicensed(type: Type): boolean;
+    IsValid(type: Type, instance: unknown, license: License): boolean;
+    IsValid(type: Type): boolean;
     LockContext(contextUser: unknown): void;
     UnlockContext(contextUser: unknown): void;
-    Validate(type_: Type, instance: unknown): License | undefined;
-    Validate(type_: Type): void;
+    Validate(type: Type, instance: unknown): License | undefined;
+    Validate(type: Type): void;
 };
 
 
 export type LicenseManager = LicenseManager$instance;
 
 export interface LicenseProvider$instance {
-    GetLicense(context: LicenseContext, type_: Type, instance: unknown, allowExceptions: boolean): License | undefined;
+    GetLicense(context: LicenseContext, type: Type, instance: unknown, allowExceptions: boolean): License | undefined;
 }
 
 
@@ -1926,7 +1926,7 @@ export interface LicenseProviderAttribute$instance extends Attribute {
 export const LicenseProviderAttribute: {
     new(): LicenseProviderAttribute;
     new(typeName: string): LicenseProviderAttribute;
-    new(type_: Type): LicenseProviderAttribute;
+    new(type: Type): LicenseProviderAttribute;
     readonly Default: LicenseProviderAttribute;
 };
 
@@ -1934,7 +1934,7 @@ export const LicenseProviderAttribute: {
 export type LicenseProviderAttribute = LicenseProviderAttribute$instance;
 
 export interface LicFileLicenseProvider$instance extends LicenseProvider {
-    GetLicense(context: LicenseContext, type_: Type, instance: unknown, allowExceptions: boolean): License | undefined;
+    GetLicense(context: LicenseContext, type: Type, instance: unknown, allowExceptions: boolean): License | undefined;
 }
 
 
@@ -2309,7 +2309,7 @@ export interface NullableConverter$instance extends TypeConverter {
 
 
 export const NullableConverter: {
-    new(type_: Type): NullableConverter;
+    new(type: Type): NullableConverter;
 };
 
 
@@ -2548,7 +2548,7 @@ export interface ReferenceConverter$instance extends TypeConverter {
 
 
 export const ReferenceConverter: {
-    new(type_: Type): ReferenceConverter;
+    new(type: Type): ReferenceConverter;
 };
 
 
@@ -2823,7 +2823,7 @@ export interface TypeConverterAttribute$instance extends Attribute {
 
 export const TypeConverterAttribute: {
     new(): TypeConverterAttribute;
-    new(type_: Type): TypeConverterAttribute;
+    new(type: Type): TypeConverterAttribute;
     new(typeName: string): TypeConverterAttribute;
     readonly Default: TypeConverterAttribute;
 };
@@ -2848,8 +2848,8 @@ export interface TypeDescriptionProvider$instance {
     GetTypeDescriptorFromRegisteredType(objectType: Type): ICustomTypeDescriptor | undefined;
     GetTypeDescriptorFromRegisteredType(instance: unknown): ICustomTypeDescriptor | undefined;
     GetTypeDescriptorFromRegisteredType(objectType: Type, instance: unknown): ICustomTypeDescriptor | undefined;
-    IsRegisteredType(type_: Type): boolean;
-    IsSupportedType(type_: Type): boolean;
+    IsRegisteredType(type: Type): boolean;
+    IsSupportedType(type: Type): boolean;
     RegisterType<T>(): void;
 }
 
@@ -2867,7 +2867,7 @@ export interface TypeDescriptionProviderAttribute$instance extends Attribute {
 
 export const TypeDescriptionProviderAttribute: {
     new(typeName: string): TypeDescriptionProviderAttribute;
-    new(type_: Type): TypeDescriptionProviderAttribute;
+    new(type: Type): TypeDescriptionProviderAttribute;
 };
 
 
@@ -2884,20 +2884,20 @@ export const TypeDescriptor: {
     get ComNativeDescriptorHandler(): IComNativeDescriptorHandler | undefined;
     set ComNativeDescriptorHandler(value: IComNativeDescriptorHandler);
     AddAttributes(instance: unknown, ...attributes: Attribute[]): TypeDescriptionProvider;
-    AddAttributes(type_: Type, ...attributes: Attribute[]): TypeDescriptionProvider;
+    AddAttributes(type: Type, ...attributes: Attribute[]): TypeDescriptionProvider;
     AddEditorTable(editorBaseType: Type, table: Hashtable): void;
     AddProvider(provider: TypeDescriptionProvider, instance: unknown): void;
-    AddProvider(provider: TypeDescriptionProvider, type_: Type): void;
+    AddProvider(provider: TypeDescriptionProvider, type: Type): void;
     AddProviderTransparent(provider: TypeDescriptionProvider, instance: unknown): void;
-    AddProviderTransparent(provider: TypeDescriptionProvider, type_: Type): void;
+    AddProviderTransparent(provider: TypeDescriptionProvider, type: Type): void;
     CreateAssociation(primary: unknown, secondary: unknown): void;
     CreateDesigner(component: IComponent, designerBaseType: Type): IDesigner | undefined;
     CreateEvent(componentType: Type, oldEventDescriptor: EventDescriptor, ...attributes: Attribute[]): EventDescriptor;
-    CreateEvent(componentType: Type, name: string, type_: Type, ...attributes: Attribute[]): EventDescriptor;
+    CreateEvent(componentType: Type, name: string, type: Type, ...attributes: Attribute[]): EventDescriptor;
     CreateInstance(provider: IServiceProvider, objectType: Type, argTypes: Type[], args: unknown[]): unknown | undefined;
     CreateProperty(componentType: Type, oldPropertyDescriptor: PropertyDescriptor, ...attributes: Attribute[]): PropertyDescriptor;
-    CreateProperty(componentType: Type, name: string, type_: Type, ...attributes: Attribute[]): PropertyDescriptor;
-    GetAssociation(type_: Type, primary: unknown): unknown;
+    CreateProperty(componentType: Type, name: string, type: Type, ...attributes: Attribute[]): PropertyDescriptor;
+    GetAssociation(type: Type, primary: unknown): unknown;
     GetAttributes(component: unknown, noCustomTypeDesc: boolean): AttributeCollection;
     GetAttributes(component: unknown): AttributeCollection;
     GetAttributes(componentType: Type): AttributeCollection;
@@ -2908,9 +2908,9 @@ export const TypeDescriptor: {
     GetComponentName(component: unknown): string | undefined;
     GetConverter(component: unknown, noCustomTypeDesc: boolean): TypeConverter;
     GetConverter(component: unknown): TypeConverter;
-    GetConverter(type_: Type): TypeConverter;
+    GetConverter(type: Type): TypeConverter;
     GetConverterFromRegisteredType(component: unknown): TypeConverter;
-    GetConverterFromRegisteredType(type_: Type): TypeConverter;
+    GetConverterFromRegisteredType(type: Type): TypeConverter;
     GetDefaultEvent(component: unknown, noCustomTypeDesc: boolean): EventDescriptor | undefined;
     GetDefaultEvent(component: unknown): EventDescriptor | undefined;
     GetDefaultEvent(componentType: Type): EventDescriptor | undefined;
@@ -2919,7 +2919,7 @@ export const TypeDescriptor: {
     GetDefaultProperty(componentType: Type): PropertyDescriptor | undefined;
     GetEditor(component: unknown, editorBaseType: Type, noCustomTypeDesc: boolean): unknown | undefined;
     GetEditor(component: unknown, editorBaseType: Type): unknown | undefined;
-    GetEditor(type_: Type, editorBaseType: Type): unknown | undefined;
+    GetEditor(type: Type, editorBaseType: Type): unknown | undefined;
     GetEvents(component: unknown, attributes: Attribute[], noCustomTypeDesc: boolean): EventDescriptorCollection;
     GetEvents(component: unknown, attributes: Attribute[]): EventDescriptorCollection;
     GetEvents(component: unknown, noCustomTypeDesc: boolean): EventDescriptorCollection;
@@ -2937,20 +2937,20 @@ export const TypeDescriptor: {
     GetPropertiesFromRegisteredType(component: unknown): PropertyDescriptorCollection;
     GetPropertiesFromRegisteredType(componentType: Type): PropertyDescriptorCollection;
     GetProvider(instance: unknown): TypeDescriptionProvider;
-    GetProvider(type_: Type): TypeDescriptionProvider;
+    GetProvider(type: Type): TypeDescriptionProvider;
     GetReflectionType(instance: unknown): Type;
-    GetReflectionType(type_: Type): Type;
+    GetReflectionType(type: Type): Type;
     Refresh(component: unknown): void;
     Refresh(assembly: Assembly): void;
-    Refresh(module_: Module): void;
-    Refresh(type_: Type): void;
+    Refresh(module: Module): void;
+    Refresh(type: Type): void;
     RegisterType<T>(): void;
     RemoveAssociation(primary: unknown, secondary: unknown): void;
     RemoveAssociations(primary: unknown): void;
     RemoveProvider(provider: TypeDescriptionProvider, instance: unknown): void;
-    RemoveProvider(provider: TypeDescriptionProvider, type_: Type): void;
+    RemoveProvider(provider: TypeDescriptionProvider, type: Type): void;
     RemoveProviderTransparent(provider: TypeDescriptionProvider, instance: unknown): void;
-    RemoveProviderTransparent(provider: TypeDescriptionProvider, type_: Type): void;
+    RemoveProviderTransparent(provider: TypeDescriptionProvider, type: Type): void;
     SortDescriptorArray(infos: IList): void;
 };
 

@@ -612,9 +612,9 @@ export type DesignerVerbCollection = DesignerVerbCollection$instance & __Designe
 
 export interface DesigntimeLicenseContext$instance extends LicenseContext {
     readonly UsageMode: LicenseUsageMode;
-    GetSavedLicenseKey(type_: Type, resourceAssembly: Assembly): string | undefined;
-    GetService(type_: Type): unknown | undefined;
-    SetSavedLicenseKey(type_: Type, key: string): void;
+    GetSavedLicenseKey(type: Type, resourceAssembly: Assembly): string | undefined;
+    GetService(type: Type): unknown | undefined;
+    SetSavedLicenseKey(type: Type, key: string): void;
 }
 
 
@@ -797,7 +797,7 @@ export type StandardToolWindows = StandardToolWindows$instance;
 
 export interface TypeDescriptionProviderService$instance {
     GetProvider(instance: unknown): TypeDescriptionProvider;
-    GetProvider(type_: Type): TypeDescriptionProvider;
+    GetProvider(type: Type): TypeDescriptionProvider;
 }
 
 

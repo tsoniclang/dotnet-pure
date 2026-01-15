@@ -186,7 +186,7 @@ export interface StandardFormat$instance {
 
 
 export const StandardFormat: {
-    new(symbol_: char, precision: byte): StandardFormat;
+    new(symbol: char, precision: byte): StandardFormat;
     readonly NoPrecision: byte;
     readonly MaxPrecision: byte;
     Parse(format: ReadOnlySpan_1<System_Internal.Char>): StandardFormat;

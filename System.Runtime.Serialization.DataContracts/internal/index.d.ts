@@ -41,7 +41,7 @@ export interface DataContract$instance {
 
 export const DataContract: {
     GetBuiltInDataContract(name: string, ns: string): DataContract | undefined;
-    GetXmlName(type_: Type): XmlQualifiedName;
+    GetXmlName(type: Type): XmlQualifiedName;
 };
 
 
@@ -52,7 +52,7 @@ export interface DataContractSet$instance {
     readonly KnownTypesForObject: Dictionary_2<XmlQualifiedName, DataContract> | undefined;
     readonly ProcessedContracts: Dictionary_2<DataContract, unknown>;
     readonly SurrogateData: Hashtable;
-    GetDataContract(type_: Type): DataContract;
+    GetDataContract(type: Type): DataContract;
     GetDataContract(key: XmlQualifiedName): DataContract | undefined;
     GetReferencedType(xmlName: XmlQualifiedName, dataContract: DataContract, referencedContract: DataContract, genericParameters: unknown[], supportGenericTypes?: Nullable_1<System_Internal.Boolean>): Type | undefined;
     ImportSchemaSet(schemaSet: XmlSchemaSet, typeNames: IEnumerable_1<XmlQualifiedName>, importXmlDataType: boolean): void;

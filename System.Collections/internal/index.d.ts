@@ -192,7 +192,7 @@ export interface ArrayList$instance {
     Sort(comparer: IComparer): void;
     Sort(index: int, count: int, comparer: IComparer): void;
     ToArray(): (unknown | undefined)[];
-    ToArray(type_: Type): ClrArray;
+    ToArray(type: Type): ClrArray;
     TrimToSize(): void;
 }
 
