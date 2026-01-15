@@ -5990,7 +5990,7 @@
         {
           "stableId": "System.Private.CoreLib:System.Runtime.InteropServices.ComTypes.STATSTG::typeSystem.Int32",
           "clrName": "type",
-          "tsEmitName": "type_",
+          "tsEmitName": "type",
           "normalizedSignature": "type|System.Int32|static=false|const=false",
           "isStatic": false,
           "isReadOnly": false,

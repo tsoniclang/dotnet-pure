@@ -43,7 +43,7 @@ export const JsonSchemaExporterOptions: {
 export type JsonSchemaExporterOptions = JsonSchemaExporterOptions$instance;
 
 export abstract class JsonSchemaExporter$instance {
-    static GetJsonSchemaAsNode(options: JsonSerializerOptions, type_: Type, exporterOptions?: JsonSchemaExporterOptions): JsonNode;
+    static GetJsonSchemaAsNode(options: JsonSerializerOptions, type: Type, exporterOptions?: JsonSchemaExporterOptions): JsonNode;
     static GetJsonSchemaAsNode(typeInfo: JsonTypeInfo, exporterOptions?: JsonSchemaExporterOptions): JsonNode;
 }
 

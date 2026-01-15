@@ -471,11 +471,11 @@ export interface XObject$instance {
     readonly NodeType: XmlNodeType;
     readonly Parent: XElement;
     AddAnnotation(annotation: unknown): void;
-    Annotation(type_: Type): unknown | undefined;
+    Annotation(type: Type): unknown | undefined;
     Annotation<T>(): T | undefined;
-    Annotations(type_: Type): IEnumerable_1<unknown>;
+    Annotations(type: Type): IEnumerable_1<unknown>;
     Annotations<T>(): IEnumerable_1<T>;
-    RemoveAnnotations(type_: Type): void;
+    RemoveAnnotations(type: Type): void;
     RemoveAnnotations<T>(): void;
 }
 

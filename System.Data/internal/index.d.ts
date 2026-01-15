@@ -718,7 +718,7 @@ export const DataColumn: {
     new(columnName: string): DataColumn;
     new(columnName: string, dataType: Type): DataColumn;
     new(columnName: string, dataType: Type, expr: string): DataColumn;
-    new(columnName: string, dataType: Type, expr: string, type_: MappingType): DataColumn;
+    new(columnName: string, dataType: Type, expr: string, type: MappingType): DataColumn;
 };
 
 
@@ -750,8 +750,8 @@ export type DataColumnChangeEventArgs = DataColumnChangeEventArgs$instance;
 
 export interface DataColumnCollection$instance extends InternalDataCollectionBase$instance {
     Add(column: DataColumn): void;
-    Add(columnName: string, type_: Type, expression: string): DataColumn;
-    Add(columnName: string, type_: Type): DataColumn;
+    Add(columnName: string, type: Type, expression: string): DataColumn;
+    Add(columnName: string, type: Type): DataColumn;
     Add(columnName: string): DataColumn;
     Add(): DataColumn;
     AddRange(columns: DataColumn[]): void;

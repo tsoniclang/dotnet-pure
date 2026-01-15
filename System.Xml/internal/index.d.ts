@@ -703,7 +703,7 @@ export interface XmlDictionaryReader$instance extends XmlReader$instance {
     IsLocalName(localName: XmlDictionaryString): boolean;
     IsNamespaceUri(namespaceUri: string): boolean;
     IsNamespaceUri(namespaceUri: XmlDictionaryString): boolean;
-    IsStartArray(type_: Type): boolean;
+    IsStartArray(type: Type): boolean;
     IsStartElement(): boolean;
     IsStartElement(name: string): boolean;
     IsStartElement(localname: string, ns: string): boolean;
@@ -733,7 +733,7 @@ export interface XmlDictionaryReader$instance extends XmlReader$instance {
     ReadArray(localName: XmlDictionaryString, namespaceUri: XmlDictionaryString, array: TimeSpan[], offset: int, count: int): int;
     ReadBooleanArray(localName: string, namespaceUri: string): boolean[];
     ReadBooleanArray(localName: XmlDictionaryString, namespaceUri: XmlDictionaryString): boolean[];
-    ReadContentAs(type_: Type, namespaceResolver: IXmlNamespaceResolver): unknown;
+    ReadContentAs(type: Type, namespaceResolver: IXmlNamespaceResolver): unknown;
     ReadContentAsBase642(buffer: byte[], index: int, count: int): int;
     ReadContentAsBinHex(buffer: byte[], index: int, count: int): int;
     ReadContentAsChars(chars: char[], offset: int, count: int): int;
@@ -992,9 +992,9 @@ export interface XmlDocument$instance extends XmlNode$instance {
     CreateElement(prefix: string, localName: string, namespaceURI: string): XmlElement;
     CreateEntityReference(name: string): XmlEntityReference;
     CreateNavigator(): XPathNavigator;
-    CreateNode(type_: XmlNodeType, prefix: string, name: string, namespaceURI: string): XmlNode;
+    CreateNode(type: XmlNodeType, prefix: string, name: string, namespaceURI: string): XmlNode;
     CreateNode(nodeTypeString: string, name: string, namespaceURI: string): XmlNode;
-    CreateNode(type_: XmlNodeType, name: string, namespaceURI: string): XmlNode;
+    CreateNode(type: XmlNodeType, name: string, namespaceURI: string): XmlNode;
     CreateProcessingInstruction(target: string, data: string): XmlProcessingInstruction;
     CreateSignificantWhitespace(text: string): XmlSignificantWhitespace;
     CreateTextNode(text: string): XmlText;
@@ -1816,7 +1816,7 @@ export interface XmlResolver$instance {
     GetEntity(absoluteUri: Uri, role: string, ofObjectToReturn: Type): unknown | undefined;
     GetEntityAsync(absoluteUri: Uri, role: string, ofObjectToReturn: Type): Task_1<unknown>;
     ResolveUri(baseUri: Uri, relativeUri: string): Uri;
-    SupportsType(absoluteUri: Uri, type_: Type): boolean;
+    SupportsType(absoluteUri: Uri, type: Type): boolean;
 }
 
 

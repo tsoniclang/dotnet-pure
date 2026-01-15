@@ -35,7 +35,7 @@ export interface XmlPreloadedResolver$instance extends XmlResolver {
     GetEntityAsync(absoluteUri: Uri, role: string, ofObjectToReturn: Type): Task_1<unknown>;
     Remove(uri: Uri): void;
     ResolveUri(baseUri: Uri, relativeUri: string): Uri;
-    SupportsType(absoluteUri: Uri, type_: Type): boolean;
+    SupportsType(absoluteUri: Uri, type: Type): boolean;
 }
 
 

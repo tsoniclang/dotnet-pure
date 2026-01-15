@@ -75,7 +75,7 @@ export type TransactionStartedEventHandler = (sender: unknown, e: TransactionEve
 
 
 export interface IDtcTransaction$instance {
-    Abort(reason: nint, retaining: int, async_: int): void;
+    Abort(reason: nint, retaining: int, async: int): void;
     Commit(retaining: int, commitType: int, reserved: int): void;
     GetTransactionInfo(transactionInformation: nint): void;
 }

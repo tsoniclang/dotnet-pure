@@ -196,8 +196,8 @@ export interface PipeAccessRule$instance extends AccessRule {
 
 
 export const PipeAccessRule: {
-    new(identity: IdentityReference, rights: PipeAccessRights, type_: AccessControlType): PipeAccessRule;
-    new(identity: string, rights: PipeAccessRights, type_: AccessControlType): PipeAccessRule;
+    new(identity: IdentityReference, rights: PipeAccessRights, type: AccessControlType): PipeAccessRule;
+    new(identity: string, rights: PipeAccessRights, type: AccessControlType): PipeAccessRule;
 };
 
 
@@ -220,7 +220,7 @@ export interface PipeSecurity$instance extends NativeObjectSecurity {
     readonly AccessRightType: Type;
     readonly AccessRuleType: Type;
     readonly AuditRuleType: Type;
-    AccessRuleFactory(identityReference: IdentityReference, accessMask: int, isInherited: boolean, inheritanceFlags: InheritanceFlags, propagationFlags: PropagationFlags, type_: AccessControlType): AccessRule;
+    AccessRuleFactory(identityReference: IdentityReference, accessMask: int, isInherited: boolean, inheritanceFlags: InheritanceFlags, propagationFlags: PropagationFlags, type: AccessControlType): AccessRule;
     AddAccessRule(rule: PipeAccessRule): void;
     AddAuditRule(rule: PipeAuditRule): void;
     AuditRuleFactory(identityReference: IdentityReference, accessMask: int, isInherited: boolean, inheritanceFlags: InheritanceFlags, propagationFlags: PropagationFlags, flags: AuditFlags): AuditRule;

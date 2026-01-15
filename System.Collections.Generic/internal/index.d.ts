@@ -1735,7 +1735,7 @@ export abstract class CollectionExtensions$instance {
     static AddRange<T>(list: List_1<T>, source: ReadOnlySpan_1<T>): void;
     static AsReadOnly<TKey, TValue>(dictionary: IDictionary_2<TKey, TValue>): ReadOnlyDictionary_2<TKey, TValue>;
     static AsReadOnly<T>(list: IList_1<T>): ReadOnlyCollection_1<T>;
-    static AsReadOnly<T>(set_: ISet_1<T>): ReadOnlySet_1<T>;
+    static AsReadOnly<T>(set: ISet_1<T>): ReadOnlySet_1<T>;
     static CopyTo<T>(list: List_1<T>, destination: Span_1<T>): void;
     static GetValueOrDefault<TKey, TValue>(dictionary: IReadOnlyDictionary_2<TKey, TValue>, key: TKey, defaultValue: TValue): TValue;
     static GetValueOrDefault<TKey, TValue>(dictionary: IReadOnlyDictionary_2<TKey, TValue>, key: TKey): TValue | undefined;

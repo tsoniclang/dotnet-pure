@@ -2049,8 +2049,8 @@ export type RuntimeFeature = RuntimeFeature$instance;
 
 export abstract class RuntimeHelpers$instance {
     static readonly OffsetToStringData: int;
-    static AllocateTypeAssociatedMemory(type_: Type, size: int): nint;
-    static Box(target: byte, type_: RuntimeTypeHandle): unknown | undefined;
+    static AllocateTypeAssociatedMemory(type: Type, size: int): nint;
+    static Box(target: byte, type: RuntimeTypeHandle): unknown | undefined;
     static CreateSpan<T>(fldHandle: RuntimeFieldHandle): ReadOnlySpan_1<T>;
     static EnsureSufficientExecutionStack(): void;
     static Equals(o1: unknown, o2: unknown): boolean;
@@ -2058,7 +2058,7 @@ export abstract class RuntimeHelpers$instance {
     static GetHashCode(o: unknown): int;
     static GetObjectValue(obj: unknown): unknown | undefined;
     static GetSubArray<T>(array: T[], range: Range): T[];
-    static GetUninitializedObject(type_: Type): unknown;
+    static GetUninitializedObject(type: Type): unknown;
     static InitializeArray(array: ClrArray, fldHandle: RuntimeFieldHandle): void;
     static IsReferenceOrContainsReferences<T>(): boolean;
     static PrepareConstrainedRegions(): void;
@@ -2068,9 +2068,9 @@ export abstract class RuntimeHelpers$instance {
     static PrepareMethod(method: RuntimeMethodHandle, instantiation: RuntimeTypeHandle[]): void;
     static PrepareMethod(method: RuntimeMethodHandle): void;
     static ProbeForSufficientStack(): void;
-    static RunClassConstructor(type_: RuntimeTypeHandle): void;
-    static RunModuleConstructor(module_: ModuleHandle): void;
-    static SizeOf(type_: RuntimeTypeHandle): int;
+    static RunClassConstructor(type: RuntimeTypeHandle): void;
+    static RunModuleConstructor(module: ModuleHandle): void;
+    static SizeOf(type: RuntimeTypeHandle): int;
     static TryEnsureSufficientExecutionStack(): boolean;
 }
 

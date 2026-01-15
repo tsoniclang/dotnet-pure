@@ -269,10 +269,10 @@ export interface AccessRule_1$instance<T extends unknown> extends AccessRule {
 
 
 export const AccessRule_1: {
-    new<T extends unknown>(identity: IdentityReference, rights: T, type_: AccessControlType): AccessRule_1<T>;
-    new<T extends unknown>(identity: IdentityReference, rights: T, inheritanceFlags: InheritanceFlags, propagationFlags: PropagationFlags, type_: AccessControlType): AccessRule_1<T>;
-    new<T extends unknown>(identity: string, rights: T, type_: AccessControlType): AccessRule_1<T>;
-    new<T extends unknown>(identity: string, rights: T, inheritanceFlags: InheritanceFlags, propagationFlags: PropagationFlags, type_: AccessControlType): AccessRule_1<T>;
+    new<T extends unknown>(identity: IdentityReference, rights: T, type: AccessControlType): AccessRule_1<T>;
+    new<T extends unknown>(identity: IdentityReference, rights: T, inheritanceFlags: InheritanceFlags, propagationFlags: PropagationFlags, type: AccessControlType): AccessRule_1<T>;
+    new<T extends unknown>(identity: string, rights: T, type: AccessControlType): AccessRule_1<T>;
+    new<T extends unknown>(identity: string, rights: T, inheritanceFlags: InheritanceFlags, propagationFlags: PropagationFlags, type: AccessControlType): AccessRule_1<T>;
 };
 
 
@@ -471,7 +471,7 @@ export interface CustomAce$instance extends GenericAce {
 
 
 export const CustomAce: {
-    new(type_: AceType, flags: AceFlags, opaque: byte[]): CustomAce;
+    new(type: AceType, flags: AceFlags, opaque: byte[]): CustomAce;
     readonly MaxOpaqueLength: int;
 };
 
@@ -479,8 +479,8 @@ export const CustomAce: {
 export type CustomAce = CustomAce$instance;
 
 export interface DirectoryObjectSecurity$instance extends ObjectSecurity {
-    AccessRuleFactory(identityReference: IdentityReference, accessMask: int, isInherited: boolean, inheritanceFlags: InheritanceFlags, propagationFlags: PropagationFlags, type_: AccessControlType, objectType: Guid, inheritedObjectType: Guid): AccessRule;
-    AccessRuleFactory(identityReference: IdentityReference, accessMask: int, isInherited: boolean, inheritanceFlags: InheritanceFlags, propagationFlags: PropagationFlags, type_: AccessControlType): AccessRule;
+    AccessRuleFactory(identityReference: IdentityReference, accessMask: int, isInherited: boolean, inheritanceFlags: InheritanceFlags, propagationFlags: PropagationFlags, type: AccessControlType, objectType: Guid, inheritedObjectType: Guid): AccessRule;
+    AccessRuleFactory(identityReference: IdentityReference, accessMask: int, isInherited: boolean, inheritanceFlags: InheritanceFlags, propagationFlags: PropagationFlags, type: AccessControlType): AccessRule;
     AuditRuleFactory(identityReference: IdentityReference, accessMask: int, isInherited: boolean, inheritanceFlags: InheritanceFlags, propagationFlags: PropagationFlags, flags: AuditFlags, objectType: Guid, inheritedObjectType: Guid): AuditRule;
     AuditRuleFactory(identityReference: IdentityReference, accessMask: int, isInherited: boolean, inheritanceFlags: InheritanceFlags, propagationFlags: PropagationFlags, flags: AuditFlags): AuditRule;
     GetAccessRules(includeExplicit: boolean, includeInherited: boolean, targetType: Type): AuthorizationRuleCollection;
@@ -547,8 +547,8 @@ export interface EventWaitHandleAccessRule$instance extends AccessRule {
 
 
 export const EventWaitHandleAccessRule: {
-    new(identity: IdentityReference, eventRights: EventWaitHandleRights, type_: AccessControlType): EventWaitHandleAccessRule;
-    new(identity: string, eventRights: EventWaitHandleRights, type_: AccessControlType): EventWaitHandleAccessRule;
+    new(identity: IdentityReference, eventRights: EventWaitHandleRights, type: AccessControlType): EventWaitHandleAccessRule;
+    new(identity: string, eventRights: EventWaitHandleRights, type: AccessControlType): EventWaitHandleAccessRule;
 };
 
 
@@ -570,7 +570,7 @@ export interface EventWaitHandleSecurity$instance extends NativeObjectSecurity {
     readonly AccessRightType: Type;
     readonly AccessRuleType: Type;
     readonly AuditRuleType: Type;
-    AccessRuleFactory(identityReference: IdentityReference, accessMask: int, isInherited: boolean, inheritanceFlags: InheritanceFlags, propagationFlags: PropagationFlags, type_: AccessControlType): AccessRule;
+    AccessRuleFactory(identityReference: IdentityReference, accessMask: int, isInherited: boolean, inheritanceFlags: InheritanceFlags, propagationFlags: PropagationFlags, type: AccessControlType): AccessRule;
     AddAccessRule(rule: EventWaitHandleAccessRule): void;
     AddAuditRule(rule: EventWaitHandleAuditRule): void;
     AuditRuleFactory(identityReference: IdentityReference, accessMask: int, isInherited: boolean, inheritanceFlags: InheritanceFlags, propagationFlags: PropagationFlags, flags: AuditFlags): AuditRule;
@@ -611,10 +611,10 @@ export interface FileSystemAccessRule$instance extends AccessRule {
 
 
 export const FileSystemAccessRule: {
-    new(identity: IdentityReference, fileSystemRights: FileSystemRights, type_: AccessControlType): FileSystemAccessRule;
-    new(identity: IdentityReference, fileSystemRights: FileSystemRights, inheritanceFlags: InheritanceFlags, propagationFlags: PropagationFlags, type_: AccessControlType): FileSystemAccessRule;
-    new(identity: string, fileSystemRights: FileSystemRights, type_: AccessControlType): FileSystemAccessRule;
-    new(identity: string, fileSystemRights: FileSystemRights, inheritanceFlags: InheritanceFlags, propagationFlags: PropagationFlags, type_: AccessControlType): FileSystemAccessRule;
+    new(identity: IdentityReference, fileSystemRights: FileSystemRights, type: AccessControlType): FileSystemAccessRule;
+    new(identity: IdentityReference, fileSystemRights: FileSystemRights, inheritanceFlags: InheritanceFlags, propagationFlags: PropagationFlags, type: AccessControlType): FileSystemAccessRule;
+    new(identity: string, fileSystemRights: FileSystemRights, type: AccessControlType): FileSystemAccessRule;
+    new(identity: string, fileSystemRights: FileSystemRights, inheritanceFlags: InheritanceFlags, propagationFlags: PropagationFlags, type: AccessControlType): FileSystemAccessRule;
 };
 
 
@@ -639,7 +639,7 @@ export interface FileSystemSecurity$instance extends NativeObjectSecurity {
     readonly AccessRightType: Type;
     readonly AccessRuleType: Type;
     readonly AuditRuleType: Type;
-    AccessRuleFactory(identityReference: IdentityReference, accessMask: int, isInherited: boolean, inheritanceFlags: InheritanceFlags, propagationFlags: PropagationFlags, type_: AccessControlType): AccessRule;
+    AccessRuleFactory(identityReference: IdentityReference, accessMask: int, isInherited: boolean, inheritanceFlags: InheritanceFlags, propagationFlags: PropagationFlags, type: AccessControlType): AccessRule;
     AddAccessRule(rule: FileSystemAccessRule): void;
     AddAuditRule(rule: FileSystemAuditRule): void;
     AuditRuleFactory(identityReference: IdentityReference, accessMask: int, isInherited: boolean, inheritanceFlags: InheritanceFlags, propagationFlags: PropagationFlags, flags: AuditFlags): AuditRule;
@@ -747,8 +747,8 @@ export interface MutexAccessRule$instance extends AccessRule {
 
 
 export const MutexAccessRule: {
-    new(identity: IdentityReference, eventRights: MutexRights, type_: AccessControlType): MutexAccessRule;
-    new(identity: string, eventRights: MutexRights, type_: AccessControlType): MutexAccessRule;
+    new(identity: IdentityReference, eventRights: MutexRights, type: AccessControlType): MutexAccessRule;
+    new(identity: string, eventRights: MutexRights, type: AccessControlType): MutexAccessRule;
 };
 
 
@@ -770,7 +770,7 @@ export interface MutexSecurity$instance extends NativeObjectSecurity {
     readonly AccessRightType: Type;
     readonly AccessRuleType: Type;
     readonly AuditRuleType: Type;
-    AccessRuleFactory(identityReference: IdentityReference, accessMask: int, isInherited: boolean, inheritanceFlags: InheritanceFlags, propagationFlags: PropagationFlags, type_: AccessControlType): AccessRule;
+    AccessRuleFactory(identityReference: IdentityReference, accessMask: int, isInherited: boolean, inheritanceFlags: InheritanceFlags, propagationFlags: PropagationFlags, type: AccessControlType): AccessRule;
     AddAccessRule(rule: MutexAccessRule): void;
     AddAuditRule(rule: MutexAuditRule): void;
     AuditRuleFactory(identityReference: IdentityReference, accessMask: int, isInherited: boolean, inheritanceFlags: InheritanceFlags, propagationFlags: PropagationFlags, flags: AuditFlags): AuditRule;
@@ -827,7 +827,7 @@ export interface ObjectAce$instance extends QualifiedAce {
 
 
 export const ObjectAce: {
-    new(aceFlags: AceFlags, qualifier: AceQualifier, accessMask: int, sid: SecurityIdentifier, flags: ObjectAceFlags, type_: Guid, inheritedType: Guid, isCallback: boolean, opaque: byte[]): ObjectAce;
+    new(aceFlags: AceFlags, qualifier: AceQualifier, accessMask: int, sid: SecurityIdentifier, flags: ObjectAceFlags, type: Guid, inheritedType: Guid, isCallback: boolean, opaque: byte[]): ObjectAce;
     MaxOpaqueLength(isCallback: boolean): int;
 };
 
@@ -855,7 +855,7 @@ export interface ObjectSecurity$instance {
     readonly AreAuditRulesCanonical: boolean;
     readonly AreAuditRulesProtected: boolean;
     readonly AuditRuleType: Type;
-    AccessRuleFactory(identityReference: IdentityReference, accessMask: int, isInherited: boolean, inheritanceFlags: InheritanceFlags, propagationFlags: PropagationFlags, type_: AccessControlType): AccessRule;
+    AccessRuleFactory(identityReference: IdentityReference, accessMask: int, isInherited: boolean, inheritanceFlags: InheritanceFlags, propagationFlags: PropagationFlags, type: AccessControlType): AccessRule;
     AuditRuleFactory(identityReference: IdentityReference, accessMask: int, isInherited: boolean, inheritanceFlags: InheritanceFlags, propagationFlags: PropagationFlags, flags: AuditFlags): AuditRule;
     GetGroup(targetType: Type): IdentityReference | undefined;
     GetOwner(targetType: Type): IdentityReference | undefined;
@@ -887,7 +887,7 @@ export interface ObjectSecurity_1$instance<T extends unknown> extends NativeObje
     readonly AccessRightType: Type;
     readonly AccessRuleType: Type;
     readonly AuditRuleType: Type;
-    AccessRuleFactory(identityReference: IdentityReference, accessMask: int, isInherited: boolean, inheritanceFlags: InheritanceFlags, propagationFlags: PropagationFlags, type_: AccessControlType): AccessRule;
+    AccessRuleFactory(identityReference: IdentityReference, accessMask: int, isInherited: boolean, inheritanceFlags: InheritanceFlags, propagationFlags: PropagationFlags, type: AccessControlType): AccessRule;
     AddAccessRule(rule: AccessRule_1<T>): void;
     AddAuditRule(rule: AuditRule_1<T>): void;
     AuditRuleFactory(identityReference: IdentityReference, accessMask: int, isInherited: boolean, inheritanceFlags: InheritanceFlags, propagationFlags: PropagationFlags, flags: AuditFlags): AuditRule;
@@ -1001,10 +1001,10 @@ export interface RegistryAccessRule$instance extends AccessRule {
 
 
 export const RegistryAccessRule: {
-    new(identity: IdentityReference, registryRights: RegistryRights, type_: AccessControlType): RegistryAccessRule;
-    new(identity: IdentityReference, registryRights: RegistryRights, inheritanceFlags: InheritanceFlags, propagationFlags: PropagationFlags, type_: AccessControlType): RegistryAccessRule;
-    new(identity: string, registryRights: RegistryRights, type_: AccessControlType): RegistryAccessRule;
-    new(identity: string, registryRights: RegistryRights, inheritanceFlags: InheritanceFlags, propagationFlags: PropagationFlags, type_: AccessControlType): RegistryAccessRule;
+    new(identity: IdentityReference, registryRights: RegistryRights, type: AccessControlType): RegistryAccessRule;
+    new(identity: IdentityReference, registryRights: RegistryRights, inheritanceFlags: InheritanceFlags, propagationFlags: PropagationFlags, type: AccessControlType): RegistryAccessRule;
+    new(identity: string, registryRights: RegistryRights, type: AccessControlType): RegistryAccessRule;
+    new(identity: string, registryRights: RegistryRights, inheritanceFlags: InheritanceFlags, propagationFlags: PropagationFlags, type: AccessControlType): RegistryAccessRule;
 };
 
 
@@ -1027,7 +1027,7 @@ export interface RegistrySecurity$instance extends NativeObjectSecurity {
     readonly AccessRightType: Type;
     readonly AccessRuleType: Type;
     readonly AuditRuleType: Type;
-    AccessRuleFactory(identityReference: IdentityReference, accessMask: int, isInherited: boolean, inheritanceFlags: InheritanceFlags, propagationFlags: PropagationFlags, type_: AccessControlType): AccessRule;
+    AccessRuleFactory(identityReference: IdentityReference, accessMask: int, isInherited: boolean, inheritanceFlags: InheritanceFlags, propagationFlags: PropagationFlags, type: AccessControlType): AccessRule;
     AddAccessRule(rule: RegistryAccessRule): void;
     AddAuditRule(rule: RegistryAuditRule): void;
     AuditRuleFactory(identityReference: IdentityReference, accessMask: int, isInherited: boolean, inheritanceFlags: InheritanceFlags, propagationFlags: PropagationFlags, flags: AuditFlags): AuditRule;
@@ -1056,8 +1056,8 @@ export interface SemaphoreAccessRule$instance extends AccessRule {
 
 
 export const SemaphoreAccessRule: {
-    new(identity: IdentityReference, eventRights: SemaphoreRights, type_: AccessControlType): SemaphoreAccessRule;
-    new(identity: string, eventRights: SemaphoreRights, type_: AccessControlType): SemaphoreAccessRule;
+    new(identity: IdentityReference, eventRights: SemaphoreRights, type: AccessControlType): SemaphoreAccessRule;
+    new(identity: string, eventRights: SemaphoreRights, type: AccessControlType): SemaphoreAccessRule;
 };
 
 
@@ -1079,7 +1079,7 @@ export interface SemaphoreSecurity$instance extends NativeObjectSecurity {
     readonly AccessRightType: Type;
     readonly AccessRuleType: Type;
     readonly AuditRuleType: Type;
-    AccessRuleFactory(identityReference: IdentityReference, accessMask: int, isInherited: boolean, inheritanceFlags: InheritanceFlags, propagationFlags: PropagationFlags, type_: AccessControlType): AccessRule;
+    AccessRuleFactory(identityReference: IdentityReference, accessMask: int, isInherited: boolean, inheritanceFlags: InheritanceFlags, propagationFlags: PropagationFlags, type: AccessControlType): AccessRule;
     AddAccessRule(rule: SemaphoreAccessRule): void;
     AddAuditRule(rule: SemaphoreAuditRule): void;
     AuditRuleFactory(identityReference: IdentityReference, accessMask: int, isInherited: boolean, inheritanceFlags: InheritanceFlags, propagationFlags: PropagationFlags, flags: AuditFlags): AuditRule;

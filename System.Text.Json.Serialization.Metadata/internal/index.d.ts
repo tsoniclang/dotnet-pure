@@ -25,7 +25,7 @@ export enum JsonTypeInfoKind {
 
 
 export interface IJsonTypeInfoResolver$instance {
-    GetTypeInfo(type_: Type, options: JsonSerializerOptions): JsonTypeInfo;
+    GetTypeInfo(type: Type, options: JsonSerializerOptions): JsonTypeInfo;
 }
 
 
@@ -48,7 +48,7 @@ export type JsonDerivedType = JsonDerivedType$instance;
 
 export interface DefaultJsonTypeInfoResolver$instance {
     readonly Modifiers: IList_1<Action_1<JsonTypeInfo>>;
-    GetTypeInfo(type_: Type, options: JsonSerializerOptions): JsonTypeInfo;
+    GetTypeInfo(type: Type, options: JsonSerializerOptions): JsonTypeInfo;
 }
 
 
@@ -256,7 +256,7 @@ export interface JsonTypeInfo$instance {
 
 export const JsonTypeInfo: {
     CreateJsonTypeInfo<T>(options: JsonSerializerOptions): JsonTypeInfo_1<T>;
-    CreateJsonTypeInfo(type_: Type, options: JsonSerializerOptions): JsonTypeInfo;
+    CreateJsonTypeInfo(type: Type, options: JsonSerializerOptions): JsonTypeInfo;
 };
 
 

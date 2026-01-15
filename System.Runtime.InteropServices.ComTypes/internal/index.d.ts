@@ -698,7 +698,7 @@ export type STATDATA = STATDATA$instance;
 
 export interface STATSTG$instance {
     pwcsName: string;
-    type_: int;
+    type: int;
     cbSize: long;
     mtime: FILETIME;
     ctime: FILETIME;

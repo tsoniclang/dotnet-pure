@@ -69,8 +69,8 @@ export interface IIUnknownDerivedDetails$instance {
 export type IIUnknownDerivedDetails = IIUnknownDerivedDetails$instance;
 
 export interface IIUnknownInterfaceDetailsStrategy$instance {
-    GetComExposedTypeDetails(type_: RuntimeTypeHandle): IComExposedDetails | undefined;
-    GetIUnknownDerivedDetails(type_: RuntimeTypeHandle): IIUnknownDerivedDetails | undefined;
+    GetComExposedTypeDetails(type: RuntimeTypeHandle): IComExposedDetails | undefined;
+    GetIUnknownDerivedDetails(type: RuntimeTypeHandle): IIUnknownDerivedDetails | undefined;
 }
 
 
@@ -83,7 +83,7 @@ export interface IIUnknownInterfaceType$instance {
 export type IIUnknownInterfaceType = IIUnknownInterfaceType$instance;
 
 export interface IIUnknownStrategy$instance {
-    CreateInstancePointer(unknown_: ptr<void>): ptr<void>;
+    CreateInstancePointer(unknown: ptr<void>): ptr<void>;
     QueryInterface(instancePtr: ptr<void>, iid: Guid, ppObj: ptr<void>): int;
     Release(instancePtr: ptr<void>): int;
 }
@@ -92,7 +92,7 @@ export interface IIUnknownStrategy$instance {
 export type IIUnknownStrategy = IIUnknownStrategy$instance;
 
 export interface IUnmanagedVirtualMethodTableProvider$instance {
-    GetVirtualMethodTableInfoForKey(type_: Type): VirtualMethodTableInfo;
+    GetVirtualMethodTableInfoForKey(type: Type): VirtualMethodTableInfo;
 }
 
 

@@ -93,7 +93,7 @@ export interface IDesignerSerializationManager$instance extends IServiceProvider
     readonly Context: ContextStack;
     readonly Properties: PropertyDescriptorCollection;
     AddSerializationProvider(provider: IDesignerSerializationProvider): void;
-    CreateInstance(type_: Type, arguments: ICollection, name: string, addToContainer: boolean): unknown;
+    CreateInstance(type: Type, arguments: ICollection, name: string, addToContainer: boolean): unknown;
     GetInstance(name: string): unknown | undefined;
     GetName(value: unknown): string | undefined;
     GetSerializer(objectType: Type, serializerType: Type): unknown | undefined;
@@ -183,7 +183,7 @@ export interface ContextStack$instance {
     readonly Current: unknown;
     Append(context: unknown): void;
     get_Item(level: int): unknown;
-    get_Item(type_: Type): unknown | undefined;
+    get_Item(type: Type): unknown | undefined;
     Pop(): unknown;
     Push(context: unknown): void;
 }

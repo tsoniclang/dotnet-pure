@@ -215,9 +215,9 @@ export interface ContentRangeHeaderValue$instance {
 
 
 export const ContentRangeHeaderValue: {
-    new(from_: long, to: long, length: long): ContentRangeHeaderValue;
+    new(from: long, to: long, length: long): ContentRangeHeaderValue;
     new(length: long): ContentRangeHeaderValue;
-    new(from_: long, to: long): ContentRangeHeaderValue;
+    new(from: long, to: long): ContentRangeHeaderValue;
     Parse(input: string): ContentRangeHeaderValue;
     TryParse(input: string, parsedValue: ContentRangeHeaderValue): boolean;
 };
@@ -641,7 +641,7 @@ export interface RangeHeaderValue$instance {
 
 export const RangeHeaderValue: {
     new(): RangeHeaderValue;
-    new(from_: Nullable_1<System_Internal.Int64>, to: Nullable_1<System_Internal.Int64>): RangeHeaderValue;
+    new(from: Nullable_1<System_Internal.Int64>, to: Nullable_1<System_Internal.Int64>): RangeHeaderValue;
     Parse(input: string): RangeHeaderValue;
     TryParse(input: string, parsedValue: RangeHeaderValue): boolean;
 };
@@ -666,7 +666,7 @@ export interface RangeItemHeaderValue$instance {
 
 
 export const RangeItemHeaderValue: {
-    new(from_: Nullable_1<System_Internal.Int64>, to: Nullable_1<System_Internal.Int64>): RangeItemHeaderValue;
+    new(from: Nullable_1<System_Internal.Int64>, to: Nullable_1<System_Internal.Int64>): RangeItemHeaderValue;
 };
 
 

@@ -89,7 +89,7 @@ export interface QuicConnection$instance {
     AcceptInboundStreamAsync(cancellationToken?: CancellationToken): ValueTask_1<QuicStream>;
     CloseAsync(errorCode: long, cancellationToken?: CancellationToken): ValueTask;
     DisposeAsync(): ValueTask;
-    OpenOutboundStreamAsync(type_: QuicStreamType, cancellationToken?: CancellationToken): ValueTask_1<QuicStream>;
+    OpenOutboundStreamAsync(type: QuicStreamType, cancellationToken?: CancellationToken): ValueTask_1<QuicStream>;
     ToString(): string;
 }
 

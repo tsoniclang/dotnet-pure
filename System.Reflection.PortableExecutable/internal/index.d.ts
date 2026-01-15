@@ -220,7 +220,7 @@ export interface DebugDirectoryEntry$instance {
 
 
 export const DebugDirectoryEntry: {
-    new(stamp: uint, majorVersion: ushort, minorVersion: ushort, type_: DebugDirectoryEntryType, dataSize: int, dataRelativeVirtualAddress: int, dataPointer: int): DebugDirectoryEntry;
+    new(stamp: uint, majorVersion: ushort, minorVersion: ushort, type: DebugDirectoryEntryType, dataSize: int, dataRelativeVirtualAddress: int, dataPointer: int): DebugDirectoryEntry;
 };
 
 
@@ -347,8 +347,8 @@ export interface DebugDirectoryBuilder$instance {
     AddCodeViewEntry(pdbPath: string, pdbContentId: BlobContentId, portablePdbVersion: ushort): void;
     AddCodeViewEntry(pdbPath: string, pdbContentId: BlobContentId, portablePdbVersion: ushort, age: int): void;
     AddEmbeddedPortablePdbEntry(debugMetadata: BlobBuilder, portablePdbVersion: ushort): void;
-    AddEntry(type_: DebugDirectoryEntryType, version: uint, stamp: uint): void;
-    AddEntry<TData>(type_: DebugDirectoryEntryType, version: uint, stamp: uint, data: TData, dataSerializer: Action_2<BlobBuilder, TData>): void;
+    AddEntry(type: DebugDirectoryEntryType, version: uint, stamp: uint): void;
+    AddEntry<TData>(type: DebugDirectoryEntryType, version: uint, stamp: uint, data: TData, dataSerializer: Action_2<BlobBuilder, TData>): void;
     AddPdbChecksumEntry(algorithmName: string, checksum: ImmutableArray_1<System_Internal.Byte>): void;
     AddReproducibleEntry(): void;
 }

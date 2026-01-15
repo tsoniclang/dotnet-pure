@@ -1128,12 +1128,12 @@ export interface HttpWebRequest$instance extends WebRequest$instance {
     UseDefaultCredentials: boolean;
     UserAgent: string;
     Abort(): void;
-    AddRange(from_: int, to: int): void;
-    AddRange(from_: long, to: long): void;
+    AddRange(from: int, to: int): void;
+    AddRange(from: long, to: long): void;
     AddRange(range: int): void;
     AddRange(range: long): void;
-    AddRange(rangeSpecifier: string, from_: int, to: int): void;
-    AddRange(rangeSpecifier: string, from_: long, to: long): void;
+    AddRange(rangeSpecifier: string, from: int, to: int): void;
+    AddRange(rangeSpecifier: string, from: long, to: long): void;
     AddRange(rangeSpecifier: string, range: int): void;
     AddRange(rangeSpecifier: string, range: long): void;
     BeginGetRequestStream(callback: AsyncCallback, state: unknown): IAsyncResult;

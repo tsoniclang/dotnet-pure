@@ -328,7 +328,7 @@ export interface JsonSerializableAttribute$instance extends JsonAttribute {
 
 
 export const JsonSerializableAttribute: {
-    new(type_: Type): JsonSerializableAttribute;
+    new(type: Type): JsonSerializableAttribute;
 };
 
 
@@ -336,7 +336,7 @@ export type JsonSerializableAttribute = JsonSerializableAttribute$instance;
 
 export interface JsonSerializerContext$instance {
     readonly Options: JsonSerializerOptions;
-    GetTypeInfo(type_: Type): JsonTypeInfo;
+    GetTypeInfo(type: Type): JsonTypeInfo;
 }
 
 

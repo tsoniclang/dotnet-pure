@@ -872,7 +872,7 @@ export interface DebuggerTypeProxyAttribute$instance extends Attribute {
 
 
 export const DebuggerTypeProxyAttribute: {
-    new(type_: Type): DebuggerTypeProxyAttribute;
+    new(type: Type): DebuggerTypeProxyAttribute;
     new(typeName: string): DebuggerTypeProxyAttribute;
 };
 
@@ -1289,10 +1289,10 @@ export type ProcessModule = ProcessModule$instance & __ProcessModule$views;
 
 export interface ProcessModuleCollection$instance extends ReadOnlyCollectionBase {
     readonly Item: ProcessModule;
-    Contains(module_: ProcessModule): boolean;
+    Contains(module: ProcessModule): boolean;
     CopyTo(array: ClrArray, index: int): void;
     GetEnumerator(): IEnumerator;
-    IndexOf(module_: ProcessModule): int;
+    IndexOf(module: ProcessModule): int;
 }
 
 

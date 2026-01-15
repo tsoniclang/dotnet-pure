@@ -74,7 +74,7 @@ export interface IFormatter$instance {
 export type IFormatter = IFormatter$instance;
 
 export interface IFormatterConverter$instance {
-    Convert(value: unknown, type_: Type): unknown;
+    Convert(value: unknown, type: Type): unknown;
     Convert(value: unknown, typeCode: TypeCode): unknown;
     ToBoolean(value: unknown): boolean;
     ToByte(value: unknown): byte;
@@ -127,7 +127,7 @@ export type ISerializationSurrogate = ISerializationSurrogate$instance;
 
 export interface ISerializationSurrogateProvider$instance {
     GetObjectToSerialize(obj: unknown, targetType: Type): unknown;
-    GetSurrogateType(type_: Type): Type;
+    GetSurrogateType(type: Type): Type;
 }
 
 
@@ -139,7 +139,7 @@ export interface ISerializationSurrogateProvider2$instance extends ISerializatio
     GetKnownCustomDataTypes(customDataTypes: Collection_1<Type>): void;
     GetObjectToSerialize(obj: unknown, targetType: Type): unknown;
     GetReferencedTypeOnImport(typeName: string, typeNamespace: string, customData: unknown): Type | undefined;
-    GetSurrogateType(type_: Type): Type;
+    GetSurrogateType(type: Type): Type;
 }
 
 
@@ -150,7 +150,7 @@ export type ISerializationSurrogateProvider2 = ISerializationSurrogateProvider2$
 export interface ISurrogateSelector$instance {
     ChainSelector(selector: ISurrogateSelector): void;
     GetNextSelector(): ISurrogateSelector | undefined;
-    GetSurrogate(type_: Type, context: StreamingContext, selector: ISurrogateSelector): ISerializationSurrogate | undefined;
+    GetSurrogate(type: Type, context: StreamingContext, selector: ISurrogateSelector): ISerializationSurrogate | undefined;
 }
 
 
@@ -263,7 +263,7 @@ export type DataContractAttribute = DataContractAttribute$instance;
 
 export interface DataContractResolver$instance {
     ResolveName(typeName: string, typeNamespace: string, declaredType: Type, knownTypeResolver: DataContractResolver): Type | undefined;
-    TryResolveType(type_: Type, declaredType: Type, knownTypeResolver: DataContractResolver, typeName: XmlDictionaryString, typeNamespace: XmlDictionaryString): boolean;
+    TryResolveType(type: Type, declaredType: Type, knownTypeResolver: DataContractResolver, typeName: XmlDictionaryString, typeNamespace: XmlDictionaryString): boolean;
 }
 
 
@@ -302,13 +302,13 @@ export interface DataContractSerializer$instance extends XmlObjectSerializer {
 
 
 export const DataContractSerializer: {
-    new(type_: Type): DataContractSerializer;
-    new(type_: Type, knownTypes: IEnumerable_1<Type>): DataContractSerializer;
-    new(type_: Type, rootName: string, rootNamespace: string): DataContractSerializer;
-    new(type_: Type, rootName: string, rootNamespace: string, knownTypes: IEnumerable_1<Type>): DataContractSerializer;
-    new(type_: Type, rootName: XmlDictionaryString, rootNamespace: XmlDictionaryString): DataContractSerializer;
-    new(type_: Type, rootName: XmlDictionaryString, rootNamespace: XmlDictionaryString, knownTypes: IEnumerable_1<Type>): DataContractSerializer;
-    new(type_: Type, settings: DataContractSerializerSettings): DataContractSerializer;
+    new(type: Type): DataContractSerializer;
+    new(type: Type, knownTypes: IEnumerable_1<Type>): DataContractSerializer;
+    new(type: Type, rootName: string, rootNamespace: string): DataContractSerializer;
+    new(type: Type, rootName: string, rootNamespace: string, knownTypes: IEnumerable_1<Type>): DataContractSerializer;
+    new(type: Type, rootName: XmlDictionaryString, rootNamespace: XmlDictionaryString): DataContractSerializer;
+    new(type: Type, rootName: XmlDictionaryString, rootNamespace: XmlDictionaryString, knownTypes: IEnumerable_1<Type>): DataContractSerializer;
+    new(type: Type, settings: DataContractSerializerSettings): DataContractSerializer;
 };
 
 
@@ -429,7 +429,7 @@ export type Formatter = Formatter$instance & __Formatter$views;
 
 
 export interface FormatterConverter$instance {
-    Convert(value: unknown, type_: Type): unknown;
+    Convert(value: unknown, type: Type): unknown;
     Convert(value: unknown, typeCode: TypeCode): unknown;
     ToBoolean(value: unknown): boolean;
     ToByte(value: unknown): byte;
@@ -498,7 +498,7 @@ export interface KnownTypeAttribute$instance extends Attribute {
 
 
 export const KnownTypeAttribute: {
-    new(type_: Type): KnownTypeAttribute;
+    new(type: Type): KnownTypeAttribute;
     new(methodName: string): KnownTypeAttribute;
 };
 
@@ -648,7 +648,7 @@ export interface SerializationInfo$instance {
     readonly IsFullTypeNameSetExplicit: boolean;
     readonly MemberCount: int;
     readonly ObjectType: Type;
-    AddValue(name: string, value: unknown, type_: Type): void;
+    AddValue(name: string, value: unknown, type: Type): void;
     AddValue(name: string, value: unknown): void;
     AddValue(name: string, value: boolean): void;
     AddValue(name: string, value: char): void;
@@ -680,14 +680,14 @@ export interface SerializationInfo$instance {
     GetUInt16(name: string): ushort;
     GetUInt32(name: string): uint;
     GetUInt64(name: string): ulong;
-    GetValue(name: string, type_: Type): unknown | undefined;
-    SetType(type_: Type): void;
+    GetValue(name: string, type: Type): unknown | undefined;
+    SetType(type: Type): void;
 }
 
 
 export const SerializationInfo: {
-    new(type_: Type, converter: IFormatterConverter): SerializationInfo;
-    new(type_: Type, converter: IFormatterConverter, requireSameTokenInPartialTrust: boolean): SerializationInfo;
+    new(type: Type, converter: IFormatterConverter): SerializationInfo;
+    new(type: Type, converter: IFormatterConverter, requireSameTokenInPartialTrust: boolean): SerializationInfo;
     StartDeserialization(): DeserializationToken;
 };
 
@@ -730,11 +730,11 @@ export const SerializationObjectManager: {
 export type SerializationObjectManager = SerializationObjectManager$instance;
 
 export interface SurrogateSelector$instance {
-    AddSurrogate(type_: Type, context: StreamingContext, surrogate: ISerializationSurrogate): void;
+    AddSurrogate(type: Type, context: StreamingContext, surrogate: ISerializationSurrogate): void;
     ChainSelector(selector: ISurrogateSelector): void;
     GetNextSelector(): ISurrogateSelector | undefined;
-    GetSurrogate(type_: Type, context: StreamingContext, selector: ISurrogateSelector): ISerializationSurrogate | undefined;
-    RemoveSurrogate(type_: Type, context: StreamingContext): void;
+    GetSurrogate(type: Type, context: StreamingContext, selector: ISurrogateSelector): ISerializationSurrogate | undefined;
+    RemoveSurrogate(type: Type, context: StreamingContext): void;
 }
 
 
@@ -794,13 +794,13 @@ export interface XsdDataContractExporter$instance {
     readonly Schemas: XmlSchemaSet;
     CanExport(assemblies: ICollection_1<Assembly>): boolean;
     CanExport(types: ICollection_1<Type>): boolean;
-    CanExport(type_: Type): boolean;
+    CanExport(type: Type): boolean;
     Export(assemblies: ICollection_1<Assembly>): void;
     Export(types: ICollection_1<Type>): void;
-    Export(type_: Type): void;
-    GetRootElementName(type_: Type): XmlQualifiedName | undefined;
-    GetSchemaType(type_: Type): XmlSchemaType | undefined;
-    GetSchemaTypeName(type_: Type): XmlQualifiedName;
+    Export(type: Type): void;
+    GetRootElementName(type: Type): XmlQualifiedName | undefined;
+    GetSchemaType(type: Type): XmlSchemaType | undefined;
+    GetSchemaTypeName(type: Type): XmlQualifiedName;
 }
 
 
@@ -823,12 +823,12 @@ export type DataContractSerializerExtensions = DataContractSerializerExtensions$
 export abstract class FormatterServices$instance {
     static CheckTypeSecurity(t: Type, securityLevel: TypeFilterLevel): void;
     static GetObjectData(obj: unknown, members: MemberInfo[]): (unknown | undefined)[];
-    static GetSafeUninitializedObject(type_: Type): unknown;
-    static GetSerializableMembers(type_: Type, context: StreamingContext): MemberInfo[];
-    static GetSerializableMembers(type_: Type): MemberInfo[];
+    static GetSafeUninitializedObject(type: Type): unknown;
+    static GetSerializableMembers(type: Type, context: StreamingContext): MemberInfo[];
+    static GetSerializableMembers(type: Type): MemberInfo[];
     static GetSurrogateForCyclicalReference(innerSurrogate: ISerializationSurrogate): ISerializationSurrogate;
     static GetTypeFromAssembly(assem: Assembly, name: string): Type | undefined;
-    static GetUninitializedObject(type_: Type): unknown;
+    static GetUninitializedObject(type: Type): unknown;
     static PopulateObjectMembers(obj: unknown, members: MemberInfo[], data: unknown[]): unknown;
 }
 
@@ -887,8 +887,8 @@ export abstract class XmlSerializableServices$instance {
 export type XmlSerializableServices = XmlSerializableServices$instance;
 
 export abstract class XPathQueryGenerator$instance {
-    static CreateFromDataContractSerializer(type_: Type, pathToMember: MemberInfo[], rootElementXpath: StringBuilder, namespaces: XmlNamespaceManager): string;
-    static CreateFromDataContractSerializer(type_: Type, pathToMember: MemberInfo[], namespaces: XmlNamespaceManager): string;
+    static CreateFromDataContractSerializer(type: Type, pathToMember: MemberInfo[], rootElementXpath: StringBuilder, namespaces: XmlNamespaceManager): string;
+    static CreateFromDataContractSerializer(type: Type, pathToMember: MemberInfo[], namespaces: XmlNamespaceManager): string;
 }
 
 
