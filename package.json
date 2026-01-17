@@ -1,24 +1,10 @@
 {
-  "name": "@tsonic/dotnet-pure",
-  "version": "0.8.8",
-  "description": "TypeScript type definitions for .NET 10 BCL (Base Class Library) - CLR naming",
+  "name": "@tsonic/dotnet-pure-repo",
+  "private": true,
+  "description": "Repo for @tsonic/dotnet-pure (versioned by .NET major in versions/<major>/)",
   "type": "module",
-  "keywords": [
-    "dotnet",
-    "typescript",
-    "types",
-    "bcl",
-    "net10",
-    "tsonic",
-    "clr-naming"
-  ],
-  "author": "Tsonic Team",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/tsoniclang/dotnet-pure.git"
-  },
-  "peerDependencies": {
-    "@tsonic/core": "^0.6.0"
+  "scripts": {
+    "generate:10": "./__build/scripts/generate.sh 10",
+    "publish:10": "npm publish versions/10 --access public"
   }
 }

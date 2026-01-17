@@ -9,13 +9,17 @@
 #   - tsbindgen repository cloned at ../tsbindgen (sibling directory)
 #
 # Usage:
-#   ./__build/scripts/generate.sh
+#   ./__build/scripts/generate.sh [dotnetMajor]
 
 set -e
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 PROJECT_DIR="$(cd "$SCRIPT_DIR/../.." && pwd)"
 TSBINDGEN_DIR="$PROJECT_DIR/../tsbindgen"
+
+# .NET major to generate (publishes to versions/<major>/)
+DOTNET_MAJOR="${1:-10}"
+OUT_DIR="$PROJECT_DIR/versions/$DOTNET_MAJOR"
 
 # .NET runtime path
 DOTNET_VERSION="${DOTNET_VERSION:-10.0.1}"
@@ -29,7 +33,7 @@ echo ""
 echo "Configuration:"
 echo "  .NET Runtime: $DOTNET_RUNTIME_PATH"
 echo "  tsbindgen:    $TSBINDGEN_DIR"
-echo "  Output:       $PROJECT_DIR"
+echo "  Output:       $OUT_DIR"
 echo "  Naming:       CLR (PascalCase - no JS transformations)"
 echo ""
 
@@ -46,18 +50,15 @@ if [ ! -d "$TSBINDGEN_DIR" ]; then
     exit 1
 fi
 
+# Ensure output directory exists
+mkdir -p "$OUT_DIR"
+
 # Clean output directory (keep config files)
 echo "[1/3] Cleaning output directory..."
-cd "$PROJECT_DIR"
+cd "$OUT_DIR"
 
-# Remove all namespace directories (but keep config files, __build, node_modules, .git)
-find . -maxdepth 1 -type d \
-    ! -name '.' \
-    ! -name '.git' \
-    ! -name '.tests' \
-    ! -name 'node_modules' \
-    ! -name '__build' \
-    -exec rm -rf {} \; 2>/dev/null || true
+# Remove all generated namespace directories
+find . -maxdepth 1 -type d ! -name '.' -exec rm -rf {} \; 2>/dev/null || true
 
 # Remove generated files at root
 rm -f *.d.ts *.js families.json 2>/dev/null || true
@@ -74,7 +75,10 @@ echo "  Done"
 # Generate types with CLR naming (no --naming js flag)
 echo "[3/3] Generating TypeScript declarations..."
 dotnet run --project src/tsbindgen/tsbindgen.csproj --no-build -c Release -- \
-    generate -d "$DOTNET_RUNTIME_PATH" -o "$PROJECT_DIR"
+    generate -d "$DOTNET_RUNTIME_PATH" -o "$OUT_DIR"
+
+cp -f "$PROJECT_DIR/README.md" "$OUT_DIR/README.md"
+cp -f "$PROJECT_DIR/LICENSE" "$OUT_DIR/LICENSE"
 
 echo ""
 echo "================================================================"

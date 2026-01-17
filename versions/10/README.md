@@ -4,14 +4,6 @@ TypeScript type definitions for .NET 10 BCL (Base Class Library) with **CLR nami
 
 > **Note:** This package uses PascalCase member names (e.g., `GetEnumerator`, `Count`). For camelCase TypeScript-style naming, use `@tsonic/dotnet` instead.
 
-## Versioning
-
-This repo is versioned by **.NET major**:
-
-- **.NET 10** → `versions/10/` → npm: `@tsonic/dotnet-pure@10.x`
-
-When publishing, run: `npm publish versions/10 --access public`
-
 ## Features
 
 - **Complete .NET 10 BCL coverage** - 130 namespaces, 4,296 types, 50,675 members
